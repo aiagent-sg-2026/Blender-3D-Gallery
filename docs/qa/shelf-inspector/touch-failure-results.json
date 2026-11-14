@@ -1,0 +1,19 @@
+{
+  "browser": "156.0.8078.4",
+  "scope": "Desktop Chromium; touch viewport emulation, not physical iOS/Android",
+  "results": [
+    {
+      "name": "desktop-controls-lods-resources",
+      "status": "PASS"
+    },
+    {
+      "name": "rapid-load-failure-navigation",
+      "status": "PASS"
+    },
+    {
+      "name": "mobile-touch",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ '5c7791e2429925f59acabc8592c17338f2521162ed9202d4eb7c709270bbe663'\n- '195788670393fbba8e08139014b1dabda0d5c757ded4c84c9f795ff65d9dec04'\n\n    at file:///srv/agent-workstation/workspaces/blender-gjh-m056-20261114/repo/scripts/test-shelf-inspector-browser.mjs:33:1622\n    at async run (file:///srv/agent-workstation/workspaces/blender-gjh-m056-20261114/repo/scripts/test-shelf-inspector-browser.mjs:11:1393)\n    at async file:///srv/agent-workstation/workspaces/blender-gjh-m056-20261114/repo/scripts/test-shelf-inspector-browser.mjs:32:1"
+    }
+  ]
+}

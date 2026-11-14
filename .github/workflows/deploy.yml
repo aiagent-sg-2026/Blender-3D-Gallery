@@ -38,6 +38,7 @@ jobs:
           npm run test:cans:codex
           node scripts/test-product-studio-browser.mjs
           node scripts/test-game-touch-cancellation.mjs
+          node scripts/test-shelf-inspector-browser.mjs
       - uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
       - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:

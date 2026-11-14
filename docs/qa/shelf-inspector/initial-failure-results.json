@@ -1,0 +1,20 @@
+{
+  "browser": "156.0.8078.4",
+  "scope": "Desktop Chromium; touch viewport emulation, not physical iOS/Android",
+  "results": [
+    {
+      "name": "desktop-controls-lods-resources",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'f7114127c8f56d27cfaf4de96399b2359cf5059766e8de749575942a8a52ddd9'\n- '532839801204ab25e85221d54ca37151f7f99add34fb6a9f00914173dd365f12'\n\n    at file:///srv/agent-workstation/workspaces/blender-gjh-m056-20261114/repo/scripts/test-shelf-inspector-browser.mjs:19:147\n    at async run (file:///srv/agent-workstation/workspaces/blender-gjh-m056-20261114/repo/scripts/test-shelf-inspector-browser.mjs:11:1056)\n    at async file:///srv/agent-workstation/workspaces/blender-gjh-m056-20261114/repo/scripts/test-shelf-inspector-browser.mjs:13:1"
+    },
+    {
+      "name": "rapid-load-failure-navigation",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\nfalse !== true\n\n    at file:///srv/agent-workstation/workspaces/blender-gjh-m056-20261114/repo/scripts/test-shelf-inspector-browser.mjs:29:196\n    at async run (file:///srv/agent-workstation/workspaces/blender-gjh-m056-20261114/repo/scripts/test-shelf-inspector-browser.mjs:11:1056)\n    at async file:///srv/agent-workstation/workspaces/blender-gjh-m056-20261114/repo/scripts/test-shelf-inspector-browser.mjs:27:1"
+    },
+    {
+      "name": "mobile-touch",
+      "status": "PASS"
+    }
+  ]
+}
