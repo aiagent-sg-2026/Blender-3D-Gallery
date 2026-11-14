@@ -10,6 +10,27 @@ const raw = JSON.parse(fs.readFileSync('models/catalog.json', 'utf8'));
 const demos = JSON.parse(fs.readFileSync('data/demos.json', 'utf8'));
 const mutate = (change) => { const value = structuredClone(raw); change(value); return value; };
 
+test('catalog assigns browse categories and corrects representative classifications', () => {
+  const catalog = validateCatalog(raw);
+  const assets = catalog.collections.flatMap(collection => collection.assets);
+  assert.ok(assets.every(asset => asset.browseCategory));
+  const byId = new Map(assets.map(asset => [asset.id, asset]));
+  for (const id of ['mall-event-booth', 'mall-glass-railing-post', 'mall-water-dispenser', 'shopping-cart']) {
+    assert.equal(byId.get(id).browseCategory, 'Shopping Mall', id);
+  }
+  for (const id of ['hibiscus-plant', 'tropical-fern-cluster', 'rainwater-puddle']) {
+    assert.equal(byId.get(id).browseCategory, 'Nature', id);
+    assert.equal(byId.get(id).category, 'Nature', id);
+  }
+  assert.equal(byId.get('mall-shopper').browseCategory, 'People & Characters');
+  assert.equal(byId.get('hospital-bed').category, 'Healthcare');
+  assert.equal(byId.get('nasa-pluto').category, 'Dwarf planet');
+  assert.equal(byId.get('mall-event-booth').collectionId, 'mall-event-booth');
+  assert.throws(() => validateCatalog(mutate(value => { value.collections[0].assets[0].browseCategory = ''; })), /Invalid asset browse category/);
+  const legacy = mutate(value => { delete value.collections[0].assets[0].browseCategory; });
+  assert.equal(validateCatalog(legacy).collections[0].assets[0].browseCategory, 'Table');
+});
+
 test('catalog enrichment preserves every registered asset and supplies measured metadata', () => {
   const catalog = loadCatalog();
   const expected = raw.collections.flatMap(collection => collection.assets);

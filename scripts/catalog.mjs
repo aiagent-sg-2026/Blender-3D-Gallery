@@ -45,6 +45,11 @@ export function validateCatalog(input) {
       asset.slug = uniqueSlug(asset.slug === undefined ? asset.id : asset.slug, assetSlugs, "asset slug");
       asset.name = textField(asset.name, "asset name");
       asset.category = textField(asset.category, "asset category");
+      asset.browseCategory = asset.browseCategory === undefined
+        ? asset.category
+        : textField(asset.browseCategory, "asset browse category");
+      if (asset.previousCategory !== undefined)
+        asset.previousCategory = textField(asset.previousCategory, "asset previous category");
       asset.tags = tagsField(asset.tags);
       asset.collectionId = collection.id;
       asset.collectionName = collection.name;

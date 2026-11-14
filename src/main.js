@@ -99,24 +99,24 @@ function renderModels() {
       $("#model-search").value,
       $("#model-category").value,
       $("#model-collection").value,
+      $("#model-theme").value,
     ),
   );
   $("#model-count").textContent =
     `${filtered.length} ${filtered.length === 1 ? "model" : "models"} · ${assets.length} in the library`;
   const fragment = document.createDocumentFragment();
-  for (const collection of catalog.collections) {
-    const items = filtered.filter(
-      (a) =>
-        a.collectionId === collection.id ||
-        collection.assets.some((original) => original.id === a.id),
-    );
-    if (!items.length) continue;
+  const groups = new Map();
+  for (const asset of filtered) {
+    if (!groups.has(asset.browseCategory)) groups.set(asset.browseCategory, []);
+    groups.get(asset.browseCategory).push(asset);
+  }
+  for (const [category, items] of [...groups].sort(([a], [b]) => a.localeCompare(b))) {
     const section = element("section", "asset-collection");
-    section.setAttribute("aria-label", collection.name);
+    section.setAttribute("aria-label", category);
     const heading = element("div", "collection-title");
     heading.append(
-      element("h3", "", collection.name),
-      element("p", "", collection.description),
+      element("h3", "", category),
+      element("p", "", `${items.length} ${items.length === 1 ? "model" : "models"}`),
     );
     const grid = element("div", "asset-grid");
     for (const asset of items) grid.append(createCard(asset));
@@ -202,9 +202,20 @@ function renderDemos() {
   refreshDemoOfflineStatus();
 }
 options(
+  $("#model-theme"),
+  assets.map((a) => a.browseCategory),
+);
+options(
   $("#model-category"),
   assets.map((a) => a.category),
 );
+// Keep previously shared category URLs usable without offering outdated labels for new searches.
+for (const value of [...new Set(assets.map((a) => a.previousCategory).filter(Boolean))]) {
+  const option = element("option", "", `${value} (previous category)`);
+  option.value = value;
+  option.hidden = true;
+  $("#model-category").append(option);
+}
 for (const collection of catalog.collections) {
   const option = element("option", "", collection.name);
   option.value = collection.id;
@@ -218,6 +229,7 @@ const syncModelFilters = setupFilters(
   $("#model-filters"),
   {
     q: $("#model-search"),
+    theme: $("#model-theme"),
     category: $("#model-category"),
     collection: $("#model-collection"),
   },

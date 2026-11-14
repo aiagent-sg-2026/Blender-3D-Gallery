@@ -3,19 +3,22 @@ export const normalized = (value) =>
     .trim()
     .replace(/\s+/g, " ")
     .toLocaleLowerCase();
-export function matches(item, query, category = "", collection = "") {
+export function matches(item, query, category = "", collection = "", theme = "") {
   const text = normalized(
     [
       item.title,
       item.name,
       item.description,
       item.category,
+      item.browseCategory,
       item.collectionName,
       ...(item.tags ?? []),
     ].join(" "),
   );
   return (
-    (!category || normalized(item.category) === normalized(category)) &&
+    (!category || normalized(item.category) === normalized(category) ||
+      normalized(item.previousCategory) === normalized(category)) &&
+    (!theme || normalized(item.browseCategory) === normalized(theme)) &&
     (!collection || item.collectionId === collection) &&
     normalized(query)
       .split(" ")

@@ -100,6 +100,31 @@ try {
     assert.equal(await page.locator('#viewport canvas').count(),0);
     assert.equal(await page.locator('[data-asset-id="cue-stick-01"]').first().evaluate(el=>el===document.activeElement),true);
   });
+  await run('category grouping, filters, and model links', async page => {
+    await page.goto(server.url);
+    const mall = page.locator('#catalog section[aria-label="Shopping Mall"]');
+    assert.equal(await mall.count(), 1);
+    for (const id of ['mall-event-booth', 'mall-glass-railing-post', 'mall-water-dispenser', 'shopping-cart'])
+      assert.ok(await mall.locator(`[data-asset-id="${id}"]`).count(), id);
+    await page.locator('#model-theme').selectOption('Shopping Mall');
+    assert.equal(new URL(page.url()).searchParams.get('theme'), 'Shopping Mall');
+    assert.equal(await page.locator('#catalog section').count(), 1);
+    await page.reload();
+    assert.equal(await page.locator('#model-theme').inputValue(), 'Shopping Mall');
+    await page.locator('#model-collection').selectOption('mall-event-booth');
+    assert.equal(await page.locator('#catalog .asset-card').count(), 1);
+    await page.locator('[data-asset-id="mall-event-booth"]').first().click();
+    await viewerReady(page);
+    assert.equal(new URL(page.url()).searchParams.get('model'), 'mall-event-booth');
+    await page.keyboard.press('Escape');
+    assert.equal(await page.locator('#catalog .asset-card').count(), 1);
+    await page.getByRole('button',{name:/clear filters/i}).first().click();
+    await page.waitForFunction(count=>document.querySelectorAll('#catalog .asset-card').length===count,expectedAssetCount);
+    await page.goto(server.url+'?category=Furniture');
+    assert.ok(await page.locator('[data-asset-id="mall-event-booth"]').count());
+    assert.equal(await page.locator('#model-category').inputValue(), 'Furniture');
+    assert.ok(await page.locator('#catalog .asset-card').count() < expectedAssetCount);
+  });
   await run('demo search/category combine and clear', async page => {
     await page.goto(server.url+'?page=demos');
     await page.locator('#demo-search').fill('  sOlAr   sYstEm ');
