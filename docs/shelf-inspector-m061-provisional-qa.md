@@ -1,0 +1,9 @@
+# M061 provisional two-row Inspector checks
+
+**Not release-ready.** Base337a7374 has M056–M059 but not the pending M060 publication. Final integration must rebase published M060 and explicitly verify six unique fixture IDs/options; old exact option-list cases deliberately remain unchanged until that integration, and have not been claimed passing here. Asset support metadata has not been promoted to final runtime PASS.
+
+Minimal change: allow two or three distinct shelf rows; three-row labels/behavior remain All shelves/Lower/Middle/Upper. M061 uses All shelves/Lower/Upper. Buttons are built from the requested manifest; one delegated handler is gated by loaded/disabled state. Successful model change clears an out-of-range old row to0, retains valid row indices, and reset always returns0. This is index continuity, not semantic upper-to-upper remapping. No geometry/CI/publication changes.
+
+Local job f9be45e7-820a-4978-bf84-9e27dad7bde0 (2026-11-14 20:13:01–20:13:34 UTC) passed related units/build and only new low-controls-lods-and-ownership and low-touch-viewport cases. Frozen coverage: both boards of selected row only; source-material restoration; rejection of duplicate/unsupported row manifests; established three-row labels; actual row3→two-row transition resets0; keyboard Enter on Upper reports Upper; exact reset image; actual four-LOD hashes; six LED/header controls; mixed two/three-row switching and strict GPU equality; obsolete loading ownership;390px touch and viewport.
+
+Actual desktop/side/mobile screenshots inspected: low cabinet/two rows visible without striping, title not mirrored or clipped, mobile whole model visible. Label is physically small at0.16m panel height and zoom is available. Real dimensions2.4×0.55×1.2m are disclosed as a low interpretation rather than the repeated2.4m height. No physical Android/iOS/Safari, automatic LOD or product loading claim. Evidence in qa/shelf-inspector-m061-provisional.

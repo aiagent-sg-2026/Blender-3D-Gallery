@@ -1,6 +1,12 @@
 import * as THREE from 'three';
 export const cleanHeader = value => String(value).replace(/[\u0000-\u001f\u007f]/g, '').trim().slice(0,32);
 
+export function shelfRowLabels(manifest = {}) {
+  const names = manifest.runtime_nodes?.shelves ?? ['shelf_1','shelf_2','shelf_3'];
+  if (![2,3].includes(names.length) || new Set(names).size !== names.length) throw new Error('Invalid shelf controls manifest');
+  return names.length === 2 ? ['All shelves','Lower','Upper'] : ['All shelves','Lower','Middle','Upper'];
+}
+
 /** Materials and title overlays are owned by this mounted instance, never by the export. */
 export function createShelfParts(model, makeCanvas = () => document.createElement('canvas'), manifest = {}) {
   const meshes = name => {
@@ -11,7 +17,8 @@ export function createShelfParts(model, makeCanvas = () => document.createElemen
   };
   const shelfNames = manifest.runtime_nodes?.shelves ?? ['shelf_1', 'shelf_2', 'shelf_3'];
   const ledNames = manifest.runtime_nodes?.leds ?? ['LED_1', 'LED_2', 'LED_3', 'LED_header', 'LED_base'];
-  if (shelfNames.length !== 3 || !ledNames.length) throw new Error('Invalid shelf controls manifest');
+  shelfRowLabels(manifest);
+  if (!ledNames.length) throw new Error('Invalid shelf controls manifest');
   const shelves = shelfNames.map(meshes), leds = ledNames.flatMap(meshes);
   const surfaces = (manifest.runtime_header_surfaces ?? []).map(surface => {
     const anchor = model.getObjectByName(surface.anchor);
