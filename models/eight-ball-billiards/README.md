@@ -64,10 +64,10 @@ campaign. Viewport emulation is not physical-device performance verification. Se
 [QA progress tracker](../../docs/3d-model-qa-progress.md) for current gate and
 release status and production evidence.
 
-## Cue 01 normal QA
+## Cue normal QA
 
-MODEL-0002 corrects Cue 01 end-cap shading: eight cap faces are flat and their 144 boundary edges are sharp; tapered sides remain smooth. Dimensions, geometry, UVs, materials, transforms, Cue 02 and other standalone exports are preserved. The generator limits this reviewed change to Cue 01.
+The two straight cues share planar-cap shading in `cue_shading.py`: caps are flat, their boundary edges are sharp, and tapered sides remain smooth. Keep this helper beside `generate.py` when moving the source folder. Per-model QA/release status remains in the [campaign tracker](../../docs/3d-model-qa-progress.md); a shared rule does not imply that every model has completed acceptance.
 
-`scripts/repair-cue-01-normals.py` is a guarded one-time migration from its recorded source SHA256; preserve the baseline first. It exports only `cue_01.glb` and the dependent assembled scene. Do not run the full pack generator merely to update this cue. `scripts/model-qa-cue-details.py` renders the five source/re-import detail views without saving its input; diagnostic cap modes modify memory only.
+`scripts/repair-cue-01-normals.py` and `scripts/repair-cue-02-normals.py` are revision-guarded one-time migrations. Preserve their recorded baselines first. They share `scripts/cue-normal-migration.py` and export only the selected cue and dependent assembly; no full-pack regeneration is needed. `blender --background --disable-autoexec models/eight-ball-billiards/scene.blend --python scripts/model-qa-cue-details.py -- --root ASSET_Cue_02 --output /tmp/cue-detail-review` renders the selected cue without saving its source. Diagnostic cap modes modify memory only; imported GLBs support the source/observe mode.
 
-From the repository root, with Node 24 and a built local preview server, run `MODEL_QA_ID=cue-stick-01 MODEL_QA_URL=http://127.0.0.1:5179/ node scripts/test-model-qa-browser.mjs` for fresh desktop/tablet loading, exact GLB payload/hash and controls. Exported cap/side normal regression checks are in `tests/cue-stick-01.test.mjs`; campaign evidence and remaining gates are in `docs/model-qa/MODEL-0002/README.md`. Physical mobile testing is excluded by the owner.
+From the repository root, with Node 24 and a built preview, run `MODEL_QA_ID=cue-stick-02 MODEL_QA_URL=http://127.0.0.1:5179/ node scripts/test-model-qa-browser.mjs`. The geometric-normal regression rule is shared by the two cue test files. Read the [planar-cap prevention note](../../docs/model-qa/blender-planar-cap-normals.md) for the verified cause, bounded repair, axis convention and preservation checks. Physical mobile testing is excluded by the owner.

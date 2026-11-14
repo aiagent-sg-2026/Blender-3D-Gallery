@@ -1,0 +1,244 @@
+{
+  "blender_version": "5.1.2",
+  "source": "",
+  "input_sha256": "e33be9d887a2a99ce637107acfb7b242d0213ab0d12e693446ee59a6220081d1",
+  "imported_glb": "/tmp/blender-model-qa-release/models/eight-ball-billiards/exports/cue_02.glb",
+  "root": "ASSET_Cue_02",
+  "root_location": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "unit_system": "METRIC",
+  "bounds_min": [
+    -0.7350000143051147,
+    -0.017000000923871994,
+    -0.017000000923871994
+  ],
+  "bounds_max": [
+    0.7350000143051147,
+    0.017000000923871994,
+    0.017000000923871994
+  ],
+  "dimensions": [
+    1.4700000286102295,
+    0.03400000184774399,
+    0.03400000184774399
+  ],
+  "mesh_count": 4,
+  "triangles": 272,
+  "armatures": [],
+  "animation_data": [],
+  "materials": [
+    {
+      "name": "Cue shaft | maple",
+      "use_nodes": true,
+      "base_color": [
+        0.6700000166893005,
+        0.4699999988079071,
+        0.25,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.3400000035762787,
+      "alpha": 1.0,
+      "image_nodes": []
+    },
+    {
+      "name": "Ivory resin",
+      "use_nodes": true,
+      "base_color": [
+        0.9200000166893005,
+        0.8999999761581421,
+        0.8199999928474426,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.23999999463558197,
+      "alpha": 1.0,
+      "image_nodes": []
+    },
+    {
+      "name": "Pocket leather | charcoal",
+      "use_nodes": true,
+      "base_color": [
+        0.014000000432133675,
+        0.012000000104308128,
+        0.012000000104308128,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5299999713897705,
+      "alpha": 1.0,
+      "image_nodes": []
+    },
+    {
+      "name": "Walnut | satin",
+      "use_nodes": true,
+      "base_color": [
+        0.12999999523162842,
+        0.04500000178813934,
+        0.017999999225139618,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.30000001192092896,
+      "alpha": 1.0,
+      "image_nodes": []
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Cue 2 | butt",
+      "vertices": 82,
+      "triangles": 76,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 82,
+      "boundary_edges": 82,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.00031669608957578607,
+      "connected_components": 3,
+      "bounds_min": [
+        -0.7350000143051147,
+        -0.017000000923871994,
+        -0.017000000923871994
+      ],
+      "bounds_max": [
+        -0.2200000286102295,
+        0.017000000923871994,
+        0.017000000923871994
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Walnut | satin"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Cue 2 | ferrule",
+      "vertices": 66,
+      "triangles": 60,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 66,
+      "boundary_edges": 66,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 3.0859588302894986e-06,
+      "connected_components": 3,
+      "bounds_min": [
+        0.699999988079071,
+        -0.006000000052154064,
+        -0.006000000052154064
+      ],
+      "bounds_max": [
+        0.7279999852180481,
+        0.006000000052154064,
+        0.006000000052154064
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Ivory resin"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Cue 2 | shaft",
+      "vertices": 82,
+      "triangles": 76,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 82,
+      "boundary_edges": 82,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.00021132641395848155,
+      "connected_components": 3,
+      "bounds_min": [
+        -0.2199999839067459,
+        -0.010999999940395355,
+        -0.010999999940395355
+      ],
+      "bounds_max": [
+        0.699999988079071,
+        0.010999999940395355,
+        0.010999999940395355
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Cue shaft | maple"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Cue 2 | tip",
+      "vertices": 66,
+      "triangles": 60,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 66,
+      "boundary_edges": 66,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 6.50054256106886e-07,
+      "connected_components": 3,
+      "bounds_min": [
+        0.7280000448226929,
+        -0.006000000052154064,
+        -0.006000000052154064
+      ],
+      "bounds_max": [
+        0.7350000143051147,
+        0.006000000052154064,
+        0.006000000052154064
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Pocket leather | charcoal"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    }
+  ]
+}

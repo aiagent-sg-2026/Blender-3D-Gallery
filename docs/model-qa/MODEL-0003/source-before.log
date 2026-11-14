@@ -1,0 +1,24 @@
+00:00.520  blend            | Read blend: "/private/tmp/blender-model-qa-release/models/eight-ball-billiards/scene.blend"
+/private/tmp/blender-model-qa-release/scripts/model-qa-blender.py:80: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  node = mat.node_tree.nodes.get('Principled BSDF') if mat.use_nodes else None
+/private/tmp/blender-model-qa-release/scripts/model-qa-blender.py:81: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  materials.append({'name': mat.name, 'use_nodes': mat.use_nodes,
+/private/tmp/blender-model-qa-release/scripts/model-qa-blender.py:90: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  for n in mat.node_tree.nodes if n.type == 'TEX_IMAGE'] if mat.use_nodes else []})
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info 20261010
+[INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+QA_INSPECTION {"root": "ASSET_Cue_02", "mesh_count": 4, "triangles": 272, "dimensions": [1.4700000286102295, 0.03399991989135742, 0.03400002792477608]}
+/private/tmp/blender-model-qa-release/scripts/model-qa-blender.py:125: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world.use_nodes = True
+00:01.944  render           | Saved: '/private/tmp/blender-model-qa-release/docs/model-qa/MODEL-0003/before/front.png'
+00:03.598  render           | Saved: '/private/tmp/blender-model-qa-release/docs/model-qa/MODEL-0003/before/back.png'
+00:05.368  render           | Saved: '/private/tmp/blender-model-qa-release/docs/model-qa/MODEL-0003/before/left.png'
+00:07.088  render           | Saved: '/private/tmp/blender-model-qa-release/docs/model-qa/MODEL-0003/before/right.png'
+00:08.903  render           | Saved: '/private/tmp/blender-model-qa-release/docs/model-qa/MODEL-0003/before/top.png'
+00:10.667  render           | Saved: '/private/tmp/blender-model-qa-release/docs/model-qa/MODEL-0003/before/bottom.png'
+00:12.474  render           | Saved: '/private/tmp/blender-model-qa-release/docs/model-qa/MODEL-0003/before/three-quarter.png'
+Blender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 01:30:33)
+
+Blender quit

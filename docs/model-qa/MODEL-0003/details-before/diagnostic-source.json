@@ -1,0 +1,117 @@
+{
+  "input_sha256": "068b90033d5a1a535cb96853f23d8ebf577af79a4b793c3697e172df2e79ae8f",
+  "root": "ASSET_Cue_02",
+  "no_source_save": true,
+  "mode": "source",
+  "diagnosis_only": "Non-source modes change only in-memory cap shading. Quad-axis metrics are N/A for triangulated GLB import; use exported geometric-normal tests.",
+  "states": {
+    "source": {
+      "meshes": [
+        {
+          "mesh": "Cue 2 | butt",
+          "smooth_cap_faces": 2,
+          "cap_faces": 2,
+          "source_quad_axis_abs_min": 0.6692516803741455,
+          "source_quad_axis_abs_max": 0.6778082847595215,
+          "source_quad_axis_abs_mean": 0.6735299929976464
+        },
+        {
+          "mesh": "Cue 2 | ferrule",
+          "smooth_cap_faces": 2,
+          "cap_faces": 2,
+          "source_quad_axis_abs_min": 0.6657230854034424,
+          "source_quad_axis_abs_max": 0.6657232642173767,
+          "source_quad_axis_abs_mean": 0.6657231487333775
+        },
+        {
+          "mesh": "Cue 2 | shaft",
+          "smooth_cap_faces": 2,
+          "cap_faces": 2,
+          "source_quad_axis_abs_min": 0.6715410947799683,
+          "source_quad_axis_abs_max": 0.6755335330963135,
+          "source_quad_axis_abs_mean": 0.6735370323061943
+        },
+        {
+          "mesh": "Cue 2 | tip",
+          "smooth_cap_faces": 2,
+          "cap_faces": 2,
+          "source_quad_axis_abs_min": 0.6121278405189514,
+          "source_quad_axis_abs_max": 0.7168647050857544,
+          "source_quad_axis_abs_mean": 0.664496274664998
+        }
+      ],
+      "views": [
+        {
+          "name": "butt-side",
+          "target": [
+            -0.49000000953674316,
+            -1.0199999809265137,
+            0.05999999865889549
+          ],
+          "camera": [
+            -0.49000000953674316,
+            -2.98116135597229,
+            0.4522322714328766
+          ],
+          "ortho_scale": 0.38
+        },
+        {
+          "name": "butt-end",
+          "target": [
+            -0.7350000143051147,
+            -1.0199999809265137,
+            0.05999999865889549
+          ],
+          "camera": [
+            -2.4959018230438232,
+            -1.9004509449005127,
+            0.4121803641319275
+          ],
+          "ortho_scale": 0.065
+        },
+        {
+          "name": "joint",
+          "target": [
+            -0.2199999988079071,
+            -1.0199999809265137,
+            0.05999999865889549
+          ],
+          "camera": [
+            -0.2199999988079071,
+            -2.876953601837158,
+            0.8027814030647278
+          ],
+          "ortho_scale": 0.095
+        },
+        {
+          "name": "ferrule",
+          "target": [
+            0.7139999866485596,
+            -1.0199999809265137,
+            0.05999999865889549
+          ],
+          "camera": [
+            1.530496597290039,
+            -2.6529932022094727,
+            0.8764965534210205
+          ],
+          "ortho_scale": 0.09
+        },
+        {
+          "name": "tip-end",
+          "target": [
+            0.7350000143051147,
+            -1.0199999809265137,
+            0.05999999865889549
+          ],
+          "camera": [
+            2.7350001335144043,
+            -1.0199999809265137,
+            0.05999999865889549
+          ],
+          "ortho_scale": 0.02
+        }
+      ]
+    }
+  }
+}

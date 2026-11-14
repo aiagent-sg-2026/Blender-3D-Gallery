@@ -1,0 +1,74 @@
+✔ cue_01.glb: Cue 01 end-cap normals follow their planar geometry (6.45075ms)
+✔ cue_01.glb: Cue 01 smooth side normals exclude the flat caps (1.136875ms)
+✔ billiards-scene.glb: Cue 01 end-cap normals follow their planar geometry (11.185125ms)
+✔ billiards-scene.glb: Cue 01 smooth side normals exclude the flat caps (9.811ms)
+✖ cue_02.glb: Cue 02 end-cap normals follow their planar geometry (6.532042ms)
+✖ cue_02.glb: Cue 02 smooth side normals exclude the flat caps (1.568917ms)
+✖ billiards-scene.glb: Cue 02 end-cap normals follow their planar geometry (10.919667ms)
+✖ billiards-scene.glb: Cue 02 smooth side normals exclude the flat caps (9.7275ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 4
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 97.901375
+
+✖ failing tests:
+
+test at tests/helpers/cue-normal-checks.mjs:48:3
+✖ cue_02.glb: Cue 02 end-cap normals follow their planar geometry (6.532042ms)
+  AssertionError [ERR_ASSERTION]: Cue_2_|_butt: cap must shade as a plane, not a rounded bulge
+      at TestContext.<anonymous> (file:///private/tmp/blender-model-qa-release/tests/helpers/cue-normal-checks.mjs:50:14)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/helpers/cue-normal-checks.mjs:53:3
+✖ cue_02.glb: Cue 02 smooth side normals exclude the flat caps (1.568917ms)
+  AssertionError [ERR_ASSERTION]: Cue_2_|_butt: side normal is pulled toward an end cap
+      at TestContext.<anonymous> (file:///private/tmp/blender-model-qa-release/tests/helpers/cue-normal-checks.mjs:57:14)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/helpers/cue-normal-checks.mjs:48:3
+✖ billiards-scene.glb: Cue 02 end-cap normals follow their planar geometry (10.919667ms)
+  AssertionError [ERR_ASSERTION]: Cue_2_|_butt: cap must shade as a plane, not a rounded bulge
+      at TestContext.<anonymous> (file:///private/tmp/blender-model-qa-release/tests/helpers/cue-normal-checks.mjs:50:14)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/helpers/cue-normal-checks.mjs:53:3
+✖ billiards-scene.glb: Cue 02 smooth side normals exclude the flat caps (9.7275ms)
+  AssertionError [ERR_ASSERTION]: Cue_2_|_butt: side normal is pulled toward an end cap
+      at TestContext.<anonymous> (file:///private/tmp/blender-model-qa-release/tests/helpers/cue-normal-checks.mjs:57:14)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

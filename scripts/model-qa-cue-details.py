@@ -1,9 +1,10 @@
-"""Render five Cue 01 details with optional in-memory shading diagnosis; never save input."""
+"""Render five details for one cue root with optional in-memory shading diagnosis; never save input."""
 import argparse,bpy,json,hashlib,sys
 from pathlib import Path
 from mathutils import Vector
 parser=argparse.ArgumentParser()
 parser.add_argument('--output',required=True)
+parser.add_argument('--root',default='ASSET_Cue_01',choices=['ASSET_Cue_01','ASSET_Cue_02'])
 parser.add_argument('--mode',choices=['source','flat-caps','sharp-caps'],default='source')
 parser.add_argument('--glb')
 args=parser.parse_args(sys.argv[sys.argv.index('--')+1:])
@@ -14,7 +15,7 @@ if args.glb:
 out=Path(args.output).resolve();out.mkdir(parents=True,exist_ok=True)
 source=Path(args.glb).resolve() if args.glb else Path(bpy.data.filepath)
 digest=hashlib.sha256(source.read_bytes()).hexdigest()
-root=bpy.data.objects['ASSET_Cue_01'];objects=[o for o in root.children_recursive if o.type=='MESH']
+root=bpy.data.objects[args.root];objects=[o for o in root.children_recursive if o.type=='MESH']
 assert len(objects)==4
 for ob in bpy.context.scene.objects:ob.hide_render=ob not in objects and ob!=root
 scene=bpy.context.scene;scene.render.engine='CYCLES';scene.cycles.device='CPU';scene.cycles.samples=24;scene.cycles.use_denoising=True

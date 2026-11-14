@@ -1,0 +1,29 @@
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info 20261010
+[INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+05:30:15 | INFO: Data are loaded, start creating Blender stuff
+05:30:15 | INFO: Blender create Mesh node Cone.004
+05:30:15 | INFO: Blender create Mesh node Cone.006
+05:30:15 | INFO: Blender create Mesh node Cone.005
+05:30:15 | INFO: Blender create Mesh node Cone.007
+05:30:15 | INFO: glTF import finished in 0.00s
+/private/tmp/blender-model-qa-release/scripts/model-qa-blender.py:80: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  node = mat.node_tree.nodes.get('Principled BSDF') if mat.use_nodes else None
+/private/tmp/blender-model-qa-release/scripts/model-qa-blender.py:81: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  materials.append({'name': mat.name, 'use_nodes': mat.use_nodes,
+/private/tmp/blender-model-qa-release/scripts/model-qa-blender.py:90: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  for n in mat.node_tree.nodes if n.type == 'TEX_IMAGE'] if mat.use_nodes else []})
+QA_INSPECTION {"root": "ASSET_Cue_02", "mesh_count": 4, "triangles": 272, "dimensions": [1.4700000286102295, 0.03400000184774399, 0.03400000184774399]}
+/private/tmp/blender-model-qa-release/scripts/model-qa-blender.py:125: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world.use_nodes = True
+00:02.292  render           | Saved: '/private/tmp/blender-model-qa-release/docs/model-qa/MODEL-0003/reimport-before/front.png'
+00:04.054  render           | Saved: '/private/tmp/blender-model-qa-release/docs/model-qa/MODEL-0003/reimport-before/back.png'
+00:05.761  render           | Saved: '/private/tmp/blender-model-qa-release/docs/model-qa/MODEL-0003/reimport-before/left.png'
+00:07.347  render           | Saved: '/private/tmp/blender-model-qa-release/docs/model-qa/MODEL-0003/reimport-before/right.png'
+00:09.042  render           | Saved: '/private/tmp/blender-model-qa-release/docs/model-qa/MODEL-0003/reimport-before/top.png'
+00:10.624  render           | Saved: '/private/tmp/blender-model-qa-release/docs/model-qa/MODEL-0003/reimport-before/bottom.png'
+00:12.187  render           | Saved: '/private/tmp/blender-model-qa-release/docs/model-qa/MODEL-0003/reimport-before/three-quarter.png'
+Blender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 01:30:33)
+
+Blender quit

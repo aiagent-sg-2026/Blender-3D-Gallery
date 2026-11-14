@@ -1,0 +1,117 @@
+{
+  "integration_head": "85448e31b81bf8c565a167f7c25150c2205802ba",
+  "unit_tests": {
+    "passed": 638,
+    "failed": 0
+  },
+  "build": "PASS existing bundle advisory",
+  "viewer_profiles": [
+    {
+      "modelId": "cue-stick-02",
+      "assetBytes": 14636,
+      "assetSha256": "e33be9d887a2a99ce637107acfb7b242d0213ab0d12e693446ee59a6220081d1",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": "PASS",
+      "rotation": "PASS",
+      "zoom": "PASS",
+      "reset": "PASS exact pixel match; screenshot retained",
+      "metrics": {
+        "width": 1440,
+        "height": 900,
+        "canvasWidth": 1058,
+        "canvasHeight": 495,
+        "resources": [
+          {
+            "url": "http://127.0.0.1:5179/assets/cue_02-CiTVBBIj.glb",
+            "durationMs": 2.199999988079071,
+            "encodedBytes": 14636,
+            "decodedBytes": 14636,
+            "transferBytes": 14936
+          }
+        ],
+        "observedDraws": 324,
+        "measuredFrames": 81,
+        "maxDrawCallsPerObservedFrame": 4,
+        "maxTrianglesPerObservedFrame": 272,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+        "contextLost": false,
+        "overflow": false
+      },
+      "errors": [],
+      "warnings": [
+        "Service Worker registration blocked by Playwright",
+        "[.WebGL-0x10c00441400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "[.WebGL-0x10c00441400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "[.WebGL-0x10c00441400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "[.WebGL-0x10c00441400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+      ],
+      "networkErrors": [],
+      "physicalMobilePerformance": "NOT_TESTED; viewport emulation on desktop software WebGL is not physical-device FPS"
+    },
+    {
+      "modelId": "cue-stick-02",
+      "assetBytes": 14636,
+      "assetSha256": "e33be9d887a2a99ce637107acfb7b242d0213ab0d12e693446ee59a6220081d1",
+      "viewport": [
+        768,
+        1024
+      ],
+      "status": "PASS",
+      "rotation": "PASS",
+      "zoom": "PASS",
+      "reset": "PASS exact pixel match; screenshot retained",
+      "metrics": {
+        "width": 768,
+        "height": 1024,
+        "canvasWidth": 728,
+        "canvasHeight": 563,
+        "resources": [
+          {
+            "url": "http://127.0.0.1:5179/assets/cue_02-CiTVBBIj.glb",
+            "durationMs": 1.5999999642372131,
+            "encodedBytes": 14636,
+            "decodedBytes": 14636,
+            "transferBytes": 14936
+          }
+        ],
+        "observedDraws": 324,
+        "measuredFrames": 81,
+        "maxDrawCallsPerObservedFrame": 4,
+        "maxTrianglesPerObservedFrame": 272,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+        "contextLost": false,
+        "overflow": false
+      },
+      "errors": [],
+      "warnings": [
+        "Service Worker registration blocked by Playwright"
+      ],
+      "networkErrors": [],
+      "physicalMobilePerformance": "NOT_TESTED; viewport emulation on desktop software WebGL is not physical-device FPS"
+    }
+  ],
+  "unchanged_since_full_regression": [
+    "src/main.js",
+    "src/style.css",
+    "src/game",
+    "src/viewer.js",
+    "src/model-viewer-renderer.js"
+  ],
+  "upstream_scope": "Shelf Inspector integration and M060/M061/M062 catalog models; appended PENDING, not accepted by this campaign.",
+  "local_full_game": {
+    "passed": 46,
+    "failed": 0,
+    "catalog_entries": 558,
+    "selection": null
+  },
+  "local_full_experience": {
+    "passed": 31,
+    "failed": 0,
+    "selection": null
+  },
+  "current_catalog_entries": 561,
+  "cue_sha256": "e33be9d887a2a99ce637107acfb7b242d0213ab0d12e693446ee59a6220081d1"
+}
