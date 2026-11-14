@@ -1,0 +1,47 @@
+{
+  "result": "PASS",
+  "id": "Mall Fitting Room",
+  "backlog_id": "shopping-mall-031",
+  "sha256": "546de22575db9d1509dcb8363ff80659110594498fa2a76d1b7c38c5af549b8b",
+  "glb_bytes": 256908,
+  "triangles": 4900,
+  "vertices": 9464,
+  "primitives": 35,
+  "materials": 5,
+  "textures": 0,
+  "animations": 1,
+  "dimensions": [
+    1.600000023841858,
+    2.2000000961124897,
+    1.6270000393926782
+  ],
+  "bounds": {
+    "min": [
+      -0.800000011920929,
+      0,
+      -0.7500000279396772
+    ],
+    "max": [
+      0.800000011920929,
+      2.2000000961124897,
+      0.877000011453001
+    ]
+  },
+  "budget": {
+    "triangles": 10000,
+    "bytes": 1000000,
+    "mesh_primitives": 80
+  },
+  "animation": {
+    "frames": 60,
+    "opening_degrees": 105.00000261370216,
+    "collision_method": "World OBB conservative boxes, moving leaf/handles vs fixed walls/frame/floor/furniture; designed hinge attachment excluded",
+    "moving_meshes": 7,
+    "fixed_meshes": 23
+  },
+  "validation": {
+    "errors": 0,
+    "warnings": 0,
+    "validator": "2.0.0-dev.3.10"
+  }
+}

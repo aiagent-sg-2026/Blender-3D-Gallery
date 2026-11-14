@@ -1,0 +1,31 @@
+{
+  "id": "shopping-mall-031",
+  "title": "Mall Fitting Room",
+  "root": "ASSET_MallFittingRoom",
+  "scope": "Original Shopping Mall list031; not global500 ID031",
+  "budget": {
+    "triangles": 10000,
+    "bytes": 1000000,
+    "mesh_primitives": 80
+  },
+  "expected_dimensions_m": [
+    1.6,
+    2.2,
+    1.627
+  ],
+  "dimensions_axes": "glTF X width Y height Z depth, closed including handle",
+  "required_nodes": [
+    "WALL_Back",
+    "WALL_Left",
+    "WALL_Right",
+    "BENCH_Seat",
+    "SHELF_PersonalItems",
+    "HOOK_Arm_01",
+    "HOOK_Arm_02",
+    "MOVABLE_Door",
+    "DOOR_Leaf",
+    "DOOR_Handle_Inner",
+    "DOOR_Handle_Outer"
+  ],
+  "door_degrees": 105
+}

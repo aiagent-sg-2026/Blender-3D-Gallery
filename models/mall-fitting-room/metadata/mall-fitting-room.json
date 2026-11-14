@@ -1,0 +1,72 @@
+{
+  "id": "mall-fitting-room",
+  "backlog_id": "shopping-mall-031",
+  "name": "Mall Fitting Room",
+  "summary": "Original modular opaque retail fitting room with bench, hooks and outward-opening door.",
+  "description": "Separate opaque back and side partitions, two-sided door handles, rear bench, two clothing hooks and personal-item shelf. No ceiling or simulated mirror.",
+  "category": "Mall Fixtures",
+  "tags": [
+    "retail",
+    "fitting-room",
+    "changing-room",
+    "original",
+    "modular",
+    "editable",
+    "animated"
+  ],
+  "status": "PASS: local asset QA; not deployed",
+  "created": "2026-11-14",
+  "author": "Blender-3D-Gallery / agent-assisted procedural modeling",
+  "blender_version": "4.0.2",
+  "creation_method": "Original Blender Python geometry; no external assets, branding or textures",
+  "generator": "generate.py",
+  "paths": {
+    "source": "sources/mall-fitting-room.blend",
+    "glb": "exports/optimized.glb",
+    "preview": "previews/hero.png",
+    "additional_previews": [
+      "previews/front.png",
+      "previews/rear.png",
+      "previews/side.png",
+      "previews/open.png",
+      "previews/interior.png"
+    ]
+  },
+  "display": {
+    "units": "metres",
+    "up_axis": "Blender +Z / glTF +Y",
+    "front_axis": "Blender -Y / glTF +Z",
+    "origin": "floor centre",
+    "previewRotationY": 0
+  },
+  "accuracy_notes": "Illustrative reusable retail room; no accessibility, building-code, fire, privacy or safety certification. Hinge articulation is illustrative. No mirror or reflected scene is claimed.",
+  "rights": "Original geometry and materials; reuse in the owner's projects is authorized. Public redistribution terms have not been specified.",
+  "attribution": [
+    {
+      "credit": "Original procedural geometry; no external assets."
+    }
+  ],
+  "budgets": {
+    "triangles": 10000,
+    "bytes": 1000000,
+    "mesh_primitives": 80
+  },
+  "interaction": {
+    "root": "ASSET_MallFittingRoom",
+    "clips": [
+      "DoorOpenClose"
+    ],
+    "duration_seconds": 2.5,
+    "door_opening_degrees": 105
+  },
+  "qa": {
+    "physical_devices": "NOT TESTED",
+    "deployment": "NOT DEPLOYED",
+    "render_review": "PASS: six Blender previews inspected by parent reviewer on 2026-11-14",
+    "browser": "PASS: Chromium Gallery 1440/768/390 viewport cases and isolated Three.js animation; reports/browser/results.json and reports/animation-browser/results.json",
+    "source_edit": "PASS: edited saved source reopened and reexported; reports/sources.json",
+    "structure": "PASS: Khronos errors 0 warnings 0; 60-frame moving-door OBB clearance, 105-degree opening and closed reset; reports/assets.json",
+    "build": "PASS: reports/build.log",
+    "focused_tests": "PASS: 2/2; reports/focused-test.log"
+  }
+}
