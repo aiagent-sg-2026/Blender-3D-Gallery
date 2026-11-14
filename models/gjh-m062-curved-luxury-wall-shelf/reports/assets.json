@@ -1,0 +1,182 @@
+{
+  "result": "PASS",
+  "id": "GJH-M062",
+  "lods": [
+    {
+      "file": "exports/lod0.glb",
+      "lod": 0,
+      "result": "PASS",
+      "sha256": "8dbe67f737d67b380a8c1823a08f29557c757c3eae7595bca2a581b4dc9704ee",
+      "bytes": 727388,
+      "triangles": 9156,
+      "vertices": 17694,
+      "meshes": 29,
+      "dimensions": [
+        2.4000000953674316,
+        2.3999999053776264,
+        0.550000011920929
+      ],
+      "textures": 2,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "file": "exports/lod1.glb",
+      "lod": 1,
+      "result": "PASS",
+      "sha256": "d829aa5e39c32a1b89dfc0026d21cb52636c142463ce2579adc7a375b7dc5dfd",
+      "bytes": 380852,
+      "triangles": 3876,
+      "vertices": 7494,
+      "meshes": 29,
+      "dimensions": [
+        2.4000000953674316,
+        2.3999999053776264,
+        0.550000011920929
+      ],
+      "textures": 2,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "file": "exports/lod2.glb",
+      "lod": 2,
+      "result": "PASS",
+      "sha256": "4a134dc7d6d67bbf2474adbc1a5ecfa6544c7aa07f6e4376d71dbff6d943fbe7",
+      "bytes": 272068,
+      "triangles": 2116,
+      "vertices": 4254,
+      "meshes": 29,
+      "dimensions": [
+        2.4000000953674316,
+        2.3999999053776264,
+        0.550000011920929
+      ],
+      "textures": 2,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "file": "exports/lod3.glb",
+      "lod": 3,
+      "result": "PASS",
+      "sha256": "458f77d63a7fcb3ba69b826b421fe409950e7b3f7ed5af22ff06964044578ada",
+      "bytes": 165380,
+      "triangles": 528,
+      "vertices": 966,
+      "meshes": 29,
+      "dimensions": [
+        2.4000000953674316,
+        2.3999999053776264,
+        0.550000011920929
+      ],
+      "textures": 2,
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "anchors": {
+    "product_anchor_row_1_slot_01": [
+      -0.800000011920929,
+      0.45100000500679016,
+      -0.03500000014901161
+    ],
+    "product_anchor_row_1_slot_02": [
+      -0.47999998927116394,
+      0.45100000500679016,
+      -0.03500000014901161
+    ],
+    "product_anchor_row_1_slot_03": [
+      -0.1599999964237213,
+      0.45100000500679016,
+      -0.03500000014901161
+    ],
+    "product_anchor_row_1_slot_04": [
+      0.1599999964237213,
+      0.45100000500679016,
+      -0.03500000014901161
+    ],
+    "product_anchor_row_1_slot_05": [
+      0.47999998927116394,
+      0.45100000500679016,
+      -0.03500000014901161
+    ],
+    "product_anchor_row_1_slot_06": [
+      0.800000011920929,
+      0.45100000500679016,
+      -0.03500000014901161
+    ],
+    "product_anchor_row_2_slot_01": [
+      -0.800000011920929,
+      0.9909999966621399,
+      -0.03500000014901161
+    ],
+    "product_anchor_row_2_slot_02": [
+      -0.47999998927116394,
+      0.9909999966621399,
+      -0.03500000014901161
+    ],
+    "product_anchor_row_2_slot_03": [
+      -0.1599999964237213,
+      0.9909999966621399,
+      -0.03500000014901161
+    ],
+    "product_anchor_row_2_slot_04": [
+      0.1599999964237213,
+      0.9909999966621399,
+      -0.03500000014901161
+    ],
+    "product_anchor_row_2_slot_05": [
+      0.47999998927116394,
+      0.9909999966621399,
+      -0.03500000014901161
+    ],
+    "product_anchor_row_2_slot_06": [
+      0.800000011920929,
+      0.9909999966621399,
+      -0.03500000014901161
+    ],
+    "product_anchor_row_3_slot_01": [
+      -0.800000011920929,
+      1.531000018119812,
+      -0.03500000014901161
+    ],
+    "product_anchor_row_3_slot_02": [
+      -0.47999998927116394,
+      1.531000018119812,
+      -0.03500000014901161
+    ],
+    "product_anchor_row_3_slot_03": [
+      -0.1599999964237213,
+      1.531000018119812,
+      -0.03500000014901161
+    ],
+    "product_anchor_row_3_slot_04": [
+      0.1599999964237213,
+      1.531000018119812,
+      -0.03500000014901161
+    ],
+    "product_anchor_row_3_slot_05": [
+      0.47999998927116394,
+      1.531000018119812,
+      -0.03500000014901161
+    ],
+    "product_anchor_row_3_slot_06": [
+      0.800000011920929,
+      1.531000018119812,
+      -0.03500000014901161
+    ]
+  },
+  "anchor_stability": "Identical world transforms and names across all four LODs",
+  "collider": {
+    "file": "exports/collision.glb",
+    "dimensions": [
+      2.4000000953674316,
+      2.4000000953674316,
+      0.550000011920929
+    ],
+    "errors": 0,
+    "warnings": 0
+  },
+  "limits": "No runtime auto LOD or part highlight implied by structural validation"
+}
