@@ -1,0 +1,109 @@
+{
+  "status": "PASS_WITH_FINDINGS",
+  "findings": [
+    {
+      "id": "BASE-001",
+      "viewport": 1440,
+      "issue": "Desktop map stays closed after Start exploring while the header Map and details summary are hidden.",
+      "workaround": "How to explore -> Show quick guide -> Choose a store",
+      "owner": "FND-006"
+    }
+  ],
+  "revision": "d636ce0f658c7fb2df7342648ed44b5d45012dfe",
+  "browser": "156.0.8078.4",
+  "environment": "Chromium SwiftShader on macOS; one cold browser-context sample per viewport, local HTTP, no service worker; not field latency or physical touch",
+  "rows": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "touchEmulated": false,
+      "readyMs": 2945.051125,
+      "sampledDrawCalls": 152,
+      "mode": "explore",
+      "walking": {
+        "mapDestination": "newmoon",
+        "inside": {
+          "x": -10.000341415405273,
+          "z": -0.07524092495441437,
+          "zone": "newmoon"
+        },
+        "returned": {
+          "x": -10.000532150268555,
+          "z": 2.4429726600646973,
+          "zone": "atrium"
+        },
+        "input": "real keyboard W/S"
+      },
+      "products": [
+        {
+          "id": "new-moon-nz-425g-front",
+          "preview": "loaded",
+          "previewMs": 1907.8984170000003,
+          "added": true
+        },
+        {
+          "id": "new-moon-au-425g-front",
+          "preview": "loaded",
+          "previewMs": 257.2335000000021,
+          "added": true
+        },
+        {
+          "id": "new-moon-sa-425g-front",
+          "preview": "loaded",
+          "previewMs": 374.38970799999515,
+          "added": true
+        },
+        {
+          "id": "new-moon-mx-454g-front",
+          "preview": "loaded",
+          "previewMs": 433.5972080000065,
+          "added": true
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "touchEmulated": true,
+      "readyMs": 3113.3484590000007,
+      "sampledDrawCalls": 137,
+      "mode": "explore",
+      "walking": null,
+      "products": [],
+      "overflow": false
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "touchEmulated": true,
+      "readyMs": 1596.3712500000038,
+      "sampledDrawCalls": 121,
+      "mode": "explore",
+      "walking": null,
+      "products": [],
+      "overflow": false
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "touchEmulated": true,
+      "readyMs": 456.5337500000023,
+      "sampledDrawCalls": 136,
+      "mode": "explore",
+      "walking": null,
+      "products": [],
+      "overflow": false
+    }
+  ],
+  "noJavaScriptDirectory": true,
+  "errors": []
+}

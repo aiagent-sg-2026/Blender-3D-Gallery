@@ -1,0 +1,79 @@
+{
+  "status": "VERIFIED_LOCAL_CANDIDATE",
+  "recordedAt": "2026-11-14T16:08:04.725Z",
+  "tasks": [
+    "FND-001",
+    "FND-002"
+  ],
+  "physicalDeviceTesting": "waived by owner",
+  "published": false,
+  "checks": [
+    {
+      "file": "reports/baseline-identity.json",
+      "status": "PASS",
+      "sha256": "16df54a20314b7ae19b6df5cb1e8b1f36bd1f8868e44516e7c8c34345e1853a3"
+    },
+    {
+      "file": "reports/baseline-browser.json",
+      "status": "PASS_WITH_FINDINGS",
+      "sha256": "6ce6eeb89ec7fd23b3904904407cd3f521c5bd2ed65eee1a5ff25f92f3427186"
+    },
+    {
+      "file": "reports/whitebox-browser.json",
+      "status": "PASS",
+      "sha256": "be9b62a41ec63a999c54b0634b490a91e3e3e752ffcdea34fac1a3714b4e06d6"
+    },
+    {
+      "file": "reports/artifact-validation.json",
+      "status": "PASS",
+      "sha256": "3487333707c3cc9273b1b65970eadbc20af674f900f891f45ec350c778c5f005"
+    },
+    {
+      "file": "reports/blender-source.json",
+      "status": "PASS",
+      "sha256": "fd39ec189771f57f59b918773cb913ebe3fc4db7296fc0aa8f28ba994e7cfffc"
+    }
+  ],
+  "files": [
+    {
+      "path": "whitebox/layout.json",
+      "bytes": 11593,
+      "sha256": "4876d7c8663d172d3846b637d72f0fbf378c30d64294528e9025924842a101ef"
+    },
+    {
+      "path": "whitebox/foundation-v1.glb",
+      "bytes": 68452,
+      "sha256": "135d3d08b2ad0bf5a53e8a9b83807270a60416e52d0d4483d35318e43e43c71e"
+    },
+    {
+      "path": "whitebox/foundation-v1.blend",
+      "bytes": 117399,
+      "sha256": "5605c02bd9ae93d6181630bc6955a7d9862e462eed6517f218a06d764b9d1efb"
+    },
+    {
+      "path": "whitebox/main.js",
+      "bytes": 5650,
+      "sha256": "0426cd5791f743a7a0777eaf9d4f5e11f337f0b0046c3998d8e45101dd15a052"
+    },
+    {
+      "path": "whitebox/index.html",
+      "bytes": 1295,
+      "sha256": "45049f7279787c2b039d6c9de80395efe771ccf1c906070f4d41a6b6a89f9ed1"
+    },
+    {
+      "path": "whitebox/style.css",
+      "bytes": 2087,
+      "sha256": "ee44bf6ea35b0adb85ce7c80edf11e3ec116c2fdd471b2609c710a6537b98101"
+    },
+    {
+      "path": "whitebox/runtime/source-manifest.json",
+      "bytes": 2841,
+      "sha256": "d3c10fab9dd2ba27e932b328820daf2dc364a0c36c26c400e4e3e2830616231e"
+    }
+  ],
+  "openHandoffs": [
+    "FND-003 installed module/door clearance",
+    "FND-004 neutral shop content",
+    "FND-006 baseline finding BASE-001 desktop map discoverability"
+  ]
+}
