@@ -58,14 +58,14 @@
   },
   "interaction": {
     "manifest": "support-manifest.json",
-    "runtime": "Gallery orbit/zoom/reset only; Inspector integration not yet implemented"
+    "runtime": "Gallery orbit/zoom/reset; Shelf Inspector fixture switching, row highlight, LEDs, single concept header, manual four LODs and reset."
   },
   "qa": {
     "render_review": "PASS: eight regenerated Blender previews actually inspected after coplanar-lining repair. Browser side-view verification still pending.",
-    "browser": "NEEDS REVIEW: original automatic browser cases passed but Inspector side image revealed coplanar lining visual FAIL. Final repaired exports require fresh hash/side-view verification after rebase.",
+    "browser": "PASS: final integrated candidate e124bc9f; actual GLB hash and orbit/zoom/reset/reopen at1440/768/390 Chromium viewport emulation. reports/browser-final-inspector. Not real devices.",
     "physical_devices": "NOT TESTED",
     "deployment": "NOT DEPLOYED",
-    "inspector": "NEEDS REVIEW: runtime integration exists locally, repaired geometry final browser visual QA pending",
+    "inspector": "PASS: desktop Chromium +390px touch emulation; four LOD hashes, four-fixture strict GPU stability, interrupted loads/reset, material ownership. Actual final front/default/side/mobile screenshots inspected; original side-view coplanar striping resolved and before evidence retained. docs/shelf-inspector-m059-qa.md",
     "structure": "PASS: final4LODs/source and real4mm lining separation, back contact, wood end-contact and first-visible-surface rays; original export failed the new regression.",
     "source_edit": "PASS: saved source copy edit/reopen/reexport, canonical unchanged; reports/sources.json",
     "automatic_lod": "NOT IMPLEMENTED",

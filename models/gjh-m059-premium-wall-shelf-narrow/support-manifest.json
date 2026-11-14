@@ -110,8 +110,18 @@
     "collision_descriptor": "collision"
   },
   "runtime_demo": {
-    "status": "planned_not_integrated",
-    "implemented": []
+    "status": "implemented_local_browser_verified",
+    "route": "?page=shelf-inspector",
+    "implemented": [
+      "fixture selection M056/M057/M058/M059",
+      "three shelf row highlights",
+      "five LED strips toggled together",
+      "single anchored concept header text",
+      "manual LOD0-3 selection",
+      "reset",
+      "latest-wins loading and disposal"
+    ],
+    "note": "Local Chromium desktop and 390px touch emulation passed after coplanar lining correction. No physical-device or deployment claim. See docs/shelf-inspector-m059-qa.md."
   },
   "design_interpretation": {
     "original_width_depth_height_m": [
@@ -133,5 +143,5 @@
       "height_m": 0.36
     }
   ],
-  "runtime_limits": "No Inspector integration, automatic LOD or external product loading implemented for M059."
+  "runtime_limits": "Manual LOD only; external products and automatic LOD not implemented; physical Android/iOS untested."
 }

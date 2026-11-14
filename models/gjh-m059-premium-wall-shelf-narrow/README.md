@@ -12,7 +12,7 @@ Each 0.592 m-wide shelf has **two anchors**, at X ±0.14 m, for six total across
 
 Canonical editable `.blend`, `generate.py`, four genuine LOD `.glb` files, identical `optimized.glb`/LOD0, conservative box collider, original textures, eight reviewed previews, metadata, support manifest and focused tests are included. All 29 mesh parts and six placement anchors keep stable names across LODs.
 
-The explicit `header_surface_front` anchor has local +Z outward/+Y up and a 0.50 × 0.36 m label area. Front and both 45-degree views are tested against actual occluders. The manifest is ready for future integration, but **M059 Inspector support is not implemented yet**. Gallery orbit, zoom, reset and repeated reopening are verified. No automatic LOD or product loading is claimed.
+The explicit `header_surface_front` anchor has local +Z outward/+Y up and a 0.50 × 0.36 m label area. Front and both 45-degree views are tested against actual occluders. Shelf Inspector now supports M059 as the fourth fixture, three row highlights, five LED strips toggled together, one replaceable concept header, manual LOD0–3 and reset. Local desktop Chromium and 390px touch emulation passed after the coplanar inner-lining fix; no physical-device or deployment claim. See `../../docs/shelf-inspector-m059-qa.md`. Gallery orbit, zoom, reset and repeated reopening are verified. No automatic LOD or product loading is claimed.
 
 ## Actual local evidence
 
