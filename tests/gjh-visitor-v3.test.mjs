@@ -20,12 +20,14 @@ test('v3 exports a bounded, valid skinned visitor and the intended clips', async
   const gltf = await load();
   const meshes = [];
   gltf.scene.traverse(node => { if (node.isMesh) meshes.push(node); });
-  assert.ok(meshes.length <= 28, `draw calls: ${meshes.length}`);
+  assert.ok(meshes.length <= 24, `draw calls: ${meshes.length}`);
+  const triangles = meshes.reduce((sum, m) => sum + m.geometry.index.count / 3, 0);
+  assert.ok(triangles > 15000 && triangles <= 22000, `triangles: ${triangles}`);
   assert.ok(meshes.every(mesh => mesh.isSkinnedMesh));
   const bounds = new Box3().setFromObject(gltf.scene);
   assert.ok(Math.abs(bounds.min.y) < .002);
   assert.ok(Math.abs(bounds.max.y - 1.78) < .01);
-  for (const name of ['Body', 'Spine', 'Neck', 'Head', 'LeftShoulder', 'RightShoulder', 'LeftElbow', 'RightElbow', 'LeftHand', 'RightHand', 'LeftHip', 'RightHip', 'LeftKnee', 'RightKnee', 'LeftFoot', 'RightFoot', 'LeftThumb', 'RightThumb', 'LeftFinger0', 'RightFinger0'])
+  for (const name of ['Root', 'pelvis', 'spine_03', 'neck_01', 'head', 'upperarm_l', 'upperarm_r', 'lowerarm_l', 'lowerarm_r', 'hand_l', 'hand_r', 'thigh_l', 'thigh_r', 'calf_l', 'calf_r', 'foot_l', 'foot_r', 'thumb_01_l', 'index_01_r'])
     assert.ok(gltf.scene.getObjectByName(name)?.isBone, `missing bone ${name}`);
   assert.deepEqual(gltf.animations.map(clip => clip.name).sort(), ['carry', 'idle', 'pick_up', 'point', 'push_cart', 'run', 'sit_down', 'stand_up', 'turn_left', 'turn_right', 'walk', 'wave']);
 });

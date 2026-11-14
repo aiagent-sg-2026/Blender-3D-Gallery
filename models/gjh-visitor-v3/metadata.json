@@ -4,7 +4,7 @@
   "category": "Characters",
   "status": "development-preview",
   "author": "Yap Wei Jun project / agent-assisted procedural modelling",
-  "creation_method": "Blender-authored procedural geometry and humanoid skin, built from the owner's v3.0 character sheet (adult male, navy zip hoodie, white tee, khaki pants, white sneakers, black backpack, lanyard ID badge, left-wrist watch). The sheet image is not embedded.",
+  "creation_method": "Blender 5.1.2 headless build: MPFB2 v2.0.18 (MakeHuman) human base and game_engine skeleton, tuned to a young Asian adult male at 1.78 m; hoodie, tee, trousers and sneaker uppers are offset shells of the body surface; hair clumps, backpack, lanyard, badge, watch and soles are procedural. The supplied character sheet is a design reference and is not embedded.",
   "generator": "generate.py",
   "paths": {
     "glb": "exports/gjh-visitor-v3.glb",
@@ -19,11 +19,14 @@
       1
     ]
   },
-  "accuracy_notes": "Stylised, simplified interpretation of the sheet; not semi-realistic yet. Mall interaction and device performance are not verified.",
+  "accuracy_notes": "Stylised interpretation of the owner's v3.0 sheet; simpler than the sheet's semi-realistic render (no textures, simple face, clumped hair). Mall interaction and device performance are not verified.",
   "rights": "Original asset; owner-project reuse is authorized. Public redistribution terms have not been specified.",
   "attribution": [
     {
-      "credit": "Original procedural geometry and animation for the owner's projects; the supplied character sheet is a design reference and is not embedded."
+      "credit": "Human base mesh and rig data generated with MPFB2 v2.0.18 (MakeHuman project; add-on licensed GPL-3.0-or-later). Confirm the MakeHuman base-mesh output licence before any public redistribution."
+    },
+    {
+      "credit": "Clothing, hair, accessories and animation: original procedural work for the owner's projects."
     }
   ]
 }
