@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "model_id": "GJH-M057",
+  "asset_slug": "gjh-m057-premium-wall-shelf-corner",
+  "source": "Original M056 material language adapted to90degree corner; no official branding",
+  "dimension_convention": "glTF metres X width/Y height/Z depth",
+  "dimensions_m": [
+    1.2,
+    2.4,
+    1.2
+  ],
+  "parts": [
+    "cabinet",
+    "trim",
+    "brand_header",
+    "collision",
+    "shelf_1",
+    "price_rail_1",
+    "product_anchor_row_1",
+    "shelf_2",
+    "price_rail_2",
+    "product_anchor_row_2",
+    "shelf_3",
+    "price_rail_3",
+    "product_anchor_row_3",
+    "LED_1_A",
+    "LED_1_B",
+    "LED_2_A",
+    "LED_2_B",
+    "LED_3_A",
+    "LED_3_B"
+  ],
+  "product_rows": [
+    {
+      "row": 1,
+      "min_items": 1,
+      "max_items": 8,
+      "anchors": [
+        "product_anchor_row_1_slot_01",
+        "product_anchor_row_1_slot_02",
+        "product_anchor_row_1_slot_03",
+        "product_anchor_row_1_slot_04",
+        "product_anchor_row_1_slot_05",
+        "product_anchor_row_1_slot_06",
+        "product_anchor_row_1_slot_07",
+        "product_anchor_row_1_slot_08"
+      ],
+      "product_asset_urls": []
+    },
+    {
+      "row": 2,
+      "min_items": 1,
+      "max_items": 8,
+      "anchors": [
+        "product_anchor_row_2_slot_01",
+        "product_anchor_row_2_slot_02",
+        "product_anchor_row_2_slot_03",
+        "product_anchor_row_2_slot_04",
+        "product_anchor_row_2_slot_05",
+        "product_anchor_row_2_slot_06",
+        "product_anchor_row_2_slot_07",
+        "product_anchor_row_2_slot_08"
+      ],
+      "product_asset_urls": []
+    },
+    {
+      "row": 3,
+      "min_items": 1,
+      "max_items": 8,
+      "anchors": [
+        "product_anchor_row_3_slot_01",
+        "product_anchor_row_3_slot_02",
+        "product_anchor_row_3_slot_03",
+        "product_anchor_row_3_slot_04",
+        "product_anchor_row_3_slot_05",
+        "product_anchor_row_3_slot_06",
+        "product_anchor_row_3_slot_07",
+        "product_anchor_row_3_slot_08"
+      ],
+      "product_asset_urls": []
+    }
+  ],
+  "lod_files": [
+    "exports/lod0.glb",
+    "exports/lod1.glb",
+    "exports/lod2.glb",
+    "exports/lod3.glb"
+  ],
+  "collision_file": "exports/collision.glb",
+  "runtime_gaps": [
+    "Inspector support pending separate validation",
+    "automatic LOD selection not implemented",
+    "product loading not implemented",
+    "physical devices not tested"
+  ],
+  "lighting": "Warm3000K-looking emissive material only; not a photometric promise",
+  "runtime_nodes": {
+    "shelves": [
+      "shelf_1",
+      "shelf_2",
+      "shelf_3"
+    ],
+    "leds": [
+      "LED_1_A",
+      "LED_1_B",
+      "LED_2_A",
+      "LED_2_B",
+      "LED_3_A",
+      "LED_3_B",
+      "LED_header_A",
+      "LED_header_B",
+      "LED_base_A",
+      "LED_base_B"
+    ],
+    "brand_header": "brand_header",
+    "brand_header_panels": [
+      "brand_header_front_panel",
+      "brand_header_side_panel"
+    ],
+    "collision_descriptor": "collision"
+  },
+  "runtime_header_surfaces": [
+    {
+      "anchor": "header_surface_front",
+      "width_m": 0.44,
+      "height_m": 0.36
+    },
+    {
+      "anchor": "header_surface_side",
+      "width_m": 0.44,
+      "height_m": 0.36
+    }
+  ],
+  "header_surface_convention": "anchor local+Z outward,local+Y up; render overlay atlocalz+.002m",
+  "design_interpretation": {
+    "original_backlog_dimensions_m": [
+      2.4,
+      0.55,
+      2.4
+    ],
+    "nominal_arm_length_m": 1.2,
+    "nominal_arm_depth_m": 0.55,
+    "nominal_outer_width_depth_height_m": [
+      1.2,
+      1.2,
+      2.4
+    ],
+    "explanation": "Approved modular90degree interpretation. .55m is each arm shelf depth, not whole outer depth. Does not match repeated original2.4x.55m outer dimensions."
+  }
+}

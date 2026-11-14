@@ -1,0 +1,76 @@
+TAP version 13
+# Subtest: M057 actual LOD contracts, exact anchors, supports and collider validate
+ok 1 - M057 actual LOD contracts, exact anchors, supports and collider validate
+  ---
+  duration_ms: 279.156818
+  type: 'test'
+  ...
+# Subtest: M057 saved source edit and preview artifacts exist without branded artwork
+ok 2 - M057 saved source edit and preview artifacts exist without branded artwork
+  ---
+  duration_ms: 146.823855
+  type: 'test'
+  ...
+# Subtest: M057 independent GJH identity and unique catalog registration
+ok 3 - M057 independent GJH identity and unique catalog registration
+  ---
+  duration_ms: 698.309022
+  type: 'test'
+  ...
+# Subtest: shelf selection and LEDs clone only local materials and restore ownership
+ok 4 - shelf selection and LEDs clone only local materials and restore ownership
+  ---
+  duration_ms: 2.533295
+  type: 'test'
+  ...
+# Subtest: runtime title resources replaced and disposed without changing baked header
+ok 5 - runtime title resources replaced and disposed without changing baked header
+  ---
+  duration_ms: 2.161127
+  type: 'test'
+  ...
+# Subtest: missing semantic nodes reject rather than pretend interactions work
+ok 6 - missing semantic nodes reject rather than pretend interactions work
+  ---
+  duration_ms: 0.522375
+  type: 'test'
+  ...
+# Subtest: rapid LOD switches release late parse and dispose releases pending result
+ok 7 - rapid LOD switches release late parse and dispose releases pending result
+  ---
+  duration_ms: 0.591209
+  type: 'test'
+  ...
+# Subtest: M057 oriented header anchors support both perpendicular faces and shared texture disposal
+ok 8 - M057 oriented header anchors support both perpendicular faces and shared texture disposal
+  ---
+  duration_ms: 2.735962
+  type: 'test'
+  ...
+# Subtest: new model cannot guess header direction or partially clone on invalid surfaces
+ok 9 - new model cannot guess header direction or partially clone on invalid surfaces
+  ---
+  duration_ms: 0.345334
+  type: 'test'
+  ...
+# Subtest: mixed model and LOD requests commit only the latest captured pair
+ok 10 - mixed model and LOD requests commit only the latest captured pair
+  ---
+  duration_ms: 0.302584
+  type: 'test'
+  ...
+# Subtest: narrow corner plaque keeps real aspect and full words on balanced fitted lines
+ok 11 - narrow corner plaque keeps real aspect and full words on balanced fitted lines
+  ---
+  duration_ms: 0.771251
+  type: 'test'
+  ...
+1..11
+# tests 11
+# suites 0
+# pass 11
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1197.42454

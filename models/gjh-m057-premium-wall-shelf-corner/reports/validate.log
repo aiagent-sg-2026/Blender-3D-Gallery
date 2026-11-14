@@ -1,0 +1,18 @@
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(up.distanceTo(new Vector3(0,1,0))<1e-6)
+
+    at file:///srv/agent-workstation/workspaces/blender-gjh-m057-20261114/repo/models/gjh-m057-premium-wall-shelf-corner/validate.mjs:14:243 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v22.23.3

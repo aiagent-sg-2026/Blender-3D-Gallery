@@ -9,3 +9,31 @@ test('shelf selection and LEDs clone only local materials and restore ownership'
 test('runtime title resources replaced and disposed without changing baked header',()=>{const {root,material}=fixture(),parts=createShelfParts(root,canvas);parts.title('SELECTED GOODS');const overlay=root.getObjectByName('RUNTIME_ReplaceableHeader');let freed=0;for(const o of [overlay.geometry,overlay.material,overlay.material.map])o.addEventListener('dispose',()=>freed++);assert.equal(root.getObjectByName('brand_header_panel').material,material);parts.title('NEXT');assert.equal(freed,3);assert.equal(root.children.filter(o=>o.name==='RUNTIME_ReplaceableHeader').length,1);parts.title('');assert.equal(root.getObjectByName('RUNTIME_ReplaceableHeader'),undefined);assert.equal(cleanHeader('\u0000 ABC\n '),'ABC');assert.equal(cleanHeader('x'.repeat(100)).length,32);parts.dispose();disposeProduct(root);});
 test('missing semantic nodes reject rather than pretend interactions work',()=>{const {root}=fixture();root.remove(root.getObjectByName('LED_base'));assert.throws(()=>createShelfParts(root),/Missing shelf part/);disposeProduct(root);});
 test('rapid LOD switches release late parse and dispose releases pending result',async()=>{const pending=new Map(),commits=[],released=[],signals=[];const loader=createLatestLoader({start(){},prepare:(n,signal)=>{signals.push(signal);return new Promise(resolve=>pending.set(n,resolve));},commit:(v,n)=>commits.push(n),release:v=>released.push(v),fail:e=>{throw e;}});const a=loader.select(0),b=loader.select(3);assert.equal(signals[0].aborted,true);pending.get(3)('LOD3');await b;pending.get(0)('LOD0');await a;assert.deepEqual(commits,[3]);assert.deepEqual(released,['LOD0']);const c=loader.select(1);loader.dispose();pending.get(1)('LOD1');await c;assert.deepEqual(commits,[3]);assert.deepEqual(released,['LOD0','LOD1']);});
+
+test('M057 oriented header anchors support both perpendicular faces and shared texture disposal',()=>{
+ const {root,material}=fixture();const ledNames=Array.from({length:10},(_,i)=>`corner_LED_${i}`);
+ for(const name of ledNames){const mesh=new THREE.Mesh(new THREE.BoxGeometry(.5,.02,.02),material);mesh.name=name;root.add(mesh);}
+ const front=new THREE.Group();front.name='header_surface_front';front.position.set(0,2,.6);root.add(front);
+ const side=new THREE.Group();side.name='header_surface_side';side.position.set(.6,2,0);side.rotation.y=Math.PI/2;root.add(side);
+ const manifest={model_id:'GJH-M057',runtime_nodes:{shelves:['shelf_1','shelf_2','shelf_3'],leds:ledNames},runtime_header_surfaces:[{anchor:front.name,width_m:1,height_m:.36},{anchor:side.name,width_m:1,height_m:.36}]};
+ const parts=createShelfParts(root,canvas,manifest);parts.title('CORNER COLLECTION');root.updateMatrixWorld(true);
+ const a=front.children[0],b=side.children[0];assert.ok(a.isMesh&&b.isMesh);assert.equal(a.material.map,b.material.map);assert.equal(a.geometry.parameters.width,1);assert.equal(b.geometry.parameters.height,.36);
+ const normal=mesh=>new THREE.Vector3(0,0,1).applyQuaternion(mesh.getWorldQuaternion(new THREE.Quaternion()));assert.ok(normal(a).distanceTo(new THREE.Vector3(0,0,1))<1e-9);assert.ok(normal(b).distanceTo(new THREE.Vector3(1,0,0))<1e-9);
+ assert.ok(a.getWorldPosition(new THREE.Vector3()).distanceTo(new THREE.Vector3(0,2,.602))<1e-9);assert.ok(b.getWorldPosition(new THREE.Vector3()).distanceTo(new THREE.Vector3(.602,2,0))<1e-9);
+ parts.light(false);for(const name of ledNames)assert.equal(root.getObjectByName(name).material.emissiveIntensity,0);assert.equal(material.emissiveIntensity,2);
+ let textureFreed=0,materialFreed=0,geometryFreed=0;a.material.map.addEventListener('dispose',()=>textureFreed++);a.material.addEventListener('dispose',()=>materialFreed++);for(const m of[a,b])m.geometry.addEventListener('dispose',()=>geometryFreed++);
+ parts.title('NEXT');assert.equal(textureFreed,1);assert.equal(materialFreed,1);assert.equal(geometryFreed,2);assert.equal(front.children.length,1);assert.equal(side.children.length,1);parts.dispose();assert.equal(front.children.length,0);assert.equal(side.children.length,0);disposeProduct(root);
+});
+test('new model cannot guess header direction or partially clone on invalid surfaces',()=>{
+ const {root,material}=fixture();assert.throws(()=>createShelfParts(root,canvas,{model_id:'GJH-M057'}),/oriented header/);assert.ok(root.children.every(m=>m.material===material));assert.throws(()=>createShelfParts(root,canvas,{model_id:'GJH-M057',runtime_header_surfaces:[{anchor:'missing',width_m:1,height_m:.3}]}),/Invalid header/);disposeProduct(root);
+});
+test('mixed model and LOD requests commit only the latest captured pair',async()=>{
+ const pending=[],commits=[],releases=[];const loader=createLatestLoader({start(){},prepare:key=>new Promise(resolve=>pending.push({key,resolve})),commit:(value,key)=>commits.push(key),release:value=>releases.push(value),fail:error=>{throw error;}});
+ const first={model:'M057',lod:0},last={model:'M056',lod:3};const a=loader.select(first),b=loader.select(last);pending[1].resolve('straight3');await b;pending[0].resolve('corner0');await a;assert.deepEqual(commits,[last]);assert.deepEqual(releases,['corner0']);loader.dispose();
+});
+
+test('narrow corner plaque keeps real aspect and full words on balanced fitted lines',()=>{
+ const {root}=fixture();for(const name of ['front_surface','side_surface']){const anchor=new THREE.Group();anchor.name=name;root.add(anchor);}
+ let canvasObject;const drawn=[];const ctx={font:'600 96px sans-serif',fillRect(){},measureText(text){return{width:text.length*Number(this.font.match(/(\d+)px/)[1])*.6};},fillText(text,x,y){drawn.push({text,x,y,font:this.font,width:this.measureText(text).width});}};
+ const parts=createShelfParts(root,()=>canvasObject={getContext:()=>ctx},{model_id:'GJH-M057',runtime_header_surfaces:['front_surface','side_surface'].map(anchor=>({anchor,width_m:.44,height_m:.36}))});parts.title('CORNER COLLECTION');assert.equal(canvasObject.width,313);assert.equal(canvasObject.height,256);assert.deepEqual(drawn.map(line=>line.text),['CORNER','COLLECTION']);assert.ok(drawn.every(line=>line.width<=canvasObject.width*.92));assert.ok(drawn[0].y<drawn[1].y);assert.ok(drawn.every(line=>line.x===canvasObject.width/2));parts.dispose();disposeProduct(root);
+});

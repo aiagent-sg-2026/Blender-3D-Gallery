@@ -1,0 +1,168 @@
+{
+  "id": "gjh-m057-premium-wall-shelf-corner",
+  "backlog_id": "GJH-M057",
+  "name": "Premium Wall Shelf Corner",
+  "summary": "Modular 90-degree corner display with continuous L-shaped shelves.",
+  "description": "Emerald lacquer/champagne gold two-wing corner fixture, three continuous L-shaped shelves, supported warm LEDs and two independently replaceable blank headers. No products embedded.",
+  "category": "Shopping Mall",
+  "tags": [
+    "GJH-M057",
+    "corner",
+    "wall-shelf",
+    "modular",
+    "original",
+    "editable",
+    "LOD"
+  ],
+  "status": "validated",
+  "created": "2026-11-14",
+  "author": "Blender-3D-Gallery / agent-assisted procedural modeling",
+  "blender_version": "4.0.2",
+  "creation_method": "Blender Python original geometry and original baked PNG textures; user concept reference, not official brand artwork",
+  "generator": "generate.py",
+  "paths": {
+    "source": "sources/gjh-m057-premium-wall-shelf-corner.blend",
+    "glb": "exports/optimized.glb",
+    "preview": "previews/hero.png",
+    "additional_previews": [
+      "previews/front.png",
+      "previews/rear.png",
+      "previews/side.png",
+      "previews/detail.png"
+    ],
+    "lods": [
+      "exports/lod0.glb",
+      "exports/lod1.glb",
+      "exports/lod2.glb",
+      "exports/lod3.glb"
+    ],
+    "collider": "exports/collision.glb"
+  },
+  "display": {
+    "units": "metres",
+    "up_axis": "Blender +Z / glTF +Y",
+    "front_axis": "Blender -Y / glTF +Z",
+    "origin": "floor centre",
+    "previewRotationY": 0
+  },
+  "accuracy_notes": "Conceptual reference-inspired furniture, not official branded merchandise. No structural, lighting-temperature, safety or accessibility certification.",
+  "rights": "Original geometry and materials; reuse in the owner's projects is authorized. Public redistribution terms have not been specified.",
+  "attribution": [
+    {
+      "credit": "Original procedural geometry and baked procedural wood/stone textures. User-supplied concept image used only as visual direction; no logos, packaging artwork or products copied."
+    }
+  ],
+  "budgets": {
+    "triangles": 15000,
+    "bytes": 3000000
+  },
+  "interaction": {
+    "manifest": "support-manifest.json",
+    "runtime": "Shelf Inspector: model selection, manual four-level LOD, row highlight, LED toggle, two editable text headers and reset. Gallery orbit/zoom/reset."
+  },
+  "qa": {
+    "render_review": "PASS: final hero/front/rear/side/detail and LOD1/2/3 images actually inspected; front-edge independent headers, supported LEDs and closed rear corner. Runtime title readability independently inspected after correction.",
+    "browser": "PASS: final GLB hash and Gallery controls at 1440/768/390; reports/browser-front-header. Inspector final M057 desktop/touch cases PASS, output/shelf-inspector-m057-visible; previous four M056 regression cases PASS before M057-only header layout fix.",
+    "physical_devices": "NOT TESTED",
+    "deployment": "NOT DEPLOYED",
+    "structure": "PASS: all 4 LODs/collider, 24 stable anchors, LED contact, continuous L footprint, complete label rectangle unobstructed from diagonal and face-normal views",
+    "source_edit": "PASS: saved-source copy edit/reopen/reexport; reports/sources.json",
+    "automatic_lod": "NOT IMPLEMENTED",
+    "external_product_loading": "NOT IMPLEMENTED"
+  },
+  "browseCategory": "Shopping Mall",
+  "design_interpretation": {
+    "original_backlog_dimensions_m": [
+      2.4,
+      0.55,
+      2.4
+    ],
+    "nominal_arm_length_m": 1.2,
+    "nominal_arm_depth_m": 0.55,
+    "nominal_outer_width_depth_height_m": [
+      1.2,
+      1.2,
+      2.4
+    ],
+    "explanation": "Approved modular90degree interpretation. .55m is each arm shelf depth, not whole outer depth. Does not match repeated original2.4x.55m outer dimensions.",
+    "measured_outer_gltf_xyz_m": [
+      1.2000000476837158,
+      2.4000000953674316,
+      1.2000000476837158
+    ]
+  },
+  "measured_lods": [
+    {
+      "file": "exports/lod0.glb",
+      "lod": 0,
+      "result": "PASS",
+      "sha256": "f62f5e8a2ea43b253edf1a96af0a59ea3ae52fa794de9a37151007f7637c6e4f",
+      "bytes": 1056536,
+      "triangles": 13680,
+      "vertices": 27272,
+      "meshes": 42,
+      "dimensions": [
+        1.2000000476837158,
+        2.4000000953674316,
+        1.2000000476837158
+      ],
+      "textures": 2,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "file": "exports/lod1.glb",
+      "lod": 1,
+      "result": "PASS",
+      "sha256": "04840b830a874a4f672a7365a441238f1dc71795289dec5453f623ddd095eed7",
+      "bytes": 469480,
+      "triangles": 4944,
+      "vertices": 9824,
+      "meshes": 42,
+      "dimensions": [
+        1.2000000476837158,
+        2.4000000953674316,
+        1.2000000476837158
+      ],
+      "textures": 2,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "file": "exports/lod2.glb",
+      "lod": 2,
+      "result": "PASS",
+      "sha256": "dce401c79171d90092fc2994bf6946ec579f20355c106e68e8ba102059baa6aa",
+      "bytes": 285952,
+      "triangles": 2032,
+      "vertices": 4376,
+      "meshes": 42,
+      "dimensions": [
+        1.2000000476837158,
+        2.4000000953674316,
+        1.2000000476837158
+      ],
+      "textures": 2,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "file": "exports/lod3.glb",
+      "lod": 3,
+      "result": "PASS",
+      "sha256": "a5dad5e3f8411391b549cc0fbe03fbe85fc0d9078b4751328e84e500550345cb",
+      "bytes": 180092,
+      "triangles": 576,
+      "vertices": 1116,
+      "meshes": 42,
+      "dimensions": [
+        1.2000000476837158,
+        2.4000000953674316,
+        1.2000000476837158
+      ],
+      "textures": 2,
+      "errors": 0,
+      "warnings": 0
+    }
+  ]
+}

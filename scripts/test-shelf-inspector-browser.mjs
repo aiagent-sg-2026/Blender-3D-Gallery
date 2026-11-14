@@ -7,6 +7,24 @@ const out=process.env.TEST_ARTIFACT_DIR||'output/shelf-inspector-browser';await 
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const expected=await Promise.all([0,1,2,3].map(async n=>hash(await fs.readFile(`models/gjh-m056-premium-wall-shelf-straight/exports/lod${n}.glb`))));
 const server=await serveBuild(),browser=await chromium.launch(launchOptions),results=[];
+async function blankInterior(page, png) {
+ // Locator screenshots include overlapping DOM. Exclude only the observed loading/error
+ // notice rectangle, not any part of the model region; compare every other interior pixel.
+ const canvasBox=await page.locator('.si-stage canvas').boundingBox();
+ const overlayBox=await page.locator('.si-loading').isVisible()?await page.locator('.si-loading').boundingBox():null;
+ return page.evaluate(async ({data,canvasBox,overlayBox})=>{
+  const image=new Image();image.src='data:image/png;base64,'+data;await image.decode();const c=document.createElement('canvas');c.width=image.width;c.height=image.height;const ctx=c.getContext('2d');ctx.drawImage(image,0,0);const p=ctx.getImageData(0,0,c.width,c.height).data;
+  const scaleX=c.width/canvasBox.width,scaleY=c.height/canvasBox.height;
+  const box=overlayBox?{x:(overlayBox.x-canvasBox.x)*scaleX-1,y:(overlayBox.y-canvasBox.y)*scaleY-1,right:(overlayBox.x+overlayBox.width-canvasBox.x)*scaleX+1,bottom:(overlayBox.y+overlayBox.height-canvasBox.y)*scaleY+1}:null;
+  let reference=null;
+  for(let y=16;y<c.height-16;y++)for(let x=16;x<c.width-16;x++){
+   if(box&&x>=box.x&&x<=box.right&&y>=box.y&&y<=box.bottom)continue;
+   const i=(y*c.width+x)*4;if(reference===null)reference=i;
+   if(p[i]!==p[reference]||p[i+1]!==p[reference+1]||p[i+2]!==p[reference+2])return false;
+  }
+  return reference!==null;
+ },{data:png.toString('base64'),canvasBox,overlayBox});
+}
 const ready=(p,n=0)=>p.waitForSelector(`.si-stage[data-state=ready][data-lod="${n}"]`);
 async function run(name,options,fn){if(process.env.SHELF_TEST&&name!==process.env.SHELF_TEST)return;const context=await browser.newContext({viewport:{width:1440,height:1100},serviceWorkers:'block',...options});await context.addInitScript(()=>{const sets={Buffer:new Set(),Texture:new Set(),Program:new Set()};window.shelfGPU=()=>Object.fromEntries(Object.entries(sets).map(([k,v])=>[k,v.size]));window.shelfDraws=0;window.shelfContexts=[];const getContext=HTMLCanvasElement.prototype.getContext;HTMLCanvasElement.prototype.getContext=function(...a){const c=getContext.apply(this,a);if(c&&a[0].startsWith('webgl')&&!window.shelfContexts.includes(c))window.shelfContexts.push(c);return c;};for(const C of [window.WebGLRenderingContext,window.WebGL2RenderingContext])if(C){for(const type of Object.keys(sets))for(const op of ['create','delete']){const key=op+type;if(!Object.hasOwn(C.prototype,key))continue;const f=C.prototype[key];C.prototype[key]=function(...a){const r=f.apply(this,a);if(op==='create'&&r)sets[type].add(r);if(op==='delete')sets[type].delete(a[0]);return r;};}for(const key of ['drawElements','drawArrays']){const f=C.prototype[key];C.prototype[key]=function(...a){window.shelfDraws++;return f.apply(this,a);};}}});const page=await context.newPage(),errors=[];page.setDefaultTimeout(20000);page.on('pageerror',e=>errors.push(e.message));const record={name,status:'FAIL'};try{await fn(page,context);assert.deepEqual(errors,[]);record.status='PASS';console.log('PASS',name);}catch(e){record.error=e.stack;console.error('FAIL',name,e.message);await page.screenshot({path:`${out}/${name}-FAIL.png`,fullPage:true}).catch(()=>{});}finally{results.push(record);await context.close();await fs.writeFile(`${out}/results.json`,JSON.stringify({browser:browser.version(),scope:'Desktop Chromium; touch viewport emulation, not physical iOS/Android',results},null,2));}}
 try{
@@ -39,5 +57,55 @@ await run('mobile-gesture-guards',{viewport:{width:390,height:844},hasTouch:true
  await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x,y}]});for(let i=1;i<=5;i++)await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x,y:y-i*18}]});await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});assert.equal(await page.evaluate(()=>window.resetClicks),0,'dragging on reset must not activate it');assert.ok(await page.evaluate(()=>window.cancelled>0),'scroll cancels button pointer');assert.notEqual(await page.evaluate(()=>scrollY),scroll,'native page scrolling retained');assert.equal(await page.locator('[data-row="3"]').getAttribute('aria-pressed'),'true');
  const canvas=page.locator('.si-stage canvas');await canvas.evaluate(el=>el.scrollIntoView({block:'center',behavior:'instant'}));const box=await canvas.boundingBox(),cx=box.x+box.width/2,cy=box.y+box.height/2;const before=hash(await canvas.screenshot());await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:cx-35,y:cy,id:1},{x:cx+35,y:cy,id:2}]});await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:cx-65,y:cy,id:1},{x:cx+65,y:cy,id:2}]});await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});assert.notEqual(hash(await canvas.screenshot()),before,'two-finger OrbitControls zoom retained');
  await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:cx,y:cy,id:1}]});await cdp.send('Input.dispatchTouchEvent',{type:'touchCancel',touchPoints:[]});await reset.tap();assert.equal(await page.evaluate(()=>window.resetClicks),1,'native tap after cancellation triggers exactly once');assert.equal(await page.locator('[data-row="0"]').getAttribute('aria-pressed'),'true');await cdp.detach();
+});
+
+await run('corner-controls-lods-and-ownership',{},async(page)=>{
+ const hashes=await Promise.all([0,1,2,3].map(async n=>hash(await fs.readFile('models/gjh-m057-premium-wall-shelf-corner/exports/lod'+n+'.glb'))));
+ const responses=[];page.on('response',async response=>{if(/\/lod[0-3]-.*\.glb/.test(response.url())){try{responses.push({url:response.url(),sha:hash(await response.body())});}catch{}}});
+ const cornerReady=(n=0)=>page.waitForSelector('.si-stage[data-state=ready][data-model="GJH-M057"][data-lod="'+n+'"]');
+ await page.goto(server.url+'?page=shelf-inspector');await ready(page);
+ assert.deepEqual(await page.locator('#si-model option').evaluateAll(options=>options.map(o=>o.value)),['GJH-M056','GJH-M057']);
+ await page.locator('#si-model').selectOption('GJH-M057');await cornerReady();
+ const canvas=page.locator('.si-stage canvas'),baseline=hash(await canvas.screenshot());
+ assert.equal(responses.at(-1).sha,hashes[0]);assert.match(await page.locator('.si-dimensions').textContent(),/1.2 × 1.2 m footprint/);
+ assert.equal(await page.locator('canvas').count(),1);
+ await page.locator('#si-title').fill('CORNER COLLECTION');await page.locator('[data-action=title]').click();
+ assert.notEqual(hash(await canvas.screenshot()),baseline);
+ await page.screenshot({path:out+'/corner-two-headers-desktop.png',fullPage:true});
+ await canvas.focus();for(let i=0;i<6;i++)await canvas.press('ArrowLeft');await canvas.screenshot({path:out+'/corner-front-header.png'});
+ for(let i=0;i<12;i++)await canvas.press('ArrowRight');await canvas.screenshot({path:out+'/corner-side-header.png'});
+ await page.locator('[data-row="2"]').click();await page.locator('[data-action=led]').click();
+ for(const n of [1,2,3]){await page.locator('#si-lod').selectOption(String(n));await cornerReady(n);await canvas.screenshot({path:out+'/corner-lod'+n+'.png'});assert.equal(responses.at(-1).sha,hashes[n]);assert.equal(await page.locator('#si-title').inputValue(),'CORNER COLLECTION');assert.equal(await page.locator('[data-row="2"]').getAttribute('aria-pressed'),'true');assert.equal(await page.locator('[data-action=led]').getAttribute('aria-pressed'),'false');}
+ await page.locator('[data-action=reset]').click();await cornerReady();assert.equal(await page.locator('#si-model').inputValue(),'GJH-M057');assert.equal(await page.locator('#si-title').inputValue(),'');assert.equal(hash(await canvas.screenshot()),baseline);
+ const gpu=await page.evaluate(()=>window.shelfGPU());
+ for(let i=0;i<4;i++){
+   await page.locator('#si-title').fill('SHARED CONCEPT');await page.locator('[data-action=title]').click();await canvas.screenshot();
+   await page.locator('#si-model').selectOption('GJH-M056');await ready(page);assert.equal(await page.locator('.si-stage').getAttribute('data-model'),'GJH-M056');assert.equal(await page.locator('#si-title').inputValue(),'SHARED CONCEPT');await canvas.screenshot();
+   await page.locator('#si-model').selectOption('GJH-M057');await cornerReady();await page.locator('[data-action=reset]').click();await canvas.screenshot();
+ }
+ assert.deepEqual(await page.evaluate(()=>window.shelfGPU()),gpu,'model/header swaps return to the same live corner GPU baseline');
+ assert.equal(hash(await canvas.screenshot()),baseline,'no old title or highlight survives reset after switching models');
+ // Freeze a real corner request, supersede it with straight LOD3, then release the old request.
+ const cornerURL=responses.find(response=>response.sha===hashes[0]).url;
+ await page.locator('#si-model').selectOption('GJH-M056');await ready(page);
+ let release,seen;const hit=new Promise(resolve=>seen=resolve);
+ await page.route(cornerURL,async route=>{seen();await new Promise(resolve=>release=resolve);await route.continue().catch(()=>{});});
+ await page.locator('#si-model').selectOption('GJH-M057');await hit;assert.equal(await blankInterior(page,await canvas.screenshot()),true,'pending model switch clears old rendered scene');
+ await page.locator('#si-model').selectOption('GJH-M056');await page.locator('#si-lod').selectOption('3');await ready(page,3);
+ release();await page.waitForTimeout(200);
+ assert.equal(await page.locator('.si-stage').getAttribute('data-model'),'GJH-M056');assert.equal(await page.locator('.si-stage').getAttribute('data-lod'),'3');assert.equal(await page.locator('#si-model').inputValue(),'GJH-M056');
+ assert.match(await page.locator('.si-kicker').textContent(),/GJH-M056/);assert.equal(await page.locator('#si-title').inputValue(),'');assert.equal(await page.locator('[data-row="0"]').getAttribute('aria-pressed'),'true');assert.equal(await page.locator('[data-action=led]').getAttribute('aria-pressed'),'true');await page.unroute(cornerURL);
+ const failedURL=responses.find(response=>response.sha===hashes[1]).url;await page.route(failedURL,route=>route.fulfill({status:503,body:'test outage'}));await page.locator('#si-model').selectOption('GJH-M057');await cornerReady();await page.locator('#si-lod').selectOption('1');await page.waitForSelector('.si-stage[data-state=error]');assert.equal(await page.locator('[data-action=led]').isDisabled(),true);assert.equal(await blankInterior(page,await canvas.screenshot()),true,'failed model load must not display the previous fixture');assert.equal(await page.locator('.si-stage').getAttribute('aria-busy'),'false','failed load is no longer pending');await page.locator('#si-model').selectOption('GJH-M056');await ready(page);assert.equal(await page.locator('[data-action=led]').isDisabled(),false);await page.unroute(failedURL);
+
+ await page.locator('#demo-breadcrumb a').click();await page.waitForSelector('.demo-card');assert.equal(await page.locator('canvas').count(),0);assert.equal(await page.evaluate(()=>window.shelfContexts.every(gl=>gl.isContextLost())),true);
+});
+await run('corner-touch-viewport',{viewport:{width:390,height:844},hasTouch:true,isMobile:true},async(page)=>{
+ await page.goto(server.url+'?page=shelf-inspector');await ready(page);await page.locator('#si-model').selectOption('GJH-M057');await page.waitForSelector('.si-stage[data-state=ready][data-model="GJH-M057"]');
+ assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+ await page.locator('#si-title').fill('CORNER COLLECTION');await page.locator('[data-action=title]').tap();await page.locator('[data-row="1"]').tap();await page.locator('[data-action=led]').tap();
+ assert.equal(await page.locator('[data-row="1"]').getAttribute('aria-pressed'),'true');assert.equal(await page.locator('[data-action=led]').getAttribute('aria-pressed'),'false');
+ const canvas=page.locator('.si-stage canvas');await canvas.evaluate(el=>el.scrollIntoView({block:'center',behavior:'instant'}));await canvas.screenshot({path:out+'/corner-mobile-canvas.png'});await page.screenshot({path:out+'/corner-mobile-viewport.png'});
+ await page.locator('[data-action=reset]').tap();assert.equal(await page.locator('#si-model').inputValue(),'GJH-M057');assert.equal(await page.locator('#si-title').inputValue(),'');assert.equal(await page.locator('[data-row="0"]').getAttribute('aria-pressed'),'true');assert.equal(await page.locator('[data-action=led]').getAttribute('aria-pressed'),'true');
+ await page.locator('#si-model').selectOption('GJH-M056');await ready(page);assert.equal(await page.locator('.si-stage').getAttribute('data-model'),'GJH-M056');
 });
 }finally{await browser.close();await server.close();}if(results.some(r=>r.status!=='PASS'))process.exitCode=1;
