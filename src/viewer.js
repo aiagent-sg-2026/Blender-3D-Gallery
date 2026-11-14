@@ -3,6 +3,8 @@ import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
 
+import createFishMotion from "./fish-motion.js";
+
 export default async function createViewer(
   container,
   url,
@@ -16,6 +18,7 @@ export default async function createViewer(
   const display = asset.details?.display;
   const lighting = display?.previewLighting;
   let vehicleToolbar;
+  let fishMotion;
   let cartDemo;
   let lastDraw = 0;
   let studio;
@@ -88,6 +91,7 @@ export default async function createViewer(
   controls.addEventListener("change", invalidate);
   const visibility = () => {
     if (document.hidden) {
+      fishMotion?.suspend();
       cancelAnimationFrame(frame);
       frame = 0;
     } else invalidate();
@@ -124,6 +128,7 @@ export default async function createViewer(
     controls.removeEventListener("change", invalidate);
     document.removeEventListener("visibilitychange", visibility);
     controls.dispose();
+    fishMotion?.dispose();
     cartDemo?.dispose();
     disposeModel(model);
     disposeModel(studio);
@@ -191,6 +196,8 @@ export default async function createViewer(
       });
     }
     scene.add(model);
+    if (asset.collectionId === "singapore-fish")
+      fishMotion = createFishMotion({ model, clips: gltf.animations, container, invalidate });
     if (asset.id === 'interactive-shopping-cart') {
       const { default: createCartDemo } = await import('./shopping-cart/demo.js');
       cartDemo = await createCartDemo({ model, scene, container, signal, invalidate });
@@ -348,9 +355,10 @@ export default async function createViewer(
       const now = performance.now();
       const active = cartDemo?.update(lastDraw ? (now - lastDraw) / 1000 : 0);
       lastDraw = now;
+      const fishActive = fishMotion?.update();
       const changed = controls.update();
       renderer.render(scene, camera);
-      if (changed || active) invalidate();
+      if (changed || active || fishActive) invalidate();
     };
     invalidate();
     return { reset, dispose, setView };
