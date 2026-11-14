@@ -16,7 +16,7 @@ export async function mountShelfInspector(root,signal){
  let renderer,controls,observer,environment,model,parts,loader,frame=0,disposed=false,ready=false,row=0,lit=true,title='',radius=1,current=SHELF_MODELS[0];
  for(const item of SHELF_MODELS){const option=document.createElement('option');option.value=item.id;option.textContent=`${item.id} · ${item.name}`;modelChoice.append(option);}
  const selection=()=>({item:SHELF_MODELS.find(item=>item.id===modelChoice.value),lod:Number(choice.value)});
- const describe=item=>{$('.si-kicker').textContent=`${item.id} / ORIGINAL RETAIL STUDY`;$('.si-panel h2').textContent=item.heading;$('.si-dimensions').textContent=item.dimensions;$('label[for=si-title]').textContent=item.id==='GJH-M057'?'Concept header text (both faces)':'Your concept header';};
+ const describe=item=>{$('.si-kicker').textContent=`${item.id} / ORIGINAL RETAIL STUDY`;$('.si-panel h2').textContent=item.heading;$('.si-dimensions').textContent=item.dimensions;$('label[for=si-title]').textContent=item.manifest.runtime_header_surfaces?.length>1?'Concept header text (both faces)':'Your concept header';};
  const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(35,1,.01,100),center=new THREE.Vector3();
  const invalidate=()=>{if(!disposed&&!document.hidden&&!frame)frame=requestAnimationFrame(()=>{frame=0;renderer.render(scene,camera);});};
  const busy=value=>{stage.setAttribute('aria-busy',String(value));fieldset.disabled=value||!ready;if(controls)controls.enabled=ready&&!value;};

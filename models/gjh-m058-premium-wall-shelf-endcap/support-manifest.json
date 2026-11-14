@@ -110,16 +110,18 @@
     "collision_descriptor": "collision"
   },
   "runtime_demo": {
-    "status": "planned_not_integrated",
-    "implemented": [],
-    "planned": [
+    "status": "implemented_local_browser_verified",
+    "route": "?page=shelf-inspector",
+    "implemented": [
+      "fixture selection M056/M057/M058",
       "row highlight",
       "LED toggle",
-      "header text",
-      "manual LOD selection",
-      "reset"
+      "single-face concept header text",
+      "manual LOD0-3 selection",
+      "reset",
+      "latest-wins loading and resource disposal"
     ],
-    "note": "Manifest contract only; M058 Inspector integration and its browser QA are not complete."
+    "note": "Validated with desktop Chromium and 390px touch emulation; not physical Android/iOS testing. See docs/shelf-inspector-m058-qa.md."
   },
   "runtime_header_surfaces": [
     {
@@ -132,5 +134,5 @@
     "rear_connection_left",
     "rear_connection_right"
   ],
-  "runtime_limits": "Static asset contract only; no automatic LOD, product loading or Inspector support claimed"
+  "runtime_limits": "Manual LOD only; products are not loaded; no physical Android/iOS verification or automatic LOD."
 }

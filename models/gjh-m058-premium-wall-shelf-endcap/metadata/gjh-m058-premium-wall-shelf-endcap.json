@@ -58,7 +58,7 @@
   },
   "interaction": {
     "manifest": "support-manifest.json",
-    "runtime": "Gallery orbit/zoom/reset; Inspector integration not yet implemented"
+    "runtime": "Gallery orbit/zoom/reset; Shelf Inspector fixture selection, four manual LODs, shelf highlight, LED toggle, replaceable concept text and reset"
   },
   "qa": {
     "render_review": "PASS: actual final hero/front/rear/side/detail/LOD1/2/3 PNG inspection; open sides and rounded noses distinguish endcap.",
@@ -67,7 +67,7 @@
     "deployment": "NOT DEPLOYED",
     "structure": "PASS: 4 LODs and collider zero Khronos errors/warnings; real rounded-corner/open-side/header-visibility rays, all five LED supports, stable anchors; reports/assets.json",
     "source_edit": "PASS: saved-source copy edit/reopen/reexport and original unchanged; reports/sources.json",
-    "inspector": "NOT INTEGRATED",
+    "inspector": "PASS: 12 focused unit tests, build, M057 regression and M058 desktop/touch-emulated cases; actual header/mobile images reviewed. See docs/shelf-inspector-m058-qa.md. Not physical devices.",
     "automatic_lod": "NOT IMPLEMENTED",
     "product_loading": "NOT IMPLEMENTED"
   },

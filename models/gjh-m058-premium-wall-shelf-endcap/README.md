@@ -11,7 +11,7 @@ Three separate front-radius wooden shelves have open lateral access, narrow rear
 - 24 product-placement anchors, 8 per row, plus two rear docking reference anchors. These are transforms, not executable behavior or a certified fastening system.
 - `header_surface_front`: local +Z outward/+Y up, 2.04 × 0.36 m label area, optional overlay local Z +0.002 m. Actual full label-area visibility is ray-tested from front and both diagonal sides.
 - Metre units, floor-centre origin. Blender +Z up/-Y front; glTF +Y up/+Z front.
-- Inspector-ready manifest only: this asset is not yet integrated into Shelf Inspector. Automatic LOD and external product loading are not implemented.
+- Shelf Inspector supports M058 selection, three row highlights, five LED toggles together, single-face concept text, manual LOD0–3, and reset. Desktop Chromium and 390px touch emulation verified; physical Android/iOS, automatic LOD and external product loading are not implemented. See `../../docs/shelf-inspector-m058-qa.md`.
 
 ## Actual local validation
 
