@@ -1,9 +1,9 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
 
 import createFishMotion from "./fish-motion.js";
+import { acquireModelViewerRenderer } from "./model-viewer-renderer.js";
 
 export default async function createViewer(
   container,
@@ -23,8 +23,11 @@ export default async function createViewer(
   let visitorDemo;
   let lastDraw = 0;
   let studio;
-  let environmentTarget;
-  const renderer = new THREE.WebGLRenderer({ antialias: true });
+  const rendererLease = acquireModelViewerRenderer();
+  const { renderer } = rendererLease;
+  renderer.toneMapping = THREE.NoToneMapping;
+  renderer.toneMappingExposure = 1;
+  renderer.shadowMap.enabled = false;
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   renderer.setClearColor(0x657078);
   renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -55,7 +58,7 @@ export default async function createViewer(
     vehicleToolbar?.querySelectorAll("[data-vehicle-view]").forEach(button => button.setAttribute("aria-pressed", "false"));
   };
   controls.addEventListener("start", clearPreset);
-  renderer.domElement.addEventListener("keydown", (event) => {
+  const onKeyDown = (event) => {
     if (event.ctrlKey || event.metaKey || event.altKey) return;
     const orbit = new THREE.Spherical().setFromVector3(camera.position.clone().sub(controls.target));
     const step = Math.PI / 18;
@@ -73,7 +76,8 @@ export default async function createViewer(
     camera.position.copy(controls.target).add(new THREE.Vector3().setFromSpherical(orbit));
     controls.update();
     invalidate();
-  });
+  };
+  renderer.domElement.addEventListener("keydown", onKeyDown);
   scene.add(new THREE.HemisphereLight(0xffffff, 0x535b53, lighting?.hemisphereIntensity ?? 2));
   const light = new THREE.DirectionalLight(0xffffff, lighting?.directionalIntensity ?? 2.1);
   light.position.fromArray(lighting?.directionalPosition ?? [4, 7, 5]);
@@ -121,6 +125,12 @@ export default async function createViewer(
       }
     });
   };
+  const onContextLost = (event) => {
+    event.preventDefault();
+    if (!disposed)
+      status.textContent = "The 3D view was interrupted. Close and reopen it to retry.";
+  };
+  renderer.domElement.addEventListener("webglcontextlost", onContextLost);
   const dispose = () => {
     if (disposed) return;
     disposed = true;
@@ -129,26 +139,20 @@ export default async function createViewer(
     controls.removeEventListener("change", invalidate);
     document.removeEventListener("visibilitychange", visibility);
     controls.dispose();
+    renderer.domElement.removeEventListener("keydown", onKeyDown);
+    renderer.domElement.removeEventListener("webglcontextlost", onContextLost);
     fishMotion?.dispose();
     cartDemo?.dispose();
     visitorDemo?.dispose();
     disposeModel(model);
     disposeModel(studio);
     scene.environment = null;
-    environmentTarget?.dispose();
     light.shadow.dispose();
     vehicleToolbar?.remove();
-    renderer.dispose();
-    renderer.domElement.remove();
+    rendererLease.release();
     signal.removeEventListener("abort", dispose);
   };
   signal.addEventListener("abort", dispose, { once: true });
-  renderer.domElement.addEventListener("webglcontextlost", (event) => {
-    event.preventDefault();
-    if (!disposed)
-      status.textContent =
-        "The 3D view was interrupted. Close and reopen it to retry.";
-  });
   try {
     // Read the native response before parsing. The pinned FileLoader's stream
     // reader path reports ERR_ABORTED after a complete transfer in Chromium;
@@ -174,16 +178,8 @@ export default async function createViewer(
     const doorButtons = new Map();
     if (isVehicle || display?.studioEnvironment === true) {
       // Local studio reflections give metallic paint, steel rims and tin lids their form.
-      const room = new RoomEnvironment();
-      const pmrem = new THREE.PMREMGenerator(renderer);
-      try {
-        environmentTarget = pmrem.fromScene(room, 0.04);
-        scene.environment = environmentTarget.texture;
-        scene.environmentIntensity = display?.environmentIntensity ?? 0.6;
-      } finally {
-        room.dispose();
-        pmrem.dispose();
-      }
+      scene.environment = rendererLease.getStudioEnvironment();
+      scene.environmentIntensity = display?.environmentIntensity ?? 0.6;
     }
     if (display)
       model.rotation.y = display.previewRotationY ?? 0;
