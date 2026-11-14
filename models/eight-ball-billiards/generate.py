@@ -118,7 +118,10 @@ def export_uv(ob):
 # Table dimensions: 2.54 x 1.40 m outside, 2.24 x 1.12 m playing surface.
 table=root('ASSET_Table')
 base=cube('Table | solid walnut cabinet',(0,0,.67),(2.54,1.40,.16),wood,table,.015)
-felt=cube('Table | slate and green cloth',(0,0,.766),(2.30,1.18,.025),cloth,table,.002)
+# Preserve the calibrated playing height while seating the slab on the cabinet.
+cloth_top = .7785
+cloth_bottom = max((base.matrix_world @ Vector(corner)).z for corner in base.bound_box) - .0001
+felt=cube('Table | slate and green cloth',(0,0,(cloth_top+cloth_bottom)/2),(2.30,1.18,cloth_top-cloth_bottom),cloth,table,.002)
 pockets=[(x,y) for x in (-1.12,0,1.12) for y in (-.56,.56)]
 # Cut actual openings through the slate and cabinet. Keep cutters temporary.
 for i,(x,y) in enumerate(pockets):
@@ -160,7 +163,8 @@ for x in (-.97,.97):
 # Decorative sight markers on long rails.
 for y in (-.636,.636):
     for x in (-.93,-.62,-.31,.31,.62,.93):
-        cylinder('Rail sight',(x,y,.856),.008,.002,white,table,16)
+        # Inlay the disc into the rail; leave 0.1 mm proud to avoid coplanar faces.
+        cylinder('Rail sight',(x,y,.8526),.008,.002,white,table,16)
 
 # 57.15 mm diameter resin balls, with a white number medallion and black numeral.
 R=.028575

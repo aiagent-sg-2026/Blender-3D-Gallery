@@ -44,3 +44,22 @@ Card thumbnails were generated from the corresponding source asset, using `scrip
 ## Game table revision
 
 The Game page reuses the individual exports. Cushion lengths and twelve pocket-jaw pieces were updated in the Blender source and generator so the six visible pocket approaches agree with the planar game colliders. The table, assembled scene, source, scene WebP and table thumbnail were regenerated; ball identities, curved markings and separate asset roots were retained. See [game implementation](../../docs/game-implementation-plan.md) for measured dimensions and [verification](../../docs/game-verification.md) for source/export/browser results.
+
+## Sequential model QA: table support and inlays
+
+MODEL-0001 corrects twelve floating rail sights and a 3.5 mm air gap below the
+slate/cloth slab. The 2 mm deep sight discs are seated in the wood, with tops
+0.1 mm above the rail. The slab underside is seated on the cabinet with a 0.1 mm
+overlap while the playing surface remains at Z=0.7785 m. The generator and saved
+source agree. Only sight/slab node heights and the slab mesh change in the table
+and dependent assembled GLBs. Other mesh data, materials, gameplay colliders and
+independent ball/cue/rack/chalk exports are preserved.
+
+Run `node --test tests/pool-table.test.mjs` for both seating regressions.
+Use `scripts/model-qa-blender.py` for one-root geometry inspection and eight-view
+renders, and `scripts/test-pool-table-qa-browser.mjs` against a running gallery
+for desktop/tablet loading and controls. The optional mobile viewport requires
+`MODEL_QA_INCLUDE_MOBILE=1`; the owner excluded mobile testing from this QA
+campaign. Viewport emulation is not physical-device performance verification. See the
+[QA progress tracker](../../docs/3d-model-qa-progress.md) for current gate and
+release status; this local revision is not a claim of a GitHub main release.

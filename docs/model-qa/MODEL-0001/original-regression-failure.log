@@ -1,0 +1,38 @@
+✖ table.glb: all twelve sights are seated in the wooden rails (92.676917ms)
+✖ billiards-scene.glb: all twelve sights are seated in the wooden rails (58.301917ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 507.264542
+
+✖ failing tests:
+
+test at tests/pool-table-inlays.test.mjs:15:3
+✖ table.glb: all twelve sights are seated in the wooden rails (92.676917ms)
+  AssertionError [ERR_ASSERTION]: Rail_sight: base must be seated below the rail surface
+      at TestContext.<anonymous> (file:///Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/tests/pool-table-inlays.test.mjs:32:14)
+      at async Test.run (node:internal/test_runner/test:1054:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:297:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '=='
+  }
+
+test at tests/pool-table-inlays.test.mjs:15:3
+✖ billiards-scene.glb: all twelve sights are seated in the wooden rails (58.301917ms)
+  AssertionError [ERR_ASSERTION]: Rail_sight: base must be seated below the rail surface
+      at TestContext.<anonymous> (file:///Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/tests/pool-table-inlays.test.mjs:32:14)
+      at async Test.run (node:internal/test_runner/test:1054:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:744:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '=='
+  }

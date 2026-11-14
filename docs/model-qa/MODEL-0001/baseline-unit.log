@@ -1,0 +1,34 @@
+✔ catalog rejects external core image and buffer URIs (576.839125ms)
+✔ catalog accepts embedded core resources and self-contained data URIs (1383.209625ms)
+✔ billiards catalog includes each physical asset and the legacy scene (488.5075ms)
+✔ individual GLBs have only their own root and a zero origin (438.581916ms)
+✔ assembled scene retains all 21 roots at their assembled locations (407.458ms)
+✔ number marks follow the ball surface on opposite sides (432.947167ms)
+✔ rack is seeded, complete, eight centered, opposite rear groups and non-overlapping (4.604625ms)
+✔ placement respects head string, overlaps, table and pocket limits (0.865791ms)
+✔ legal pot allocates group and continues; miss passes turn (1.368875ms)
+✔ foul does not allocate group and pockets stay pocketed (1.354667ms)
+✔ mixed pots sort by event time, with ball number breaking simultaneous ties (1.312875ms)
+✔ open-table group follows the first actual pot within a substep (5.234416ms)
+✔ break never allocates groups, eight is re-spotted and scratch gives ball in hand (1.093791ms)
+✔ break pot continues, miss changes turn, no contact is a foul (0.794917ms)
+✔ early eight and last own ball plus eight lose (2.37625ms)
+✔ eligible eight wins unless any foul occurs in the same shot (1.725834ms)
+✔ wrong first contact and open-table eight contact are fouls (0.521ms)
+✔ an open table with all group balls gone can finish, but a partly cleared open table cannot play eight (1.120542ms)
+✔ opponent-only pots pass turn and mixed own pots continue (0.53875ms)
+✔ duplicate and finished shot resolution is rejected (0.65975ms)
+✔ invalid physical outcome restores pre-shot state in recovery (0.401292ms)
+✔ stable schema rejects corruption, motion, shuffled IDs and contradictory results (1.574167ms)
+✔ fixed-step rack break settles without escape, preserves identity and repeats (1168.867208ms)
+✔ malformed save entries are rejected without throwing (1.618084ms)
+✔ all six pocket approach fixtures capture exactly once (15.367917ms)
+✔ cushion reflects, low power stops, and high power cannot tunnel (43.967875ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4015.707208

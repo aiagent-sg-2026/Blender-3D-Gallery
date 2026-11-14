@@ -1,0 +1,15 @@
+00:01.318  blend            | Read blend: "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/eight-ball-billiards/scene.blend"
+Traceback (most recent call last):
+  File "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/scripts/repair-pool-table-support.py", line 18, in <module>
+    assert slate.rotation_euler.length < 1e-6
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Euler' object has no attribute 'length'
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info 20261010
+[INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+
+Error: script failed, file: 'scripts/repair-pool-table-support.py', exiting.
+Blender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 01:30:33)
+
+Blender quit

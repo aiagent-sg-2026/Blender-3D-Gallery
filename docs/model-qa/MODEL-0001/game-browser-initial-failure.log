@@ -1,0 +1,25 @@
+
+> blender-3d-gallery@0.1.0 test:browser
+> node scripts/test-game-browser.mjs && node scripts/test-game-experience.mjs
+
+PASS gameplay keyboard shortcuts require table focus
+FAILED backgrounding during shot startup cancels the impulse after the save undefined
+node:internal/modules/run_main:104
+    triggerUncaughtException(
+    ^
+
+page.goto: Timeout 30000ms exceeded.
+Call log:
+[2m  - navigating to "http://127.0.0.1:55666/Blender-3D-Gallery/?page=game", waiting until "load"[22m
+
+    at gameReady (/private/tmp/blender-model-qa-release/scripts/browser-test-utils.mjs:66:14)
+    at /private/tmp/blender-model-qa-release/scripts/test-game-browser.mjs:201:11
+    at async run (/private/tmp/blender-model-qa-release/scripts/test-game-browser.mjs:38:5)
+    at async file:///private/tmp/blender-model-qa-release/scripts/test-game-browser.mjs:199:3 {
+  log: [
+    '  - navigating to "http://127.0.0.1:55666/Blender-3D-Gallery/?page=game", waiting until "load"'
+  ],
+  name: 'TimeoutError'
+}
+
+Node.js v23.10.0

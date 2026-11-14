@@ -1,0 +1,16 @@
+
+> blender-3d-gallery@0.1.0 test:browser
+> node scripts/test-game-browser.mjs && node scripts/test-game-experience.mjs
+
+PASS gameplay keyboard shortcuts require table focus
+node:internal/modules/run_main:104
+    triggerUncaughtException(
+    ^
+
+browser.newContext: Target page, context or browser has been closed
+    at async run (/private/tmp/blender-model-qa-release/scripts/test-game-browser.mjs:31:19)
+    at async file:///private/tmp/blender-model-qa-release/scripts/test-game-browser.mjs:199:3 {
+  log: []
+}
+
+Node.js v23.10.0

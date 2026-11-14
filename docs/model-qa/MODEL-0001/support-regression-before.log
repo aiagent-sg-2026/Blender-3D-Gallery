@@ -1,0 +1,42 @@
+✔ table.glb: all twelve sights are seated in the wooden rails (27.867416ms)
+✖ table.glb: slate is supported by the cabinet without moving the playing surface (11.409708ms)
+✔ billiards-scene.glb: all twelve sights are seated in the wooden rails (36.053042ms)
+✖ billiards-scene.glb: slate is supported by the cabinet without moving the playing surface (30.835667ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 2
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 347.326917
+
+✖ failing tests:
+
+test at tests/pool-table-inlays.test.mjs:37:3
+✖ table.glb: slate is supported by the cabinet without moving the playing surface (11.409708ms)
+  AssertionError [ERR_ASSERTION]: The slate underside must contact the cabinet, not float above it
+      at TestContext.<anonymous> (file:///Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/tests/pool-table-inlays.test.mjs:47:12)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/pool-table-inlays.test.mjs:37:3
+✖ billiards-scene.glb: slate is supported by the cabinet without moving the playing surface (30.835667ms)
+  AssertionError [ERR_ASSERTION]: The slate underside must contact the cabinet, not float above it
+      at TestContext.<anonymous> (file:///Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/tests/pool-table-inlays.test.mjs:47:12)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
