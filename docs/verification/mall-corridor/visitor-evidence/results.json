@@ -1,0 +1,102 @@
+{
+  "environment": "Headed installed Google Chrome via Playwright; native CDP touch injection and viewport emulation, not physical devices. Hidden-state and blur events are simulated. Headless-shell actionability/screenshot stalls were separately reproduced; actual Chrome click smoke passed.",
+  "results": [
+    {
+      "name": "desktop real keyboard journey",
+      "passed": true,
+      "loadedVisitorSha256": "43d08b67f4450b6aac478cfca4ca664044662cd79021ed15d55ef5612e312be2",
+      "walkFootMinY": 0,
+      "states": [
+        "idle",
+        "walk",
+        "idle"
+      ],
+      "scenarios": [
+        "closed-door collision",
+        "both stores entered",
+        "occupied-door guard",
+        "wall sliding",
+        "floor edge",
+        "blur event",
+        "focus transfer",
+        "simulated hidden document",
+        "inspection return"
+      ],
+      "drawCalls": 199
+    },
+    {
+      "name": "touch and layout",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "passed": true,
+      "scenarios": [
+        "walk pad",
+        "pointercancel",
+        "lostpointercapture",
+        "stop clears held input",
+        "view panel open/escape",
+        "no viewport overflow"
+      ],
+      "canvasHeight": 420
+    },
+    {
+      "name": "touch and layout",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "scenarios": [
+        "walk pad",
+        "pointercancel",
+        "lostpointercapture",
+        "stop clears held input",
+        "view panel open/escape",
+        "no viewport overflow"
+      ],
+      "canvasHeight": 696
+    },
+    {
+      "name": "touch and layout",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "passed": true,
+      "scenarios": [
+        "walk pad",
+        "pointercancel",
+        "lostpointercapture",
+        "stop clears held input",
+        "view panel open/escape",
+        "no viewport overflow"
+      ],
+      "canvasHeight": 922
+    },
+    {
+      "name": "touch and layout",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "passed": true,
+      "scenarios": [
+        "walk pad",
+        "pointercancel",
+        "lostpointercapture",
+        "stop clears held input",
+        "view panel open/escape",
+        "no viewport overflow"
+      ],
+      "canvasHeight": 318
+    },
+    {
+      "name": "reduced motion",
+      "passed": true,
+      "translationWorks": true,
+      "decorativeAnimationPaused": true
+    }
+  ]
+}

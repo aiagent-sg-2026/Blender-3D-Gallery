@@ -1,0 +1,61 @@
+{
+  "body": {
+    "radius": 0.56,
+    "height": 1.8,
+    "speed": 0.95,
+    "step": 0.025
+  },
+  "checks": [
+    {
+      "name": "spawn has full floor support and no obstacle",
+      "passed": true
+    },
+    {
+      "name": "large movement cannot tunnel through closed door",
+      "passed": true
+    },
+    {
+      "name": "opening both doors is clear with visitor in centre",
+      "passed": true
+    },
+    {
+      "name": "actual walk-radius route reaches both stores and returns",
+      "passed": true
+    },
+    {
+      "name": "door closing refuses occupied doorway and restores pose",
+      "passed": true
+    },
+    {
+      "name": "wall sliding preserves free tangential movement",
+      "passed": true
+    },
+    {
+      "name": "full footprint cannot leave floor edge",
+      "passed": true
+    }
+  ],
+  "character": {
+    "path": "models/gjh-mall-visitor/exports/gjh-mall-visitor.glb",
+    "sha256": "43d08b67f4450b6aac478cfca4ca664044662cd79021ed15d55ef5612e312be2",
+    "clips": [
+      {
+        "name": "idle",
+        "samples": 121,
+        "maxRadius": 0.3419919014829029,
+        "maxY": 1.7199998893755875,
+        "minY": -8.472328624775649e-8,
+        "passed": true
+      },
+      {
+        "name": "walk",
+        "samples": 121,
+        "maxRadius": 0.5425986648082639,
+        "maxY": 1.7390643325730442,
+        "minY": -0.00021644388135352854,
+        "passed": true
+      }
+    ]
+  },
+  "limits": "Conservative flat-floor cylinder against projected component boxes; fixed substeps, sampled character poses. No stairs, gravity, or continuous-time exact mesh collision."
+}

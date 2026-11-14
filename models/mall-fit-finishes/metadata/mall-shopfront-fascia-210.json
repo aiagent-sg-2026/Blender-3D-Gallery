@@ -1,0 +1,57 @@
+{
+  "id": "mall-shopfront-fascia-210",
+  "name": "Mall Shopfront Fascia 2.1 m",
+  "version": "1.0.0",
+  "status": "Registered locally; release pending",
+  "planningIds": [
+    "PL-ARC-007",
+    "PL-ARC-013"
+  ],
+  "units": "metres",
+  "dimensionsGLTF": [
+    2.1,
+    0.6,
+    0.06
+  ],
+  "origin": "bottom centre; glTF front +Z",
+  "clearHoleMetres": null,
+  "placementGLTF": [
+    [
+      0,
+      2.4,
+      1.5
+    ]
+  ],
+  "author": "Yap Wei Jun project / agent-assisted procedural modeling",
+  "rights": "Original geometry and materials. Reuse in the owner projects is authorized; public redistribution terms remain unspecified.",
+  "files": {
+    "source": "models/mall-fit-finishes/sources/mall-shopfront-fascia-210.blend",
+    "glb": "models/mall-fit-finishes/exports/mall-shopfront-fascia-210.glb",
+    "preview": "models/mall-fit-finishes/previews/mall-shopfront-fascia-210.png"
+  },
+  "sha256": {
+    "source": "d339df014399c313b215cecdadf425b6b30f6e240f06653d43d7710264a8c66e",
+    "glb": "1601a7784a482965dc2c0304301273f11f3d5bf78bbcd36203f5fbfedca82d3d",
+    "preview": "34582a4563bcc732c49691bd0800101eef262a00eecfc8fc91a00bd79a1f21d9"
+  },
+  "triangles": 72,
+  "glbBytes": 8548,
+  "materials": 3,
+  "generator": "models/mall-fit-finishes/generate.py",
+  "toolchain": "Blender 5.1.2; glTF 2.0; gltf-validator 2.0.0-dev.3.10; Three.js 0.187.0",
+  "limits": [
+    "Fixed sample dimensions; no arbitrary width fitting",
+    "Static PBR meshes, no runtime behavior",
+    "No installation/load/fire certification",
+    "Physical mobile devices not tested"
+  ],
+  "display": {
+    "previewRotationY": 0
+  },
+  "accuracy_notes": "Fixed-size original fit-study architecture module. Nominal visual contacts; no fabrication or engineering certification.",
+  "attribution": [
+    {
+      "credit": "Yap Wei Jun project / agent-assisted original Blender geometry and materials."
+    }
+  ]
+}

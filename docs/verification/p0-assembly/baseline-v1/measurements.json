@@ -1,0 +1,569 @@
+{
+  "axes": "Blender X/Y horizontal, Z up; metres",
+  "sources": {
+    "floor": {
+      "path": "models/mall-floor-tile/exports/mall-floor-tile-module.glb",
+      "sha256": "328a091a1372b0246694484d0cea05319bad032cfa603ed030b69ef87153c305"
+    },
+    "column": {
+      "path": "models/mall-structural-column/exports/mall-structural-column.glb",
+      "sha256": "5a856c9a4e30b7cbde2e99cb50e4e43e9f45a86dd3e504f4dea4708cbe8874aa"
+    },
+    "ceiling": {
+      "path": "models/mall-ceiling-panel/exports/mall-ceiling-panel-module.glb",
+      "sha256": "40f7e02cc5f4db5fa3556ddda90c69ea128c98848707106433c25d1018b1d7ef"
+    },
+    "partition": {
+      "path": "models/mall-glass-partition/exports/mall-glass-partition.glb",
+      "sha256": "115d1e7a4c66d0ac5af08af51627f5d1a04c037156f9c2178b815ce4857ffd7f"
+    },
+    "door": {
+      "path": "models/mall-shopfront-door/exports/mall-shopfront-door.glb",
+      "sha256": "daf0d6aa4347a58c9b39f2b3e32f0a24e6d66b041a8669c6c1b225343864c402"
+    }
+  },
+  "objects": [
+    {
+      "kind": "floor",
+      "name": "Floor_-1.8_-1.2",
+      "location_blender_m": [
+        -1.8,
+        -1.2,
+        -0.03
+      ],
+      "bounds_min_blender_m": [
+        -2.4000000953674316,
+        -1.8000000715255737,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        -1.1999999284744263,
+        -0.6000000238418579,
+        0.0
+      ],
+      "meshes": 5
+    },
+    {
+      "kind": "ceiling",
+      "name": "Ceiling_-1.8_-1.2",
+      "location_blender_m": [
+        -1.8,
+        -1.2,
+        3.0
+      ],
+      "bounds_min_blender_m": [
+        -2.4000000953674316,
+        -1.8000000715255737,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        -1.1999999284744263,
+        -0.6000000834465027,
+        3.3600001335144043
+      ],
+      "meshes": 25
+    },
+    {
+      "kind": "floor",
+      "name": "Floor_-1.8_0",
+      "location_blender_m": [
+        -1.8,
+        0,
+        -0.03
+      ],
+      "bounds_min_blender_m": [
+        -2.4000000953674316,
+        -0.6000000238418579,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        -1.1999999284744263,
+        0.6000000238418579,
+        0.0
+      ],
+      "meshes": 5
+    },
+    {
+      "kind": "floor",
+      "name": "Floor_-1.8_1.2",
+      "location_blender_m": [
+        -1.8,
+        1.2,
+        -0.03
+      ],
+      "bounds_min_blender_m": [
+        -2.4000000953674316,
+        0.6000000238418579,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        -1.1999999284744263,
+        1.8000000715255737,
+        0.0
+      ],
+      "meshes": 5
+    },
+    {
+      "kind": "ceiling",
+      "name": "Ceiling_-1.8_1.2",
+      "location_blender_m": [
+        -1.8,
+        1.2,
+        3.0
+      ],
+      "bounds_min_blender_m": [
+        -2.4000000953674316,
+        0.6000000834465027,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        -1.1999999284744263,
+        1.8000000715255737,
+        3.3600001335144043
+      ],
+      "meshes": 25
+    },
+    {
+      "kind": "floor",
+      "name": "Floor_-0.6_-1.2",
+      "location_blender_m": [
+        -0.6,
+        -1.2,
+        -0.03
+      ],
+      "bounds_min_blender_m": [
+        -1.2000000476837158,
+        -1.8000000715255737,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        0.0,
+        -0.6000000238418579,
+        0.0
+      ],
+      "meshes": 5
+    },
+    {
+      "kind": "ceiling",
+      "name": "Ceiling_-0.6_-1.2",
+      "location_blender_m": [
+        -0.6,
+        -1.2,
+        3.0
+      ],
+      "bounds_min_blender_m": [
+        -1.2000000476837158,
+        -1.8000000715255737,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        0.0,
+        -0.6000000834465027,
+        3.3600001335144043
+      ],
+      "meshes": 25
+    },
+    {
+      "kind": "floor",
+      "name": "Floor_-0.6_0",
+      "location_blender_m": [
+        -0.6,
+        0,
+        -0.03
+      ],
+      "bounds_min_blender_m": [
+        -1.2000000476837158,
+        -0.6000000238418579,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        0.0,
+        0.6000000238418579,
+        0.0
+      ],
+      "meshes": 5
+    },
+    {
+      "kind": "ceiling",
+      "name": "Ceiling_-0.6_0",
+      "location_blender_m": [
+        -0.6,
+        0,
+        3.0
+      ],
+      "bounds_min_blender_m": [
+        -1.2000000476837158,
+        -0.5999999642372131,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        0.0,
+        0.5999999642372131,
+        3.3600001335144043
+      ],
+      "meshes": 25
+    },
+    {
+      "kind": "floor",
+      "name": "Floor_-0.6_1.2",
+      "location_blender_m": [
+        -0.6,
+        1.2,
+        -0.03
+      ],
+      "bounds_min_blender_m": [
+        -1.2000000476837158,
+        0.6000000238418579,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        0.0,
+        1.8000000715255737,
+        0.0
+      ],
+      "meshes": 5
+    },
+    {
+      "kind": "ceiling",
+      "name": "Ceiling_-0.6_1.2",
+      "location_blender_m": [
+        -0.6,
+        1.2,
+        3.0
+      ],
+      "bounds_min_blender_m": [
+        -1.2000000476837158,
+        0.6000000834465027,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        0.0,
+        1.8000000715255737,
+        3.3600001335144043
+      ],
+      "meshes": 25
+    },
+    {
+      "kind": "floor",
+      "name": "Floor_0.6_-1.2",
+      "location_blender_m": [
+        0.6,
+        -1.2,
+        -0.03
+      ],
+      "bounds_min_blender_m": [
+        0.0,
+        -1.8000000715255737,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        1.2000000476837158,
+        -0.6000000238418579,
+        0.0
+      ],
+      "meshes": 5
+    },
+    {
+      "kind": "ceiling",
+      "name": "Ceiling_0.6_-1.2",
+      "location_blender_m": [
+        0.6,
+        -1.2,
+        3.0
+      ],
+      "bounds_min_blender_m": [
+        0.0,
+        -1.8000000715255737,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        1.2000000476837158,
+        -0.6000000834465027,
+        3.3600001335144043
+      ],
+      "meshes": 25
+    },
+    {
+      "kind": "floor",
+      "name": "Floor_0.6_0",
+      "location_blender_m": [
+        0.6,
+        0,
+        -0.03
+      ],
+      "bounds_min_blender_m": [
+        0.0,
+        -0.6000000238418579,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        1.2000000476837158,
+        0.6000000238418579,
+        0.0
+      ],
+      "meshes": 5
+    },
+    {
+      "kind": "ceiling",
+      "name": "Ceiling_0.6_0",
+      "location_blender_m": [
+        0.6,
+        0,
+        3.0
+      ],
+      "bounds_min_blender_m": [
+        0.0,
+        -0.5999999642372131,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        1.2000000476837158,
+        0.5999999642372131,
+        3.3600001335144043
+      ],
+      "meshes": 25
+    },
+    {
+      "kind": "floor",
+      "name": "Floor_0.6_1.2",
+      "location_blender_m": [
+        0.6,
+        1.2,
+        -0.03
+      ],
+      "bounds_min_blender_m": [
+        0.0,
+        0.6000000238418579,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        1.2000000476837158,
+        1.8000000715255737,
+        0.0
+      ],
+      "meshes": 5
+    },
+    {
+      "kind": "ceiling",
+      "name": "Ceiling_0.6_1.2",
+      "location_blender_m": [
+        0.6,
+        1.2,
+        3.0
+      ],
+      "bounds_min_blender_m": [
+        0.0,
+        0.6000000834465027,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        1.2000000476837158,
+        1.8000000715255737,
+        3.3600001335144043
+      ],
+      "meshes": 25
+    },
+    {
+      "kind": "floor",
+      "name": "Floor_1.8_-1.2",
+      "location_blender_m": [
+        1.8,
+        -1.2,
+        -0.03
+      ],
+      "bounds_min_blender_m": [
+        1.1999999284744263,
+        -1.8000000715255737,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        2.4000000953674316,
+        -0.6000000238418579,
+        0.0
+      ],
+      "meshes": 5
+    },
+    {
+      "kind": "ceiling",
+      "name": "Ceiling_1.8_-1.2",
+      "location_blender_m": [
+        1.8,
+        -1.2,
+        3.0
+      ],
+      "bounds_min_blender_m": [
+        1.1999999284744263,
+        -1.8000000715255737,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        2.4000000953674316,
+        -0.6000000834465027,
+        3.3600001335144043
+      ],
+      "meshes": 25
+    },
+    {
+      "kind": "floor",
+      "name": "Floor_1.8_0",
+      "location_blender_m": [
+        1.8,
+        0,
+        -0.03
+      ],
+      "bounds_min_blender_m": [
+        1.1999999284744263,
+        -0.6000000238418579,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        2.4000000953674316,
+        0.6000000238418579,
+        0.0
+      ],
+      "meshes": 5
+    },
+    {
+      "kind": "ceiling",
+      "name": "Ceiling_1.8_0",
+      "location_blender_m": [
+        1.8,
+        0,
+        3.0
+      ],
+      "bounds_min_blender_m": [
+        1.1999999284744263,
+        -0.5999999642372131,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        2.4000000953674316,
+        0.5999999642372131,
+        3.3600001335144043
+      ],
+      "meshes": 25
+    },
+    {
+      "kind": "floor",
+      "name": "Floor_1.8_1.2",
+      "location_blender_m": [
+        1.8,
+        1.2,
+        -0.03
+      ],
+      "bounds_min_blender_m": [
+        1.1999999284744263,
+        0.6000000238418579,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        2.4000000953674316,
+        1.8000000715255737,
+        0.0
+      ],
+      "meshes": 5
+    },
+    {
+      "kind": "ceiling",
+      "name": "Ceiling_1.8_1.2",
+      "location_blender_m": [
+        1.8,
+        1.2,
+        3.0
+      ],
+      "bounds_min_blender_m": [
+        1.1999999284744263,
+        0.6000000834465027,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        2.4000000953674316,
+        1.8000000715255737,
+        3.3600001335144043
+      ],
+      "meshes": 25
+    },
+    {
+      "kind": "column",
+      "name": "Column",
+      "location_blender_m": [
+        -1.8,
+        0,
+        0
+      ],
+      "bounds_min_blender_m": [
+        -2.0999999046325684,
+        -0.30000001192092896,
+        0.0
+      ],
+      "bounds_max_blender_m": [
+        -1.5,
+        0.30000001192092896,
+        3.0
+      ],
+      "meshes": 13
+    },
+    {
+      "kind": "partition",
+      "name": "Partition_Left",
+      "location_blender_m": [
+        -1.65,
+        -1.5,
+        0
+      ],
+      "bounds_min_blender_m": [
+        -2.25,
+        -1.5299999713897705,
+        0.0
+      ],
+      "bounds_max_blender_m": [
+        -1.0499999523162842,
+        -1.4700000286102295,
+        2.4000000953674316
+      ],
+      "meshes": 15
+    },
+    {
+      "kind": "door",
+      "name": "Door",
+      "location_blender_m": [
+        0,
+        -1.5,
+        0
+      ],
+      "bounds_min_blender_m": [
+        -1.0499999523162842,
+        -1.622999906539917,
+        0.0
+      ],
+      "bounds_max_blender_m": [
+        1.0499999523162842,
+        -1.440000057220459,
+        2.3999998569488525
+      ],
+      "meshes": 33
+    },
+    {
+      "kind": "partition",
+      "name": "Partition_Right",
+      "location_blender_m": [
+        1.65,
+        -1.5,
+        0
+      ],
+      "bounds_min_blender_m": [
+        1.0499999523162842,
+        -1.5299999713897705,
+        0.0
+      ],
+      "bounds_max_blender_m": [
+        2.25,
+        -1.4700000286102295,
+        2.4000000953674316
+      ],
+      "meshes": 15
+    }
+  ],
+  "layout": "4 x 3 floor bays; 11 ceiling bays, one column opening; glazed wall with door between two partitions",
+  "limits": "closed door only; no collision, material certification or physical device test"
+}

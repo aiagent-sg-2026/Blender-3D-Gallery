@@ -1,0 +1,2224 @@
+{
+  "units": "metres",
+  "corridorWidth": 3.6,
+  "corridorLength": 7.2,
+  "shopFloorDimensions": [
+    3.6,
+    4.8
+  ],
+  "sources": {
+    "floor": {
+      "path": "models/mall-floor-tile/exports/mall-floor-tile-module.glb",
+      "sha256": "328a091a1372b0246694484d0cea05319bad032cfa603ed030b69ef87153c305"
+    },
+    "ceiling": {
+      "path": "models/mall-ceiling-panel/exports/mall-ceiling-panel-module.glb",
+      "sha256": "40f7e02cc5f4db5fa3556ddda90c69ea128c98848707106433c25d1018b1d7ef"
+    },
+    "column": {
+      "path": "models/mall-structural-column/exports/mall-structural-column.glb",
+      "sha256": "5a856c9a4e30b7cbde2e99cb50e4e43e9f45a86dd3e504f4dea4708cbe8874aa"
+    },
+    "partition": {
+      "path": "models/mall-glass-partition/exports/mall-glass-partition.glb",
+      "sha256": "115d1e7a4c66d0ac5af08af51627f5d1a04c037156f9c2178b815ce4857ffd7f"
+    },
+    "door": {
+      "path": "models/mall-shopfront-door/exports/mall-shopfront-door.glb",
+      "sha256": "daf0d6aa4347a58c9b39f2b3e32f0a24e6d66b041a8669c6c1b225343864c402"
+    },
+    "fascia210": {
+      "path": "models/mall-fit-finishes/exports/mall-shopfront-fascia-210.glb",
+      "sha256": "1601a7784a482965dc2c0304301273f11f3d5bf78bbcd36203f5fbfedca82d3d"
+    },
+    "fascia120": {
+      "path": "models/mall-fit-finishes/exports/mall-shopfront-fascia-120.glb",
+      "sha256": "bfe24705b8a400519c0116b74a1422dafd4f597f10cf7b612be13abc0070de52"
+    },
+    "collar": {
+      "path": "models/mall-fit-finishes/exports/mall-column-ceiling-collar.glb",
+      "sha256": "d0e51dd2b09fdced3551a3d4166fa005218ee20fa6f395ffa48f10f800debe57"
+    },
+    "shelf": {
+      "path": "models/mall-essentials/exports/mall-display-shelf.glb",
+      "sha256": "9538cc7b954a1510397e4f1dffc47bbed6c99f7460edfb1e55ef4dc28561966d"
+    },
+    "bench": {
+      "path": "models/gjh-mall-furniture/exports/gjh-lounge-bench.glb",
+      "sha256": "ae13cf00da96d45878d633e8d1d1f6a9bbbf35d0bc89a4a162f055254b3ea442"
+    }
+  },
+  "objects": [
+    {
+      "name": "Floor_0",
+      "kind": "floor",
+      "position_blender_m": [
+        -1.2,
+        -3,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -1.8000000715255737,
+        -3.5999999046325684,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        -0.6000000238418579,
+        -2.4000000953674316,
+        0.0
+      ]
+    },
+    {
+      "name": "Floor_1",
+      "kind": "floor",
+      "position_blender_m": [
+        -1.2,
+        -1.8,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -1.8000000715255737,
+        -2.4000000953674316,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        -0.6000000238418579,
+        -1.1999999284744263,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_1",
+      "kind": "ceiling",
+      "position_blender_m": [
+        -1.2,
+        -1.8,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -1.8000000715255737,
+        -2.4000000953674316,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        -0.6000000238418579,
+        -1.1999999284744263,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_2",
+      "kind": "floor",
+      "position_blender_m": [
+        -1.2,
+        -0.6,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -1.8000000715255737,
+        -1.2000000476837158,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        -0.6000000238418579,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_2",
+      "kind": "ceiling",
+      "position_blender_m": [
+        -1.2,
+        -0.6,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -1.8000000715255737,
+        -1.2000000476837158,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        -0.6000000238418579,
+        -4.190951585769653e-08,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_3",
+      "kind": "floor",
+      "position_blender_m": [
+        -1.2,
+        0.6,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -1.8000000715255737,
+        0.0,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        -0.6000000238418579,
+        1.2000000476837158,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_3",
+      "kind": "ceiling",
+      "position_blender_m": [
+        -1.2,
+        0.6,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -1.8000000715255737,
+        4.190951585769653e-08,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        -0.6000000238418579,
+        1.2000000476837158,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_4",
+      "kind": "floor",
+      "position_blender_m": [
+        -1.2,
+        1.8,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -1.8000000715255737,
+        1.1999999284744263,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        -0.6000000238418579,
+        2.4000000953674316,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_4",
+      "kind": "ceiling",
+      "position_blender_m": [
+        -1.2,
+        1.8,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -1.8000000715255737,
+        1.1999999284744263,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        -0.6000000238418579,
+        2.4000000953674316,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_5",
+      "kind": "floor",
+      "position_blender_m": [
+        -1.2,
+        3,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -1.8000000715255737,
+        2.4000000953674316,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        -0.6000000238418579,
+        3.5999999046325684,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_5",
+      "kind": "ceiling",
+      "position_blender_m": [
+        -1.2,
+        3,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -1.8000000715255737,
+        2.4000000953674316,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        -0.6000000238418579,
+        3.5999999046325684,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_6",
+      "kind": "floor",
+      "position_blender_m": [
+        0,
+        -3,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -0.6000000238418579,
+        -3.5999999046325684,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        0.6000000238418579,
+        -2.4000000953674316,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_6",
+      "kind": "ceiling",
+      "position_blender_m": [
+        0,
+        -3,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -0.6000000238418579,
+        -3.5999999046325684,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        0.6000000238418579,
+        -2.4000000953674316,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_7",
+      "kind": "floor",
+      "position_blender_m": [
+        0,
+        -1.8,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -0.6000000238418579,
+        -2.4000000953674316,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        0.6000000238418579,
+        -1.1999999284744263,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_7",
+      "kind": "ceiling",
+      "position_blender_m": [
+        0,
+        -1.8,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -0.6000000238418579,
+        -2.4000000953674316,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        0.6000000238418579,
+        -1.1999999284744263,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_8",
+      "kind": "floor",
+      "position_blender_m": [
+        0,
+        -0.6,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -0.6000000238418579,
+        -1.2000000476837158,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        0.6000000238418579,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_8",
+      "kind": "ceiling",
+      "position_blender_m": [
+        0,
+        -0.6,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -0.6000000238418579,
+        -1.2000000476837158,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        0.6000000238418579,
+        -4.190951585769653e-08,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_9",
+      "kind": "floor",
+      "position_blender_m": [
+        0,
+        0.6,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -0.6000000238418579,
+        0.0,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        0.6000000238418579,
+        1.2000000476837158,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_9",
+      "kind": "ceiling",
+      "position_blender_m": [
+        0,
+        0.6,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -0.6000000238418579,
+        4.190951585769653e-08,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        0.6000000238418579,
+        1.2000000476837158,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_10",
+      "kind": "floor",
+      "position_blender_m": [
+        0,
+        1.8,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -0.6000000238418579,
+        1.1999999284744263,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        0.6000000238418579,
+        2.4000000953674316,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_10",
+      "kind": "ceiling",
+      "position_blender_m": [
+        0,
+        1.8,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -0.6000000238418579,
+        1.1999999284744263,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        0.6000000238418579,
+        2.4000000953674316,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_11",
+      "kind": "floor",
+      "position_blender_m": [
+        0,
+        3,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -0.6000000238418579,
+        2.4000000953674316,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        0.6000000238418579,
+        3.5999999046325684,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_11",
+      "kind": "ceiling",
+      "position_blender_m": [
+        0,
+        3,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -0.6000000238418579,
+        2.4000000953674316,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        0.6000000238418579,
+        3.5999999046325684,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_12",
+      "kind": "floor",
+      "position_blender_m": [
+        1.2,
+        -3,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        0.6000000238418579,
+        -3.5999999046325684,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        1.8000000715255737,
+        -2.4000000953674316,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_12",
+      "kind": "ceiling",
+      "position_blender_m": [
+        1.2,
+        -3,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        0.6000000238418579,
+        -3.5999999046325684,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        1.8000000715255737,
+        -2.4000000953674316,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_13",
+      "kind": "floor",
+      "position_blender_m": [
+        1.2,
+        -1.8,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        0.6000000238418579,
+        -2.4000000953674316,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        1.8000000715255737,
+        -1.1999999284744263,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_13",
+      "kind": "ceiling",
+      "position_blender_m": [
+        1.2,
+        -1.8,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        0.6000000238418579,
+        -2.4000000953674316,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        1.8000000715255737,
+        -1.1999999284744263,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_14",
+      "kind": "floor",
+      "position_blender_m": [
+        1.2,
+        -0.6,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        0.6000000238418579,
+        -1.2000000476837158,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        1.8000000715255737,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_14",
+      "kind": "ceiling",
+      "position_blender_m": [
+        1.2,
+        -0.6,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        0.6000000238418579,
+        -1.2000000476837158,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        1.8000000715255737,
+        -4.190951585769653e-08,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_15",
+      "kind": "floor",
+      "position_blender_m": [
+        1.2,
+        0.6,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        0.6000000238418579,
+        0.0,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        1.8000000715255737,
+        1.2000000476837158,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_15",
+      "kind": "ceiling",
+      "position_blender_m": [
+        1.2,
+        0.6,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        0.6000000238418579,
+        4.190951585769653e-08,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        1.8000000715255737,
+        1.2000000476837158,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_16",
+      "kind": "floor",
+      "position_blender_m": [
+        1.2,
+        1.8,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        0.6000000238418579,
+        1.1999999284744263,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        1.8000000715255737,
+        2.4000000953674316,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_16",
+      "kind": "ceiling",
+      "position_blender_m": [
+        1.2,
+        1.8,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        0.6000000238418579,
+        1.1999999284744263,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        1.8000000715255737,
+        2.4000000953674316,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_17",
+      "kind": "floor",
+      "position_blender_m": [
+        1.2,
+        3,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        0.6000000238418579,
+        2.4000000953674316,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        1.8000000715255737,
+        3.5999999046325684,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_17",
+      "kind": "ceiling",
+      "position_blender_m": [
+        1.2,
+        3,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        0.6000000238418579,
+        2.4000000953674316,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        1.8000000715255737,
+        3.5999999046325684,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_18",
+      "kind": "floor",
+      "position_blender_m": [
+        -4.8,
+        -1.8,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -5.400000095367432,
+        -2.4000000953674316,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        -4.200000286102295,
+        -1.1999999284744263,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_18",
+      "kind": "ceiling",
+      "position_blender_m": [
+        -4.8,
+        -1.8,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -5.400000095367432,
+        -2.4000000953674316,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        -4.200000286102295,
+        -1.1999999284744263,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_19",
+      "kind": "floor",
+      "position_blender_m": [
+        -4.8,
+        -0.6,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -5.400000095367432,
+        -1.2000000476837158,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        -4.200000286102295,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_19",
+      "kind": "ceiling",
+      "position_blender_m": [
+        -4.8,
+        -0.6,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -5.400000095367432,
+        -1.2000000476837158,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        -4.200000286102295,
+        -4.190951585769653e-08,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_20",
+      "kind": "floor",
+      "position_blender_m": [
+        -4.8,
+        0.6,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -5.400000095367432,
+        0.0,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        -4.200000286102295,
+        1.2000000476837158,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_20",
+      "kind": "ceiling",
+      "position_blender_m": [
+        -4.8,
+        0.6,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -5.400000095367432,
+        4.190951585769653e-08,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        -4.200000286102295,
+        1.2000000476837158,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_21",
+      "kind": "floor",
+      "position_blender_m": [
+        -4.8,
+        1.8,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -5.400000095367432,
+        1.1999999284744263,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        -4.200000286102295,
+        2.4000000953674316,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_21",
+      "kind": "ceiling",
+      "position_blender_m": [
+        -4.8,
+        1.8,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -5.400000095367432,
+        1.1999999284744263,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        -4.200000286102295,
+        2.4000000953674316,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_22",
+      "kind": "floor",
+      "position_blender_m": [
+        -3.6,
+        -1.8,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -4.199999809265137,
+        -2.4000000953674316,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        -3.0,
+        -1.1999999284744263,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_22",
+      "kind": "ceiling",
+      "position_blender_m": [
+        -3.6,
+        -1.8,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -4.199999809265137,
+        -2.4000000953674316,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        -3.0,
+        -1.1999999284744263,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_23",
+      "kind": "floor",
+      "position_blender_m": [
+        -3.6,
+        -0.6,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -4.199999809265137,
+        -1.2000000476837158,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        -3.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_23",
+      "kind": "ceiling",
+      "position_blender_m": [
+        -3.6,
+        -0.6,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -4.199999809265137,
+        -1.2000000476837158,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        -3.0,
+        -4.190951585769653e-08,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_24",
+      "kind": "floor",
+      "position_blender_m": [
+        -3.6,
+        0.6,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -4.199999809265137,
+        0.0,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        -3.0,
+        1.2000000476837158,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_24",
+      "kind": "ceiling",
+      "position_blender_m": [
+        -3.6,
+        0.6,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -4.199999809265137,
+        4.190951585769653e-08,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        -3.0,
+        1.2000000476837158,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_25",
+      "kind": "floor",
+      "position_blender_m": [
+        -3.6,
+        1.8,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -4.199999809265137,
+        1.1999999284744263,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        -3.0,
+        2.4000000953674316,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_25",
+      "kind": "ceiling",
+      "position_blender_m": [
+        -3.6,
+        1.8,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -4.199999809265137,
+        1.1999999284744263,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        -3.0,
+        2.4000000953674316,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_26",
+      "kind": "floor",
+      "position_blender_m": [
+        -2.4,
+        -1.8,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -3.0,
+        -2.4000000953674316,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        -1.8000000715255737,
+        -1.1999999284744263,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_26",
+      "kind": "ceiling",
+      "position_blender_m": [
+        -2.4,
+        -1.8,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -3.0,
+        -2.4000000953674316,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        -1.8000000715255737,
+        -1.1999999284744263,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_27",
+      "kind": "floor",
+      "position_blender_m": [
+        -2.4,
+        -0.6,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -3.0,
+        -1.2000000476837158,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        -1.8000000715255737,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_27",
+      "kind": "ceiling",
+      "position_blender_m": [
+        -2.4,
+        -0.6,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -3.0,
+        -1.2000000476837158,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        -1.8000000715255737,
+        -4.190951585769653e-08,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_28",
+      "kind": "floor",
+      "position_blender_m": [
+        -2.4,
+        0.6,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -3.0,
+        0.0,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        -1.8000000715255737,
+        1.2000000476837158,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_28",
+      "kind": "ceiling",
+      "position_blender_m": [
+        -2.4,
+        0.6,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -3.0,
+        4.190951585769653e-08,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        -1.8000000715255737,
+        1.2000000476837158,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_29",
+      "kind": "floor",
+      "position_blender_m": [
+        -2.4,
+        1.8,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -3.0,
+        1.1999999284744263,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        -1.8000000715255737,
+        2.4000000953674316,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_29",
+      "kind": "ceiling",
+      "position_blender_m": [
+        -2.4,
+        1.8,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -3.0,
+        1.1999999284744263,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        -1.8000000715255737,
+        2.4000000953674316,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_30",
+      "kind": "floor",
+      "position_blender_m": [
+        2.4,
+        -1.8,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        1.8000000715255737,
+        -2.4000000953674316,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        3.0,
+        -1.1999999284744263,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_30",
+      "kind": "ceiling",
+      "position_blender_m": [
+        2.4,
+        -1.8,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        1.8000000715255737,
+        -2.4000000953674316,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        3.0,
+        -1.1999999284744263,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_31",
+      "kind": "floor",
+      "position_blender_m": [
+        2.4,
+        -0.6,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        1.8000000715255737,
+        -1.2000000476837158,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        3.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_31",
+      "kind": "ceiling",
+      "position_blender_m": [
+        2.4,
+        -0.6,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        1.8000000715255737,
+        -1.2000000476837158,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        3.0,
+        -4.190951585769653e-08,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_32",
+      "kind": "floor",
+      "position_blender_m": [
+        2.4,
+        0.6,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        1.8000000715255737,
+        0.0,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        3.0,
+        1.2000000476837158,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_32",
+      "kind": "ceiling",
+      "position_blender_m": [
+        2.4,
+        0.6,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        1.8000000715255737,
+        4.190951585769653e-08,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        3.0,
+        1.2000000476837158,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_33",
+      "kind": "floor",
+      "position_blender_m": [
+        2.4,
+        1.8,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        1.8000000715255737,
+        1.1999999284744263,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        3.0,
+        2.4000000953674316,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_33",
+      "kind": "ceiling",
+      "position_blender_m": [
+        2.4,
+        1.8,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        1.8000000715255737,
+        1.1999999284744263,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        3.0,
+        2.4000000953674316,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_34",
+      "kind": "floor",
+      "position_blender_m": [
+        3.6,
+        -1.8,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        3.0,
+        -2.4000000953674316,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        4.199999809265137,
+        -1.1999999284744263,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_34",
+      "kind": "ceiling",
+      "position_blender_m": [
+        3.6,
+        -1.8,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        3.0,
+        -2.4000000953674316,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        4.199999809265137,
+        -1.1999999284744263,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_35",
+      "kind": "floor",
+      "position_blender_m": [
+        3.6,
+        -0.6,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        3.0,
+        -1.2000000476837158,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        4.199999809265137,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_35",
+      "kind": "ceiling",
+      "position_blender_m": [
+        3.6,
+        -0.6,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        3.0,
+        -1.2000000476837158,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        4.199999809265137,
+        -4.190951585769653e-08,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_36",
+      "kind": "floor",
+      "position_blender_m": [
+        3.6,
+        0.6,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        3.0,
+        0.0,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        4.199999809265137,
+        1.2000000476837158,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_36",
+      "kind": "ceiling",
+      "position_blender_m": [
+        3.6,
+        0.6,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        3.0,
+        4.190951585769653e-08,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        4.199999809265137,
+        1.2000000476837158,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_37",
+      "kind": "floor",
+      "position_blender_m": [
+        3.6,
+        1.8,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        3.0,
+        1.1999999284744263,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        4.199999809265137,
+        2.4000000953674316,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_37",
+      "kind": "ceiling",
+      "position_blender_m": [
+        3.6,
+        1.8,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        3.0,
+        1.1999999284744263,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        4.199999809265137,
+        2.4000000953674316,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_38",
+      "kind": "floor",
+      "position_blender_m": [
+        4.8,
+        -1.8,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        4.200000286102295,
+        -2.4000000953674316,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        5.400000095367432,
+        -1.1999999284744263,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_38",
+      "kind": "ceiling",
+      "position_blender_m": [
+        4.8,
+        -1.8,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        4.200000286102295,
+        -2.4000000953674316,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        5.400000095367432,
+        -1.1999999284744263,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_39",
+      "kind": "floor",
+      "position_blender_m": [
+        4.8,
+        -0.6,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        4.200000286102295,
+        -1.2000000476837158,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        5.400000095367432,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_39",
+      "kind": "ceiling",
+      "position_blender_m": [
+        4.8,
+        -0.6,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        4.200000286102295,
+        -1.2000000476837158,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        5.400000095367432,
+        -4.190951585769653e-08,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_40",
+      "kind": "floor",
+      "position_blender_m": [
+        4.8,
+        0.6,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        4.200000286102295,
+        0.0,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        5.400000095367432,
+        1.2000000476837158,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_40",
+      "kind": "ceiling",
+      "position_blender_m": [
+        4.8,
+        0.6,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        4.200000286102295,
+        4.190951585769653e-08,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        5.400000095367432,
+        1.2000000476837158,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Floor_41",
+      "kind": "floor",
+      "position_blender_m": [
+        4.8,
+        1.8,
+        -0.03
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        4.200000286102295,
+        1.1999999284744263,
+        -0.029999999329447746
+      ],
+      "bounds_max_blender_m": [
+        5.400000095367432,
+        2.4000000953674316,
+        0.0
+      ]
+    },
+    {
+      "name": "Ceiling_41",
+      "kind": "ceiling",
+      "position_blender_m": [
+        4.8,
+        1.8,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        4.200000286102295,
+        1.1999999284744263,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        5.400000095367432,
+        2.4000000953674316,
+        3.3600001335144043
+      ]
+    },
+    {
+      "name": "Column",
+      "kind": "column",
+      "position_blender_m": [
+        -1.2,
+        -3,
+        0
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -1.5,
+        -3.299999952316284,
+        0.0
+      ],
+      "bounds_max_blender_m": [
+        -0.9000000357627869,
+        -2.700000047683716,
+        3.0
+      ]
+    },
+    {
+      "name": "Ceiling_Collar",
+      "kind": "collar",
+      "position_blender_m": [
+        -1.2,
+        -3,
+        3
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -1.8000000715255737,
+        -3.5999999046325684,
+        3.0
+      ],
+      "bounds_max_blender_m": [
+        -0.6000000238418579,
+        -2.4000000953674316,
+        3.0320000648498535
+      ]
+    },
+    {
+      "name": "Door_A",
+      "kind": "door",
+      "position_blender_m": [
+        -1.8,
+        0,
+        0
+      ],
+      "rotation_z": 1.5707963267948966,
+      "bounds_min_blender_m": [
+        -1.8600000143051147,
+        -1.0499999523162842,
+        0.0
+      ],
+      "bounds_max_blender_m": [
+        -1.6769999265670776,
+        1.0499999523162842,
+        2.3999998569488525
+      ]
+    },
+    {
+      "name": "Fascia_Door_A",
+      "kind": "fascia210",
+      "position_blender_m": [
+        -1.8,
+        0,
+        2.4
+      ],
+      "rotation_z": 1.5707963267948966,
+      "bounds_min_blender_m": [
+        -1.8300000429153442,
+        -1.0499999523162842,
+        2.4000000953674316
+      ],
+      "bounds_max_blender_m": [
+        -1.7699998617172241,
+        1.0499999523162842,
+        3.000000238418579
+      ]
+    },
+    {
+      "name": "Partition_A_Left",
+      "kind": "partition",
+      "position_blender_m": [
+        -1.8000000715255737,
+        -1.649999976158142,
+        0.0
+      ],
+      "rotation_z": 1.5707963267948966,
+      "bounds_min_blender_m": [
+        -1.8300000429153442,
+        -2.25,
+        0.0
+      ],
+      "bounds_max_blender_m": [
+        -1.7700001001358032,
+        -1.0499999523162842,
+        2.4000000953674316
+      ]
+    },
+    {
+      "name": "Fascia_A_Left",
+      "kind": "fascia120",
+      "position_blender_m": [
+        -1.8000000715255737,
+        -1.649999976158142,
+        2.4
+      ],
+      "rotation_z": 1.5707963267948966,
+      "bounds_min_blender_m": [
+        -1.8300000429153442,
+        -2.25,
+        2.4000000953674316
+      ],
+      "bounds_max_blender_m": [
+        -1.7700001001358032,
+        -1.0499999523162842,
+        3.000000238418579
+      ]
+    },
+    {
+      "name": "Partition_A_Right",
+      "kind": "partition",
+      "position_blender_m": [
+        -1.7999998331069946,
+        1.649999976158142,
+        0.0
+      ],
+      "rotation_z": 1.5707963267948966,
+      "bounds_min_blender_m": [
+        -1.8299998044967651,
+        1.0499999523162842,
+        0.0
+      ],
+      "bounds_max_blender_m": [
+        -1.7699998617172241,
+        2.25,
+        2.4000000953674316
+      ]
+    },
+    {
+      "name": "Fascia_A_Right",
+      "kind": "fascia120",
+      "position_blender_m": [
+        -1.7999998331069946,
+        1.649999976158142,
+        2.4
+      ],
+      "rotation_z": 1.5707963267948966,
+      "bounds_min_blender_m": [
+        -1.8299998044967651,
+        1.0499999523162842,
+        2.4000000953674316
+      ],
+      "bounds_max_blender_m": [
+        -1.7699998617172241,
+        2.25,
+        3.000000238418579
+      ]
+    },
+    {
+      "name": "Shelf_A",
+      "kind": "shelf",
+      "position_blender_m": [
+        -4.95,
+        0,
+        0
+      ],
+      "rotation_z": -1.5707963267948966,
+      "bounds_min_blender_m": [
+        -5.234999656677246,
+        -0.7600000500679016,
+        0.0
+      ],
+      "bounds_max_blender_m": [
+        -4.654999732971191,
+        0.7599999904632568,
+        1.9600000381469727
+      ]
+    },
+    {
+      "name": "Door_B",
+      "kind": "door",
+      "position_blender_m": [
+        1.8,
+        0,
+        0
+      ],
+      "rotation_z": -1.5707963267948966,
+      "bounds_min_blender_m": [
+        1.6769999265670776,
+        -1.0499999523162842,
+        0.0
+      ],
+      "bounds_max_blender_m": [
+        1.8600000143051147,
+        1.0499999523162842,
+        2.3999998569488525
+      ]
+    },
+    {
+      "name": "Fascia_Door_B",
+      "kind": "fascia210",
+      "position_blender_m": [
+        1.8,
+        0,
+        2.4
+      ],
+      "rotation_z": -1.5707963267948966,
+      "bounds_min_blender_m": [
+        1.7699998617172241,
+        -1.0499999523162842,
+        2.4000000953674316
+      ],
+      "bounds_max_blender_m": [
+        1.8300000429153442,
+        1.0499999523162842,
+        3.000000238418579
+      ]
+    },
+    {
+      "name": "Partition_B_Left",
+      "kind": "partition",
+      "position_blender_m": [
+        1.8000000715255737,
+        1.649999976158142,
+        0.0
+      ],
+      "rotation_z": -1.5707963267948966,
+      "bounds_min_blender_m": [
+        1.7700001001358032,
+        1.0499999523162842,
+        0.0
+      ],
+      "bounds_max_blender_m": [
+        1.8300000429153442,
+        2.25,
+        2.4000000953674316
+      ]
+    },
+    {
+      "name": "Fascia_B_Left",
+      "kind": "fascia120",
+      "position_blender_m": [
+        1.8000000715255737,
+        1.649999976158142,
+        2.4
+      ],
+      "rotation_z": -1.5707963267948966,
+      "bounds_min_blender_m": [
+        1.7700001001358032,
+        1.0499999523162842,
+        2.4000000953674316
+      ],
+      "bounds_max_blender_m": [
+        1.8300000429153442,
+        2.25,
+        3.000000238418579
+      ]
+    },
+    {
+      "name": "Partition_B_Right",
+      "kind": "partition",
+      "position_blender_m": [
+        1.7999998331069946,
+        -1.649999976158142,
+        0.0
+      ],
+      "rotation_z": -1.5707963267948966,
+      "bounds_min_blender_m": [
+        1.7699998617172241,
+        -2.25,
+        0.0
+      ],
+      "bounds_max_blender_m": [
+        1.8299998044967651,
+        -1.0499999523162842,
+        2.4000000953674316
+      ]
+    },
+    {
+      "name": "Fascia_B_Right",
+      "kind": "fascia120",
+      "position_blender_m": [
+        1.7999998331069946,
+        -1.649999976158142,
+        2.4
+      ],
+      "rotation_z": -1.5707963267948966,
+      "bounds_min_blender_m": [
+        1.7699998617172241,
+        -2.25,
+        2.4000000953674316
+      ],
+      "bounds_max_blender_m": [
+        1.8299998044967651,
+        -1.0499999523162842,
+        3.000000238418579
+      ]
+    },
+    {
+      "name": "Shelf_B",
+      "kind": "shelf",
+      "position_blender_m": [
+        4.95,
+        0,
+        0
+      ],
+      "rotation_z": 1.5707963267948966,
+      "bounds_min_blender_m": [
+        4.654999732971191,
+        -0.7599999904632568,
+        0.0
+      ],
+      "bounds_max_blender_m": [
+        5.234999656677246,
+        0.7600000500679016,
+        1.9600000381469727
+      ]
+    },
+    {
+      "name": "Bench",
+      "kind": "bench",
+      "position_blender_m": [
+        0,
+        3,
+        0
+      ],
+      "rotation_z": 0,
+      "bounds_min_blender_m": [
+        -1.2899999618530273,
+        2.5329999923706055,
+        0.0
+      ],
+      "bounds_max_blender_m": [
+        1.2899998426437378,
+        3.4549999237060547,
+        1.3174999952316284
+      ]
+    }
+  ],
+  "floorCells": [
+    [
+      -1.2,
+      -3
+    ],
+    [
+      -1.2,
+      -1.8
+    ],
+    [
+      -1.2,
+      -0.6
+    ],
+    [
+      -1.2,
+      0.6
+    ],
+    [
+      -1.2,
+      1.8
+    ],
+    [
+      -1.2,
+      3
+    ],
+    [
+      0,
+      -3
+    ],
+    [
+      0,
+      -1.8
+    ],
+    [
+      0,
+      -0.6
+    ],
+    [
+      0,
+      0.6
+    ],
+    [
+      0,
+      1.8
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1.2,
+      -3
+    ],
+    [
+      1.2,
+      -1.8
+    ],
+    [
+      1.2,
+      -0.6
+    ],
+    [
+      1.2,
+      0.6
+    ],
+    [
+      1.2,
+      1.8
+    ],
+    [
+      1.2,
+      3
+    ],
+    [
+      -4.8,
+      -1.8
+    ],
+    [
+      -4.8,
+      -0.6
+    ],
+    [
+      -4.8,
+      0.6
+    ],
+    [
+      -4.8,
+      1.8
+    ],
+    [
+      -3.6,
+      -1.8
+    ],
+    [
+      -3.6,
+      -0.6
+    ],
+    [
+      -3.6,
+      0.6
+    ],
+    [
+      -3.6,
+      1.8
+    ],
+    [
+      -2.4,
+      -1.8
+    ],
+    [
+      -2.4,
+      -0.6
+    ],
+    [
+      -2.4,
+      0.6
+    ],
+    [
+      -2.4,
+      1.8
+    ],
+    [
+      2.4,
+      -1.8
+    ],
+    [
+      2.4,
+      -0.6
+    ],
+    [
+      2.4,
+      0.6
+    ],
+    [
+      2.4,
+      1.8
+    ],
+    [
+      3.6,
+      -1.8
+    ],
+    [
+      3.6,
+      -0.6
+    ],
+    [
+      3.6,
+      0.6
+    ],
+    [
+      3.6,
+      1.8
+    ],
+    [
+      4.8,
+      -1.8
+    ],
+    [
+      4.8,
+      -0.6
+    ],
+    [
+      4.8,
+      0.6
+    ],
+    [
+      4.8,
+      1.8
+    ]
+  ],
+  "limits": "Two neutral stores, static dressing, sample-only whitebox shell. Not Foundation v1 integration."
+}

@@ -1,0 +1,29 @@
+{
+  "unitTests": {
+    "passed": 587,
+    "failed": 0,
+    "command": "npm test"
+  },
+  "build": {
+    "command": "npm run build",
+    "passed": true,
+    "registeredSliceAssets": 493
+  },
+  "library": {
+    "command": "npm run test:library",
+    "passedCases": [
+      "static indexes preserve all assets and never download GLBs or create WebGL",
+      "model search, combined filters, empty state and clear preserve URL state",
+      "category grouping, filters, and model links",
+      "demo search/category combine and clear",
+      "legacy model detail direct link, refresh, metadata, related and history",
+      "failed model load retains fallback and can retry",
+      "unknown model and unavailable WebGL provide useful recovery",
+      "mobile menu supports keyboard dismissal, focus return and navigation",
+      "legacy demos launch, refresh, return to index and release canvas",
+      "reduced motion and equivalent 200 percent reflow remain usable"
+    ]
+  },
+  "newAssetViewerCases": 6,
+  "note": "Tests passed during this task; unrelated concurrent additions are not claimed tested by these earlier receipts."
+}

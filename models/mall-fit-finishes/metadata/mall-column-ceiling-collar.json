@@ -1,0 +1,70 @@
+{
+  "id": "mall-column-ceiling-collar",
+  "name": "Mall Square Column Ceiling Collar",
+  "version": "1.0.0",
+  "status": "Registered locally; release pending",
+  "planningIds": [
+    "PL-ARC-005"
+  ],
+  "units": "metres",
+  "dimensionsGLTF": [
+    1.2,
+    0.032,
+    1.2
+  ],
+  "origin": "centre of underside",
+  "clearHoleMetres": 0.6,
+  "placementGLTF": [
+    [
+      -1.8,
+      3,
+      0
+    ]
+  ],
+  "author": "Yap Wei Jun project / agent-assisted procedural modeling",
+  "rights": "Original geometry and materials. Reuse in the owner projects is authorized; public redistribution terms remain unspecified.",
+  "files": {
+    "source": "models/mall-fit-finishes/sources/mall-column-ceiling-collar.blend",
+    "glb": "models/mall-fit-finishes/exports/mall-column-ceiling-collar.glb",
+    "preview": "models/mall-fit-finishes/previews/mall-column-ceiling-collar.png"
+  },
+  "sha256": {
+    "source": "7e12410b36afffca2b1536a953540158dc14d2f87695a55f36bc08a111569d93",
+    "glb": "d0e51dd2b09fdced3551a3d4166fa005218ee20fa6f395ffa48f10f800debe57",
+    "preview": "5e17a63f765fe4eda153d147e374f01ce7e8a06cfb593959eee4b412e009aa08"
+  },
+  "triangles": 144,
+  "glbBytes": 15384,
+  "materials": 2,
+  "generator": "models/mall-fit-finishes/generate.py",
+  "toolchain": "Blender 5.1.2; glTF 2.0; gltf-validator 2.0.0-dev.3.10; Three.js 0.187.0",
+  "limits": [
+    "Fixed sample dimensions; no arbitrary width fitting",
+    "Static PBR meshes, no runtime behavior",
+    "No installation/load/fire certification",
+    "Physical mobile devices not tested"
+  ],
+  "display": {
+    "previewRotationY": 0,
+    "previewCameraDirection": [
+      1,
+      -0.8,
+      1
+    ],
+    "previewLighting": {
+      "directionalPosition": [
+        4,
+        -7,
+        5
+      ],
+      "hemisphereIntensity": 2,
+      "directionalIntensity": 2.1
+    }
+  },
+  "accuracy_notes": "Fixed-size original fit-study architecture module. Nominal visual contacts; no fabrication or engineering certification.",
+  "attribution": [
+    {
+      "credit": "Yap Wei Jun project / agent-assisted original Blender geometry and materials."
+    }
+  ]
+}

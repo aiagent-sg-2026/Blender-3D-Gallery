@@ -1,0 +1,173 @@
+{
+  "method": "World-axis bounding boxes from Blender imported GLBs; contact is not an intersection or visual seam test. Ceiling opening derived from omitted 1.2 m module grid.",
+  "checks": [
+    {
+      "name": "floor X seam -1.8 -0.6 y=-1.2",
+      "measured_m": -1.1920928955078125e-07,
+      "expected_m": 0,
+      "tolerance_m": 0.002,
+      "pass": true
+    },
+    {
+      "name": "floor X seam -0.6 0.6 y=-1.2",
+      "measured_m": 0.0,
+      "expected_m": 0,
+      "tolerance_m": 0.002,
+      "pass": true
+    },
+    {
+      "name": "floor X seam 0.6 1.8 y=-1.2",
+      "measured_m": -1.1920928955078125e-07,
+      "expected_m": 0,
+      "tolerance_m": 0.002,
+      "pass": true
+    },
+    {
+      "name": "floor X seam -1.8 -0.6 y=0",
+      "measured_m": -1.1920928955078125e-07,
+      "expected_m": 0,
+      "tolerance_m": 0.002,
+      "pass": true
+    },
+    {
+      "name": "floor X seam -0.6 0.6 y=0",
+      "measured_m": 0.0,
+      "expected_m": 0,
+      "tolerance_m": 0.002,
+      "pass": true
+    },
+    {
+      "name": "floor X seam 0.6 1.8 y=0",
+      "measured_m": -1.1920928955078125e-07,
+      "expected_m": 0,
+      "tolerance_m": 0.002,
+      "pass": true
+    },
+    {
+      "name": "floor X seam -1.8 -0.6 y=1.2",
+      "measured_m": -1.1920928955078125e-07,
+      "expected_m": 0,
+      "tolerance_m": 0.002,
+      "pass": true
+    },
+    {
+      "name": "floor X seam -0.6 0.6 y=1.2",
+      "measured_m": 0.0,
+      "expected_m": 0,
+      "tolerance_m": 0.002,
+      "pass": true
+    },
+    {
+      "name": "floor X seam 0.6 1.8 y=1.2",
+      "measured_m": -1.1920928955078125e-07,
+      "expected_m": 0,
+      "tolerance_m": 0.002,
+      "pass": true
+    },
+    {
+      "name": "floor Y seam -1.2 0 x=-1.8",
+      "measured_m": 0.0,
+      "expected_m": 0,
+      "tolerance_m": 0.002,
+      "pass": true
+    },
+    {
+      "name": "floor Y seam 0 1.2 x=-1.8",
+      "measured_m": 0.0,
+      "expected_m": 0,
+      "tolerance_m": 0.002,
+      "pass": true
+    },
+    {
+      "name": "floor Y seam -1.2 0 x=-0.6",
+      "measured_m": 0.0,
+      "expected_m": 0,
+      "tolerance_m": 0.002,
+      "pass": true
+    },
+    {
+      "name": "floor Y seam 0 1.2 x=-0.6",
+      "measured_m": 0.0,
+      "expected_m": 0,
+      "tolerance_m": 0.002,
+      "pass": true
+    },
+    {
+      "name": "floor Y seam -1.2 0 x=0.6",
+      "measured_m": 0.0,
+      "expected_m": 0,
+      "tolerance_m": 0.002,
+      "pass": true
+    },
+    {
+      "name": "floor Y seam 0 1.2 x=0.6",
+      "measured_m": 0.0,
+      "expected_m": 0,
+      "tolerance_m": 0.002,
+      "pass": true
+    },
+    {
+      "name": "floor Y seam -1.2 0 x=1.8",
+      "measured_m": 0.0,
+      "expected_m": 0,
+      "tolerance_m": 0.002,
+      "pass": true
+    },
+    {
+      "name": "floor Y seam 0 1.2 x=1.8",
+      "measured_m": 0.0,
+      "expected_m": 0,
+      "tolerance_m": 0.002,
+      "pass": true
+    },
+    {
+      "name": "left partition to door",
+      "measured_m": 0.0,
+      "expected_m": 0,
+      "tolerance_m": 0.002,
+      "pass": true
+    },
+    {
+      "name": "door to right partition",
+      "measured_m": 0.0,
+      "expected_m": 0,
+      "tolerance_m": 0.002,
+      "pass": true
+    },
+    {
+      "name": "door head to ceiling underside",
+      "measured_m": 0.6000001430511475,
+      "expected_m": 0.6,
+      "tolerance_m": 0.002,
+      "pass": true
+    },
+    {
+      "name": "column top to ceiling underside",
+      "measured_m": 0.0,
+      "expected_m": 0,
+      "tolerance_m": 0.002,
+      "pass": true
+    },
+    {
+      "name": "column edge to ceiling opening left",
+      "measured_m": 0.30000009536743155,
+      "expected_m": 0.3,
+      "tolerance_m": 0.002,
+      "pass": true
+    },
+    {
+      "name": "column edge to ceiling opening right",
+      "measured_m": 0.30000000000000004,
+      "expected_m": 0.3,
+      "tolerance_m": 0.002,
+      "pass": true
+    },
+    {
+      "name": "floor surface to door",
+      "measured_m": 0.0,
+      "expected_m": 0,
+      "tolerance_m": 0.002,
+      "pass": true
+    }
+  ]
+}

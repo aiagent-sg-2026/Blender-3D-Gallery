@@ -1,0 +1,29 @@
+{
+  "input": "docs/verification/p0-assembly/fit-study.glb",
+  "method": "0..90 degrees at 1-degree intervals; conservative component OBBs shrunk 10 micrometres; all moving vertices projected onto floor-cell union. Hinge bearings excluded only at their intentional axis. No continuous-time or human-accessibility certification.",
+  "records": [
+    {
+      "door": "Door",
+      "modes": [
+        {
+          "mode": "left-only",
+          "samples": 91
+        },
+        {
+          "mode": "right-only",
+          "samples": 91
+        },
+        {
+          "mode": "both",
+          "samples": 91
+        }
+      ],
+      "collisions": [],
+      "collisionCount": 0,
+      "outsideFloorVertexSamples": 0,
+      "openClearWidthMetres": 1.7340000160038467,
+      "pass": true
+    }
+  ],
+  "pass": true
+}

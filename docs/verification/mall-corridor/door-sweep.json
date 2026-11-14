@@ -1,0 +1,56 @@
+{
+  "input": "docs/verification/mall-corridor/corridor.glb",
+  "method": "0..90 degrees at 1-degree intervals; conservative component OBBs shrunk 10 micrometres; all moving vertices projected onto floor-cell union. Hinge bearings excluded only at their intentional axis. No continuous-time or human-accessibility certification.",
+  "records": [
+    {
+      "door": "Door_A",
+      "modes": [
+        {
+          "mode": "left-only",
+          "samples": 91
+        },
+        {
+          "mode": "right-only",
+          "samples": 91
+        },
+        {
+          "mode": "both",
+          "samples": 91
+        }
+      ],
+      "collisions": [],
+      "collisionCount": 0,
+      "outsideFloorVertexSamples": 0,
+      "openClearWidthMetres": 1.734000248982122,
+      "pass": true
+    },
+    {
+      "door": "Door_B",
+      "modes": [
+        {
+          "mode": "left-only",
+          "samples": 91
+        },
+        {
+          "mode": "right-only",
+          "samples": 91
+        },
+        {
+          "mode": "both",
+          "samples": 91
+        }
+      ],
+      "collisions": [],
+      "collisionCount": 0,
+      "outsideFloorVertexSamples": 0,
+      "openClearWidthMetres": 1.734000248982122,
+      "pass": true
+    }
+  ],
+  "simultaneous": {
+    "samples": 91,
+    "collisions": [],
+    "minimumCentralGapMetres": 1.6315888295671148
+  },
+  "pass": true
+}

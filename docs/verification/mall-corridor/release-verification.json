@@ -1,0 +1,25 @@
+{
+  "dateSGT": "2026-11-15",
+  "baseCommit": "bffafa5fa5c4523887ee166202a8bed001db8314",
+  "scope": [
+    "P0 inventory and assembly evidence",
+    "Two modular finish families, three catalog assets",
+    "Two-store corridor and controllable visitor sample"
+  ],
+  "checks": {
+    "build": "PASS; 554 registered GLBs validate, Vite production build",
+    "unit": "594 passed, 0 failed",
+    "movement": "7 actual-scene checks plus sampled source clips passed",
+    "finishGlbs": "3 GLBs, 0 errors / 0 warnings",
+    "galleryBrowser": "6 model/viewport cases passed on isolated production build",
+    "visitorBrowser": "6 scenario groups passed against isolated checkout on port 4185",
+    "corridorBrowser": "2 viewport regressions, 100 environment instances and <=200 draw calls passed"
+  },
+  "publicationScope": "The three models are registered in the normal Gallery build. The corridor is a repository-local verification sample, not a new production demo route.",
+  "limits": [
+    "No physical phone/Safari performance acceptance",
+    "No GJH v11 integration",
+    "Remote workflow/deployment state must be read separately"
+  ],
+  "otherRemoteCatalogEntriesPreserved": true
+}
