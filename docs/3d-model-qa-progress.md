@@ -10,7 +10,7 @@ All other initial records are PENDING. Uncatalogued/historical artifacts remain 
 
 | QA ID | Model | Source / GLB | Status | Defects / repairs / QA | Commit / GitHub main | Remaining risk |
 | --- | --- | --- | --- | --- | --- | --- |
-| MODEL-0001 | pool-table | models/eight-ball-billiards/exports/table.glb, models/eight-ball-billiards/scene.blend | READY_TO_PUSH | TABLE-001/002 repaired; B geometry/PBR/visual/GLB/runtime pass; [report](model-qa/MODEL-0001/README.md) | Local commit prepared / remote pending | All local gates pass: 602 post-sync unit, 46 Game, 31 experience; remote release pending; mobile excluded |
+| MODEL-0001 | pool-table | models/eight-ball-billiards/exports/table.glb, models/eight-ball-billiards/scene.blend | TESTING | TABLE-001/002 repaired; all local gates pass, latest unit 609/609 | f466c66fd5ed486c69a442c6b0dc940a51133094 / main and blob verified | Latest-head Actions and live acceptance pending; QA-only CDN measurement correction; no next model |
 | MODEL-0002 | cue-stick-01 | models/eight-ball-billiards/exports/cue_01.glb, models/eight-ball-billiards/scene.blend | PENDING | Not inspected | — / unverified | QA pending |
 | MODEL-0003 | cue-stick-02 | models/eight-ball-billiards/exports/cue_02.glb, models/eight-ball-billiards/scene.blend | PENDING | Not inspected | — / unverified | QA pending |
 | MODEL-0004 | rack | models/eight-ball-billiards/exports/triangle_rack.glb, models/eight-ball-billiards/scene.blend | PENDING | Not inspected | — / unverified | QA pending |

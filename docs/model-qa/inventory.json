@@ -58,7 +58,7 @@
       "name": "Pool Table",
       "collection": "billiards",
       "kind": "catalog-model",
-      "status": "READY_TO_PUSH",
+      "status": "TESTING",
       "export_paths": [
         "models/eight-ball-billiards/exports/table.glb"
       ],
@@ -108,16 +108,19 @@
         "performance": "PASS candidate static asset budgets; 52 observed draws/frame.",
         "mobile": "N/A explicit owner instruction: no need test by mobile.",
         "regression": "PASS B: 591 initial / 602 post-sync unit checks, 46 complete Game and 31 complete experience cases; no selection filters or page errors.",
-        "github_main": "NOT EXECUTED"
+        "github_main": "PASS: exact remote main SHA and GLB Git blob match verified after push.",
+        "github_actions": "PENDING latest release head; QA-only compression metric follow-up supersedes own queued run."
       },
-      "commit_sha": null,
-      "remote_verified": false,
+      "commit_sha": "f466c66fd5ed486c69a442c6b0dc940a51133094",
+      "remote_verified": true,
       "remaining_risks": [
-        "Commit/main synchronization and required remote checks pending.",
-        "Mobile testing excluded by explicit owner instruction."
+        "Required Actions and live deployment acceptance pending; do not advance.",
+        "Mobile excluded by owner."
       ],
       "report": "docs/model-qa/MODEL-0001/README.md",
-      "synchronized_main_sha": "345f3104dad5e76bad31c86d63608820a5d65d55"
+      "synchronized_main_sha": "345f3104dad5e76bad31c86d63608820a5d65d55",
+      "required_remote_checks_passed": false,
+      "actions_run_id": 43625749974
     },
     {
       "qa_id": "MODEL-0002",

@@ -90,7 +90,7 @@ try {
       const gl = canvas.getContext('webgl2');
       const ext = gl.getExtension('WEBGL_debug_renderer_info');
       return { width: innerWidth, height: innerHeight, canvasWidth: canvas.width, canvasHeight: canvas.height,
-        resources: resources.map(r => ({ url: r.name, durationMs: r.duration, encodedBytes: r.encodedBodySize, transferBytes: r.transferSize })),
+        resources: resources.map(r => ({ url: r.name, durationMs: r.duration, encodedBytes: r.encodedBodySize, decodedBytes: r.decodedBodySize, transferBytes: r.transferSize })),
         observedDraws: draws.length, measuredFrames: frames.length, maxDrawCallsPerObservedFrame: Math.max(0, ...frames.map(f => f.calls)),
         maxTrianglesPerObservedFrame: Math.max(0, ...frames.map(f => f.triangles)),
         renderer: ext ? gl.getParameter(ext.UNMASKED_RENDERER_WEBGL) : 'unavailable',
@@ -98,7 +98,9 @@ try {
     }, { beforeDraws });
     assert.ok(metrics.observedDraws > 0);
     assert.equal(metrics.resources.length, 1, 'The actual model fetch must be measured separately from Vite URL modules');
-    assert.ok(metrics.resources[0].encodedBytes > 400000, 'Record actual GLB bytes, not its JavaScript URL wrapper');
+    // CDN compression reduces wire bytes. The decoded body is the GLB payload;
+    // a Vite URL module is still only a few hundred decoded bytes.
+    assert.ok(metrics.resources[0].decodedBytes > 400000, 'Record decoded GLB bytes, not its JavaScript URL wrapper');
     assert.equal(metrics.contextLost, false);
     assert.equal(metrics.overflow, false);
     assert.deepEqual(errors, []);

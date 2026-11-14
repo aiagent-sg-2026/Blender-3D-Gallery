@@ -1,8 +1,6 @@
 # MODEL-0001 — Pool Table QA, Revision B
 
-Status: READY_TO_PUSH. Both confirmed P2 model defects are repaired and all applicable
-local gates have passed. Main synchronization and remote release verification remain. The local model commit is prepared; no push has occurred and no next model has
-entered repair.
+Status: TESTING (remote acceptance). All applicable local gates pass. Commit `f466c66fd5ed486c69a442c6b0dc940a51133094` reached main and its remote GLB blob matches. Required Actions and live deployment acceptance are pending. The repair commit is on main. Required remote checks and live acceptance are pending; no next model has entered repair.
 
 ## Identification and recovery
 
@@ -65,7 +63,7 @@ pocket jaws, playing height, roots and names remain compatible.
 | Performance | PASS against repository candidate asset budgets | 417,656 bytes, 6,360 triangles, 6 materials, 0 image textures; below 5 MiB / 100k-triangle targets. Observed software-WebGL drawing: 52 calls / 6,360 triangles per frame. No FPS, GPU-memory or speed-improvement claim is made. |
 | Mobile | N/A by owner instruction | User explicitly replied “no need test by mobile”. New model probes default to desktop/tablet; mobile is opt-in. Existing repository regression suites are unchanged. No phone-performance PASS is claimed. |
 | Regression | PASS, revision B | Node v24.21.0: 591/591 unit tests (including 4/4 seating/support checks), 46/46 complete Game browser scenarios and 31/31 complete game-experience scenarios; 0 page errors and no test-selection filters. Revision-A results remain baseline evidence only. |
-| Main / Actions | REMOTE PENDING | Local commit prepared and synchronized to main `345f3104dad5e76bad31c86d63608820a5d65d55`; asset hashes preserved, post-sync build and 602/602 unit checks pass, as do both actual Viewer profiles. Push, remote SHA verification and required Actions remain pending. |
+| Main / Actions | TESTING remotely | Repair commit `f466c66fd5ed486c69a442c6b0dc940a51133094` and its GLB blob are verified on main. The latest release head must pass required Actions and live acceptance; local current-main unit checks pass 609/609. |
 
 ## Evidence and limits
 
@@ -119,3 +117,9 @@ advancement; no next model may enter repair until this model's main release and
 required remote checks are verified.
 
 Post-sync acceptance: `post-sync-validation.json` and `post-sync-viewer.json` bind the synchronized main parent, exact model hashes, successful build, 602/602 unit tests and the repeated desktop/tablet model flow. The extra upstream Visitor v2 branch does not execute for this table.
+
+Current release evidence: `release-evidence.json`. Main and the committed GLB blob were independently verified after push; Actions run 43625749974 is pending. Subsequent unchanged-table main integration passed 609/609 unit checks and a fresh build. No next model may start before remote acceptance.
+
+## CDN measurement correction
+
+The live pre-deployment comparison exposed a QA instrumentation error: GitHub Pages serves the 417,656-byte GLB as 41,893 gzip-encoded bytes. The old assertion incorrectly treated wire bytes as payload bytes. The original failure is retained in `live-baseline-harness-failure.log`; header, magic and hash evidence is in `live-baseline-transfer.json`. The corrected probe records encoded/decoded/transfer sizes separately and checks the decoded GLB. Both gzip live-baseline and plain local-candidate profiles pass. This correction changes no asset bytes, draw-call budget or model-quality gate. The baseline remains the previous production model; it is not candidate live acceptance. A QA-only follow-up supersedes this task's own queued check; required checks must pass on the final release head containing the unchanged repair.

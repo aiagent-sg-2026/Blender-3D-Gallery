@@ -1,0 +1,12 @@
+{
+  "issue": "HTTP encoded transfer size was incorrectly used as decoded GLB size.",
+  "evidence": "GitHub Pages gzip: 41893 encoded vs 417656 decoded; original file magic glTF and baseline SHA confirmed.",
+  "fix": "Record both encodedBodySize and decodedBodySize; assert the decoded payload, keeping the same Vite-wrapper rejection boundary.",
+  "checks": {
+    "gzip_live_baseline_profiles": 2,
+    "plain_local_candidate_profiles": 2,
+    "all_passed": true
+  },
+  "model_sha256_unchanged": "566ad912bf180c421b83c2e980d56c244288f91776189b471569bc2b08040c53",
+  "scope": "QA instrumentation only. Live baseline is the previous deployed model, not acceptance of the candidate deployment."
+}
