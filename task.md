@@ -153,3 +153,23 @@ The earlier CI log exposed a previously missed source file, `/etc/apt/apt-mirror
 - **Later upstream scope:** the manager fetched `5346e1f`, containing only Saga model/output work (29 files), with no changes to application source, scripts, tests, workflow or dependencies. That later asset work is preserved separately. The Game/CI evidence above remains pinned to tested revision `41f4121`; no fresh whole-site build or model validation after `5346e1f` is claimed.
 
 This closes the mirror follow-up without changing application/runtime behavior. Physical-device/screen-reader limits, deferred head-string/prototype/licensing decisions and the unresolved active Solar software-WebGL backpressure risk in section 10 remain applicable.
+
+---
+
+# Premium 3D Asset Library Redesign — 2026-11-15
+
+## T01 — Repository audit and execution plan (complete)
+
+- Checkout: `main`, starting revision `1f9656346107bb49bdacc2b651c4f7e9ce869ac8`; remote `origin` is the requested GitHub repository. The checkout had extensive tracked and untracked changes before this request; preserve them. The first landing/search prototype was started before the expanded T01-first instruction and remains uncommitted. Baseline commands therefore describe the working tree, not an untouched revision.
+- Stack: Vite 8, native JavaScript/CSS and Three.js; no framework migration is justified. `models/catalog.json` currently contains 554 assets in 428 collections. `scripts/catalog.mjs` validates registry paths and derives GLB metrics. The screenshot's statistics and model imagery are illustrative, not authoritative.
+- Routing: query-based static-host routes and `history` support, with lazy model viewer dialog and independent demo lifecycles. Search already covers name, description, category, collection and tags; category, type and collection are URL-backed. Model downloads are controlled by the catalog's `downloadable` flag. Viewer has orbit, zoom, reset, fullscreen, loading/error handling, cleanup and special controls for selected models.
+- UI: existing dark green tokens and focus/reduced-motion rules, responsive menu, static thumbnails and lazy WebGL. Before this redesign, the landing hero and full catalog shared a long page; no category shortcut cards, list/sort, theme selector or filter drawer. The viewer exposes measured material/animation counts, but general editing/playback is not available for all models.
+- Deployment: Vite `base: "./"` supports GitHub Pages project paths. `.github/workflows/deploy.yml` runs on pushes to `main` and manual dispatch, installs Node 24 dependencies, validates/builds, runs unit and browser suites, then deploys `dist`. No deployment is authorized by this request; do not push to main without explicit authorization.
+- Baseline: `npm run build` passed (with Vite’s large-chunk warning), and `npm test` passed 592 tests, on the already-dirty working tree after the initial prototype; these are not a clean pre-change baseline. No lint or typecheck scripts are defined in `package.json`; do not report those as passed. Existing historical test records above apply only to their recorded revisions.
+- Routed instruction files `instruction-modules/investigation.md` and `instruction-modules/verification.md` are absent in this checkout; apply the core instructions and record verification directly.
+
+## Sequential backlog and gates
+
+T01 audit and baseline → T02 tokens/components → T03 navigation → T04 hero → T05 categories/counts → T06 search/history → T07 cards/grid → T08 viewer validation → T09 detail/download → T10 build/deployment compatibility → T11 filters → T12 grid/list → T13 sorting → T14 themes → T15 localization readiness → T16 states → T17 keyboard → T18 responsive/touch → T19 performance → T20 visual regression. Each task requires applicable tests, responsive/accessibility review and focused commit before proceeding. Changes already started must be reconciled with this sequence, not mistaken for accepted tasks. Existing user edits in shared files must not enter commits unintentionally.
+
+Acceptance coverage E001–E100 must be tracked against deterministic assertions, with absent or out-of-scope features explicitly marked not applicable rather than counted as passes. Physical-device, assistive-technology and deployment verification must be distinguished from emulation/local checks. Optional P2 features require their own supported data and privacy decisions.
