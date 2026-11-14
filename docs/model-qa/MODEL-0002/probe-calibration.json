@@ -1,0 +1,9 @@
+{
+  "scope": "Static-model browser probe reused from Pool Table, with exact decoded payload length and SHA256 checks replacing the table-only byte minimum.",
+  "initial_reset_assertion_failure": "Compared a keyboard-focus-visible canvas with a mouse-reset canvas; the outline was a UI-state difference, not a camera defect.",
+  "evidence": "Loaded and reset canvas pixels were identical; focused baseline had a border difference within (2,2,1056,493).",
+  "correction": "Compare loaded/reset captures in the same non-focus-visible state; compare keyboard rotation/zoom captures with each other in their focused state. Retain the exact-pixel reset requirement.",
+  "pool_table_regression_results": "PASS 2 desktop/tablet profiles, exact candidate hash; /tmp/model-0001-generic-probe-corrected.log",
+  "cue_results": "PASS 2 desktop/tablet profiles; exact repaired candidate hash, real Viewer fetch, orbit, zoom, reset, mouse orbit, zero page/HTTP errors.",
+  "gzip_regression": "PASS fresh live Pool Table at both desktop/tablet profiles; exact decoded bytes and response SHA matched. See pool-table-compressed-probe-regression.json."
+}

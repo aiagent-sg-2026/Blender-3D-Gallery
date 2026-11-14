@@ -1,0 +1,111 @@
+{
+  "integration_head": "44aaed6abdbcfa8d37e2737223683d25a3ac6c38",
+  "unit_tests": {
+    "passed": 617,
+    "failed": 0
+  },
+  "build": "PASS; existing bundle advisory",
+  "viewer_profiles": [
+    {
+      "modelId": "cue-stick-01",
+      "assetBytes": 14632,
+      "assetSha256": "932029a3c25f49d21c2f31547cecb471196f39470555ad2035795174c58a5046",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": "PASS",
+      "rotation": "PASS",
+      "zoom": "PASS",
+      "reset": "PASS exact pixel match; screenshot retained",
+      "metrics": {
+        "width": 1440,
+        "height": 900,
+        "canvasWidth": 1058,
+        "canvasHeight": 495,
+        "resources": [
+          {
+            "url": "http://127.0.0.1:5179/assets/cue_01-DsO-zb4b.glb",
+            "durationMs": 3.800000011920929,
+            "encodedBytes": 14632,
+            "decodedBytes": 14632,
+            "transferBytes": 14932
+          }
+        ],
+        "observedDraws": 324,
+        "measuredFrames": 81,
+        "maxDrawCallsPerObservedFrame": 4,
+        "maxTrianglesPerObservedFrame": 272,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+        "contextLost": false,
+        "overflow": false
+      },
+      "errors": [],
+      "warnings": [
+        "Service Worker registration blocked by Playwright",
+        "[.WebGL-0x13c00443e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "[.WebGL-0x13c00443e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "[.WebGL-0x13c00443e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+        "[.WebGL-0x13c00443e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+      ],
+      "networkErrors": [],
+      "physicalMobilePerformance": "NOT_TESTED; viewport emulation on desktop software WebGL is not physical-device FPS"
+    },
+    {
+      "modelId": "cue-stick-01",
+      "assetBytes": 14632,
+      "assetSha256": "932029a3c25f49d21c2f31547cecb471196f39470555ad2035795174c58a5046",
+      "viewport": [
+        768,
+        1024
+      ],
+      "status": "PASS",
+      "rotation": "PASS",
+      "zoom": "PASS",
+      "reset": "PASS exact pixel match; screenshot retained",
+      "metrics": {
+        "width": 768,
+        "height": 1024,
+        "canvasWidth": 728,
+        "canvasHeight": 563,
+        "resources": [
+          {
+            "url": "http://127.0.0.1:5179/assets/cue_01-DsO-zb4b.glb",
+            "durationMs": 2.899999976158142,
+            "encodedBytes": 14632,
+            "decodedBytes": 14632,
+            "transferBytes": 14932
+          }
+        ],
+        "observedDraws": 324,
+        "measuredFrames": 81,
+        "maxDrawCallsPerObservedFrame": 4,
+        "maxTrianglesPerObservedFrame": 272,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+        "contextLost": false,
+        "overflow": false
+      },
+      "errors": [],
+      "warnings": [
+        "Service Worker registration blocked by Playwright"
+      ],
+      "networkErrors": [],
+      "physicalMobilePerformance": "NOT_TESTED; viewport emulation on desktop software WebGL is not physical-device FPS"
+    }
+  ],
+  "game_and_viewer_implementation_unchanged_since_full_regression": true,
+  "full_game_regression": {
+    "passed": 46,
+    "failed": 0,
+    "catalog_entries_at_run": 556,
+    "selection": null
+  },
+  "full_experience_regression": {
+    "passed": 31,
+    "failed": 0,
+    "selection": null
+  },
+  "current_catalog_entries": 557,
+  "upstream_scope": "M058 catalog and Shelf Inspector; new asset is PENDING in this campaign. Required remote full latest-catalog gates still required before next model.",
+  "cue_sha256": "932029a3c25f49d21c2f31547cecb471196f39470555ad2035795174c58a5046"
+}

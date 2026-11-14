@@ -1,8 +1,8 @@
 # 3D Model QA Progress
 
-Sequential QA campaign. No model has completed a verified main release yet. Active model: MODEL-0001 (pool-table). Historical evidence is reference material, not current acceptance.
+Sequential QA campaign. MODEL-0001 (pool-table) completed verified main, required Actions and production acceptance. Active model: MODEL-0002 (cue-stick-01). Remaining models await sequential QA. Historical evidence is reference material, not current acceptance.
 
-Catalog entries: 554; physical 3D artifacts: 2338; queue records: 1825.
+Initial discovery snapshot: 554 catalog entries, 2338 physical 3D artifacts, 1825 queue records. Main-head reconciliations append 4 catalog models and 39 tracked artifacts, producing 1860 queue records; all additions remain PENDING. See [reconciliation 43836162](model-qa/discovery-reconciliation-43836162.json) and [reconciliation 44aaed6a](model-qa/discovery-reconciliation-44aaed6a.json) and [reconciliation f62f5809](model-qa/discovery-reconciliation-f62f5809.json).
 
 Full source/export mappings, hashes, generators, validation tools, defects, repairs, gate results, commit and remote evidence: [inventory](model-qa/inventory.json).
 
@@ -10,8 +10,8 @@ All other initial records are PENDING. Uncatalogued/historical artifacts remain 
 
 | QA ID | Model | Source / GLB | Status | Defects / repairs / QA | Commit / GitHub main | Remaining risk |
 | --- | --- | --- | --- | --- | --- | --- |
-| MODEL-0001 | pool-table | models/eight-ball-billiards/exports/table.glb, models/eight-ball-billiards/scene.blend | TESTING | TABLE-001/002 repaired; all local gates pass, latest unit 609/609 | f466c66fd5ed486c69a442c6b0dc940a51133094 / main and blob verified | Latest-head Actions and live acceptance pending; QA-only CDN measurement correction; no next model |
-| MODEL-0002 | cue-stick-01 | models/eight-ball-billiards/exports/cue_01.glb, models/eight-ball-billiards/scene.blend | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-0001 | pool-table | models/eight-ball-billiards/exports/table.glb, models/eight-ball-billiards/scene.blend | PUSHED | TABLE-001/002 repaired; local, full remote gates and production GLB hash/runtime PASS | Repair f466c66f; QA 43836162; accepted main ancestor 2bf3f961 / Actions 43629169616 success | Physical mobile excluded by owner; stylized asset |
+| MODEL-0002 | cue-stick-01 | models/eight-ball-billiards/exports/cue_01.glb, models/eight-ball-billiards/scene.blend | READY_TO_PUSH | CUE-001 fixed; 621 post-sync unit /8 targeted, Game46, experience31 and Viewer pass; independent review accepted | — / unverified | Commit, remote gates and production pending |
 | MODEL-0003 | cue-stick-02 | models/eight-ball-billiards/exports/cue_02.glb, models/eight-ball-billiards/scene.blend | PENDING | Not inspected | — / unverified | QA pending |
 | MODEL-0004 | rack | models/eight-ball-billiards/exports/triangle_rack.glb, models/eight-ball-billiards/scene.blend | PENDING | Not inspected | — / unverified | QA pending |
 | MODEL-0005 | chalk | models/eight-ball-billiards/exports/chalk.glb, models/eight-ball-billiards/scene.blend | PENDING | Not inspected | — / unverified | QA pending |
@@ -1835,3 +1835,38 @@ All other initial records are PENDING. Uncatalogued/historical artifacts remain 
 | MODEL-1823 | artifact:output/saga-wheel-pivots-a6kRHH/baseline-check.glb | output/saga-wheel-pivots-a6kRHH/baseline-check.glb | PENDING | Not inspected | — / unverified | QA pending |
 | MODEL-1824 | artifact:output/saga-wheel-pivots-a6kRHH/exports/proton-saga-1985.glb | output/saga-wheel-pivots-a6kRHH/exports/proton-saga-1985.glb | PENDING | Not inspected | — / unverified | QA pending |
 | MODEL-1825 | artifact:output/saga-wheel-pivots-a6kRHH/scene.blend | output/saga-wheel-pivots-a6kRHH/scene.blend | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1826 | gjh-m056-premium-wall-shelf-straight | models/gjh-m056-premium-wall-shelf-straight/exports/optimized.glb, models/gjh-m056-premium-wall-shelf-straight/sources/gjh-m056-premium-wall-shelf-straight.blend | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1827 | gjh-m057-premium-wall-shelf-corner | models/gjh-m057-premium-wall-shelf-corner/exports/optimized.glb, models/gjh-m057-premium-wall-shelf-corner/sources/gjh-m057-premium-wall-shelf-corner.blend | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1828 | artifact:docs/verification/foundation-v1/module-fit/foundation-fitted.blend | docs/verification/foundation-v1/module-fit/foundation-fitted.blend | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1829 | artifact:docs/verification/foundation-v1/module-fit/foundation-fitted.glb | docs/verification/foundation-v1/module-fit/foundation-fitted.glb | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1830 | artifact:models/gjh-m056-premium-wall-shelf-straight/exports/collision.glb | models/gjh-m056-premium-wall-shelf-straight/exports/collision.glb | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1831 | artifact:models/gjh-m056-premium-wall-shelf-straight/exports/lod0.glb | models/gjh-m056-premium-wall-shelf-straight/exports/lod0.glb | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1832 | artifact:models/gjh-m056-premium-wall-shelf-straight/exports/lod1.glb | models/gjh-m056-premium-wall-shelf-straight/exports/lod1.glb | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1833 | artifact:models/gjh-m056-premium-wall-shelf-straight/exports/lod2.glb | models/gjh-m056-premium-wall-shelf-straight/exports/lod2.glb | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1834 | artifact:models/gjh-m056-premium-wall-shelf-straight/exports/lod3.glb | models/gjh-m056-premium-wall-shelf-straight/exports/lod3.glb | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1835 | artifact:models/gjh-m056-premium-wall-shelf-straight/reports/source-edit/edited.glb | models/gjh-m056-premium-wall-shelf-straight/reports/source-edit/edited.glb | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1836 | artifact:models/gjh-m056-premium-wall-shelf-straight/reports/source-edit/gjh-m056-premium-wall-shelf-straight-edited.blend | models/gjh-m056-premium-wall-shelf-straight/reports/source-edit/gjh-m056-premium-wall-shelf-straight-edited.blend | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1837 | artifact:models/gjh-m057-premium-wall-shelf-corner/exports/collision.glb | models/gjh-m057-premium-wall-shelf-corner/exports/collision.glb | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1838 | artifact:models/gjh-m057-premium-wall-shelf-corner/exports/lod0.glb | models/gjh-m057-premium-wall-shelf-corner/exports/lod0.glb | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1839 | artifact:models/gjh-m057-premium-wall-shelf-corner/exports/lod1.glb | models/gjh-m057-premium-wall-shelf-corner/exports/lod1.glb | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1840 | artifact:models/gjh-m057-premium-wall-shelf-corner/exports/lod2.glb | models/gjh-m057-premium-wall-shelf-corner/exports/lod2.glb | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1841 | artifact:models/gjh-m057-premium-wall-shelf-corner/exports/lod3.glb | models/gjh-m057-premium-wall-shelf-corner/exports/lod3.glb | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1842 | artifact:models/gjh-m057-premium-wall-shelf-corner/reports/source-edit/edited.glb | models/gjh-m057-premium-wall-shelf-corner/reports/source-edit/edited.glb | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1843 | artifact:models/gjh-m057-premium-wall-shelf-corner/reports/source-edit/gjh-m057-premium-wall-shelf-corner-edited.blend | models/gjh-m057-premium-wall-shelf-corner/reports/source-edit/gjh-m057-premium-wall-shelf-corner-edited.blend | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1844 | artifact:models/gjh-mall-visitor-v2/exports/gjh-mall-visitor-v2-lod1.glb | models/gjh-mall-visitor-v2/exports/gjh-mall-visitor-v2-lod1.glb | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1845 | gjh-m058-premium-wall-shelf-endcap | models/gjh-m058-premium-wall-shelf-endcap/exports/optimized.glb, models/gjh-m058-premium-wall-shelf-endcap/sources/gjh-m058-premium-wall-shelf-endcap.blend | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1846 | artifact:models/gjh-m058-premium-wall-shelf-endcap/exports/collision.glb | models/gjh-m058-premium-wall-shelf-endcap/exports/collision.glb | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1847 | artifact:models/gjh-m058-premium-wall-shelf-endcap/exports/lod0.glb | models/gjh-m058-premium-wall-shelf-endcap/exports/lod0.glb | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1848 | artifact:models/gjh-m058-premium-wall-shelf-endcap/exports/lod1.glb | models/gjh-m058-premium-wall-shelf-endcap/exports/lod1.glb | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1849 | artifact:models/gjh-m058-premium-wall-shelf-endcap/exports/lod2.glb | models/gjh-m058-premium-wall-shelf-endcap/exports/lod2.glb | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1850 | artifact:models/gjh-m058-premium-wall-shelf-endcap/exports/lod3.glb | models/gjh-m058-premium-wall-shelf-endcap/exports/lod3.glb | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1851 | artifact:models/gjh-m058-premium-wall-shelf-endcap/reports/source-edit/edited.glb | models/gjh-m058-premium-wall-shelf-endcap/reports/source-edit/edited.glb | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1852 | artifact:models/gjh-m058-premium-wall-shelf-endcap/reports/source-edit/gjh-m058-premium-wall-shelf-endcap-edited.blend | models/gjh-m058-premium-wall-shelf-endcap/reports/source-edit/gjh-m058-premium-wall-shelf-endcap-edited.blend | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1853 | gjh-m059-premium-wall-shelf-narrow | models/gjh-m059-premium-wall-shelf-narrow/exports/optimized.glb, models/gjh-m059-premium-wall-shelf-narrow/sources/gjh-m059-premium-wall-shelf-narrow.blend | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1854 | artifact:models/gjh-m059-premium-wall-shelf-narrow/exports/collision.glb | models/gjh-m059-premium-wall-shelf-narrow/exports/collision.glb | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1855 | artifact:models/gjh-m059-premium-wall-shelf-narrow/exports/lod0.glb | models/gjh-m059-premium-wall-shelf-narrow/exports/lod0.glb | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1856 | artifact:models/gjh-m059-premium-wall-shelf-narrow/exports/lod1.glb | models/gjh-m059-premium-wall-shelf-narrow/exports/lod1.glb | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1857 | artifact:models/gjh-m059-premium-wall-shelf-narrow/exports/lod2.glb | models/gjh-m059-premium-wall-shelf-narrow/exports/lod2.glb | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1858 | artifact:models/gjh-m059-premium-wall-shelf-narrow/exports/lod3.glb | models/gjh-m059-premium-wall-shelf-narrow/exports/lod3.glb | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1859 | artifact:models/gjh-m059-premium-wall-shelf-narrow/reports/source-edit/edited.glb | models/gjh-m059-premium-wall-shelf-narrow/reports/source-edit/edited.glb | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-1860 | artifact:models/gjh-m059-premium-wall-shelf-narrow/reports/source-edit/gjh-m059-premium-wall-shelf-narrow-edited.blend | models/gjh-m059-premium-wall-shelf-narrow/reports/source-edit/gjh-m059-premium-wall-shelf-narrow-edited.blend | PENDING | Not inspected | — / unverified | QA pending |

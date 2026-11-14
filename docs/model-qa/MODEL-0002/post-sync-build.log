@@ -1,0 +1,44 @@
+Complete verbatim log: post-sync-build.log.raw.gz
+SHA256 of original bytes: 2ea7d004b13882f485fd7ec1857b34a2fc199b5b69522adc258d7880f5818be7
+
+Relevant asset validation lines:
+models/eight-ball-billiards/exports/table.glb: 6360 triangles, 417656 bytes, 0 errors, 0 warnings
+models/eight-ball-billiards/exports/cue_01.glb: 272 triangles, 14632 bytes, 0 errors, 0 warnings
+models/eight-ball-billiards/exports/cue_02.glb: 272 triangles, 14636 bytes, 0 errors, 0 warnings
+models/eight-ball-billiards/exports/triangle_rack.glb: 132 triangles, 8136 bytes, 0 errors, 0 warnings
+models/eight-ball-billiards/exports/chalk.glb: 216 triangles, 16768 bytes, 0 errors, 0 warnings
+models/eight-ball-billiards/exports/ball_00.glb: 3968 triangles, 93692 bytes, 0 errors, 0 warnings
+models/eight-ball-billiards/exports/ball_01.glb: 4896 triangles, 120536 bytes, 0 errors, 0 warnings
+models/eight-ball-billiards/exports/ball_02.glb: 5824 triangles, 215296 bytes, 0 errors, 0 warnings
+models/eight-ball-billiards/exports/ball_03.glb: 6400 triangles, 268828 bytes, 0 errors, 0 warnings
+models/eight-ball-billiards/exports/ball_04.glb: 5312 triangles, 157064 bytes, 0 errors, 0 warnings
+models/eight-ball-billiards/exports/ball_05.glb: 5728 triangles, 203708 bytes, 0 errors, 0 warnings
+models/eight-ball-billiards/exports/ball_06.glb: 6144 triangles, 244380 bytes, 0 errors, 0 warnings
+models/eight-ball-billiards/exports/ball_07.glb: 4960 triangles, 127912 bytes, 0 errors, 0 warnings
+models/eight-ball-billiards/exports/ball_08.glb: 6944 triangles, 324100 bytes, 0 errors, 0 warnings
+models/eight-ball-billiards/exports/ball_09.glb: 6272 triangles, 262604 bytes, 0 errors, 0 warnings
+models/eight-ball-billiards/exports/ball_10.glb: 5920 triangles, 227632 bytes, 0 errors, 0 warnings
+models/eight-ball-billiards/exports/ball_11.glb: 4960 triangles, 132568 bytes, 0 errors, 0 warnings
+models/eight-ball-billiards/exports/ball_12.glb: 5888 triangles, 223308 bytes, 0 errors, 0 warnings
+models/eight-ball-billiards/exports/ball_13.glb: 6464 triangles, 279952 bytes, 0 errors, 0 warnings
+models/eight-ball-billiards/exports/ball_14.glb: 5376 triangles, 170364 bytes, 0 errors, 0 warnings
+models/eight-ball-billiards/exports/ball_15.glb: 5792 triangles, 213552 bytes, 0 errors, 0 warnings
+models/eight-ball-billiards/exports/billiards-scene.glb: 98100 triangles, 3519816 bytes, 0 errors, 0 warnings
+
+Final output:
+dist/assets/demo-CF6q2HKP.js                                          4.07 kB │ gzip:   1.81 kB
+dist/assets/demo-C2rX7Gcy.js                                          5.62 kB │ gzip:   2.47 kB
+dist/assets/viewer-Cd0DTDtG.js                                       11.32 kB │ gzip:   4.71 kB
+dist/assets/page-ysTrAeXu.js                                         13.64 kB │ gzip:   5.58 kB
+dist/assets/page-DMqFn3Q4.js                                         14.23 kB │ gzip:   5.96 kB
+dist/assets/page-BBqvb1Oj.js                                         19.96 kB │ gzip:   6.69 kB
+dist/assets/page-6AekV_dS.js                                         48.86 kB │ gzip:  18.00 kB
+dist/assets/OrbitControls-CCzjM_sb.js                               655.37 kB │ gzip: 163.00 kB
+dist/assets/index-DCNAvL84.js                                     2,004.08 kB │ gzip: 227.46 kB
+
+[plugin builtin:vite-reporter]
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 1.36s

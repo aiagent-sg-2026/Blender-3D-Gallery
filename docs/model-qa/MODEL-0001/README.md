@@ -1,6 +1,6 @@
 # MODEL-0001 — Pool Table QA, Revision B
 
-Status: TESTING (remote acceptance). All applicable local gates pass. Commit `f466c66fd5ed486c69a442c6b0dc940a51133094` reached main and its remote GLB blob matches. Required Actions and live deployment acceptance are pending. The repair commit is on main. Required remote checks and live acceptance are pending; no next model has entered repair.
+Status: PUSHED and accepted. Repair f466c66f and QA correction 43836162 reached main; descendant integration 2bf3f961 passed all required Actions and Pages deployment. Actual production GLB hash and fresh desktop/tablet Viewer acceptance passed. MODEL-0002 started only after this acceptance. See the release record and release-evidence.json.
 
 ## Identification and recovery
 
@@ -109,17 +109,18 @@ unrelated sibling outputs.
 
 ## Release record
 
-Repair commit SHA is resolved from Git history and recorded after publication.
-Remote main: not yet verified for this repair. Required Actions:
-not yet run for this repair. No force push, protection bypass or unrelated-file
-staging has occurred. The progress tracker remains authoritative for sequential
-advancement; no next model may enter repair until this model's main release and
-required remote checks are verified.
+Status: PUSHED and accepted. Repair commit `f466c66fd5ed486c69a442c6b0dc940a51133094` and QA correction `43836162b7cb54a74d41786d3329e5814dfa1074` are ancestors of accepted main integration `2bf3f96100ad59043b9072fdc68341824e3ec283`. Actions [43629169616](https://github.com/yapweijun1996/Blender-3D-Gallery/actions/runs/43629169616) passed all unit/browser release gates and Pages deployment. Earlier cancelled runs are not passing checks. Later main advances add M058/Shelf Inspector work; acceptance remains bound to the tested integration. Main ancestry and the unchanged table/source/Viewer were verified again at closure.
 
-Post-sync acceptance: `post-sync-validation.json` and `post-sync-viewer.json` bind the synchronized main parent, exact model hashes, successful build, 602/602 unit tests and the repeated desktop/tablet model flow. The extra upstream Visitor v2 branch does not execute for this table.
+`release-evidence.json` and `actions-completed.json` bind commits, job conclusions and model hashes. `integration-actions.log.gz` preserves the public CI log. `live-deployment.json` confirms the actual production Viewer fetches the repaired 417,656-byte GLB, SHA256 `566ad912bf180c421b83c2e980d56c244288f91776189b471569bc2b08040c53`. Fresh desktop/tablet loading, keyboard orbit/zoom, reset and mouse orbit passed without page/HTTP errors. Results and screenshots are retained in `live-runtime-results.json` and `live/`.
 
-Current release evidence: `release-evidence.json`. Main and the committed GLB blob were independently verified after push; Actions run 43625749974 is pending. Subsequent unchanged-table main integration passed 609/609 unit checks and a fresh build. No next model may start before remote acceptance.
+Physical mobile testing is excluded by explicit owner instruction; no device FPS claim is made. Simplified style is retained without a manufacturing-realism claim. No force push or protection bypass occurred. The next model may now enter sequential QA.
 
 ## CDN measurement correction
 
-The live pre-deployment comparison exposed a QA instrumentation error: GitHub Pages serves the 417,656-byte GLB as 41,893 gzip-encoded bytes. The old assertion incorrectly treated wire bytes as payload bytes. The original failure is retained in `live-baseline-harness-failure.log`; header, magic and hash evidence is in `live-baseline-transfer.json`. The corrected probe records encoded/decoded/transfer sizes separately and checks the decoded GLB. Both gzip live-baseline and plain local-candidate profiles pass. This correction changes no asset bytes, draw-call budget or model-quality gate. The baseline remains the previous production model; it is not candidate live acceptance. A QA-only follow-up supersedes this task's own queued check; required checks must pass on the final release head containing the unchanged repair.
+The live pre-deployment comparison exposed a QA instrumentation error: GitHub Pages serves the 417,656-byte GLB as 41,893 gzip-encoded bytes. The old assertion incorrectly treated wire bytes as payload bytes. The original failure is retained in `live-baseline-harness-failure.log`; header, magic and hash evidence is in `live-baseline-transfer.json`. The corrected probe records encoded/decoded/transfer sizes separately and checks the decoded GLB. Both gzip live-baseline and plain local-candidate profiles pass. This correction changes no asset bytes, draw-call budget or model-quality gate. The baseline remains the previous production model; it is not candidate live acceptance. A QA-only follow-up superseded this task's own queued check; required checks must pass on the final release head containing the unchanged repair.
+
+## Viewer integration acceptance
+
+Upstream `2bf3f961` changes shared renderer ownership and is a descendant of both repair commits. The table source and exports are unchanged. `viewer-context-sync.json` and accompanying logs record 609/609 unit checks, a successful build, and two fresh desktop/tablet runtime profiles on that exact integration head. Repeated-open resource validation passed in Chromium and WebKit (62 models per engine, one context, zero page/context-limit errors). Remote and live acceptance subsequently passed on the same integration head; see the release record above. Earlier cancelled Actions runs do not satisfy acceptance.
+
+`viewer-context-visual-regression.json` compares the prior repaired-candidate probe and current integration at the same viewport and camera. All four loaded/reset canvas PNGs (desktop/tablet) are byte-identical with zero pixel error. This verifies these views; it does not establish broad rendering equivalence for other models.

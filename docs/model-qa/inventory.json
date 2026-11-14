@@ -41,7 +41,7 @@
     ".webp": 2117,
     ".yml": 6
   },
-  "ordering": "Catalog order first; remaining artifacts sorted by path. Only one active model; no advance before verified main release.",
+  "ordering": "Initial catalog order then historical path order; later discoveries append stable IDs. One active model; no advance before verified main release.",
   "runtime": "src/main.js -> src/viewer.js -> Three.js GLTFLoader; Game and Solar have separate consumers.",
   "shared_tools": [
     "scripts/validate-assets.mjs",
@@ -58,7 +58,7 @@
       "name": "Pool Table",
       "collection": "billiards",
       "kind": "catalog-model",
-      "status": "TESTING",
+      "status": "PUSHED",
       "export_paths": [
         "models/eight-ball-billiards/exports/table.glb"
       ],
@@ -104,23 +104,26 @@
         "glb": "PASS both exports, 0 errors / 0 warnings.",
         "reimport": "PASS, input hashes bound and exported seams accounted for.",
         "animation": "N/A static table.",
-        "runtime": "PASS final-B production viewer at 1440 and 768 desktop/tablet viewports.",
+        "runtime": "PASS latest Viewer context integration, desktop/tablet profiles; 609 unit checks and build PASS.",
         "performance": "PASS candidate static asset budgets; 52 observed draws/frame.",
         "mobile": "N/A explicit owner instruction: no need test by mobile.",
-        "regression": "PASS B: 591 initial / 602 post-sync unit checks, 46 complete Game and 31 complete experience cases; no selection filters or page errors.",
+        "regression": "PASS 609 latest integration unit checks, full remote unit/browser gates, local 46 Game / 31 experience, and four exact Viewer pixel matches.",
         "github_main": "PASS: exact remote main SHA and GLB Git blob match verified after push.",
-        "github_actions": "PENDING latest release head; QA-only compression metric follow-up supersedes own queued run."
+        "github_actions": "PASS run 43629169616, full build/release gates/deploy success on 2bf3f961; earlier cancelled runs not used.",
+        "live": "PASS deployed candidate SHA256 match, desktop/tablet Viewer controls and loading."
       },
       "commit_sha": "f466c66fd5ed486c69a442c6b0dc940a51133094",
       "remote_verified": true,
       "remaining_risks": [
-        "Required Actions and live deployment acceptance pending; do not advance.",
-        "Mobile excluded by owner."
+        "Physical mobile testing excluded by explicit owner instruction.",
+        "Stylized simplified table; no manufacturing realism or untested browser/device claim."
       ],
       "report": "docs/model-qa/MODEL-0001/README.md",
       "synchronized_main_sha": "345f3104dad5e76bad31c86d63608820a5d65d55",
-      "required_remote_checks_passed": false,
-      "actions_run_id": 43625749974
+      "required_remote_checks_passed": true,
+      "actions_run_id": 43629169616,
+      "final_release_head": "2bf3f96100ad59043b9072fdc68341824e3ec283",
+      "release_evidence": "docs/model-qa/MODEL-0001/release-evidence.json"
     },
     {
       "qa_id": "MODEL-0002",
@@ -128,14 +131,14 @@
       "name": "Cue Stick 01",
       "collection": "billiards",
       "kind": "catalog-model",
-      "status": "PENDING",
+      "status": "READY_TO_PUSH",
       "export_paths": [
         "models/eight-ball-billiards/exports/cue_01.glb"
       ],
       "source_candidates": [
         "models/eight-ball-billiards/scene.blend"
       ],
-      "source_mapping": "candidate; inspect asset root in Blender before acceptance",
+      "source_mapping": "Verified source root ASSET_Cue_01 and four same-named GLB meshes; 272 triangles each.",
       "generator_candidates": [
         "models/eight-ball-billiards/generate.py"
       ],
@@ -145,15 +148,39 @@
       "thumbnail": "models/eight-ball-billiards/thumbnails/cue_01.webp",
       "root": "ASSET_Cue_01",
       "runtime_route": "?model=cue-stick-01",
-      "export_sha256": "79f618f24174ebc9fed204386ac2519d0335badee5c5064b50d0159fdbdf65e8",
-      "defects": [],
-      "repairs": [],
-      "qa_results": {},
+      "export_sha256": "932029a3c25f49d21c2f31547cecb471196f39470555ad2035795174c58a5046",
+      "defects": [
+        {
+          "id": "CUE-001",
+          "severity": "P2",
+          "description": "Smooth planar caps and unmarked cap boundaries distort cap and tapered-side normals, causing rounded planar ends and pinched highlights.",
+          "root_cause": "Generator smooths every cone face and leaves cap edges unmarked."
+        }
+      ],
+      "repairs": [
+        "Set eight cap faces flat and mark 144 cap boundary edges sharp on four Cue01 meshes; preserve geometry, UV, material, transform and sibling assets."
+      ],
+      "qa_results": {
+        "geometry": "PASS post-repair source/reimport and independent GLB semantic triangle/UV comparison.",
+        "glb": "PASS 14632 bytes, zero validator errors/warnings, four unused-UV infos.",
+        "uv_textures": "PASS finite UV; texture-atlas quality N/A untextured asset.",
+        "pbr": "PASS unchanged four dielectric materials.",
+        "animation": "N/A static cue; no rig or animation.",
+        "visual": "PASS twelve source/reimport views; independent acceptance 87/100, no blocking findings.",
+        "runtime": "PASS both initial and post-sync desktop/tablet built Viewer profiles with exact repaired asset SHA/size.",
+        "performance": "PASS static budgets: 14632-byte cue, four observed calls /272 triangles per sampled frame; no physical FPS claim.",
+        "mobile": "N/A explicit owner instruction",
+        "regression": "PASS 613 initial /617 M058 /621 final M059 synchronization unit checks; eight targeted tests; complete Game46 and experience31 on unchanged Game code.",
+        "github_actions": "NOT_RUN for this model release"
+      },
       "commit_sha": null,
       "remote_verified": false,
       "remaining_risks": [
-        "Not yet inspected under this QA campaign."
-      ]
+        "Scoped commit, verified main push, required remote Actions and actual production acceptance pending.",
+        "Physical mobile excluded by owner; no device FPS claim."
+      ],
+      "report": "docs/model-qa/MODEL-0002/README.md",
+      "synchronized_main_sha": "f62f580931c643d971611c15d243ec59da36be64"
     },
     {
       "qa_id": "MODEL-0003",
@@ -62201,6 +62228,785 @@
       "remaining_risks": [
         "Artifact identity and applicability require inspection; no exemption or PASS assumed."
       ]
+    },
+    {
+      "model_id": "gjh-m056-premium-wall-shelf-straight",
+      "name": "Premium Wall Shelf Straight",
+      "collection": "gjh-premium-retail-fixtures",
+      "kind": "catalog-model",
+      "export_paths": [
+        "models/gjh-m056-premium-wall-shelf-straight/exports/optimized.glb"
+      ],
+      "source_candidates": [
+        "models/gjh-m056-premium-wall-shelf-straight/sources/gjh-m056-premium-wall-shelf-straight.blend"
+      ],
+      "source_mapping": "candidate; inspect root in Blender before acceptance",
+      "generator_candidates": [
+        "models/gjh-m056-premium-wall-shelf-straight/generate.py",
+        "models/gjh-m056-premium-wall-shelf-straight/inspect_sources.py"
+      ],
+      "metadata": "models/gjh-m056-premium-wall-shelf-straight/metadata/gjh-m056-premium-wall-shelf-straight.json",
+      "thumbnail": "models/gjh-m056-premium-wall-shelf-straight/previews/hero.png",
+      "root": "ASSET_GJHM056",
+      "runtime_route": "?model=gjh-m056-premium-wall-shelf-straight",
+      "export_sha256": "ede66322f5e5fc9f268661a1aa9693e646a8b09da1485fed20e8d8bb88f34a3d",
+      "qa_id": "MODEL-1826",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered after the initial snapshot; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "gjh-m057-premium-wall-shelf-corner",
+      "name": "Premium Wall Shelf Corner",
+      "collection": "gjh-premium-retail-fixtures",
+      "kind": "catalog-model",
+      "export_paths": [
+        "models/gjh-m057-premium-wall-shelf-corner/exports/optimized.glb"
+      ],
+      "source_candidates": [
+        "models/gjh-m057-premium-wall-shelf-corner/sources/gjh-m057-premium-wall-shelf-corner.blend"
+      ],
+      "source_mapping": "candidate; inspect root in Blender before acceptance",
+      "generator_candidates": [
+        "models/gjh-m057-premium-wall-shelf-corner/generate.py",
+        "models/gjh-m057-premium-wall-shelf-corner/inspect_sources.py"
+      ],
+      "metadata": "models/gjh-m057-premium-wall-shelf-corner/metadata/gjh-m057-premium-wall-shelf-corner.json",
+      "thumbnail": "models/gjh-m057-premium-wall-shelf-corner/previews/hero.png",
+      "root": "ASSET_GJHM057",
+      "runtime_route": "?model=gjh-m057-premium-wall-shelf-corner",
+      "export_sha256": "f62f5e8a2ea43b253edf1a96af0a59ea3ae52fa794de9a37151007f7637c6e4f",
+      "qa_id": "MODEL-1827",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered after the initial snapshot; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:docs/verification/foundation-v1/module-fit/foundation-fitted.blend",
+      "name": "foundation-fitted.blend",
+      "kind": "historical-or-test-variant",
+      "export_paths": [],
+      "source_candidates": [
+        "docs/verification/foundation-v1/module-fit/foundation-fitted.blend"
+      ],
+      "sha256": "0f356cb44b8d00f34fb9a80cb418a31ae4d4d24e4103874843751c14198d55c1",
+      "qa_id": "MODEL-1828",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered after the initial snapshot; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:docs/verification/foundation-v1/module-fit/foundation-fitted.glb",
+      "name": "foundation-fitted.glb",
+      "kind": "historical-or-test-variant",
+      "export_paths": [
+        "docs/verification/foundation-v1/module-fit/foundation-fitted.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "3c6394f43ef7024829a6f2dbcbc8382124cf1f0eb03f2451738fe48460f4ebd6",
+      "qa_id": "MODEL-1829",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered after the initial snapshot; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/gjh-m056-premium-wall-shelf-straight/exports/collision.glb",
+      "name": "collision.glb",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [
+        "models/gjh-m056-premium-wall-shelf-straight/exports/collision.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "0fc166aa92670d05101f7935a891c0f2882be3c16edb912e4527202494b0b5d4",
+      "qa_id": "MODEL-1830",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered after the initial snapshot; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/gjh-m056-premium-wall-shelf-straight/exports/lod0.glb",
+      "name": "lod0.glb",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [
+        "models/gjh-m056-premium-wall-shelf-straight/exports/lod0.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "ede66322f5e5fc9f268661a1aa9693e646a8b09da1485fed20e8d8bb88f34a3d",
+      "qa_id": "MODEL-1831",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered after the initial snapshot; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/gjh-m056-premium-wall-shelf-straight/exports/lod1.glb",
+      "name": "lod1.glb",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [
+        "models/gjh-m056-premium-wall-shelf-straight/exports/lod1.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "949e8278034779c129e3494e614a002d5542108b74e081296acffd8e9d7c6037",
+      "qa_id": "MODEL-1832",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered after the initial snapshot; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/gjh-m056-premium-wall-shelf-straight/exports/lod2.glb",
+      "name": "lod2.glb",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [
+        "models/gjh-m056-premium-wall-shelf-straight/exports/lod2.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "6b5edcb6cdc9bba628509835361c931595057d2dfcf46b6f658a9268dc27268e",
+      "qa_id": "MODEL-1833",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered after the initial snapshot; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/gjh-m056-premium-wall-shelf-straight/exports/lod3.glb",
+      "name": "lod3.glb",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [
+        "models/gjh-m056-premium-wall-shelf-straight/exports/lod3.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "3cd4a0d16e048f729915f5214a69b9442e9c543fddb83a69a2248f3a48ba69d6",
+      "qa_id": "MODEL-1834",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered after the initial snapshot; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/gjh-m056-premium-wall-shelf-straight/reports/source-edit/edited.glb",
+      "name": "edited.glb",
+      "kind": "historical-or-test-variant",
+      "export_paths": [
+        "models/gjh-m056-premium-wall-shelf-straight/reports/source-edit/edited.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "30a089cfce5bb1f7f40e8270928410df216bf929b360e4a712f2a9b08f21ea52",
+      "qa_id": "MODEL-1835",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered after the initial snapshot; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/gjh-m056-premium-wall-shelf-straight/reports/source-edit/gjh-m056-premium-wall-shelf-straight-edited.blend",
+      "name": "gjh-m056-premium-wall-shelf-straight-edited.blend",
+      "kind": "historical-or-test-variant",
+      "export_paths": [],
+      "source_candidates": [
+        "models/gjh-m056-premium-wall-shelf-straight/reports/source-edit/gjh-m056-premium-wall-shelf-straight-edited.blend"
+      ],
+      "sha256": "b6b6e69b096446b9c120ec0c644d4b473d358c985066044984387d38ab993d4a",
+      "qa_id": "MODEL-1836",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered after the initial snapshot; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/gjh-m057-premium-wall-shelf-corner/exports/collision.glb",
+      "name": "collision.glb",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [
+        "models/gjh-m057-premium-wall-shelf-corner/exports/collision.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "52319022607d5ac5798b5accb8b18641e092dbea0be97f2d7f17b08c040aa60d",
+      "qa_id": "MODEL-1837",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered after the initial snapshot; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/gjh-m057-premium-wall-shelf-corner/exports/lod0.glb",
+      "name": "lod0.glb",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [
+        "models/gjh-m057-premium-wall-shelf-corner/exports/lod0.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "f62f5e8a2ea43b253edf1a96af0a59ea3ae52fa794de9a37151007f7637c6e4f",
+      "qa_id": "MODEL-1838",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered after the initial snapshot; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/gjh-m057-premium-wall-shelf-corner/exports/lod1.glb",
+      "name": "lod1.glb",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [
+        "models/gjh-m057-premium-wall-shelf-corner/exports/lod1.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "04840b830a874a4f672a7365a441238f1dc71795289dec5453f623ddd095eed7",
+      "qa_id": "MODEL-1839",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered after the initial snapshot; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/gjh-m057-premium-wall-shelf-corner/exports/lod2.glb",
+      "name": "lod2.glb",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [
+        "models/gjh-m057-premium-wall-shelf-corner/exports/lod2.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "dce401c79171d90092fc2994bf6946ec579f20355c106e68e8ba102059baa6aa",
+      "qa_id": "MODEL-1840",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered after the initial snapshot; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/gjh-m057-premium-wall-shelf-corner/exports/lod3.glb",
+      "name": "lod3.glb",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [
+        "models/gjh-m057-premium-wall-shelf-corner/exports/lod3.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "a5dad5e3f8411391b549cc0fbe03fbe85fc0d9078b4751328e84e500550345cb",
+      "qa_id": "MODEL-1841",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered after the initial snapshot; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/gjh-m057-premium-wall-shelf-corner/reports/source-edit/edited.glb",
+      "name": "edited.glb",
+      "kind": "historical-or-test-variant",
+      "export_paths": [
+        "models/gjh-m057-premium-wall-shelf-corner/reports/source-edit/edited.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "52ad7d567c2c9a868abae5532b18ed25f7ee5d474360268a51af186eb63a0e99",
+      "qa_id": "MODEL-1842",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered after the initial snapshot; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/gjh-m057-premium-wall-shelf-corner/reports/source-edit/gjh-m057-premium-wall-shelf-corner-edited.blend",
+      "name": "gjh-m057-premium-wall-shelf-corner-edited.blend",
+      "kind": "historical-or-test-variant",
+      "export_paths": [],
+      "source_candidates": [
+        "models/gjh-m057-premium-wall-shelf-corner/reports/source-edit/gjh-m057-premium-wall-shelf-corner-edited.blend"
+      ],
+      "sha256": "4013232e695ae1ba3895c4625cc15e4093e76a6a73d22380103cb87c95727792",
+      "qa_id": "MODEL-1843",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered after the initial snapshot; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/gjh-mall-visitor-v2/exports/gjh-mall-visitor-v2-lod1.glb",
+      "name": "gjh-mall-visitor-v2-lod1.glb",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [
+        "models/gjh-mall-visitor-v2/exports/gjh-mall-visitor-v2-lod1.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "f20065ac4bf3656f5762908237c7ceec5ac8648f05d7cd23c495b73ca899f1d6",
+      "qa_id": "MODEL-1844",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered after the initial snapshot; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "gjh-m058-premium-wall-shelf-endcap",
+      "name": "Premium Wall Shelf Endcap",
+      "collection": "gjh-premium-retail-fixtures",
+      "kind": "catalog-model",
+      "export_paths": [
+        "models/gjh-m058-premium-wall-shelf-endcap/exports/optimized.glb"
+      ],
+      "source_candidates": [
+        "models/gjh-m058-premium-wall-shelf-endcap/sources/gjh-m058-premium-wall-shelf-endcap.blend"
+      ],
+      "source_mapping": "Candidate; exact root mapping awaits individual QA.",
+      "generator_candidates": [
+        "models/gjh-m058-premium-wall-shelf-endcap/generate.py",
+        "models/gjh-m058-premium-wall-shelf-endcap/inspect_sources.py"
+      ],
+      "metadata": "models/gjh-m058-premium-wall-shelf-endcap/metadata/gjh-m058-premium-wall-shelf-endcap.json",
+      "thumbnail": "models/gjh-m058-premium-wall-shelf-endcap/previews/hero.png",
+      "root": "ASSET_GJHM058",
+      "runtime_route": "?model=gjh-m058-premium-wall-shelf-endcap",
+      "export_sha256": "88ba14641c356aa8363d9c2db65f85917e3fbebc8dc251f0b194d5098191c863",
+      "qa_id": "MODEL-1845",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/gjh-m058-premium-wall-shelf-endcap/exports/collision.glb",
+      "name": "collision.glb",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [
+        "models/gjh-m058-premium-wall-shelf-endcap/exports/collision.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "167d85c9b92604932712251d920fede666e713f5d96e7debdb1d416c2d5b30d9",
+      "qa_id": "MODEL-1846",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/gjh-m058-premium-wall-shelf-endcap/exports/lod0.glb",
+      "name": "lod0.glb",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [
+        "models/gjh-m058-premium-wall-shelf-endcap/exports/lod0.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "88ba14641c356aa8363d9c2db65f85917e3fbebc8dc251f0b194d5098191c863",
+      "qa_id": "MODEL-1847",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/gjh-m058-premium-wall-shelf-endcap/exports/lod1.glb",
+      "name": "lod1.glb",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [
+        "models/gjh-m058-premium-wall-shelf-endcap/exports/lod1.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "86f5a544680cf54f08804064737760e93c9a95e4a699183b046953453256d9ba",
+      "qa_id": "MODEL-1848",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/gjh-m058-premium-wall-shelf-endcap/exports/lod2.glb",
+      "name": "lod2.glb",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [
+        "models/gjh-m058-premium-wall-shelf-endcap/exports/lod2.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "996cda26260132ef7f040b1d5c0df750842d4b3af2d814205ea3a1a3b2d96c27",
+      "qa_id": "MODEL-1849",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/gjh-m058-premium-wall-shelf-endcap/exports/lod3.glb",
+      "name": "lod3.glb",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [
+        "models/gjh-m058-premium-wall-shelf-endcap/exports/lod3.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "7d0ba8225eadc2011816c3cb894b62bc207600bc9a5f9ab31fdb96edebd4a26f",
+      "qa_id": "MODEL-1850",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/gjh-m058-premium-wall-shelf-endcap/reports/source-edit/edited.glb",
+      "name": "edited.glb",
+      "kind": "historical-or-test-variant",
+      "export_paths": [
+        "models/gjh-m058-premium-wall-shelf-endcap/reports/source-edit/edited.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "5a7f4b88c72c54a2d0c8c925664d48db7e3bb23fced260abed582db01aec3ad8",
+      "qa_id": "MODEL-1851",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/gjh-m058-premium-wall-shelf-endcap/reports/source-edit/gjh-m058-premium-wall-shelf-endcap-edited.blend",
+      "name": "gjh-m058-premium-wall-shelf-endcap-edited.blend",
+      "kind": "historical-or-test-variant",
+      "export_paths": [],
+      "source_candidates": [
+        "models/gjh-m058-premium-wall-shelf-endcap/reports/source-edit/gjh-m058-premium-wall-shelf-endcap-edited.blend"
+      ],
+      "sha256": "e166da9280c5116b9bfca99fc2820ed38e7fb7dea0874ebcfdc849a0de233e0c",
+      "qa_id": "MODEL-1852",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "gjh-m059-premium-wall-shelf-narrow",
+      "name": "Premium Wall Shelf Narrow",
+      "collection": "gjh-premium-retail-fixtures",
+      "kind": "catalog-model",
+      "export_paths": [
+        "models/gjh-m059-premium-wall-shelf-narrow/exports/optimized.glb"
+      ],
+      "source_candidates": [
+        "models/gjh-m059-premium-wall-shelf-narrow/sources/gjh-m059-premium-wall-shelf-narrow.blend"
+      ],
+      "source_mapping": "Candidate; exact root mapping awaits individual QA.",
+      "generator_candidates": [
+        "models/gjh-m059-premium-wall-shelf-narrow/generate.py",
+        "models/gjh-m059-premium-wall-shelf-narrow/inspect_sources.py"
+      ],
+      "metadata": "models/gjh-m059-premium-wall-shelf-narrow/metadata/gjh-m059-premium-wall-shelf-narrow.json",
+      "thumbnail": "models/gjh-m059-premium-wall-shelf-narrow/previews/hero.png",
+      "root": "ASSET_GJHM059",
+      "runtime_route": "?model=gjh-m059-premium-wall-shelf-narrow",
+      "export_sha256": "f72af2d80dc16c5fdc09bc3264f7a9bf970b414599760b6ba08a3b78759363ca",
+      "qa_id": "MODEL-1853",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/gjh-m059-premium-wall-shelf-narrow/exports/collision.glb",
+      "name": "collision.glb",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [
+        "models/gjh-m059-premium-wall-shelf-narrow/exports/collision.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "75d6ca0b0761272848501ec9918592a0f24e75fac0b184537b1e96fe2bd2088b",
+      "qa_id": "MODEL-1854",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/gjh-m059-premium-wall-shelf-narrow/exports/lod0.glb",
+      "name": "lod0.glb",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [
+        "models/gjh-m059-premium-wall-shelf-narrow/exports/lod0.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "f72af2d80dc16c5fdc09bc3264f7a9bf970b414599760b6ba08a3b78759363ca",
+      "qa_id": "MODEL-1855",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/gjh-m059-premium-wall-shelf-narrow/exports/lod1.glb",
+      "name": "lod1.glb",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [
+        "models/gjh-m059-premium-wall-shelf-narrow/exports/lod1.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "1da283eac4f97bb1f8aa38eec27696efaaf00b90be8c5d72dd2bc3da5650521a",
+      "qa_id": "MODEL-1856",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/gjh-m059-premium-wall-shelf-narrow/exports/lod2.glb",
+      "name": "lod2.glb",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [
+        "models/gjh-m059-premium-wall-shelf-narrow/exports/lod2.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "cd6bf5acd376411a08dc9a8a168f626809aa156db2f7af756c3b08f6ed6fd434",
+      "qa_id": "MODEL-1857",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/gjh-m059-premium-wall-shelf-narrow/exports/lod3.glb",
+      "name": "lod3.glb",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [
+        "models/gjh-m059-premium-wall-shelf-narrow/exports/lod3.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "a0551901f130b3693bb3984a91e5eee05f0570c6caaed66f916ec7f7995b9dcd",
+      "qa_id": "MODEL-1858",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/gjh-m059-premium-wall-shelf-narrow/reports/source-edit/edited.glb",
+      "name": "edited.glb",
+      "kind": "historical-or-test-variant",
+      "export_paths": [
+        "models/gjh-m059-premium-wall-shelf-narrow/reports/source-edit/edited.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "fa5912c8a2a39677159b94b685689c996cd3400726298cfe56557ae0899ddde4",
+      "qa_id": "MODEL-1859",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/gjh-m059-premium-wall-shelf-narrow/reports/source-edit/gjh-m059-premium-wall-shelf-narrow-edited.blend",
+      "name": "gjh-m059-premium-wall-shelf-narrow-edited.blend",
+      "kind": "historical-or-test-variant",
+      "export_paths": [],
+      "source_candidates": [
+        "models/gjh-m059-premium-wall-shelf-narrow/reports/source-edit/gjh-m059-premium-wall-shelf-narrow-edited.blend"
+      ],
+      "sha256": "91ac67e13eb0358fe83653ab14fff3210ad93041fe33f6274f9a538a3ec05e06",
+      "qa_id": "MODEL-1860",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    }
+  ],
+  "reconciliation": {
+    "release_head": "f62f580931c643d971611c15d243ec59da36be64",
+    "observed_at": "2026-11-14T20:24:13.379658+00:00",
+    "current_release_catalog_entries": 558,
+    "new_tracked_artifacts": 9,
+    "added_queue_records": 8,
+    "queue_records": 1860,
+    "evidence": "discovery-reconciliation-f62f5809.json",
+    "initial_snapshot_counts_preserved": true
+  },
+  "reconciliation_history": [
+    {
+      "observed_at": "2026-11-14T18:45:09.737168+00:00",
+      "release_head": "43836162b7cb54a74d41786d3329e5814dfa1074",
+      "current_release_catalog_entries": 556,
+      "new_tracked_artifacts": 21,
+      "queue_records": 1844,
+      "evidence": "discovery-reconciliation-43836162.json",
+      "initial_snapshot_counts_preserved": true
+    },
+    {
+      "release_head": "44aaed6abdbcfa8d37e2737223683d25a3ac6c38",
+      "observed_at": "2026-11-14T20:04:11.303537+00:00",
+      "current_release_catalog_entries": 557,
+      "new_tracked_artifacts": 9,
+      "added_queue_records": 8,
+      "queue_records": 1852,
+      "evidence": "discovery-reconciliation-44aaed6a.json",
+      "initial_snapshot_counts_preserved": true
     }
   ]
 }

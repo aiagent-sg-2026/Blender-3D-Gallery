@@ -1,0 +1,65 @@
+{
+  "policy": "Mirror only task-owned files when original workspace still matches the published pre-repair baseline, or when a new path does not exist. Preserve any conflicting user edit.",
+  "files": [
+    {
+      "path": "models/eight-ball-billiards/scene.blend",
+      "mirrored": true,
+      "sha256": "068b90033d5a1a535cb96853f23d8ebf577af79a4b793c3697e172df2e79ae8f"
+    },
+    {
+      "path": "models/eight-ball-billiards/generate.py",
+      "mirrored": true,
+      "sha256": "0ca09b6374a4da062d5532aadfc22afecabef008ad345b58fc4510755f919049"
+    },
+    {
+      "path": "models/eight-ball-billiards/exports/cue_01.glb",
+      "mirrored": true,
+      "sha256": "932029a3c25f49d21c2f31547cecb471196f39470555ad2035795174c58a5046"
+    },
+    {
+      "path": "models/eight-ball-billiards/exports/billiards-scene.glb",
+      "mirrored": true,
+      "sha256": "eba3e8ef4719ab3f1785107125fce5242a2e892ac5e5163e0cd5270db9fa91e7"
+    },
+    {
+      "path": "models/eight-ball-billiards/preview.webp",
+      "mirrored": true,
+      "sha256": "db4dc6217a2c0e4b161eaa5ec6e717acae9d94804799d970fc05b578c8c0661b"
+    },
+    {
+      "path": "models/eight-ball-billiards/thumbnails/cue_01.webp",
+      "mirrored": true,
+      "sha256": "5a1255f2cbcc0d09af0ae87b625fac47cacd513b24ed734599ea2d78e88f2e90"
+    },
+    {
+      "path": "scripts/test-pool-table-qa-browser.mjs",
+      "mirrored": true,
+      "sha256": "3a2bdfe84bb43649807335219624cef3137b306256695f993844836e6434a82e"
+    },
+    {
+      "path": "scripts/test-model-qa-browser.mjs",
+      "mirrored": true,
+      "sha256": "d35cc5136efd54eef4745b2fdfa632bdb4e0af9d1de1da4113e8d8084a73f9d9"
+    },
+    {
+      "path": "scripts/model-qa-cue-details.py",
+      "mirrored": true,
+      "sha256": "4c6a7a0452370ac316b78d413b9e85201c0b4b83926d039ecabec338b2849726"
+    },
+    {
+      "path": "scripts/repair-cue-01-normals.py",
+      "mirrored": true,
+      "sha256": "f757c9e7c01c151cbbafc15f1c5f5ce08c624e18ed9133ddb30b60eb0e84c19d"
+    },
+    {
+      "path": "scripts/render-cue-01-previews.py",
+      "mirrored": true,
+      "sha256": "c4bb56e0da456d6b85e68e39f1c9e4347625419f33b193491d2c50235524e7c5"
+    },
+    {
+      "path": "tests/cue-stick-01.test.mjs",
+      "mirrored": true,
+      "sha256": "c4443f4884f0c6a57a9a7b0648baf63f0d9c4feb6f48cb363b46992bbaf962ff"
+    }
+  ]
+}

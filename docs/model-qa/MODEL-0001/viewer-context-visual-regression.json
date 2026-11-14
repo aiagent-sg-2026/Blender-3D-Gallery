@@ -1,0 +1,72 @@
+{
+  "observed_at": "2026-11-14T19:00:42.431544+00:00",
+  "integration_head": "2bf3f96100ad59043b9072fdc68341824e3ec283",
+  "scope": "Same candidate GLB, same local production viewer probe, same viewport and camera. No resize or image transformations before comparison.",
+  "comparisons": [
+    {
+      "image": "1440-loaded.png",
+      "dimensions": [
+        1058,
+        495
+      ],
+      "baseline_sha256": "351d074a3db6bc953cd0367c727a3a37a3c6b85ba35c80dce38990d713d45695",
+      "current_sha256": "351d074a3db6bc953cd0367c727a3a37a3c6b85ba35c80dce38990d713d45695",
+      "identical_pixels": true,
+      "mean_absolute_rgb_error_0_to_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_channel_error": 0
+    },
+    {
+      "image": "1440-reset.png",
+      "dimensions": [
+        1058,
+        495
+      ],
+      "baseline_sha256": "351d074a3db6bc953cd0367c727a3a37a3c6b85ba35c80dce38990d713d45695",
+      "current_sha256": "351d074a3db6bc953cd0367c727a3a37a3c6b85ba35c80dce38990d713d45695",
+      "identical_pixels": true,
+      "mean_absolute_rgb_error_0_to_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_channel_error": 0
+    },
+    {
+      "image": "768-loaded.png",
+      "dimensions": [
+        728,
+        564
+      ],
+      "baseline_sha256": "83f5c7694d7fd88a2f69f586220bc951159bcc42b5c10379542614e82364a7f3",
+      "current_sha256": "83f5c7694d7fd88a2f69f586220bc951159bcc42b5c10379542614e82364a7f3",
+      "identical_pixels": true,
+      "mean_absolute_rgb_error_0_to_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_channel_error": 0
+    },
+    {
+      "image": "768-reset.png",
+      "dimensions": [
+        728,
+        564
+      ],
+      "baseline_sha256": "83f5c7694d7fd88a2f69f586220bc951159bcc42b5c10379542614e82364a7f3",
+      "current_sha256": "83f5c7694d7fd88a2f69f586220bc951159bcc42b5c10379542614e82364a7f3",
+      "identical_pixels": true,
+      "mean_absolute_rgb_error_0_to_255": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_channel_error": 0
+    }
+  ],
+  "baseline_reference": "Previous repaired-candidate decoded-metric-local probe captured before renderer context integration; original browser result did not record its Git HEAD."
+}

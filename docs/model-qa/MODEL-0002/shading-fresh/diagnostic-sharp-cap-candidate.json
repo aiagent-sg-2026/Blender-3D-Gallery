@@ -1,0 +1,116 @@
+{
+  "input_sha256": "95f940fe5f10fb8d2dcd9d5ca6db04eaaf1690017e3b69929bfea1af110c97bf",
+  "root": "ASSET_Cue_01",
+  "no_source_save": true,
+  "diagnosis_only": "Candidate changes end-cap smooth flags in memory; not an exported or accepted repair.",
+  "states": {
+    "sharp-cap-candidate": {
+      "meshes": [
+        {
+          "mesh": "Cue 1 | butt",
+          "smooth_cap_faces": 0,
+          "cap_faces": 2,
+          "side_corner_axis_abs_min": 0.011649695225059986,
+          "side_corner_axis_abs_max": 0.011649700812995434,
+          "side_corner_axis_abs_mean": 0.01164969839155674
+        },
+        {
+          "mesh": "Cue 1 | ferrule",
+          "smooth_cap_faces": 0,
+          "cap_faces": 2,
+          "side_corner_axis_abs_min": 0.0,
+          "side_corner_axis_abs_max": 0.0,
+          "side_corner_axis_abs_mean": 0.0
+        },
+        {
+          "mesh": "Cue 1 | shaft",
+          "smooth_cap_faces": 0,
+          "cap_faces": 2,
+          "side_corner_axis_abs_min": 0.005434701219201088,
+          "side_corner_axis_abs_max": 0.005434703081846237,
+          "side_corner_axis_abs_mean": 0.005434701987542212
+        },
+        {
+          "mesh": "Cue 1 | tip",
+          "smooth_cap_faces": 0,
+          "cap_faces": 2,
+          "side_corner_axis_abs_min": 0.14142079651355743,
+          "side_corner_axis_abs_max": 0.1414208561182022,
+          "side_corner_axis_abs_mean": 0.1414208272472024
+        }
+      ],
+      "views": [
+        {
+          "name": "butt-side",
+          "target": [
+            -0.49000000953674316,
+            -0.9399999976158142,
+            0.05999999865889549
+          ],
+          "camera": [
+            -0.49000000953674316,
+            -2.9011614322662354,
+            0.4522322714328766
+          ],
+          "ortho_scale": 0.38
+        },
+        {
+          "name": "butt-end",
+          "target": [
+            -0.7350000143051147,
+            -0.9399999976158142,
+            0.05999999865889549
+          ],
+          "camera": [
+            -2.4959018230438232,
+            -1.8204509019851685,
+            0.4121803641319275
+          ],
+          "ortho_scale": 0.065
+        },
+        {
+          "name": "joint",
+          "target": [
+            -0.2199999988079071,
+            -0.9399999976158142,
+            0.05999999865889549
+          ],
+          "camera": [
+            -0.2199999988079071,
+            -2.7969534397125244,
+            0.8027814030647278
+          ],
+          "ortho_scale": 0.095
+        },
+        {
+          "name": "ferrule",
+          "target": [
+            0.7139999866485596,
+            -0.9399999976158142,
+            0.05999999865889549
+          ],
+          "camera": [
+            1.530496597290039,
+            -2.572993040084839,
+            0.8764965534210205
+          ],
+          "ortho_scale": 0.09
+        },
+        {
+          "name": "tip-end",
+          "target": [
+            0.7350000143051147,
+            -0.9399999976158142,
+            0.05999999865889549
+          ],
+          "camera": [
+            2.7350001335144043,
+            -0.9399999976158142,
+            0.05999999865889549
+          ],
+          "ortho_scale": 0.02
+        }
+      ]
+    }
+  }
+}

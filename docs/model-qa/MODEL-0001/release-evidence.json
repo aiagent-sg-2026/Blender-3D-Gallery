@@ -1,0 +1,53 @@
+{
+  "model_id": "pool-table",
+  "qa_id": "MODEL-0001",
+  "repair_commit_sha": "f466c66fd5ed486c69a442c6b0dc940a51133094",
+  "remote_main_sha_observed_at_push": "43836162b7cb54a74d41786d3329e5814dfa1074",
+  "observed_at": "2026-11-14T18:44:02.165677+00:00",
+  "commit_url": "https://github.com/yapweijun1996/Blender-3D-Gallery/commit/f466c66fd5ed486c69a442c6b0dc940a51133094",
+  "actions_run_id": 43629169616,
+  "actions_url": "https://github.com/yapweijun1996/Blender-3D-Gallery/actions/runs/43629169616",
+  "required_actions_status": "completed",
+  "required_actions_passed": true,
+  "git_blob_sha": "d54391dc61c2e77536ddb3638ae92f52d68a49ba",
+  "model_sha256": "566ad912bf180c421b83c2e980d56c244288f91776189b471569bc2b08040c53",
+  "remote_blob_matches": true,
+  "live_url": "https://yapweijun1996.github.io/Blender-3D-Gallery/?model=pool-table",
+  "live_acceptance": "PASS fresh desktop/tablet Viewer loading, keyboard orbit/zoom, reset, mouse orbit, zero page/HTTP errors; production GLB SHA256 matches validated candidate",
+  "latest_main_unit_tests": {
+    "passed": 609,
+    "failed": 0
+  },
+  "next_model_started": true,
+  "final_release_head": "2bf3f96100ad59043b9072fdc68341824e3ec283",
+  "superseded_actions": [
+    {
+      "run_id": 43625749974,
+      "head_sha": "f466c66fd5ed486c69a442c6b0dc940a51133094",
+      "conclusion": "cancelled",
+      "reason": "Superseded by own QA-only decoded-size correction; not accepted as passing"
+    },
+    {
+      "run_id": 43627986567,
+      "head_sha": "43836162b7cb54a74d41786d3329e5814dfa1074",
+      "conclusion": "cancelled",
+      "reason": "GitHub annotation reports cancelled by @yapweijun1996; replaced by descendant integration run. Not accepted as passing."
+    }
+  ],
+  "final_head_remote_blob_matches": true,
+  "final_head_blob_verified_at": "2026-11-14T18:48:09.198630+00:00",
+  "last_actions_observed_at": "2026-11-14T18:57:10.805665+00:00",
+  "integration_note": "Descendant includes unchanged repaired asset plus upstream model Viewer context reuse. Local integration verification in progress.",
+  "remote_main_sha_observed_at_acceptance": "44aaed6abdbcfa8d37e2737223683d25a3ac6c38",
+  "remote_main_verified_at": "2026-11-14T19:33:16.507020+00:00",
+  "required_actions_conclusion": "success",
+  "accepted_head_is_main_ancestor": true,
+  "subsequent_main_note": "Main advanced with M058/Shelf Inspector changes. Exact table, shared billiards source, and Viewer implementation are unchanged; acceptance is bound to successful integration head 2bf3f961, not to unchecked newer commits.",
+  "live_evidence": "live-deployment.json",
+  "live_runtime_results": "live-runtime-results.json",
+  "actions_evidence": "actions-completed.json",
+  "actions_log_gzip": "integration-actions.log.gz",
+  "actions_log_sha256": "83e4c0cb5f6104c6b6b617a52f37c148aa1138ae4ed6d57223aba650f1e31d88",
+  "next_model_id": "MODEL-0002",
+  "sequential_advance_at": "2026-11-14T19:33:56.096156+00:00"
+}

@@ -243,6 +243,16 @@ for k,y in enumerate((-.94,-1.02),1):
     rod('Cue %d | shaft'%k,(-.22,y,.06),(.70,y,.06),.011,.006,shaftmat,cue)
     rod('Cue %d | ferrule'%k,(.70,y,.06),(.728,y,.06),.006,.006,white,cue,16)
     rod('Cue %d | tip'%k,(.728,y,.06),(.735,y,.06),.006,.005,black,cue,16)
+    if k == 1:
+        # Cue 01 QA: planar caps need explicit sharp boundaries so their
+        # normals do not pull the smooth tapered sides toward either end.
+        for ob in cue.children:
+            for poly in ob.data.polygons:
+                if len(poly.vertices) > 4:
+                    poly.use_smooth = False
+                    for li in poly.loop_indices:
+                        ob.data.edges[ob.data.loops[li].edge_index].use_edge_sharp = True
+            ob.data.update()
 # Equilateral open wooden triangle rack, suitably sized for 57.15 mm balls.
 rack=root('ASSET_Triangle_Rack',(.65,.27,.80))
 vertices=[(.48,.27,.80),(.78,.435,.80),(.78,.105,.80)]
