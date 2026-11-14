@@ -1,0 +1,175 @@
+{
+  "id": "gjh-m059-premium-wall-shelf-narrow",
+  "backlog_id": "GJH-M059",
+  "name": "Premium Wall Shelf Narrow",
+  "summary": "0.8m narrow display cabinet, three editable shelves and six usable product anchors.",
+  "description": "Emerald/gold narrow cabinet with supported LEDs, original wood/stone textures and blank front header. Original width differs from the repeated backlog table, explicitly documented.",
+  "category": "Shopping Mall",
+  "tags": [
+    "GJH-M059",
+    "premium",
+    "wall-shelf",
+    "modular",
+    "original",
+    "editable",
+    "LOD"
+  ],
+  "status": "validated",
+  "created": "2026-11-14",
+  "author": "Blender-3D-Gallery / agent-assisted procedural modeling",
+  "blender_version": "4.0.2",
+  "creation_method": "Blender Python original geometry and original baked PNG textures; user concept reference, not official brand artwork",
+  "generator": "generate.py",
+  "paths": {
+    "source": "sources/gjh-m059-premium-wall-shelf-narrow.blend",
+    "glb": "exports/optimized.glb",
+    "preview": "previews/hero.png",
+    "additional_previews": [
+      "previews/front.png",
+      "previews/rear.png",
+      "previews/side.png",
+      "previews/detail.png"
+    ],
+    "lods": [
+      "exports/lod0.glb",
+      "exports/lod1.glb",
+      "exports/lod2.glb",
+      "exports/lod3.glb"
+    ],
+    "collider": "exports/collision.glb"
+  },
+  "display": {
+    "units": "metres",
+    "up_axis": "Blender +Z / glTF +Y",
+    "front_axis": "Blender -Y / glTF +Z",
+    "origin": "floor centre",
+    "previewRotationY": 0
+  },
+  "accuracy_notes": "Conceptual reference-inspired furniture, not official branded merchandise. No structural, lighting-temperature, safety or accessibility certification.",
+  "rights": "Original geometry and materials; reuse in the owner's projects is authorized. Public redistribution terms have not been specified.",
+  "attribution": [
+    {
+      "credit": "Original procedural geometry and baked procedural wood/stone textures. User-supplied concept image used only as visual direction; no logos, packaging artwork or products copied."
+    }
+  ],
+  "budgets": {
+    "triangles": 15000,
+    "bytes": 3000000
+  },
+  "interaction": {
+    "manifest": "support-manifest.json",
+    "runtime": "Gallery orbit/zoom/reset only; Inspector integration not yet implemented"
+  },
+  "qa": {
+    "render_review": "PASS: actual final hero/front/rear/side/detail and LOD1/2/3 preview inspection.",
+    "browser": "PASS: actual GLB hash and orbit/zoom/reset/reopen at1440/768/390 Chromium viewport emulation;1440/390 screenshots inspected. Not real devices.",
+    "physical_devices": "NOT TESTED",
+    "deployment": "NOT DEPLOYED",
+    "inspector": "NOT INTEGRATED",
+    "structure": "PASS:4LODs+collider Khronos zero errors/warnings, five LED support contacts, shelf-back contact, real label visibility and supported product footprint clearance.",
+    "source_edit": "PASS: saved source copy edit/reopen/reexport, canonical unchanged; reports/sources.json",
+    "automatic_lod": "NOT IMPLEMENTED",
+    "product_loading": "NOT IMPLEMENTED"
+  },
+  "browseCategory": "Shopping Mall",
+  "design_interpretation": {
+    "original_width_depth_height_m": [
+      2.4,
+      0.55,
+      2.4
+    ],
+    "implemented_width_depth_height_m": [
+      0.8,
+      0.55,
+      2.4
+    ],
+    "explanation": "Explicit narrow-name design interpretation; width differs from the repeated source table. Not claimed to match original outer width."
+  },
+  "measured_lods": [
+    {
+      "file": "exports/lod0.glb",
+      "lod": 0,
+      "result": "PASS",
+      "sha256": "9081c6b430e65691ca04eaeb2f0062e3f74395d16b3a1018fcafa3674a870311",
+      "bytes": 707312,
+      "triangles": 8700,
+      "vertices": 17400,
+      "meshes": 29,
+      "dimensions": [
+        0.800000011920929,
+        2.3999999053776264,
+        0.550000011920929
+      ],
+      "textures": 2,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "file": "exports/lod1.glb",
+      "lod": 1,
+      "result": "PASS",
+      "sha256": "60ddbcca1deb01129591bacd9fbd9cd1f6193e43535d35dcd32a3c1b7b6a380b",
+      "bytes": 333940,
+      "triangles": 3132,
+      "vertices": 6264,
+      "meshes": 29,
+      "dimensions": [
+        0.800000011920929,
+        2.3999999053776264,
+        0.550000011920929
+      ],
+      "textures": 2,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "file": "exports/lod2.glb",
+      "lod": 2,
+      "result": "PASS",
+      "sha256": "9f04be53cd36f4382f4818bc324908af4205910f31d6e8990f2bf9a607931295",
+      "bytes": 220504,
+      "triangles": 1276,
+      "vertices": 2784,
+      "meshes": 29,
+      "dimensions": [
+        0.800000011920929,
+        2.3999999053776264,
+        0.550000011920929
+      ],
+      "textures": 2,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "file": "exports/lod3.glb",
+      "lod": 3,
+      "result": "PASS",
+      "sha256": "c68a26a079b3fda14823ea99492922063d3094abfb32853192eed03857056109",
+      "bytes": 153432,
+      "triangles": 348,
+      "vertices": 696,
+      "meshes": 29,
+      "dimensions": [
+        0.800000011920929,
+        2.3999999053776264,
+        0.550000011920929
+      ],
+      "textures": 2,
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "product_anchor_capacity": {
+    "rows": 3,
+    "slots_per_row": 2,
+    "total": 6,
+    "reference_footprint_width_depth_m": [
+      0.18,
+      0.22
+    ],
+    "horizontal_spacing_m": 0.28,
+    "pair_clearance_m": 0.1,
+    "minimum_side_clearance_m": 0.06,
+    "note": "Footprint validation only; future product height and shape need separate collision checks."
+  }
+}

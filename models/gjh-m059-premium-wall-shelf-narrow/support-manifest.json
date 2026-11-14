@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "model_id": "GJH-M059",
+  "asset_slug": "gjh-m059-premium-wall-shelf-narrow",
+  "source": "User-supplied concept image; no logo or artwork copied",
+  "dimension_convention": "glTF metres X width/Y height/Z depth",
+  "dimensions_m": [
+    0.8,
+    2.4,
+    0.55
+  ],
+  "parts": [
+    "cabinet",
+    "trim",
+    "brand_header",
+    "collision",
+    "shelf_1",
+    "LED_1",
+    "price_rail_1",
+    "product_anchor_row_1",
+    "shelf_2",
+    "LED_2",
+    "price_rail_2",
+    "product_anchor_row_2",
+    "shelf_3",
+    "LED_3",
+    "price_rail_3",
+    "product_anchor_row_3"
+  ],
+  "product_rows": [
+    {
+      "row": 1,
+      "min_items": 1,
+      "max_items": 2,
+      "anchors": [
+        "product_anchor_row_1_slot_01",
+        "product_anchor_row_1_slot_02"
+      ],
+      "product_asset_urls": [],
+      "reference_product_footprint_m": [
+        0.18,
+        0.22
+      ],
+      "minimum_edge_clearance_m": 0.06,
+      "minimum_pair_clearance_m": 0.1
+    },
+    {
+      "row": 2,
+      "min_items": 1,
+      "max_items": 2,
+      "anchors": [
+        "product_anchor_row_2_slot_01",
+        "product_anchor_row_2_slot_02"
+      ],
+      "product_asset_urls": [],
+      "reference_product_footprint_m": [
+        0.18,
+        0.22
+      ],
+      "minimum_edge_clearance_m": 0.06,
+      "minimum_pair_clearance_m": 0.1
+    },
+    {
+      "row": 3,
+      "min_items": 1,
+      "max_items": 2,
+      "anchors": [
+        "product_anchor_row_3_slot_01",
+        "product_anchor_row_3_slot_02"
+      ],
+      "product_asset_urls": [],
+      "reference_product_footprint_m": [
+        0.18,
+        0.22
+      ],
+      "minimum_edge_clearance_m": 0.06,
+      "minimum_pair_clearance_m": 0.1
+    }
+  ],
+  "lod_files": [
+    "exports/lod0.glb",
+    "exports/lod1.glb",
+    "exports/lod2.glb",
+    "exports/lod3.glb"
+  ],
+  "collision_file": "exports/collision.glb",
+  "runtime_gaps": [
+    "automatic LOD selection not implemented",
+    "product loading not implemented",
+    "physical Android/iOS testing not performed"
+  ],
+  "lighting": "Warm3000K-looking emissive material only; not a photometric promise",
+  "runtime_nodes": {
+    "shelves": [
+      "shelf_1",
+      "shelf_2",
+      "shelf_3"
+    ],
+    "leds": [
+      "LED_1",
+      "LED_2",
+      "LED_3",
+      "LED_header",
+      "LED_base"
+    ],
+    "brand_header": "brand_header",
+    "brand_header_panels": [
+      "brand_header_panel"
+    ],
+    "collision_descriptor": "collision"
+  },
+  "runtime_demo": {
+    "status": "planned_not_integrated",
+    "implemented": []
+  },
+  "design_interpretation": {
+    "original_width_depth_height_m": [
+      2.4,
+      0.55,
+      2.4
+    ],
+    "implemented_width_depth_height_m": [
+      0.8,
+      0.55,
+      2.4
+    ],
+    "explanation": "Explicit narrow-name design interpretation; width differs from the repeated source table. Not claimed to match original outer width."
+  },
+  "runtime_header_surfaces": [
+    {
+      "anchor": "header_surface_front",
+      "width_m": 0.5,
+      "height_m": 0.36
+    }
+  ],
+  "runtime_limits": "No Inspector integration, automatic LOD or external product loading implemented for M059."
+}
