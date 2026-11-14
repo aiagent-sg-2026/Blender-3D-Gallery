@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "model_id": "GJH-M061",
+  "asset_slug": "gjh-m061-premium-wall-shelf-low",
+  "source": "User-supplied concept image; no logo or artwork copied",
+  "dimension_convention": "glTF metres X width/Y height/Z depth",
+  "dimensions_m": [
+    2.4,
+    1.2,
+    0.55
+  ],
+  "parts": [
+    "cabinet",
+    "trim",
+    "brand_header",
+    "collision",
+    "shelf_1",
+    "price_rail_1",
+    "product_anchor_row_1",
+    "shelf_2",
+    "price_rail_2",
+    "product_anchor_row_2",
+    "cabinet_middle_pillar"
+  ],
+  "product_rows": [
+    {
+      "row": 1,
+      "min_items": 1,
+      "max_items": 6,
+      "anchors": [
+        "product_anchor_row_1_slot_01",
+        "product_anchor_row_1_slot_02",
+        "product_anchor_row_1_slot_03",
+        "product_anchor_row_1_slot_04",
+        "product_anchor_row_1_slot_05",
+        "product_anchor_row_1_slot_06"
+      ],
+      "product_asset_urls": [],
+      "bay_boards": [
+        "shelf_1_left",
+        "shelf_1_right"
+      ],
+      "reference_product_footprint_m": [
+        0.2,
+        0.22
+      ],
+      "reference_product_height_m": 0.12
+    },
+    {
+      "row": 2,
+      "min_items": 1,
+      "max_items": 6,
+      "anchors": [
+        "product_anchor_row_2_slot_01",
+        "product_anchor_row_2_slot_02",
+        "product_anchor_row_2_slot_03",
+        "product_anchor_row_2_slot_04",
+        "product_anchor_row_2_slot_05",
+        "product_anchor_row_2_slot_06"
+      ],
+      "product_asset_urls": [],
+      "bay_boards": [
+        "shelf_2_left",
+        "shelf_2_right"
+      ],
+      "reference_product_footprint_m": [
+        0.2,
+        0.22
+      ],
+      "reference_product_height_m": 0.12
+    }
+  ],
+  "lod_files": [
+    "exports/lod0.glb",
+    "exports/lod1.glb",
+    "exports/lod2.glb",
+    "exports/lod3.glb"
+  ],
+  "collision_file": "exports/collision.glb",
+  "runtime_gaps": [
+    "automatic LOD selection not implemented",
+    "product loading not implemented",
+    "physical Android/iOS testing not performed"
+  ],
+  "lighting": "Warm3000K-looking emissive material only; not a photometric promise",
+  "runtime_nodes": {
+    "shelves": [
+      "shelf_1",
+      "shelf_2"
+    ],
+    "leds": [
+      "LED_1_left",
+      "LED_1_right",
+      "LED_2_left",
+      "LED_2_right",
+      "LED_header",
+      "LED_base"
+    ],
+    "brand_header": "brand_header",
+    "brand_header_panels": [
+      "brand_header_panel"
+    ],
+    "collision_descriptor": "collision"
+  },
+  "runtime_demo": {
+    "status": "planned_not_integrated",
+    "implemented": []
+  },
+  "runtime_header_surfaces": [
+    {
+      "anchor": "header_surface_front",
+      "width_m": 1.92,
+      "height_m": 0.16
+    }
+  ],
+  "runtime_limits": "Inspector not integrated for this two-row model. No automatic LOD, product loading or physical device testing.",
+  "dimension_interpretation": "Low cabinet at 2.4 x 0.55 x 1.2 m, deliberately differing from the backlog uniform 2.4 m height; not a claim of matching that original envelope."
+}

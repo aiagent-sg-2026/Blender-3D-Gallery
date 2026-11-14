@@ -1,0 +1,152 @@
+{
+  "result": "PASS",
+  "id": "GJH-M061",
+  "lods": [
+    {
+      "file": "exports/lod0.glb",
+      "lod": 0,
+      "result": "PASS",
+      "sha256": "d2ff536e2b17ef918f7f4d4c0e69fde93e7a25055a92cda50c28298155c783ce",
+      "bytes": 862468,
+      "triangles": 10800,
+      "vertices": 21600,
+      "meshes": 36,
+      "dimensions": [
+        2.4000000953674316,
+        1.1999999657273293,
+        0.550000011920929
+      ],
+      "textures": 2,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "file": "exports/lod1.glb",
+      "lod": 1,
+      "result": "PASS",
+      "sha256": "f37c86d78ddc9a4eb72d844c0596db6917b0ae4ec389c58302ccb5ca29da8525",
+      "bytes": 390284,
+      "triangles": 3888,
+      "vertices": 7776,
+      "meshes": 36,
+      "dimensions": [
+        2.4000000953674316,
+        1.1999999657273293,
+        0.550000011920929
+      ],
+      "textures": 2,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "file": "exports/lod2.glb",
+      "lod": 2,
+      "result": "PASS",
+      "sha256": "f01eefeab98403af7fa4c1a89fa03aee2e95d233885fe256bc6909facc84b946",
+      "bytes": 249148,
+      "triangles": 1584,
+      "vertices": 3456,
+      "meshes": 36,
+      "dimensions": [
+        2.4000000953674316,
+        1.1999999657273293,
+        0.550000011920929
+      ],
+      "textures": 2,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "file": "exports/lod3.glb",
+      "lod": 3,
+      "result": "PASS",
+      "sha256": "41682651d971d4494e63163b2851682c2d147fd41d6f0c8dee19ad7934ea6658",
+      "bytes": 165936,
+      "triangles": 432,
+      "vertices": 864,
+      "meshes": 36,
+      "dimensions": [
+        2.4000000953674316,
+        1.1999999657273293,
+        0.550000011920929
+      ],
+      "textures": 2,
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "anchors": {
+    "product_anchor_row_1_slot_01": [
+      -0.8600000143051147,
+      0.45100000500679016,
+      0.019999999552965164
+    ],
+    "product_anchor_row_1_slot_02": [
+      -0.5450000166893005,
+      0.45100000500679016,
+      0.019999999552965164
+    ],
+    "product_anchor_row_1_slot_03": [
+      -0.23000000417232513,
+      0.45100000500679016,
+      0.019999999552965164
+    ],
+    "product_anchor_row_1_slot_04": [
+      0.23000000417232513,
+      0.45100000500679016,
+      0.019999999552965164
+    ],
+    "product_anchor_row_1_slot_05": [
+      0.5450000166893005,
+      0.45100000500679016,
+      0.019999999552965164
+    ],
+    "product_anchor_row_1_slot_06": [
+      0.8600000143051147,
+      0.45100000500679016,
+      0.019999999552965164
+    ],
+    "product_anchor_row_2_slot_01": [
+      -0.8600000143051147,
+      0.781000018119812,
+      0.019999999552965164
+    ],
+    "product_anchor_row_2_slot_02": [
+      -0.5450000166893005,
+      0.781000018119812,
+      0.019999999552965164
+    ],
+    "product_anchor_row_2_slot_03": [
+      -0.23000000417232513,
+      0.781000018119812,
+      0.019999999552965164
+    ],
+    "product_anchor_row_2_slot_04": [
+      0.23000000417232513,
+      0.781000018119812,
+      0.019999999552965164
+    ],
+    "product_anchor_row_2_slot_05": [
+      0.5450000166893005,
+      0.781000018119812,
+      0.019999999552965164
+    ],
+    "product_anchor_row_2_slot_06": [
+      0.8600000143051147,
+      0.781000018119812,
+      0.019999999552965164
+    ]
+  },
+  "anchor_stability": "Identical world transforms and names across all four LODs",
+  "collider": {
+    "file": "exports/collision.glb",
+    "dimensions": [
+      2.4000000953674316,
+      1.2000000476837158,
+      0.550000011920929
+    ],
+    "errors": 0,
+    "warnings": 0
+  },
+  "limits": "No runtime auto LOD or part highlight implied by structural validation"
+}
