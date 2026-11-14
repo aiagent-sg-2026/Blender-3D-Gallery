@@ -5,6 +5,8 @@ import { chromium } from 'playwright';
 import { serveBuild, launchOptions } from './browser-test-utils.mjs';
 
 const catalog = JSON.parse(await fs.readFile(new URL('../models/catalog.json', import.meta.url), 'utf8'));
+const demoCatalog = JSON.parse(await fs.readFile(new URL('../data/demos.json', import.meta.url), 'utf8'));
+const expectedDemoIds = demoCatalog.filter(demo => demo.status === 'available').map(demo => demo.id).sort();
 const expectedAssetCount = catalog.collections.reduce((count, collection) => count + collection.assets.length, 0);
 const server = await serveBuild();
 const browser = await chromium.launch(launchOptions);
@@ -64,8 +66,8 @@ try {
       await page.screenshot({path:path.join(artifacts,`models-${width}.png`)});
       await page.goto(server.url+'?page=demos');
       await page.getByRole('heading',{name:/^Interactive Demos/}).waitFor();
-      assert.equal(await page.locator('.demo-card').count(),3);
-      assert.deepEqual((await page.locator('.demo-card').evaluateAll(nodes=>nodes.map(n=>n.dataset.demoId))).sort(),['game','product-studio','solar-system']);
+      assert.equal(await page.locator('.demo-card').count(),expectedDemoIds.length);
+      assert.deepEqual((await page.locator('.demo-card').evaluateAll(nodes=>nodes.map(n=>n.dataset.demoId))).sort(),expectedDemoIds);
       assert.equal(await page.locator('canvas').count(),0);
       await noOverflow(page);
       await page.screenshot({path:path.join(artifacts,`demos-${width}.png`)});
@@ -132,9 +134,9 @@ try {
     await page.locator('#demo-category').selectOption('Game');
     assert.equal(await page.locator('.demo-card').count(),0);
     await page.getByRole('button',{name:/clear filters/i}).last().click();
-    await page.waitForFunction(()=>document.querySelectorAll('.demo-card').length===3);
-    assert.equal(await page.locator('.demo-card').count(),3);
-      assert.deepEqual((await page.locator('.demo-card').evaluateAll(nodes=>nodes.map(n=>n.dataset.demoId))).sort(),['game','product-studio','solar-system']);
+    await page.waitForFunction(count=>document.querySelectorAll('.demo-card').length===count,expectedDemoIds.length);
+    assert.equal(await page.locator('.demo-card').count(),expectedDemoIds.length);
+      assert.deepEqual((await page.locator('.demo-card').evaluateAll(nodes=>nodes.map(n=>n.dataset.demoId))).sort(),expectedDemoIds);
     await page.locator('#demo-category').selectOption('Simulation');
     assert.equal(await page.locator('.demo-card').count(),1);
     await page.reload();
