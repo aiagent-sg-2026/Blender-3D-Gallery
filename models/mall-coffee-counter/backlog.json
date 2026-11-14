@@ -1,0 +1,29 @@
+{
+  "id": "shopping-mall-017",
+  "title": "Mall Coffee Counter",
+  "root": "ASSET_MallCoffeeCounter",
+  "scope": "Original Shopping Mall list017; not global500 ID017",
+  "budget": {
+    "triangles": 10000,
+    "bytes": 1000000,
+    "mesh_primitives": 80
+  },
+  "expected_dimensions_m": [
+    1.84,
+    1.14,
+    0.924
+  ],
+  "required_nodes": [
+    "FIXED_Plinth",
+    "FIXED_CustomerPanel",
+    "FIXED_StaffWorktop",
+    "FIXED_HandoffLedge",
+    "FIXED_ShelfLeft",
+    "FIXED_ShelfRight",
+    "FIXED_StorageDivider",
+    "MOVABLE_Door",
+    "DOOR_Leaf",
+    "DOOR_Handle"
+  ],
+  "door_degrees": 105
+}

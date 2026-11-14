@@ -1,0 +1,70 @@
+{
+  "id": "mall-coffee-counter",
+  "backlog_id": "shopping-mall-017",
+  "name": "Mall Coffee Counter",
+  "summary": "Original cafe service counter with customer handoff ledge and staff storage.",
+  "description": "Separate raised customer ledge, staff worktop, hollow storage, shelves, front ribs and hinged staff-side cabinet door. No appliances or branding.",
+  "category": "Mall Fixtures",
+  "tags": [
+    "cafe",
+    "coffee-counter",
+    "retail",
+    "original",
+    "editable",
+    "animated"
+  ],
+  "status": "PASS local QA; remote CI/Pages pending",
+  "created": "2026-11-14",
+  "author": "Blender-3D-Gallery / agent-assisted procedural modeling",
+  "blender_version": "4.0.2",
+  "creation_method": "Original Blender Python geometry; no external assets, branding or textures",
+  "generator": "generate.py",
+  "paths": {
+    "source": "sources/mall-coffee-counter.blend",
+    "glb": "exports/optimized.glb",
+    "preview": "previews/hero.png",
+    "additional_previews": [
+      "previews/front.png",
+      "previews/rear.png",
+      "previews/side.png",
+      "previews/rear-open.png"
+    ]
+  },
+  "display": {
+    "units": "metres",
+    "up_axis": "Blender +Z / glTF +Y",
+    "front_axis": "Blender -Y / glTF +Z",
+    "origin": "floor centre",
+    "previewRotationY": 0
+  },
+  "accuracy_notes": "Illustrative furniture only; no appliance, plumbing, electrical, hygiene, safety or accessibility certification.",
+  "rights": "Original geometry and materials; reuse in the owner's projects is authorized. Public redistribution terms have not been specified.",
+  "attribution": [
+    {
+      "credit": "Original procedural geometry; no external assets."
+    }
+  ],
+  "budgets": {
+    "triangles": 10000,
+    "bytes": 1000000,
+    "mesh_primitives": 80
+  },
+  "interaction": {
+    "root": "ASSET_MallCoffeeCounter",
+    "clips": [
+      "DoorOpenClose"
+    ],
+    "duration_seconds": 2.5,
+    "door_opening_degrees": 105
+  },
+  "qa": {
+    "physical_devices": "NOT TESTED",
+    "deployment": "NOT DEPLOYED",
+    "render_review": "PASS actual five Blender views and Gallery/isolated-animation browser pixels inspected; rear-open framing corrected and staff-side animation camera verified",
+    "browser": "PASS: Gallery 1440/768/390 and isolated Three.js animation; reports/browser/results.json and animation-browser/results.json",
+    "source_edit": "PASS: reports/sources.json and verify-source.log; saved source edit reexport",
+    "structure": "PASS: reports/assets.json; 60 reset/play door poses, 105degree midpoint, closed reset and swept OBB clearance",
+    "focused_tests": "PASS: 3/3; reports/focused-test.log",
+    "build": "PASS: reports/build.log"
+  }
+}

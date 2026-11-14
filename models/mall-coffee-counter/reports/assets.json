@@ -1,0 +1,47 @@
+{
+  "result": "PASS",
+  "id": "Mall Coffee Counter",
+  "backlog_id": "shopping-mall-017",
+  "sha256": "f4ddd7dd0d1d56bd3bd6e69324ec0fc38aab2a2595329f92ac67eb1f424aed20",
+  "glb_bytes": 193124,
+  "triangles": 3532,
+  "vertices": 6944,
+  "primitives": 29,
+  "materials": 5,
+  "textures": 0,
+  "animations": 1,
+  "dimensions": [
+    1.840000033378601,
+    1.1400000043213367,
+    0.9240000224292041
+  ],
+  "bounds": {
+    "min": [
+      -0.9200000166893005,
+      0,
+      -0.4640000140845538
+    ],
+    "max": [
+      0.9200000166893005,
+      1.1400000043213367,
+      0.46000000834465027
+    ]
+  },
+  "budget": {
+    "triangles": 10000,
+    "bytes": 1000000,
+    "mesh_primitives": 80
+  },
+  "animation": {
+    "frames": 60,
+    "opening_degrees": 105.00000261370216,
+    "collision_method": "World OBB conservative boxes, moving cabinet leaf and handle vs fixed cabinet, shelves and tops; designed hinge joint excluded",
+    "moving_meshes": 4,
+    "fixed_meshes": 21
+  },
+  "validation": {
+    "errors": 0,
+    "warnings": 0,
+    "validator": "2.0.0-dev.3.10"
+  }
+}
