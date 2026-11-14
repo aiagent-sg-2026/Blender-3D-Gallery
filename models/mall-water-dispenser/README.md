@@ -25,3 +25,5 @@ Release: NEEDS REVIEW, not deployed. Local checks do not claim remote CI. No PR2
 
 ## Corrections retained in audit
 Initial generated source was not run successfully by the Codex sandbox. Review replaced a solid cabinet with open modular side/back shells, corrected Blender4.0 render engine and real open-pose preview, and fixed a stale Blender-reference after reopen. Initial validation failed because draft expectations used Blender axis ordering for glTF world bounds and guessed node names. The validator now requires actual designed 0.74m width, 1.48m height, 0.7075m closed depth at 1mm tolerance, proper +Y-up floor and the exact 0.12m rear panel translation; budgets and assertions were not relaxed. The first additive catalog integration duplicated a collection; duplicate validation caught it, and only the new entry was applied to latest main. No failed candidate was published.
+
+CI43592572900 blocked deployment: existing Mall Essentials is an exact four-fixture collection. Corrected registration to separate mall-public-amenities without changing that contract/test. All484 entries retained.
