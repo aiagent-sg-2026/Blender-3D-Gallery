@@ -1,6 +1,6 @@
 # GJH Mall Visitor v2: design and delivery plan
 
-Status: development preview. The gallery has a skinned v2 asset, customization controls and prototype clips; the separate mall has an opt-in integration and two-level lift experiment. Physical product pickup/return, contact-calibrated cart/seating and geometry LOD are implemented locally; real-device and release acceptance remain outstanding. The supplied showcase is a visual concept and its numerical specifications are targets, not verified measurements.
+Status: development preview. The gallery has a skinned v2 asset, customization controls and prototype clips; the deployed mall uses v2 by default and retains an explicit v1 fallback, with two floors connected by a lift. Physical product pickup/return, contact-calibrated cart/seating and geometry LOD are implemented and verified locally; production checks are recorded in the consuming repository, while physical-device acceptance remains outstanding. The supplied showcase is a visual concept and its numerical specifications are targets, not verified measurements.
 
 ## Goal and visual direction
 
