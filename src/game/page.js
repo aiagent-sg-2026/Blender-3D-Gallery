@@ -490,6 +490,11 @@ export async function mountGame(root, assets, signal, onLeave) {
     void shoot({ id: uuid(), angle, ratio, strength: shotStrength(ratio) });
   }
   const handle = $("#power-handle");
+  // The power drag owns touches on the handle and its label, not page scrolling.
+  // Cancel native fling recognition so the next native button tap is preserved.
+  handle.addEventListener("touchstart", (e) => {
+    if (e.cancelable) e.preventDefault();
+  }, { signal, passive: false });
   handle.addEventListener("pointerdown", (e) => {
     if (!canCharge() || charge || e.button !== 0) return;
     e.preventDefault(); handle.focus();

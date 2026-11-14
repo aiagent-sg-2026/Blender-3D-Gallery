@@ -1,0 +1,85 @@
+[
+  {
+    "args": {
+      "vx": 0,
+      "vy": 2807.525634765625
+    },
+    "cat": "input",
+    "dur": 5,
+    "name": "FlingBooster::GetVelocityForFlingStart",
+    "ph": "X",
+    "pid": 1015981,
+    "tdur": 3,
+    "tid": 1015981,
+    "ts": 481443596579,
+    "tts": 136586
+  },
+  {
+    "args": {},
+    "cat": "input",
+    "name": "FilterTapSuppression",
+    "ph": "I",
+    "pid": 1015981,
+    "s": "t",
+    "tid": 1015981,
+    "ts": 481444571807,
+    "tts": 144419
+  },
+  {
+    "args": {},
+    "cat": "input",
+    "name": "FilterTapSuppression",
+    "ph": "I",
+    "pid": 1015981,
+    "s": "t",
+    "tid": 1015981,
+    "ts": 481444571849,
+    "tts": 144448
+  },
+  {
+    "args": {},
+    "cat": "input",
+    "name": "FilterTapSuppression",
+    "ph": "I",
+    "pid": 1015981,
+    "s": "t",
+    "tid": 1015981,
+    "ts": 481444571856,
+    "tts": 144449
+  },
+  {
+    "args": {
+      "chrome_latency_info": {
+        "component_info": [
+          {
+            "component_type": "COMPONENT_INPUT_EVENT_LATENCY_BEGIN_RWH",
+            "time_us": 481443596575
+          },
+          {
+            "component_type": "COMPONENT_INPUT_EVENT_LATENCY_ORIGINAL",
+            "time_us": 481443579247
+          }
+        ],
+        "is_coalesced": false,
+        "trace_id": 2720864125793793000
+      }
+    },
+    "cat": "benchmark,latencyInfo,rail,input.scrolling",
+    "id": "0x41",
+    "name": "InputLatency::GestureFlingStart",
+    "ph": "b",
+    "pid": 1015981,
+    "tid": 1015981,
+    "ts": 481443579247
+  },
+  {
+    "args": {},
+    "cat": "benchmark,latencyInfo,rail,input.scrolling",
+    "id": "0x41",
+    "name": "InputLatency::GestureFlingStart",
+    "ph": "e",
+    "pid": 1015981,
+    "tid": 1015981,
+    "ts": 481443596692
+  }
+]
