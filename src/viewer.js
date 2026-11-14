@@ -16,6 +16,8 @@ export default async function createViewer(
   const display = asset.details?.display;
   const lighting = display?.previewLighting;
   let vehicleToolbar;
+  let cartDemo;
+  let lastDraw = 0;
   let studio;
   let environmentTarget;
   const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -122,6 +124,7 @@ export default async function createViewer(
     controls.removeEventListener("change", invalidate);
     document.removeEventListener("visibilitychange", visibility);
     controls.dispose();
+    cartDemo?.dispose();
     disposeModel(model);
     disposeModel(studio);
     scene.environment = null;
@@ -188,7 +191,15 @@ export default async function createViewer(
       });
     }
     scene.add(model);
-    const bounds = new THREE.Box3().setFromObject(model);
+    if (asset.id === 'interactive-shopping-cart') {
+      const { default: createCartDemo } = await import('./shopping-cart/demo.js');
+      cartDemo = await createCartDemo({ model, scene, container, signal, invalidate });
+      if (disposed || signal.aborted) {
+        cartDemo.dispose();
+        throw new DOMException('Viewer closed', 'AbortError');
+      }
+    }
+    const bounds = new THREE.Box3().setFromObject(cartDemo?.group ?? model);
     if (bounds.isEmpty()) throw new Error("Model has no visible bounds");
     const center = bounds.getCenter(new THREE.Vector3());
     const size = bounds.getSize(new THREE.Vector3());
@@ -206,10 +217,10 @@ export default async function createViewer(
           ? new THREE.Vector3(1, 0.3, 0.25)
           : new THREE.Vector3(1, 0.9, 1)
     ).normalize();
-    const frameVehicle = (viewDirection) => {
+    const frameVehicle = (viewDirection, target = model) => {
       resize();
       // Include open doors in the bounds so a preset never cuts them off.
-      const visibleBounds = new THREE.Box3().setFromObject(model);
+      const visibleBounds = new THREE.Box3().setFromObject(target);
       const visibleCenter = visibleBounds.getCenter(new THREE.Vector3());
       const vertical = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
       const horizontal = vertical * camera.aspect;
@@ -228,11 +239,12 @@ export default async function createViewer(
     };
     const reset = () => {
       clearPreset();
+      cartDemo?.reset();
       if (doorRig) for (const [code, door] of Object.entries(doorRig)) {
         door.node.rotation.y = door.closed;
         doorButtons.get(code)?.setAttribute("aria-pressed", "false");
       }
-      if (isVehicle) { frameVehicle(direction); return; }
+      if (isVehicle || cartDemo) { frameVehicle(direction, cartDemo?.group ?? model); return; }
       resize();
       const vertical = THREE.MathUtils.degToRad(camera.fov / 2);
       const horizontal = Math.atan(Math.tan(vertical) * camera.aspect);
@@ -333,9 +345,12 @@ export default async function createViewer(
     draw = () => {
       frame = 0;
       if (disposed || document.hidden) return;
+      const now = performance.now();
+      const active = cartDemo?.update(lastDraw ? (now - lastDraw) / 1000 : 0);
+      lastDraw = now;
       const changed = controls.update();
       renderer.render(scene, camera);
-      if (changed) invalidate();
+      if (changed || active) invalidate();
     };
     invalidate();
     return { reset, dispose, setView };

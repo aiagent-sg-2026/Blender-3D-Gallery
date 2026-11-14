@@ -37,6 +37,10 @@ Demo entries have unique IDs/slugs, title, category, description, tags, technolo
 
 To add a model: retain source/provenance, add a catalog entry and standalone GLB/poster, validate rights and run tests/build. To add a demo: add registry content, implement an explicit lazy module branch and its lifecycle interface, extend the route allowlist, and test direct links plus disposal. Do not turn registry strings into arbitrary imports or evaluate code from JSON.
 
+## Interactive shopping cart
+
+The `interactive-shopping-cart` viewer loads a separate, reference-inspired cart GLB and the existing Mall Shopper only when that model is opened. The bounded demonstration supplies grab, push, steering, smooth stopping, release, one sample item and stopping at a fixed obstacle. Its movement, hand positioning and collision are viewer behavior, not general-purpose physics or character animation embedded in the GLB. The cart GLB itself retains independent wheel, steering and item clips. See [asset notes](../models/mall-basket-cart/README.md) for controls, budgets, checks and device limitations.
+
 ## Rendering and cache boundaries
 
 - Static indexes load posters and metadata; no GLB downloads or WebGL contexts are needed for their cards.

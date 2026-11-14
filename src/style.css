@@ -1256,6 +1256,13 @@ dialog {
 .vehicle-door-buttons button[aria-pressed="true"] { background: #e1d4b9; color: #202326; border-color: #e1d4b9; }
 .vehicle-door-buttons button:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
 .vehicle-door-unavailable { color: #c9c2b4; font-size: 12px; }
+.cart-demo { padding: 16px 24px; background: var(--surface); border-block: 1px solid var(--line); }
+.cart-demo strong { font-size: 14px; }
+.cart-demo-status { margin: 8px 0 12px; color: var(--muted); font-size: 13px; }
+.cart-demo-buttons { display: flex; flex-wrap: wrap; gap: 8px; }
+.cart-demo-buttons button { min-height: 44px; padding: 8px 14px; color: inherit; background: transparent; border: 1px solid #716b60; border-radius: 2px; }
+.cart-demo-buttons button:disabled { opacity: .45; }
+.cart-demo-buttons button:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
 @media (max-width: 600px) {
   .vehicle-door-buttons { width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .vehicle-door-buttons button { min-width: 0; padding-inline: 8px; }
