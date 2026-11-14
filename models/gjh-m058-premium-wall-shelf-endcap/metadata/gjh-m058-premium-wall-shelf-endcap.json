@@ -1,0 +1,154 @@
+{
+  "id": "gjh-m058-premium-wall-shelf-endcap",
+  "backlog_id": "GJH-M058",
+  "name": "Premium Wall Shelf Endcap",
+  "summary": "Wide open-sided endcap with rounded shelf noses and finished rear docking plane.",
+  "description": "Three independently editable front-radius shelves, narrow rear posts, finished back, supported LED diffusers and blank header. No tall side panels, X-bracing or embedded products.",
+  "category": "Shopping Mall",
+  "tags": [
+    "GJH-M058",
+    "premium",
+    "wall-shelf",
+    "modular",
+    "original",
+    "editable",
+    "LOD"
+  ],
+  "status": "validated",
+  "created": "2026-11-14",
+  "author": "Blender-3D-Gallery / agent-assisted procedural modeling",
+  "blender_version": "4.0.2",
+  "creation_method": "Blender Python original geometry and original baked PNG textures; user concept reference, not official brand artwork",
+  "generator": "generate.py",
+  "paths": {
+    "source": "sources/gjh-m058-premium-wall-shelf-endcap.blend",
+    "glb": "exports/optimized.glb",
+    "preview": "previews/hero.png",
+    "additional_previews": [
+      "previews/front.png",
+      "previews/rear.png",
+      "previews/side.png",
+      "previews/detail.png"
+    ],
+    "lods": [
+      "exports/lod0.glb",
+      "exports/lod1.glb",
+      "exports/lod2.glb",
+      "exports/lod3.glb"
+    ],
+    "collider": "exports/collision.glb"
+  },
+  "display": {
+    "units": "metres",
+    "up_axis": "Blender +Z / glTF +Y",
+    "front_axis": "Blender -Y / glTF +Z",
+    "origin": "floor centre",
+    "previewRotationY": 0
+  },
+  "accuracy_notes": "Conceptual reference-inspired furniture, not official branded merchandise. No structural, lighting-temperature, safety or accessibility certification.",
+  "rights": "Original geometry and materials; reuse in the owner's projects is authorized. Public redistribution terms have not been specified.",
+  "attribution": [
+    {
+      "credit": "Original procedural geometry and baked procedural wood/stone textures. User-supplied concept image used only as visual direction; no logos, packaging artwork or products copied."
+    }
+  ],
+  "budgets": {
+    "triangles": 15000,
+    "bytes": 3000000
+  },
+  "interaction": {
+    "manifest": "support-manifest.json",
+    "runtime": "Gallery orbit/zoom/reset; Inspector integration not yet implemented"
+  },
+  "qa": {
+    "render_review": "PASS: actual final hero/front/rear/side/detail/LOD1/2/3 PNG inspection; open sides and rounded noses distinguish endcap.",
+    "browser": "PASS: final GLB hash, orbit/zoom/reset, repeated reopen at 1440/768/390 Chromium viewports; actual 1440/390 initial screenshots inspected. Not physical devices.",
+    "physical_devices": "NOT TESTED",
+    "deployment": "NOT DEPLOYED",
+    "structure": "PASS: 4 LODs and collider zero Khronos errors/warnings; real rounded-corner/open-side/header-visibility rays, all five LED supports, stable anchors; reports/assets.json",
+    "source_edit": "PASS: saved-source copy edit/reopen/reexport and original unchanged; reports/sources.json",
+    "inspector": "NOT INTEGRATED",
+    "automatic_lod": "NOT IMPLEMENTED",
+    "product_loading": "NOT IMPLEMENTED"
+  },
+  "browseCategory": "Shopping Mall",
+  "measured_lods": [
+    {
+      "file": "exports/lod0.glb",
+      "lod": 0,
+      "result": "PASS",
+      "sha256": "88ba14641c356aa8363d9c2db65f85917e3fbebc8dc251f0b194d5098191c863",
+      "bytes": 863844,
+      "triangles": 11044,
+      "vertices": 21704,
+      "meshes": 27,
+      "dimensions": [
+        2.4000000953674316,
+        2.3999999053776264,
+        0.550000011920929
+      ],
+      "textures": 2,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "file": "exports/lod1.glb",
+      "lod": 1,
+      "result": "PASS",
+      "sha256": "86f5a544680cf54f08804064737760e93c9a95e4a699183b046953453256d9ba",
+      "bytes": 376916,
+      "triangles": 3812,
+      "vertices": 7432,
+      "meshes": 27,
+      "dimensions": [
+        2.4000000953674316,
+        2.3999999053776264,
+        0.550000011920929
+      ],
+      "textures": 2,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "file": "exports/lod2.glb",
+      "lod": 2,
+      "result": "PASS",
+      "sha256": "996cda26260132ef7f040b1d5c0df750842d4b3af2d814205ea3a1a3b2d96c27",
+      "bytes": 240552,
+      "triangles": 1580,
+      "vertices": 3284,
+      "meshes": 27,
+      "dimensions": [
+        2.4000000953674316,
+        2.3999999053776264,
+        0.550000011920929
+      ],
+      "textures": 2,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "file": "exports/lod3.glb",
+      "lod": 3,
+      "result": "PASS",
+      "sha256": "7d0ba8225eadc2011816c3cb894b62bc207600bc9a5f9ab31fdb96edebd4a26f",
+      "bytes": 157140,
+      "triangles": 388,
+      "vertices": 744,
+      "meshes": 27,
+      "dimensions": [
+        2.4000000953674316,
+        2.3999999053776264,
+        0.550000011920929
+      ],
+      "textures": 2,
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "dimensions_width_depth_height_m": [
+    2.4,
+    0.55,
+    2.4
+  ]
+}

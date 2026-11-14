@@ -1,0 +1,1 @@
+Post-render source review found the base diffuser inner face 2mm away from the stone base front. Other four LEDs were already checked. Corrected its centre Y from -.263 to -.261m and added an explicit base-front contact assertion; all four LODs/source and previews regenerated. Initial passing structure report did not cover this fifth support and is not final evidence.

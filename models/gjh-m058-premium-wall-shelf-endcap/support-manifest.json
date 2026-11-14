@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "model_id": "GJH-M058",
+  "asset_slug": "gjh-m058-premium-wall-shelf-endcap",
+  "source": "User-supplied concept image; no logo or artwork copied",
+  "dimension_convention": "glTF metres X width/Y height/Z depth",
+  "dimensions_m": [
+    2.4,
+    2.4,
+    0.55
+  ],
+  "parts": [
+    "cabinet",
+    "trim",
+    "brand_header",
+    "collision",
+    "shelf_1",
+    "LED_1",
+    "price_rail_1",
+    "product_anchor_row_1",
+    "shelf_2",
+    "LED_2",
+    "price_rail_2",
+    "product_anchor_row_2",
+    "shelf_3",
+    "LED_3",
+    "price_rail_3",
+    "product_anchor_row_3"
+  ],
+  "product_rows": [
+    {
+      "row": 1,
+      "min_items": 1,
+      "max_items": 8,
+      "anchors": [
+        "product_anchor_row_1_slot_01",
+        "product_anchor_row_1_slot_02",
+        "product_anchor_row_1_slot_03",
+        "product_anchor_row_1_slot_04",
+        "product_anchor_row_1_slot_05",
+        "product_anchor_row_1_slot_06",
+        "product_anchor_row_1_slot_07",
+        "product_anchor_row_1_slot_08"
+      ],
+      "product_asset_urls": []
+    },
+    {
+      "row": 2,
+      "min_items": 1,
+      "max_items": 8,
+      "anchors": [
+        "product_anchor_row_2_slot_01",
+        "product_anchor_row_2_slot_02",
+        "product_anchor_row_2_slot_03",
+        "product_anchor_row_2_slot_04",
+        "product_anchor_row_2_slot_05",
+        "product_anchor_row_2_slot_06",
+        "product_anchor_row_2_slot_07",
+        "product_anchor_row_2_slot_08"
+      ],
+      "product_asset_urls": []
+    },
+    {
+      "row": 3,
+      "min_items": 1,
+      "max_items": 8,
+      "anchors": [
+        "product_anchor_row_3_slot_01",
+        "product_anchor_row_3_slot_02",
+        "product_anchor_row_3_slot_03",
+        "product_anchor_row_3_slot_04",
+        "product_anchor_row_3_slot_05",
+        "product_anchor_row_3_slot_06",
+        "product_anchor_row_3_slot_07",
+        "product_anchor_row_3_slot_08"
+      ],
+      "product_asset_urls": []
+    }
+  ],
+  "lod_files": [
+    "exports/lod0.glb",
+    "exports/lod1.glb",
+    "exports/lod2.glb",
+    "exports/lod3.glb"
+  ],
+  "collision_file": "exports/collision.glb",
+  "runtime_gaps": [
+    "automatic LOD selection not implemented",
+    "product loading not implemented",
+    "physical Android/iOS testing not performed"
+  ],
+  "lighting": "Warm3000K-looking emissive material only; not a photometric promise",
+  "runtime_nodes": {
+    "shelves": [
+      "shelf_1",
+      "shelf_2",
+      "shelf_3"
+    ],
+    "leds": [
+      "LED_1",
+      "LED_2",
+      "LED_3",
+      "LED_header",
+      "LED_base"
+    ],
+    "brand_header": "brand_header",
+    "brand_header_panels": [
+      "brand_header_panel"
+    ],
+    "collision_descriptor": "collision"
+  },
+  "runtime_demo": {
+    "status": "planned_not_integrated",
+    "implemented": [],
+    "planned": [
+      "row highlight",
+      "LED toggle",
+      "header text",
+      "manual LOD selection",
+      "reset"
+    ],
+    "note": "Manifest contract only; M058 Inspector integration and its browser QA are not complete."
+  },
+  "runtime_header_surfaces": [
+    {
+      "anchor": "header_surface_front",
+      "width_m": 2.04,
+      "height_m": 0.36
+    }
+  ],
+  "rear_connection_anchors": [
+    "rear_connection_left",
+    "rear_connection_right"
+  ],
+  "runtime_limits": "Static asset contract only; no automatic LOD, product loading or Inspector support claimed"
+}
