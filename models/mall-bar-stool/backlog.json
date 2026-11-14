@@ -1,0 +1,29 @@
+{
+  "id": "shopping-mall-019",
+  "title": "Mall Bar Stool",
+  "root": "ASSET_MallBarStool",
+  "scope": "Original Shopping Mall list019; not global500 ID019",
+  "budget": {
+    "triangles": 8000,
+    "bytes": 800000,
+    "mesh_primitives": 40
+  },
+  "expected_dimensions_m": [
+    0.48,
+    1.04,
+    0.48
+  ],
+  "required_nodes": [
+    "FIXED_Base",
+    "FIXED_Column",
+    "FIXED_FootrestRing",
+    "MOVABLE_Swivel",
+    "SEAT_Shell",
+    "SEAT_Cushion",
+    "BACK_Shell",
+    "BACK_Cushion",
+    "BACK_Support_00",
+    "BACK_Support_01"
+  ],
+  "swivel_degrees": 90
+}

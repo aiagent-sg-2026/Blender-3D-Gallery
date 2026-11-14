@@ -1,0 +1,70 @@
+{
+  "id": "mall-bar-stool",
+  "backlog_id": "shopping-mall-019",
+  "name": "Mall Bar Stool",
+  "summary": "Original upholstered swivel bar stool with fixed circular footrest.",
+  "description": "Independently editable seat shell, upholstery, low backrest, supports, circular base, column and fixed footrest. Seat and back swivel together.",
+  "category": "Mall Fixtures",
+  "tags": [
+    "retail",
+    "bar-stool",
+    "seating",
+    "original",
+    "editable",
+    "animated"
+  ],
+  "status": "PASS local QA; remote CI/Pages pending",
+  "created": "2026-11-14",
+  "author": "Blender-3D-Gallery / agent-assisted procedural modeling",
+  "blender_version": "4.0.2",
+  "creation_method": "Original Blender Python geometry; no external assets, branding or textures",
+  "generator": "generate.py",
+  "paths": {
+    "source": "sources/mall-bar-stool.blend",
+    "glb": "exports/optimized.glb",
+    "preview": "previews/hero.png",
+    "additional_previews": [
+      "previews/front.png",
+      "previews/rear.png",
+      "previews/side.png",
+      "previews/swivel.png"
+    ]
+  },
+  "display": {
+    "units": "metres",
+    "up_axis": "Blender +Z / glTF +Y",
+    "front_axis": "Blender -Y / glTF +Z",
+    "origin": "floor centre",
+    "previewRotationY": 0
+  },
+  "accuracy_notes": "Illustrative furniture; no safety, load, ergonomic or accessibility certification.",
+  "rights": "Original geometry and materials; reuse in the owner's projects is authorized. Public redistribution terms have not been specified.",
+  "attribution": [
+    {
+      "credit": "Original procedural geometry; no external assets."
+    }
+  ],
+  "budgets": {
+    "triangles": 8000,
+    "bytes": 800000,
+    "mesh_primitives": 40
+  },
+  "interaction": {
+    "root": "ASSET_MallBarStool",
+    "clips": [
+      "SeatSwivel"
+    ],
+    "duration_seconds": 2.5,
+    "swivel_degrees": 90
+  },
+  "qa": {
+    "physical_devices": "NOT TESTED",
+    "deployment": "NOT DEPLOYED",
+    "render_review": "PASS actual five Blender views plus desktop/mobile-width Gallery and isolated swivel browser screenshots inspected",
+    "browser": "PASS: Gallery 1440/768/390 and isolated Three.js animation; reports/browser/results.json and animation-browser/results.json",
+    "source_edit": "PASS: reports/sources.json and verify-source.log; saved source edit reexport",
+    "structure": "PASS: reports/assets.json; 60 sampled poses, stationary base and footrest matrix invariance, no moving/fixed OBB collision",
+    "focused_tests": "PASS: 3/3; reports/focused-test.log",
+    "build": "PASS: reports/build.log"
+  }
+}

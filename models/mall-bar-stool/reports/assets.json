@@ -1,0 +1,47 @@
+{
+  "result": "PASS",
+  "id": "Mall Bar Stool",
+  "backlog_id": "shopping-mall-019",
+  "sha256": "2f0c87ba633c833cf0ab622603c7fff1728a98f05a71be5eb07b6c5848cc756e",
+  "glb_bytes": 272972,
+  "triangles": 5544,
+  "vertices": 10416,
+  "primitives": 15,
+  "materials": 5,
+  "textures": 0,
+  "animations": 1,
+  "dimensions": [
+    0.47999998927116394,
+    1.040000058710575,
+    0.47999998927116394
+  ],
+  "bounds": {
+    "min": [
+      -0.23999999463558197,
+      0,
+      -0.23999999463558197
+    ],
+    "max": [
+      0.23999999463558197,
+      1.040000058710575,
+      0.23999999463558197
+    ]
+  },
+  "budget": {
+    "triangles": 8000,
+    "bytes": 800000,
+    "mesh_primitives": 40
+  },
+  "animation": {
+    "frames": 60,
+    "opening_degrees": 90.00000965934632,
+    "collision_method": "World OBB conservative boxes: six swivel meshes against nine stationary base/footrest meshes; all fixed world matrices checked",
+    "moving_meshes": 6,
+    "fixed_meshes": 9
+  },
+  "validation": {
+    "errors": 0,
+    "warnings": 0,
+    "validator": "2.0.0-dev.3.10"
+  }
+}
