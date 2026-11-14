@@ -1,0 +1,74 @@
+{
+  "browser": "156.0.8078.4",
+  "scope": "Desktop Chromium; touch viewport emulation, not physical iOS/Android",
+  "results": [
+    {
+      "name": "desktop-controls-lods-resources",
+      "status": "PASS"
+    },
+    {
+      "name": "rapid-load-failure-navigation",
+      "status": "PASS"
+    },
+    {
+      "name": "mobile-touch",
+      "status": "PASS"
+    },
+    {
+      "name": "mobile-gesture-guards",
+      "status": "PASS"
+    },
+    {
+      "name": "corner-controls-lods-and-ownership",
+      "status": "PASS"
+    },
+    {
+      "name": "corner-touch-viewport",
+      "status": "PASS"
+    },
+    {
+      "name": "endcap-controls-lods-and-ownership",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'GJH-M062'\n- 'GJH-M058'\n         ^\n\n    at file:///srv/agent-workstation/workspaces/blender-gjh-m062-20261114/repo/scripts/test-shelf-inspector-browser.mjs:133:477\n    at async run (file:///srv/agent-workstation/workspaces/blender-gjh-m062-20261114/repo/scripts/test-shelf-inspector-browser.mjs:29:1393)\n    at async file:///srv/agent-workstation/workspaces/blender-gjh-m062-20261114/repo/scripts/test-shelf-inspector-browser.mjs:121:1"
+    },
+    {
+      "name": "endcap-touch-viewport",
+      "status": "PASS"
+    },
+    {
+      "name": "narrow-controls-lods-and-ownership",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'GJH-M062'\n- 'GJH-M059'\n         ^\n\n    at file:///srv/agent-workstation/workspaces/blender-gjh-m062-20261114/repo/scripts/test-shelf-inspector-browser.mjs:155:477\n    at async run (file:///srv/agent-workstation/workspaces/blender-gjh-m062-20261114/repo/scripts/test-shelf-inspector-browser.mjs:29:1393)\n    at async file:///srv/agent-workstation/workspaces/blender-gjh-m062-20261114/repo/scripts/test-shelf-inspector-browser.mjs:143:1"
+    },
+    {
+      "name": "narrow-touch-viewport",
+      "status": "PASS"
+    },
+    {
+      "name": "wide-controls-lods-and-ownership",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'GJH-M062'\n- 'GJH-M060'\n          ^\n\n    at file:///srv/agent-workstation/workspaces/blender-gjh-m062-20261114/repo/scripts/test-shelf-inspector-browser.mjs:177:477\n    at async run (file:///srv/agent-workstation/workspaces/blender-gjh-m062-20261114/repo/scripts/test-shelf-inspector-browser.mjs:29:1393)\n    at async file:///srv/agent-workstation/workspaces/blender-gjh-m062-20261114/repo/scripts/test-shelf-inspector-browser.mjs:165:1"
+    },
+    {
+      "name": "wide-touch-viewport",
+      "status": "PASS"
+    },
+    {
+      "name": "low-controls-lods-and-ownership",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'GJH-M062'\n- 'GJH-M061'\n          ^\n\n    at file:///srv/agent-workstation/workspaces/blender-gjh-m062-20261114/repo/scripts/test-shelf-inspector-browser.mjs:199:640\n    at async run (file:///srv/agent-workstation/workspaces/blender-gjh-m062-20261114/repo/scripts/test-shelf-inspector-browser.mjs:29:1393)\n    at async file:///srv/agent-workstation/workspaces/blender-gjh-m062-20261114/repo/scripts/test-shelf-inspector-browser.mjs:187:1"
+    },
+    {
+      "name": "low-touch-viewport",
+      "status": "PASS"
+    },
+    {
+      "name": "curved-controls-lods-and-ownership",
+      "status": "PASS"
+    },
+    {
+      "name": "curved-touch-viewport",
+      "status": "PASS"
+    }
+  ]
+}

@@ -103,8 +103,18 @@
     "collision_descriptor": "collision"
   },
   "runtime_demo": {
-    "status": "planned_not_integrated",
-    "implemented": []
+    "status": "implemented_local_browser_verified",
+    "route": "?page=shelf-inspector",
+    "implemented": [
+      "seven-fixture selection",
+      "2 row highlights",
+      "6 LED strips toggled together",
+      "single concept header",
+      "manual LOD0-3 selection",
+      "reset",
+      "latest-wins loading/disposal"
+    ],
+    "note": "Local integrated seven-fixture Chromium desktop/390px touch evidence only; not CI/live/physical-device verification. docs/shelf-inspector-m061-m062-qa.md"
   },
   "runtime_header_surfaces": [
     {
@@ -113,6 +123,6 @@
       "height_m": 0.16
     }
   ],
-  "runtime_limits": "Inspector not integrated for this two-row model. No automatic LOD, product loading or physical device testing.",
+  "runtime_limits": "Manual LOD only; no automatic LOD, product loading or physical Android/iOS testing.",
   "dimension_interpretation": "Low cabinet at 2.4 x 0.55 x 1.2 m, deliberately differing from the backlog uniform 2.4 m height; not a claim of matching that original envelope."
 }

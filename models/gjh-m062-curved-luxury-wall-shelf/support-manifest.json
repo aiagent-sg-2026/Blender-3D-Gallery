@@ -116,8 +116,18 @@
     "collision_descriptor": "collision"
   },
   "runtime_demo": {
-    "status": "planned_not_integrated",
-    "implemented": []
+    "status": "implemented_local_browser_verified",
+    "route": "?page=shelf-inspector",
+    "implemented": [
+      "seven-fixture selection",
+      "3 row highlights",
+      "5 LED strips toggled together",
+      "single concept header",
+      "manual LOD0-3 selection",
+      "reset",
+      "latest-wins loading/disposal"
+    ],
+    "note": "Local integrated seven-fixture Chromium desktop/390px touch evidence only; not CI/live/physical-device verification. docs/shelf-inspector-m061-m062-qa.md"
   },
   "runtime_header_surfaces": [
     {
@@ -126,7 +136,7 @@
       "height_m": 0.36
     }
   ],
-  "runtime_limits": "Inspector not integrated. No automatic LOD, product loading or physical-device testing.",
+  "runtime_limits": "Manual LOD only; no automatic LOD, product loading or physical Android/iOS testing.",
   "curve": {
     "front_y_blender": "-0.25+0.10*(x/1.036)^2",
     "front_bulge_m": 0.1,

@@ -1,6 +1,6 @@
 # GJH-M062 Curved Luxury Wall Shelf
 
-Local asset QA: **PASS**. Inspector: **NOT INTEGRATED**. This local report does not verify remote CI/deployment; see subsequent release records.
+Local asset QA: **PASS**. Inspector: **PASS (local integrated Chromium tests)**. This local report does not verify remote CI/deployment; see subsequent release records.
 
 ## Actual design
 Real outer envelope 2.4 × 0.55 × 2.4 m (width/depth/height), matching the backlog dimensions. Three separate single-span **horizontal** boards have a shallow curved front, matching independent gold rails and curved under-shelf LED strips. The Blender front follows `y = -0.25 + 0.10*(x/1.036)^2`: the centre projects 0.10 m beyond the ends. Rear edge is straight at y=0.21 m for a flat wall-facing back. The display surface is not vertically curved. LOD curve subdivisions are 24/12/8/4 with rounded manufactured edges on LOD0–2.
@@ -30,4 +30,6 @@ All eight PNG previews were actually inspected: arc readable in side/detail view
 Gallery1440/768/390 checks validate actual consumedGLB SHA, rendering, orbit/zoom/reset, close/reopen and teardown. Actual1440/390initial screenshots were visually inspected. These are Chromium viewport tests, not physical Android/iOS tests.
 
 ## Integration limits
-`support-manifest.json` exposes three single-board rows, five LEDnodes and the1.92×0.36m frontheader surface. Inspector support remains planned/not integrated in this slice. No automaticLOD, product loading or physical-device claim. Existing558assets and collection objects preserved; onlyM062added (`reports/catalog-preservation.json`). Rights/provenance: `LICENSE.md` and metadata.
+`support-manifest.json` exposes three single-board rows, five LEDnodes and the1.92×0.36m frontheader surface. Inspector supports three row highlights, five LED strips, one concept header, four manual LODs and reset. No automaticLOD, product loading or physical-device claim. Existing558assets and collection objects preserved; onlyM062added (`reports/catalog-preservation.json`). Rights/provenance: `LICENSE.md` and metadata.
+
+Integrated seven-fixture local evidence: `../../docs/shelf-inspector-m061-m062-qa.md`. No remote CI, publication or real-device claim.

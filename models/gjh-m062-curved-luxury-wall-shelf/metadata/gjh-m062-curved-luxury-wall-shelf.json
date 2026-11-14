@@ -62,12 +62,12 @@
   },
   "interaction": {
     "manifest": "support-manifest.json",
-    "runtime": "Gallery only; Inspector not integrated"
+    "runtime": "Gallery orbit/zoom/reset; Shelf Inspector seven-fixture switching, 3 row highlights, 5 LED strips, concept header, manual four LODs and reset."
   },
   "qa": {
     "render_review": "PASS: actual eight PNG previews plus decoded384px WebP inspected",
     "browser": "PASS: 1440/768/390 Gallery; actual consumed GLB hash, orbit/zoom/reset/reopen. 1440/390 initial pixels inspected",
-    "inspector": "NOT INTEGRATED",
+    "inspector": "PASS locally: integrated seven-fixture units/build and all16 Shelf cases after four test-cycle target corrections; strict GPU/reset/hash checks retained. Actual desktop/mobile images inspected. docs/shelf-inspector-m061-m062-qa.md",
     "physical_devices": "NOT TESTED",
     "deployment": "Local report does not verify remote CI/deployment; see subsequent release records",
     "structural": "PASS: reports/assets.json; Khronos zero errors/warnings across 4LOD/collider",

@@ -1,6 +1,6 @@
 # GJH-M061 Premium Wall Shelf Low
 
-Local asset QA: **PASS**. Inspector: **NOT INTEGRATED**. This local report does not verify remote CI/deployment; see subsequent release records.
+Local asset QA: **PASS**. Inspector: **PASS (local integrated Chromium tests)**. This local report does not verify remote CI/deployment; see subsequent release records.
 
 ## Deliberate dimension interpretation
 The original backlog repeats 2.4 × 0.55 × 2.4 m for this named low variant. This asset deliberately uses **2.4 × 0.55 × 1.2 m** (width/depth/height) to form a recognizably low cabinet. It does not claim conformity to the original 2.4 m height. The actual glTF envelope is approximately [2.400000095, 1.199999966, 0.550000012] m in X/Y/Z.
@@ -30,4 +30,6 @@ All eight actual PNG previews were inspected, including rear and all three reduc
 Gallery tests passed at 1440/768/390 widths, checking the actual consumed GLB SHA-256, rendering, orbit/zoom/reset, close/reopen and render-loop teardown. Final 1440 and 390 initial screenshots were visually inspected. These are Chromium viewport tests, not physical Android/iOS tests.
 
 ## Runtime and release limits
-`support-manifest.json` exposes two row groups (each with two boards), six LED nodes and a front-facing 1.92 × 0.16 m header surface. Inspector integration for this **two-row** variant is not implemented in this asset slice. No automatic LOD, product loading, physical-device or deployment claim. Existing 557 assets and collection objects are preserved, adding only M061 (`reports/catalog-preservation.json`). No public redistribution license is invented; see `LICENSE.md`.
+`support-manifest.json` exposes two row groups (each with two boards), six LED nodes and a front-facing 1.92 × 0.16 m header surface. Inspector now supports the two-row variant with Lower/Upper controls, both boards per row highlighted, six LED strips, one concept header, four manual LODs and reset; switching from row3 to two rows clears invalid selection to All shelves. No automatic LOD, product loading, physical-device or deployment claim. Existing 557 assets and collection objects are preserved, adding only M061 (`reports/catalog-preservation.json`). No public redistribution license is invented; see `LICENSE.md`.
+
+Integrated seven-fixture local evidence: `../../docs/shelf-inspector-m061-m062-qa.md`. No remote CI, publication or real-device claim.
