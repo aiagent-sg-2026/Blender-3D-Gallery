@@ -36,8 +36,17 @@ await run('desktop-controls-lods-resources',{},async(page)=>{
  await page.locator('[data-action=reset]').click();assert.equal(hash(await canvas.screenshot()),initial);
  await canvas.focus();await canvas.press('Shift');console.log('focus-before',await canvas.evaluate(el=>({outline:getComputedStyle(el).outline,visible:el.matches(':focus-visible')})));const focused=hash(await canvas.screenshot());await canvas.press('ArrowRight');assert.notEqual(hash(await canvas.screenshot()),focused);await canvas.press('Home');console.log('focus-after',await canvas.evaluate(el=>({outline:getComputedStyle(el).outline,visible:el.matches(':focus-visible')})));assert.equal(hash(await canvas.screenshot()),focused);
  for(const n of [1,2,3]){await page.locator('#si-lod').selectOption(String(n));await ready(page,n);assert.equal(loaded.at(-1).hash,expected[n]);await canvas.screenshot({path:`${out}/lod${n}.png`});}
- await page.locator('[data-action=reset]').click();await ready(page);const baseline=await page.evaluate(()=>window.shelfGPU());
- for(let n=0;n<8;n++){await page.locator('#si-title').fill('CONCEPT '+n);await page.locator('[data-action=title]').click();await canvas.screenshot();}await page.locator('[data-action=reset]').click();await canvas.screenshot();assert.deepEqual(await page.evaluate(()=>window.shelfGPU()),baseline);
+ await page.evaluate(()=>{window.shelfReadySample=null;const stage=document.querySelector('.si-stage');const observer=new MutationObserver(()=>{if(stage.dataset.state==='ready'){window.shelfReadySample={gpu:window.shelfGPU(),draws:window.shelfDraws};observer.disconnect();}});observer.observe(stage,{attributes:true,attributeFilter:['data-state']});});
+ await page.locator('[data-action=reset]').click();await ready(page);
+ // Loader readiness precedes the invalidated RAF. Sample both GPU states only after
+ // a rendered frame; verify the baseline is the same original LOD0, not a blank frame.
+ const readyEvent=await page.evaluate(()=>window.shelfReadySample);
+ const beforeFrame=await page.evaluate(()=>({gpu:window.shelfGPU(),draws:window.shelfDraws}));
+ assert.equal(hash(await canvas.screenshot({path:`${out}/gpu-baseline-lod0.png`})),initial);
+ const baseline=await page.evaluate(()=>window.shelfGPU());
+ const afterFrame=await page.evaluate(()=>({gpu:window.shelfGPU(),draws:window.shelfDraws}));
+ await fs.writeFile(`${out}/gpu-sampling.json`,JSON.stringify({readyEvent,beforeFrame,afterFrame},null,2));
+ for(let n=0;n<8;n++){await page.locator('#si-title').fill('CONCEPT '+n);await page.locator('[data-action=title]').click();await canvas.screenshot();}await page.locator('[data-action=reset]').click();await canvas.screenshot();const afterCycles=await page.evaluate(()=>({gpu:window.shelfGPU(),draws:window.shelfDraws}));await fs.writeFile(`${out}/gpu-sampling.json`,JSON.stringify({readyEvent,beforeFrame,afterFrame,afterCycles},null,2));assert.deepEqual(afterCycles.gpu,baseline);
  const draws=await page.evaluate(()=>window.shelfDraws);await page.waitForTimeout(200);assert.equal(await page.evaluate(()=>window.shelfDraws),draws,'idle scene must not continuously render');
  await page.locator('#demo-breadcrumb a').click();await page.waitForSelector('.demo-card');assert.equal(await page.locator('canvas').count(),0);assert.equal(await page.evaluate(()=>window.shelfContexts.length>0&&window.shelfContexts.every(gl=>gl.isContextLost())),true,'detached renderer contexts must be lost; all their GPU resources become invalid');assert.equal(await page.evaluate(()=>window.shelfGPU().Program),0,'programs explicitly disposed before context loss');
  await page.locator('.demo-card[data-demo-id="shelf-inspector"] h2 a').click();await ready(page);assert.equal(await page.locator('canvas').count(),1);

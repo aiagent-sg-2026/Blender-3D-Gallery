@@ -43,3 +43,15 @@ node scripts/test-shelf-inspector-browser.mjs
 ```
 
 For targeted diagnosis, `SHELF_TEST=corner-controls-lods-and-ownership` or `SHELF_TEST=corner-touch-viewport` selects one scenario. `TEST_ARTIFACT_DIR` selects a new output directory. Tests use the local built app, not a remote production URL. Keep previous failures rather than overwriting them.
+
+## Integration sampling correction (2026-11-14)
+
+On integrated candidate `254f6a5d`, parent integration job `85c601e9` retained a real test failure: the original M056 desktop GPU assertion sampled Buffer 1 / Texture 6 / Program 0 as its baseline, versus 98 / 8 / 2 after the title cycles. No production leak fix or test tolerance change was applied.
+
+Inspection showed `commit()` marks the scene ready and `view()` schedules rendering with requestAnimationFrame; readiness is not a GPU-render fence. The test had sampled immediately after LOD3-to-LOD0 reset but sampled the comparison after screenshots. A MutationObserver now records the actual ready event: **1 / 6 / 0, draw count 324**. After the first rendered frame: **98 / 8 / 2, draw count 353**. After eight header changes and reset: **98 / 8 / 2, draw count 622**. Thus the original low baseline was pre-render allocation state, not retained resources from title changes.
+
+The bounded test correction takes a canvas screenshot before the baseline and additionally requires its exact hash to equal the original LOD0 image. The original strict resource equality, idle-render, context-loss and program-disposal assertions remain. No production code, asset, CI or unrelated tests changed.
+
+Focused original desktop case passed in `c221310d-6322-49fb-a26e-eee617963868`; diagnostic ready-event run `2d37d7d4-0f7d-4a93-8049-3b42ef3df1b0` also passed (about 10 seconds). Other cases were not redundantly rerun. This is local Chromium evidence, not a new CI/deployment result. Original integration output was not overwritten.
+
+Evidence: `docs/qa/shelf-inspector-m057/integration345-gpu-sampling.json` and `integration345-focused-results.json`.
