@@ -1,0 +1,12 @@
+DIAGNOSTIC {"state":{"coordinates":"meters: x along table, z across; Y up","phase":"moving","revision":1,"player":0,"groups":[null,null],"winner":null,"break":true,"balls":[{"id":0,"x":-0.8838896158208924,"z":-0.005963615953363128,"vx":1.0052035578807457,"vz":-0.14235557549553632,"pocketed":false},{"id":1,"x":0.651506318894832,"z":0.05745,"vx":0,"vz":0,"pocketed":false},{"id":2,"x":0.651506318894832,"z":-0.05745,"vx":0,"vz":0,"pocketed":false},{"id":3,"x":0.751012637789664,"z":-0.1149,"vx":0,"vz":0,"pocketed":false},{"id":4,"x":0.7012594783422481,"z":-0.086175,"vx":0,"vz":0,"pocketed":false},{"id":5,"x":0.751012637789664,"z":0,"vx":0,"vz":0,"pocketed":false},{"id":6,"x":0.751012637789664,"z":0.05745,"vx":0,"vz":0,"pocketed":false},{"id":7,"x":0.7012594783422481,"z":-0.028725,"vx":0,"vz":0,"pocketed":false},{"id":8,"x":0.651506318894832,"z":0,"vx":0,"vz":0,"pocketed":false},{"id":9,"x":0.7012594783422481,"z":0.086175,"vx":0,"vz":0,"pocketed":false},{"id":10,"x":0.751012637789664,"z":-0.05745,"vx":0,"vz":0,"pocketed":false},{"id":11,"x":0.751012637789664,"z":0.1149,"vx":0,"vz":0,"pocketed":false},{"id":12,"x":0.601753159447416,"z":0.028725,"vx":0,"vz":0,"pocketed":false},{"id":13,"x":0.552,"z":0,"vx":0,"vz":0,"pocketed":false},{"id":14,"x":0.601753159447416,"z":-0.028725,"vx":0,"vz":0,"pocketed":false},{"id":15,"x":0.7012594783422481,"z":0.028725,"vx":0,"vz":0,"pocketed":false}],"aim":-0.14068312625591226,"power":0.30186914990721153,"pullRatio":0,"interaction":"idle","charging":false,"striking":false,"shotId":"bb0211ba-39e0-4e45-9622-e07cdafd70b5","committedShots":1,"lastContactTipDistance":-9.71445146547012e-17,"maxDragDistance":454,"cueTipDistance":0.04253056748917461,"cameraSpan":{"width":2.8209836065573772,"height":1.62},"intentRatio":null,"cueOffset":0,"strikeElapsed":0,"message":"Balls are moving…","ready":true,"contextLost":false,"ownership":true,"saveFailed":false,"inspection":false,"delivery":false,"guide":null,"lastResult":""},"menu":false,"focus":"BODY","events":[["pointerdown","BUTTON","pause"],["touchstart","BUTTON","pause"],["pointerup","BUTTON","pause"],["touchend","BUTTON","pause"]],"clock":2}
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+page.waitForFunction: Timeout 30000ms exceeded.
+    at /srv/agent-workstation/workspaces/blender-next-asset-20261114/repo/scripts/test-game-responsive.mjs:201:22 {
+  log: [],
+  name: 'TimeoutError'
+}
+
+Node.js v22.23.3
