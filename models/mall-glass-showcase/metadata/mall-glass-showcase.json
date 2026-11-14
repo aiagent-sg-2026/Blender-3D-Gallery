@@ -1,0 +1,119 @@
+{
+  "id": "mall-glass-showcase",
+  "backlog_id": "shopping-mall-011",
+  "name": "Mall Glass Showcase",
+  "summary": "Upright unbranded modular retail glass showcase with three editable shelves and an opening door.",
+  "description": "Original illustrative metric retail display tower. Transparent glass leaves the shelf interior visible; the door, hinge pivot, handle, frame and shelves are independently editable.",
+  "category": "Mall Fixtures",
+  "tags": [
+    "mall",
+    "retail",
+    "display",
+    "showcase",
+    "glass",
+    "shelves",
+    "original",
+    "unbranded",
+    "editable",
+    "animated"
+  ],
+  "status": "PASS local QA; deployment pending",
+  "created": "2026-11-14",
+  "author": "Blender-3D-Gallery / agent-assisted procedural modeling",
+  "blender_version": "4.0.2",
+  "creation_method": "Original deterministic Blender Python geometry and materials; no external assets, textures, merchandise, or brands.",
+  "generator": "generate.py",
+  "paths": {
+    "source": "sources/mall-glass-showcase.blend",
+    "glb": "exports/optimized.glb",
+    "preview": "previews/hero.png",
+    "additional_previews": [
+      "previews/front.png",
+      "previews/rear.png",
+      "previews/side.png",
+      "previews/open.png"
+    ]
+  },
+  "display": {
+    "units": "metres",
+    "up_axis": "Blender +Z / glTF +Y",
+    "front_axis": "Blender -Y / glTF +Z",
+    "origin": "floor centre",
+    "previewRotationY": 0,
+    "studioEnvironment": true,
+    "environmentIntensity": 0.8
+  },
+  "accuracy_notes": "Illustrative generic retail display tower, not a surveyed fixture, load-rated shelving, safety glazing, building product, merchandise display, or certification. No fake merchandise or product claims are included.",
+  "rights": "Original geometry and materials; reuse in the owner's projects is authorized. Public redistribution terms have not been specified.",
+  "attribution": [
+    {
+      "credit": "Original procedural geometry and materials. No external assets, brands, labels, merchandise, or copied models."
+    }
+  ],
+  "budgets": {
+    "triangles": 10000,
+    "primitives": 80,
+    "glb_bytes": 1000000
+  },
+  "interaction": {
+    "root": "ASSET_MallGlassShowcase",
+    "clips": [
+      "DoorOpenClose"
+    ],
+    "duration_seconds": 2.5,
+    "frames": [
+      1,
+      30,
+      60
+    ],
+    "open_pose_frame": 30,
+    "mutually_exclusive": true
+  },
+  "qa": {
+    "source_edit": "PASS geometry/material saved-copy edit, reopen/export and canonical source unchanged",
+    "browser": "PASS Chromium gallery1440/768/390 plus isolated Three.js animation pixel change and reset; not gallery animation controls",
+    "render_review": "PASS five actual previews inspected; corrected open camera framing",
+    "physical_devices": "NOT TESTED",
+    "deployment": "PENDING CI/Pages"
+  },
+  "metrics": {
+    "result": "PASS",
+    "id": "Mall Glass Showcase",
+    "backlog_id": "shopping-mall-011",
+    "sha256": "782d911730aaa428d684df9695a2be159802ace7ad8be353dadb8d85efcd2179",
+    "glb_bytes": 96840,
+    "triangles": 1712,
+    "vertices": 3312,
+    "primitives": 20,
+    "materials": 5,
+    "textures": 0,
+    "animations": 1,
+    "dimensions": [
+      0.75,
+      1.8000000286847353,
+      0.5320000108331442
+    ],
+    "bounds": {
+      "min": [
+        -0.375,
+        0,
+        -0.25
+      ],
+      "max": [
+        0.375,
+        1.8000000286847353,
+        0.2820000108331442
+      ]
+    },
+    "budget": {
+      "triangles": 10000,
+      "bytes": 1000000,
+      "mesh_primitives": 80
+    },
+    "validation": {
+      "errors": 0,
+      "warnings": 0,
+      "validator": "2.0.0-dev.3.10"
+    }
+  }
+}

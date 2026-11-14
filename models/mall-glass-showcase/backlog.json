@@ -1,0 +1,30 @@
+{
+  "id": "shopping-mall-011",
+  "title": "Mall Glass Showcase",
+  "root": "ASSET_MallGlassShowcase",
+  "scope": "Original Shopping Mall list 011; upright modular retail display tower, illustrative only.",
+  "budget": {
+    "triangles": 10000,
+    "bytes": 1000000,
+    "mesh_primitives": 80
+  },
+  "expected_dimensions_m": [
+    0.75,
+    1.8,
+    0.532
+  ],
+  "required_nodes": [
+    "FRAME_Left",
+    "FRAME_Right",
+    "GLASS_Side_Left",
+    "GLASS_Side_Right",
+    "GLASS_Back",
+    "MOVABLE_Door",
+    "DOOR_Handle",
+    "SHELF_01",
+    "SHELF_02",
+    "SHELF_03",
+    "PLINTH"
+  ],
+  "dimensions_axes": "glTF world X width, Y height, Z depth"
+}
