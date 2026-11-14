@@ -129,8 +129,18 @@
     "collision_descriptor": "collision"
   },
   "runtime_demo": {
-    "status": "planned_not_integrated",
-    "implemented": []
+    "status": "implemented_local_browser_verified",
+    "route": "?page=shelf-inspector",
+    "implemented": [
+      "five-fixture selection",
+      "three grouped row highlights affecting both bay boards",
+      "eight LED strips toggled together",
+      "single anchored concept header text",
+      "manual LOD0-3 selection",
+      "reset",
+      "latest-wins loading and disposal"
+    ],
+    "note": "Desktop Chromium and 390px touch emulation verified; no physical-device, automatic LOD or deployment claim. docs/shelf-inspector-m060-qa.md"
   },
   "runtime_header_surfaces": [
     {
@@ -139,5 +149,5 @@
       "height_m": 0.36
     }
   ],
-  "runtime_limits": "M060 Inspector not integrated; no automatic LOD or external product loading."
+  "runtime_limits": "Manual LOD only; no automatic LOD, product loading or physical Android/iOS testing."
 }

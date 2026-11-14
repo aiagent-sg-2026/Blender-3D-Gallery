@@ -1,13 +1,13 @@
 # GJH-M060 Premium Wall Shelf Wide
 
-Local asset QA: **PASS**. Inspector integration: **NOT INTEGRATED**. This local report does not verify remote CI or deployment; see subsequent release records.
+Local asset QA: **PASS**. Inspector integration: **PASS (local Chromium desktop/touch emulation)**. This local report does not verify remote CI or deployment; see subsequent release records.
 
 ## Design and editable contract
 Original double-bay cabinet, nominal and measured envelope 2.4 × 0.55 × 2.4 m (width/depth/height). A central supporting upright divides three display rows into six independently editable wooden boards, distinguishing it from M056 single-span and M058 open-sided endcap. Deep green lacquer, champagne-coloured trim, original wood/stone PNG textures, eight independent LEDs and one blank header. No X-brace, branded artwork, products, certified structural/load or lighting-temperature claims.
 
 Blender +Z up / -Y front exports as glTF +Y up / +Z front. Floor-centre origin; metre units. All four LODs preserve 42 mesh names and 18 product anchors. Each row group `shelf_1` through `shelf_3` contains left/right board meshes. Each bay has three anchors per row. A 0.20 × 0.22 m reference footprint is checked against its own board, with 0.115 m within-bay separation and at least 0.06 m side clearance. Anchors describe placement only, not implemented product loading.
 
-`support-manifest.json` records row groups, eight LED nodes, header anchor and conservative independent collider. The 1.92 × 0.36 m header surface uses local +Z outward / +Y upward. Four exported LOD files are available, but automatic LOD and Inspector controls are not implemented for this model in this local slice.
+`support-manifest.json` records row groups, eight LED nodes, header anchor and conservative independent collider. The 1.92 × 0.36 m header surface uses local +Z outward / +Y upward. Shelf Inspector supports fifth-fixture selection, grouped row highlight across both boards, eight LED strips toggled together, single header text, four manual LODs and reset. See `../../docs/shelf-inspector-m060-qa.md`. Automatic LOD remains unimplemented.
 
 ## Measured exports
 
@@ -30,4 +30,4 @@ Final three focused tests, build and Gallery 1440/768/390 loading/orbit/zoom/res
 Eight full PNG previews remain available. The catalog uses a visually inspected 384 × 384 WebP thumbnail, 11,510 bytes; source-image hash and decode evidence are in `reports/thumbnail.json`.
 
 ## Limits and preservation
-No physical Android/iOS device testing, automatic LOD, external product loading, or runtime part-highlight claim. Browser widths are Chromium desktop/emulated viewport tests. Existing 556 catalog entries and collection objects remain unchanged; this local slice adds only M060. Original procedural content provenance and redistribution limitations are in `LICENSE.md` and metadata.
+No physical Android/iOS device testing, automatic LOD or external product loading. Runtime row highlight is verified locally; product anchors remain static metadata. Browser widths are Chromium desktop/emulated viewport tests. Existing 556 catalog entries and collection objects remain unchanged; this local slice adds only M060. Original procedural content provenance and redistribution limitations are in `LICENSE.md` and metadata.

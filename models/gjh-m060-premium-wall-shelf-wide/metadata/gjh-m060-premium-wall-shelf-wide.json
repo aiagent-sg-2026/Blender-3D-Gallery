@@ -62,7 +62,7 @@
   },
   "interaction": {
     "manifest": "support-manifest.json",
-    "runtime": "Gallery orbit/zoom/reset only; Inspector integration not yet implemented"
+    "runtime": "Gallery orbit/zoom/reset; Shelf Inspector five-fixture selection, three grouped rows/both bay boards highlighted, eight LEDs, single header text, manual four LODs and reset."
   },
   "qa": {
     "structural": "PASS: reports/assets.json; four LODs and collider have zero Khronos errors/warnings",
@@ -73,7 +73,7 @@
     "browser": "PASS: final 1440/768/390 Gallery cases; reports/browser-final/results.json, final 1440 and 390 initial screenshots visually inspected",
     "physical_devices": "NOT TESTED",
     "deployment": "Local report does not verify remote CI/deployment; see subsequent release records",
-    "inspector": "NOT INTEGRATED; support manifest is an integration contract, not an implemented runtime claim"
+    "inspector": "PASS locally: 14 related units/build and five focused Chromium cases; four actual LOD hashes, five-fixture strict GPU stability, interrupted loading/reset, grouped-board material ownership,390px touch. Desktop/front/side/mobile screenshots inspected. docs/shelf-inspector-m060-qa.md"
   },
   "browseCategory": "Shopping Mall",
   "measurements": {
