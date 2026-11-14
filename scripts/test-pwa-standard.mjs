@@ -467,6 +467,41 @@ try {
     },
   );
   await run(
+    "production CSP permits the annotation cursor style but blocks other inline code",
+    async (page) => {
+      await page.addInitScript(() => {
+        window.annotationCspViolations = [];
+        document.addEventListener("securitypolicyviolation", (event) =>
+          window.annotationCspViolations.push(event.effectiveDirective),
+        );
+      });
+      await page.goto(server.url);
+      const result = await page.evaluate(() => {
+        const cursor = document.createElement("style");
+        cursor.textContent = "html, body, body *, #codex-browser-sidebar-comments-root, #codex-browser-sidebar-comments-root * { cursor: none !important; -webkit-user-select: none !important; user-select: none !important; }";
+        document.head.append(cursor);
+        const unauthorized = document.createElement("style");
+        unauthorized.textContent = "body { outline: 50px solid red !important; }";
+        document.head.append(unauthorized);
+        const script = document.createElement("script");
+        script.textContent = "window.untrustedInlineScriptRan = true";
+        document.head.append(script);
+        return {
+          cursor: getComputedStyle(document.body).cursor,
+          outline: getComputedStyle(document.body).outlineWidth,
+          scriptRan: window.untrustedInlineScriptRan === true,
+        };
+      });
+      assert.equal(result.cursor, "none");
+      assert.notEqual(result.outline, "50px");
+      assert.equal(result.scriptRan, false);
+      await page.waitForFunction(() =>
+        window.annotationCspViolations.includes("style-src-elem") &&
+        window.annotationCspViolations.includes("script-src-elem"),
+      );
+    },
+  );
+  await run(
     "offline Demo status follows a genuinely prepared Game pack",
     async (page, context) => {
       await page.addInitScript(() => {

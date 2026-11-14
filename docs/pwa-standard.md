@@ -46,7 +46,7 @@ Shared four-edge safe-area properties have zero fallback. Each edge has an ownin
 
 Configure intentional opaque dark chrome. Actual startup appearance remains device-specific and pending. Validate current icon dimensions/maskable crop before changing artwork.
 
-Production uses HTTPS and a minimal tested resource policy. Permit actual same-origin scripts/workers/models and necessary embedded texture schemes; The Vite development server removes the tagged CSP meta only for injected development CSS/HMR; production builds and preview retain it. Document this development exception. Meta CSP does not provide every HTTP-header capability. Preserve registry/GLB URI checks and keep secrets/private content out of caches.
+Production uses HTTPS and a minimal tested resource policy. Permit actual same-origin scripts/workers/models and necessary embedded texture schemes; the Vite development server removes the tagged CSP meta only for injected development CSS/HMR; production builds and preview retain it. The style policy permits two exact SHA-256 hashes for the built-in browser annotation overlay and cursor styles, observed on 2026-11-14. Other inline styles and scripts remain blocked. Browser updates may change those styles; if annotation stops working, reproduce on a production-policy page and update the hashes only after checking the new injected styles. Meta CSP does not provide every HTTP-header capability. Preserve registry/GLB URI checks and keep secrets/private content out of caches.
 
 ## Standard acceptance matrix
 
