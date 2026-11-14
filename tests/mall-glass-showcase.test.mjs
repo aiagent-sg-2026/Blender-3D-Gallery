@@ -8,3 +8,6 @@ test('mall glass showcase host artifacts are complete and bounded',()=>{
 import {loadCatalog} from '../scripts/catalog.mjs';
 import {createHash} from 'node:crypto';
 test('showcase uniquely registered with measured exported bytes and source proof',()=>{const c=loadCatalog();const a=c.collections.flatMap(c=>c.assets).filter(a=>a.id==='mall-glass-showcase');assert.equal(a.length,1);assert.equal(c.collections.find(c=>c.id==='mall-retail-showcases').assets.length,1);const report=JSON.parse(fs.readFileSync(root+'/reports/assets.json'));assert.equal(report.sha256,createHash('sha256').update(fs.readFileSync(a[0].file)).digest('hex'));const proof=JSON.parse(fs.readFileSync(root+'/reports/sources.json'));assert.equal(proof.source_sha256,createHash('sha256').update(fs.readFileSync(root+'/sources/mall-glass-showcase.blend')).digest('hex'));assert.equal(proof.original_source_unchanged,true);});
+
+import {execFileSync} from 'node:child_process';
+test('live animation sweep checks actual open midpoint and clearance',()=>{execFileSync(process.execPath,['models/mall-glass-showcase/validate.mjs'],{stdio:'pipe'});});

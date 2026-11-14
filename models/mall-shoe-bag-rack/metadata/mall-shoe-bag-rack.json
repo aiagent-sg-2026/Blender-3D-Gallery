@@ -1,0 +1,107 @@
+{
+  "id": "mall-shoe-bag-rack",
+  "backlog_id": "shopping-mall-015",
+  "name": "Mall Shoe and Bag Rack",
+  "summary": "Original modular retail shoe shelves and handbag peg bay with opening stock drawer.",
+  "description": "Three separate sloped shoe display shelves with retaining lips, two handbag pegs and pad, and hollow pull-out stock drawer.",
+  "category": "Mall Fixtures",
+  "tags": [
+    "retail",
+    "shoe",
+    "handbag",
+    "rack",
+    "original",
+    "editable",
+    "animated"
+  ],
+  "status": "PASS local QA; remote CI/Pages pending",
+  "created": "2026-11-14",
+  "author": "Blender-3D-Gallery / agent-assisted procedural modeling",
+  "blender_version": "4.0.2",
+  "creation_method": "Original Blender Python geometry; no external assets or brands",
+  "generator": "generate.py",
+  "paths": {
+    "source": "sources/mall-shoe-bag-rack.blend",
+    "glb": "exports/optimized.glb",
+    "preview": "previews/hero.png",
+    "additional_previews": [
+      "previews/front.png",
+      "previews/rear.png",
+      "previews/side.png",
+      "previews/open.png"
+    ]
+  },
+  "display": {
+    "units": "metres",
+    "up_axis": "Blender +Z / glTF +Y",
+    "front_axis": "Blender -Y / glTF +Z",
+    "origin": "floor centre",
+    "previewRotationY": 0
+  },
+  "accuracy_notes": "Illustrative retail fixture, not a safety-certified or load-rated product; empty display areas intended for modular scene assembly. No merchandise or brands copied.",
+  "rights": "Original geometry and materials; reuse in the owner's projects is authorized. Public redistribution terms have not been specified.",
+  "attribution": [
+    {
+      "credit": "Original procedural geometry, no external assets."
+    }
+  ],
+  "budgets": {
+    "triangles": 8000,
+    "bytes": 800000,
+    "mesh_primitives": 80
+  },
+  "interaction": {
+    "root": "ASSET_MallShoeBagRack",
+    "clips": [
+      "DrawerOpenClose"
+    ],
+    "duration_seconds": 2.5
+  },
+  "qa": {
+    "physical_devices": "NOT TESTED",
+    "deployment": "NOT DEPLOYED",
+    "render_review": "PASS actual five Blender views, gallery browser views and drawer animation screenshot inspected",
+    "browser": "PASS Chromium1440/768/390 gallery actual GLB hash, orbit/zoom/reset/close/reopen plus isolated Three.js drawer playback",
+    "source_edit": "PASS mesh/material edit saved, reopened, reexported; canonical blend unchanged"
+  },
+  "metrics": {
+    "result": "PASS",
+    "id": "Mall Shoe and Bag Rack",
+    "backlog_id": "shopping-mall-015",
+    "sha256": "839e54f7d9a51d2b78dff0f8b6eae3d4dc65d45ebc2516ccc339787500098080",
+    "glb_bytes": 264228,
+    "triangles": 5088,
+    "vertices": 9816,
+    "primitives": 36,
+    "materials": 4,
+    "textures": 0,
+    "animations": 1,
+    "dimensions": [
+      1.2000000476837158,
+      1.6749999765306711,
+      0.4920000243112437
+    ],
+    "bounds": {
+      "min": [
+        -0.6000000238418579,
+        0,
+        -0.23000000417232513
+      ],
+      "max": [
+        0.6000000238418579,
+        1.6749999765306711,
+        0.26200002013891854
+      ]
+    },
+    "budget": {
+      "triangles": 8000,
+      "bytes": 800000,
+      "mesh_primitives": 80
+    },
+    "validation": {
+      "errors": 0,
+      "warnings": 0,
+      "validator": "2.0.0-dev.3.10"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+import test from 'node:test'; import assert from 'node:assert/strict'; import fs from 'node:fs';
+const root='models/mall-shoe-bag-rack';
+test('mall shoe bag rack host artifacts are complete and bounded',()=>{
+  for(const f of ['exports/optimized.glb','sources/mall-shoe-bag-rack.blend','previews/hero.png','previews/front.png','previews/rear.png','previews/side.png','previews/open.png','reports/assets.json']) assert.ok(fs.existsSync(`${root}/${f}`),`missing ${f}`);
+  const r=JSON.parse(fs.readFileSync(`${root}/reports/assets.json`)); assert.equal(r.result,'PASS'); assert.ok(r.triangles<8000&&r.glb_bytes<800000&&r.primitives<80); assert.equal(r.animations,1); assert.equal(r.validation.errors,0); assert.equal(r.validation.warnings,0);
+});
+
+import {loadCatalog} from '../scripts/catalog.mjs';
+import {createHash} from 'node:crypto';
+test('shoe/bag rack uniquely registered with measured exported bytes and source proof',()=>{const c=loadCatalog();const a=c.collections.flatMap(c=>c.assets).filter(a=>a.id==='mall-shoe-bag-rack');assert.equal(a.length,1);assert.equal(c.collections.find(c=>c.id==='mall-footwear-displays').assets.length,1);const report=JSON.parse(fs.readFileSync(root+'/reports/assets.json'));assert.equal(report.sha256,createHash('sha256').update(fs.readFileSync(a[0].file)).digest('hex'));const proof=JSON.parse(fs.readFileSync(root+'/reports/sources.json'));assert.equal(proof.source_sha256,createHash('sha256').update(fs.readFileSync(root+'/sources/mall-shoe-bag-rack.blend')).digest('hex'));assert.equal(proof.original_source_unchanged,true);});
+
+import {execFileSync} from 'node:child_process';
+test('live animation sweep checks actual open midpoint and clearance',()=>{execFileSync(process.execPath,['models/mall-shoe-bag-rack/validate.mjs'],{stdio:'pipe'});});

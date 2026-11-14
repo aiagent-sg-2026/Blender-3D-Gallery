@@ -1,0 +1,52 @@
+TAP version 13
+# Subtest: mall essentials registers exactly the four requested fixtures
+ok 1 - mall essentials registers exactly the four requested fixtures
+  ---
+  duration_ms: 0.774801
+  type: 'test'
+  ...
+# Subtest: mall-directory-kiosk preserves provenance, measured export, source and thumbnail
+ok 2 - mall-directory-kiosk preserves provenance, measured export, source and thumbnail
+  ---
+  duration_ms: 2.439904
+  type: 'test'
+  ...
+# Subtest: mall-advertising-lightbox preserves provenance, measured export, source and thumbnail
+ok 3 - mall-advertising-lightbox preserves provenance, measured export, source and thumbnail
+  ---
+  duration_ms: 0.783301
+  type: 'test'
+  ...
+# Subtest: mall-trash-bin preserves provenance, measured export, source and thumbnail
+ok 4 - mall-trash-bin preserves provenance, measured export, source and thumbnail
+  ---
+  duration_ms: 1.525101
+  type: 'test'
+  ...
+# Subtest: mall-display-shelf preserves provenance, measured export, source and thumbnail
+ok 5 - mall-display-shelf preserves provenance, measured export, source and thumbnail
+  ---
+  duration_ms: 1.063012
+  type: 'test'
+  ...
+# Subtest: mall shoe bag rack host artifacts are complete and bounded
+ok 6 - mall shoe bag rack host artifacts are complete and bounded
+  ---
+  duration_ms: 0.504131
+  type: 'test'
+  ...
+# Subtest: shoe/bag rack uniquely registered with measured exported bytes and source proof
+ok 7 - shoe/bag rack uniquely registered with measured exported bytes and source proof
+  ---
+  duration_ms: 301.347465
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 366.254663

@@ -1,0 +1,27 @@
+{
+  "id": "shopping-mall-015",
+  "title": "Mall Shoe and Bag Rack",
+  "root": "ASSET_MallShoeBagRack",
+  "scope": "Original Shopping Mall list015, not global500 ID015",
+  "budget": {
+    "triangles": 8000,
+    "bytes": 800000,
+    "mesh_primitives": 80
+  },
+  "expected_dimensions_m": [
+    1.2,
+    1.675,
+    0.492
+  ],
+  "dimensions_axes": "glTF world X width Y height Z depth",
+  "required_nodes": [
+    "SHOE_Shelf_01",
+    "SHOE_Shelf_02",
+    "SHOE_Shelf_03",
+    "BAG_DisplayPad",
+    "BAG_Peg_01",
+    "BAG_Peg_02",
+    "MOVABLE_Drawer",
+    "DRAWER_Bottom"
+  ]
+}

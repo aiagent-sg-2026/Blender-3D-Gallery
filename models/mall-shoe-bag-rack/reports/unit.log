@@ -1,0 +1,59 @@
+TAP version 13
+# file:///srv/agent-workstation/workspaces/blender-mall-shoe-bag-rack-20261114/repo/scripts/catalog.mjs:81
+#   if (!isObject(input.display) || !Number.isFinite(input.display.previewRotationY)) throw new Error("Invalid metadata display");
+#                                                                                           ^
+# Error: Invalid metadata display
+#     at validateMetadata (file:///srv/agent-workstation/workspaces/blender-mall-shoe-bag-rack-20261114/repo/scripts/catalog.mjs:81:91)
+#     at loadCatalog (file:///srv/agent-workstation/workspaces/blender-mall-shoe-bag-rack-20261114/repo/scripts/catalog.mjs:131:9)
+#     at file:///srv/agent-workstation/workspaces/blender-mall-shoe-bag-rack-20261114/repo/tests/mall-essentials.test.mjs:8:17
+#     at ModuleJob.run (node:internal/modules/esm/module_job:343:25)
+#     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:681:26)
+#     at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+# Node.js v22.23.3
+# Subtest: tests/mall-essentials.test.mjs
+not ok 1 - tests/mall-essentials.test.mjs
+  ---
+  duration_ms: 5102.415661
+  type: 'test'
+  location: '/srv/agent-workstation/workspaces/blender-mall-shoe-bag-rack-20261114/repo/tests/mall-essentials.test.mjs:1:1'
+  failureType: 'testCodeFailure'
+  exitCode: 1
+  signal: ~
+  error: 'test failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# Subtest: mall glass showcase host artifacts are complete and bounded
+ok 2 - mall glass showcase host artifacts are complete and bounded
+  ---
+  duration_ms: 0.499007
+  type: 'test'
+  ...
+# Subtest: showcase uniquely registered with measured exported bytes and source proof
+not ok 3 - showcase uniquely registered with measured exported bytes and source proof
+  ---
+  duration_ms: 5055.471502
+  type: 'test'
+  location: '/srv/agent-workstation/workspaces/blender-mall-shoe-bag-rack-20261114/repo/tests/mall-shoe-bag-rack.test.mjs:10:1'
+  failureType: 'testCodeFailure'
+  error: 'Invalid metadata display'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    validateMetadata (file:///srv/agent-workstation/workspaces/blender-mall-shoe-bag-rack-20261114/repo/scripts/catalog.mjs:81:91)
+    loadCatalog (file:///srv/agent-workstation/workspaces/blender-mall-shoe-bag-rack-20261114/repo/scripts/catalog.mjs:131:9)
+    TestContext.<anonymous> (file:///srv/agent-workstation/workspaces/blender-mall-shoe-bag-rack-20261114/repo/tests/mall-shoe-bag-rack.test.mjs:10:96)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+1..3
+# tests 3
+# suites 0
+# pass 1
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 5112.873817

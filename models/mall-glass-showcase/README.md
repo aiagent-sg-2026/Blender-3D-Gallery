@@ -22,3 +22,5 @@ Source-review corrections: door's initial swing direction would enter the shelve
 Catalog: independent mall-retail-showcases collection, preserves all484 existing entries AND their collection membership; not inserted into fixed four-item Mall Essentials. Production source is initial Shopping Mall list011, not an inferred ID in the500 master list.
 
 Release: localPASS, remote CI/Pages pending. Reports folder contains source, GLB, build and browser evidence.
+
+2026-11-14 follow-up: independent review found clearance loop action paused after LoopOnce end. Reset action before sweep and added actual midpoint angle assertion, rechecked all60frames with unchanged GLB;PASS. Prior animation pixel proof remained valid.
