@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "candidate": "9ac841ca652ac0c0382d6ac01534fda0518ce298",
+  "base": "50c6defdf0f4dcbc1d0db7a2a3e75e20c4cda1d1",
+  "unit_tests": {
+    "passed": 20,
+    "failed": 0
+  },
+  "build": "PASS",
+  "shelf_runtime": {
+    "browser": "156.0.8078.4",
+    "scope": "Desktop Chromium; touch viewport emulation, not physical iOS/Android",
+    "results": [
+      {
+        "name": "desktop-controls-lods-resources",
+        "status": "PASS"
+      },
+      {
+        "name": "rapid-load-failure-navigation",
+        "status": "PASS"
+      },
+      {
+        "name": "mobile-touch",
+        "status": "PASS"
+      },
+      {
+        "name": "mobile-gesture-guards",
+        "status": "PASS"
+      }
+    ]
+  },
+  "gallery_widths": [
+    1440,
+    768,
+    390
+  ],
+  "shopping_cart_widths": [
+    1440,
+    768,
+    390
+  ],
+  "pwa_standard": "PASS",
+  "warning": "PWA standard Vite dev step emitted ENOSPC file-watcher limit warnings. Assertions passed; no system limits changed. Production build and preview checks passed.",
+  "physical_devices_tested": false,
+  "remote_ci": "Not established by this local report"
+}
