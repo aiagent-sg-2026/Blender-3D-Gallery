@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { Vector3 } from 'three';
+import { Triangle, Vector3 } from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 const directory=process.env.RACK_QA_ASSET_DIR || 'models/eight-ball-billiards/exports';
@@ -17,6 +17,32 @@ async function load(file) {
 }
 
 for(const file of ['triangle_rack.glb','billiards-scene.glb']) {
+  test(`${file}: rack holds fifteen touching balls at the authored57.15mm diameter`,async()=>{
+    const {bars}=await load(file);
+    const radius=.05715/2,diameter=2*radius;
+    const center=bars.reduce((sum,ob)=>sum.add(new Vector3().setFromMatrixPosition(ob.matrixWorld)),new Vector3()).divideScalar(3);
+    // An equilateral five-row pack has a fixed convex hull. Center its hull
+    // on the rack, with the single-ball row facing the authored left corner.
+    const balls=[];
+    for(let row=0;row<5;row++)for(let column=0;column<=row;column++)balls.push(new Vector3(center.x+(row-8/3)*diameter*Math.sqrt(3)/2,center.y-.0089+radius,center.z+(column-row/2)*diameter));
+    assert.equal(balls.length,15);
+    for(let i=0;i<balls.length;i++)for(let j=i+1;j<balls.length;j++)assert.ok(balls[i].distanceTo(balls[j])>=diameter-1e-7,'Balls must not overlap');
+    for(const ob of bars) {
+      const midpoint=new Vector3().setFromMatrixPosition(ob.matrixWorld);
+      const axis=new Vector3(0,1,0).transformDirection(ob.matrixWorld);
+      const inward=new Vector3(axis.z,0,-axis.x);
+      if(inward.dot(center.clone().sub(midpoint))<0)inward.negate();
+      const g=ob.geometry,p=g.getAttribute('position'),idx=g.index;
+      for(const ball of balls) {
+        assert.ok(inward.dot(ball.clone().sub(midpoint))>0,'Every ball center must be inside the rack');
+        for(let k=0;k<idx.count;k+=3) {
+          const vertices=[0,1,2].map(j=>new Vector3().fromBufferAttribute(p,idx.getX(k+j)).applyMatrix4(ob.matrixWorld));
+          const closest=new Triangle(...vertices).closestPointToPoint(ball,new Vector3());
+          assert.ok(closest.distanceTo(ball)>=radius-1e-6,'Full-size ball must not intersect any rack triangle');
+        }
+      }
+    }
+  });
   test(`${file}: rack has matching closed miter rings at all three joints`,async()=>{
     const {bars}=await load(file);
     const ends=bars.map(ob=>{

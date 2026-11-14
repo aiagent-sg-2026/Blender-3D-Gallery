@@ -1,82 +1,114 @@
 # MODEL-0004: Triangle Rack
 
-Status: READY_TO_PUSH. All applicable local gates pass. No commit, remote
-Actions or production PASS is claimed yet; MODEL-0005 has not started.
+Status: READY_TO_PUSH (capacity follow-up). All four confirmed defects are
+repaired. Current645 unit/19 targeted, render, export, Viewer, full Game46 and
+experience31 checks pass. Initial commit cb0c0c60 is not accepted:
+its own Actions43653564436 was cancelled before deployment after RACK-004 was
+found. No final Actions or production PASS is claimed. MODEL-0005 has not started.
 
-Selected only after MODEL-0003 main, required Actions43648248917 and exact
-production payload/runtime acceptance passed. Baseline8d96b619 and
-`original-manifest.json` preserve original hashes. Editable source:
+This model was selected only after MODEL-0003 passed main, required Actions and
+exact production payload/runtime acceptance. Source:
 `models/eight-ball-billiards/scene.blend`, root `ASSET_Triangle_Rack`;
 standalone `exports/triangle_rack.glb`, dependent `exports/billiards-scene.glb`.
 
-## Confirmed defects and repairs
+## Confirmed defects and final behavior
 
-- RACK-001(P2): flat-ended bars meet only at their centerlines, leaving visible
-  outer V-notches and protruding ends. Matching miter planes close all three
-  corner rings. Only ring vertices' longitudinal positions change; radial
-  profiles, three source meshes,132 triangles, UVs and face/material assignments
-  are preserved. Overall intended closed-joint bounds are about
-  0.33635 ×0.36044 ×0.018 m; the former notched bounds were0.31334 ×0.34577 ×0.018 m.
-- RACK-002(P2): all-smooth caps distort end/side shading. Caps are flat and sharp
-  at their boundaries; clipped cylinder sides use analytic radial normals.
-  Oblique cuts alter corner-angle weights, so the straight-cue shading check
-  alone is insufficient. `rack_geometry.py` is shared by generator and migration.
-- RACK-003(P2): the assembled rack bottom is12.5 mm above the preserved cloth
-  top. Lowering only the rack root by12.6 mm seats the bottom atZ≈0.7784 m,
-  overlapping the unchanged cloth topZ=0.7785 m by0.1 mm.
+- RACK-001(P2): flat-ended bars left outside V-notches at three corners. Matching
+  miter planes close all three joint rings, retaining the radial profiles,
+  three source meshes,132 triangles, UVs and face/material assignments.
+- RACK-002(P2): all-smooth caps distorted highlights. Caps are flat and sharp at
+  their boundaries; clipped cylinder sides use analytic radial normals because
+  oblique cuts alter corner-angle weighting. `rack_geometry.py` owns the rule.
+- RACK-003(P2): assembled rack bottom was12.5 mm above the cloth. Lowering only
+  its root12.6 mm seats the bottom atZ≈0.7784 m with0.1 mm overlap against the
+  unchangedZ=0.7785 m cloth. Capacity follow-up preserves this root position.
+- RACK-004(P2): the original unequal centerline triangle could not accommodate
+  a touching five-row fifteen-ball pack at the authored 57.15 mm diameter.
+  Initial QA missed this functional-size check. Two added tests reproduce real
+  exported triangle/sphere intersections on cb0c0c60 while its five prior rack
+  checks pass. The final centerline is equilateral with 350 mm sides, retaining
+  the 9 mm bar radius and centroid. Balls are never shrunk or repositioned in
+  product files. The new pack fits without intersecting any actual GLB triangle.
 
-`scripts/repair-rack-joints.py` refuses any source revision except recorded228720e3.
-The resulting source SHA256 is
-`efaf70ef5c6071813edd0a869ca5f143cc83c58d82253123df1752b54dccff56`.
-`source-migration.json` fingerprints every object: only the rack root and its
-three meshes change. Twenty sibling standalone GLBs remain byte-identical,
-including the accepted table and two cues. `artifact-regression.json` proves all
-138 unrelated assembly mesh payloads and all materials are unchanged; hierarchy
-and transforms are unchanged apart from the rack's intended Z translation.
+Final physical bounds are about0.339109 ×0.381177 ×0.018 m. The supporting
+circular-bar analysis evaluates all piecewise rotation extrema, and indicates
+about3.03 mm horizontal clearance surplus after resizing. This mathematical
+model supplements the direct exported-mesh checks; diagnostic sphere renders
+alone cannot establish millimeter clearance.
 
-Standalone GLB:8,928 bytes (was8,136), three meshes/132 triangles, SHA256
-`860629a1fdf95867bc096df4f550a7ba631f2de633fac5a817382be464588cc1`.
-Assembly:3,519,528 bytes (was3,518,732). Extra exported vertices separate cap
-and side normals without increasing triangles.
+## Preservation and reproducibility
 
-## Executed QA
+`original-manifest.json` preserves the pre-QA source228720e3 and all sibling
+hashes. `capacity-baseline.json` separately preserves the initial published,
+unaccepted revision cb0c0c60/sourceefaf70ef. Originals remain under local
+`output/model-qa/MODEL-0004/`; no baseline is overwritten.
 
-- Source and imported geometry: positive volume; no degenerate triangles, loose
-  vertices, inconsistent winding or non-finite UV. Disposable position welding
-  distinguishes exporter seam vertices from actual open boundaries; saved
-  geometry is not welded. Each of the three bars is closed and meets its neighbor
-  at a shared cap plane; this is not a destructive Boolean union.
+`scripts/repair-rack-joints.py` remains the one-time initial migration.
+`scripts/repair-rack-capacity.py` accepts only its recordedefaf70ef source;
+`rack_geometry.py` supplies the same 350 mm centerline to the generator.
+No full-pack generation is run. The final source SHA256 is
+`907f2038d32c0ded1906d89d7f14bc6b2364cde22002c337d8187c5d3431c287`.
+The capacity migration fingerprints every source object: only the three rack
+bar meshes/transforms change; the rack root and all other objects are unchanged.
+UVs, radial coordinates and face/material assignments remain preserved.
+
+Twenty sibling standalone GLBs remain byte-identical to the pre-QA baseline,
+including the accepted table and both cues. `capacity-artifact-regression.json`
+compares the follow-up against cb0c0c60 and proves all138 unrelated assembly
+mesh payloads, all materials, unrelated nodes and root seating unchanged.
+The initial migration and artifact reports remain historical evidence of
+RACK-001/002/003, rather than current candidate fingerprints.
+
+Current standalone:8,136 bytes, three mesh objects/132 triangles, SHA256
+`bb5ffe129f0008420247a24c76e8abfb555a8b9131e8b69cd980d50f2972e0a4`.
+Current assembly:3,518,732 bytes, SHA256
+`425ad14274d8d765df1929db78b0bb0fa2e1cceec30c1916d4e5c17e2a23962b`.
+Equal bar geometry permits export-data reuse without removing scene objects.
+
+## Executed current-candidate QA
+
+- Source/re-import: positive volume; no degenerate triangles, loose vertices,
+  inconsistent winding or non-finite UV. Disposable position welding accounts
+  for UV/hard-normal seams without modifying saved geometry. Each bar is closed
+  and adjacent cap rings meet; this is not a destructive Boolean union.
 - One unchanged opaque untextured walnut dielectric, metallic0/roughness0.28.
-  Texture atlas/stretch assessment is N/A; this is a simplified untextured model.
-  No armature or embedded animation, so animation is N/A.
-- Seven overview and six corner views for both final source and imported GLB.
-  Thirteen native comparisons have maximum mean RGB-channel error0.003741 on a
-  0–255 scale (descriptive, not an invented acceptance threshold). Independent
-  visual review accepts the repair without blockers; subjective Viewer89/100.
-- Both exports: Khronos validator0 errors/0 warnings; unused untextured UV infos
-  retained. Five new exported joint/normal/support checks fail on the original
-  baseline and pass after repair; all17 rack/table/cue checks pass. Complete
-  unit suite643/643 PASS. Build PASS with the existing large-bundle advisory.
-- Fresh actual built Viewer rack and assembly each pass desktop1440×900 and
-  tablet768×1024 loading, exact decoded payload/SHA, keyboard orbit/zoom, exact
-  reset and mouse orbit, without page/HTTP errors or context loss/overflow.
+  Texture atlas/stretch quality is N/A. No rig or embedded animation: N/A.
+- Seven overview and six corner views for final source and imported GLB.
+  Thirteen native comparisons have maximum mean RGB-channel error0.003545 on
+  a0–255 scale (descriptive, not an invented quality threshold). Four additional
+  before/after fifteen-ball witness views are diagnostic only; spheres are
+  neither saved nor exported into product files. Second independent visual
+  review accepts the final candidate, no blockers, subjective Viewer89/100.
+- Current exports: Khronos validator0 errors/0 warnings; unused UV infos retained.
+  All 19 rack/table/cue checks pass, including seven rack checks with both new
+  sphere/triangle capacity cases. Complete unit suite645/645 and build PASS.
+  The existing large-bundle advisory remains. Initial results643/17 belong to
+  the superseded local candidate and are not presented as current coverage.
+- Fresh actual built rack and assembly Viewer each pass desktop1440×900 and
+  tablet768×1024 exact decoded payload/SHA, loading, keyboard orbit/zoom, exact
+  reset and mouse orbit with no page/HTTP errors, context loss or overflow.
   Sampled software WebGL shows rack3 calls/132 triangles and assembly148/98,100
-  per observed frame. These measurements do not establish hardware FPS.
-- Full Game46/46 (including all561 gallery preview/download entries) and
-  experience31/31 PASS, without filters or page errors. Final build includes the
-  regenerated scene/card previews; fresh final desktop/tablet rack runtime also
-  passes. Physical mobile testing is excluded by the owner's explicit instruction.
+  per observed frame. No physical-device FPS is claimed. Physical mobile testing
+  is excluded by the owner's explicit instruction.
+- Full current Game46/46, including all561 gallery preview/download entries,
+  and experience31/31 PASS without filters or page errors. Earlier initial
+  results remain historical evidence, not substituted for these current runs.
 
-## Evidence and remaining gates
+## Evidence and remaining release gates
 
-Native images were independently reviewed and numerically compared before
-packaging. Six before/after native top-joint PNGs and eight contact sheets are
-retained; `render-publication.json` hashes all52 native PNGs and records local
-preserved paths. Runtime evidence includes desktop/tablet rack and assembly page
-and canvas images. Source/re-import scripts and recorded inputs reproduce final views. The historical
-intermediate candidate predates analytic radial normals; its settings record that
-limitation. Current candidate mode invokes the final helper.
+`capacity-*` files contain the final candidate. Thirty new native PNGs were
+independently reviewed before packaging; `capacity-render-publication.json`
+hashes and locates every native file. Three final native joint top views,
+four native capacity witnesses and contact sheets are retained. Numerical
+comparisons used native images. The initial52-image manifest remains historical.
 
-Complete scoped diff review, main synchronization, separate commit/push,
-required Actions and exact production acceptance must pass before
-MODEL-0005 starts. The overall campaign remains incomplete.
+`capacity-witness-*` contains temporary spheres for size inspection only.
+`scripts/model-qa-rack-details.py --candidate` requires an original uncut source;
+current repaired inputs use observation mode. The historical initial intermediate
+candidate predates analytic radial normals, as recorded in its settings.
+
+Current regression is complete. Scoped diff/main synchronization, follow-up
+commit/push, required Actions and actual production acceptance must pass before
+MODEL-0005 starts. Initial own-run cancellation is not success. Post-push closure
+metadata will travel with the next validated campaign commit instead of creating
+a metadata-only push that supersedes required checks. Campaign remains incomplete.

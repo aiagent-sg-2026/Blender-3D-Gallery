@@ -36,8 +36,16 @@ for direction,power in [((-3,-4,5),600),((4,2,3),400),((1,1,-4),200)]:
 cam_data=bpy.data.cameras.new('Rack QA camera');cam=bpy.data.objects.new(cam_data.name,cam_data)
 scene.collection.objects.link(cam);scene.camera=cam;cam_data.type='ORTHO';cam_data.clip_start=.001;cam_data.clip_end=100
 out=Path(args.output).resolve();out.mkdir(parents=True,exist_ok=True);views=[]
-for i,offset in enumerate([(-.17,0,0),(.13,.165,0),(.13,-.165,0)]):
-    target=center+Vector(offset)
+targets=[]
+for ob,end in [(bars[0],False),(bars[0],True),(bars[1],True)]:
+    ring=[]
+    for vertex in ob.data.vertices:
+        if (vertex.co.z>0)!=end:continue
+        point=ob.matrix_world@vertex.co
+        if not any((point-other).length<1e-7 for other in ring):ring.append(point)
+    assert len(ring)==12
+    targets.append(sum(ring,Vector())/len(ring))
+for i,target in enumerate(targets):
     for name,direction in [('top',(0,0,1)),('oblique',(1,-2,2))]:
         cam_data.ortho_scale=.075;cam.location=target+Vector(direction).normalized()
         cam.rotation_euler=(target-cam.location).to_track_quat('-Z','Y').to_euler()

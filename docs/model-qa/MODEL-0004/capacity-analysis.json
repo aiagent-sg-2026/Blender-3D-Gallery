@@ -1,0 +1,54 @@
+{
+  "ball_diameter_m": 0.05715,
+  "bar_radius_m": 0.009,
+  "bar_axis_above_cloth_m": 0.0089,
+  "method": "Exact piecewise trigonometric support-function extrema over all rotations of the five-row touching-ball hull. Outward edge normals weighted by edge length cancel translation; three inward-offset halfplanes are feasible iff their weighted constants sum nonnegative. Circular bar cross-section provides a conservative fit criterion for the inscribed12-sided mesh. Actual GLB triangle/sphere checks independently reproduce baseline overlap and verify final clearance.",
+  "before": {
+    "centerline_vertices": [
+      [
+        0.48,
+        0.27
+      ],
+      [
+        0.78,
+        0.435
+      ],
+      [
+        0.78,
+        0.105
+      ]
+    ],
+    "maximum_uniform_horizontal_ball_center_clearance_m": 0.029977450907302555,
+    "required_horizontal_clearance_m": 0.03201210708466407,
+    "full_size_pack_possible_under_circular_bar_model": false,
+    "best_rotation_deg": 0.0,
+    "clearance_surplus_m": -0.002034656177361517,
+    "candidate_extrema": 19
+  },
+  "after": {
+    "centerline_vertices": [
+      [
+        0.477927405783631,
+        0.27
+      ],
+      [
+        0.7810362971081846,
+        0.445
+      ],
+      [
+        0.7810362971081846,
+        0.09500000000000003
+      ]
+    ],
+    "maximum_uniform_horizontal_ball_center_clearance_m": 0.03504516133981024,
+    "required_horizontal_clearance_m": 0.03201210708466407,
+    "full_size_pack_possible_under_circular_bar_model": true,
+    "best_rotation_deg": 0.0,
+    "clearance_surplus_m": 0.0030330542551461684,
+    "candidate_extrema": 12
+  },
+  "inscribed_cylinder_radius_m": 0.008693332436601614,
+  "required_clearance_even_for_inscribed_cylinder_m": 0.03165158728413241,
+  "baseline_inscribed_cylinder_clearance_deficit_m": 0.0016741363768298517,
+  "scope_note": "The circular-bar calculation is a geometric model. Final acceptance also requires direct sphere-to-actual-exported-triangle checks; native witness spheres are diagnostic only, not product geometry."
+}

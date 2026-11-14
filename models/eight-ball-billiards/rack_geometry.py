@@ -1,7 +1,33 @@
 """Close the three authored cylindrical rack bars at shared miter planes."""
 import runpy
+import math
 from pathlib import Path
-from mathutils import Vector
+from mathutils import Matrix, Vector
+
+
+def rack_vertices(height):
+    """A 350 mm equilateral centerline leaves room for fifteen 57.15 mm balls."""
+    side = .350
+    return [Vector((.68-side*math.sqrt(3)/3,.27,height)),
+            Vector((.68+side*math.sqrt(3)/6,.27+side/2,height)),
+            Vector((.68+side*math.sqrt(3)/6,.27-side/2,height))]
+
+
+def fit_rack_bars(bars, height):
+    """Resize only the rack centerlines; retain radial profile, UVs and faces."""
+    assert len(bars) == 3
+    points = rack_vertices(height)
+    for ob, a, b in zip(bars, points, points[1:]+points[:1]):
+        assert len(ob.data.vertices) == 24
+        length = (b-a).length
+        for vertex in ob.data.vertices:
+            vertex.co.z = math.copysign(length/2, vertex.co.z)
+        ob.matrix_world = Matrix.Translation((a+b)/2) @ (b-a).to_track_quat('Z','Y').to_matrix().to_4x4()
+        ob.data.update()
+    # Matrix assignments must propagate before the common-plane operation.
+    import bpy
+    bpy.context.view_layer.update()
+    close_rack_joints(bars)
 
 
 def close_rack_joints(bars):

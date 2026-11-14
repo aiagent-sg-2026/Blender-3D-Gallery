@@ -274,7 +274,7 @@
       "thumbnail": "models/eight-ball-billiards/thumbnails/triangle_rack.webp",
       "root": "ASSET_Triangle_Rack",
       "runtime_route": "?model=rack",
-      "export_sha256": "860629a1fdf95867bc096df4f550a7ba631f2de633fac5a817382be464588cc1",
+      "export_sha256": "bb5ffe129f0008420247a24c76e8abfb555a8b9131e8b69cd980d50f2972e0a4",
       "defects": [
         {
           "id": "RACK-001",
@@ -290,36 +290,48 @@
           "id": "RACK-003",
           "severity": "P2",
           "description": "Assembled rack floats12.5 mm above cloth."
+        },
+        {
+          "id": "RACK-004",
+          "severity": "P2",
+          "description": "Initial repaired rack cannot accommodate a touching fifteen-ball57.15 mm pack without bar intersections.",
+          "evidence": "Two exported capacity checks fail on cb0c0c60 while previous five rack checks pass."
         }
       ],
       "repairs": [
         "Shared miter planes close all matching rings; keep radial profile/UV/topology/materials.",
         "Flat sharp caps and analytic radial cylinder normals.",
-        "Lower only rack root12.6 mm for0.1 mm cloth overlap."
+        "Lower only rack root12.6 mm for0.1 mm cloth overlap.",
+        "RACK-004:350 mm equilateral centerline with9 mm radius; keep15 balls at57.15 mm, verify no actual exported triangle/sphere intersection."
       ],
       "qa_results": {
-        "geometry": "PASS positive closed source/import bars, no degeneracy/winding/loose vertices; all three joint rings match.",
+        "geometry": "PASS final capacity source/import; all closed miter rings, planar/radial normals and15-ball triangle/sphere fit.",
         "uv_textures": "PASS finite preserved UV; atlas/stretch N/A untextured asset.",
         "pbr": "PASS unchanged opaque dielectric walnut, metallic0 roughness0.28.",
-        "visual": "PASS seven overview+six details source/import; independent acceptance89/100.",
-        "glb": "PASS both exports0 errors/0 warnings; rack8928 bytes/132 triangles.",
+        "visual": "PASS final13 source/import views and4 capacity witnesses; second independent acceptance89/100.",
+        "glb": "PASS current bb5ffe12 standalone8136 bytes and425ad142 assembly3518732;0 errors/0 warnings.",
         "animation": "N/A static unrigged asset.",
         "runtime": "PASS rack and assembly desktop/tablet exact payload/hash and controls, no page/HTTP errors.",
         "performance": "PASS rack3 calls/132 triangles, assembly148/98100 sampled software WebGL; physical phone/FPS excluded.",
-        "regression": "PASS643 unit,17 targeted, full Game46 including561 catalog entries, experience31 with no filters/errors; final build and fresh Viewer PASS.",
+        "regression": "PASS645 current unit,19 targeted, full Game46 including561 catalog entries and experience31; no filters/page errors.",
         "mobile": "N/A explicit owner exclusion",
-        "github_main": "NOT_RUN",
-        "github_actions": "NOT_RUN",
-        "live": "NOT_RUN"
+        "github_main": "Initial cb0c0c60 reached main. Capacity follow-up candidate is not committed/published yet.",
+        "github_actions": "Initial own run43653564436 cancelled before deployment due RACK-004; current candidate NOT_RUN.",
+        "live": "NOT_RUN for final candidate."
       },
       "commit_sha": null,
       "remote_verified": false,
       "remaining_risks": [
-        "Main push, required remote Actions and exact production acceptance pending.",
+        "Final follow-up main push, required Actions and actual production acceptance pending.",
         "Physical mobile excluded; no hardware FPS claim."
       ],
       "report": "docs/model-qa/MODEL-0004/README.md",
-      "required_remote_checks_passed": false
+      "required_remote_checks_passed": false,
+      "actions_run_id": 43653564436,
+      "previous_unaccepted_commits": [
+        "cb0c0c608b8c4dd9e5c908f45f15b6d4146a821e"
+      ],
+      "initial_release_evidence": "docs/model-qa/MODEL-0004/initial-release-evidence.json"
     },
     {
       "qa_id": "MODEL-0005",

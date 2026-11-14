@@ -91,3 +91,14 @@ without saving; its optional candidate mode modifies memory only.
 radial normals in both exports, and assembly support. These tests use glTF's
 local Y cylinder axis; the straight-cue world-X checks are not reused for the
 rotated rack bars. Campaign acceptance remains in the progress tracker.
+
+The MODEL-0004 capacity follow-up makes the rack centerline an equilateral
+350 mm triangle so a five-row pack of fifteen touching57.15 mm balls fits.
+`rack_geometry.py:rack_vertices` owns these endpoints for the generator and
+`scripts/repair-rack-capacity.py`; only three rack bars resize. Its seven rack
+regressions include actual exported-triangle/sphere collision checks for both
+standalone and assembly. Diagnostic witness spheres are not product geometry.
+The initial published revision was not accepted after this extra defect was
+found; its own Actions run was cancelled before deployment. See the
+[functional-scale note](../../docs/model-qa/billiards-functional-scale.md) and
+current report for the final candidate and acceptance evidence.
