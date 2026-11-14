@@ -1,0 +1,167 @@
+{
+  "id": "gjh-m060-premium-wall-shelf-wide",
+  "backlog_id": "GJH-M060",
+  "name": "Premium Wall Shelf Wide",
+  "summary": "Wide double-bay cabinet: six independent boards grouped into three display rows.",
+  "description": "2.4m-wide cabinet with a central solid supporting upright, two distinct shelf bays, independently editable LEDs/trim and continuous blank front header. Not a renamed single-span straight shelf.",
+  "category": "Shopping Mall",
+  "tags": [
+    "GJH-M060",
+    "premium",
+    "wall-shelf",
+    "modular",
+    "original",
+    "editable",
+    "LOD"
+  ],
+  "status": "locally-validated",
+  "created": "2026-11-14",
+  "author": "Blender-3D-Gallery / agent-assisted procedural modeling",
+  "blender_version": "4.0.2",
+  "creation_method": "Blender Python original geometry and original baked PNG textures; user concept reference, not official brand artwork",
+  "generator": "generate.py",
+  "paths": {
+    "source": "sources/gjh-m060-premium-wall-shelf-wide.blend",
+    "glb": "exports/optimized.glb",
+    "preview": "previews/hero.png",
+    "additional_previews": [
+      "previews/front.png",
+      "previews/rear.png",
+      "previews/side.png",
+      "previews/detail.png",
+      "previews/lod1.png",
+      "previews/lod2.png",
+      "previews/lod3.png"
+    ],
+    "lods": [
+      "exports/lod0.glb",
+      "exports/lod1.glb",
+      "exports/lod2.glb",
+      "exports/lod3.glb"
+    ],
+    "collider": "exports/collision.glb",
+    "thumbnail": "previews/thumbnail.webp"
+  },
+  "display": {
+    "units": "metres",
+    "up_axis": "Blender +Z / glTF +Y",
+    "front_axis": "Blender -Y / glTF +Z",
+    "origin": "floor centre",
+    "previewRotationY": 0
+  },
+  "accuracy_notes": "Conceptual reference-inspired furniture, not official branded merchandise. No structural, lighting-temperature, safety or accessibility certification.",
+  "rights": "Original geometry and materials; reuse in the owner's projects is authorized. Public redistribution terms have not been specified.",
+  "attribution": [
+    {
+      "credit": "Original procedural geometry and baked procedural wood/stone textures. User-supplied concept image used only as visual direction; no logos, packaging artwork or products copied."
+    }
+  ],
+  "budgets": {
+    "triangles": 15000,
+    "bytes": 3000000
+  },
+  "interaction": {
+    "manifest": "support-manifest.json",
+    "runtime": "Gallery orbit/zoom/reset only; Inspector integration not yet implemented"
+  },
+  "qa": {
+    "structural": "PASS: reports/assets.json; four LODs and collider have zero Khronos errors/warnings",
+    "source_edit": "PASS: reports/sources.json and source-edit verification; canonical source preserved",
+    "focused_tests": "PASS: 3 tests, reports/unit-final.log",
+    "build": "PASS: reports/build-final.log",
+    "render_review": "PASS: actual final eight PNG previews inspected, including corrected rear; thumbnail decoded and visually inspected",
+    "browser": "PASS: final 1440/768/390 Gallery cases; reports/browser-final/results.json, final 1440 and 390 initial screenshots visually inspected",
+    "physical_devices": "NOT TESTED",
+    "deployment": "Local report does not verify remote CI/deployment; see subsequent release records",
+    "inspector": "NOT INTEGRATED; support manifest is an integration contract, not an implemented runtime claim"
+  },
+  "browseCategory": "Shopping Mall",
+  "measurements": {
+    "dimensions_width_depth_height_m": [
+      2.4,
+      0.55,
+      2.4
+    ],
+    "measured_gltf_xyz_m": [
+      2.4000000953674316,
+      2.3999999053776264,
+      0.550000011920929
+    ],
+    "meshes": 42,
+    "product_anchors": 18,
+    "lods": [
+      {
+        "file": "exports/lod0.glb",
+        "lod": 0,
+        "result": "PASS",
+        "sha256": "cb45dcc4711e6e3b87c7e5b75ef5530d33ae123cd25d6716481a67da909b102f",
+        "bytes": 981976,
+        "triangles": 12600,
+        "vertices": 25200,
+        "meshes": 42,
+        "dimensions": [
+          2.4000000953674316,
+          2.3999999053776264,
+          0.550000011920929
+        ],
+        "textures": 2,
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "file": "exports/lod1.glb",
+        "lod": 1,
+        "result": "PASS",
+        "sha256": "fe5c1339055787c9eb021cc9af5fc67e7f4de521e061421f5cd204427895453f",
+        "bytes": 439560,
+        "triangles": 4536,
+        "vertices": 9072,
+        "meshes": 42,
+        "dimensions": [
+          2.4000000953674316,
+          2.3999999053776264,
+          0.550000011920929
+        ],
+        "textures": 2,
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "file": "exports/lod2.glb",
+        "lod": 2,
+        "result": "PASS",
+        "sha256": "28ccd72c0a65e20c08d6df8bcea01a4f5773ef038cf8e323df3794275d5209c9",
+        "bytes": 273792,
+        "triangles": 1848,
+        "vertices": 4032,
+        "meshes": 42,
+        "dimensions": [
+          2.4000000953674316,
+          2.3999999053776264,
+          0.550000011920929
+        ],
+        "textures": 2,
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "file": "exports/lod3.glb",
+        "lod": 3,
+        "result": "PASS",
+        "sha256": "c656eabf0aafc8dddd24d276c376d2340beae5f4ed6bf76954e0727d403012fd",
+        "bytes": 176744,
+        "triangles": 504,
+        "vertices": 1008,
+        "meshes": 42,
+        "dimensions": [
+          2.4000000953674316,
+          2.3999999053776264,
+          0.550000011920929
+        ],
+        "textures": 2,
+        "errors": 0,
+        "warnings": 0
+      }
+    ]
+  }
+}

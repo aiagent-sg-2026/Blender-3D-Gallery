@@ -1,0 +1,15 @@
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: centre upright ends at back front, no coplanar rear face
+    at file:///srv/agent-workstation/workspaces/blender-gjh-m060-20261114/repo/models/gjh-m060-premium-wall-shelf-wide/validate.mjs:15:220 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v22.23.3
