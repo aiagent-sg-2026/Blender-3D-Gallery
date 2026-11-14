@@ -248,10 +248,13 @@ for k,y in enumerate((-.94,-1.02),1):
     # Both reviewed cues keep planar caps separate from their smooth sides.
     for ob in cue.children:
         mark_planar_caps(ob.data)
-# Equilateral open wooden triangle rack, suitably sized for 57.15 mm balls.
+# Open wooden triangle rack, sized for 57.15 mm balls and seated on the cloth.
 rack=root('ASSET_Triangle_Rack',(.65,.27,.80))
 vertices=[(.48,.27,.80),(.78,.435,.80),(.78,.105,.80)]
 for a,b in zip(vertices,vertices[1:]+vertices[:1]): rod('Rack | wooden side',a,b,.009,.009,wood_edge,rack,12)
+bpy.context.view_layer.update()
+runpy.run_path(str(ROOT/'rack_geometry.py'))['close_rack_joints'](sorted(rack.children,key=lambda ob:ob.name))
+rack.location.z -= .0126
 chalk=root('ASSET_Chalk',(-.83,.636,.88))
 cube('Chalk | paper sleeve',(-.83,.636,.866),(.025,.025,.022),chalkpaper,chalk,.001)
 cube('Chalk | blue top',(-.83,.636,.879),(.023,.023,.006),chalkblue,chalk,.001)

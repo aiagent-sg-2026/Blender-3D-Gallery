@@ -194,7 +194,7 @@
       "name": "Cue Stick 02",
       "collection": "billiards",
       "kind": "catalog-model",
-      "status": "READY_TO_PUSH",
+      "status": "PUSHED",
       "export_paths": [
         "models/eight-ball-billiards/exports/cue_02.glb"
       ],
@@ -235,16 +235,21 @@
         "performance": "PASS unchanged geometry/budgets: Cue02 four calls/272 triangles,14636 bytes; assembly148/98100.",
         "regression": "PASS625 initial/638 post-sync unit,12 targeted checks, complete Game46/experience31 with no filters/errors; post-sync Viewer PASS.",
         "mobile": "N/A owner exclusion",
-        "github_actions": "NOT_RUN for this model release"
+        "github_actions": "PASS required Actions43648248917 completed successfully on8d96b619, including deployment.",
+        "github_main": "PASS exact main and remote GLB blob/SHA verified after push.",
+        "live": "PASS exact production e33be9d8 payload and desktop/tablet controls, zero page/HTTP errors."
       },
-      "commit_sha": null,
-      "remote_verified": false,
+      "commit_sha": "8d96b619a8f7b1492aa1accfb44bce4729802270",
+      "remote_verified": true,
       "remaining_risks": [
-        "Scoped commit, exact main push verification, required remote Actions and production acceptance pending.",
-        "Physical mobile excluded by owner; no device FPS claim."
+        "Physical mobile excluded; no device FPS claim.",
+        "Stylized low-poly asset; no photorealism claim."
       ],
       "report": "docs/model-qa/MODEL-0003/README.md",
-      "synchronized_main_sha": "85448e31b81bf8c565a167f7c25150c2205802ba"
+      "synchronized_main_sha": "85448e31b81bf8c565a167f7c25150c2205802ba",
+      "required_remote_checks_passed": true,
+      "actions_run_id": 43648248917,
+      "release_evidence": "docs/model-qa/MODEL-0003/release-evidence.json"
     },
     {
       "qa_id": "MODEL-0004",
@@ -252,14 +257,14 @@
       "name": "Triangle Rack",
       "collection": "billiards",
       "kind": "catalog-model",
-      "status": "PENDING",
+      "status": "READY_TO_PUSH",
       "export_paths": [
         "models/eight-ball-billiards/exports/triangle_rack.glb"
       ],
       "source_candidates": [
         "models/eight-ball-billiards/scene.blend"
       ],
-      "source_mapping": "candidate; inspect asset root in Blender before acceptance",
+      "source_mapping": "Verified root ASSET_Triangle_Rack and three standalone bars/132 triangles.",
       "generator_candidates": [
         "models/eight-ball-billiards/generate.py"
       ],
@@ -269,15 +274,52 @@
       "thumbnail": "models/eight-ball-billiards/thumbnails/triangle_rack.webp",
       "root": "ASSET_Triangle_Rack",
       "runtime_route": "?model=rack",
-      "export_sha256": "5c67ba15ddea5740e82b933da4b520c4cdce11e36b46a99b5711bd8cf540fa72",
-      "defects": [],
-      "repairs": [],
-      "qa_results": {},
+      "export_sha256": "860629a1fdf95867bc096df4f550a7ba631f2de633fac5a817382be464588cc1",
+      "defects": [
+        {
+          "id": "RACK-001",
+          "severity": "P2",
+          "description": "Original flat-ended bars leave outside V-notches at three joints."
+        },
+        {
+          "id": "RACK-002",
+          "severity": "P2",
+          "description": "All-smooth cap boundaries distort side/end highlights."
+        },
+        {
+          "id": "RACK-003",
+          "severity": "P2",
+          "description": "Assembled rack floats12.5 mm above cloth."
+        }
+      ],
+      "repairs": [
+        "Shared miter planes close all matching rings; keep radial profile/UV/topology/materials.",
+        "Flat sharp caps and analytic radial cylinder normals.",
+        "Lower only rack root12.6 mm for0.1 mm cloth overlap."
+      ],
+      "qa_results": {
+        "geometry": "PASS positive closed source/import bars, no degeneracy/winding/loose vertices; all three joint rings match.",
+        "uv_textures": "PASS finite preserved UV; atlas/stretch N/A untextured asset.",
+        "pbr": "PASS unchanged opaque dielectric walnut, metallic0 roughness0.28.",
+        "visual": "PASS seven overview+six details source/import; independent acceptance89/100.",
+        "glb": "PASS both exports0 errors/0 warnings; rack8928 bytes/132 triangles.",
+        "animation": "N/A static unrigged asset.",
+        "runtime": "PASS rack and assembly desktop/tablet exact payload/hash and controls, no page/HTTP errors.",
+        "performance": "PASS rack3 calls/132 triangles, assembly148/98100 sampled software WebGL; physical phone/FPS excluded.",
+        "regression": "PASS643 unit,17 targeted, full Game46 including561 catalog entries, experience31 with no filters/errors; final build and fresh Viewer PASS.",
+        "mobile": "N/A explicit owner exclusion",
+        "github_main": "NOT_RUN",
+        "github_actions": "NOT_RUN",
+        "live": "NOT_RUN"
+      },
       "commit_sha": null,
       "remote_verified": false,
       "remaining_risks": [
-        "Not yet inspected under this QA campaign."
-      ]
+        "Main push, required remote Actions and exact production acceptance pending.",
+        "Physical mobile excluded; no hardware FPS claim."
+      ],
+      "report": "docs/model-qa/MODEL-0004/README.md",
+      "required_remote_checks_passed": false
     },
     {
       "qa_id": "MODEL-0005",

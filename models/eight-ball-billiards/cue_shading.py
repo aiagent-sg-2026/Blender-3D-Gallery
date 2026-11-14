@@ -1,4 +1,4 @@
-"""Planar-cap shading for the pack's two reviewed tapered cues."""
+"""Shared planar-cap separation for the reviewed cues and rack bars."""
 
 
 def mark_planar_caps(mesh):

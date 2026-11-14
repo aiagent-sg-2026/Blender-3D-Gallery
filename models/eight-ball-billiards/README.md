@@ -71,3 +71,23 @@ The two straight cues share planar-cap shading in `cue_shading.py`: caps are fla
 `scripts/repair-cue-01-normals.py` and `scripts/repair-cue-02-normals.py` are revision-guarded one-time migrations. Preserve their recorded baselines first. They share `scripts/cue-normal-migration.py` and export only the selected cue and dependent assembly; no full-pack regeneration is needed. `blender --background --disable-autoexec models/eight-ball-billiards/scene.blend --python scripts/model-qa-cue-details.py -- --root ASSET_Cue_02 --output /tmp/cue-detail-review` renders the selected cue without saving its source. Diagnostic cap modes modify memory only; imported GLBs support the source/observe mode.
 
 From the repository root, with Node 24 and a built preview, run `MODEL_QA_ID=cue-stick-02 MODEL_QA_URL=http://127.0.0.1:5179/ node scripts/test-model-qa-browser.mjs`. The geometric-normal regression rule is shared by the two cue test files. Read the [planar-cap prevention note](../../docs/model-qa/blender-planar-cap-normals.md) for the verified cause, bounded repair, axis convention and preservation checks. Physical mobile testing is excluded by the owner.
+
+## Triangle rack joint and seating QA
+
+MODEL-0004 closes the three original cylindrical bars on common miter planes,
+retaining their radial profiles, face topology, UVs and material assignments.
+`rack_geometry.py` owns this geometry operation for both the generator and
+`scripts/repair-rack-joints.py`. Keep it and `cue_shading.py` beside the generator.
+The helper separates planar caps from smooth sides and supplies analytic radial
+side normals: oblique cuts otherwise change corner-angle weighting. The rack
+root is lowered 12.6 mm so its lowest points overlap the preserved cloth top by
+0.1 mm; independent exports remain centered on their own origin.
+
+The migration accepts only its recorded source revision, fingerprints all source
+objects, and exports only the rack and dependent assembly. Preserve originals
+before invoking it. `scripts/model-qa-rack-details.py` renders six corner details
+without saving; its optional candidate mode modifies memory only.
+`node --test tests/triangle-rack.test.mjs` checks matching joint rings, cap and
+radial normals in both exports, and assembly support. These tests use glTF's
+local Y cylinder axis; the straight-cue world-X checks are not reused for the
+rotated rack bars. Campaign acceptance remains in the progress tracker.

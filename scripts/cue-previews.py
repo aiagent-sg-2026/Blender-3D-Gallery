@@ -1,11 +1,11 @@
-"""Render one reviewed cue card and the dependent scene without saving input."""
+"""Render one reviewed pack asset and the dependent scene without saving input."""
 import bpy
 from mathutils import Vector
 from pathlib import Path
 
 
 def render_previews(root_name, output):
-    assert root_name in {'ASSET_Cue_01', 'ASSET_Cue_02'}
+    assert root_name in {'ASSET_Cue_01', 'ASSET_Cue_02', 'ASSET_Triangle_Rack'}
     scene = bpy.context.scene
     out = Path(output)
     out.mkdir(exist_ok=True)

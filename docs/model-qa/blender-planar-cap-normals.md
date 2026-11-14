@@ -21,3 +21,21 @@ Export preservation: corrected normals can reorder vertex/index buffers. Compare
 Skill updated or candidate created: keep this prevention rule in project documentation and shared project code. A bounded local/KB Skill search found no confident cap-normal procedure; general product-asset QA and coding-regression routes did not own this specific source convention. No global Skill or user memory was modified.
 
 Do not repeat: do not accept unit-length normals alone, hide the highlight by changing materials, treat a loader/Validator PASS as complete visual QA, infer a short part's axis from its bounding box, or repair an unreviewed next model while applying the shared rule.
+
+## MODEL-0004: oblique rack cuts
+
+The rack reproduced the original all-smooth cap construction. Its independent
+inspection also identified outside corner notches and a 12.5 mm cloth gap.
+`rack_geometry.py` clips each pair of bar ends to a common miter plane while
+preserving radial coordinates, UVs and face assignments; the guarded migration
+limits source changes to the rack. The root drops 12.6 mm for 0.1 mm support overlap.
+
+Unlike the straight cues, the oblique rack cuts change polygon corner-angle
+weights. Explicit analytic radial normals keep the clipped cylinder sides
+smooth; planar caps keep their own normals. Do not assume the straight-cue
+world-X test or an ngon-cap toggle alone covers arbitrary cut rods.
+`tests/triangle-rack.test.mjs` independently checks all three matched joint rings,
+planar and analytic radial normals in both GLBs, and assembled cloth support.
+All five checks fail on the preserved baseline and pass after the scoped repair.
+Native before/after/re-import views and per-object/per-payload preservation
+records live in `MODEL-0004/`; publication status is tracked separately.

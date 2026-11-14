@@ -1,0 +1,93 @@
+{
+  "input_sha256": "228720e3c3db914cb3aed912d701d34b95955d527c43d410e6fa74fa420db5de",
+  "candidate": true,
+  "no_source_save": true,
+  "views": [
+    {
+      "name": "joint-1-top",
+      "target": [
+        0.47999995946884155,
+        0.27000001072883606,
+        0.800000011920929
+      ],
+      "camera": [
+        0.47999995946884155,
+        0.27000001072883606,
+        1.7999999523162842
+      ],
+      "ortho_scale": 0.075
+    },
+    {
+      "name": "joint-1-oblique",
+      "target": [
+        0.47999995946884155,
+        0.27000001072883606,
+        0.800000011920929
+      ],
+      "camera": [
+        0.81333327293396,
+        -0.39666667580604553,
+        1.4666666984558105
+      ],
+      "ortho_scale": 0.075
+    },
+    {
+      "name": "joint-2-top",
+      "target": [
+        0.7799999713897705,
+        0.4350000023841858,
+        0.800000011920929
+      ],
+      "camera": [
+        0.7799999713897705,
+        0.4350000023841858,
+        1.7999999523162842
+      ],
+      "ortho_scale": 0.075
+    },
+    {
+      "name": "joint-2-oblique",
+      "target": [
+        0.7799999713897705,
+        0.4350000023841858,
+        0.800000011920929
+      ],
+      "camera": [
+        1.1133333444595337,
+        -0.2316666841506958,
+        1.4666666984558105
+      ],
+      "ortho_scale": 0.075
+    },
+    {
+      "name": "joint-3-top",
+      "target": [
+        0.7799999713897705,
+        0.10500000417232513,
+        0.800000011920929
+      ],
+      "camera": [
+        0.7799999713897705,
+        0.10500000417232513,
+        1.7999999523162842
+      ],
+      "ortho_scale": 0.075
+    },
+    {
+      "name": "joint-3-oblique",
+      "target": [
+        0.7799999713897705,
+        0.10500000417232513,
+        0.800000011920929
+      ],
+      "camera": [
+        1.1133333444595337,
+        -0.5616666674613953,
+        1.4666666984558105
+      ],
+      "ortho_scale": 0.075
+    }
+  ],
+  "samples": 32,
+  "historical_candidate_note": "Intermediate in-memory miter + flat/sharp cap comparison, rendered before analytic radial normals were added to rack_geometry.py. Current --candidate invokes the final helper; this historical intermediate is not the final reproduction reference."
+}
