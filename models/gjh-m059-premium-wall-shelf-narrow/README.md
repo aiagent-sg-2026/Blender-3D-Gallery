@@ -6,7 +6,7 @@ Three independent wood shelves, five independently editable supported LED diffus
 
 ## Product placement, not crowded point counts
 
-Each 0.60 m-wide shelf has **two anchors**, at X ±0.14 m, for six total across three rows. Reference product footprints are 0.18 × 0.22 m. Actual GLB geometry tests verify each footprint corner lies over the shelf, at least 60 mm side clearance and 100 mm between the two footprints. Anchor centres are 280 mm apart. The contract does not claim arbitrary product heights or shapes fit; future product loading needs its own collision checks. Nothing is baked onto the shelves.
+Each 0.592 m-wide shelf has **two anchors**, at X ±0.14 m, for six total across three rows. Reference product footprints are 0.18 × 0.22 m. Actual GLB geometry tests verify each footprint corner lies over the shelf, at least 60 mm side clearance and 100 mm between the two footprints. Anchor centres are 280 mm apart. The contract does not claim arbitrary product heights or shapes fit; future product loading needs its own collision checks. Nothing is baked onto the shelves.
 
 ## Artifacts and scope
 
@@ -18,10 +18,10 @@ The explicit `header_surface_front` anchor has local +Z outward/+Y up and a 0.50
 
 | LOD | Triangles | Bytes |
 | --- | ---: | ---: |
-| 0 | 8,700 | 707,312 |
-| 1 | 3,132 | 333,940 |
-| 2 | 1,276 | 220,504 |
-| 3 | 348 | 153,432 |
+| 0 | 8,700 | 709,252 |
+| 1 | 3,132 | 334,728 |
+| 2 | 1,276 | 220,508 |
+| 3 | 348 | 153,436 |
 
 - PASS `reports/assets.json`: four LODs and collider have zero Khronos errors/warnings; finite normals/UVs, bounded scale, embedded textures, real shelf support, all five LED contacts, label visibility and product footprint checks.
 - PASS `reports/sources.json`: source opened, edited copy saved/reopened and re-exported without regeneration; canonical source remains unchanged. `reports/source-edit/edited.glb` is required by tests and must be retained along with its edited `.blend` provenance.
@@ -34,3 +34,12 @@ Local validated status is not a CI, publication or deployment claim. No structur
 ## Reproduce
 
 Use Blender4.x with `-b -P models/gjh-m059-premium-wall-shelf-narrow/generate.py`, then run its `validate.mjs`, Blender `inspect_sources.py`, and `verify_source_edit.mjs`. `--skip-render` omits all previews and cannot substitute for visual inspection. Run `node --test tests/gjh-m059.test.mjs`, the normal repository build and `node scripts/test-gjh-m059-browser.mjs`. Keep the source-edit GLB used by the test. No existing tests, workflows or runtime controls were weakened.
+
+
+## Coplanar inner-lining correction, final browser gate pending
+
+The initial browser interactions passed, but an independently inspected Inspector side view showed gold/green striping. This **visual FAIL** overrides the earlier broad pass interpretation. Across all four original LODs the gold lining and pillar visible surfaces differed by only 1.40e-8m. `reports/inner-trim-coplanar-before.json` and `inner-trim-regression-before.log` preserve the finding and failing new test; the original runtime screenshots remain unchanged.
+
+Final geometry uses a real4mm lining: back face touches the pillar, visible face is4mm inward. Shelf/canopy width is0.592m and ends contact the lining, avoiding hidden volume overlap. Product side clearance remains0.066m. New actual-GLB tests require separation, support contact, wood end-contact and the lining as the first visible ray hit. All four LODs, canonical source and eight previews were regenerated; source-edit validation and focused tests pass. Those eight new previews were actually inspected. No camera, material depth offset or rendering workaround was introduced.
+
+Job87764f9a-cb99-4e6e-9b86-f5de60293873 proves the repaired geometry/source checks only. Prior browser hash screenshots no longer represent these new exports. Final browser/Inspector side-view verification is **NEEDS REVIEW** and will run once after integration onto the release baseline; no final release or deployment pass is claimed here.

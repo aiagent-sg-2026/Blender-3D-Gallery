@@ -49,17 +49,17 @@ def build(root):
     for side,x in [('left',-.35),('right',.35)]:
         box('cabinet_'+side+'_pillar',(x,0,1.325),(.10,.50,1.93),emerald,cabinet,.012)
         box('trim_'+side+'_front',(x,-.255,1.325),(.10,.02,1.93),gold,trim,.006)
-        box('trim_'+side+'_inner',(-.305 if x<0 else .305,-.08,1.325),(.01,.32,1.93),gold,trim,.003)
+        box('trim_'+side+'_inner',(-.298 if x<0 else .298,-.08,1.325),(.004,.32,1.93),gold,trim,.001)
     box('cabinet_crown',(0,0,2.35),(.8,.55,.10),emerald,cabinet,.025)
     box('trim_crown_lip',(0,0,2.29),(.8,.53,.02),gold,trim,.006)
     header=empty('brand_header',parent=root);header['artwork']='Blank original replaceable panel; no brand artwork'
     box('brand_header_panel',(0,-.195,2.04),(.58,.045,.40),emerald,header,.012)
     for n,z in [('top',2.252),('bottom',1.828)]:box('brand_header_trim_'+n,(0,-.23,z),(.59,.025,.025),gold,header,.004)
     for n,x in [('left',-.295),('right',.295)]:box('brand_header_trim_'+n,(x,-.23,2.04),(.01,.025,.44),gold,header,.003)
-    box('brand_header_light_canopy',(0,-.005,1.8275),(.60,.45,.025),wood,header,.004)
+    box('brand_header_light_canopy',(0,-.005,1.8275),(.592,.45,.025),wood,header,.004)
     label=empty('header_surface_front',(0,-.22,2.04),header);label['label_width_m']=.50;label['label_height_m']=.36
     for row,z in enumerate([.43,.97,1.51],1):
-        box('shelf_%d'%row,(0,-.02,z),(.60,.46,.04),wood,root,.006)
+        box('shelf_%d'%row,(0,-.02,z),(.592,.46,.04),wood,root,.006)
         rail=box('price_rail_%d'%row,(0,-.257,z+.015),(.60,.018,.065),gold,root,.004);rail['role']='blank price strip'
         box('LED_%d'%row,(0,-.19,z-.025),(.54,.016,.010),led,root,.002)
         ar=empty('product_anchor_row_%d'%row,parent=root);ar['capacity']=2
