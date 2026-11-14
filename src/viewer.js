@@ -20,6 +20,7 @@ export default async function createViewer(
   let vehicleToolbar;
   let fishMotion;
   let cartDemo;
+  let visitorDemo;
   let lastDraw = 0;
   let studio;
   let environmentTarget;
@@ -130,6 +131,7 @@ export default async function createViewer(
     controls.dispose();
     fishMotion?.dispose();
     cartDemo?.dispose();
+    visitorDemo?.dispose();
     disposeModel(model);
     disposeModel(studio);
     scene.environment = null;
@@ -206,6 +208,11 @@ export default async function createViewer(
         throw new DOMException('Viewer closed', 'AbortError');
       }
     }
+    if (asset.id === 'gjh-mall-visitor-v2') {
+      const {default: createVisitorDemo} = await import('./visitor-v2/demo.js');
+      if (disposed || signal.aborted) throw new DOMException('Viewer closed', 'AbortError');
+      visitorDemo = createVisitorDemo({model, clips:gltf.animations, container, invalidate});
+    }
     const bounds = new THREE.Box3().setFromObject(cartDemo?.group ?? model);
     if (bounds.isEmpty()) throw new Error("Model has no visible bounds");
     const center = bounds.getCenter(new THREE.Vector3());
@@ -247,6 +254,7 @@ export default async function createViewer(
     const reset = () => {
       clearPreset();
       cartDemo?.reset();
+      visitorDemo?.reset();
       if (doorRig) for (const [code, door] of Object.entries(doorRig)) {
         door.node.rotation.y = door.closed;
         doorButtons.get(code)?.setAttribute("aria-pressed", "false");
@@ -354,11 +362,12 @@ export default async function createViewer(
       if (disposed || document.hidden) return;
       const now = performance.now();
       const active = cartDemo?.update(lastDraw ? (now - lastDraw) / 1000 : 0);
+      const visitorActive = visitorDemo?.update(lastDraw ? (now - lastDraw) / 1000 : 0);
       lastDraw = now;
       const fishActive = fishMotion?.update();
       const changed = controls.update();
       renderer.render(scene, camera);
-      if (changed || active || fishActive) invalidate();
+      if (changed || active || visitorActive || fishActive) invalidate();
     };
     invalidate();
     return { reset, dispose, setView };
