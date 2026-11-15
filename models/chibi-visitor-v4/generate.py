@@ -382,7 +382,7 @@ SKIN, BLUSH = "FBD2B2", "F59C92"
 def materials():
     return dict(
         skin=mat("Skin", SKIN, 0.55),
-        hair=mat("Hair", "50342A", 0.55), hair2=mat("Hair light", "593A2F", 0.55),
+        hair=mat("Hair", "50342A", 0.38), hair2=mat("Hair light", "593A2F", 0.38),
         brow=mat("Brow", "4A2E22", 0.6), lash=mat("Lash", "38211A", 0.6), white=mat("Eye white", "FFFFFF", 0.35),
         iris=mat("Iris", "40251A", 0.3), iris2=mat("Iris glow", "6A3E27", 0.3), pupil=mat("Pupil", "1B0F0C", 0.25),
         mouth=mat("Mouth", "B23E39", 0.5), tongue=mat("Tongue", "F28E80", 0.45),
@@ -532,7 +532,8 @@ def hshell(az, el, radius):
         y = -h * m.cos(a)
         if y > 0:
             y *= 1 - 0.16 * sstep(0.4, 0.85, v) - 0.2 * sstep(0.85, 1.0, v)
-        return HH + Vector((h * m.sin(a), y, 0.82 * v)) * radius
+        side = 1 - 0.045 * sstep(0.1, 0.6, v)                # narrow the upper dome sideways to match the sheet's crown width
+        return HH + Vector((h * m.sin(a) * side, y, 0.82 * v)) * radius
     return HH + Vector((ce * m.sin(a), -ce * m.cos(a), se)) * radius
 
 
@@ -609,27 +610,35 @@ def g_lock(ctrl, width, radius, seg=16, **kw):
     return g_leaf(pts, nor, width, **kw)
 
 
+def hair_locks():
+    locks = []                                               # (ctrl, width, radius): broad shingled locks off a crown whorl
+    for k in range(-3, 4):                                   # nape: fewer, wider locks
+        az, sw = 180 + k * 29, 9 if k % 2 else -9
+        tip = {3: -30, 2: -44}.get(abs(k), -56)
+        locks.append(([(az - 0.3 * sw, 14, 0.98), (az, -12, 1.0), (az + 0.5 * sw, -36, 1.01), (az + sw, tip, 0.99)],
+                      0.135, 0.190))
+    for k in range(-3, 3):                                   # lower back
+        az, sw = 180 + (k + 0.5) * 30, -10 if k % 2 else 10
+        locks.append(([(az, 46, 0.98), (az, 24, 1.0), (az + 0.5 * sw, 2, 1.01), (az + sw, -20, 1.06)], 0.150, 0.197))
+    for k in range(-2, 3):                                   # upper back: a fan opening monotonically from the whorl
+        az = 180 + k * 40
+        sw = 0.25 * (az - 180)
+        wide, tip = (0.170, 0) if k == 0 else (0.150, 8)
+        locks.append(([(180 + 0.6 * (az - 180), 78, 0.98), (az, 52, 1.0), (az + 0.5 * sw, 30, 1.01), (az + sw, tip, 1.06)], wide, 0.201))
+    for k in range(-2, 2):                                   # crown whorl: locks curl round a point behind the apex
+        az = 180 + (k + 0.5) * 72
+        locks.append(([(az - 40, 84, 0.97), (az - 12, 76, 1.0), (az + 18, 62, 1.01), (az + 40, 46, 1.05)], 0.130, 0.203))
+    return locks
+
+
 def build_hair(mt):
     part = Part("Hair")
     geoms = [g_cap(0.186, solid=True)]
-    locks = []                                               # (ctrl, width, radius): shingled back rows
-    for k in range(-4, 5):                                   # nape
-        az, sw = 180 + k * 22, 7 if k % 2 else -7
-        tip = {4: -32, 3: -46}.get(abs(k), -58)
-        locks.append(([(az - 0.3 * sw, 12, 0.98), (az, -14, 1.0), (az + 0.5 * sw, -38, 1.01), (az + sw, tip, 0.99)],
-                      0.100, 0.190))
-    for k in range(-4, 4):
-        az, sw = 180 + (k + 0.5) * 24, -8 if k % 2 else 8
-        locks.append(([(az, 44, 0.98), (az, 22, 1.0), (az + 0.5 * sw, 0, 1.01), (az + sw, -20, 1.06)], 0.115, 0.197))
-    for k in range(-3, 4):
-        az, sw = 180 + k * 32, 9 if k % 2 else -9
-        wide, tip = (0.140, 0) if k == 0 else (0.120, 10)
-        locks.append(([(az, 70, 0.98), (az, 52, 1.0), (az + 0.5 * sw, 30, 1.01), (az + sw, tip, 1.06)], wide, 0.200))
-    for k in range(-2, 3):                                   # crown
-        az, sw = 180 + k * 50, 10 if k % 2 else -10
-        locks.append(([(az, 88, 0.97), (az, 76, 1.0), (az + sw, 60, 1.01), (az + 1.5 * sw, 44, 1.05)], 0.120, 0.203))
-    for i, (ctrl, width, radius) in enumerate(locks):
-        geoms.append(g_lock(ctrl, width, radius, groove=0.0))
+    locks = hair_locks()
+    shell = []                                               # kept as separate shingles (not remeshed) so creases survive
+    for ctrl, width, radius in locks:
+        ctrl = ctrl[:-1] + [(ctrl[-1][0], ctrl[-1][1], 1.10)]  # tips lift off the shell and shadow the row below
+        shell.append(g_lock(ctrl, width, radius, thick=0.030, groove=0.0))
     front = [  # (ctrl, width, radius, taper): swept from the part above the left brow
         ([(25, 52, 0.97), (60, 74, 1.0), (120, 78, 1.0), (165, 62, 1.01)], 0.125, 0.198, 2.6),      # over the top
         ([(10, 56, 0.97), (-40, 76, 1.0), (-110, 78, 1.0), (-160, 62, 1.01)], 0.125, 0.198, 2.6),
@@ -638,10 +647,10 @@ def build_hair(mt):
         ([(84, 30, 0.99), (80, 8, 1.0), (72, -8, 1.0), (64, -18, 1.0)], 0.070, 0.194, 2.6),
         ([(-40, 40, 0.97), (-66, 22, 1.0), (-78, 4, 1.01), (-74, -12, 1.03)], 0.115, 0.196, 2.0),   # temples
         ([(50, 40, 0.97), (70, 22, 1.0), (80, 4, 1.01), (76, -12, 1.03)], 0.115, 0.196, 2.0),
-        ([(14, 50, 0.97), (-30, 44, 1.0), (-66, 26, 1.02), (-84, 4, 1.08), (-90, -6, 1.30)], 0.130, 0.198, 1.6),
-        ([(8, 60, 0.97), (-35, 56, 1.0), (-68, 36, 1.01), (-86, 17, 1.05), (-92, 9, 1.31)], 0.135, 0.200, 1.6),
-        ([(42, 48, 0.97), (66, 38, 1.0), (84, 20, 1.02), (90, 4, 1.08), (94, -4, 1.29)], 0.130, 0.198, 1.6),
-        ([(40, 58, 0.97), (64, 52, 1.0), (82, 35, 1.01), (91, 21, 1.05), (95, 14, 1.30)], 0.135, 0.200, 1.6),
+        ([(14, 50, 0.97), (-30, 44, 1.0), (-66, 26, 1.02), (-90, 4, 1.08), (-102, -6, 1.30)], 0.130, 0.198, 1.6),
+        ([(8, 60, 0.97), (-35, 56, 1.0), (-68, 36, 1.01), (-92, 17, 1.05), (-104, 9, 1.31)], 0.135, 0.200, 1.6),
+        ([(42, 48, 0.97), (66, 38, 1.0), (86, 20, 1.02), (92, 4, 1.08), (102, -4, 1.29)], 0.130, 0.198, 1.6),
+        ([(40, 58, 0.97), (64, 52, 1.0), (82, 35, 1.01), (92, 21, 1.05), (104, 14, 1.30)], 0.135, 0.200, 1.6),
         ([(22, 50, 0.97), (-4, 40, 1.0), (-26, 22, 1.0), (-38, -4, 1.0)], 0.140, 0.200, 2.0),      # fringe
         ([(28, 48, 0.98), (14, 36, 1.0), (-2, 18, 1.005), (-10, -8, 1.0)], 0.125, 0.202, 2.0),
         ([(31, 44, 0.99), (24, 30, 1.0), (12, 13, 1.01), (4, -5, 1.005)], 0.095, 0.204, 2.0),
@@ -659,6 +668,8 @@ def build_hair(mt):
         pts = path3(ctrl, 14)
         geoms.append(g_leaf(pts, [hint] * len(pts), width, thick, belly=0.85, root=0.85, taper=1.4, tip=0.07, groove=0.0))
     part.add(fuse(geoms, 0.0026, 4, 0.2), mt["hair"])
+    for g in shell:
+        part.add(g, mt["hair"])
     return part
 
 

@@ -15,6 +15,7 @@
 <script type="module">
 // Independent Three.js load of the exported GLB. Open through the Vite dev server:
 //   /models/chibi-visitor-v4/verification/viewer-check.html?az=30   (az = camera azimuth in degrees)
+//   add &perf=1 to record 240 frames of frame-time statistics in window.__perf
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
@@ -63,6 +64,24 @@ try {
     roots: gltf.scene.children.map((c) => c.name),
   };
   status.textContent = `Loaded: ${meshes} meshes, ${triangles} triangles, ${size.y.toFixed(3)} m tall`;
+  if (new URLSearchParams(location.search).has('perf')) {   // ?perf=1: 240 animation frames, rotating the model
+    const dt = [];
+    let last = performance.now(), n = 0;
+    const tick = (now) => {
+      dt.push(now - last); last = now;
+      gltf.scene.rotation.y += 0.02;
+      renderer.render(scene, camera);
+      if (++n < 240) { requestAnimationFrame(tick); return; }
+      const sorted = dt.slice(10).sort((a, b) => a - b);        // drop warm-up frames
+      const q = (p) => +sorted[Math.min(sorted.length - 1, Math.floor(p * sorted.length))].toFixed(2);
+      window.__perf = { frames: sorted.length, p50_ms: q(0.5), p95_ms: q(0.95), max_ms: q(1),
+        calls: renderer.info.render.calls, triangles: renderer.info.render.triangles,
+        textures: renderer.info.memory.textures, geometries: renderer.info.memory.geometries,
+        gpu: renderer.getContext().getParameter(renderer.getContext().RENDERER) };
+      status.textContent += ` | perf p50 ${window.__perf.p50_ms} ms, p95 ${window.__perf.p95_ms} ms`;
+    };
+    requestAnimationFrame(tick);
+  }
 } catch (error) {
   window.__check = { ok: false, error: String(error) };
   status.textContent = 'GLB failed to load: ' + error;

@@ -17,12 +17,12 @@
     "height": 1.0024,
     "bounds_gltf": {
       "min": [
-        -0.2608,
+        -0.2555,
         0.0,
-        -0.2556
+        -0.2614
       ],
       "max": [
-        0.2576,
+        0.2548,
         1.0024,
         0.1925
       ]
@@ -31,8 +31,8 @@
     "up": "+Y",
     "front": "+Z",
     "root": "ChibiVisitorV4",
-    "triangles": 109083,
-    "vertices": 54929,
+    "triangles": 113428,
+    "vertices": 57143,
     "materials": 19,
     "draw_calls": 25
   },
@@ -41,11 +41,12 @@
     "animations": []
   },
   "delivery": {
-    "glb_bytes": 2140140,
-    "glb_sha256": "cf000321b7ddf3cdf5b6b4e9e00379c27c7c958a9b453406eaab5046f1992a01",
+    "glb_bytes": 2219344,
+    "glb_sha256": "55637c85a0af0317bcc5d2b1ae885c3c06fa5ffa5e0d6bfdc8b3eeb94de9b1ce",
     "reference_sha256": "6f639d9827bbce886aec778c1f97248af6ab739303970edf39802012171002c1",
-    "verified": "2026-11-15"
+    "verified": "2026-11-15",
+    "qa_run": "qa/run-001"
   },
-  "accuracy_notes": "Stylised interpretation of the owner's v4.0 sheet. Head: shallow sculpted relief on the sheet-matched skull silhouette (mean 1.25 mm, p95 6.5 mm from the parametric skull), fused ears/nose/neck and a painted face texture; the facial character is mostly texture. Hair is busier and less smoothly layered than the sheet. Body, hands and shoes are simplified procedural parts. Silhouette rows are mostly within about 2 cm of the sheet with larger flick and tuft deviations. Verified: glTF Validator 0 errors, headless rebuild byte-identical, Three.js load with textured face. Not rigged, not registered in the catalog; gallery viewer acceptance and device performance are not verified.",
+  "accuracy_notes": "Stylised interpretation of the owner's v4.0 sheet. Head: shallow sculpted relief on the sheet-matched skull silhouette (mean 1.25 mm, p95 6.5 mm from the parametric skull), fused ears/nose/neck and a painted face texture; the facial character is mostly texture. Hair: fused cap and fringe plus 22 separate shingled back locks in a fan off the crown; more regular than the sheet. Body, hands and shoes are simplified procedural parts. Head silhouette rows (z >= 0.60 m) are within a mean of 5.8-7.0 px (about 1 cm) of the sheet, flick and tuft tips up to about 40 px. Quality gate run 001: glTF Validator 0/0/0/0, headless rebuild byte-identical, Three.js load clean, 673 repository tests pass. Known P2: dark gap at the front of each ear. Not rigged, not registered in the catalog; gallery viewer acceptance and physical-device performance are not verified.",
   "rights": "Original asset; owner-project reuse is authorized. Public redistribution terms have not been specified."
 }

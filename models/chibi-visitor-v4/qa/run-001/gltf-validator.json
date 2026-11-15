@@ -1,0 +1,77 @@
+{
+  "file": "models/chibi-visitor-v4/exports/chibi-visitor-v4.glb",
+  "bytes": 2219344,
+  "sha256": "55637c85a0af0317bcc5d2b1ae885c3c06fa5ffa5e0d6bfdc8b3eeb94de9b1ce",
+  "generator": "Khronos glTF Blender I/O v5.1.20",
+  "validator": "2.0.0-dev.3.10",
+  "triangles": 113428,
+  "vertices": 57143,
+  "drawCalls": 25,
+  "materials": 19,
+  "nodes": [
+    "Arm.L",
+    "Arm.R",
+    "Bag",
+    "Hair",
+    "Head",
+    "Hoodie",
+    "Leg.L",
+    "Leg.R",
+    "Shoe.L",
+    "Shoe.R",
+    "Shorts",
+    "Watch",
+    "ChibiVisitorV4"
+  ],
+  "checks": {
+    "QA-21 GLB header": {
+      "status": "PASS",
+      "detail": "magic glTF, version 2, declared length 2219344 vs file 2219344"
+    },
+    "QA-22 Khronos validator": {
+      "status": "PASS",
+      "detail": "0 errors, 0 warnings, 0 infos, 0 hints"
+    },
+    "QA-06 finite transforms/bounds": {
+      "status": "PASS",
+      "detail": "bounds min -0.2555,0,-0.2614 max 0.2548,1.0024,0.1925"
+    },
+    "QA-07 normals": {
+      "status": "PASS",
+      "detail": "every primitive has NORMAL"
+    },
+    "QA-08 scale/bounds/origin": {
+      "status": "PASS",
+      "detail": "height 1.0024 m, feet at y=0.0000, +Y up"
+    },
+    "QA-09 UV mapping": {
+      "status": "PASS",
+      "detail": "textured primitives have TEXCOORD_0"
+    },
+    "QA-10 missing textures": {
+      "status": "PASS",
+      "detail": "1 image(s), all embedded in the GLB"
+    },
+    "QA-11 PBR/colour space": {
+      "status": "PASS",
+      "detail": "19 metallic-roughness materials; base-colour image is sRGB by glTF definition"
+    },
+    "QA-15 clip inventory": {
+      "status": "N_A",
+      "detail": "static asset: documented no armature and no animation"
+    },
+    "QA-13/14 rig and weights": {
+      "status": "N_A",
+      "detail": "static asset, no skin (documented in metadata.json)"
+    },
+    "QA-29 bytes/triangles": {
+      "status": "PASS",
+      "detail": "2219344 bytes (<=4,000,000), 113428 triangles (<=150,000); budgets are this project's own, not a device guarantee"
+    },
+    "QA-30 textures/draw calls": {
+      "status": "PASS",
+      "detail": "1 texture(s), 25 draw calls (<=30)"
+    }
+  },
+  "validatorMessages": []
+}

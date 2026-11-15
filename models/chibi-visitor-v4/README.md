@@ -6,7 +6,8 @@ A static, full-body chibi character modelled in Blender 5.1.2 from the owner's "
 - `sources/chibi-visitor-v4.blend`: editable copy of the Blender session (scene "Chibi Visitor v4", collections `CV4 Model` and `CV4 Studio`).
 - `sources/head-sculpt.json`: the skull baked from `sculpt_head.py`; `generate.py` loads it.
 - `previews/`: orthographic Blender renders (front, side, back, three-quarter), `reference-comparison.png` (sheet on top, renders below) and `head-study/` (sculpt passes and head close-ups against the sheet).
-- `verification/`: an independent Three.js load page and its browser screenshots (front, three-quarter, back).
+- `verification/`: an independent Three.js load page (add `&perf=1` for frame timing) and its browser screenshots (front, three-quarter, back).
+- `qa/`: the quality gate, `check-glb.mjs` (structural GLB checks), `silhouette-rows.py` + `silhouette-gate.py` (these two need the local, uncommitted character sheet) and the evidence of run 001 (`qa/run-001/`).
 
 ## How the head is made
 
@@ -18,7 +19,7 @@ Measured contribution of the sculpt: the baked skull is a mean 1.25 mm, 95th per
 
 ## Parts
 
-Thirteen mesh objects, grouped so a rig can be added later: `Head` (skin, ears, nose, neck, face texture), `Hair` (scalp cap plus layered locks and tufts), `Hoodie`, `Shorts`, `Arm.L/R` (arm and a fist with four fingers and a thumb), `Leg.L/R` (leg and sock), `Shoe.L/R`, `Watch` (left wrist) and `Bag` (satchel and strap).
+Thirteen mesh objects, grouped so a rig can be added later: `Head` (skin, ears, nose, neck, face texture), `Hair` (fused scalp cap, fringe and tufts, plus 22 separate shingled back locks kept un-remeshed so the creases survive), `Hoodie`, `Shorts`, `Arm.L/R` (arm and a fist with four fingers and a thumb), `Leg.L/R` (leg and sock), `Shoe.L/R`, `Watch` (left wrist) and `Bag` (satchel and strap).
 
 ## Rebuild
 
@@ -32,20 +33,32 @@ blender --background --factory-startup --python-exit-code 1 --python models/chib
 
 This rewrites the blend, GLB and four previews in this directory. Set `CV4_OUT` to write somewhere else.
 
-## Verification (2026-11-15)
+## Quality gate and verification (2026-11-15, run `qa/run-001`)
 
-- Khronos glTF Validator 2.0.0-dev.3.10: 0 errors, 0 warnings, 0 infos, 0 hints. 109,083 triangles, 54,929 vertices, 19 materials, 25 draw calls, 2,140,140 bytes. SHA-256 `cf000321b7ddf3cdf5b6b4e9e00379c27c7c958a9b453406eaab5046f1992a01`.
-- The headless rebuild (with `CV4_OUT` set to a scratch folder) produced a byte-identical GLB to the MCP build, which also shows the baked skull is read outside MCP.
-- Three.js 0.187 loaded the GLB in the app's browser through the Vite dev server: 25 meshes, 109,083 triangles, 0 animations, 1.0024 m tall, no console errors; the face texture (eyes, brows, mouth, blush) renders correctly in the front, three-quarter and back views (`verification/`).
-- `npm run validate:assets` and `npm test` (670 tests) pass. The model is not in `models/catalog.json`, so these do not exercise it directly.
-- Silhouette rows compared with the sheet (645 px = 1.00 m): the head and torso rows are mostly within about 14 px (2 cm); hair flicks and the top tuft deviate more, with outliers of up to about 40 px. The hair at the crown is up to about 13 px wider than the sheet in the front and back views.
+Gates (this project's own thresholds, set before the final fixes; the owner may tighten them):
+
+| Gate | Criterion | Result |
+| --- | --- | --- |
+| G1 | glTF Validator 0 errors, 0 warnings; at most 150,000 triangles and 30 draw calls | PASS: 0/0/0/0, 113,428 triangles, 25 draw calls |
+| G2 | headless rebuild is byte-identical to the MCP build | PASS: both `55637c85a0af0317bcc5d2b1ae885c3c06fa5ffa5e0d6bfdc8b3eeb94de9b1ce` |
+| G3 | Three.js loads the exact GLB with no console errors; front, three-quarter and back checked by eye | PASS: 25 meshes, no errors or warnings |
+| G4 | head rows (z >= 0.60 m) against the sheet: mean offset <= 8 px and no row beyond 15 px, excluding rows above z = 0.94 m (flick and tuft tips) | PASS: front 5.8 / 11, side 7.0 / 13, back 6.9 / 15 (mean / max px; 645 px = 1 m) |
+| G5 | by eye, from six orthographic views, a three-quarter and head close-ups: layered locks with visible creases, no stray knob or horn, facial features complete | PASS with one P2 note (ear-front gap, below) |
+| G6 | `npm run validate:assets` and `npm test` pass | PASS: 673 tests; the model is not in the catalog, so these do not exercise it directly |
+
+Evidence: `qa/run-001/` has the validator JSON, per-check results (`manifest.json`), hashes, the silhouette rows, the Three.js console log, frame timing and the screenshots. One crop artefact is excluded from G4: in the side view the sheet crop at z = 0.74-0.78 m also catches the hair wing of the neighbouring back view.
+
+Other measurements:
+
+- Three.js 0.187 in the app's browser pane (WebKit WebGL, 60 Hz): p50 16.7 ms and p95 18.4 ms over 230 frames of a rotating model. This is vsync-limited and says nothing about phones or low-end GPUs.
+- Khronos glTF Validator 2.0.0-dev.3.10 on 2,219,344 bytes, 57,143 vertices, 19 materials, one 1024 px texture.
 
 ## Known differences from the sheet
 
-- Hair follows the sheet's outline, parting, flicks and tuft, but is built from ridged locks and is busier and less smoothly layered than the sheet; it needs a redesign of the lock flow to match.
-- A small dark gap remains at the front of each ear where the sideburn, skull and ear meet; lengthening the sideburns did not remove it, so that change was reverted.
+- Hair now reads as layered shingles with creases and lifted tips, and the back is a fan of locks off the crown. It is still more regular than the sheet's, whose locks vary more in length and curl; the tips of the wing flicks and the top tuft deviate from the sheet by up to about 40 px in the silhouette rows.
+- P2: a small dark gap remains at the front of each ear where the sideburn, skull and ear meet; lengthening the sideburns did not remove it, so that change was reverted.
 - The hood on the back is flatter than the sheet's, the hands are simple fists and the shoes are a simplified sneaker (toe cap, three laces, two side stripes).
 - The sheet is inconsistent in two places. The strap is dark brown in the front and three-quarter views but tan in the side and back views: dark brown is used throughout. The bag hangs at the front right hip in three views but is drawn behind the hip in the back view: the front right hip is used.
-- Not done: rig, animation, facial shapes, level of detail, registration in `models/catalog.json`, gallery viewer acceptance and device performance.
+- Not done: rig, animation, facial shapes, level of detail, registration in `models/catalog.json`, gallery viewer acceptance and physical-device performance (QA-32 is NOT_RUN).
 
 Rights: original asset for the owner's projects. The character sheet is the owner's supplied reference; public redistribution terms for it have not been specified.

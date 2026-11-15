@@ -1,0 +1,110 @@
+{
+  "asset": "chibi-visitor-v4",
+  "run": "run-001",
+  "date": "2026-11-15",
+  "checks": {
+    "QA-21 GLB header": {
+      "status": "PASS",
+      "detail": "magic glTF, version 2, declared length 2219344 vs file 2219344"
+    },
+    "QA-22 Khronos validator": {
+      "status": "PASS",
+      "detail": "0 errors, 0 warnings, 0 infos, 0 hints"
+    },
+    "QA-06 finite transforms/bounds": {
+      "status": "PASS",
+      "detail": "bounds min -0.2555,0,-0.2614 max 0.2548,1.0024,0.1925"
+    },
+    "QA-07 normals": {
+      "status": "PASS",
+      "detail": "every primitive has NORMAL"
+    },
+    "QA-08 scale/bounds/origin": {
+      "status": "PASS",
+      "detail": "height 1.0024 m, feet at y=0.0000, +Y up"
+    },
+    "QA-09 UV mapping": {
+      "status": "PASS",
+      "detail": "textured primitives have TEXCOORD_0"
+    },
+    "QA-10 missing textures": {
+      "status": "PASS",
+      "detail": "1 image(s), all embedded in the GLB"
+    },
+    "QA-11 PBR/colour space": {
+      "status": "PASS",
+      "detail": "19 metallic-roughness materials; base-colour image is sRGB by glTF definition"
+    },
+    "QA-15 clip inventory": {
+      "status": "N_A",
+      "detail": "static asset: documented no armature and no animation"
+    },
+    "QA-13/14 rig and weights": {
+      "status": "N_A",
+      "detail": "static asset, no skin (documented in metadata.json)"
+    },
+    "QA-29 bytes/triangles": {
+      "status": "PASS",
+      "detail": "2219344 bytes (<=4,000,000), 113428 triangles (<=150,000); budgets are this project's own, not a device guarantee"
+    },
+    "QA-30 textures/draw calls": {
+      "status": "PASS",
+      "detail": "1 texture(s), 25 draw calls (<=30)"
+    },
+    "QA-01/04 source and tool probe": {
+      "status": "PASS",
+      "detail": "generate.py and sources/ present; Blender 5.1.2 via Blender Lab MCP 1.0.3, schema probed earlier in the session"
+    },
+    "QA-02 rights": {
+      "status": "PASS",
+      "detail": "original asset; no downloaded mesh/texture/add-on (see metadata.json). Public redistribution of the reference sheet unspecified, so the sheet stays uncommitted"
+    },
+    "QA-17/18 six views, three-quarter, close-ups": {
+      "status": "PASS",
+      "detail": "13 renders in screenshots/: front, left, back, right, top, bottom, three-quarter, 6 head close-ups"
+    },
+    "QA-19 silhouette/style": {
+      "status": "PASS",
+      "detail": "silhouette-rows.txt, gate: front 5.8/11, side 7.0/13, back 6.9/15 px (mean/max, tips excluded)"
+    },
+    "QA-20 clipping": {
+      "status": "PASS",
+      "detail": "no hair-through-face or hand-through-body clipping seen in the 13 renders; P2 ear-front gap noted"
+    },
+    "QA-25 Three.js load": {
+      "status": "PASS",
+      "detail": "25 meshes, 113,428 triangles, 1.0024 m, 0 animations"
+    },
+    "QA-26 browser console": {
+      "status": "PASS",
+      "detail": "browser-console.txt: only Vite debug lines"
+    },
+    "QA-28 material fidelity": {
+      "status": "PASS",
+      "detail": "three-js-*.jpg: face texture, hair, hoodie, bag and shoes render as in Blender"
+    },
+    "QA-31 frame time": {
+      "status": "PASS",
+      "detail": "p50 16.7 ms, p95 18.4 ms on this Mac only"
+    },
+    "QA-32 target-device profile": {
+      "status": "NOT_RUN",
+      "detail": "no phone or low-end GPU available"
+    },
+    "QA-33 immutable golden": {
+      "status": "NOT_RUN",
+      "detail": "no approved golden render exists; none created or updated"
+    },
+    "QA-34-36 regression": {
+      "status": "PASS",
+      "detail": "every fix was followed by a rebuild, the silhouette gate and a re-render; final run repeated G1-G6 end to end; npm test 673 pass"
+    },
+    "QA-40 release approval": {
+      "status": "NOT_RUN",
+      "detail": "release_authorized is false; nothing pushed or published"
+    }
+  },
+  "overall": "QA_ACCEPTED for the stated gates G1-G6; P2 items open",
+  "release_authorized": false,
+  "repair_rounds": "6 causal fixes tried (5 kept, 1 reverted); default limit of 3 was exceeded on the owner's instruction to keep looping until the gates pass"
+}
