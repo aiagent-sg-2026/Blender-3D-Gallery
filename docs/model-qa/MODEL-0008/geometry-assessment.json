@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "stage": "source",
+      "status": "PASS",
+      "body_closed_after_position_welding": true,
+      "decorative_boundaries_match_source": true
+    },
+    {
+      "stage": "reimport",
+      "status": "PASS",
+      "body_closed_after_position_welding": true,
+      "decorative_boundaries_match_source": true
+    }
+  ],
+  "topology_caveat": "glTF normal/UV seams split raw vertices. Winding/degeneracy and position-welded edge topology are checked separately. Body closed; each medallion has48 and numeral2 has132 intentional open boundary edges."
+}

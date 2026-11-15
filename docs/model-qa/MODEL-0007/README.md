@@ -1,6 +1,6 @@
 # MODEL-0007: Ball 01
 
-Status: READY_TO_PUSH. No confirmed product defect; source, generator, previews and all22 GLBs remain unchanged. Selected only after MODEL-0006 QA release e23be21c passed required Actions43664847183 and actual production acceptance. Originals are preserved in original-manifest.json.
+Status: PUSHED / accepted. QA-only ed66da5e is verified on main; required Actions43669406927 and Pages deployment succeeded. Actual standalone/assembly payloads, four fresh browser profiles and five downloaded-file checks pass. MODEL-0008 had not begun at this acceptance. No confirmed product defect; source, generator, previews and all22 GLBs remain unchanged. Selected only after MODEL-0006 QA release e23be21c passed required Actions43664847183 and actual production acceptance. Originals are preserved in original-manifest.json.
 
 ## Inspection and decision
 
@@ -29,4 +29,4 @@ The guarded replay uses scripts/glb-index-order-equivalence.py for all five prim
 - Seven source and seven standalone-reimport angles plus three detailed marked-face/contact angles for source and assembly are rendered. Independent review accepts the existing asset at89/100; primary inspection agrees. All20 native views were reviewed before packaging, with eight native PNGs and four contact sheets retained. Ten matched native pairs show maximum mean RGB channel error0.00209/255 (descriptive, not a quality threshold). Full current Game46/46 (including561 catalog resources) and experience31/31 PASS without filters or page errors. Assembly runtime also passes both desktop/tablet profiles.
 - Physical mobile testing is excluded by the owner. Desktop software rendering does not establish physical-device FPS.
 
-Main publication, required Actions and actual production acceptance remain pending. No later model may start before those gates pass. Full campaign remains incomplete.
+Main publication, original GLB blob, required Actions and actual production acceptance are verified. Publication evidence is release-evidence.json; closure metadata will travel with the next validated campaign commit. No later model may start before those gates pass. Full campaign remains incomplete.

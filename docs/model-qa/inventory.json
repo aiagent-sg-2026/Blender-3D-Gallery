@@ -450,7 +450,7 @@
       "name": "Ball 01",
       "collection": "billiards",
       "kind": "catalog-model",
-      "status": "READY_TO_PUSH",
+      "status": "PUSHED",
       "export_paths": [
         "models/eight-ball-billiards/exports/ball_01.glb"
       ],
@@ -481,18 +481,20 @@
         "performance": "PASS5draws/4896triangles,120536bytes in sampled software WebGL; no physical hardware FPS claim.",
         "regression": "PASS656unit/30targeted, full Game46 including561 catalog assets and experience31; no filters/page errors.",
         "mobile": "N/A explicit owner exclusion",
-        "github_main": "PENDING QA-only release",
-        "github_actions": "PENDING required workflow",
-        "live": "PENDING current deployed-release acceptance"
+        "github_main": "PASS QA-only ed66da5e exact main and original28e8c4aa/120536-byte blob verified.",
+        "github_actions": "PASS Actions43669406927 on ed66da5e;656unit, complete browser release gates and deploy.",
+        "live": "PASS original3283df10 standalone and6e113 assembly exact production payloads; four profiles and5 direct downloaded-file body/marks/cloth tests."
       },
-      "commit_sha": null,
-      "remote_verified": false,
+      "commit_sha": "ed66da5e3d6310b6ef4375a02d603f1fa74b808c",
+      "remote_verified": true,
       "remaining_risks": [
-        "Main publication, required Actions and actual production acceptance pending.",
         "Physical mobile excluded by owner; no hardware FPS claim."
       ],
       "report": "docs/model-qa/MODEL-0007/README.md",
-      "repairs_required": false
+      "repairs_required": false,
+      "required_remote_checks_passed": true,
+      "actions_run_id": 43669406927,
+      "release_evidence": "docs/model-qa/MODEL-0007/release-evidence.json"
     },
     {
       "qa_id": "MODEL-0008",
@@ -500,14 +502,14 @@
       "name": "Ball 02",
       "collection": "billiards",
       "kind": "catalog-model",
-      "status": "PENDING",
+      "status": "READY_TO_PUSH",
       "export_paths": [
         "models/eight-ball-billiards/exports/ball_02.glb"
       ],
       "source_candidates": [
         "models/eight-ball-billiards/scene.blend"
       ],
-      "source_mapping": "candidate; inspect asset root in Blender before acceptance",
+      "source_mapping": "Verified ASSET_Ball_02:57.15mm resin body with two opposite medallion/numeral2 pairs;5meshes5824triangles.",
       "generator_candidates": [
         "models/eight-ball-billiards/generate.py"
       ],
@@ -520,12 +522,29 @@
       "export_sha256": "4c541de60d4d2641a316ca4e635d2329994a45de751e78d06d6cd01a27a7202a",
       "defects": [],
       "repairs": [],
-      "qa_results": {},
+      "qa_results": {
+        "geometry": "PASS closed resin sphere; intended open overlays with outward winding; source/reimport position-welded topology and actual cloth support within1micron.",
+        "uv_textures": "PASS finite original UV; texture atlas/stretch N/A untextured materials.",
+        "pbr": "PASS opaque untextured dielectric blue resin0.23/ivory0.24/black ink0.29 roughness.",
+        "visual": "PASS seven source/import angles and three marked-face/contact views each; independent accepts89/100, no repairs.",
+        "glb": "PASS original/assembly/scratch validators0errors0warnings; index submission order only differs in semantic replay, no byte-exact claim.",
+        "animation": "N/A static unrigged model; applicable Game interactions tested separately.",
+        "runtime": "PASS original4c541de6 standalone and6e113 assembly exact payloads/controls across four desktop/tablet profiles; no page/HTTP errors.",
+        "performance": "PASS5draws/5824triangles,215296bytes in sampled software WebGL; no physical hardware FPS claim.",
+        "regression": "PASS661unit/35targeted, full Game46 including561 catalog assets and experience31; no filters/page errors.",
+        "mobile": "N/A explicit owner exclusion",
+        "github_main": "PENDING QA-only release",
+        "github_actions": "PENDING required workflow",
+        "live": "PENDING current deployed-release acceptance"
+      },
       "commit_sha": null,
       "remote_verified": false,
       "remaining_risks": [
-        "Not yet inspected under this QA campaign."
-      ]
+        "Main publication, required Actions and actual production acceptance pending.",
+        "Physical mobile excluded by owner; no hardware FPS claim."
+      ],
+      "report": "docs/model-qa/MODEL-0008/README.md",
+      "repairs_required": false
     },
     {
       "qa_id": "MODEL-0009",
