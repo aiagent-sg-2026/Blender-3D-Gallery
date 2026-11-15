@@ -1,0 +1,51 @@
+{
+  "id": "chibi-visitor-v4",
+  "name": "Chibi Visitor v4",
+  "category": "Characters",
+  "status": "development-preview",
+  "author": "Yap Wei Jun project / agent-assisted procedural modelling",
+  "creation_method": "Blender 5.1.2, built through the Blender MCP server (Blender Lab extension 1.0.3). The skull relief was worked with Blender sculpt brushes (sculpt_head.py, interactive only; baked to sources/head-sculpt.json); ears, nose, neck, hair, clothing and accessories are procedural Python in generate.py. No image-to-3D service, downloaded mesh, add-on asset or downloaded texture is used. The supplied character sheet is a design reference and is not embedded.",
+  "generator": "generate.py",
+  "paths": {
+    "glb": "exports/chibi-visitor-v4.glb",
+    "source": "sources/chibi-visitor-v4.blend",
+    "preview": "previews/front.png",
+    "reference": "reference/character-sheet.webp"
+  },
+  "geometry": {
+    "units": "metres",
+    "height": 1.0024,
+    "bounds_gltf": {
+      "min": [
+        -0.2608,
+        0.0,
+        -0.2556
+      ],
+      "max": [
+        0.2576,
+        1.0024,
+        0.1925
+      ]
+    },
+    "origin": "between the feet on the ground",
+    "up": "+Y",
+    "front": "+Z",
+    "root": "ChibiVisitorV4",
+    "triangles": 109083,
+    "vertices": 54929,
+    "materials": 19,
+    "draw_calls": 25
+  },
+  "motion": {
+    "armature": false,
+    "animations": []
+  },
+  "delivery": {
+    "glb_bytes": 2140140,
+    "glb_sha256": "cf000321b7ddf3cdf5b6b4e9e00379c27c7c958a9b453406eaab5046f1992a01",
+    "reference_sha256": "6f639d9827bbce886aec778c1f97248af6ab739303970edf39802012171002c1",
+    "verified": "2026-11-15"
+  },
+  "accuracy_notes": "Stylised interpretation of the owner's v4.0 sheet. Head: shallow sculpted relief on the sheet-matched skull silhouette (mean 1.25 mm, p95 6.5 mm from the parametric skull), fused ears/nose/neck and a painted face texture; the facial character is mostly texture. Hair is busier and less smoothly layered than the sheet. Body, hands and shoes are simplified procedural parts. Silhouette rows are mostly within about 2 cm of the sheet with larger flick and tuft deviations. Verified: glTF Validator 0 errors, headless rebuild byte-identical, Three.js load with textured face. Not rigged, not registered in the catalog; gallery viewer acceptance and device performance are not verified.",
+  "rights": "Original asset; owner-project reuse is authorized. Public redistribution terms have not been specified."
+}

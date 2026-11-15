@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chibi Visitor v4 - GLB load check</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #ebeaf7; font: 13px system-ui, sans-serif; }
+  canvas { display: block; width: 100vw; height: 100vh; }
+  #status { position: fixed; left: 8px; top: 8px; padding: 4px 8px; background: #fff9; border-radius: 6px; }
+</style>
+</head>
+<body>
+<div id="status" role="status">Loading GLB...</div>
+<script type="module">
+// Independent Three.js load of the exported GLB. Open through the Vite dev server:
+//   /models/chibi-visitor-v4/verification/viewer-check.html?az=30   (az = camera azimuth in degrees)
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+const status = document.getElementById('status');
+const azimuth = THREE.MathUtils.degToRad(Number(new URLSearchParams(location.search).get('az') ?? 25));
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+document.body.appendChild(renderer.domElement);
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0xebeaf7);
+scene.add(new THREE.HemisphereLight(0xffffff, 0xd9d8ea, 2.2));
+const key = new THREE.DirectionalLight(0xfff6ee, 1.6);
+key.position.set(-1.3, 2.3, 2.2);
+scene.add(key);
+const camera = new THREE.PerspectiveCamera(28, 1, 0.05, 50);
+
+function frame() {
+  const w = innerWidth, h = innerHeight;
+  renderer.setSize(w, h, false);
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+  renderer.render(scene, camera);
+}
+
+try {
+  const gltf = await new GLTFLoader().loadAsync('../exports/chibi-visitor-v4.glb');
+  scene.add(gltf.scene);
+  const box = new THREE.Box3().setFromObject(gltf.scene);
+  const size = box.getSize(new THREE.Vector3()), centre = box.getCenter(new THREE.Vector3());
+  let meshes = 0, triangles = 0;
+  const materials = new Set();
+  gltf.scene.traverse((o) => {
+    if (!o.isMesh) return;
+    meshes += 1;
+    triangles += (o.geometry.index ? o.geometry.index.count : o.geometry.attributes.position.count) / 3;
+    materials.add(o.material.name);
+  });
+  const distance = 2.6;                                   // character front is glTF +Z
+  camera.position.set(centre.x + Math.sin(azimuth) * distance, centre.y + 0.12, centre.z + Math.cos(azimuth) * distance);
+  camera.lookAt(centre);
+  addEventListener('resize', frame);
+  frame();
+  window.__check = {
+    ok: true, meshes, triangles, materials: materials.size, animations: gltf.animations.length,
+    size: size.toArray().map((v) => +v.toFixed(4)), min: box.min.toArray().map((v) => +v.toFixed(4)),
+    roots: gltf.scene.children.map((c) => c.name),
+  };
+  status.textContent = `Loaded: ${meshes} meshes, ${triangles} triangles, ${size.y.toFixed(3)} m tall`;
+} catch (error) {
+  window.__check = { ok: false, error: String(error) };
+  status.textContent = 'GLB failed to load: ' + error;
+}
+</script>
+</body>
+</html>
