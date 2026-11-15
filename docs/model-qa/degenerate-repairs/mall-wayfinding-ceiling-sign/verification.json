@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "basis": "f4df5da0 plus focused ceiling sign repair",
+  "full_tests": {
+    "passed": 720,
+    "failed": 0
+  },
+  "build": "PASS",
+  "native": {
+    "blender": "4.0.2",
+    "source_parts": 75,
+    "editable_fonts": 10,
+    "source_reopen": true,
+    "fresh_generation": true,
+    "idempotence": true,
+    "canonical_import_zero_area_triangles": 0
+  },
+  "canonical": {
+    "before_triangles": 11524,
+    "after_triangles": 11520,
+    "exact_zero_removed": 2,
+    "bounded_grid_collinear_residues_removed": 2,
+    "max_residue_altitude_m": 7.33565760213698e-17,
+    "bytes": 676024,
+    "original_attributes_normals_materials_preserved": true
+  },
+  "source_edit": {
+    "changed_modules": [
+      "FrontText",
+      "FrontArrows"
+    ],
+    "unchanged_modules": 9,
+    "saved_reopened": true,
+    "shipped_hash_unchanged": true,
+    "control": "Unchanged same-toolchain export with independent canonical surface check",
+    "preservation": "All nine sibling geometry/index/normal payloads and every module transform match control"
+  },
+  "browser": {
+    "cases": 3,
+    "widths": [
+      1440,
+      768,
+      390
+    ],
+    "backend": "Local Chrome / ANGLE Metal",
+    "all_consumed_sha_match": true,
+    "errors": 0,
+    "exact_reset_reopen": true
+  },
+  "visual_review": "Actual current Gallery 1440 and 390 images inspected",
+  "rejected_attempt": "Legacy delivery is not the causal source-edit control: native packing changed Housing/Hangers/RearText. Same-toolchain control proves only intended FrontText/FrontArrows edits; failure retained.",
+  "limits": [
+    "Historical source studio previews reused",
+    "No phone hardware/FPS, live navigation or deployment claim"
+  ],
+  "whitespace_exception": "Raw pre-fix regression log retained unchanged"
+}
