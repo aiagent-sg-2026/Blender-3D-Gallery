@@ -1,0 +1,19 @@
+{
+  "observed_at": "2026-11-15T12:19:05.349810+00:00",
+  "job_id": "1fe72825-f267-4320-94bc-9ba21c814b5f",
+  "job_state": "SUCCEEDED",
+  "executed_source_sha": "486fb02b027c2a178e9e718421060a0f64d2550d",
+  "baseline_source_sha": "deafc76cd3d9146c6aee4e6246ac683f24c7a74a",
+  "source_changed_input_hashes_verified": 88,
+  "artifact_hashes_verified": 85,
+  "static_camera_profiles_passed": 8,
+  "original_fish_motion_profiles_passed": 12,
+  "archive_bytes": 6171784,
+  "archive_sha256": "00cbca19bf304d5727bc0f02c53134a1a0ead1bc55cf7b231fafc90d13255cc0",
+  "local_originals_directory": "output/model-qa/MODEL-0012/upstream-486-evidence",
+  "visual_primary_review": "Primary inspected5 contact sheets (8static+12motion+6original gallery+8shelf screenshots) and raw croaker768-loaded and M057LOD1 captures. Models remain fully framed; M057 wood/stone textures and both headings render, with no evident presentation regression. This is integration review, not future-model deep QA.",
+  "scope": "Affected-input integration regression; future models remain PENDING for individual deep campaign QA. Supplied local URL output mode live is not production.",
+  "m057_original_gallery_profiles_passed": 3,
+  "m057_original_shelf_cases_passed": 2,
+  "m057_scope": "Original gallery lifecycle/exact reset, four actual hashed LODs, decoded textures, title/LED/highlight ownership, async request supersession, injected failure fallback and touch viewport. Filtered shelf cases are explicitly limited to affected M057."
+}

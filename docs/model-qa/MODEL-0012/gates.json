@@ -1,0 +1,43 @@
+{
+  "model_id": "MODEL-0012",
+  "name": "Ball 06",
+  "status": "READY_TO_PUSH",
+  "verified_at": "2026-11-15T12:29:05.580284+00:00",
+  "source_head": "69c5a1a8a14d887d9d105b466bb8521cc4a6a0eb",
+  "product_defects": [],
+  "product_repairs": [],
+  "geometry": "PASS;5meshes6144triangles;closed57.15mm body;outward fitted marks and actual cloth contact",
+  "uv_texture": "PASS finite UVs;image-texture stretching/alignment N/A because no image materials",
+  "pbr": "PASS;source/import materials match;green dielectric resin roughness0.23 metallic0",
+  "multi_angle_visual": "PASS;20native+8runtime images independently inspected;ACCEPT89/100;no confirmed P0/P1/P2 or required P3",
+  "export_reimport": "PASS;three validators0errors0warnings;fullJSON/nonindex bytes/oriented6144triangles unchanged;exact bytes false due index order",
+  "runtime": "PASS;4actual candidate/assembly profiles,rotation/zoom/exact reset,payload hashes,no page/network errors",
+  "rig_animation": "N/A;static unrigged model without animation data",
+  "performance": "PASS for desktop/tablet observed loading,5draw calls/6144triangles per frame,244380bytes;physical mobile excluded by owner, no physical FPS claim",
+  "regression": {
+    "unit_tests_passed": 705,
+    "unit_skips": 0,
+    "build_catalog_entries": 567,
+    "original_unfiltered_game_checks": 46,
+    "original_unfiltered_experience_checks": 31,
+    "candidate_assembly_profiles": 4,
+    "upstream_static_camera_profiles": 34,
+    "upstream_fish_motion_profiles": 64,
+    "upstream_m057_gallery_profiles": 3,
+    "upstream_m057_shelf_cases": 2,
+    "runtime_reuse_basis": "runtime-reuse-basis.json"
+  },
+  "original_unique_files_unchanged": 26,
+  "commit_sha": null,
+  "remote_verified": false,
+  "pending_release_steps": [
+    "Focused commit and normal fast-forward main push",
+    "Remote commit/blob readback",
+    "Required full Actions build/deployment",
+    "Actual production candidate/assembly runtime and downloaded geometry tests"
+  ],
+  "next_model_started": false,
+  "remaining_limits": [
+    "Physical-phone testing excluded by owner; software WebGL and viewport emulation do not establish physical-device FPS."
+  ]
+}

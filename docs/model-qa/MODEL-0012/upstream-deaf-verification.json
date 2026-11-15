@@ -1,0 +1,28 @@
+{
+  "observed_at": "2026-11-15T12:09:31.856265+00:00",
+  "job_id": "68ec16c5-3128-483a-9329-ac270405e380",
+  "job_state": "SUCCEEDED",
+  "executed_source_sha": "deafc76cd3d9146c6aee4e6246ac683f24c7a74a",
+  "baseline_source_sha": "c9968137e1c7ff670c2fc0261510d9ab391ebbe8",
+  "source_changed_input_hashes_verified": 110,
+  "artifact_hashes_verified": 54,
+  "static_camera_profiles_passed": 14,
+  "original_fish_motion_profiles_passed": 28,
+  "engines": [
+    "chromium",
+    "webkit"
+  ],
+  "motion_widths": [
+    1440,
+    390
+  ],
+  "static_widths": [
+    1440,
+    768
+  ],
+  "archive_bytes": 3108149,
+  "archive_sha256": "bf1eceb0ab40cfef19149cd6eb2b28b3513605947707aa0292a09412ad5267f5",
+  "local_originals_directory": "output/model-qa/MODEL-0012/upstream-deaf-evidence",
+  "visual_primary_review": "Primary inspected all3 contact sheets covering14static and28 Chromium/WebKit motion captures. All affected models and controls visible without evident presentation regression; this does not constitute individual deep model acceptance.",
+  "scope": "Upstream affected-input regression only; future models remain PENDING for campaign QA. Static fixed-pose camera checks preserve exact-reset assertions; original motion protocol separately tests animation. Supplied local URL output mode live does not mean production."
+}

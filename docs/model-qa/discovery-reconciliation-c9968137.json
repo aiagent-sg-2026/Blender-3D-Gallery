@@ -1,0 +1,205 @@
+{
+  "release_head": "c9968137e1c7ff670c2fc0261510d9ab391ebbe8",
+  "observed_at": "2026-11-15T11:30:39.706108+00:00",
+  "current_catalog_entries": 567,
+  "new_file_details": [
+    {
+      "path": "models/fish-realism-qa/ribbonfish/model.glb",
+      "bytes": 4786464,
+      "sha256": "c5a7811e929e8a2c653ecc8e065d63752090a8044a96de1d96b264c22f54fd6d"
+    },
+    {
+      "path": "models/fish-realism-qa/ribbonfish/ribbonfish.blend",
+      "bytes": 3730982,
+      "sha256": "b93da71125a75861d9e37a103b5872ac70f6219133ba61dd58eca46d4af99841"
+    },
+    {
+      "path": "models/fish-realism-qa/sardine/model.glb",
+      "bytes": 9635032,
+      "sha256": "dd589a7a58615b3fb47b159353c740450767b74ab68ba6e16f36652947d9f978"
+    },
+    {
+      "path": "models/fish-realism-qa/sardine/sardine.blend",
+      "bytes": 8255564,
+      "sha256": "614ea9a229f92ccb480315998e46aa5d73eb1cc7696dd172bc5322ee0ed20f29"
+    },
+    {
+      "path": "models/fish-realism-release/ribbonfish/model.glb",
+      "bytes": 2362004,
+      "sha256": "638433178727e5d895f1d70dbe4c966a30d429097053697e4eb33c3720ef42b9"
+    },
+    {
+      "path": "models/fish-realism-release/sardine/model.glb",
+      "bytes": 3641124,
+      "sha256": "c7d124c9087a287ad2709f97fdf9c24318395b35b8f01109215456792c8e86ec"
+    }
+  ],
+  "added_qa_ids": [
+    "MODEL-1933",
+    "MODEL-1934",
+    "MODEL-1935",
+    "MODEL-1936"
+  ],
+  "catalog_reroutes": [
+    {
+      "qa_id": "MODEL-0508",
+      "model_id": "fish-ribbonfish",
+      "head": "c9968137e1c7ff670c2fc0261510d9ab391ebbe8",
+      "previous_export_paths": [
+        "models/singapore-fish/ribbonfish/exports/model.glb"
+      ],
+      "previous_source_candidates": [
+        "models/singapore-fish/ribbonfish/sources/ribbonfish.blend"
+      ],
+      "current_export": {
+        "path": "models/fish-realism-release/ribbonfish/model.glb",
+        "bytes": 2362004,
+        "sha256": "638433178727e5d895f1d70dbe4c966a30d429097053697e4eb33c3720ef42b9"
+      },
+      "current_source": {
+        "path": "models/fish-realism-qa/ribbonfish/ribbonfish.blend",
+        "bytes": 3730982,
+        "sha256": "b93da71125a75861d9e37a103b5872ac70f6219133ba61dd58eca46d4af99841"
+      },
+      "historical_qa_id": "MODEL-1933",
+      "status": "PENDING",
+      "evidence": "discovery-reconciliation-c9968137.json"
+    },
+    {
+      "qa_id": "MODEL-0509",
+      "model_id": "fish-sardine",
+      "head": "c9968137e1c7ff670c2fc0261510d9ab391ebbe8",
+      "previous_export_paths": [
+        "models/singapore-fish/sardine/exports/model.glb"
+      ],
+      "previous_source_candidates": [
+        "models/singapore-fish/sardine/sources/sardine.blend"
+      ],
+      "current_export": {
+        "path": "models/fish-realism-release/sardine/model.glb",
+        "bytes": 3641124,
+        "sha256": "c7d124c9087a287ad2709f97fdf9c24318395b35b8f01109215456792c8e86ec"
+      },
+      "current_source": {
+        "path": "models/fish-realism-qa/sardine/sardine.blend",
+        "bytes": 8255564,
+        "sha256": "614ea9a229f92ccb480315998e46aa5d73eb1cc7696dd172bc5322ee0ed20f29"
+      },
+      "historical_qa_id": "MODEL-1934",
+      "status": "PENDING",
+      "evidence": "discovery-reconciliation-c9968137.json"
+    }
+  ],
+  "historical_exports_preserved_as_pending_records": true,
+  "modified_file_details": [
+    {
+      "path": "models/fish-realism-qa/golden-pomfret/golden-pomfret.blend",
+      "bytes": 8376012,
+      "sha256": "3bf6d405b325cb8c5c2419f350ecc559d501db5aad7c8f18385b73bfdd4d0363"
+    },
+    {
+      "path": "models/fish-realism-qa/golden-pomfret/model.glb",
+      "bytes": 9875764,
+      "sha256": "812892b6ee2dc3088deaf131afa74e36ed4543e4072e60d515e80acfb4bcb3c2"
+    },
+    {
+      "path": "models/fish-realism-qa/grouper/grouper.blend",
+      "bytes": 9017571,
+      "sha256": "2515d9491d631b76c2dee4421612eee2aef57a48148a66133ca8623e78bb33b0"
+    },
+    {
+      "path": "models/fish-realism-qa/grouper/model.glb",
+      "bytes": 10559320,
+      "sha256": "6a5b6388e66cfee4ee47d435901f70559fc78e6e59a52409479cec0778e09645"
+    },
+    {
+      "path": "models/fish-realism-qa/indian-mackerel/indian-mackerel.blend",
+      "bytes": 8520748,
+      "sha256": "035e2322173f6c623fd62ccc636bb8ce5550b90706ae6a8127d30318dbd203d9"
+    },
+    {
+      "path": "models/fish-realism-qa/indian-mackerel/model.glb",
+      "bytes": 10045416,
+      "sha256": "3838102edb970cc3b3a771e17c82ecd6bc46cb1916adb67cf9b33ff210ce8be6"
+    },
+    {
+      "path": "models/fish-realism-qa/red-snapper/model.glb",
+      "bytes": 10405060,
+      "sha256": "d0f30ca5caa137737ac7fadc93813881e4aa106af46216bf95991d8caca849a8"
+    },
+    {
+      "path": "models/fish-realism-qa/red-snapper/red-snapper.blend",
+      "bytes": 8862608,
+      "sha256": "af5dbd6c7ad68a3e12e3a5ea15bba419e3a15fbe46b10f96bedc14a89b095edb"
+    },
+    {
+      "path": "models/fish-realism-qa/spanish-mackerel/model.glb",
+      "bytes": 10108660,
+      "sha256": "2c08daa4b56ddca1725f01fe123f360d38fc0ba16343eb1972a235badd4f79cc"
+    },
+    {
+      "path": "models/fish-realism-qa/spanish-mackerel/spanish-mackerel.blend",
+      "bytes": 8566756,
+      "sha256": "2ca14601f97473f636addf5074c0c60723a624334c82149d80f5c3571606dec4"
+    },
+    {
+      "path": "models/fish-realism-qa/yellowtail-scad/model.glb",
+      "bytes": 11879748,
+      "sha256": "696da57d90f54d31232fa5333ec819918043e17a727d6648057dfd5be6547962"
+    },
+    {
+      "path": "models/fish-realism-qa/yellowtail-scad/yellowtail-scad.blend",
+      "bytes": 10489685,
+      "sha256": "55cd91f0643d60c06571332ef6cc4fb66ca3863a091caab0549b8065a4e8740e"
+    },
+    {
+      "path": "models/fish-realism-release/golden-pomfret/model.glb",
+      "bytes": 3911684,
+      "sha256": "09902605b9b647932dfa6b78bd281179f8a65b73028bc67588e88b4cde634070"
+    },
+    {
+      "path": "models/fish-realism-release/grouper/model.glb",
+      "bytes": 4124252,
+      "sha256": "86938567e2db3393a4b3695d83a9c440f1ba6a7ae2904f47ca6b511fc6350cd9"
+    },
+    {
+      "path": "models/fish-realism-release/indian-mackerel/model.glb",
+      "bytes": 3953796,
+      "sha256": "9ef3bc7a705e3e07fdf625456deb85ad36c7aa27772d1fac38f4f4c584db08be"
+    },
+    {
+      "path": "models/fish-realism-release/red-snapper/model.glb",
+      "bytes": 4106236,
+      "sha256": "549ecaacb34a10302fa38dc9bf2704350d53ffc8c1f77281f0ba8341644a3e6b"
+    },
+    {
+      "path": "models/fish-realism-release/spanish-mackerel/model.glb",
+      "bytes": 3975732,
+      "sha256": "3e108137a0a271a6682469b716e7261db7c136fa5f7bee7137683f059ddc3fe0"
+    },
+    {
+      "path": "models/fish-realism-release/yellowtail-scad/model.glb",
+      "bytes": 4282752,
+      "sha256": "e8046193b8afd5bb0d2d085235e6cac0a3a14c9fd935fa3ecc870e2a39328c53"
+    }
+  ],
+  "modified_existing_qa_ids": [
+    "MODEL-0496",
+    "MODEL-0497",
+    "MODEL-0498",
+    "MODEL-0501",
+    "MODEL-0502",
+    "MODEL-0503",
+    "MODEL-1904",
+    "MODEL-1905",
+    "MODEL-1906",
+    "MODEL-1907",
+    "MODEL-1914",
+    "MODEL-1922",
+    "MODEL-1925",
+    "MODEL-1926"
+  ],
+  "application_change": "Application and runtime-browser code are unchanged from full4f8eb6a5 regression. Two fish catalogue entries are rerouted; six existing fish sources/exports are revised. Application/runtime code and accepted billiards inputs remain unchanged. Latest-input regression is required for the next active model. All affected models remain PENDING for campaign deep QA.",
+  "all_additions_pending": true,
+  "all_existing_ids_and_statuses_preserved": true
+}

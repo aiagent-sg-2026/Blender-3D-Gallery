@@ -1,0 +1,273 @@
+{
+  "blender_version": "5.1.2",
+  "source": "/private/tmp/blender-model-qa-release/models/eight-ball-billiards/scene.blend",
+  "input_sha256": "6b06dedf3da537c411afc7c6c4589268fb6945e4dfd22e8af4ed35a5abc71672",
+  "imported_glb": null,
+  "root": "ASSET_Ball_06",
+  "root_location": [
+    0.20000000298023224,
+    -0.0949999988079071,
+    0.807075023651123
+  ],
+  "unit_system": "METRIC",
+  "bounds_min": [
+    0.17133502662181854,
+    -0.12357498705387115,
+    0.7785000205039978
+  ],
+  "bounds_max": [
+    0.22866497933864594,
+    -0.06642501801252365,
+    0.8356500267982483
+  ],
+  "dimensions": [
+    0.05732995271682739,
+    0.057149969041347504,
+    0.05715000629425049
+  ],
+  "mesh_count": 5,
+  "triangles": 6144,
+  "armatures": [],
+  "animation_data": [],
+  "materials": [
+    {
+      "name": "Ivory resin",
+      "use_nodes": true,
+      "base_color": [
+        0.9200000166893005,
+        0.8999999761581421,
+        0.8199999928474426,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.23999999463558197,
+      "alpha": 1.0,
+      "image_nodes": []
+    },
+    {
+      "name": "Number ink",
+      "use_nodes": true,
+      "base_color": [
+        0.004999999888241291,
+        0.006000000052154064,
+        0.00800000037997961,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.28999999165534973,
+      "alpha": 1.0,
+      "image_nodes": []
+    },
+    {
+      "name": "Resin | 6",
+      "use_nodes": true,
+      "base_color": [
+        0.012000000104308128,
+        0.30000001192092896,
+        0.10499999672174454,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.23000000417232513,
+      "alpha": 1.0,
+      "image_nodes": []
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Ball 06 | number medallion",
+      "vertices": 241,
+      "triangles": 432,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 48,
+      "boundary_edges": 48,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 2.7730566048309536e-06,
+      "connected_components": 1,
+      "bounds_min": [
+        0.2270026057958603,
+        -0.10449999570846558,
+        0.7975749969482422
+      ],
+      "bounds_max": [
+        0.22862499952316284,
+        -0.08550000190734863,
+        0.8165750503540039
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Ivory resin"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_connected_components": 1,
+      "welded_non_manifold_edges": 48,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Ball 06 | number medallion | opposite",
+      "vertices": 241,
+      "triangles": 432,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 48,
+      "boundary_edges": 48,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 2.7730566048309536e-06,
+      "connected_components": 1,
+      "bounds_min": [
+        0.17137500643730164,
+        -0.10449999570846558,
+        0.7975749969482422
+      ],
+      "bounds_max": [
+        0.1729974001646042,
+        -0.08550000190734863,
+        0.8165750503540039
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Ivory resin"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_connected_components": 1,
+      "welded_non_manifold_edges": 48,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Ball 06 | numeral 6",
+      "vertices": 410,
+      "triangles": 656,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 164,
+      "boundary_edges": 164,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 1.8006018968011548e-07,
+      "connected_components": 1,
+      "bounds_min": [
+        0.22826695442199707,
+        -0.09747199714183807,
+        0.803367018699646
+      ],
+      "bounds_max": [
+        0.22866497933864594,
+        -0.09241999685764313,
+        0.811767041683197
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Number ink"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_connected_components": 1,
+      "welded_non_manifold_edges": 164,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Ball 06 | numeral 6 | opposite",
+      "vertices": 410,
+      "triangles": 656,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 164,
+      "boundary_edges": 164,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 1.8006018968011548e-07,
+      "connected_components": 1,
+      "bounds_min": [
+        0.17133502662181854,
+        -0.09758000075817108,
+        0.803367018699646
+      ],
+      "bounds_max": [
+        0.1717330515384674,
+        -0.09252800047397614,
+        0.811767041683197
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Number ink"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_connected_components": 1,
+      "welded_non_manifold_edges": 164,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Ball 06 | resin",
+      "vertices": 1986,
+      "triangles": 3968,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 9.734246989451347e-05,
+      "connected_components": 1,
+      "bounds_min": [
+        0.1714250147342682,
+        -0.12357498705387115,
+        0.7785000205039978
+      ],
+      "bounds_max": [
+        0.2285749912261963,
+        -0.06642501801252365,
+        0.8356500267982483
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Resin | 6"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_connected_components": 1,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    }
+  ]
+}

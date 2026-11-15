@@ -1,0 +1,189 @@
+{
+  "release_head": "486fb02b027c2a178e9e718421060a0f64d2550d",
+  "observed_at": "2026-11-15T12:00:49.956006+00:00",
+  "current_catalog_entries": 567,
+  "new_file_details": [
+    {
+      "path": "models/fish-realism-qa/croaker/croaker.blend",
+      "bytes": 11306644,
+      "sha256": "ec4247193ffde65493f750c45961ff142c9012787238119c08ce6af29290aa24"
+    },
+    {
+      "path": "models/fish-realism-qa/croaker/model.glb",
+      "bytes": 12730204,
+      "sha256": "963790faac020b2a0eb3ef5a883bb2f831df375dfade4b32307e12d3f8b9a07a"
+    },
+    {
+      "path": "models/fish-realism-qa/rabbitfish/model.glb",
+      "bytes": 10180964,
+      "sha256": "d4e79e9b1adc433e405903d63454b1ac9d59d10ce7b1f560e9c7c35c6fd497fc"
+    },
+    {
+      "path": "models/fish-realism-qa/rabbitfish/rabbitfish.blend",
+      "bytes": 8633501,
+      "sha256": "cb5ec0eb6d36dc5b5eff251cf320a692c8bfdd32992b92213acda728e9459ac8"
+    },
+    {
+      "path": "models/fish-realism-qa/red-seabream/model.glb",
+      "bytes": 12715924,
+      "sha256": "7de7ea9b3a403d92382e61ae8ec85a895d3253cdd13c66cadc0af93e2682cf62"
+    },
+    {
+      "path": "models/fish-realism-qa/red-seabream/red-seabream.blend",
+      "bytes": 11330227,
+      "sha256": "91aa0b0b12609c86bb854f47e442ac159e8f11ced9358a5c17a1172fe27ebfa3"
+    },
+    {
+      "path": "models/fish-realism-release/croaker/model.glb",
+      "bytes": 4704152,
+      "sha256": "09596c08a1896b930031a0f98ce9bf96880054788bbbba1e7a20a0f3f62c1d7e"
+    },
+    {
+      "path": "models/fish-realism-release/rabbitfish/model.glb",
+      "bytes": 4119028,
+      "sha256": "76e61b4702a194025d44314293a70a57a8ba67b81a81adeef3581b22d4093722"
+    },
+    {
+      "path": "models/fish-realism-release/red-seabream/model.glb",
+      "bytes": 4708812,
+      "sha256": "882b35066c81eb1902187246f32d82144ef7b60ac6d70aec0a6508e10be8df83"
+    },
+    {
+      "path": "models/gjh-m057-premium-wall-shelf-corner/reports/source-edit-current/control.glb",
+      "bytes": 815248,
+      "sha256": "a93af349da7317f29f700c8fdd4add4c0a55d63187b0fa3bb989d64f9a102b9e"
+    },
+    {
+      "path": "models/gjh-m057-premium-wall-shelf-corner/reports/source-edit-current/edited.blend",
+      "bytes": 226816,
+      "sha256": "0a06ef14249b63bcbd1e0c4576d2277ba4c288d6ba201701140c5ff47c49a5b4"
+    },
+    {
+      "path": "models/gjh-m057-premium-wall-shelf-corner/reports/source-edit-current/edited.glb",
+      "bytes": 816412,
+      "sha256": "aa70492674c8da706b69de488d240d99e3d7460584a830e956774dd241436ce8"
+    }
+  ],
+  "added_qa_ids": [
+    "MODEL-1939",
+    "MODEL-1940",
+    "MODEL-1941",
+    "MODEL-1942",
+    "MODEL-1943",
+    "MODEL-1944",
+    "MODEL-1945",
+    "MODEL-1946",
+    "MODEL-1947"
+  ],
+  "catalog_reroutes": [
+    {
+      "qa_id": "MODEL-0511",
+      "model_id": "fish-rabbitfish",
+      "head": "486fb02b027c2a178e9e718421060a0f64d2550d",
+      "previous_export_paths": [
+        "models/singapore-fish/rabbitfish/exports/model.glb"
+      ],
+      "previous_source_candidates": [
+        "models/singapore-fish/rabbitfish/sources/rabbitfish.blend"
+      ],
+      "current_export": {
+        "path": "models/fish-realism-release/rabbitfish/model.glb",
+        "bytes": 4119028,
+        "sha256": "76e61b4702a194025d44314293a70a57a8ba67b81a81adeef3581b22d4093722"
+      },
+      "current_source": {
+        "path": "models/fish-realism-qa/rabbitfish/rabbitfish.blend",
+        "bytes": 8633501,
+        "sha256": "cb5ec0eb6d36dc5b5eff251cf320a692c8bfdd32992b92213acda728e9459ac8"
+      },
+      "historical_qa_id": "MODEL-1939",
+      "status": "PENDING",
+      "evidence": "discovery-reconciliation-486fb02b.json"
+    },
+    {
+      "qa_id": "MODEL-0512",
+      "model_id": "fish-red-seabream",
+      "head": "486fb02b027c2a178e9e718421060a0f64d2550d",
+      "previous_export_paths": [
+        "models/singapore-fish/red-seabream/exports/model.glb"
+      ],
+      "previous_source_candidates": [
+        "models/singapore-fish/red-seabream/sources/red-seabream.blend"
+      ],
+      "current_export": {
+        "path": "models/fish-realism-release/red-seabream/model.glb",
+        "bytes": 4708812,
+        "sha256": "882b35066c81eb1902187246f32d82144ef7b60ac6d70aec0a6508e10be8df83"
+      },
+      "current_source": {
+        "path": "models/fish-realism-qa/red-seabream/red-seabream.blend",
+        "bytes": 11330227,
+        "sha256": "91aa0b0b12609c86bb854f47e442ac159e8f11ced9358a5c17a1172fe27ebfa3"
+      },
+      "historical_qa_id": "MODEL-1940",
+      "status": "PENDING",
+      "evidence": "discovery-reconciliation-486fb02b.json"
+    },
+    {
+      "qa_id": "MODEL-0513",
+      "model_id": "fish-croaker",
+      "head": "486fb02b027c2a178e9e718421060a0f64d2550d",
+      "previous_export_paths": [
+        "models/singapore-fish/croaker/exports/model.glb"
+      ],
+      "previous_source_candidates": [
+        "models/singapore-fish/croaker/sources/croaker.blend"
+      ],
+      "current_export": {
+        "path": "models/fish-realism-release/croaker/model.glb",
+        "bytes": 4704152,
+        "sha256": "09596c08a1896b930031a0f98ce9bf96880054788bbbba1e7a20a0f3f62c1d7e"
+      },
+      "current_source": {
+        "path": "models/fish-realism-qa/croaker/croaker.blend",
+        "bytes": 11306644,
+        "sha256": "ec4247193ffde65493f750c45961ff142c9012787238119c08ce6af29290aa24"
+      },
+      "historical_qa_id": "MODEL-1941",
+      "status": "PENDING",
+      "evidence": "discovery-reconciliation-486fb02b.json"
+    }
+  ],
+  "historical_exports_preserved_as_pending_records": true,
+  "modified_file_details": [
+    {
+      "path": "models/gjh-m057-premium-wall-shelf-corner/exports/lod0.glb",
+      "bytes": 1056536,
+      "sha256": "f987e8c550548c886fb78c12863fca11f18b614cf8057609ca08fa97cfe069f9"
+    },
+    {
+      "path": "models/gjh-m057-premium-wall-shelf-corner/exports/lod1.glb",
+      "bytes": 469480,
+      "sha256": "d6cf905fa4b3ecfbe3a9bf424c2e1815b044ccb1c5f1b98cc1996eb2d5707466"
+    },
+    {
+      "path": "models/gjh-m057-premium-wall-shelf-corner/exports/lod2.glb",
+      "bytes": 285952,
+      "sha256": "59a0a7f2d8312b1ac0cb4fb1c6d5ededf7167b89e1c8cf53c1dc743b965b27c1"
+    },
+    {
+      "path": "models/gjh-m057-premium-wall-shelf-corner/exports/optimized.glb",
+      "bytes": 1056536,
+      "sha256": "f987e8c550548c886fb78c12863fca11f18b614cf8057609ca08fa97cfe069f9"
+    },
+    {
+      "path": "models/gjh-m057-premium-wall-shelf-corner/sources/gjh-m057-premium-wall-shelf-corner.blend",
+      "bytes": 226980,
+      "sha256": "6ec2f7f2568d54f0071e5d9ba96c68a9f2ae09a91a48da1c2f5e09f2ec12f4ff"
+    }
+  ],
+  "modified_existing_qa_ids": [
+    "MODEL-1827",
+    "MODEL-1838",
+    "MODEL-1839",
+    "MODEL-1840"
+  ],
+  "application_change": "Rabbitfish/red-seabream/croaker catalogue entries rerouted with historical originals preserved. M057 saved source and four exports revised, with three new source-edit proof artifacts. Offline cleanup fingerprints now include packed image payloads and authored modifier state; static material comparison resolves texture aliases by payload and rejects pixel changes. Application/viewer code and accepted billiards inputs remain unchanged. Changed-input tests and runtime regression remain required for active MODEL-0012. All affected models remain PENDING for individual campaign QA.",
+  "all_additions_pending": true,
+  "all_existing_ids_and_statuses_preserved": true
+}

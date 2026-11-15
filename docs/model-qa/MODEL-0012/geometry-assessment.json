@@ -1,0 +1,111 @@
+{
+  "observed_at": "2026-11-15T11:43:40.671908+00:00",
+  "source_head": "c9968137e1c7ff670c2fc0261510d9ab391ebbe8",
+  "status": "PASS for executed native/source/import geometry, PBR, cloth contact and scratch export gates; latest upstream regression/release remains pending",
+  "leaf": {
+    "path": "models/eight-ball-billiards/exports/ball_06.glb",
+    "bytes": 244380,
+    "sha256": "111f5a5148ac12aa0beaf86c3f9fc7a3eae8bfccdfb9853197dce113780cbf50"
+  },
+  "source": "source/inspection.json",
+  "reimport": "reimport/inspection.json",
+  "mesh_count": 5,
+  "triangles": 6144,
+  "resin_body": {
+    "source_vertices": 1986,
+    "triangles": 3968,
+    "diameter_m": [
+      0.0571499764919281,
+      0.057149969041347504,
+      0.05715000629425049
+    ],
+    "closed_after_disposable_position_weld": true,
+    "source_boundary_edges": 0
+  },
+  "overlay_topology": {
+    "medallions": {
+      "count": 2,
+      "triangles_each": 432,
+      "source_vertices_each": 241,
+      "intentional_boundary_edges_each": 48
+    },
+    "numerals": {
+      "number": 6,
+      "count": 2,
+      "triangles_each": 656,
+      "source_vertices_each": 410,
+      "source_components_each": 1,
+      "intentional_boundary_edges_each": 164,
+      "raw_import_vertices_each": 1956,
+      "raw_import_components_each": 650,
+      "disposable_position_weld_tolerance_m": 1e-07,
+      "welded_import_components_each": 1,
+      "welded_import_boundary_edges_each": 164
+    },
+    "interpretation": "Open, close-fitting paint surfaces are intentional. glTF corner normals/UVs split numeral vertices; disposable position welding recovers the original one-component topology. Source and export bytes remain unchanged."
+  },
+  "mesh_assertions": {
+    "source_and_import_zero_area_triangles": 0,
+    "source_and_import_loose_vertices": 0,
+    "source_and_import_winding_conflicts": 0,
+    "source_and_import_nonfinite_uv_values": 0
+  },
+  "pbr_materials_match": true,
+  "materials": [
+    {
+      "name": "Ivory resin",
+      "use_nodes": true,
+      "base_color": [
+        0.9200000166893005,
+        0.8999999761581421,
+        0.8199999928474426,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.23999999463558197,
+      "alpha": 1.0,
+      "image_nodes": []
+    },
+    {
+      "name": "Number ink",
+      "use_nodes": true,
+      "base_color": [
+        0.004999999888241291,
+        0.006000000052154064,
+        0.00800000037997961,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.28999999165534973,
+      "alpha": 1.0,
+      "image_nodes": []
+    },
+    {
+      "name": "Resin | 6",
+      "use_nodes": true,
+      "base_color": [
+        0.012000000104308128,
+        0.30000001192092896,
+        0.10499999672174454,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.23000000417232513,
+      "alpha": 1.0,
+      "image_nodes": []
+    }
+  ],
+  "uv_texture_scope": "All meshes have finite UVMap coordinates. No image nodes or image textures; stretching/image alignment N/A. Paint fit/normal tests and all native views PASS.",
+  "rig_animation_scope": "Static unrigged model, no animation data or armatures; rig and animation tests N/A. Viewer interaction remains applicable.",
+  "repair_required_by_executed_checks": false,
+  "physical_mobile": "Excluded by explicit owner instruction; no physical-device performance claim.",
+  "cloth_contact": {
+    "source": "contact-source/contact.json",
+    "assembly_reimport": "contact-reimport/contact.json",
+    "separation_m_each": 5.960464477539063e-08,
+    "native_views": 6
+  },
+  "native_visual": "All20 native views and8actual runtime images independently inspected;ACCEPT89/100,no confirmed P0/P1/P2 or required P3",
+  "export_replay": "Full JSON/non-index bytes/oriented6144triangles unchanged;exact bytes false,index ordering differs",
+  "gltf_validation": "Original leaf, assembly and scratch replay each0errors0warnings"
+}
