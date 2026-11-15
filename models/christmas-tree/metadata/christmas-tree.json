@@ -1,0 +1,54 @@
+{
+  "id": "christmas-tree",
+  "name": "Christmas Tree",
+  "summary": "Original stylized Christmas tree with ornaments and a star.",
+  "description": "A festive evergreen tree with individually editable layers, garland, star, baubles and decorative lights.",
+  "category": "Festivals & Local Life",
+  "tags": [
+    "christmas",
+    "festive",
+    "tree",
+    "holiday",
+    "singapore",
+    "malaysia"
+  ],
+  "status": "draft",
+  "created": "2026-11-15",
+  "author": "Blender 3D Gallery / agent-assisted procedural modeling",
+  "blender_version": "5.1.2",
+  "creation_method": "Original deterministic Blender Python geometry and materials, seed 41; no third-party assets.",
+  "generator": "generate.py",
+  "paths": {
+    "glb": "exports/christmas-tree.glb",
+    "source": "sources/christmas-tree.blend",
+    "preview": "previews/hero.webp",
+    "render": "previews/hero.png"
+  },
+  "display": {
+    "previewRotationY": 0,
+    "units": "metres",
+    "up_axis": "Blender +Z / glTF +Y",
+    "front_axis": "Blender -Y / glTF +Z",
+    "origin": "ground-plane centre"
+  },
+  "rights": "Original asset; public redistribution terms have not been specified.",
+  "attribution": [
+    {
+      "credit": "Original geometry and materials created for Blender 3D Gallery; no external assets."
+    }
+  ],
+  "accuracy_notes": "Stylized seasonal decoration; static model with emissive decorative lights, not an animated lighting simulation.",
+  "material_notes": "Saved Blender source retains editable ornaments. Export batches ornaments by material.",
+  "budgets": {
+    "max_glb_bytes": 5242880,
+    "max_triangles": 100000
+  },
+  "metrics": {
+    "glb_bytes": 1015308,
+    "triangles": 34944,
+    "meshes": 15,
+    "materials": 9,
+    "validator_errors": 0,
+    "validator_warnings": 0
+  }
+}

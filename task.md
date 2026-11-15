@@ -173,3 +173,47 @@ This closes the mirror follow-up without changing application/runtime behavior. 
 T01 audit and baseline → T02 tokens/components → T03 navigation → T04 hero → T05 categories/counts → T06 search/history → T07 cards/grid → T08 viewer validation → T09 detail/download → T10 build/deployment compatibility → T11 filters → T12 grid/list → T13 sorting → T14 themes → T15 localization readiness → T16 states → T17 keyboard → T18 responsive/touch → T19 performance → T20 visual regression. Each task requires applicable tests, responsive/accessibility review and focused commit before proceeding. Changes already started must be reconciled with this sequence, not mistaken for accepted tasks. Existing user edits in shared files must not enter commits unintentionally.
 
 Acceptance coverage E001–E100 must be tracked against deterministic assertions, with absent or out-of-scope features explicitly marked not applicable rather than counted as passes. Physical-device, assistive-technology and deployment verification must be distinguished from emulation/local checks. Optional P2 features require their own supported data and privacy decisions.
+
+---
+
+# Singapore and Malaysia Festival Models — 2026-11-15
+
+**Status:** F01 implemented and locally verified; later items remain planned.
+Work through one model at a time. See the [festival model
+brief](docs/festival-models/README.md) for concept images, existing inventory,
+design ideas and per-model acceptance criteria. Recheck the catalog before
+starting each item. Preserve the historical task records above.
+
+## Initial sequential queue
+
+- [x] **F01 — Christmas tree:** editable Blender source, standalone GLB,
+  preview and catalog entry created; local validation and browser checks passed.
+  See [model notes](models/christmas-tree/README.md) for evidence and limits.
+- [ ] **F02 — Christmas gift boxes:** original reusable boxes and ribbons;
+  complete the same acceptance gate after F01.
+- [ ] **F03 — Gregorian New Year countdown clock:** year-independent festive
+  display; complete the same acceptance gate after F02.
+- [ ] **F04 — Chinese New Year lion dance head:** research the visual details,
+  create an original model and complete the acceptance gate after F03.
+- [ ] **F05 — Chinese New Year kumquat tree:** distinguish it from the existing
+  mandarin-orange basket and complete the acceptance gate after F04.
+- [ ] **F06 — Mid-Autumn rabbit lantern:** distinguish it from the existing
+  lantern display and complete the acceptance gate after F05.
+
+Additional Hari Raya, Deepavali, national celebration, Sabah Kaamatan and
+Sarawak Gawai ideas are listed in the brief; decide their order after the initial
+queue. Research Kaamatan and Gawai separately before creating culturally
+specific designs. Existing assets require their own evidence review; their
+presence in the catalog is not a completed quality assessment.
+
+## Gate for each queue item
+
+- [ ] Define the design and references; check catalog overlap and applicable rights.
+- [ ] Save editable Blender source, reproducibility/provenance notes and actual GLB.
+- [ ] Add a preview, metadata and catalog entry following the existing asset contract.
+- [ ] Validate the GLB and run the applicable asset/build checks.
+- [ ] Inspect the model and verify the real gallery/viewer workflow, controls,
+  loading and fallbacks; record results and any unverified limits.
+
+This gate is a reusable checklist for **each** item; consult its individual
+evidence before marking it complete. No deployment, commit or push is implied by this planning entry.
