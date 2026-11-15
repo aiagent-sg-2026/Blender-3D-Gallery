@@ -67,3 +67,20 @@ test('hiding/replacing either module leaves the other and booth structure intact
     root.children.splice(index, 0, target);
   }
 });
+
+test('saved-source label edit is isolated against an unchanged control from the same toolchain', () => {
+  const report = JSON.parse(fs.readFileSync(`${folder}/reports/source-edit.json`));
+  assert.equal(report.status, 'PASS');
+  assert.equal(report.comparisonBasis, 'same-toolchain source control');
+  assert.equal(report.originalAssetUnchanged, true);
+  assert.equal(report.originalSourceSha256, metadata.source_sha256);
+  assert.equal(report.baselineSourceSha256, metadata.source_sha256);
+  assert.equal(report.results[0].sha256, metadata.metrics.sha256);
+  assert.equal(report.results.length, 3);
+  assert.deepEqual(report.results.map(row => row.zeroAreaTriangles), [0, 0, 0]);
+  assert.deepEqual(report.changedGroups, ['PosterPanel']);
+  assert.equal(report.unchangedGroups.length, 2);
+  for (const group of report.unchangedGroups)
+    assert.equal(report.results[1].groupHashes[group], report.results[2].groupHashes[group]);
+  assert.notEqual(report.results[1].groupHashes.PosterPanel, report.results[2].groupHashes.PosterPanel);
+});

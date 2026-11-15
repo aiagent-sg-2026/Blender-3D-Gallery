@@ -18,7 +18,7 @@
   "status": "validated",
   "created": "2026-11-12",
   "author": "Yap Wei Jun project / agent-assisted procedural modeling",
-  "blender_version": "4.0.2",
+  "blender_version": "5.1.2",
   "creation_method": "Original deterministic Blender Python geometry and Principled BSDF materials. Blender bundled Bfont labels are retained as editable source text and exported as geometry. No external textures, models, or branded artwork.",
   "generator": "generate.py",
   "paths": {
@@ -51,8 +51,9 @@
   ],
   "rights": "Original asset; reuse in the owner's projects is authorized. Public redistribution terms have not been specified.",
   "metrics": {
+    "zero_area_triangles": 0,
     "glb_bytes": 215640,
-    "triangles": 4632,
+    "triangles": 4506,
     "vertices": 7539,
     "primitives": 14,
     "materials": 7,
@@ -74,11 +75,23 @@
         0.5899999737739563
       ]
     },
-    "sha256": "8fda1b51362eb3d11cd3525fb9ae1b3a220da22e745ed8b9af0eb6f0f8e87738"
+    "sha256": "b3e347cf544702ad81b2145d2e7e7ef6e4f1049f1ea6e1c62ead7c14f590b623"
   },
   "validation": {
     "errors": 0,
     "warnings": 0,
     "validator": "2.0.0-dev.3.10"
+  },
+  "source_sha256": "3adf944bad2c2c49d496c858d3727df6a3cc9aa9f5c285ea90eda0e5f2cb9a57",
+  "topology_repair": {
+    "date": "2026-11-15",
+    "previous_source_blender_version": "4.0.2",
+    "reference_commit": "a1a676c3f70bc114e13fe3362cc95f356eabc398",
+    "reference_glb_sha256": "8fda1b51362eb3d11cd3525fb9ae1b3a220da22e745ed8b9af0eb6f0f8e87738",
+    "source_method": "Non-destructive cleanup on four reviewed meshes and all three labels. All 28 parts and three modules preserved. Export keeps legacy joined-module bevel evaluation, then cleans the evaluated module; DisplayContent uses Clip to preserve the cylinder cap diagonals. Disposable merged export translations are baked before cleanup to remove Float32 world-collapse residues; authored transforms and canonical GLB pivots remain intact.",
+    "delivery_method": "Only triangle index streams and index accessor counts/min/max changed; all other binary payload bytes retained.",
+    "zero_area_triangles_removed": 118,
+    "reviewed_source_precision_residues_removed": 8,
+    "evidence": "docs/model-qa/degenerate-repairs/mall-event-booth/README.md"
   }
 }

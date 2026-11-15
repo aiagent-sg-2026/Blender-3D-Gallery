@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "edit": "YOUR STORY -> NEW STORY in an isolated copy of the saved Blender source",
+  "exportMode": "generate.py -- --export-source --no-render",
+  "comparisonBasis": "same-toolchain source control",
+  "blender": "5.1.2",
+  "originalSourceSha256": "3adf944bad2c2c49d496c858d3727df6a3cc9aa9f5c285ea90eda0e5f2cb9a57",
+  "baselineSourceSha256": "3adf944bad2c2c49d496c858d3727df6a3cc9aa9f5c285ea90eda0e5f2cb9a57",
+  "changedGroups": [
+    "PosterPanel"
+  ],
+  "unchangedGroups": [
+    "BoothStructure",
+    "DisplayContent"
+  ],
+  "originalAssetUnchanged": true,
+  "results": [
+    {
+      "asset": "shipped asset",
+      "sha256": "b3e347cf544702ad81b2145d2e7e7ef6e4f1049f1ea6e1c62ead7c14f590b623",
+      "zeroAreaTriangles": 0,
+      "groupHashes": {
+        "BoothStructure": "ba3bc0ef18d2db495fc77fb7ad9d3d275fdd8b168e18259e173e421149f0d8e3",
+        "PosterPanel": "65a2d6788be95fd3bacb12bf6eccaf29e0a9b4caffc2de01495f40a344d8ed29",
+        "DisplayContent": "28b5df041cf981835d7d42b45103d28698567e5984ee25f136a7eaad55e58a9c"
+      },
+      "validation": {
+        "errors": 0,
+        "warnings": 0
+      }
+    },
+    {
+      "asset": "same-toolchain source control",
+      "sha256": "94be1fd6e2a57c1edab575822a7290941643d3823072cfaf1f270393b6e74124",
+      "zeroAreaTriangles": 0,
+      "groupHashes": {
+        "BoothStructure": "f65800a70ba09b066fdb572523190f8a12e10b68d06b06d04c55721cb4dbdf6e",
+        "PosterPanel": "00e90ce485251ae852206089d71999978a028519a3f26feeeda2d6b3a4bd0057",
+        "DisplayContent": "fce92ab7a79bcdbfa99301c83a1600f5db5400507e203a822103497deb17a1ba"
+      },
+      "validation": {
+        "errors": 0,
+        "warnings": 0
+      }
+    },
+    {
+      "asset": "isolated edited source",
+      "sha256": "8ceb9f0b7514b6ba89e38fcf8d842830715771304db34971b69aa14cb7a91781",
+      "zeroAreaTriangles": 0,
+      "groupHashes": {
+        "BoothStructure": "f65800a70ba09b066fdb572523190f8a12e10b68d06b06d04c55721cb4dbdf6e",
+        "PosterPanel": "c724e5408b2a7f19155758d4f984021bad8da5bc59cd0613a1c64a5eecaa0732",
+        "DisplayContent": "fce92ab7a79bcdbfa99301c83a1600f5db5400507e203a822103497deb17a1ba"
+      },
+      "validation": {
+        "errors": 0,
+        "warnings": 0
+      }
+    }
+  ]
+}
