@@ -1,6 +1,6 @@
 {
   "objective": "Repair the remaining mall degenerate geometry one asset at a time and push each verified repair to main.",
-  "status": "active",
+  "status": "complete",
   "baseline_assets_with_zero_area_triangles": 15,
   "assets": [
     {
@@ -120,7 +120,12 @@
       "before_zero_area_triangles": 2,
       "state": "repaired",
       "after_zero_area_triangles": 0,
-      "evidence": "mall-wayfinding-ceiling-sign/README.md"
+      "evidence": "mall-wayfinding-ceiling-sign/README.md",
+      "published_commit": "eefd6c615fe464bdbb49066578242ede78ee861f"
     }
-  ]
+  ],
+  "published_repair_count": 15,
+  "final_scan": "final-scan.json",
+  "knowledge_sync": "kb-sync.json",
+  "completion_evidence_commit": "eefd6c615fe464bdbb49066578242ede78ee861f"
 }

@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "version": "1.0.6",
+  "complete_body_and_files_exact": true,
+  "integrity_ok": true,
+  "preserved_metadata_fields": [
+    "kind",
+    "tags",
+    "intent",
+    "labels",
+    "enabled",
+    "keywords",
+    "skill_id",
+    "is_parent",
+    "created_by",
+    "description",
+    "hub_version",
+    "dependencies",
+    "enable_scope",
+    "role_contract",
+    "schema_version",
+    "lifecycle_state",
+    "candidate_status",
+    "registration_key",
+    "e2e_cases_defined",
+    "e2e_cases_executed",
+    "verification_gates",
+    "runtime_implemented",
+    "ready_for_production",
+    "definition_lint_status",
+    "negative_route_samples",
+    "positive_route_samples",
+    "associated_domain_kb_id"
+  ],
+  "enabled_unchanged": true,
+  "generic_acceptance_executed": 0,
+  "runtime_implemented": false,
+  "ready_for_production": false,
+  "evidence_commit": "eefd6c615fe464bdbb49066578242ede78ee861f",
+  "files": [
+    {
+      "path": "references/acceptance-10.json",
+      "bytes": 4407,
+      "sha256": "4a628ec2c1fe6ac125889f1d69f14167c97884cfd7728bd2637da61ca8b2d137"
+    },
+    {
+      "path": "references/route-and-deps.json",
+      "bytes": 946,
+      "sha256": "90ad685964147212ac19a7311cdbecec5492ff348f96cf1d1f680f2c979f4807"
+    },
+    {
+      "path": "references/degenerate-geometry-repair.md",
+      "bytes": 5303,
+      "sha256": "65c0de5cde4f6bdd1f331962610ab555e4b002844be20fe71eda8dad0c95f58d"
+    }
+  ],
+  "domain_pointer_exact_readback": true,
+  "user_tier_unchanged": true
+}
