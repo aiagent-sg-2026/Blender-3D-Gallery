@@ -1,0 +1,38 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "The first rear dark patch formed a rectangular block; replace it with a continuous curved taper and vary the blue opening boundary."
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "pass",
+      "changes": [
+        "View current actual body/head renders after revision and pass current source, imported GLB and desktop/mobile gates."
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "2190c322855cbd825b3e4a4e7b2601562ea6695509165311711e05ce271597b2",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: compressed Paracanthurus hepatus visual form with small mouth and yellow caudal wedge",
+    "surface": "pass: original dark upper-body palette with irregular blue opening and a smooth tapered rear connection",
+    "head": "pass: embedded subdued eye and closed small mouth",
+    "fins": "pass: blue median fins, yellow pectoral tips, dark tail borders and two folded peduncle scalpels",
+    "surface_contact": "pass: source and actual imported GLB retain five-phase fin-root contact",
+    "motion": "pass: cyclic body/tail and locally hinged pectoral strokes survive GLB import with matching endpoints",
+    "browser": "pass: exact draft GLB swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed artwork, not a scanned or calibrated specimen. Movement is artist-tuned.",
+    "The generic Surgeonfish/Tang alias is retained; scalpels are folded and fine dentition is simplified."
+  ]
+}
