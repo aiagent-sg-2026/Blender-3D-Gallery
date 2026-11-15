@@ -157,6 +157,7 @@ def fin_mat(tail=False,spiny=False):
  if spiny:color*=1-C.get('spiny_dorsal_dark_top',0)*R.smoothstep(.28,.65,v)[...,None]
  if tail and C.get('tail_dark_margin'):
   color*=1-C['tail_dark_margin']*R.smoothstep(.87,.99,v)[...,None]
+ if not tail and C.get('fin_dark_margin'):color*=1-C['fin_dark_margin']*R.smoothstep(.89,.99,v)[...,None]
  if C['pattern']=='grouper':
   for k in range(210):
    px,py=rng.random(2);radius=rng.uniform(.007,.018);d=np.sqrt((u-px)**2+(v-py)**2);a=(1-R.smoothstep(radius*.7,radius*1.1,d))*.55;color=color*(1-a[...,None])+np.array([.065,.045,.022])*a[...,None]

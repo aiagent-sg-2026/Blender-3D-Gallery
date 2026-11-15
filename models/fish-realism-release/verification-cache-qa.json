@@ -1,0 +1,22 @@
+{
+  "status": "pass",
+  "baseline_all_measured": 36,
+  "incremental_explicit_selection": [
+    "common-carp"
+  ],
+  "invalidated_prior_fields": {
+    "silver-pomfret": "verifier_signature",
+    "black-pomfret": "sha256",
+    "red-snapper": "profile_signature"
+  },
+  "measured_after_invalidation": [
+    "black-pomfret",
+    "common-carp",
+    "red-snapper",
+    "silver-pomfret"
+  ],
+  "retained_unchanged_count": 32,
+  "all_measurements_equal_full_baseline": true,
+  "model_files_changed": false,
+  "signature": "a691097912bf86fad245fff24e0bdd8fbc63620a43c73ebe56cc879bbc391862"
+}

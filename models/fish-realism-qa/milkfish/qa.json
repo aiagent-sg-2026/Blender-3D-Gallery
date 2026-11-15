@@ -1,0 +1,31 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "pass",
+      "changes": [
+        "inspected actual full-body and head images against the recorded reference anatomy; source/GLB and desktop/mobile checks pass"
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "8727bd7786fe7b041f6296b59f8d4cbcd347aa29e31150f30ed6f9115efd822d",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: streamlined blue-grey back, silver flanks and pale belly with fine irregular scales",
+    "surface": "pass: uneven scale color and original microstructure without photograph textures",
+    "head": "pass: small terminal mouth and large dark eyes without barbels",
+    "fins": "pass: single short soft dorsal, small posterior anal and deep forked caudal",
+    "surface_contact": "pass: five source and imported-GLB poses with unchanged thresholds",
+    "motion": "pass: real exported cyclic body, caudal and fin deformation",
+    "browser": "pass: exact draft GLB swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed artwork, not a scanned or calibrated specimen.",
+    "Milkfish follows Chanos chanos in the inspected Ken Tam photograph. The eye surface is an appearance approximation of the transparent adipose cover; no physiological simulation is claimed."
+  ]
+}
