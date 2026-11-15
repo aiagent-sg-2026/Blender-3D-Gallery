@@ -83,3 +83,61 @@ def finish(name, bm, mats, collection=None):
 
 def tri_count(ob):
     return sum(len(p.vertices) - 2 for p in ob.data.polygons)
+
+
+def super_front_y(c, r, x, z, p_top=2.0, p_bot=2.0, rz_bot=None):
+    """Front (-Y) surface of the shape add_super builds, at (x, z). Returns the centre y when (x, z) is outside the shape."""
+    zn = (z - c[2]) / (r[2] if (rz_bot is None or z >= c[2]) else rz_bot)
+    if abs(zn) >= 1.0: return c[1]
+    pp = p_top if zn >= 0 else p_bot
+    f = math.sqrt(max(0.0, 1 - abs(zn) ** pp)) / math.sqrt(1 - zn * zn)
+    t = (1 - zn * zn) - ((x - c[0]) / (f * r[0])) ** 2
+    return c[1] - f * r[1] * math.sqrt(max(0.0, t))
+
+
+def _smooth(t):
+    t = max(0.0, min(1.0, t)); return t * t * (3 - 2 * t)
+
+
+def add_patch(bm, surf_y, c, a, b, lift, rings=6, seg=28, mi=0, mi_fn=None):
+    """Elliptical raised patch lying on a surface: boundary exactly on the ellipse (a, b) in the X-Z plane, flush with the skin there,
+    rising by `lift` toward the centre. mi_fn(rho_mid, theta_mid) may return a different material slot per face. Returns new verts."""
+    n0 = len(bm.faces); grid = []; verts = []
+    for k in range(rings + 1):
+        rho = k / rings; ring = []
+        for j in range(seg if k else 1):
+            th = 2 * math.pi * j / seg
+            x = c[0] + a * rho * math.cos(th); z = c[1] + b * rho * math.sin(th)
+            y = surf_y(x, z) - lift * math.sqrt(max(0.0, 1 - rho * rho)) - 0.0004
+            v = bm.verts.new((x, y, z)); ring.append(v); verts.append(v)
+        grid.append(ring)
+    for j in range(seg):
+        bm.faces.new((grid[0][0], grid[1][(j + 1) % seg], grid[1][j]))
+    for k in range(1, rings):
+        for j in range(seg):
+            bm.faces.new((grid[k][j], grid[k][(j + 1) % seg], grid[k + 1][(j + 1) % seg], grid[k + 1][j]))
+    bm.faces.ensure_lookup_table()
+    for f in bm.faces[n0:]:
+        f.material_index = mi
+        if mi_fn:
+            cx = sum(v.co.x for v in f.verts) / len(f.verts); cz = sum(v.co.z for v in f.verts) / len(f.verts)
+            f.material_index = mi_fn((cx - c[0]) / a, (cz - c[1]) / b)
+    return verts
+
+
+def add_band(bm, surf_y, u_range, top_fn, bot_fn, x_fn, lift, steps_u=14, steps_v=3, mi=0):
+    """Curved band on a surface: for u in u_range, z runs from top_fn(u) to bot_fn(u) at x = x_fn(u); lift fades to 0 at both z edges."""
+    n0 = len(bm.faces); grid = []; verts = []
+    for i in range(steps_u + 1):
+        u = u_range[0] + (u_range[1] - u_range[0]) * i / steps_u; col = []
+        for j in range(steps_v + 1):
+            t = j / steps_v; x = x_fn(u); z = top_fn(u) + (bot_fn(u) - top_fn(u)) * t
+            y = surf_y(x, z) - lift * math.sin(math.pi * t) * math.sin(math.pi * (i / steps_u)) ** 0.5 - 0.0004
+            v = bm.verts.new((x, y, z)); col.append(v); verts.append(v)
+        grid.append(col)
+    for i in range(steps_u):
+        for j in range(steps_v):
+            bm.faces.new((grid[i][j], grid[i + 1][j], grid[i + 1][j + 1], grid[i][j + 1]))
+    bm.faces.ensure_lookup_table()
+    for f in bm.faces[n0:]: f.material_index = mi
+    return verts

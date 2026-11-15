@@ -34,6 +34,7 @@ GATE_MAX_M = 15 / 645.0
 PALETTE = {
     'jade': '4D6752', 'ivory': 'F3E0CC', 'charcoal': '40363B', 'skin': 'D19E85', 'white': 'FBF3F2', 'brass': 'E3B553',
     'sole': 'E6D1BC', 'cap_jade': '56735C', 'hair': '58382F',
+    'eye_dark': '2A160C', 'brow': '3A2218', 'mouth_red': '8C2A34', 'blush': 'F0A39B',   # step 6 face colours (read by eye from sheet B, not sampled)
 }
 
 # ---- step 5: detail dimensions (m), starting values read from sheet B; Blender space, character's left = +X ----
@@ -45,3 +46,14 @@ SHORTS = dict(c=(0.0, 0.0, 0.250), r=(0.094, 0.094, 0.056), leg_r=0.050, z_hem=0
 LEG = dict(x=0.058, y=0.013, z_top=0.205, z_sock=0.165, z_bot=0.075, r_top=0.040, r_bot=0.036, sock_r=0.044)
 SHOE = dict(x=0.062, y=0.005)
 CAP = dict(c=(0.0, 0.073, 0.948), r=(0.135, 0.130, 0.052), z_rim=0.900)
+
+
+# ---- step 6: head (skull plus patches on its surface). Face landmarks read from sheet B front view (cap top = row 0):
+# eyes about row 274 (z 0.635), brows row 199, mouth row 324, chin row 360. x offsets are about +/-0.08 for the eyes.
+HEAD = dict(c=(0.0, 0.060, 0.700), r=(0.185, 0.175, 0.180), rz_bot=0.180, p_bot=2.3)
+EYE = dict(x=0.080, z=0.640, a=0.050, b=0.054, lift=0.006)
+BROW = dict(x=0.080, z=0.735, hw=0.042, th=0.009, arch=0.008, lift=0.003)
+MOUTH = dict(x=0.0, z=0.570, hw=0.040, depth=0.022, corner=0.010, lift=0.0015)
+CHEEK = dict(x=0.105, z=0.562, r=0.028, lift=0.002)
+NOSE = dict(z=0.612, r=(0.011, 0.010, 0.009))
+EAR = dict(x=0.186, y=0.065, z=0.645, r=(0.012, 0.026, 0.034))

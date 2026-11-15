@@ -19,12 +19,14 @@ parts.append(garments.build_shirt(bmesh, mats)); parts.append(garments.build_nec
 parts.append(garments.build_shorts(bmesh, mats))
 for fn in (limbs.build_arms, limbs.build_gloves, limbs.build_legs, limbs.build_socks, limbs.build_shoes):
     parts.extend(fn(bmesh, mats))
-# placeholders (not part of this step's budget): head from the blockout, plus the neck
+# head and eyes are built by head.py; the neck is still a placeholder
+import head as H
+head_obj, eyes_obj = H.build_head(bpy, bmesh, mats)
+parts.extend([head_obj, eyes_obj])
 placeholders = []
-for name in ('Head', 'Neck'):
-    p = C.PARTS[name]; bm = bmesh.new()
-    kit.add_super(bm, p['c'], p['r'], p_bot=p.get('p_bot', 2.0), rz_bot=p.get('rz_bot'), seg=36, rings=24)
-    placeholders.append(kit.finish(name + '_placeholder', bm, [mats['skin']]))
+p = C.PARTS['Neck']; bm = bmesh.new()      # neck is still an ellipsoid placeholder
+kit.add_super(bm, p['c'], p['r'], seg=36, rings=24)
+placeholders.append(kit.finish('Neck_placeholder', bm, [mats['skin']]))
 
 # ---- report ----
 dg = bpy.context.evaluated_depsgraph_get()
