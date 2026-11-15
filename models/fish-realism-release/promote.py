@@ -30,6 +30,8 @@ for slug in args.slugs:
    assert all(sum(name.startswith('Barbel_') for name in phase['fins'])==expected_barbels for phase in motion[label]['surface_contact'])
   if profile.get('adipose_fin'):
    adipose=[value for name,value in motion[label]['motion_by_mesh'].items() if name.startswith('Dorsal_AdiposeFin')];assert len(adipose)==1 and adipose[0]['motion']>.001,('Missing moving adipose fin',slug,label)
+  pelvic=[value for name,value in motion[label]['motion_by_mesh'].items() if name.startswith('Pelvic_Filament_')]
+  assert len(pelvic)==(2 if profile.get('pelvic_filaments') else 0) and all(value['motion']>.001 for value in pelvic),('Pelvic sensory-ray motion',slug,label)
  prepared.append((slug,source,artifact,profile))
 
 manifest=read(HERE/'releases.json');queue=read(REPO/'models/fish-realism-qa/queue.json');profiles=read(REPO/'models/fish-realism-qa/profiles.json')

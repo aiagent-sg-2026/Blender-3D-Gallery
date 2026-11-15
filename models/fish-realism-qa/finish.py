@@ -6,7 +6,7 @@ HERE=Path(__file__).resolve().parent;REPO=HERE.parents[1];slug=sys.argv[sys.argv
 bpy.ops.wm.open_mainfile(filepath=str(OUT/(slug+'.blend')));s=bpy.context.scene
 sys.path.insert(0,str(HERE))
 from fin_weights import attach_fin_roots
-if any(o.type=='MESH' and o.get('deform_role') in ['dorsal','anal','pectoral'] and not o.get('fin_root_anchor') for o in s.objects):
+if any(o.type=='MESH' and o.get('deform_role') in ['dorsal','anal','pectoral','pelvic_sensory'] and not o.get('fin_root_anchor') for o in s.objects):
  attach_fin_roots(s);s.frame_set(13);bpy.ops.wm.save_as_mainfile(filepath=str(OUT/(slug+'.blend')))
  s.render.filepath=str(OUT/'preview.png');bpy.ops.render.render(write_still=True);camera=s.camera;original_matrix=camera.matrix_world.copy();original_scale=camera.data.ortho_scale
  camera.location=(-1.15,-7,.55);camera.rotation_euler=(Vector((-1.03,0,.02))-camera.location).to_track_quat('-Z','Y').to_euler();camera.data.ortho_scale=1.65;s.render.filepath=str(OUT/'head-detail.png');bpy.ops.render.render(write_still=True);camera.matrix_world=original_matrix;camera.data.ortho_scale=original_scale;s.render.filepath=str(OUT/'preview.png')
@@ -17,12 +17,12 @@ def observe(label):
  meshes=[o for o in s.objects if o.type=='MESH'];anchors=0
  if label=='source':
   for o in meshes:
-   if o.get('deform_role') not in ['dorsal','anal','pectoral']:continue
+   if o.get('deform_role') not in ['dorsal','anal','pectoral','pelvic_sensory']:continue
    uv=o.data.uv_layers.active;indices={loop.vertex_index for loop in o.data.loops if abs(uv.data[loop.index].uv.y)<1e-7}
    assert indices
    for i in indices:
     for group in o.data.vertices[i].groups:
-     if o.vertex_groups[group.group].name in ['Dorsal','Anal','Pectoral_L','Pectoral_R'] or o.vertex_groups[group.group].name.startswith('DorsalWave_'):assert group.weight<1e-6,(o.name,i,group.weight)
+     if o.vertex_groups[group.group].name in ['Dorsal','Anal','Pectoral_L','Pectoral_R'] or o.vertex_groups[group.group].name.startswith(('DorsalWave_','Pelvic_Sensory_')):assert group.weight<1e-6,(o.name,i,group.weight)
    anchors+=1
  frames=[1,1+SPAN//4,1+SPAN//2,1+SPAN*3//4,END_FRAME];poses=[];roles={};contacts=[]
  from fin_attachment import check_surface_contact
@@ -51,9 +51,12 @@ def observe(label):
   filaments=[v for name,v in roles.items() if name.startswith('Pectoral_Filament_')]
   assert len(filaments)==8,(label,'Four sensory rays per flank required',len(filaments))
   assert all(v['motion']>.001 for v in filaments),(label,'Sensory rays must move with their fins')
- expected_barbels=2*len(json.loads((HERE/'profiles.json').read_text())[slug].get('barbels',[]));barbels=[o for o in meshes if o.name.startswith('Barbel_')];assert len(barbels)==expected_barbels,(label,'Mouth-barbel count',len(barbels),expected_barbels)
+ config=json.loads((HERE/'profiles.json').read_text())[slug]
+ pelvic_rays=[v for name,v in roles.items() if name.startswith('Pelvic_Filament_')];assert len(pelvic_rays)==(2 if config.get('pelvic_filaments') else 0),(label,'Pelvic sensory-ray count')
+ assert all(v['motion']>.001 for v in pelvic_rays),(label,'Pelvic sensory rays must move')
+ expected_barbels=2*len(config.get('barbels',[]));barbels=[o for o in meshes if o.name.startswith('Barbel_')];assert len(barbels)==expected_barbels,(label,'Mouth-barbel count',len(barbels),expected_barbels)
  assert any(o.type=='ARMATURE' for o in s.objects)
- return {'barbel_meshes':len(barbels),'surface_contact':contacts,'ribbon_wave':ribbon_wave,'fin_roots_checked':anchors,'meshes':len(meshes),'vertices':sum(len(o.data.vertices) for o in meshes),'motion_by_mesh':roles,'frames':frames,'packed_images':all(i.packed_file for i in bpy.data.images if i.source=='FILE')}
+ return {'pelvic_sensory_rays':len(pelvic_rays),'barbel_meshes':len(barbels),'surface_contact':contacts,'ribbon_wave':ribbon_wave,'fin_roots_checked':anchors,'meshes':len(meshes),'vertices':sum(len(o.data.vertices) for o in meshes),'motion_by_mesh':roles,'frames':frames,'packed_images':all(i.packed_file for i in bpy.data.images if i.source=='FILE')}
 source=observe('source');s.frame_set(13)
 # Flatten only temporary skinned mesh copies; keep editable source parenting intact.
 root=next(o for o in s.objects if o.name.startswith('ASSET_PhotoInformed_'));selected=[root]+list(root.children_recursive);saved=[]

@@ -36,3 +36,7 @@ For shell automation, invoke Blender with `--python-exit-code 1` before `--pytho
 On macOS hosts where bundled Chromium/SwiftShader screenshot preparation stalls, set `FISH_CHROME_PATH` to an installed Chrome executable and `FISH_WEBGL_BACKEND=metal`. The optional runtime is recorded in browser receipts; all existing assertions still apply. This is a QA environment choice, not a physical-device performance claim.
 
 For new artwork, `generate.py -- SLUG --quick-preview` uses actual Blender EEVEE stills for early inspection before expensive polish. It retains the full geometry, packed texture resolution, rig, source/GLB contact checks and browser gates. Existing sealed sources are not regenerated.
+
+## Gourami and carp anatomy
+
+Gourami profiles replace broad pelvic membranes with two tapered free sensory rays. Each root retains body-spine weights while the tip feathers onto a separately phased cyclic control. Source, GLB and actual delivery verification require both rays to move and retain five-phase skin contact. The optional thick-lip snout uses a tessellated curved cap instead of a non-planar n-gon. Grass carp remains barbel-free; later scaled common-carp profiles use the FAO two-pair diagnostic. Generated dark scale rims support per-tile strength, softer edges and increased placement variation without embedding reference-photo pixels. These controls are artwork approximations, not measured biomechanics.

@@ -27,7 +27,7 @@ def check_surface_contact(scene):
   uv=obj.data.uv_layers.active;indices={loop.vertex_index for loop in obj.data.loops if abs(uv.data[loop.index].uv.y)<1e-7};assert indices,obj.name;evaluated=obj.evaluated_get(dg);signed=[]
   for i in indices:
    p=evaluated.matrix_world@evaluated.data.vertices[i].co;point,normal,_,distance=tree.find_nearest(p);signed.append((p-point).dot(normal))
-  if obj.name.startswith(('Pectoral_Filament_','Barbel_')):
+  if obj.name.startswith(('Pectoral_Filament_','Pelvic_Filament_','Barbel_')):
    # A tubular ray base straddles the skin; its outer ring naturally protrudes.
    assert min(signed)<.0015 and max(signed)<.0055,(obj.name,'Detached tubular sensory base',min(signed),max(signed))
   elif obj.name.startswith('Caudal_'):

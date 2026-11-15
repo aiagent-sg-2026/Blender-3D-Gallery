@@ -1,0 +1,41 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "dark scale outlines were too crisp and repetitive"
+      ],
+      "changes": [
+        "soften and randomize dark rims, increase scale-position variation and reduce caudal notch"
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "pass",
+      "changes": [
+        "re-viewed actual full-body and head renders; large dark-edged scales retain uneven outlines"
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "cb0928dbd0774fba6e731e82e744e4ccfddf42581b5be7a538e8297c062e9121",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: long olive-grey body, large dark-edged scales and pale belly",
+    "surface": "pass: irregular photo-informed scales and subtle skin microstructure",
+    "head": "pass: embedded iris, restrained highlight and photo-informed closed mouth",
+    "fins": "pass: short dorsal with unbranched leading rays, small anal and forked caudal",
+    "surface_contact": "pass: five-phase source and imported GLB surface contacts without relaxed thresholds",
+    "motion": "pass: cyclic body, caudal and fin movement survives GLB round trip",
+    "browser": "pass: exact draft GLB swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed artwork, not a scanned or calibrated specimen."
+  ],
+  "alias_note": "Grass carp follows Ctenopharyngodon idella in the inspected USGS photograph. The short dorsal leading-ray mesh uses the shared authoring spine parameter; no teleost hard-spine identification is claimed."
+}

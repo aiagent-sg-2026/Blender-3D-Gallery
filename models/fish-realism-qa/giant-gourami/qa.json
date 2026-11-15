@@ -1,0 +1,42 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "non-planar front cap caused angular folds in thick lips"
+      ],
+      "changes": [
+        "tessellate the curved snout, broaden the lip ridges and reduce the displacement"
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "pass",
+      "changes": [
+        "re-viewed actual full-body and head renders; smooth integrated lips and adult hump retained"
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "636fc9a32edf1ac27e2de8b4260b3923ce70094269bc8499b7efea971a85ca5f",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: deep adult grey-buff body with forehead hump and integrated thick lips",
+    "surface": "pass: irregular photo-informed scales and subtle skin microstructure",
+    "head": "pass: embedded iris, restrained highlight and photo-informed closed mouth",
+    "fins": "pass: rounded caudal, continuous low dorsal and broad posterior anal fin",
+    "surface_contact": "pass: five-phase source and imported GLB surface contacts without relaxed thresholds",
+    "motion": "pass: cyclic body, caudal and fin movement survives GLB round trip; both sensory rays move with anchored roots",
+    "browser": "pass: exact draft GLB swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed artwork, not a scanned or calibrated specimen.",
+    "Sensory-ray motion is an artistic cyclic approximation, not a measured behavioral simulation."
+  ],
+  "alias_note": "Giant gourami follows adult Osphronemus goramy in the inspected Vassil photographs; original artwork, not a specimen scan."
+}

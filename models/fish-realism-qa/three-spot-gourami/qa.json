@@ -1,0 +1,42 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "flank spots looked rectangular and dorsal notches were too deep"
+      ],
+      "changes": [
+        "use irregular elliptical spot boundaries and shallower leading-ray notches"
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "pass",
+      "changes": [
+        "re-viewed actual full-body and head renders; rounded female dorsal and two flank spots retained"
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "b683342891fe0fcaa5a4e82f7ae46c4f2ede782e8b8b08da3a50d58486e2261c",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: laterally compressed blue-silver female body and small upturned mouth",
+    "surface": "pass: irregular photo-informed scales and subtle skin microstructure",
+    "head": "pass: embedded iris, restrained highlight and photo-informed closed mouth",
+    "fins": "pass: short rounded female dorsal, long anal and rounded caudal",
+    "surface_contact": "pass: five-phase source and imported GLB surface contacts without relaxed thresholds",
+    "motion": "pass: cyclic body, caudal and fin movement survives GLB round trip; both sensory rays move with anchored roots",
+    "browser": "pass: exact draft GLB swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed artwork, not a scanned or calibrated specimen.",
+    "Sensory-ray motion is an artistic cyclic approximation, not a measured behavioral simulation."
+  ],
+  "alias_note": "The supplied Chinese label is ambiguous; the explicit English Three-spot gourami is interpreted as Trichopodus trichopterus. The inspected female is used, with a rounded dorsal."
+}

@@ -12,12 +12,13 @@ for directory in sorted(HERE.iterdir()):
  if not file.exists():continue
  bpy.ops.wm.read_factory_settings(use_empty=True);bpy.ops.import_scene.gltf(filepath=str(file));s=bpy.context.scene
  actions=list(bpy.data.actions);assert actions,directory.name
- end=max(a.frame_range.y for a in actions);start=min(a.frame_range.x for a in actions);meshes=[o for o in s.objects if o.type=='MESH'];poses=[]
+ end=max(a.frame_range.y for a in actions);start=min(a.frame_range.x for a in actions);meshes=[o for o in s.objects if o.type=='MESH'];poses=[];sensory_poses=[]
  for frame in [start,start+(end-start)*.25,end]:
-  s.frame_set(int(frame),subframe=frame-int(frame));dg=bpy.context.evaluated_depsgraph_get();positions=[]
+  s.frame_set(int(frame),subframe=frame-int(frame));dg=bpy.context.evaluated_depsgraph_get();positions=[];sensory={}
   for o in meshes:
    ev=o.evaluated_get(dg);positions.extend(ev.matrix_world@v.co for v in ev.data.vertices)
-  assert all(math.isfinite(c) for v in positions for c in v);poses.append(positions)
+   if o.name.startswith('Pelvic_Filament_'):sensory[o.name]=[ev.matrix_world@v.co for v in ev.data.vertices]
+  assert all(math.isfinite(c) for v in positions for c in v);poses.append(positions);sensory_poses.append(sensory)
  motion=max((a-b).length for a,b in zip(poses[0],poses[1]));loop=max((a-b).length for a,b in zip(poses[0],poses[2]));assert motion>.001
  # Betta inherits a small nonzero endpoint difference from the licensed original.
  assert loop<(.01 if directory.name=='betta' else .0001),(directory.name,loop)
@@ -27,6 +28,7 @@ for directory in sorted(HERE.iterdir()):
    s.frame_set(int(frame),subframe=frame-int(frame));contacts.append({'frame':frame,'fins':check_surface_contact(s)})
  profile=profiles.get(directory.name,{});expected_barbels=2*len(profile.get('barbels',[]));barbels=[o for o in meshes if o.name.startswith('Barbel_')];assert len(barbels)==expected_barbels,(directory.name,'Delivery mouth-barbel count',len(barbels),expected_barbels)
  adipose=[o for o in meshes if o.name.startswith('Dorsal_AdiposeFin')];assert len(adipose)==(1 if profile.get('adipose_fin') else 0),(directory.name,'Delivery adipose-fin count')
- results.append({'barbel_meshes':len(barbels),'adipose_fins':len(adipose),'surface_contact':contacts,'slug':directory.name,'sha256':hashlib.sha256(file.read_bytes()).hexdigest(),'vertices':len(poses[0]),'actions':[a.name for a in actions],'start':start,'end':end,'motion':motion,'loop_error':loop})
+ sensory_motion={name:max((a-b).length for a,b in zip(points,sensory_poses[1][name])) for name,points in sensory_poses[0].items()};assert len(sensory_motion)==(2 if profile.get('pelvic_filaments') else 0) and all(value>.001 for value in sensory_motion.values()),(directory.name,'Delivery pelvic sensory-ray motion')
+ results.append({'pelvic_sensory_motion':sensory_motion,'barbel_meshes':len(barbels),'adipose_fins':len(adipose),'surface_contact':contacts,'slug':directory.name,'sha256':hashlib.sha256(file.read_bytes()).hexdigest(),'vertices':len(poses[0]),'actions':[a.name for a in actions],'start':start,'end':end,'motion':motion,'loop_error':loop})
 (HERE/'motion-verification.json').write_text(json.dumps(results,indent=2)+'\n')
 print('PASS delivery deformation',len(results))

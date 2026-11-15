@@ -28,12 +28,14 @@ def skin_maps():
  if C['pattern']!='scaleless':
   for row in range(-1,ny+1):
    for col in range(-1,nx+1):
-    cx=(col+.5*(row%2)+rng.uniform(-.13,.13))/nx;cy=(row+.5+rng.uniform(-.10,.10))/ny;tiles.append((cx,cy,rng.uniform(.79,1.1),rng.uniform(.59,.80),rng.uniform(-.16,.16),rng.uniform(-1,1)))
+    jitter=C.get('scale_jitter',[.13,.10]);cx=(col+.5*(row%2)+rng.uniform(-jitter[0],jitter[0]))/nx;cy=(row+.5+rng.uniform(-jitter[1],jitter[1]))/ny;tiles.append((cx,cy,rng.uniform(.79,1.1),rng.uniform(.59,.80),rng.uniform(-.16,.16),rng.uniform(-1,1)))
  for cx,cy,rx,ry,ang,pigment in sorted(tiles,key=lambda t:-t[0]):
   x0=max(0,int((cx-1.15/nx)*w));x1=min(w,int((cx+1.15/nx)*w)+1);y0=max(0,int((cy-1/ny)*h));y1=min(h,int((cy+1/ny)*h)+1)
   if x1<=x0 or y1<=y0:continue
   px=(u[y0:y1,x0:x1]-cx)*nx;py=(v[y0:y1,x0:x1]-cy)*ny;xx=px*math.cos(ang)+py*math.sin(ang);yy=-px*math.sin(ang)+py*math.cos(ang);d=np.sqrt((xx/rx)**2+(yy/ry)**2)
   mask=(1-R.smoothstep(.91,1,d))*R.smoothstep(.16,.27,u[y0:y1,x0:x1]);rim=np.exp(-((d-.94)/.045)**2)*R.smoothstep(-.45,.40,xx/rx);local=base[y0:y1,x0:x1]+pigment*C.get('scale_pigment_gain',.007 if C['pattern']=='fine_scales' else .027)+rim[...,None]*C.get('scale_rim_gain',.012 if C['pattern']=='fine_scales' else .015 if C['pattern']=='grouper' else .052)+(micro[y0:y1,x0:x1]-.5)[...,None]*.022+(fine[y0:y1,x0:x1]-.5)[...,None]*.012
+  dark_rim=np.exp(-((d-.94)/C.get('scale_dark_rim_width',.045))**2)*R.smoothstep(-.45,.40,xx/rx)
+  local-=dark_rim[...,None]*C.get('scale_dark_rim_gain',0)*(.8+.2*pigment)
   color[y0:y1,x0:x1]=color[y0:y1,x0:x1]*(1-mask[...,None])+local*mask[...,None];raised=(.00012 if C['pattern']=='fine_scales' else .00045)*rim+.00015*np.maximum(0,1-d*d)
   height[y0:y1,x0:x1]=height[y0:y1,x0:x1]*(1-mask)+raised*mask;rough[y0:y1,x0:x1]=rough[y0:y1,x0:x1]*(1-mask)+(C.get('surface_roughness',.51)+.06*pigment+rim*.02)*mask
  if C['pattern']=='grouper':
@@ -75,6 +77,10 @@ def skin_maps():
    height+=scute*.00035
    if C['markings']=='trevally':color*=1-scute[...,None]*.11
    else:color+=scute[...,None]*.018
+ if C.get('markings')=='three_spot_gourami':
+  edge=(R.noise(u,v,93,73,996)-.5)*.14;d1=np.sqrt(((xs+.05)/.125)**2+((world_z-.01)/.12)**2);d2=np.sqrt(((xs-1.08)/.075)**2+(world_z/.075)**2);spots=np.maximum(1-R.smoothstep(.65,1.15,d1+edge),1-R.smoothstep(.65,1.15,d2+edge))*flank_mask
+  color*=1-spots[...,None]*.84
+  marbling=R.smoothstep(.47,.69,R.noise(u,v,18,14,995))*R.smoothstep(.25,.38,u)*.18;color*=1-marbling[...,None]
  if C.get('markings')=='climbing_perch':
   edge_noise=(R.noise(u,v,120,90,989)-.5)*.20;d1=np.sqrt(((xs+.86)/.05)**2+((world_z-.13)/.065)**2);d2=np.sqrt(((xs-1.09)/.055)**2+(world_z/.065)**2);spot=np.maximum(1-R.smoothstep(.65,1.10,d1+edge_noise),1-R.smoothstep(.65,1.10,d2+edge_noise));color*=1-spot[...,None]*flank_mask[...,None]*.82
   bars=np.exp(-(np.sin(PI*(u*7+.10*np.sin(v*16)))/.53)**2)*R.smoothstep(.30,.42,u)*(1-R.smoothstep(.91,.98,u));color*=1-bars[...,None]*.10
@@ -158,10 +164,28 @@ def body(mat):
  for i in range(nx+1):
   x=-1.65+2.90*i/nx;hi,lo,w=profile(x)
   for j in range(na+1):
-   a=2*PI*j/na;y=w*math.cos(a);z=(hi+lo)/2+(hi-lo)/2*math.sin(a);xx=x+C.get('round_snout',0)*(1-R.smoothstep(0,.13,i/nx))*math.sin(a)**2;verts.append((xx,y,z));uv.append((i/nx,j/na))
+   a=2*PI*j/na;y=w*math.cos(a);z=(hi+lo)/2+(hi-lo)/2*math.sin(a);xx=x+C.get('round_snout',0)*(1-R.smoothstep(0,.13,i/nx))*math.sin(a)**2
+   if C.get('lip_bulge'):
+    start=C.get('mouth_start_z',-.14);endx,endz=C['mouth_end'];mouth_z=start+(endz-start)*max(0,min(1,(x+1.65)/(endx+1.65)));ridge=math.exp(-((z-mouth_z-.032)/.035)**2)+math.exp(-((z-mouth_z+.032)/.035)**2);xx-=C['lip_bulge']*math.exp(-((x+1.60)/.14)**2)*ridge
+   verts.append((xx,y,z));uv.append((i/nx,j/na))
  for i in range(nx):
   for j in range(na):a=i*(na+1)+j;faces.append((a,a+1,a+na+2,a+na+1))
- faces += [tuple(range(na,-1,-1)),tuple(nx*(na+1)+j for j in range(na+1))];return B.mesh('Skin_AnatomicalProfile',verts,faces,mat,uv)
+ if C.get('lip_bulge'):
+  # A curved lip cannot be closed by a single non-planar n-gon: tessellate the snout.
+  hi,lo,w=profile(-1.65);previous=list(range(na+1))
+  for ring in range(1,13):
+   radius=1-ring/13;current=[]
+   for j in range(na+1):
+    angle=2*PI*j/na;y=w*math.cos(angle)*radius;z=(hi+lo)/2+(hi-lo)/2*math.sin(angle)*radius;mouth_z=C.get('mouth_start_z',-.14)
+    ridge=math.exp(-((z-mouth_z-.032)/.035)**2)+math.exp(-((z-mouth_z+.032)/.035)**2)
+    xx=-1.65-.035*(1-radius*radius)+C.get('round_snout',0)*math.sin(angle)**2*radius*radius-C['lip_bulge']*math.exp(-(.05/.14)**2)*ridge
+    current.append(len(verts));verts.append((xx,y,z));uv.append((.018*(1-radius),j/na))
+   for j in range(na):faces.append((previous[j+1],previous[j],current[j],current[j+1]))
+   previous=current
+  center=len(verts);verts.append((-1.69,0,(hi+lo)/2));uv.append((.02,.5))
+  for j in range(na):faces.append((previous[j+1],previous[j],center))
+ else:faces.append(tuple(range(na,-1,-1)))
+ faces.append(tuple(nx*(na+1)+j for j in range(na+1)));return B.mesh('Skin_AnatomicalProfile',verts,faces,mat,uv)
 
 def eye_material():
  n=512;u,v=np.meshgrid(np.linspace(0,1,n),np.linspace(0,1,n));xx=2*u-1;zz=2*v-1;d=np.sqrt(xx*xx+zz*zz);angle=np.arctan2(zz,xx);grain=R.noise(u,v,210,220,942)
@@ -265,9 +289,12 @@ print('BUILD_MAPS',slug,flush=True);skin=pbr('Skin_Microstructure' if C['pattern
 sys.path.insert(0,str(HERE))
 from filaments import build_filaments
 build_filaments(B,C,profile,flank)
+from filaments import build_pelvic_filaments,bind_pelvic_filaments
+build_pelvic_filaments(B,C,profile)
 from barbels import build_barbels
 build_barbels(B,C,profile)
 print('BIND_SWIM',slug,flush=True);rig=B.add_rig('bass')
+bind_pelvic_filaments(rig)
 if C.get('body_wave_gain'):
  for layer in rig.animation_data.action.layers:
   for strip in layer.strips:
