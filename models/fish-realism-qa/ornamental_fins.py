@@ -25,10 +25,10 @@ def build_variants(builder,config,profile):
  if config.get('gonopodium'):
   for obj in list(builder.ROOT.children_recursive):
    if obj.name.startswith('Anal_') and obj.type=='MESH':bpy.data.objects.remove(obj,do_unlink=True)
-  x=config.get('gonopodium_root_x',-.10);candidate=Vector((x,0,profile(x)[1]));hit,normal,_,_=tree.find_nearest(candidate);root=hit-normal*.0018;vertices=[];uv=[];faces=[]
+  x=config.get('gonopodium_root_x',-.10);candidate=Vector((x,0,profile(x)[1]));hit,normal,_,_=tree.find_nearest(candidate);root=hit-normal*.0035;vertices=[];uv=[];faces=[]
   for i in range(21):
-   t=i/20;p=root+Vector((.24*t,0,-.055*math.sin(math.pi*t)-.03*t));radius=.0024*(1-t)**.8+.0002
-   for j in range(9):angle=2*math.pi*j/8;vertices.append(p+Vector((0,radius*math.cos(angle),radius*math.sin(angle))));uv.append((j/8,t))
+   t=i/20;p=root+Vector((.20*t,0,-.028*t));radius_y=.0012*(1-t)**.75+.00015;radius_z=.0045*(1-t)**.6+.0002
+   for j in range(9):angle=2*math.pi*j/8;vertices.append(p+Vector((0,radius_y*math.cos(angle),radius_z*math.sin(angle))));uv.append((j/8,t))
   for i in range(20):
    for j in range(8):k=i*9+j;faces.append((k,k+1,k+10,k+9))
   faces.extend([tuple(range(7,-1,-1)),tuple(180+j for j in range(8))]);builder.mesh('Anal_Gonopodium',vertices,faces,builder.material('Gonopodium_PaleFin',(.49,.48,.40),.52),uv,deform='anal')
