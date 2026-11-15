@@ -160,6 +160,9 @@ def skin_maps():
  if C.get('markings') in ['sardine','anchovy']:
   anchovy=C['markings']=='anchovy';level=.025 if anchovy else .105;stripe=np.exp(-((world_z-level)/(.042 if anchovy else .018))**2)*R.smoothstep(-1.10,-.89,xs)*(1-R.smoothstep(1.12,1.25,xs))*flank_mask;strength=.76 if anchovy else .19
   target=np.array([.86,.89,.88]) if anchovy else np.array([.66,.62,.35]);color=color*(1-stripe[...,None]*strength)+target*stripe[...,None]*strength;rough-=stripe*(.10 if anchovy else .025)
+ if C.get('cartilaginous_fins'):
+  from shark_skin import paint_skin
+  color,height=paint_skin(color,height,xs,world_z,u,v,C,R.smoothstep)
  endx,endz=C['mouth_end'];startz=C.get('mouth_start_z',-.10 if slug=='golden-pomfret' else -.16 if slug=='grouper' else -.145)
  target=startz+(endz-startz)*np.clip((xs+1.65)/(endx+1.65),0,1)
  mouth=np.exp(-((world_z-target)/.0025)**2)*R.smoothstep(-1.66,-1.61,xs)*(1-R.smoothstep(endx-.03,endx+.02,xs))*flank_mask
@@ -167,6 +170,7 @@ def skin_maps():
  gill=np.exp(-((xs-curve)/.0028)**2)*R.smoothstep(gl*.88,gl*.68,world_z)*(1-R.smoothstep(gh*.60,gh*.75,world_z))*flank_mask
  if 'gill_bounds' in C:
   gb,gt=C['gill_bounds'];gm=(gb+gt)/2;gr=(gt-gb)/2;curve=gx+.04-.08*((world_z-gm)/gr)**2;gill=np.exp(-((xs-curve)/.0028)**2)*R.smoothstep(gb,gb+.06,world_z)*(1-R.smoothstep(gt-.06,gt,world_z))*flank_mask
+ if C.get('cartilaginous_fins'):mouth*=0;gill*=0
  crease=np.maximum(mouth,gill);color*=1-crease[...,None]*.43;height-=crease*.00065
  return {key:R.image_file(slug+'_'+key,data,TEX,key!='color') for key,data in [('color',np.clip(color,0,1)),('normal',normal_map(height,2.9,2.5)),('rough',rough)]}
 
@@ -179,8 +183,21 @@ def pbr(name,images,metal=.04):
   else:nt.links.new(t.outputs['Color'],p.inputs[{'color':'Base Color','rough':'Roughness','alpha':'Alpha'}[key]])
  return mat
 
-def fin_mat(tail=False,spiny=False,region=None):
+def fin_mat(tail=False,spiny=False,region=None,mapping=None):
  prefix=slug+('_spiny' if spiny else '_tail' if tail else '_fin')+('_'+region if region else '')
+ if C.get('cartilaginous_fins'):
+  n=384;u,v=np.meshgrid(np.linspace(0,1,n),np.linspace(0,1,n));grain=R.noise(u,v,190,160,1050);coarse=R.noise(u,v,13,11,1051);color=np.zeros((n,n,3))+np.array(C['fin_color']);color+=(coarse-.5)[...,None]*.032
+  if C.get('shark_kind')=='reef':
+   if region in ['shark_dorsal','shark_second_dorsal','shark_anal']:
+    center=.39 if region=='shark_dorsal' else .5;zone=np.exp(-((u-center)/.20)**4);pale=R.smoothstep(.59,.65,v)*(1-R.smoothstep(.69,.74,v))*zone;tip=R.smoothstep(.70,.78,v)*zone
+    color=color*(1-pale[...,None]*.90)+np.array([.88,.88,.79])*pale[...,None]*.90;color*=1-tip[...,None]*.94
+   if region=='shark_tail':
+    tip=R.smoothstep(.75,.90,v)*np.maximum(1-R.smoothstep(.12,.21,u),R.smoothstep(.92,.99,u));color*=1-tip[...,None]*.92
+   if region=='shark_pectoral':color*=1-(R.smoothstep(.89,.99,v)*np.exp(-((u-.57)/.10)**2))[...,None]*.35
+  if C.get('shark_kind')=='whale' and mapping:
+   root,edge=mapping;roots=np.array([root(t) for t in np.linspace(0,1,n)]);edges=np.array([edge(t) for t in np.linspace(0,1,n)]);coords=roots[None,:,:]*(1-v[...,None])+edges[None,:,:]*v[...,None];pu=coords[...,0]*16;pv=coords[...,1 if region in ['shark_pectoral','shark_pelvic'] else 2]*16;pu+=.12*np.sin(pv*1.4);pv+=.14*np.sin(pu*1.8);row=np.floor(pv);column=np.floor(pu);a=np.mod(np.sin(row*127.1+column*311.7)*43758.5453,1);b=np.mod(np.sin(row*269.5+column*183.3)*18371.173,1);d=np.sqrt((np.mod(pu,1)-.5-(a-.5)*.55)**2+(np.mod(pv,1)-.5-(b-.5)*.55)**2);spots=(1-R.smoothstep(.08+.06*a,.14+.08*a,d))*(.64+.26*b);color=color*(1-spots[...,None])+np.array([.81,.84,.78])*spots[...,None]
+  images={key:R.image_file(prefix+'_'+key,data,TEX,key!='color') for key,data in [('color',np.clip(color,0,1)),('normal',normal_map((grain-.5)*.000025,1,.5)),('rough',.54+(grain-.5)*.055)]}
+  return pbr('Cartilage_Skin_'+str(region),images,0)
  if '--reuse-textures' in sys.argv:return pbr('Fin_ThinBranchingMembrane',cached_maps(prefix,['color','normal','rough','alpha']),.0)
  n=1024;u,v=np.meshgrid(np.linspace(0,1,n),np.linspace(0,1,n));rng=np.random.default_rng(920);grain=R.noise(u,v,240,180,922);coarse=R.noise(u,v,15,12,923);rays=np.zeros_like(u);branches=np.zeros_like(u);positions=np.cumsum(rng.uniform(.75,1.25,23));positions=(positions-positions[0])/(positions[-1]-positions[0])
  for pos in positions:
@@ -242,11 +259,14 @@ def body(mat):
   x=-1.65+2.90*i/nx;hi,lo,w=profile(x)
   for j in range(na+1):
    a=2*PI*j/na;y=w*math.cos(a);z=(hi+lo)/2+(hi-lo)/2*math.sin(a);xx=x+C.get('round_snout',0)*(1-R.smoothstep(0,.13,i/nx))*math.sin(a)**2
+   if C.get('shark_kind')=='whale':
+    ridge=sum(math.exp(-((a-angle)/.050)**2) for angle in [.12,.46,.80,PI-.12,PI-.46,PI-.80])*.005*R.smoothstep(-.70,-.35,x)*(1-R.smoothstep(1.03,1.24,x));y+=math.cos(a)*ridge;z+=math.sin(a)*ridge
    if C.get('lip_bulge'):
     start=C.get('mouth_start_z',-.14);endx,endz=C['mouth_end'];mouth_z=start+(endz-start)*max(0,min(1,(x+1.65)/(endx+1.65)));ridge=math.exp(-((z-mouth_z-.032)/.035)**2)+math.exp(-((z-mouth_z+.032)/.035)**2);xx-=C['lip_bulge']*math.exp(-((x+1.60)/.14)**2)*ridge
    verts.append((xx,y,z));uv.append((i/nx,j/na))
  for i in range(nx):
   for j in range(na):a=i*(na+1)+j;faces.append((a,a+1,a+na+2,a+na+1))
+ cap_start=len(faces)
  if C.get('lip_bulge'):
   # A curved lip cannot be closed by a single non-planar n-gon: tessellate the snout.
   hi,lo,w=profile(-1.65);previous=list(range(na+1))
@@ -262,7 +282,12 @@ def body(mat):
   center=len(verts);verts.append((-1.69,0,(hi+lo)/2));uv.append((.02,.5))
   for j in range(na):faces.append((previous[j+1],previous[j],center))
  else:faces.append(tuple(range(na,-1,-1)))
- faces.append(tuple(nx*(na+1)+j for j in range(na+1)));return B.mesh('Skin_AnatomicalProfile',verts,faces,mat,uv)
+ cap_end=len(faces);faces.append(tuple(nx*(na+1)+j for j in range(na+1)));obj=B.mesh('Skin_AnatomicalProfile',verts,faces,mat,uv)
+ if C.get('shark_kind')=='whale':
+  for polygon in list(obj.data.polygons)[cap_start:cap_end]:
+   for index in polygon.loop_indices:
+    p=obj.data.vertices[obj.data.loops[index].vertex_index].co;ratio=max(-.999,min(.999,(p.z+.015)/.085));obj.data.uv_layers.active.data[index].uv=(.01+.21*(p.y/.56+.5),(math.asin(ratio)/(2*PI))%1)
+ return obj
 
 def eye_material():
  n=512;u,v=np.meshgrid(np.linspace(0,1,n),np.linspace(0,1,n));xx=2*u-1;zz=2*v-1;d=np.sqrt(xx*xx+zz*zz);angle=np.arctan2(zz,xx);grain=R.noise(u,v,210,220,942)
@@ -285,7 +310,9 @@ def details():
  eyes()
  # Closed natural mouths and gill creases are authored into the skin maps.
  crease=B.material('NostrilInterior',tuple(v*.25 for v in C['side_color']),.70)
- for side in [-1,1]:B.sphere('Nostril',(-1.48,flank(-1.48,.045,side,.001),.045),(.005,.001,.003),crease)
+ for side in [-1,1]:
+  z=profile(-1.48)[1]+.045 if C.get('cartilaginous_fins') else .045
+  B.sphere('Nostril',(-1.48,flank(-1.48,z,side,.001),z),(.006,.001,.003),crease)
 
 
 def fin_sweep(u,anal=False):
@@ -304,6 +331,10 @@ def fin_height(u,anal=False):
  return C.get('anal_height',.25)*math.sin(PI*u)**.65 if anal else C['soft_height']*math.sin(PI*u)**.7
 
 def fins(mat):
+ if C.get('cartilaginous_fins'):
+  from shark_fins import build_shark_fins
+  build_shark_fins(B,C,profile,flank,lambda kind,root,edge:fin_mat(region=kind,mapping=(root,edge)))
+  return
  caudal_mat=fin_mat(True) if 'tail_color' in C else mat
  spiny_mat=fin_mat(spiny=True) if C.get('spiny_dorsal_dark_top') or C.get('dorsal_black_tip') or C.get('markings')=='clownfish' else mat
  R.fan('Caudal_Membrane',lambda u:(1.18,0,(u-.5)*.15),lambda u:(C.get('tail_end',2.03)-C['tail_fork']*(1-abs(2*u-1)**C.get('tail_power',2)),0,C['tail_height']*(2*u-1)*(1+C.get('tail_lower_extra',0) if u<.5 else 1)),caudal_mat,n=120,m=32,flutter=.020,role='tail')
@@ -417,11 +448,13 @@ for o in B.ROOT.children_recursive:
  for mod in o.modifiers:
   if mod.type=='ARMATURE':mod.use_deform_preserve_volume=True
 # Studio utility uses a neutral environment; no habitat hides anatomical detail.
-spec=importlib.util.spec_from_file_location('studio',HERE.parent/'fish-realism-review'/'revision-03'/'create_review.py');P=importlib.util.module_from_spec(spec);spec.loader.exec_module(P);s=P.studio(OUT);s.camera.data.ortho_scale=C.get('preview_scale',4.6);s.camera.location=(-.15,-9,.85);P.aim(s.camera,(.14,0,C.get('preview_z',.02)));s.frame_set(13);s.frame_end=end_frame
+spec=importlib.util.spec_from_file_location('studio',HERE.parent/'fish-realism-review'/'revision-03'/'create_review.py');P=importlib.util.module_from_spec(spec);spec.loader.exec_module(P);s=P.studio(OUT);s.camera.data.ortho_scale=C.get('preview_scale',4.6);s.camera.location=C.get('preview_camera_location',(-.15,-9,.85));P.aim(s.camera,(.14,0,C.get('preview_z',.02)));s.frame_set(13);s.frame_end=end_frame
 # EEVEE provides an early owning-runtime sample close to the realtime viewer.
 if '--quick-preview' in sys.argv:s.render.engine='BLENDER_EEVEE'
 bpy.ops.wm.save_as_mainfile(filepath=str(OUT/(slug+'.blend')));bpy.ops.render.render(write_still=True)
 s.camera.location=(-1.15,-7,.55);P.aim(s.camera,(-1.03,0,.02));s.camera.data.ortho_scale=1.65;s.render.filepath=str(OUT/'head-detail.png');bpy.ops.render.render(write_still=True)
+if C.get('shark_kind')=='whale':
+ s.camera.location=(-6,-1.7,1.4);P.aim(s.camera,(-1.30,0,0));s.camera.data.ortho_scale=1.7;s.render.filepath=str(OUT/'frontal-detail.png');bpy.ops.render.render(write_still=True)
 if C.get('pectoral_filaments'):
  s.camera.location=(-.2,-7,.25);P.aim(s.camera,(-.35,0,-.27));s.camera.data.ortho_scale=1.5;s.render.filepath=str(OUT/'filament-detail.png');bpy.ops.render.render(write_still=True)
 print('GENERATED',slug,flush=True)

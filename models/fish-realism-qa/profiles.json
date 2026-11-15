@@ -7283,5 +7283,267 @@
     "scale_center_darkening": 0.18,
     "peduncle_thorns": true,
     "scale_shape_power": 1.3
+  },
+  "reef-shark": {
+    "fish_id": "FISH-051",
+    "visual_species": "Carcharhinus melanopterus visual study",
+    "references": [
+      "https://fishesofaustralia.net.au/home/species/1952"
+    ],
+    "profile_x": [
+      -1.65,
+      -1.5,
+      -1.25,
+      -0.9,
+      -0.4,
+      0.15,
+      0.65,
+      1.03,
+      1.25
+    ],
+    "top": [
+      0.025,
+      0.095,
+      0.17,
+      0.22,
+      0.235,
+      0.21,
+      0.15,
+      0.095,
+      0.055
+    ],
+    "bottom": [
+      -0.085,
+      -0.13,
+      -0.18,
+      -0.225,
+      -0.23,
+      -0.2,
+      -0.145,
+      -0.085,
+      -0.05
+    ],
+    "width": [
+      0.07,
+      0.13,
+      0.18,
+      0.22,
+      0.235,
+      0.21,
+      0.15,
+      0.085,
+      0.04
+    ],
+    "back_color": [
+      0.52,
+      0.5,
+      0.39
+    ],
+    "side_color": [
+      0.61,
+      0.59,
+      0.48
+    ],
+    "belly_color": [
+      0.84,
+      0.85,
+      0.78
+    ],
+    "fin_color": [
+      0.59,
+      0.57,
+      0.45
+    ],
+    "pattern": "scaleless",
+    "eye": [
+      -1.34,
+      0.045,
+      0.026
+    ],
+    "dorsal_start": 0.5,
+    "dorsal_split": 0.5,
+    "dorsal_end": 1.06,
+    "spine_height": 0.21,
+    "soft_height": 0.15,
+    "tail_height": 0.19,
+    "tail_fork": -0.06,
+    "mouth_end": [
+      -1.14,
+      -0.15
+    ],
+    "gill_x": -0.69,
+    "qa_targets": [
+      "Slender taupe body and pale belly with five gill slits on each flank",
+      "Small eyes, ventral closed mouth and underside nostrils without an operculum",
+      "Opaque thick swept pectorals, two dorsals and an asymmetric upper/lower caudal",
+      "White-edged black dorsal tip, dark side stripe and cyclic tail-driven swimming"
+    ],
+    "alias_note": "Original Carcharhinus melanopterus visual study based on the inspected Klaus Stiefel photograph. Gill slits and closed ventral mouth use shallow authored relief rather than open cavities; fine denticles and teeth are simplified. Swimming is artist-tuned, not measured behavior.",
+    "eye_color": [
+      0.18,
+      0.19,
+      0.17
+    ],
+    "pupil_radius": 0.83,
+    "mouth_start_z": -0.12,
+    "dorsal_spines": 0,
+    "tail_end": 1.73,
+    "anal_start": 0.6,
+    "anal_split": 0.47,
+    "anal_end": 1.05,
+    "anal_spines": 0,
+    "anal_spine_height": 0.17,
+    "anal_height": 0.12,
+    "pelvic_length": 0.12,
+    "pectoral_length": 0.25,
+    "pectoral_height": 0.22,
+    "pectoral_droop": 0.01,
+    "pectoral_shape": "rounded",
+    "pectoral_root_z": -0.085,
+    "pectoral_surface_anchor": true,
+    "markings": "reef_shark",
+    "surface_roughness": 0.55,
+    "swim_seconds": 2.5,
+    "tail_color": [
+      0.59,
+      0.57,
+      0.45
+    ],
+    "tail_dark_margin": 0.12,
+    "scale_density": [
+      60,
+      38
+    ],
+    "scale_pigment_gain": 0.016,
+    "scale_rim_gain": 0.022,
+    "metallic": 0,
+    "fin_markings": "none",
+    "soft_start_height": 0,
+    "round_snout": 0.05,
+    "anal_soft_start_height": 0,
+    "pelvic_root_x": -0.67,
+    "pelvic_start_x": -0.48,
+    "pelvic_end_x": -0.2,
+    "gill_bounds": [
+      -0.13,
+      0.13
+    ],
+    "dorsal_second_start": 0.5,
+    "soft_height_curve": [
+      [
+        0,
+        0
+      ],
+      [
+        0.25,
+        0.14
+      ],
+      [
+        0.6,
+        0.12
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "pelvic": true,
+    "body_wave_gain": 0.9,
+    "fanning_cycles": 1,
+    "fanning_gain": 0.45,
+    "stabilizer_tip_blend": 0.9,
+    "lip_bulge": 1e-05,
+    "fin_edge_noise_gain": 0.18,
+    "fanning_local_hinges": true,
+    "cartilaginous_fins": true,
+    "shark_kind": "reef",
+    "shark_gill_x": [
+      -1.01,
+      -0.925,
+      -0.84,
+      -0.755,
+      -0.67
+    ],
+    "shark_gill_half_height": 0.12,
+    "shark_dorsal_span": [
+      -0.43,
+      0.34
+    ],
+    "shark_dorsal_height": [
+      [
+        0,
+        0.003
+      ],
+      [
+        0.3,
+        0.31
+      ],
+      [
+        0.4,
+        0.34
+      ],
+      [
+        0.68,
+        0.15
+      ],
+      [
+        1,
+        0.003
+      ]
+    ],
+    "shark_tail_outline": [
+      [
+        0,
+        1.84,
+        -0.34
+      ],
+      [
+        0.4,
+        1.56,
+        -0.015
+      ],
+      [
+        0.64,
+        1.96,
+        0.17
+      ],
+      [
+        0.82,
+        2.14,
+        0.29
+      ],
+      [
+        0.88,
+        2.1,
+        0.36
+      ],
+      [
+        1,
+        2.34,
+        0.64
+      ]
+    ],
+    "shark_pectoral_span": 0.62,
+    "shark_pelvic_x": 0.45,
+    "fanning_bones": [
+      "Dorsal",
+      "Anal",
+      "Pectoral_L",
+      "Pectoral_R"
+    ],
+    "required_mesh_counts": {
+      "Dorsal_Main": 1,
+      "Dorsal_Second": 1,
+      "Caudal_Heterocercal": 1,
+      "Pectoral_Swept_": 2
+    },
+    "required_moving_prefixes": [
+      "Dorsal_Main",
+      "Dorsal_Second",
+      "Caudal_Heterocercal",
+      "Pectoral_Swept_"
+    ],
+    "shark_pectoral_drop": 0.28,
+    "shark_pelvic_drop": 0.115
   }
 }

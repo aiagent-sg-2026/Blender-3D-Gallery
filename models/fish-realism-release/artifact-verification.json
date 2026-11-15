@@ -3672,6 +3672,164 @@
         ],
         "truncated": false
       }
+    },
+    {
+      "slug": "reef-shark",
+      "sha256": "6f1f11161b55b0a6bcc5bf88d457eaf66511f030afa1a5d689be2a79fccdc27c",
+      "bytes": 3525464,
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 24,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "UNUSED_MESH_TANGENT",
+            "message": "Tangents are not used because the material has no normal texture.",
+            "severity": 2,
+            "pointer": "/meshes/1/primitives/0/attributes/TANGENT"
+          },
+          {
+            "code": "UNUSED_MESH_TANGENT",
+            "message": "Tangents are not used because the material has no normal texture.",
+            "severity": 2,
+            "pointer": "/meshes/2/primitives/0/attributes/TANGENT"
+          },
+          {
+            "code": "UNUSED_MESH_TANGENT",
+            "message": "Tangents are not used because the material has no normal texture.",
+            "severity": 2,
+            "pointer": "/meshes/3/primitives/0/attributes/TANGENT"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/3/primitives/0/attributes/TEXCOORD_0"
+          },
+          {
+            "code": "UNUSED_MESH_TANGENT",
+            "message": "Tangents are not used because the material has no normal texture.",
+            "severity": 2,
+            "pointer": "/meshes/4/primitives/0/attributes/TANGENT"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/4/primitives/0/attributes/TEXCOORD_0"
+          },
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 384x384.",
+            "severity": 2,
+            "pointer": "/images/4"
+          },
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 384x384.",
+            "severity": 2,
+            "pointer": "/images/5"
+          },
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 384x384.",
+            "severity": 2,
+            "pointer": "/images/6"
+          },
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 384x384.",
+            "severity": 2,
+            "pointer": "/images/7"
+          },
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 384x384.",
+            "severity": 2,
+            "pointer": "/images/8"
+          },
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 384x384.",
+            "severity": 2,
+            "pointer": "/images/9"
+          },
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 384x384.",
+            "severity": 2,
+            "pointer": "/images/10"
+          },
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 384x384.",
+            "severity": 2,
+            "pointer": "/images/11"
+          },
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 384x384.",
+            "severity": 2,
+            "pointer": "/images/12"
+          },
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 384x384.",
+            "severity": 2,
+            "pointer": "/images/13"
+          },
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 384x384.",
+            "severity": 2,
+            "pointer": "/images/14"
+          },
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 384x384.",
+            "severity": 2,
+            "pointer": "/images/15"
+          },
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 384x384.",
+            "severity": 2,
+            "pointer": "/images/16"
+          },
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 384x384.",
+            "severity": 2,
+            "pointer": "/images/17"
+          },
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 384x384.",
+            "severity": 2,
+            "pointer": "/images/18"
+          },
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 384x384.",
+            "severity": 2,
+            "pointer": "/images/19"
+          },
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 384x384.",
+            "severity": 2,
+            "pointer": "/images/20"
+          },
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 384x384.",
+            "severity": 2,
+            "pointer": "/images/21"
+          }
+        ],
+        "truncated": false
+      }
     }
   ]
 }

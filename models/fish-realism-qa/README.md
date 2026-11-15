@@ -60,3 +60,7 @@ Run Blender in background mode with `--python-exit-code 1 --python models/fish-r
 ## Shared reef-fish pigment
 
 `butterfly_pattern.py` maps curved bands in anatomical coordinates across the body and median fins; region-specific fin maps preserve roots and appearance at fin junctions. The source retains packed full-resolution maps. The release exporter may use an explicit per-entry fin-image limit on temporary image copies; source hashes and actual final-delivery playback remain separately checked.
+
+## Cartilaginous fish
+
+`shark_fins.py` builds closed, opaque fins with roots projected into actual skin, separate dorsals and unequal caudal lobes. A point-domain anatomical span preserves root weights while closed caps receive non-degenerate UV footprints. `shark_skin.py` supplies original shallow gill/mouth relief and pigment without a teleost operculum or invented bony fin-ray textures. Fin materials retain fine skin microstructure. Each selected shark still requires source, actual GLB, delivery and browser gates; photos do not certify biomechanics.
