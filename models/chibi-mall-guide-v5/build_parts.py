@@ -8,25 +8,11 @@ import numpy as np
 from mathutils import Vector
 from mathutils.bvhtree import BVHTree
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
-import config as C, kit, garments, limbs
+import config as C, kit
 OUT = sys.argv[sys.argv.index('--') + 1]; os.makedirs(OUT, exist_ok=True)
 bpy.ops.wm.read_factory_settings(use_empty=True)
-mats = garments.make_materials(bpy)
-
-parts = []
-parts.append(garments.build_cap(bmesh, mats)); parts.append(garments.build_vest(bmesh, mats))
-parts.append(garments.build_shirt(bmesh, mats)); parts.append(garments.build_neckerchief(bmesh, mats))
-parts.append(garments.build_shorts(bmesh, mats))
-for fn in (limbs.build_arms, limbs.build_gloves, limbs.build_legs, limbs.build_socks, limbs.build_shoes):
-    parts.extend(fn(bmesh, mats))
-# head and eyes are built by head.py; the neck is still a placeholder
-import head as H
-head_obj, eyes_obj = H.build_head(bpy, bmesh, mats)
-parts.extend([head_obj, eyes_obj])
-placeholders = []
-p = C.PARTS['Neck']; bm = bmesh.new()      # neck is still an ellipsoid placeholder
-kit.add_super(bm, p['c'], p['r'], seg=36, rings=24)
-placeholders.append(kit.finish('Neck_placeholder', bm, [mats['skin']]))
+import figure
+mats, parts, placeholders = figure.build_all(bpy, bmesh)
 
 # ---- report ----
 dg = bpy.context.evaluated_depsgraph_get()
@@ -71,6 +57,17 @@ for name, az in views.items():
     cam.rotation_euler = (math.radians(90), 0, a)
     sc.render.filepath = os.path.join(OUT, f'parts-{name}.png'); bpy.ops.render.render(write_still=True)
     imgs.append(np.array(bpy.data.images.load(sc.render.filepath).pixels[:], dtype=np.float32).reshape(N, N, 4))
+# head close-ups: tighter ortho frame centred on the head
+cd.ortho_scale = 0.66; imgs_h = []
+for name, az in views.items():
+    a = math.radians(az)
+    cam.location = (math.sin(a) * 4, -math.cos(a) * 4 + 0.0, 0.73)
+    cam.rotation_euler = (math.radians(90), 0, a)
+    sc.render.filepath = os.path.join(OUT, f'head-{name}.png'); bpy.ops.render.render(write_still=True)
+    imgs_h.append(np.array(bpy.data.images.load(sc.render.filepath).pixels[:], dtype=np.float32).reshape(N, N, 4))
+sheet_h = np.concatenate(imgs_h, axis=1)
+imh = bpy.data.images.new('sheet_h', sheet_h.shape[1], N, alpha=True); imh.pixels = sheet_h.reshape(-1).tolist()
+imh.filepath_raw = os.path.join(OUT, 'head-sheet.png'); imh.file_format = 'PNG'; imh.save()
 sheet = np.concatenate(imgs, axis=1)
 im = bpy.data.images.new('sheet', sheet.shape[1], N, alpha=True); im.pixels = sheet.reshape(-1).tolist()
 im.filepath_raw = os.path.join(OUT, 'parts-sheet.png'); im.file_format = 'PNG'; im.save()

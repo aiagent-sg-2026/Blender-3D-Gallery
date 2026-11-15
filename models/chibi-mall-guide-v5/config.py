@@ -45,15 +45,30 @@ SHIRT = dict(c=(0.0, -0.010, 0.380), r=(0.084, 0.098, 0.084), z_hem=0.310, z_nec
 SHORTS = dict(c=(0.0, 0.0, 0.250), r=(0.094, 0.094, 0.056), leg_r=0.050, z_hem=0.195, leg_x=0.058)
 LEG = dict(x=0.058, y=0.013, z_top=0.205, z_sock=0.165, z_bot=0.075, r_top=0.040, r_bot=0.036, sock_r=0.044)
 SHOE = dict(x=0.062, y=0.005)
-CAP = dict(c=(0.0, 0.073, 0.948), r=(0.135, 0.130, 0.052), z_rim=0.900)
+CAP = dict(c=(0.0, 0.073, 0.935), r=(0.135, 0.130, 0.052), z_rim=0.887)
 
 
 # ---- step 6: head (skull plus patches on its surface). Face landmarks read from sheet B front view (cap top = row 0):
 # eyes about row 274 (z 0.635), brows row 199, mouth row 324, chin row 360. x offsets are about +/-0.08 for the eyes.
-HEAD = dict(c=(0.0, 0.060, 0.700), r=(0.185, 0.175, 0.180), rz_bot=0.180, p_bot=2.3)
+HEAD = dict(c=(0.0, 0.050, 0.700), r=(0.200, 0.195, 0.180), rz_bot=0.175, p_bot=3.2)
 EYE = dict(x=0.080, z=0.640, a=0.050, b=0.054, lift=0.006)
 BROW = dict(x=0.080, z=0.735, hw=0.042, th=0.009, arch=0.008, lift=0.003)
 MOUTH = dict(x=0.0, z=0.570, hw=0.040, depth=0.022, corner=0.010, lift=0.0015)
 CHEEK = dict(x=0.105, z=0.562, r=0.028, lift=0.002)
 NOSE = dict(z=0.612, r=(0.011, 0.010, 0.009))
-EAR = dict(x=0.186, y=0.065, z=0.645, r=(0.012, 0.026, 0.034))
+EAR = dict(x=0.203, y=0.055, z=0.585, r=(0.012, 0.026, 0.034))
+
+
+# ---- step 7: hair lobes: (azimuth deg, elevation deg, offset m from the skull, (half width, half thickness, half length) m, roll deg).
+# Eight lobes: fringe F0 F1 F2, sides S1 S2, back B0 B1 B2; the last field tilts the lower end outward. Starting values, read from sheet B; the cap sits on top of them.
+HAIR_P = 2.4
+HAIR_LOBES = [
+    (0, 50, 0.008, (0.060, 0.034, 0.088), 0, 0),
+    (36, 46, 0.008, (0.058, 0.034, 0.085), -20, 0),
+    (-36, 46, 0.008, (0.058, 0.034, 0.085), 20, 0),
+    (74, 22, 0.008, (0.095, 0.050, 0.105), 0, 0),
+    (-74, 22, 0.008, (0.095, 0.050, 0.105), 0, 0),
+    (180, 16, 0.008, (0.115, 0.052, 0.165), 0, 0),
+    (138, 20, 0.008, (0.095, 0.048, 0.145), 0, 0),
+    (-138, 20, 0.008, (0.095, 0.048, 0.145), 0, 0),
+]

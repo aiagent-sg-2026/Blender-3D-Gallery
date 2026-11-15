@@ -141,3 +141,33 @@ def add_band(bm, surf_y, u_range, top_fn, bot_fn, x_fn, lift, steps_u=14, steps_
     bm.faces.ensure_lookup_table()
     for f in bm.faces[n0:]: f.material_index = mi
     return verts
+
+
+def add_lobe(bm, center, n, size, roll=0.0, p=2.4, seg=24, rings=16, mi=0, up=(0.0, 0.0, 1.0), tilt=0.0):
+    """Rounded, blunt lobe (superellipsoid) lying on a surface: centre, outward normal n, size = (half width along the surface,
+    half thickness along n, half length along the surface's vertical direction). roll turns it about n (radians)."""
+    n = Vector(n).normalized(); t1 = Vector(up).cross(n)
+    if t1.length < 1e-6: t1 = Vector((1.0, 0.0, 0.0))
+    t1.normalize(); t2 = n.cross(t1).normalized()
+    c, s = math.cos(roll), math.sin(roll); t1, t2 = t1 * c + t2 * s, t2 * c - t1 * s
+    if tilt:   # rotate about t1: the lower end (-t2) swings outward along n for tilt > 0
+        c, s = math.cos(tilt), math.sin(tilt); n, t2 = n * c + t2 * s, t2 * c - n * s
+    n0 = len(bm.faces)
+    ret = bmesh.ops.create_uvsphere(bm, u_segments=seg, v_segments=rings, radius=1.0)
+    for v in ret['verts']:
+        z = v.co.z; f = 1.0
+        if abs(z) < 0.9999: f = math.sqrt(max(0.0, 1 - abs(z) ** p)) / math.sqrt(1 - z * z)
+        lx, ly, lz = v.co.x * f * size[0], v.co.y * f * size[1], z * size[2]
+        v.co = Vector(center) + t1 * lx + n * ly + t2 * lz
+    bm.faces.ensure_lookup_table(); _tag(bm.faces[n0:], mi)
+    return ret['verts']
+
+
+def super_side_x(c, r, y, z, p_top=2.0, p_bot=2.0, rz_bot=None):
+    """+X surface of the shape add_super builds, at (y, z). Returns the centre x when (y, z) is outside the shape."""
+    zn = (z - c[2]) / (r[2] if (rz_bot is None or z >= c[2]) else rz_bot)
+    if abs(zn) >= 1.0: return c[0]
+    pp = p_top if zn >= 0 else p_bot
+    f = math.sqrt(max(0.0, 1 - abs(zn) ** pp)) / math.sqrt(1 - zn * zn)
+    t = (1 - zn * zn) - ((y - c[1]) / (f * r[1])) ** 2
+    return c[0] + f * r[0] * math.sqrt(max(0.0, t))
