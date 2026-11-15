@@ -9,6 +9,14 @@ HERE=Path(__file__).resolve().parent
 ID='mall-food-court-tray-station'
 ROOT='ASSET_MallFoodCourtTrayStation'
 GROUPS=['CabinetLeft','CabinetRight','CabinetBack','LowerShelf','UpperShelf','Counter','Feet','SignFrame','SignText','Tray01','Tray02','Tray03','Tray04']
+if bpy.app.version!=(4,0,2):
+ raise RuntimeError('Use matching Blender 4.0.2 for the repaired tray return station')
+sys.path.insert(0,str(HERE.parents[1]/'scripts'))
+from blender_degenerate_cleanup import add_cleanup, MODIFIER_NAME
+CLEANUP_PARTS={ID:('ReturnLabel','ThanksLabel')}
+def prepare_asset_geometry(slug=ID,objects=None):
+ for obj in objects if objects is not None else bpy.data.collections[ROOT].all_objects:
+  if obj.name in CLEANUP_PARTS.get(slug,()):add_cleanup(obj)
 def material(name,rgb,metallic=0,roughness=.5):
  m=bpy.data.materials.new(name);m.use_nodes=True
  def linear(v):
@@ -37,7 +45,14 @@ def point_at(o,p):o.rotation_euler=(Vector(p)-o.location).to_track_quat('-Z','Y'
 def evaluated_mesh(o,dg):
  # Blender FONT evaluation has coincident boundary vertices. Weld the evaluated
  # export copy, leaving the original FONT fully editable in the saved source.
- mesh=bpy.data.meshes.new_from_object(o.evaluated_get(dg),depsgraph=dg)
+ # Preserve the established welded FONT triangulation on disposable copies.
+ # Source cleanup is evaluated independently; delivery cleanup follows the join.
+ cleanup=o.modifiers.get(MODIFIER_NAME);enabled=(cleanup.show_viewport,cleanup.show_render) if cleanup else None
+ try:
+  if cleanup:cleanup.show_viewport=False;cleanup.show_render=False;bpy.context.view_layer.update()
+  mesh=bpy.data.meshes.new_from_object(o.evaluated_get(dg),depsgraph=dg)
+ finally:
+  if cleanup:cleanup.show_viewport,cleanup.show_render=enabled;bpy.context.view_layer.update()
  bm=bmesh.new();bm.from_mesh(mesh)
  bmesh.ops.remove_doubles(bm,verts=list(bm.verts),dist=1e-7)
  bmesh.ops.dissolve_degenerate(bm,edges=list(bm.edges),dist=1e-6)
@@ -50,6 +65,7 @@ def evaluated_mesh(o,dg):
  bmesh.ops.recalc_face_normals(bm,faces=list(bm.faces));bm.to_mesh(mesh);bm.free();mesh.update()
  return mesh
 def export_asset(path=None):
+ prepare_asset_geometry()
  scene=bpy.context.scene;root=bpy.data.objects.new(ROOT,None);scene.collection.objects.link(root);parts=[root];dg=bpy.context.evaluated_depsgraph_get()
  for name in GROUPS:
   copies=[]
@@ -59,10 +75,11 @@ def export_asset(path=None):
   bpy.ops.object.select_all(action='DESELECT')
   for o in copies:o.select_set(True)
   bpy.context.view_layer.objects.active=copies[0];bpy.ops.object.join();o=bpy.context.object;o.name=name;o.parent=root;o['source_collection']=name;parts.append(o)
+  if name=='SignText':add_cleanup(o)
  bpy.ops.object.select_all(action='DESELECT')
  for o in parts:o.select_set(True)
  bpy.context.view_layer.objects.active=root
- bpy.ops.export_scene.gltf(filepath=str(path or HERE/'exports/optimized.glb'),export_format='GLB',use_selection=True,export_apply=True,export_yup=True,export_animations=False,export_texcoords=False,export_extras=True,export_cameras=False,export_lights=False)
+ bpy.ops.export_scene.gltf(filepath=str(path or HERE/'exports/optimized.glb'),export_format='GLB',use_active_scene=True,use_selection=True,export_apply=True,export_yup=True,export_animations=False,export_texcoords=False,export_extras=True,export_cameras=False,export_lights=False)
  for o in reversed(parts):bpy.data.objects.remove(o,do_unlink=True)
 
 def label(name,body,z,size,mat):

@@ -1,0 +1,119 @@
+{
+  "browserVersion": "157.0.8103.51",
+  "policy": "No requestfailed or ERR_ABORTED filtering; one fixed pass of all three cases",
+  "android": "NOT TESTED",
+  "ios": "NOT TESTED",
+  "results": [
+    {
+      "asset": "mall-food-court-tray-station",
+      "width": 1440,
+      "height": 900,
+      "runtime": "Desktop Chromium with viewport emulation, not Android/iOS",
+      "sha256": "b5fcdecfc0e9cda9bcdcb954755b7435066dfef5d5f930d42a53dc9115f81af0",
+      "bytes": 353656,
+      "passed": false,
+      "requestConsolePageErrors": [],
+      "initialConsumed": [
+        {
+          "bytes": 353656,
+          "sha256": "6dbf9a5ae6260f4473a4e16e600e9557f08de087707a0b38209922014d0ad585"
+        }
+      ],
+      "failure": "The expression evaluated to a falsy value:\n\n  assert.ok(result.initialConsumed.some(x=>x.bytes===bytes.length&&x.sha256===sha256))\n"
+    },
+    {
+      "asset": "mall-food-court-tray-station",
+      "width": 768,
+      "height": 1024,
+      "runtime": "Desktop Chromium with viewport emulation, not Android/iOS",
+      "sha256": "b5fcdecfc0e9cda9bcdcb954755b7435066dfef5d5f930d42a53dc9115f81af0",
+      "bytes": 353656,
+      "passed": false,
+      "requestConsolePageErrors": [
+        "404 http://127.0.0.1:61188/Blender-3D-Gallery/?model=mall-food-court-tray-station",
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "failure": "page.waitForFunction: Timeout 60000ms exceeded."
+    },
+    {
+      "asset": "mall-food-court-tray-station",
+      "width": 390,
+      "height": 844,
+      "runtime": "Desktop Chromium with viewport emulation, not Android/iOS",
+      "sha256": "b5fcdecfc0e9cda9bcdcb954755b7435066dfef5d5f930d42a53dc9115f81af0",
+      "bytes": 353656,
+      "passed": true,
+      "requestConsolePageErrors": [],
+      "initialConsumed": [
+        {
+          "bytes": 353656,
+          "sha256": "b5fcdecfc0e9cda9bcdcb954755b7435066dfef5d5f930d42a53dc9115f81af0"
+        }
+      ],
+      "lifecycleCycles": 3,
+      "closeStopsRendering": true,
+      "focusRestored": true,
+      "pixels": {
+        "initial": "ed3a4c5e26d242b13dc46ad81a260a4debccfc76ed39d9d05b2d3966811d33a0",
+        "orbit": "5489012400f6c860223da55a43768cec9a5d631acb36ae9f60754cf1030e3cdf",
+        "zoom": "137ba99078024053f06436481346e482590f28e815c2c822bdf6106dc5602063",
+        "reset": "ed3a4c5e26d242b13dc46ad81a260a4debccfc76ed39d9d05b2d3966811d33a0",
+        "rear": "fd7dbbf70c8bbf9195ede96a0cb1406bce7c11ad062d297fba5077adf730c0c7",
+        "reopened": "ed3a4c5e26d242b13dc46ad81a260a4debccfc76ed39d9d05b2d3966811d33a0"
+      },
+      "resetMatchesInitial": true,
+      "reopenMatchesInitial": true,
+      "consumed": [
+        {
+          "bytes": 353656,
+          "sha256": "b5fcdecfc0e9cda9bcdcb954755b7435066dfef5d5f930d42a53dc9115f81af0"
+        },
+        {
+          "bytes": 353656,
+          "sha256": "b5fcdecfc0e9cda9bcdcb954755b7435066dfef5d5f930d42a53dc9115f81af0"
+        },
+        {
+          "bytes": 353656,
+          "sha256": "b5fcdecfc0e9cda9bcdcb954755b7435066dfef5d5f930d42a53dc9115f81af0"
+        },
+        {
+          "bytes": 353656,
+          "sha256": "b5fcdecfc0e9cda9bcdcb954755b7435066dfef5d5f930d42a53dc9115f81af0"
+        }
+      ],
+      "glbResponses": [
+        {
+          "path": "/Blender-3D-Gallery/assets/optimized-z9tCccpg.glb",
+          "status": 200
+        },
+        {
+          "path": "/Blender-3D-Gallery/assets/optimized-z9tCccpg.glb",
+          "status": 200
+        },
+        {
+          "path": "/Blender-3D-Gallery/assets/optimized-z9tCccpg.glb",
+          "status": 200
+        },
+        {
+          "path": "/Blender-3D-Gallery/assets/optimized-z9tCccpg.glb",
+          "status": 200
+        },
+        {
+          "path": "/Blender-3D-Gallery/assets/optimized-z9tCccpg.glb",
+          "status": 200
+        }
+      ],
+      "horizontalOverflow": false,
+      "renderDrawCalls": 90,
+      "controls": [
+        "orbit",
+        "zoom",
+        "exact reset",
+        "additional orbit",
+        "close and exact reopen"
+      ],
+      "defaultView": "Existing default gallery camera; static asset prop and orbit controls only"
+    }
+  ]
+}
