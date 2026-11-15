@@ -54,12 +54,17 @@ In: a Python package, run in headless Blender or through the Blender MCP, that b
 3. Define the v5 spec and write bpy-free validation.
 4. Rig, sockets, shape keys, animation: prove on a test model, then use on v5.
 5. Build v5 on the framework and run gates G1 to G6.
-6. Migrate one older character as the second user.
+6. Build the next new character on the framework as the second real user (older characters are not migrated).
 7. Later: optional Blender extension UI.
 
-## 7. Open decisions for the owner
+## 7. Owner decisions (2026-11-15)
 
-- Directory and name of the framework.
-- Python only, or also Node-side spec validation so it runs in `npm test`.
-- Migrate all older characters or only one or two as proof.
-- Who owns framework versioning and the G5 independent review.
+- Location and name: `tools/chibi-framework/`.
+- Validation: Python only; no Node-side duplicate of the spec rules, so it does not run in `npm test`. Python tests run with plain Python (bpy-free modules) and headless Blender.
+- Older characters: **none are migrated**; the framework serves new characters only. Consequence for the plan: phase 2's golden test may rebuild an existing character (e.g. child-character) only in a scratch location to compare output, never replacing the accepted model; and phase 6 (migrate an older character as a second user) is dropped. The second real user is the next new character after v5, so the "two real users" rule for accepting a layer is checked against v5 plus that character, or against the golden-test rebuild when only v5 exists.
+- Versioning and review: the owner approves each framework version; a fresh agent does the independent review.
+
+## 8. Open
+
+- The golden-test target character (suggested child-character, the smallest) and what counts as a pass (identical hash, or documented differences).
+- Supported Blender versions (5.1.2 installed; GJH README names 5.2.3).
