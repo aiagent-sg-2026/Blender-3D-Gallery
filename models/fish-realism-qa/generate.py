@@ -95,15 +95,18 @@ def skin_maps():
   from clown_pattern import paint_bands
   color=paint_bands(color,xs,world_z,R.smoothstep)
  if C.get('markings')=='stars_stripes_puffer':
-  rng=np.random.default_rng(1041)
-  for k in range(730):
+  rng=np.random.default_rng(1041);centers=[]
+  for k in range(2200):
+   if len(centers)>=500:break
    cx,cy=rng.uniform(.015,.985),rng.random()
    if math.sin(cy*2*PI)<-.57:continue
+   if any(((cx-a)/.010)**2+(min(abs(cy-b),1-abs(cy-b))/.013)**2<1 for a,b in centers):continue
+   centers.append((cx,cy))
    rx,ry=rng.uniform(.003,.0065),rng.uniform(.0035,.008);x0=max(0,int((cx-rx*1.5)*w));x1=min(w,int((cx+rx*1.5)*w)+2);y0=max(0,int((cy-ry*1.5)*h));y1=min(h,int((cy+ry*1.5)*h)+2)
    d=np.sqrt(((u[y0:y1,x0:x1]-cx)/rx)**2+((v[y0:y1,x0:x1]-cy)/ry)**2);a=(1-R.smoothstep(.76,1.12,d))*rng.uniform(.76,.96);local=color[y0:y1,x0:x1];color[y0:y1,x0:x1]=local*(1-a[...,None])+np.array([.88,.90,.80])*a[...,None]
   lower=np.interp(xs,C['profile_x'],C['bottom']);lines=np.zeros_like(xs)
-  for k in range(4):lines=np.maximum(lines,np.exp(-((world_z-lower-.035-k*.032)/.005)**2))
-  lines*=R.smoothstep(-1.50,-1.30,xs)*(1-R.smoothstep(.65,.90,xs))*flank_mask;color=color*(1-lines[...,None]*.72)+np.array([.86,.88,.76])*lines[...,None]*.72
+  for k in range(4):lines=np.maximum(lines,np.exp(-((world_z-lower-.10-k*.045)/.005)**2))
+  lines*=R.smoothstep(-1.50,-1.30,xs)*(1-R.smoothstep(.65,.90,xs))*flank_mask;color=color*(1-lines[...,None]*.72)+np.array([.96,.96,.85])*lines[...,None]*.72
   d=np.sqrt(((xs-(C['gill_x']+.10))/.135)**2+((world_z-C['pectoral_root_z'])/.16)**2);ring=np.exp(-((d-1.10)/.043)**2)*flank_mask;patch=(1-R.smoothstep(.88,1,d))*flank_mask;color=color*(1-ring[...,None]*.9)+np.array([.85,.87,.74])*ring[...,None]*.9;color=color*(1-patch[...,None]*.9)+np.array([.028,.032,.023])*patch[...,None]*.9
  if C.get('markings')=='humpback_puffer':
   field=R.noise(u,v,44,31,1001)*.58+R.noise(u,v,97,63,1002)*.29+R.noise(u,v,210,141,1004)*.13;reticulation=np.exp(-((field-.51)/.030)**2);color*=.58+.42*reticulation[...,None];color+=(micro-.5)[...,None]*.018;height+=R.smoothstep(.75,.94,R.noise(u,v,180,130,1003))*.0003
