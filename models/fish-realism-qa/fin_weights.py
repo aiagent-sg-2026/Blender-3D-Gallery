@@ -1,7 +1,7 @@
 """Anchor fin roots to the body and feather stabilizing motion toward the tips."""
 import bpy,bisect
 
-def attach_fin_roots(scene):
+def attach_fin_roots(scene,tip_blend=.85):
  xs=[-1.8,-.8,-.15,.45,.95,1.4,1.8]
  for obj in scene.objects:
   role=obj.get('deform_role')
@@ -13,7 +13,7 @@ def attach_fin_roots(scene):
   for group in obj.vertex_groups:group.remove(list(range(len(obj.data.vertices))))
   groups={g.name:g for g in obj.vertex_groups}
   for vertex,t in zip(obj.data.vertices,spans):
-   p=obj.matrix_local@vertex.co;i=max(0,min(5,bisect.bisect_right(xs,p.x)-1));f=max(0,min(1,(p.x-xs[i])/(xs[i+1]-xs[i])));blend=.85*max(0,min(1,t))**1.7
+   p=obj.matrix_local@vertex.co;i=max(0,min(5,bisect.bisect_right(xs,p.x)-1));f=max(0,min(1,(p.x-xs[i])/(xs[i+1]-xs[i])));blend=tip_blend*max(0,min(1,t))**1.7
    weights={'Spine_%02d'%i:(1-f)*(1-blend),'Spine_%02d'%(i+1):f*(1-blend)}
    extra='Dorsal' if role=='dorsal' else 'Anal' if role=='anal' else 'Pectoral_L' if p.y>0 else 'Pectoral_R';weights[extra]=blend
    for name,value in weights.items():

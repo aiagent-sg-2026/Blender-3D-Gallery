@@ -8,6 +8,14 @@ import {fishLaunchOptions,fishBrowserRuntime} from '../fish-realism-qa/browser-r
 const manifest=JSON.parse(await fs.readFile('models/fish-realism-release/releases.json'));
 const server=process.env.FISH_LIVE_URL?{url:process.env.FISH_LIVE_URL,close:async()=>{}}:await serveBuild();
 const results=[];
+const receiptPath=`models/fish-realism-release/${process.env.FISH_LIVE_URL?'live':'local'}-${process.env.FISH_ENGINE||'all'}${process.env.FISH_BATCH?'-'+process.env.FISH_BATCH:''}-browser-verification.json`;
+const harnessHash=crypto.createHash('sha256').update(await fs.readFile(new URL(import.meta.url))).digest('hex');
+const deploymentCommit=process.env.FISH_DEPLOY_SHA||null;
+if(process.env.FISH_RESUME==='1') {
+ let previous;try{previous=JSON.parse(await fs.readFile(receiptPath));}catch(error){if(error.code!=='ENOENT')throw error;}
+ if(previous){assert.equal(previous.harness_sha256,harnessHash,'Resume requires the same test harness');assert.equal(previous.deployment_commit,deploymentCommit);assert.deepEqual(previous.chromium_runtime,fishBrowserRuntime);assert.equal(previous.mode,'actual_catalog_no_substitution');results.push(...previous.results);}
+}
+const writeReceipt=completed=>fs.writeFile(receiptPath,JSON.stringify({completed,harness_sha256:harnessHash,deployment_commit:deploymentCommit,mode:'actual_catalog_no_substitution',chromium_runtime:fishBrowserRuntime,mobile:'emulated viewport, not physical hardware',results},null,2)+'\n');
 for(const engine of (process.env.FISH_ENGINE?[process.env.FISH_ENGINE]:['chromium','webkit'])) {
  const browser=await ({chromium,webkit}[engine]).launch(engine==='chromium'?fishLaunchOptions:{headless:true});
  try { for(const slug of (process.env.FISH_SLUGS?process.env.FISH_SLUGS.split(','):Object.keys(manifest.models))) {
@@ -17,6 +25,8 @@ for(const engine of (process.env.FISH_ENGINE?[process.env.FISH_ENGINE]:['chromiu
 const directory=`output/playwright/fish-realism-release/${process.env.FISH_LIVE_URL?'live':'local'}/${engine}/${slug}`;await fs.mkdir(directory,{recursive:true});
 
 for(const width of [1440,390]) {
+  const prior=results.find(r=>r.slug===slug&&r.engine===engine&&r.width===width);
+  if(prior){assert.equal(prior.loaded_release_sha256,artifactHash);for(const check of ['paused_stable','visible_swim_change','resumed_then_paused','no_horizontal_overflow','no_page_errors','viewer_disposed','media_preference_updates_playback'])assert.equal(prior[check],true);continue;}
   const errors=[],knownCspMessages=[];let served=0;
   const context=await browser.newContext({viewport:{width,height:900},isMobile:width===390,hasTouch:width===390,reducedMotion:'reduce',serviceWorkers:'block'});
   context.on('response',async response=>{
@@ -46,10 +56,10 @@ const still=await capture(canvas);await page.waitForTimeout(150);assert.ok(still
   const screenshot=`${directory}/${width===1440?'desktop':'mobile'}.png`;await capture(page,{path:screenshot});
   await page.keyboard.press('Escape');assert.equal(await page.locator('[data-fish-playback]').count(),0);
   assert.deepEqual(errors,[]);const csp=await page.evaluate(()=>window.fishCsp);assert.ok(csp.every(v=>engine==='webkit'&&((v.directive==='style-src-elem'&&v.capture&&!v.target)||(v.directive==='style-src-attr'&&['model-theme','model-category','model-collection','model-feature','demo-category'].includes(v.target)))),JSON.stringify(csp));
-  results.push({slug,engine,width,height:900,loaded_release_sha256:artifactHash,known_csp_console_messages:knownCspMessages.length,native_select_csp_events:csp.filter(v=>v.directive==='style-src-attr').length,screenshot_csp_events:csp.filter(v=>v.directive==='style-src-elem').length,csp_events:csp,media_preference_updates_playback:true,paused_stable:true,visible_swim_change:true,resumed_then_paused:true,no_horizontal_overflow:true,no_page_errors:true,viewer_disposed:true,screenshot});await context.close();
+  results.push({slug,engine,width,height:900,loaded_release_sha256:artifactHash,known_csp_console_messages:knownCspMessages.length,native_select_csp_events:csp.filter(v=>v.directive==='style-src-attr').length,screenshot_csp_events:csp.filter(v=>v.directive==='style-src-elem').length,csp_events:csp,media_preference_updates_playback:true,paused_stable:true,visible_swim_change:true,resumed_then_paused:true,no_horizontal_overflow:true,no_page_errors:true,viewer_disposed:true,screenshot});await context.close();await writeReceipt(false);
  }
  console.log('PASS release',engine,slug);
  } } finally {await browser.close();}
 }
-await fs.writeFile(`models/fish-realism-release/${process.env.FISH_LIVE_URL?'live':'local'}-${process.env.FISH_ENGINE||'all'}${process.env.FISH_BATCH?'-'+process.env.FISH_BATCH:''}-browser-verification.json`,JSON.stringify({deployment_commit:process.env.FISH_DEPLOY_SHA||null,mode:'actual_catalog_no_substitution',chromium_runtime:fishBrowserRuntime,mobile:'emulated viewport, not physical hardware',results},null,2)+'\n');
+await writeReceipt(true);
 await server.close();

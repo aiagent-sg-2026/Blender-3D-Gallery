@@ -65,13 +65,20 @@ def skin_maps():
  hi=np.interp(xs,C['profile_x'],C['top']);lo=np.interp(xs,C['profile_x'],C['bottom']);world_z=(hi+lo)/2+(hi-lo)/2*np.sin(v*2*PI);flank_mask=np.abs(np.cos(v*2*PI))**4
  if C.get('markings') in ['yellow_scad','bigeye_scad','trevally']:
   yellow=C['markings']=='yellow_scad';level=.14-.035*(xs+.8);band=np.exp(-((world_z-level)/(.040 if yellow else .022))**2)*R.smoothstep(-1.39,-1.24,xs)*(1-R.smoothstep(1.15,1.25,xs))*flank_mask
-  strength=.82 if yellow else .15;color=color*(1-band[...,None]*strength)+np.array([.83,.64,.085])*band[...,None]*strength
-  spot=np.exp(-((xs+.96)/.044)**2-((world_z-.27)/.042)**2)*flank_mask;color*=1-spot[...,None]*(.76 if yellow else .30)
+  strength=.82 if yellow else 0 if C['markings']=='trevally' else .15;color=color*(1-band[...,None]*strength)+np.array([.83,.64,.085])*band[...,None]*strength
+  sx,sz=(-.81,.22) if C['markings']=='trevally' else (-.96,.27);spot=np.exp(-((xs-sx)/.044)**2-((world_z-sz)/.042)**2)*flank_mask;color*=1-spot[...,None]*(.76 if yellow else .68 if C['markings']=='trevally' else .30)
   line_z=.12*(1-R.smoothstep(-.15,.38,xs));lateral=np.exp(-((world_z-line_z)/.0035)**2)*R.smoothstep(-.83,-.67,xs)*flank_mask;color*=1-lateral[...,None]*.10
   # Posterior scutes remain tiny skin relief, not detached polygon plates.
-  for k in range(17):
-   sx=.38+k*.047;dx=(xs-sx)/.022;dz=(world_z-.003)/.025;scute=np.exp(-((dx+.28*np.abs(dz))/.15)**2)*(1-R.smoothstep(.65,1.05,np.abs(dz)))*flank_mask
-   height+=scute*.00035;color+=scute[...,None]*.018
+  for k in range(29 if C['markings']=='trevally' else 17):
+   sx=.30+k*.030+.002*math.sin(k*2.17) if C['markings']=='trevally' else .38+k*.047;dx=(xs-sx)/.022;dz=(world_z-.003)/(.019*(.88+.12*math.sin(k*1.71)) if C['markings']=='trevally' else .025);scute=np.exp(-((dx+.28*np.abs(dz))/.15)**2)*(1-R.smoothstep(.65,1.05,np.abs(dz)))*flank_mask
+   height+=scute*.00035
+   if C['markings']=='trevally':color*=1-scute[...,None]*.11
+   else:color+=scute[...,None]*.018
+ if C.get('markings')=='snakehead':
+  bars=np.exp(-(np.sin(PI*(u*9+.13*np.sin(v*15)+.25*v))/.45)**2)*R.smoothstep(-1.05,-.80,xs)*R.smoothstep(-.45,.5,z);color*=1-bars[...,None]*.35
+  mottled=R.noise(u,v,35,25,981);mask=R.smoothstep(.49,.69,mottled)*(1-R.smoothstep(.28,.42,u))*.25;color*=1-mask[...,None]
+ if C.get('markings')=='marble_goby':
+  mottled=R.noise(u,v,10,9,971)*.65+R.noise(u,v,23,17,972)*.35;mask=R.smoothstep(.46,.59,mottled)*.76;target=np.array([.105,.082,.045]);color=color*(1-mask[...,None])+target*mask[...,None]
  if C.get('markings')=='tilapia':
   bars=np.exp(-(np.sin(PI*(u*8.2+.10*np.sin(v*17)))/.53)**2)*R.smoothstep(.23,.33,u);color*=1-bars[...,None]*.21
   lateral=np.exp(-((world_z-.05)/.018)**2)*R.smoothstep(-1.05,-.8,xs)*flank_mask;color*=1-lateral[...,None]*.18
@@ -120,6 +127,8 @@ def fin_mat(tail=False,spiny=False):
   for sign in [-1,1]:
    child=center+sign*.014*np.maximum(0,(v-fork)/(1-fork));branches=np.maximum(branches,np.exp(-((u-child)/(width*.7))**2)*R.smoothstep(fork,fork+.04,v))
  lines=np.maximum(rays,branches*.70);color=np.zeros((n,n,3))+np.array(C['tail_color'] if tail else C['fin_color']);color+=(coarse-.5)[...,None]*.08; color+=lines[...,None]*np.array([.075,.045,.030]);alpha=np.clip(.74+coarse*.10+lines*.15-.15*R.smoothstep(.80,1,v),.20,.97)
+ if C.get('fin_markings')=='marble':
+  patch=R.smoothstep(.41,.64,coarse)*.65;color=color*(1-patch[...,None])+np.array([.10,.08,.045])*patch[...,None]
  if C.get('fin_markings')=='tilapia':
   if tail:
    bars=np.exp(-(np.sin(v*PI*7+.20*np.sin(u*8))/.42)**2);color*=1-bars[...,None]*.39
@@ -178,6 +187,7 @@ def fin_sweep(u,anal=False):
  return 0
 
 def fin_height(u,anal=False):
+ if not anal and C.get('soft_start_height'):return C['soft_height']*math.sin(PI*u)**.7+C['soft_start_height']*(1-u)**4
  if C.get('soft_forward_lobes'):return B.interp([(0,0),(.13,1),(.36,.48),(.72,.13),(1,0)],u)*(C.get('anal_height',.25) if anal else C['soft_height'])
  if slug=='golden-pomfret':return B.interp([(0,0),(.12,.44),(.27,.25),(.6,.10),(1,0)] if anal else [(0,0),(.10,.47),(.24,.28),(.55,.10),(1,0)],u)
  if C.get('fin_shape')=='pomfret':return B.interp([(0,0),(.12,.30),(.35,.16),(.70,.055),(1,0)],u)*C['soft_height']/.30
@@ -220,12 +230,15 @@ def fins(mat):
  for side in [-1,1]:
   gx=C['gill_x'];rootx=gx+.10;h,l,w=profile(rootx);root_z=C.get('pectoral_root_z',-.05)
   def pectoral_edge(u):
+   if C.get('pectoral_shape')=='rounded':
+    spread=math.sin(PI*u)**.6
+    return(rootx+C.get('pectoral_length',.4)*spread,side*(w+.08*math.sin(PI*u)),root_z+(u-.5)*C.get('pectoral_height',.29)-C.get('pectoral_droop',.1)*spread)
    if C.get('pectoral_shape')=='tapered':
     spread=B.interp([(0,0),(.22,1),(.64,.55),(1,0)],u)
     return(rootx+C.get('pectoral_length',.46)*spread,side*(w+.08*math.sin(PI*u)),root_z-C.get('pectoral_droop',.09)*spread+(u-.5)*C.get('pectoral_height',.24)*(1-.5*spread))
    return(rootx+C.get('pectoral_length',.46)+.05*math.sin(PI*u),side*(w+.13*math.sin(PI*u)),root_z-C.get('pectoral_droop',.09)+(u-.5)*C.get('pectoral_height',.24))
   pectoral=R.fan('Pectoral_'+str(side),lambda u:(rootx,flank(rootx,root_z+(u-.5)*.07,side,.001) if C.get('pectoral_surface_anchor') else side*w*.92,root_z+(u-.5)*.07),pectoral_edge,mat,n=82,m=24,flutter=.018,role='pectoral',phase=side)
-  if C.get('pectoral_shape')=='tapered':
+  if C.get('pectoral_shape') in ['tapered','rounded']:
    # The preserved review utility used a fixed world-space edge ripple, which
    # overwhelms small membranes. Retain only a slight natural irregularity.
    uv=pectoral.data.uv_layers.active;coordinates={loop.vertex_index:uv.data[loop.index].uv.copy() for loop in pectoral.data.loops}
@@ -242,16 +255,28 @@ sys.path.insert(0,str(HERE))
 from filaments import build_filaments
 build_filaments(B,C,profile,flank)
 print('BIND_SWIM',slug,flush=True);rig=B.add_rig('bass')
+if C.get('body_wave_gain'):
+ for layer in rig.animation_data.action.layers:
+  for strip in layer.strips:
+   for bag in strip.channelbags:
+    for curve in bag.fcurves:
+     if 'Spine_' not in curve.data_path:continue
+     for point in curve.keyframe_points:
+      point.co.y*=C['body_wave_gain'];point.handle_left.y*=C['body_wave_gain'];point.handle_right.y*=C['body_wave_gain']
+     curve.update()
+
 sys.path.insert(0,str(HERE))
 from fin_weights import attach_fin_roots
 from timing import retime_swim
 end_frame=retime_swim(rig,C.get('swim_seconds',3.0))
-attach_fin_roots(bpy.context.scene)
+attach_fin_roots(bpy.context.scene,C.get('stabilizer_tip_blend',.85))
 for o in B.ROOT.children_recursive:
  for mod in o.modifiers:
   if mod.type=='ARMATURE':mod.use_deform_preserve_volume=True
 # Studio utility uses a neutral environment; no habitat hides anatomical detail.
 spec=importlib.util.spec_from_file_location('studio',HERE.parent/'fish-realism-review'/'revision-03'/'create_review.py');P=importlib.util.module_from_spec(spec);spec.loader.exec_module(P);s=P.studio(OUT);s.camera.data.ortho_scale=4.6;s.camera.location=(-.15,-9,.85);P.aim(s.camera,(.14,0,.02));s.frame_set(13);s.frame_end=end_frame
+# EEVEE provides an early owning-runtime sample close to the realtime viewer.
+if '--quick-preview' in sys.argv:s.render.engine='BLENDER_EEVEE'
 bpy.ops.wm.save_as_mainfile(filepath=str(OUT/(slug+'.blend')));bpy.ops.render.render(write_still=True)
 s.camera.location=(-1.15,-7,.55);P.aim(s.camera,(-1.03,0,.02));s.camera.data.ortho_scale=1.65;s.render.filepath=str(OUT/'head-detail.png');bpy.ops.render.render(write_still=True)
 if C.get('pectoral_filaments'):

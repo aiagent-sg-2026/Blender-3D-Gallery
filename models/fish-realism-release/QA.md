@@ -69,3 +69,17 @@ Three new catalog replacements bring the total to twenty-one. The previous eight
 Each item has its own photo references, two visual iterations, packed source, actual GLB round-trip contact/motion evidence, detail renders and swim GIF. Rabbitfish revisions reduced oversized spots and deepened dorsal spine valleys. Red seabream revisions increased scale density and reduced pale rim contrast. Croaker revisions replaced broad scale tiles, tapered the spinous dorsal outline and darkened its upper membrane. Red seabream follows Pagrus major as the explicit visual species; the supplied common-name ambiguity is stated in metadata. These are original artistic reconstructions, not scans or certified identification models.
 
 Batch 05 also passes all 698 unit tests, with zero failures or skipped tests. Live availability of these three still requires a successful containing Pages deployment and hash-bound online checks.
+
+## Batch 06: trevally and two tilapia forms
+
+Three replacements bring the manifest to twenty-four; thirty-six remain queued. The previous twenty-one delivery hashes and all 79 protected files remain unchanged. All twenty-four actual delivery GLBs pass reimported deformation/source binding checks, and all twelve incremental native Chrome/Metal and WebKit desktop/mobile scenarios pass.
+
+Trevally revisions removed an excessive yellow stripe and subdued the regular-looking scute pigment. Red tilapia revisions connected the spiny/soft dorsal silhouette and rounded the snout. Nile tilapia retains a barred caudal and muted flank bars that distinguish it from the cultivated red hybrid; its scale edge contrast was reduced after the first sample. Each passed source/GLB contact, native browser draft and independent visual review gates. These new source stills use actual Blender EEVEE for earlier inspection; packed texture resolution, geometry and acceptance assertions are retained.
+
+Batch 06 passes all 700 unit tests after integrating the unrelated main topology repair; zero failures or skipped tests.
+
+## Live verification: contact revisions 01/02, ribbonfish and sardine
+
+Pages run [43708062271](https://github.com/yapweijun1996/Blender-3D-Gallery/actions/runs/43708062271) successfully deployed `c9968137e1c7ff670c2fc0261510d9ab391ebbe8`. All 32 live native Chrome/Metal and WebKit desktop/mobile scenarios pass for red snapper, grouper, golden pomfret, Indian mackerel, Spanish mackerel, yellowstripe scad, ribbonfish and sardine. Exact response hashes match the corresponding current delivery files. See the two `live-*-contact-01-02` receipts and live screenshots. This establishes those corrected artifact versions online; subsequent main replacements await their own containing deployment.
+
+An initial combined attempt completed the sixteen Chromium cases, then WebKit's first page navigation exceeded the 30-second load timeout. No application change was needed: separate engine runs pass all 32 cases. The harness now saves a checkpoint after every passed scenario and records completion explicitly; optional resume requires the same harness, deployment, browser runtime and matching selected GLB hashes. This prevents a later network failure discarding already completed evidence.

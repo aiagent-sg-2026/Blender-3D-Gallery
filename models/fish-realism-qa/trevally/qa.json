@@ -1,0 +1,57 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "yellow lateral stripe too pronounced for the explicit trevally reference",
+        "posterior scutes and opercular patch too faint"
+      ],
+      "changes": [
+        "remove yellow stripe, darken posterior scutes and strengthen the opercular spot",
+        "mute yellow-green fin pigment"
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "revise",
+      "findings": [
+        "posterior scute pigment now reads as a repeated dark stitch pattern"
+      ],
+      "changes": [
+        "reduce scute contrast, vary spacing and relief height slightly",
+        "inspect an EEVEE sample before more full-resolution rendering"
+      ]
+    },
+    {
+      "iteration": 3,
+      "result": "pass",
+      "changes": [
+        "removed the excessive yellow stripe",
+        "reduced and irregularized scute contrast after the second sample",
+        "checked actual EEVEE detail, GLB motion/contact and browser swimming"
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "066d5e35d9586e1deebca6015630d6318497f687b58895ae4605913aa6fe4f67",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: compressed silver body, moderately convex grey-green back, large eye and sharp fork tail",
+    "surface": "pass: yellow stripe removed; irregular subdued posterior scutes and dark opercular patch match explicit Caranx reference",
+    "head": "pass: large pale iris separated from closed mouth and gill creases",
+    "fins": "pass: high forward second-dorsal/anal lobes, swept pectorals and muted tail pigment",
+    "surface_contact": "pass: actual source and imported GLB fin roots contact posed skin at five phases",
+    "motion": "pass: evaluated tail and fins move and return through actual GLB round trip",
+    "browser": "pass: exact draft GLB visibly swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed artwork, not a scanned or calibrated specimen.",
+    "Explicit visual species/color form recorded; broad supplied common names retained.",
+    "Draft captions remain baseline."
+  ]
+}

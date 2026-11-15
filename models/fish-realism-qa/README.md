@@ -31,6 +31,8 @@ A later oblique/rest-geometry audit found that the earlier fixed paired-pelvic r
 
 The routed architecture instruction module was absent in this checkout; scoped repository contracts and observable source/export/browser evidence were used.
 
+For shell automation, invoke Blender with `--python-exit-code 1` before `--python SCRIPT`; assertions must terminate the shell pipeline. Artifact/source hashes and newly written motion/contact receipts remain mandatory even when the process exits successfully.
+
 On macOS hosts where bundled Chromium/SwiftShader screenshot preparation stalls, set `FISH_CHROME_PATH` to an installed Chrome executable and `FISH_WEBGL_BACKEND=metal`. The optional runtime is recorded in browser receipts; all existing assertions still apply. This is a QA environment choice, not a physical-device performance claim.
 
-Invoke Blender with `--python-exit-code 1` before `--python SCRIPT` so failed Python assertions stop shell automation. Newly written receipts and source/artifact hashes remain mandatory.
+For new artwork, `generate.py -- SLUG --quick-preview` uses actual Blender EEVEE stills for early inspection before expensive polish. It retains the full geometry, packed texture resolution, rig, source/GLB contact checks and browser gates. Existing sealed sources are not regenerated.
