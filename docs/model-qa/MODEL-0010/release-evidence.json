@@ -1,0 +1,198 @@
+{
+  "qa_release_head": "34d008ba9f156c7f98ec58fc47f227f354f9dd81",
+  "observed_at": "2026-11-15T09:41:15.494500+00:00",
+  "main_exact_match_observed": true,
+  "original_blob": "de6c98099fba21ae5577cc968a66352754ea14d5",
+  "original_bytes": 157064,
+  "required_actions_run_id": 43696049715,
+  "actions_url": "https://github.com/yapweijun1996/Blender-3D-Gallery/actions/runs/43696049715",
+  "required_actions_status": "success",
+  "production_accepted": true,
+  "production_workspace": "/srv/agent-workstation/workspaces/blender-qa-m0010-34d008ba-live",
+  "preparation_job": "d0e33198-29b1-4559-a184-ee854ff7e214",
+  "preparation_status": "SUCCEEDED",
+  "next_model_started": true,
+  "root_mirror": "Stopped before writes because MODEL-0009/README.md differs from known mirror hash; concurrent original-root work preserved.",
+  "original_actions_not_counted_as_pass": true,
+  "descendant_check": {
+    "head": "af8240b615ffeee5f2b43b35d08d0813453eb604",
+    "run_id": 43696049715,
+    "status": "completed",
+    "qa_commit_is_ancestor": true,
+    "existing_tracked_files_byte_identical": true,
+    "all_changes_additive": [
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/README.md"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/complete_item.py"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/fin_weights.py"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/finish.py"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/generate.py"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/grouper/artifacts.json"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/grouper/browser-verification.json"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/grouper/gltf-validation.json"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/grouper/grouper.blend"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/grouper/head-detail.png"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/grouper/model.glb"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/grouper/motion-verification.json"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/grouper/preview.png"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/grouper/profile-snapshot.json"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/grouper/qa.json"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/grouper/references.json"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/grouper/swim.gif"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/preserved-models.json"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/profiles.json"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/queue.json"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/red-snapper/artifacts.json"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/red-snapper/browser-verification.json"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/red-snapper/gltf-validation.json"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/red-snapper/head-detail.png"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/red-snapper/model.glb"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/red-snapper/motion-verification.json"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/red-snapper/preview.png"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/red-snapper/profile-snapshot.json"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/red-snapper/qa.json"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/red-snapper/red-snapper.blend"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/red-snapper/references.json"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/red-snapper/swim.gif"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/render_stills.py"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/test-browser.mjs"
+      },
+      {
+        "status": "A",
+        "path": "models/fish-realism-qa/validate.mjs"
+      },
+      {
+        "status": "A",
+        "path": "output/playwright/fish-realism-qa/grouper/desktop.png"
+      },
+      {
+        "status": "A",
+        "path": "output/playwright/fish-realism-qa/grouper/mobile.png"
+      },
+      {
+        "status": "A",
+        "path": "output/playwright/fish-realism-qa/red-snapper/desktop.png"
+      },
+      {
+        "status": "A",
+        "path": "output/playwright/fish-realism-qa/red-snapper/mobile.png"
+      }
+    ],
+    "rationale": "The descendant retains every existing QA, test, application, catalogue and product input byte-for-byte and runs the original complete release workflow. No cancelled run is counted as passed.",
+    "build_job_id": 132757722180,
+    "build_started_at": "2026-11-15T08:50:39Z",
+    "conclusion": "success",
+    "all_release_jobs_success": true
+  },
+  "accepted_at": "2026-11-15T09:26:54.224382+00:00",
+  "required_checks_passed_on_descendant": true,
+  "acceptance_head": "af8240b615ffeee5f2b43b35d08d0813453eb604",
+  "remote_execution": "remote-execution.json",
+  "ci_summary": "ci-summary.json",
+  "physical_mobile": "Excluded by owner",
+  "next_model_started_at_closure": false,
+  "next_model_id": "MODEL-0011",
+  "next_model_started_at": "2026-11-15T09:28:48.078890+00:00",
+  "original_qa_actions_run_id": 43695548910,
+  "original_qa_actions_conclusion": "cancelled"
+}

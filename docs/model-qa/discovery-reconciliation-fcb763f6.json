@@ -1,0 +1,138 @@
+{
+  "release_head": "fcb763f63dd8b7a5f77946d810412c28ac59b8bf",
+  "observed_at": "2026-11-15T10:24:01.077972+00:00",
+  "current_catalog_entries": 567,
+  "new_file_details": [
+    {
+      "path": "models/fish-realism-qa/crimson-snapper/crimson-snapper.blend",
+      "bytes": 10509447,
+      "sha256": "7353fdf144a8f7d35270201c0c9889dafd789e51abd8a57deeef9ace9224f82a"
+    },
+    {
+      "path": "models/fish-realism-qa/crimson-snapper/model.glb",
+      "bytes": 11894436,
+      "sha256": "314490d2df59affc59cc45fb1c936b9692559502f84579b533393512e87edf30"
+    },
+    {
+      "path": "models/fish-realism-qa/fourfinger-threadfin/fourfinger-threadfin.blend",
+      "bytes": 8477397,
+      "sha256": "330d02abc4b142bf1dfda628826f1b888a724f121db139d0a318298902dcac3a"
+    },
+    {
+      "path": "models/fish-realism-qa/fourfinger-threadfin/model.glb",
+      "bytes": 10212836,
+      "sha256": "0c3714a2cc58b857714bfec912dcee607baf28c7a81fa6f00a0e5e03a824fbf5"
+    },
+    {
+      "path": "models/fish-realism-qa/threadfin/model.glb",
+      "bytes": 10241360,
+      "sha256": "8350c908b90989acdfa400c005085732fda6eb4e33922fdfee1374efb3e4324a"
+    },
+    {
+      "path": "models/fish-realism-qa/threadfin/threadfin.blend",
+      "bytes": 8515469,
+      "sha256": "39da33bbbfd5c02e7fbf2ee8805357b86f8424c0516a7eae00e70f85f82bf418"
+    },
+    {
+      "path": "models/fish-realism-release/crimson-snapper/model.glb",
+      "bytes": 4283392,
+      "sha256": "6de34b0acc97a9b6d2f4d30332dcbb2f72ec0e2c8d13b75d567a4a64306b6f12"
+    },
+    {
+      "path": "models/fish-realism-release/fourfinger-threadfin/model.glb",
+      "bytes": 4166480,
+      "sha256": "d9e5a5a48a12bb5794c40c8d39618615e66a680efea7923117b9be2995b1193d"
+    },
+    {
+      "path": "models/fish-realism-release/threadfin/model.glb",
+      "bytes": 4164732,
+      "sha256": "2afa278d3026e38d1a7e9bdc2829e2ca396b2aa6dc4bd20c022f0c380e2263a3"
+    }
+  ],
+  "added_qa_ids": [
+    "MODEL-1927",
+    "MODEL-1928",
+    "MODEL-1929",
+    "MODEL-1930",
+    "MODEL-1931",
+    "MODEL-1932"
+  ],
+  "catalog_reroutes": [
+    {
+      "qa_id": "MODEL-0505",
+      "model_id": "fish-crimson-snapper",
+      "head": "fcb763f63dd8b7a5f77946d810412c28ac59b8bf",
+      "previous_export_paths": [
+        "models/singapore-fish/crimson-snapper/exports/model.glb"
+      ],
+      "previous_source_candidates": [
+        "models/singapore-fish/crimson-snapper/sources/crimson-snapper.blend"
+      ],
+      "current_export": {
+        "path": "models/fish-realism-release/crimson-snapper/model.glb",
+        "bytes": 4283392,
+        "sha256": "6de34b0acc97a9b6d2f4d30332dcbb2f72ec0e2c8d13b75d567a4a64306b6f12"
+      },
+      "current_source": {
+        "path": "models/fish-realism-qa/crimson-snapper/crimson-snapper.blend",
+        "bytes": 10509447,
+        "sha256": "7353fdf144a8f7d35270201c0c9889dafd789e51abd8a57deeef9ace9224f82a"
+      },
+      "historical_qa_id": "MODEL-1927",
+      "status": "PENDING",
+      "evidence": "discovery-reconciliation-fcb763f6.json"
+    },
+    {
+      "qa_id": "MODEL-0506",
+      "model_id": "fish-threadfin",
+      "head": "fcb763f63dd8b7a5f77946d810412c28ac59b8bf",
+      "previous_export_paths": [
+        "models/singapore-fish/threadfin/exports/model.glb"
+      ],
+      "previous_source_candidates": [
+        "models/singapore-fish/threadfin/sources/threadfin.blend"
+      ],
+      "current_export": {
+        "path": "models/fish-realism-release/threadfin/model.glb",
+        "bytes": 4164732,
+        "sha256": "2afa278d3026e38d1a7e9bdc2829e2ca396b2aa6dc4bd20c022f0c380e2263a3"
+      },
+      "current_source": {
+        "path": "models/fish-realism-qa/threadfin/threadfin.blend",
+        "bytes": 8515469,
+        "sha256": "39da33bbbfd5c02e7fbf2ee8805357b86f8424c0516a7eae00e70f85f82bf418"
+      },
+      "historical_qa_id": "MODEL-1928",
+      "status": "PENDING",
+      "evidence": "discovery-reconciliation-fcb763f6.json"
+    },
+    {
+      "qa_id": "MODEL-0507",
+      "model_id": "fish-fourfinger-threadfin",
+      "head": "fcb763f63dd8b7a5f77946d810412c28ac59b8bf",
+      "previous_export_paths": [
+        "models/singapore-fish/fourfinger-threadfin/exports/model.glb"
+      ],
+      "previous_source_candidates": [
+        "models/singapore-fish/fourfinger-threadfin/sources/fourfinger-threadfin.blend"
+      ],
+      "current_export": {
+        "path": "models/fish-realism-release/fourfinger-threadfin/model.glb",
+        "bytes": 4166480,
+        "sha256": "d9e5a5a48a12bb5794c40c8d39618615e66a680efea7923117b9be2995b1193d"
+      },
+      "current_source": {
+        "path": "models/fish-realism-qa/fourfinger-threadfin/fourfinger-threadfin.blend",
+        "bytes": 8477397,
+        "sha256": "330d02abc4b142bf1dfda628826f1b888a724f121db139d0a318298902dcac3a"
+      },
+      "historical_qa_id": "MODEL-1929",
+      "status": "PENDING",
+      "evidence": "discovery-reconciliation-fcb763f6.json"
+    }
+  ],
+  "historical_exports_preserved_as_pending_records": true,
+  "application_change": "Application and runtime-browser code are unchanged from full4f8eb6a5 regression. Three fish catalog entries are updated; fresh unit/build and changed-asset runtime regression are required. All affected models remain PENDING for campaign deep QA.",
+  "all_additions_pending": true,
+  "all_existing_ids_and_statuses_preserved": true
+}

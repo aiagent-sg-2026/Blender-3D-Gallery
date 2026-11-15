@@ -1,0 +1,76 @@
+{
+  "observed_at": "2026-11-15T10:19:29.967633+00:00",
+  "source_import_initial_session": {
+    "id": 3538,
+    "terminal_exit": 0
+  },
+  "source_import_render_session": {
+    "id": 59495,
+    "terminal_exit": 0
+  },
+  "unit_build_session": {
+    "id": 82057,
+    "terminal_exit": 0
+  },
+  "contact_and_scratch_replay_session": {
+    "id": 14241,
+    "terminal_exit": 0,
+    "pipeline": "All6 contact views and scratch export replay completed successfully at established quality, native threads1 nice15."
+  },
+  "remote_full_regression": {
+    "job_id": "060f9c7b-5f91-4e66-9751-093709505653",
+    "workspace": "/srv/agent-workstation/workspaces/blender-qa-m0010-reg-1e942079-7fc1",
+    "state": "SUCCEEDED",
+    "source_head": "4f8eb6a5192a34122717c343a06aa0b29afeded8",
+    "recipe": "remote-regression.sh",
+    "game_passed": 46,
+    "experience_passed": 31,
+    "candidate_profiles_passed": 4,
+    "artifact_hashes_verified": 22,
+    "source_hashes_verified": 20258
+  },
+  "restart_policy": "Revalidate actual handles before continuing; observation timeouts do not justify restarting.",
+  "changed_asset_first_attempt": {
+    "job_id": "2b3859fa-c617-4674-b529-3b42836e97f2",
+    "state": "FAILED",
+    "profiles_passed": 0
+  },
+  "changed_asset_recovery": {
+    "job_id": "75f15965-f5cd-47e8-8df4-b30b7c6f85e2",
+    "state": "SUCCEEDED",
+    "workspace": "/srv/agent-workstation/workspaces/blender-qa-m0010-reg-1e942079-7fc1",
+    "source_head": "2b8097334caf15fb18543c8982481c2d9f196b6d",
+    "recipe": "upstream-motion-aware-recovery.sh",
+    "static_camera_profiles_passed": 18,
+    "original_fish_motion_profiles_passed": 24
+  },
+  "latest_existing_asset_regression": {
+    "job_id": "d6fad3e0-b0c5-4612-b704-603be88f869d",
+    "state": "SUCCEEDED",
+    "head": "21a3fe495d9dcd8ad66cabea3537acc4f1a8eb7f",
+    "profiles_passed": 2
+  },
+  "latest_host_unit_build": {
+    "session_id": 52194,
+    "terminal_exit": 0,
+    "unit_tests_passed": 696,
+    "catalog_entries": 567
+  },
+  "final_main_delta": {
+    "job_id": "0687d3d7-69cd-48c9-bc29-4dc007456e79",
+    "workspace": "/srv/agent-workstation/workspaces/blender-qa-m0010-reg-1e942079-7fc1",
+    "state": "SUCCEEDED",
+    "source_head": "fcb763f63dd8b7a5f77946d810412c28ac59b8bf",
+    "recipe": "final-main-motion-replay.sh",
+    "camera_profiles_passed": 6,
+    "motion_and_dynamic_media_profiles_passed": 12,
+    "artifact_hashes_verified": 29,
+    "changed_runtime_input_hashes_verified": 65
+  },
+  "final_main_host_unit_build": {
+    "session_id": 56868,
+    "terminal_exit": 0,
+    "unit_tests_passed": 696,
+    "catalog_entries": 567
+  }
+}

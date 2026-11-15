@@ -1,0 +1,72 @@
+{
+  "full_browser_regression_base": "4f8eb6a5192a34122717c343a06aa0b29afeded8",
+  "latest_head": "2b8097334caf15fb18543c8982481c2d9f196b6d",
+  "billiards_collection_and_all_original_products_unchanged": true,
+  "changed_catalog_ids": [
+    "fish-silver-pomfret",
+    "fish-black-pomfret",
+    "fish-indian-mackerel",
+    "fish-spanish-mackerel",
+    "fish-yellowtail-scad",
+    "fish-scad"
+  ],
+  "only_changed_shared_scripts": [
+    "scripts/blender_degenerate_cleanup.py",
+    "scripts/repair-static-blender-source.py"
+  ],
+  "shared_script_role": "Offline Blender source cleanup; no runtime import. New fixture/source-edit regression tests are included in the fresh full unit run.",
+  "fresh_unit_tests_passed": 694,
+  "catalog_entries": 567,
+  "fresh_build": "PASS",
+  "changed_asset_profiles": "PASS",
+  "changed_asset_profile_job": "75f15965-f5cd-47e8-8df4-b30b7c6f85e2",
+  "not_a_second_full_game_experience_run": "Full original Game46/46 and experience31/31 are pinned4f8eb6a5. Latest-input acceptance uses explicit changed-asset regression and fresh full unit/build; final publication still requires complete remote Actions.",
+  "observed_at": "2026-11-15T10:19:29.967633+00:00",
+  "application_build_and_full_game_experience_scripts_unchanged": true,
+  "generic_model_qa_harness_change": {
+    "path": "scripts/test-model-qa-browser.mjs",
+    "sha256": "fcf6c5e60899d310d078ade42038ca16b913613bb60c8e4c181241304ce15ae3",
+    "option": "MODEL_QA_REDUCED_MOTION=1",
+    "purpose": "Freeze pose for exact camera-reset screenshot checks; original rotation/zoom/reset/hash/error assertions retained. Existing static-model defaults unchanged. Actual fish playback and pause are tested separately with original fish protocol."
+  },
+  "first_attempt": {
+    "job_id": "2b3859fa-c617-4674-b529-3b42836e97f2",
+    "state": "FAILED",
+    "profiles_passed": 0,
+    "assertion": "Reset must restore the original static model view",
+    "root_cause_evidence": "Default fish autoplay follows no-preference motion media and camera reset does not reset swim time; verify actual autoplay/pause in the recovery preflight. First-attempt logs/results/screenshots are retained in recovery evidence."
+  },
+  "planned_recovery_scope": {
+    "static_camera_profiles": 18,
+    "fish_motion_profiles": 24,
+    "default_ball_assembly_profiles_included": 4
+  },
+  "post_harness_fix_validation": {
+    "runtime_harness_sha256": "fcf6c5e60899d310d078ade42038ca16b913613bb60c8e4c181241304ce15ae3",
+    "syntax": "PASS",
+    "full_unit_tests_passed": 694,
+    "failed": 0,
+    "skipped": 0,
+    "fresh_build": "PASS",
+    "all_original_billiards_hashes_unchanged": true
+  },
+  "motion_aware_acceptance": {
+    "static_camera_profiles": 18,
+    "original_fish_motion_profiles": 24,
+    "artifact_hashes_verified": 66,
+    "changed_runtime_input_hashes_verified": 127,
+    "default_autoplay_pause_probe": "PASS",
+    "first_failed_attempt_preserved": true,
+    "evidence": "upstream-runtime-verification.json"
+  },
+  "latest_main_sync": {
+    "head": "21a3fe495d9dcd8ad66cabea3537acc4f1a8eb7f",
+    "new_shared_runtime_or_catalog_changes": false,
+    "event_booth_profiles_passed": 2,
+    "full_units_passed": 696,
+    "build_catalog_entries": 567,
+    "artifact_hashes_verified": 13,
+    "changed_runtime_input_hashes_verified": 14,
+    "evidence": "latest-runtime-verification.json"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "source_and_reimport_topology_materials_agree": true,
+  "meshes": 5,
+  "triangles": 5728,
+  "body_diameter_m": 0.05715,
+  "body_source_vertices": 1986,
+  "body_triangles": 3968,
+  "body_welded_boundaries": 0,
+  "medallion_each": {
+    "triangles": 432,
+    "boundary_edges": 48
+  },
+  "numeral5_each": {
+    "source_vertices": 285,
+    "triangles": 448,
+    "source_boundary_edges": 120,
+    "raw_import_components": 446,
+    "position_welded_components": 1
+  },
+  "weld_tolerance_m": 1e-07,
+  "explanation": "Raw import splits follow normal/UV seams. Disposable position welding restores source connectivity. Decorative paint boundaries are intentionally open. Untextured solid PBR materials need no texture-stretch assessment; all available UV values are finite.",
+  "confirmed_product_defects": [],
+  "animation": "N/A: static unrigged ball",
+  "physical_mobile": "Excluded by explicit owner instruction",
+  "remaining_gates": [
+    "publication",
+    "required full remote Actions",
+    "actual production acceptance"
+  ],
+  "source_and_assembly_contact_gap_m": 5.960464477539063e-08,
+  "scratch_replay": "PASS: fullJSON, all non-index bytes and oriented5728triangles unchanged; exact_bytes false. Original/assembly/scratch validators0errors/0warnings."
+}

@@ -1,0 +1,26 @@
+{
+  "source_sha": "2b8097334caf15fb18543c8982481c2d9f196b6d",
+  "job_id": "75f15965-f5cd-47e8-8df4-b30b7c6f85e2",
+  "state": "SUCCEEDED",
+  "observed_at": "2026-11-15T10:10:44.172253+00:00",
+  "static_camera_profiles_passed": 18,
+  "original_fish_motion_profiles_passed": 24,
+  "default_ball_and_assembly_profiles_passed": 4,
+  "actual_autoplay_and_pause_probe": "PASS",
+  "artifact_hashes_verified": 66,
+  "changed_source_hashes_verified": 127,
+  "source_manifest_scope": "Changed tracked model/runtime/script inputs plus executed QA harness. Fresh host694-unit acceptance covers unit-test files; existing upstream documentation and output screenshots are outside browser inputs.",
+  "runtime_harness_sha256": "fcf6c5e60899d310d078ade42038ca16b913613bb60c8e4c181241304ce15ae3",
+  "qa_harness_overlay": "Only optional reduced-motion media setting; all assertions retained. Defaults checked on Ball05 and assembly. Executed bytes preserved and matching current local harness. Remote overlay restored to exact original HEAD after packaging.",
+  "first_attempt": {
+    "job_id": "2b3859fa-c617-4674-b529-3b42836e97f2",
+    "state": "FAILED",
+    "counted_as_pass": false,
+    "completed_profiles": 0,
+    "logs_and_images_preserved": true
+  },
+  "archive_bytes": 3193912,
+  "archive_sha256": "01298e46316e069d6d272608e206d3b58b61aa4b895d546a96398bd353775c05",
+  "primary_changed_asset_visual_review": "PASS: four actual default Ball05/assembly loaded images and contact sheets of18 static-camera captures and24 original motion-protocol captures inspected. No display regression observed; affected assets remain PENDING for campaign deep QA.",
+  "environment": "Isolated Linux local build, not production. Existing fish protocol uses its supplied-URL mode and emulated mobile viewports. Physical-device FPS not claimed."
+}

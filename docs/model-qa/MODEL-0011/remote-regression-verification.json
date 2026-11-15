@@ -1,0 +1,22 @@
+{
+  "source_sha": "4f8eb6a5192a34122717c343a06aa0b29afeded8",
+  "observed_at": "2026-11-15T09:45:49.721009+00:00",
+  "job_id": "060f9c7b-5f91-4e66-9751-093709505653",
+  "state": "SUCCEEDED",
+  "initial_job_source_snapshot_head": "d210eadecbc622dc9161a107468df55402e873e1",
+  "initial_job_source_snapshot_dirty": true,
+  "initial_dirty_reason": "Untracked evidence from prior verified jobs; original preflight and final git diff prove no tracked changes. Runner fast-forwards to exact executed source4f8eb6a5.",
+  "executed_source_head": "4f8eb6a5192a34122717c343a06aa0b29afeded8",
+  "runtime_input_scope": "All tracked src/scripts/models/public/data plus package.json, package-lock.json, index.html and vite.config.js. Unit-test files and non-runtime root documentation/slug lists are not required by these browser scripts;692 unit tests ran separately on host.",
+  "all_tracked_runtime_input_paths_present": true,
+  "checked_out_source_hashes_verified": 20258,
+  "game_passed": 46,
+  "experience_passed": 31,
+  "original_scripts_unfiltered": true,
+  "catalog_entries": 567,
+  "runtime_profiles_passed": 4,
+  "artifact_hashes_verified": 22,
+  "archive_bytes": 1529671,
+  "archive_sha256": "30d1141b6bc0c0d7bee380530628c1175ee4ffe7a8260a49087a95a18c1ebb29",
+  "primary_runtime_visual_review": "PASS: four actual loaded images and two full-page images inspected; normal sphere/markings, assembly and controls; no new display defect."
+}

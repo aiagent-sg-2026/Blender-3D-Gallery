@@ -21,7 +21,9 @@ const viewports = [[1440, 900], [768, 1024]];
 if (process.env.MODEL_QA_INCLUDE_MOBILE === '1') viewports.push([390, 844]);
 try {
   for (const [width, height] of viewports) {
-    const context = await browser.newContext({ viewport: { width, height }, serviceWorkers: 'block', hasTouch: width === 390 });
+    // Exact reset screenshots need a fixed pose; exercise motion separately.
+    const context = await browser.newContext({ viewport: { width, height }, serviceWorkers: 'block', hasTouch: width === 390,
+      ...(process.env.MODEL_QA_REDUCED_MOTION === '1' ? { reducedMotion: 'reduce' } : {}) });
     await context.addInitScript(() => {
       performance.setResourceTimingBufferSize(10000);
       window.modelQA = { draws: [], rafTime: 0 };

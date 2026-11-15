@@ -1,0 +1,130 @@
+{
+  "results": [
+    {
+      "name": "1 mouse handle drag and release shoots",
+      "passed": true
+    },
+    {
+      "name": "2 real touch handle drag and release shoots",
+      "passed": true
+    },
+    {
+      "name": "3 weak or reverse pull cancels",
+      "passed": true
+    },
+    {
+      "name": "5 weak or reverse pull cancels",
+      "passed": true
+    },
+    {
+      "name": "4 long pull clamps at100",
+      "passed": true
+    },
+    {
+      "name": "6 cancel and lost capture never shoot",
+      "passed": true
+    },
+    {
+      "name": "7 duplicate up and normal lost capture commit only once",
+      "passed": true
+    },
+    {
+      "name": "8 cue offset proportional and aim locked",
+      "passed": true
+    },
+    {
+      "name": "9 no impulse until actual cue contact",
+      "passed": true
+    },
+    {
+      "name": "10 power0.3 initial speed",
+      "passed": true
+    },
+    {
+      "name": "10 power0.8 initial speed",
+      "passed": true
+    },
+    {
+      "name": "11 moving disables further shooting",
+      "passed": true
+    },
+    {
+      "name": "12 pause during strike cancels and resume never fires",
+      "passed": true
+    },
+    {
+      "name": "13 reload never replays interrupted shot",
+      "passed": true
+    },
+    {
+      "name": "14 turn resolution waits for all balls to settle",
+      "passed": true
+    },
+    {
+      "name": "15 landscape table and controller visible without gesture scrolling",
+      "passed": true
+    },
+    {
+      "name": "keyboard charge release and track click safety",
+      "passed": true
+    },
+    {
+      "name": "blur cancels an uncommitted charge",
+      "passed": true
+    },
+    {
+      "name": "resize cancels an uncommitted charge",
+      "passed": true
+    },
+    {
+      "name": "captured pointer may release outside controller; second pointer ignored",
+      "passed": true
+    },
+    {
+      "name": "reduced motion preserves a single contact impulse",
+      "passed": true
+    },
+    {
+      "name": "fixed-step contact clock burst",
+      "passed": true
+    },
+    {
+      "name": "fixed-step contact clock incremental",
+      "passed": true
+    },
+    {
+      "name": "direct whiteball placement validates release and retains last legal point",
+      "passed": true
+    },
+    {
+      "name": "handle accessible label and startup lock",
+      "passed": true
+    },
+    {
+      "name": "blur during pending ownership save invalidates the shot",
+      "passed": true
+    },
+    {
+      "name": "resize during pending ownership save invalidates the shot",
+      "passed": true
+    },
+    {
+      "name": "tap without drag never shoots",
+      "passed": true
+    },
+    {
+      "name": "pull clearly below the minimum release threshold cancels",
+      "passed": true
+    },
+    {
+      "name": "exact five percent pull reaches the minimum release threshold",
+      "passed": true
+    },
+    {
+      "name": "reset cue placement restores default preview without committing",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "selection": null
+}

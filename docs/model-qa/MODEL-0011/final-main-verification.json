@@ -1,0 +1,20 @@
+{
+  "head": "fcb763f63dd8b7a5f77946d810412c28ac59b8bf",
+  "job_id": "0687d3d7-69cd-48c9-bc29-4dc007456e79",
+  "state": "SUCCEEDED",
+  "static_camera_profiles_passed": 6,
+  "original_fish_motion_profiles_passed": 12,
+  "dynamic_media_preference_profiles_passed": 12,
+  "artifact_hashes_verified": 29,
+  "changed_runtime_input_hashes_verified": 65,
+  "unit_tests_passed": 696,
+  "build_catalog_entries": 567,
+  "runtime_application_build_and_billiards_collection_unchanged": true,
+  "qa_runtime_harness_sha256": "fcf6c5e60899d310d078ade42038ca16b913613bb60c8e4c181241304ce15ae3",
+  "runtime_harness_scope": "Only fixed-pose media preference overlay, restored after tests; exact reset and all original assertions retained. Original fish protocol additionally verifies dynamic media preference.",
+  "archive_bytes": 1393136,
+  "archive_sha256": "7475612041d28ab5ef1c709d4b8e6e94a3bc7e125a367818056feec90b6b41b6",
+  "primary_visual_review": "PASS: contact sheets of all6 camera captures and12 original motion captures inspected; no display regression. Affected models remain PENDING for deep campaign QA.",
+  "affected_model_campaign_status": "PENDING",
+  "observed_at": "2026-11-15T10:29:24.911112+00:00"
+}
