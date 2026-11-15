@@ -25,9 +25,10 @@ def skin_maps():
  back=np.array(C['back_color']);side=np.array(C['side_color']);belly=np.array(C['belly_color']);a=R.smoothstep(.12,.93,z)[...,None];base=side*(1-a)+back*a;a=R.smoothstep(.1,.90,-z)[...,None];base=base*(1-a)+belly*a;base+=(coarse-.5)[...,None]*.035+(micro-.5)[...,None]*.018
  color=base.copy();color+=(micro-.5)[...,None]*.018+(fine-.5)[...,None]*.012;height=(micro-.5)*.00012+(fine-.5)*.00005;rough=C.get('surface_roughness',.51)+(coarse-.5)*.11+(fine-.5)*.045
  nx,ny=C.get('scale_density',(85,50) if C['pattern']=='fine_scales' else (63,39));rng=np.random.default_rng(906);tiles=[]
- for row in range(-1,ny+1):
-  for col in range(-1,nx+1):
-   cx=(col+.5*(row%2)+rng.uniform(-.13,.13))/nx;cy=(row+.5+rng.uniform(-.10,.10))/ny;tiles.append((cx,cy,rng.uniform(.79,1.1),rng.uniform(.59,.80),rng.uniform(-.16,.16),rng.uniform(-1,1)))
+ if C['pattern']!='scaleless':
+  for row in range(-1,ny+1):
+   for col in range(-1,nx+1):
+    cx=(col+.5*(row%2)+rng.uniform(-.13,.13))/nx;cy=(row+.5+rng.uniform(-.10,.10))/ny;tiles.append((cx,cy,rng.uniform(.79,1.1),rng.uniform(.59,.80),rng.uniform(-.16,.16),rng.uniform(-1,1)))
  for cx,cy,rx,ry,ang,pigment in sorted(tiles,key=lambda t:-t[0]):
   x0=max(0,int((cx-1.15/nx)*w));x1=min(w,int((cx+1.15/nx)*w)+1);y0=max(0,int((cy-1/ny)*h));y1=min(h,int((cy+1/ny)*h)+1)
   if x1<=x0 or y1<=y0:continue
@@ -74,9 +75,11 @@ def skin_maps():
    height+=scute*.00035
    if C['markings']=='trevally':color*=1-scute[...,None]*.11
    else:color+=scute[...,None]*.018
+ if C.get('markings')=='giant_snakehead':
+  boundary=-.04+.035*np.sin(xs*17)+.014*np.sin(xs*43);band=(1-R.smoothstep(boundary+.025,boundary+.10,world_z))*R.smoothstep(-.22,-.13,world_z)*flank_mask*R.smoothstep(-1.40,-1.05,xs);color=color*(1-band[...,None]*.68)+np.array([.10,.135,.15])*band[...,None]*.68
  if C.get('markings')=='snakehead':
   bars=np.exp(-(np.sin(PI*(u*9+.13*np.sin(v*15)+.25*v))/.45)**2)*R.smoothstep(-1.05,-.80,xs)*R.smoothstep(-.45,.5,z);color*=1-bars[...,None]*.35
-  mottled=R.noise(u,v,35,25,981);mask=R.smoothstep(.49,.69,mottled)*(1-R.smoothstep(.28,.42,u))*.25;color*=1-mask[...,None]
+  mottled=R.noise(u,v,35,25,981)*.55+R.noise(u,v,83,61,982)*.45;mask=R.smoothstep(.50,.66,mottled)*(1-R.smoothstep(.28,.42,u))*.25;color*=1-mask[...,None]
  if C.get('markings')=='marble_goby':
   mottled=R.noise(u,v,10,9,971)*.65+R.noise(u,v,23,17,972)*.35;mask=R.smoothstep(.46,.59,mottled)*.76;target=np.array([.105,.082,.045]);color=color*(1-mask[...,None])+target*mask[...,None]
  if C.get('markings')=='tilapia':
@@ -250,10 +253,12 @@ def fins(mat):
    pelvic['pelvic_surface_anchor']='Ventrolateral body surface with a small embedded root curve'
 
 bpy.ops.wm.read_factory_settings(use_empty=True);B.ROOT=bpy.data.objects.new('ASSET_PhotoInformed_'+slug,None);bpy.context.scene.collection.objects.link(B.ROOT);B.SLUG=slug
-print('BUILD_MAPS',slug,flush=True);skin=pbr('Skin_IndividualScales',skin_maps(),C.get('metallic',.055 if C['pattern']=='fine_scales' else .025));fm=fin_mat();body(skin);details();fins(fm)
+print('BUILD_MAPS',slug,flush=True);skin=pbr('Skin_Microstructure' if C['pattern']=='scaleless' else 'Skin_IndividualScales',skin_maps(),C.get('metallic',.055 if C['pattern']=='fine_scales' else .025));fm=fin_mat();body(skin);details();fins(fm)
 sys.path.insert(0,str(HERE))
 from filaments import build_filaments
 build_filaments(B,C,profile,flank)
+from barbels import build_barbels
+build_barbels(B,C,profile)
 print('BIND_SWIM',slug,flush=True);rig=B.add_rig('bass')
 if C.get('body_wave_gain'):
  for layer in rig.animation_data.action.layers:

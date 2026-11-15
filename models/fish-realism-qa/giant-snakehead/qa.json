@@ -1,0 +1,33 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "pass",
+      "changes": [
+        "checked source overall/head detail against the reference",
+        "checked actual long-fin body-following weights, GLB contact and desktop/mobile swimming"
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "036076201de03c84d1e0e9c021ce1481443a580e44d217e9ab43741325095215",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: thicker elongate adult blue-grey body, broad flattened head and small eyes",
+    "surface": "pass: subdued adult lower-flank band with uneven border and pale belly; no red juvenile stripe",
+    "head": "pass: small gold-olive iris and large closed jaw remain integrated with the head",
+    "fins": "pass: long low soft dorsal/anal, rounded caudal and compact rounded pectorals",
+    "surface_contact": "pass: source and actual GLB roots contact the posed skin at five phases",
+    "motion": "pass: travelling trunk/tail flex and body-following long fins survive actual GLB round trip",
+    "browser": "pass: exact draft GLB visibly swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed artwork, not a scanned or calibrated specimen.",
+    "Adult/reference visual form is explicit; no taxonomic identification certification.",
+    "Draft captions remain baseline."
+  ]
+}

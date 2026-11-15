@@ -1,0 +1,46 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "iris crosses the head contour and appears detached",
+        "camouflage patches too blurred; pectoral outline too pointed"
+      ],
+      "changes": [
+        "reduce/lower the dorsolateral eye to keep it embedded",
+        "sharpen irregular mottling and use a rounded pectoral outline"
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "pass",
+      "changes": [
+        "reduced/lowered the eye to keep it embedded",
+        "sharpened irregular camouflage and rounded pectorals",
+        "checked actual source detail, GLB contact and browser swimming"
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "771303d7467f82b4ff5ab451503e52af113e72c7f0bce348719ec430437ebc51",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: broad flattened head and cylindrical tapering body with two separate dorsal fins",
+    "surface": "pass: irregular brown/dark camouflage and patterned fin membranes follow the live bottom-resting reference",
+    "head": "pass: smaller lowered dorsolateral eyes stay within the head surface after the second iteration",
+    "fins": "pass: rounded pectoral outline, short paired pelvic fins and rounded caudal",
+    "surface_contact": "pass: evaluated source and imported GLB roots contact the posed body at five phases",
+    "motion": "pass: slow tail-driven display loop and stabilizing fins survive actual GLB round trip",
+    "browser": "pass: exact draft GLB visibly swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed Oxyeleotris marmorata artwork, not a scanned or calibrated specimen.",
+    "Slow display swimming is an artistic pose, not a claim of continuous cruising behavior.",
+    "Draft captions remain baseline."
+  ]
+}

@@ -51,8 +51,9 @@ def observe(label):
   filaments=[v for name,v in roles.items() if name.startswith('Pectoral_Filament_')]
   assert len(filaments)==8,(label,'Four sensory rays per flank required',len(filaments))
   assert all(v['motion']>.001 for v in filaments),(label,'Sensory rays must move with their fins')
+ expected_barbels=2*len(json.loads((HERE/'profiles.json').read_text())[slug].get('barbels',[]));barbels=[o for o in meshes if o.name.startswith('Barbel_')];assert len(barbels)==expected_barbels,(label,'Mouth-barbel count',len(barbels),expected_barbels)
  assert any(o.type=='ARMATURE' for o in s.objects)
- return {'surface_contact':contacts,'ribbon_wave':ribbon_wave,'fin_roots_checked':anchors,'meshes':len(meshes),'vertices':sum(len(o.data.vertices) for o in meshes),'motion_by_mesh':roles,'frames':frames,'packed_images':all(i.packed_file for i in bpy.data.images if i.source=='FILE')}
+ return {'barbel_meshes':len(barbels),'surface_contact':contacts,'ribbon_wave':ribbon_wave,'fin_roots_checked':anchors,'meshes':len(meshes),'vertices':sum(len(o.data.vertices) for o in meshes),'motion_by_mesh':roles,'frames':frames,'packed_images':all(i.packed_file for i in bpy.data.images if i.source=='FILE')}
 source=observe('source');s.frame_set(13)
 # Flatten only temporary skinned mesh copies; keep editable source parenting intact.
 root=next(o for o in s.objects if o.name.startswith('ASSET_PhotoInformed_'));selected=[root]+list(root.children_recursive);saved=[]

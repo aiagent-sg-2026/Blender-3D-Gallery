@@ -23,13 +23,13 @@ def check_surface_contact(scene):
  assert body is not None,'Need the real body surface for fin contact QA'
  dg=bpy.context.evaluated_depsgraph_get();evaluated=body.evaluated_get(dg);tree=BVHTree.FromPolygons([evaluated.matrix_world@v.co for v in evaluated.data.vertices],[list(p.vertices) for p in evaluated.data.polygons]);results={}
  for obj in meshes:
-  if not obj.name.startswith(('Dorsal_','Anal_','Pelvic_','Pectoral_','Caudal_','Finlet_')) or not obj.data.uv_layers.active:continue
+  if not obj.name.startswith(('Dorsal_','Anal_','Pelvic_','Pectoral_','Caudal_','Finlet_','Barbel_')) or not obj.data.uv_layers.active:continue
   uv=obj.data.uv_layers.active;indices={loop.vertex_index for loop in obj.data.loops if abs(uv.data[loop.index].uv.y)<1e-7};assert indices,obj.name;evaluated=obj.evaluated_get(dg);signed=[]
   for i in indices:
    p=evaluated.matrix_world@evaluated.data.vertices[i].co;point,normal,_,distance=tree.find_nearest(p);signed.append((p-point).dot(normal))
-  if obj.name.startswith('Pectoral_Filament_'):
+  if obj.name.startswith(('Pectoral_Filament_','Barbel_')):
    # A tubular ray base straddles the skin; its outer ring naturally protrudes.
-   assert min(signed)<.0015 and max(signed)<.0055,(obj.name,'Detached sensory-ray base',min(signed),max(signed))
+   assert min(signed)<.0015 and max(signed)<.0055,(obj.name,'Detached tubular sensory base',min(signed),max(signed))
   elif obj.name.startswith('Caudal_'):
    # The leading caudal edge can rise beyond the peduncle but must intersect it.
    assert min(signed)<.002,(obj.name,'Disconnected caudal root',min(signed))
