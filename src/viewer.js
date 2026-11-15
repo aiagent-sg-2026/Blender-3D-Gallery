@@ -5,6 +5,8 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import createFishMotion from "./fish-motion.js";
 import { acquireModelViewerRenderer } from "./model-viewer-renderer.js";
 
+import createFishMotion from "./fish-motion.js";
+
 export default async function createViewer(
   container,
   url,
@@ -205,9 +207,14 @@ export default async function createViewer(
       }
     }
     if (asset.id === 'gjh-mall-visitor-v2') {
-      const {default: createVisitorDemo} = await import('./visitor-v2/demo.js');
+      const { default: createVisitorDemo } = await import('./visitor-v2/demo.js');
       if (disposed || signal.aborted) throw new DOMException('Viewer closed', 'AbortError');
-      visitorDemo = createVisitorDemo({model, clips:gltf.animations, container, invalidate});
+      visitorDemo = createVisitorDemo({ model, clips: gltf.animations, container, invalidate });
+    }
+    if (asset.id === 'gjh-visitor-v3') {
+      const { default: createVisitorDemo } = await import('./visitor-v3/demo.js');
+      if (disposed || signal.aborted) throw new DOMException('Viewer closed', 'AbortError');
+      visitorDemo = createVisitorDemo({ model, clips: gltf.animations, container, invalidate });
     }
     const bounds = new THREE.Box3().setFromObject(cartDemo?.group ?? model);
     if (bounds.isEmpty()) throw new Error("Model has no visible bounds");

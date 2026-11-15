@@ -53,6 +53,14 @@ function refreshDemoOfflineStatus() {
   }
 }
 
+const hasInteractiveControls = (asset) =>
+  asset.id === "interactive-shopping-cart" || asset.id === "gjh-mall-visitor-v2" || asset.id === "gjh-visitor-v3" || asset.collectionId === "singapore-fish";
+const featuredIds = ["demo-food-tin", "proton-saga-1985", "mall-corridor", "interactive-shopping-cart"];
+const isSearchMode = () => {
+  const params = new URL(location.href).searchParams;
+  return params.get("page") === "models" || ["q", "theme", "category", "collection", "feature"].some((key) => params.has(key));
+};
+
 function createCard(asset) {
   const card = element("article", "asset-card");
   const link = element("a", "asset-image");
@@ -82,6 +90,11 @@ function createCard(asset) {
       `${asset.triangles.toLocaleString()} triangles · ${formatBytes(asset.bytes)}`,
     ),
   );
+  const tags = element("div", "asset-tags");
+  tags.append(element("span", "", asset.format ?? "GLB"));
+  if (asset.animations > 0) tags.append(element("span", "", "Animated GLB"));
+  if (hasInteractiveControls(asset)) tags.append(element("span", "", "Interactive"));
+  body.append(tags);
   if (asset.downloadable !== false) body.append(download);
   card.append(link, body);
   return card;
@@ -94,45 +107,42 @@ function modelUrl(asset) {
   return url.pathname + url.search;
 }
 function renderModels() {
+  const searchMode = isSearchMode();
+  $("#gallery-page").classList.toggle("search-mode", searchMode);
+  const feature = $("#model-feature").value;
   const filtered = assets.filter((a) =>
-    matches(
-      a,
-      $("#model-search").value,
-      $("#model-category").value,
-      $("#model-collection").value,
-      $("#model-theme").value,
-    ),
+    matches(a, $("#model-search").value, $("#model-category").value,
+      $("#model-collection").value, $("#model-theme").value) &&
+    (!feature || (feature === "animated" ? a.animations > 0 : feature === "interactive" && hasInteractiveControls(a))),
   );
-  $("#model-count").textContent =
-    `${filtered.length} ${filtered.length === 1 ? "model" : "models"} · ${assets.length} in the library`;
-  const fragment = document.createDocumentFragment();
-  const groups = new Map();
-  for (const asset of filtered) {
-    if (!groups.has(asset.browseCategory)) groups.set(asset.browseCategory, []);
-    groups.get(asset.browseCategory).push(asset);
-  }
-  for (const [category, items] of [...groups].sort(([a], [b]) => a.localeCompare(b))) {
-    const section = element("section", "asset-collection");
-    section.setAttribute("aria-label", category);
-    const heading = element("div", "collection-title");
-    heading.append(
-      element("h3", "", category),
-      element("p", "", `${items.length} ${items.length === 1 ? "model" : "models"}`),
-    );
-    const grid = element("div", "asset-grid");
-    for (const asset of items) grid.append(createCard(asset));
-    section.append(heading, grid);
-    fragment.append(section);
-  }
-  if (!filtered.length)
-    fragment.append(
-      emptyState(
-        "No models found.",
-        "Try another keyword or clear your filters.",
-      ),
-    );
-  $("#catalog").replaceChildren(fragment);
+  const query = $("#model-search").value.trim();
+  $("#results-title").hidden = searchMode;
+  $("#search-results-title").hidden = !searchMode;
+  $("#search-results-title").textContent = query ? `Search results for “${query}”` : "Explore models";
+  $("#model-count").textContent = searchMode
+    ? `${filtered.length} ${filtered.length === 1 ? "result" : "results"} / ${assets.length} models in library`
+    : `${assets.length} models in the library`;
+  const grid = element("div", "asset-grid");
+  const shown = searchMode ? filtered : featuredIds.map((id) => assetById.get(id)).filter(Boolean);
+  for (const asset of shown) grid.append(createCard(asset));
+  $("#catalog").replaceChildren(shown.length ? grid : emptyState("No models found.", "Try another keyword or clear your filters."));
 }
+const categoryLinks = [
+  ["All models", "", ""], ["Products", "theme", "Product Packaging"],
+  ["Vehicles", "category", "Vehicles"], ["Buildings", "theme", "Buildings & Architecture"],
+  ["Characters", "theme", "People & Characters"], ["Retail & Mall", "theme", "Shopping Mall"],
+  ["Nature", "theme", "Nature"],
+];
+for (const [label, key, value] of categoryLinks) {
+  const link = element("a", "category-link", label);
+  const url = new URL(location.href);
+  url.search = "?page=models";
+  if (key) url.searchParams.set(key, value);
+  link.href = url.pathname + url.search;
+  $("#category-navigation").append(link);
+}
+const heroAsset = assetById.get("proton-saga-1985");
+if (heroAsset) $("#hero-poster").src = heroAsset.thumbnail;
 function renderDemos() {
   const filtered = demos.filter((d) =>
     matches(d, $("#demo-search").value, $("#demo-category").value),
@@ -226,6 +236,13 @@ options(
   $("#demo-category"),
   demos.map((d) => d.category),
 );
+$("#model-filters").addEventListener("input", () => {
+  if (!isSearchMode()) {
+    const url = new URL(location.href);
+    url.searchParams.set("page", "models");
+    history.pushState({}, "", url);
+  }
+});
 const syncModelFilters = setupFilters(
   $("#model-filters"),
   {
@@ -233,6 +250,7 @@ const syncModelFilters = setupFilters(
     theme: $("#model-theme"),
     category: $("#model-category"),
     collection: $("#model-collection"),
+    feature: $("#model-feature"),
   },
   renderModels,
 );
@@ -539,7 +557,7 @@ async function syncRoute() {
     heading?.focus({ preventScroll: true });
   }
 }
-function navigate(page, alreadyConfirmed = false, hash = "") {
+function navigate(page, alreadyConfirmed = false, hash = "", home = false) {
   if (
     page !== "game" &&
     gamePage &&
@@ -558,7 +576,8 @@ function navigate(page, alreadyConfirmed = false, hash = "") {
   url.searchParams.delete("model");
   url.searchParams.delete("page");
   if (page !== "gallery") url.searchParams.set("page", page);
-  else url.searchParams.set("page", "models");
+  else if (!home) url.searchParams.set("page", "models");
+  if (home) for (const key of ["q", "theme", "category", "collection", "feature"]) url.searchParams.delete(key);
   url.hash = hash;
   history.pushState({}, "", url);
   closeMenu(false);
@@ -591,7 +610,7 @@ document.addEventListener("click", (event) => {
   }
   if (link.classList.contains("brand")) {
     event.preventDefault();
-    navigate("gallery");
+    navigate("gallery", false, "", true);
   }
 });
 window.addEventListener("popstate", () => void syncRoute());
