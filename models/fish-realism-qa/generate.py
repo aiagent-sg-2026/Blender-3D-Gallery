@@ -77,6 +77,11 @@ def skin_maps():
    height+=scute*.00035
    if C['markings']=='trevally':color*=1-scute[...,None]*.11
    else:color+=scute[...,None]*.018
+ if C.get('markings')=='clownfish':
+  from clown_pattern import paint_bands
+  color=paint_bands(color,xs,world_z,R.smoothstep)
+ if C.get('markings')=='humpback_puffer':
+  field=R.noise(u,v,44,31,1001)*.58+R.noise(u,v,97,63,1002)*.29+R.noise(u,v,210,141,1004)*.13;reticulation=np.exp(-((field-.51)/.030)**2);color*=.58+.42*reticulation[...,None];color+=(micro-.5)[...,None]*.018;height+=R.smoothstep(.75,.94,R.noise(u,v,180,130,1003))*.0003
  if C.get('markings')=='hampala':
   boundary=(R.noise(u,v,65,47,998)-.5)*.12;distance=np.sqrt(((xs-.10-.02*np.sin(world_z*12))/.145)**2+((world_z-.18)/.43)**2);bar=(1-R.smoothstep(.62,1.25,distance+boundary))*flank_mask;color*=1-bar[...,None]*.61
  if C.get('markings')=='jade_perch':
@@ -165,6 +170,9 @@ def fin_mat(tail=False,spiny=False):
   if C.get('tail_pale_margin'):color+=R.smoothstep(.965,1,v)[...,None]*C['tail_pale_margin']
  if spiny and C.get('dorsal_black_tip'):
   tip=R.smoothstep(.72,.91,v)*(1-R.smoothstep(.16,.42,u));color*=1-tip[...,None]*C['dorsal_black_tip']
+ if spiny and C.get('markings')=='clownfish':
+  from clown_pattern import paint_bands
+  xs=C['dorsal_start']+(C['dorsal_split']-C['dorsal_start'])*u;world_z=np.interp(xs,C['profile_x'],C['top'])+C['spine_height']*v;color=paint_bands(color,xs,world_z,R.smoothstep);color*=1-C.get('fin_dark_margin',.72)*R.smoothstep(.93,.99,v)[...,None]
  if C['pattern']=='grouper':
   for k in range(210):
    px,py=rng.random(2);radius=rng.uniform(.007,.018);d=np.sqrt((u-px)**2+(v-py)**2);a=(1-R.smoothstep(radius*.7,radius*1.1,d))*.55;color=color*(1-a[...,None])+np.array([.065,.045,.022])*a[...,None]
@@ -243,7 +251,7 @@ def fin_height(u,anal=False):
 
 def fins(mat):
  caudal_mat=fin_mat(True) if 'tail_color' in C else mat
- spiny_mat=fin_mat(spiny=True) if C.get('spiny_dorsal_dark_top') or C.get('dorsal_black_tip') else mat
+ spiny_mat=fin_mat(spiny=True) if C.get('spiny_dorsal_dark_top') or C.get('dorsal_black_tip') or C.get('markings')=='clownfish' else mat
  R.fan('Caudal_Membrane',lambda u:(1.18,0,(u-.5)*.15),lambda u:(C.get('tail_end',2.03)-C['tail_fork']*(1-abs(2*u-1)**C.get('tail_power',2)),0,C['tail_height']*(2*u-1)*(1+C.get('tail_lower_extra',0) if u<.5 else 1)),caudal_mat,n=120,m=32,flutter=.020,role='tail')
  start,split,end=C['dorsal_start'],C['dorsal_split'],C['dorsal_end'];spines=C.get('dorsal_spines',6 if slug=='golden-pomfret' else 11)
  def edge(u):
@@ -298,6 +306,16 @@ def fins(mat):
   if C.get('pelvic',True):
    pelvic=R.fan('Pelvic_'+str(side),lambda u:pelvic_base(profile,side,u,C.get('pelvic_root_x',-.44)),lambda u:(C.get('pelvic_start_x',-.21)+(C.get('pelvic_end_x',.06)-C.get('pelvic_start_x',-.21))*u,side*(.13+.07*math.sin(PI*u)),profile(C.get('pelvic_root_x',-.44))[1]-C.get('pelvic_length',.19)*math.sin(PI*u)),mat,n=66,m=20,flutter=.012,role='anal',phase=side*.4)
    pelvic['pelvic_surface_anchor']='Ventrolateral body surface with a small embedded root curve'
+ if 'fin_edge_noise_gain' in C:
+  # The review utility's fixed edge displacement overwhelms small soft fins.
+  for obj in [o for o in B.ROOT.children_recursive if o.type=='MESH']:
+   name=obj.name
+   if name.startswith('Pectoral_') or not name.startswith(('Caudal_Membrane','Dorsal_SpinyMembrane','Dorsal_SoftRays','Anal_SpinyMembrane','Anal_SoftMembrane','Pelvic_')):continue
+   phase=.5 if name.startswith('Dorsal_SoftRays') else 1.1 if name.startswith('Anal_SoftMembrane') else .4 if name.startswith('Pelvic_1') else -.4 if name.startswith('Pelvic_-1') else 0
+   coordinates={loop.vertex_index:obj.data.uv_layers.active.data[loop.index].uv.copy() for loop in obj.data.loops}
+   for vertex in obj.data.vertices:
+    u,t=coordinates[vertex.index];edge=.008*math.sin(u*113+phase)+.005*math.sin(u*197+1.7)+.004*math.sin(u*61+.4);vertex.co.z-=edge*t**5*(1-C['fin_edge_noise_gain'])
+   obj.data.update()
 
 bpy.ops.wm.read_factory_settings(use_empty=True);B.ROOT=bpy.data.objects.new('ASSET_PhotoInformed_'+slug,None);bpy.context.scene.collection.objects.link(B.ROOT);B.SLUG=slug
 print('BUILD_MAPS',slug,flush=True);skin=pbr('Skin_Microstructure' if C['pattern']=='scaleless' else 'Skin_IndividualScales',skin_maps(),C.get('metallic',.055 if C['pattern']=='fine_scales' else .025));fm=fin_mat();body(skin);details();fins(fm)
@@ -310,6 +328,8 @@ from barbels import build_barbels
 build_barbels(B,C,profile)
 print('BIND_SWIM',slug,flush=True);rig=B.add_rig('bass')
 bind_pelvic_filaments(rig)
+from fanning import retarget_fanning
+retarget_fanning(rig,C,profile)
 if C.get('body_wave_gain'):
  for layer in rig.animation_data.action.layers:
   for strip in layer.strips:

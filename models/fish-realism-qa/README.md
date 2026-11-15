@@ -48,3 +48,7 @@ The `adipose.py` module preserves the reviewed pangasius wedge and can build a l
 ## Reduced-fin swamp eel
 
 Run Blender in background mode with `--python-exit-code 1 --python models/fish-realism-qa/generate_swamp_eel.py`, then the normal `finish.py -- swamp-eel` workflow. This separate generator builds a round scaleless body, blunt snout, tiny eyes, throat opening and tapered tail with a 25-bone axial loop. Its profile declares `body_only`, so QA requires actual tapered-tail movement and absence of invented ordinary fish fins rather than requiring nonexistent broad fins. Five poses still check finite geometry and loop endpoints in the source and real imported GLB. The reduced-fin appearance is an artistic approximation, not an exact anatomical specimen.
+
+## Local fin fanning
+
+`fanning.py` supports profile-selected cyclic fin controls with optional local anatomical hinges. Dorsal and anal controls use longitudinal fin-root axes; pectoral controls use vertical surface-root axes. This keeps small fin strokes local instead of swinging them around distant body axes. Source and imported GLB motion and contact checks remain required. These artist-tuned cycles are not measured hydrodynamics.
