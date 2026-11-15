@@ -1,0 +1,45 @@
+# Shopping mall production backlog
+
+The [400-model production backlog v1.0](production-backlog-v1.md) is a verbatim copy of the user-provided document dated 2026-11-15. SHA-256: `47f207d69b1c00afbe606ab51001fcce3787d8e7c2eadfdebeb198c1ddad416a`. The file is a **plan**, not evidence that 400 models have been built, tested or published. Its entries use the proposed `MALL-{CATEGORY}-{NNN}` identities; do not silently replace existing Gallery IDs. The earlier 50-item list and this broader list have different identities and some different priorities. Retain both and explicitly map them when each asset is scoped.
+
+The [complete modular checklist](complete-modular-checklist.md) expands the planning view with complete shops, restrooms, parking, public spaces, decorations and interactions. It has individual checkboxes for scoping; repeated entries may refer to the same reusable asset or the existing 400-item backlog. Its checkboxes are not evidence of model existence or a new count of unique models.
+
+## Scope and reconciliation
+
+The supplied registry contains 400 unique IDs: 172 P0, 194 P1 and 34 P2. Categories: STR 32, INT 32, STO 32, RET 37, FUR 32, FNB 33, PUB 32, SIG 25, LGT 25, VRT 20, DEC 20, PKG 25, ACT 25, LOC 10 and SAF 20. These counts are an inventory of the plan, not a measure of completed assets.
+
+The existing [P0 asset inventory](../gallery-p0-asset-inventory-2026-11-14.md), actual `models/catalog.json`, and individual asset READMEs are evidence of reuse candidates. Before producing each backlog item, check current catalog and files, source and GLB, dimensions, pivots, licensing, and relevant QA. Record whether it is **reuse**, **adapt**, **new**, or **needs investigation**; a name match alone is not acceptance.
+
+### Initial five-module preview
+
+| Preview | Possible 400-item mapping | Actual existing asset | Reconciliation |
+| --- | --- | --- | --- |
+| Floor | `MALL-STR-001`, `MALL-INT-002` | `mall-floor-tile-module` | Existing repeat is 1.2 × 1.2 m; the backlog proposes 2 × 2 m. Different IDs may describe roles or variants, not automatically separate accepted models. |
+| Wall | `MALL-STR-010` / `MALL-STR-012`, `MALL-INT-013` | `mall-solid-wall`, `mall-glass-partition` | A new 1.2 × 0.12 × 3.0 m solid wall is available locally; it does not meet the backlog's provisional 2.0 × 0.15 × 2.8 m dimensions without a separate decision. Existing glass bay is 1.20 m wide, 2.40 m high and repeats at 1.14 m pitch. |
+| Railing | `MALL-STR-015` | `mall-glass-railing-2m` | Existing bay has 2 m post-centre spacing and approximately 1.12 m height; the backlog's provisional 2.8 m height needs review. |
+| Ceiling | `MALL-STR-018` / `MALL-STR-019` | `mall-ceiling-panel-module` | Existing repeat is 1.2 × 1.2 m. Backlog dimensions are preliminary and require clarification before creating a compatible variant. |
+| Column | `MALL-STR-007` | `mall-structural-column` | Existing 0.60 × 0.60 × 3.00 m column differs from the backlog's 1.0 × 0.8 × 1.5 m preliminary value. |
+
+The [local preview](../../mall-modules-preview/) uses existing GLBs. Its corridor is a visual cutaway, not a claim that these backlog specifications or a full production assembly are accepted. The prior [P0 assembly study](../verification/p0-assembly/README.md) validates a different, documented arrangement; do not transfer its fit results to this new composition without measurement.
+
+The first new shell additions are [mall-solid-wall](../../models/mall-solid-wall/README.md) and [mall-floor-edge-trim](../../models/mall-floor-edge-trim/README.md), both on the existing 1.2 m grid. The subsequent [floor corner cap](../../models/mall-floor-corner-trim/README.md) and [wall corner](../../models/mall-wall-corner/README.md) have local evidence for one 90° arrangement. Their remaining fit and device limits are recorded in the asset READMEs. These are candidates for the larger planning registry, not automatic acceptance of its provisional dimensions. The square corner cap is not a complete corner floor tile or a mitred profile.
+
+## Before production
+
+1. Decide intended scene, scale, grid, connectors and target device. Backlog dimensions are rough targets, and several repeated placeholder sizes are implausible for their named object; review individually instead of copying them as construction dimensions. The existing floor and ceiling use a 1.2 m pitch; glass partition pitch is 1.14 m and the railing's 1 m / 2 m values are post-centre spacing.
+2. Define the relationship between the 50-item priority list and the 400-item registry. For example, the earlier list calls a glass shop door P0 while `MALL-STO-019` is P1. Preserve both source priorities until the owner establishes the production order.
+3. Confirm per-asset LOD need and actual measured budgets. L0/L1/L2 in a plan do not prove variants exist, and the proposed budgets are targets, not current pass results. Verify repeated assets in a representative scene on intended hardware.
+4. Reconcile behavior and QA. The source assigns `Open`, `Sit` or `Navigate` to some rows with only Q-BASE/Q-UV. If those actions are required in the app, add applicable interaction and/or animation testing; a GLB, metadata label or static render alone does not establish functionality. Establish QA per requested behavior, not by row label alone.
+5. Keep editable `.blend`, exported GLB, preview, source/license information, metadata, and evidence under the repository's existing asset conventions; the backlog's proposed `assets/shopping-mall/` tree is not yet a repository migration instruction. Use stable IDs and document mapping before renaming.
+6. Validate actual exported GLBs, visual quality, attachment and app interaction separately. Perform browser/device checks at the appropriate scope; desktop viewport emulation does not establish physical iOS/Android results. No visual asset is a safety, accessibility, installation or building-code certification.
+
+## First delivery slice
+
+- Reuse and inspect the five current GLBs in the local preview; confirm appearance and agree on the intended style.
+- Test a representative arrangement with explicit connector planes, origins, dimensions, collisions and shared-post rules; record gaps and mismatches.
+- Decide whether to adapt the existing 1.2 m system or create compatible variants for the proposed 2 m grid before authoring new structural modules.
+- Map selected IDs to existing assets; prioritize solid wall, transitions/edge pieces and an agreed door interface as needed by the selected scene. Do not mark registry entries complete without per-item evidence.
+
+No batch PR, commit, publication, or new production model is implied by this planning document.
+
+The next local shell slice adds a [1.2 m corner floor tile](../../models/mall-floor-corner-tile/README.md) and [45° mitred trim pair](../../models/mall-floor-mitred-trim/README.md). Their outside-corner arrangement replaces the earlier square-cap example in the corridor preview. One actual-GLB arrangement has been checked; other corner types, the proposed 2 m grid and complete assembly acceptance remain open.

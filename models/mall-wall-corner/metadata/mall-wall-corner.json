@@ -1,0 +1,60 @@
+{
+  "id": "mall-wall-corner",
+  "name": "Mall Wall Corner",
+  "summary": "A right-angle wall corner matched to the 1.2 m solid wall and 3 m height.",
+  "description": "A right-angle wall corner matched to the 1.2 m solid wall and 3 m height.",
+  "category": "Shopping Mall",
+  "tags": [
+    "mall",
+    "corner",
+    "modular",
+    "architecture",
+    "original",
+    "metres"
+  ],
+  "status": "draft",
+  "created": "2026-11-15",
+  "author": "Yap Wei Jun project / agent-assisted procedural modeling",
+  "blender_version": "5.1.2",
+  "creation_method": "Original deterministic Blender geometry and materials; no external models or textures.",
+  "generator": "generate.py",
+  "paths": {
+    "source": "sources/mall-wall-corner.blend",
+    "glb": "exports/mall-wall-corner.glb",
+    "preview": "previews/mall-wall-corner.jpg",
+    "render": "previews/mall-wall-corner.png"
+  },
+  "display": {
+    "previewRotationY": 0,
+    "previewCameraDirection": [
+      0.8,
+      0.6,
+      1
+    ]
+  },
+  "assembly": {
+    "gltf_dimensions_m": [
+      1.26,
+      3,
+      1.26
+    ],
+    "origin": "Ground-centre at corner intersection; Blender +Z / glTF +Y up",
+    "placement": "Connect straight wall roots at (-1.8,0,0) and (0,0,1.8); rotate the second 90 degrees about glTF Y."
+  },
+  "rights": "Original geometry and materials created for the owner project. Public redistribution terms not specified.",
+  "accuracy_notes": "Visual wall only; no structural, fire, acoustic or installation certification.",
+  "attribution": [
+    {
+      "credit": "Original geometry and materials created for Blender-3D-Gallery."
+    }
+  ],
+  "quality_gate": {
+    "overall": "NEEDS REVIEW",
+    "scope": "Specific 90-degree sample only; full assembly, performance, arbitrary joints and physical devices remain unverified."
+  },
+  "sha256": {
+    "source": "0f145be9101a5fc6ff4eab394199d9ea604dda8d76af6eb3811d6f2903e0bed0",
+    "glb": "8ea702d2b4f6b42d26f5248fd4d639654207e7c87c6d3e4ff038bf21e6fbcfa1",
+    "preview": "6f725b1aaff1c55dc34c7faf3e5b90696f04172bd4228b558853f54620757a56"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "result": "PASS",
+  "models": {
+    "tile": {
+      "bytes": 162152,
+      "triangles": 528,
+      "sha256": "8d370fea8c516d50ae13e9907fa6b8d06ec754f6477fbb1dad53177d7685ad36",
+      "dimensions_m": [
+        1.2000000476837158,
+        0.029999999329447746,
+        1.2000000476837158
+      ],
+      "validator": {
+        "errors": 0,
+        "warnings": 0,
+        "infos": 12
+      }
+    },
+    "mitre": {
+      "bytes": 5644,
+      "triangles": 48,
+      "sha256": "27e9cf16c0693f50e5090e81f1f7f54d0f1a5b22ea0f1b6b9926ae198f4b3203",
+      "dimensions_m": [
+        1.2600000500679016,
+        0.029999999329447746,
+        1.2600000500679016
+      ],
+      "validator": {
+        "errors": 0,
+        "warnings": 0,
+        "infos": 0
+      }
+    }
+  },
+  "assembly": {
+    "tile": [
+      0,
+      -0.03,
+      0
+    ],
+    "mitre": [
+      0,
+      0,
+      0
+    ],
+    "neighbourFloors": [
+      [
+        -1.2,
+        -0.03,
+        0
+      ],
+      [
+        0,
+        -0.03,
+        -1.2
+      ]
+    ],
+    "straightEdges": [
+      [
+        -1.2,
+        0,
+        0.63
+      ],
+      [
+        0.63,
+        0,
+        -1.2
+      ]
+    ],
+    "mitreTopRays": [
+      {
+        "x": 0.61,
+        "z": 0.64,
+        "part": "Front_cap"
+      },
+      {
+        "x": 0.64,
+        "z": 0.61,
+        "part": "Right_cap"
+      },
+      {
+        "x": 0.59,
+        "z": 0.63,
+        "part": "Front_cap"
+      },
+      {
+        "x": 0.63,
+        "z": 0.59,
+        "part": "Right_cap"
+      }
+    ]
+  },
+  "limits": "One 90-degree outside configuration, bounding boxes and four top-surface ray samples. Does not prove full mesh intersection, other configurations or physical construction safety."
+}

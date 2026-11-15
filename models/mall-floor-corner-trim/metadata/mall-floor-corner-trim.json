@@ -1,0 +1,60 @@
+{
+  "id": "mall-floor-corner-trim",
+  "name": "Mall Floor Corner Trim",
+  "summary": "A 60 mm square corner cap joining two 1.2 m floor edge strips.",
+  "description": "A 60 mm square corner cap joining two 1.2 m floor edge strips.",
+  "category": "Shopping Mall",
+  "tags": [
+    "mall",
+    "corner",
+    "modular",
+    "architecture",
+    "original",
+    "metres"
+  ],
+  "status": "draft",
+  "created": "2026-11-15",
+  "author": "Yap Wei Jun project / agent-assisted procedural modeling",
+  "blender_version": "5.1.2",
+  "creation_method": "Original deterministic Blender geometry and materials; no external models or textures.",
+  "generator": "generate.py",
+  "paths": {
+    "source": "sources/mall-floor-corner-trim.blend",
+    "glb": "exports/mall-floor-corner-trim.glb",
+    "preview": "previews/mall-floor-corner-trim.jpg",
+    "render": "previews/mall-floor-corner-trim.png"
+  },
+  "display": {
+    "previewRotationY": 0,
+    "previewCameraDirection": [
+      0.8,
+      0.6,
+      1
+    ]
+  },
+  "assembly": {
+    "gltf_dimensions_m": [
+      0.06,
+      0.03,
+      0.06
+    ],
+    "origin": "Top-centre at finished floor level; Blender +Z / glTF +Y up",
+    "placement": "For a tile at (0,-0.03,0), place at (0.63,0,0.63); straight edges at (0,0,0.63) and (0.63,0,0) rotated 90 degrees."
+  },
+  "rights": "Original geometry and materials created for the owner project. Public redistribution terms not specified.",
+  "accuracy_notes": "A square 90-degree visual cap, not a mitered joint, structural or slip certification.",
+  "attribution": [
+    {
+      "credit": "Original geometry and materials created for Blender-3D-Gallery."
+    }
+  ],
+  "quality_gate": {
+    "overall": "NEEDS REVIEW",
+    "scope": "Specific 90-degree sample only; full assembly, performance, arbitrary joints and physical devices remain unverified."
+  },
+  "sha256": {
+    "source": "3001ed9040c06487b9bee38cd725ca1662dbe65555221ab21a16e9b58a342c37",
+    "glb": "913bb6aa74b5a13145af09767c26beb73b71b5d92eaff4a7e2f53f294af36582",
+    "preview": "9d301002fb67b67661a79a14fc5225c863c4c0f61a18fade284976fd433fe510"
+  }
+}

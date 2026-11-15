@@ -1,0 +1,39 @@
+{
+  "result": "PASS",
+  "floorGlbSha256": "328a091a1372b0246694484d0cea05319bad032cfa603ed030b69ef87153c305",
+  "wallGlbSha256": "4e42b9f7c84e5f769a5940485ef2af81ee667fc03579d56f4065788c4d840708",
+  "units": "metres",
+  "floorPlacementsXZ": [
+    [
+      0,
+      0
+    ],
+    [
+      1.2,
+      0
+    ],
+    [
+      2.4,
+      0
+    ],
+    [
+      2.4,
+      1.2
+    ],
+    [
+      2.4,
+      2.4
+    ]
+  ],
+  "floorCount": 5,
+  "checkedFloorEdges": 4,
+  "wallPosition": [
+    0,
+    0,
+    -0.54
+  ],
+  "wallFloorTop": -6.705522526129215e-10,
+  "wallBottom": 0,
+  "checks": "Five floor module bounding boxes form an L at 1.2 m pitch; wall bounding box sits at finished-floor level and aligns to one floor edge.",
+  "limits": "Bounding-box checks only; no corner edge finishing, full mesh overlap, navigation, lighting, real-device or physical installation validation."
+}

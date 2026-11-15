@@ -1,0 +1,62 @@
+{
+  "id": "mall-floor-edge-trim",
+  "name": "Mall Floor Edge Trim",
+  "summary": "A slim 1.2 m trim strip for the existing mall floor grid.",
+  "description": "A two-piece straight visual edge trim aligned to the 1.2 m mall floor module.",
+  "category": "Shopping Mall",
+  "tags": [
+    "mall",
+    "floor",
+    "edge",
+    "trim",
+    "modular",
+    "original",
+    "metres"
+  ],
+  "status": "draft",
+  "created": "2026-11-15",
+  "author": "Yap Wei Jun project / agent-assisted procedural modeling",
+  "blender_version": "5.1.2",
+  "creation_method": "Original deterministic Blender geometry and Principled materials; no external models or textures.",
+  "generator": "generate.py",
+  "paths": {
+    "source": "sources/mall-floor-edge-trim.blend",
+    "glb": "exports/mall-floor-edge-trim.glb",
+    "preview": "previews/mall-floor-edge-trim.jpg",
+    "render": "previews/mall-floor-edge-trim.png"
+  },
+  "display": {
+    "previewRotationY": 0,
+    "previewCameraDirection": [
+      1,
+      0.8,
+      1
+    ]
+  },
+  "assembly": {
+    "gltf_dimensions_m": [
+      1.2,
+      0.03,
+      0.06
+    ],
+    "pitch_m": 1.2,
+    "origin": "top centre at finished floor level; Blender +Z / glTF +Y up",
+    "placement": "For a floor root at (0,-0.03,0), place the trim at (0,0,0.63) glTF metres."
+  },
+  "rights": "Original geometry and materials created for the owner project. Public redistribution terms not specified.",
+  "accuracy_notes": "Visual trim only; no structural, slip, installation or safety certification.",
+  "attribution": [
+    {
+      "credit": "Original geometry and materials created for Blender-3D-Gallery."
+    }
+  ],
+  "quality_gate": {
+    "overall": "NEEDS REVIEW",
+    "scope": "Straight edge only; corner finish, full assembly, physical devices and target performance remain unverified."
+  },
+  "sha256": {
+    "source": "40a1d2750916a3783feeb2565eaa0b8ee0e8a6033568ffd2982d74b090d5fd58",
+    "glb": "f327fbd76b5d722dfc21c52563c28e2ec96b7ff08b48b425de422a492215b3db",
+    "preview": "9eeb35377cde2a5f8792477f87e5be08d7aa9daa64fd9518eb988a7f86860d69"
+  }
+}
