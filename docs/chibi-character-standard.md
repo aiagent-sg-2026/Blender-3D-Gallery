@@ -72,3 +72,11 @@ Status words: PASS, FAIL, REWORK, NOT_RUN. Record evidence in `qa/run-NNN/`. Do 
 - Rig and shape keys are mandatory: armature of 20 bones or fewer plus neutral, smile, surprised.
 - G5 review: a fresh agent reviews against the reference first, then the owner makes the final check.
 - Rights: AI-generated references are internal references only; the model is original modelling and the reference is not embedded in the GLB. State the source in the README and re-check before public release.
+
+## 9. Mall Guide v5 decisions (2026-11-15)
+
+- Animations: idle breathing with blink, walk cycle, wave / point. The armature must support an arm-raise for the sign pose.
+- Sign: a separate prop part with a swappable icon (texture or material switch, so the arrow can point in different directions); it is not part of the body mesh.
+- Expressions: the three shape keys also drive eyebrows and cheeks. The head topology needs edge loops around the brows, eyes, mouth and cheeks.
+- Look: keep the boy character of sheet B.
+- Budget impact: the 40,000 triangle / 20 draw call budget still applies; the swappable icon must not add a second large texture (use a small atlas).

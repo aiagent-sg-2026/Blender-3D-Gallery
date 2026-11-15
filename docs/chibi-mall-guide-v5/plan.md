@@ -33,7 +33,7 @@ Reference decision (2026-11-15): sheet B is locked as the v5 reference and copie
 2. Sign in the right hand, badge on the left chest.
 3. Hair: a few thick, blunt locks fitted under the cap.
 
-Budgets, mandatory rig, reviewer and rights decisions are recorded in the [standard](../chibi-character-standard.md) section 8.
+Animations (idle+blink, walk, wave/point), swappable sign icon and brow/cheek expressions are recorded in standard section 9. Budgets, mandatory rig, reviewer and rights decisions are recorded in the [standard](../chibi-character-standard.md) section 8.
 
 ## Build plan
 
