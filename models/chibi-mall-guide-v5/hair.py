@@ -25,8 +25,8 @@ def lock_geometry(spec, steps=None):
         el = el0 + (el1 - el0) * t
         s = max(math.sin(math.pi * t) ** taper, endmin)   # blunt ends: a floor keeps them from tapering to a point
         belly = 1.0 + 0.25 * math.sin(math.pi * min(1.0, t * 1.4))   # a little fuller toward the root
-        p, n = skull_point(r(az), r(el), off + flare * t * t + T * 0.55 * s)   # flare pushes the lower end outward
-        pts.append(p); nrm.append(n); ws.append(W * s * belly); ts.append(T * s)
+        p, n = skull_point(r(az), r(el), off + C.HAIR_OFF_ADD + flare * t * t + T * C.HAIR_T_MULT * 0.55 * s)   # flare pushes the lower end outward
+        pts.append(p); nrm.append(n); ws.append(W * C.HAIR_W_MULT * s * belly); ts.append(T * C.HAIR_T_MULT * s)
     return pts, nrm, ws, ts
 
 def build_hair(bmesh, mats):

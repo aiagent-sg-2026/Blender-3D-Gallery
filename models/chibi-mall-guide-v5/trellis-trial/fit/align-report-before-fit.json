@@ -1,0 +1,238 @@
+{
+ "target_bbox_min": [
+  -0.263,
+  -0.259,
+  -0.499
+ ],
+ "target_bbox_max": [
+  0.27,
+  0.262,
+  0.5
+ ],
+ "translation_applied": [
+  -0.0145,
+  -0.0009,
+  0.4988
+ ],
+ "fit_pairs_last": 1945,
+ "ours_to_target": {
+  "Cap": {
+   "verts": 1080,
+   "mean_mm": 437.6,
+   "p95_mm": 506.2,
+   "max_mm": 510.6
+  },
+  "Vest": {
+   "verts": 3790,
+   "mean_mm": 63.3,
+   "p95_mm": 107.1,
+   "max_mm": 138.8
+  },
+  "Shirt": {
+   "verts": 1428,
+   "mean_mm": 69.3,
+   "p95_mm": 112.6,
+   "max_mm": 141.5
+  },
+  "Neckerchief": {
+   "verts": 602,
+   "mean_mm": 21.9,
+   "p95_mm": 43.1,
+   "max_mm": 50.5
+  },
+  "Shorts": {
+   "verts": 793,
+   "mean_mm": 124.2,
+   "p95_mm": 164.7,
+   "max_mm": 179.5
+  },
+  "Arm.L": {
+   "verts": 194,
+   "mean_mm": 35.9,
+   "p95_mm": 73.6,
+   "max_mm": 99.4
+  },
+  "Arm.R": {
+   "verts": 194,
+   "mean_mm": 22.4,
+   "p95_mm": 51.8,
+   "max_mm": 73.4
+  },
+  "Glove.L": {
+   "verts": 380,
+   "mean_mm": 83.4,
+   "p95_mm": 114.7,
+   "max_mm": 126.1
+  },
+  "Glove.R": {
+   "verts": 380,
+   "mean_mm": 59.0,
+   "p95_mm": 90.1,
+   "max_mm": 102.2
+  },
+  "Leg.L": {
+   "verts": 28,
+   "mean_mm": 133.2,
+   "p95_mm": 172.1,
+   "max_mm": 174.1
+  },
+  "Leg.R": {
+   "verts": 28,
+   "mean_mm": 123.8,
+   "p95_mm": 164.1,
+   "max_mm": 172.2
+  },
+  "Sock.L": {
+   "verts": 152,
+   "mean_mm": 115.0,
+   "p95_mm": 142.7,
+   "max_mm": 150.5
+  },
+  "Sock.R": {
+   "verts": 152,
+   "mean_mm": 104.3,
+   "p95_mm": 139.5,
+   "max_mm": 144.2
+  },
+  "Shoe.L": {
+   "verts": 1012,
+   "mean_mm": 26.2,
+   "p95_mm": 62.7,
+   "max_mm": 71.4
+  },
+  "Shoe.R": {
+   "verts": 1012,
+   "mean_mm": 20.8,
+   "p95_mm": 49.4,
+   "max_mm": 54.2
+  },
+  "Head": {
+   "verts": 2843,
+   "mean_mm": 205.4,
+   "p95_mm": 387.2,
+   "max_mm": 392.6
+  },
+  "Eyes": {
+   "verts": 450,
+   "mean_mm": 149.8,
+   "p95_mm": 191.1,
+   "max_mm": 205.4
+  },
+  "Hair": {
+   "verts": 3672,
+   "mean_mm": 330.6,
+   "p95_mm": 405.0,
+   "max_mm": 424.6
+  },
+  "Neck_placeholder": {
+   "verts": 830,
+   "mean_mm": 34.7,
+   "p95_mm": 65.4,
+   "max_mm": 67.3
+  }
+ },
+ "target_to_ours": {
+  "Head": {
+   "samples": 1748,
+   "mean_mm": 19.2,
+   "p95_mm": 61.0
+  },
+  "Hair": {
+   "samples": 3538,
+   "mean_mm": 24.9,
+   "p95_mm": 73.0
+  },
+  "Shorts": {
+   "samples": 935,
+   "mean_mm": 18.1,
+   "p95_mm": 39.9
+  },
+  "Cap": {
+   "samples": 1017,
+   "mean_mm": 23.1,
+   "p95_mm": 68.0
+  },
+  "Eyes": {
+   "samples": 463,
+   "mean_mm": 50.5,
+   "p95_mm": 107.4
+  },
+  "Vest": {
+   "samples": 973,
+   "mean_mm": 46.2,
+   "p95_mm": 132.3
+  },
+  "Shirt": {
+   "samples": 328,
+   "mean_mm": 18.9,
+   "p95_mm": 46.3
+  },
+  "Sock.R": {
+   "samples": 159,
+   "mean_mm": 25.2,
+   "p95_mm": 49.0
+  },
+  "Neckerchief": {
+   "samples": 221,
+   "mean_mm": 24.1,
+   "p95_mm": 47.0
+  },
+  "Shoe.R": {
+   "samples": 506,
+   "mean_mm": 30.9,
+   "p95_mm": 78.0
+  },
+  "Shoe.L": {
+   "samples": 474,
+   "mean_mm": 17.0,
+   "p95_mm": 47.4
+  },
+  "Arm.L": {
+   "samples": 157,
+   "mean_mm": 11.3,
+   "p95_mm": 30.4
+  },
+  "Leg.R": {
+   "samples": 39,
+   "mean_mm": 8.7,
+   "p95_mm": 18.6
+  },
+  "Glove.L": {
+   "samples": 154,
+   "mean_mm": 19.1,
+   "p95_mm": 44.8
+  },
+  "Arm.R": {
+   "samples": 30,
+   "mean_mm": 5.3,
+   "p95_mm": 16.6
+  },
+  "Sock.L": {
+   "samples": 165,
+   "mean_mm": 16.1,
+   "p95_mm": 32.1
+  },
+  "Neck_placeholder": {
+   "samples": 168,
+   "mean_mm": 14.3,
+   "p95_mm": 32.7
+  },
+  "Leg.L": {
+   "samples": 57,
+   "mean_mm": 10.0,
+   "p95_mm": 26.8
+  }
+ },
+ "target_to_ours_all": {
+  "samples": 11132,
+  "mean_mm": 25.2,
+  "p95_mm": 75.2,
+  "excluded_sign": 868
+ },
+ "silhouette_iou": {
+  "0": 0.805,
+  "35": 0.724,
+  "90": 0.628,
+  "180": 0.805
+ }
+}

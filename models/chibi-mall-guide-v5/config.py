@@ -91,3 +91,20 @@ HAIR_LOCKS = [
     (160, 62, 165, 8, 0, 0.060, 0.026, 0.016),
     (-160, 62, -165, 8, 0, 0.060, 0.026, 0.016),
 ]
+
+
+# ---- step 8: global hair multipliers (used by the target fit; neutral values are 1, 0, 1) ----
+HAIR_T_MULT = 1.0    # scales every lock's thickness
+HAIR_W_MULT = 1.0    # scales every lock's width
+HAIR_OFF_ADD = 0.0   # added to every lock's offset from the skull (m)
+
+# ---- step 8: optional overrides found by trellis-trial/fit_to_target.py; applied last so they win ----
+import json as _json, os as _os
+_FIT = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'fit.json')
+if _os.path.exists(_FIT):
+    for _k, _v in _json.load(open(_FIT)).items():
+        if _k in globals():
+            if isinstance(globals()[_k], dict):
+                for _kk, _vv in _v.items(): globals()[_k][_kk] = tuple(_vv) if isinstance(_vv, list) else _vv
+            elif isinstance(globals()[_k], list): globals()[_k] = [tuple(x) for x in _v]
+            else: globals()[_k] = _v
