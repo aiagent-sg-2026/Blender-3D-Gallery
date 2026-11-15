@@ -1,0 +1,41 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "flank marking was too rectangular"
+      ],
+      "changes": [
+        "use a textured elliptical dark flank marking with softer irregular edges"
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "pass",
+      "changes": [
+        "re-viewed current actual full-body/head renders; source, GLB and desktop/mobile QA pass"
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "d53540ba9590f4da07b855c8bf59734b17ad92d7e405cebf5c842d29970b2ac6",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: elongate silver-bronze body with large irregular dark-edged scales",
+    "surface": "pass: original photo-informed pigment and surface microstructure",
+    "head": "pass: large mouth, high-set eyes and one pair of maxillary barbels",
+    "fins": "pass: irregular dark flank bar below the dorsal and reddish fins",
+    "surface_contact": "pass: five source and GLB phases with unchanged tolerances",
+    "motion": "pass: actual exported cyclic body/tail/fin deformation",
+    "browser": "pass: exact draft GLB swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed artwork, not a scanned or calibrated specimen.",
+    "Sebarau follows Hampala macrolepidota in Nick Baker's field photograph and the supporting specimen image. Commons image 251680991 was excluded after its high-body silhouette conflicted with the primary reference; its caption is not treated as identification evidence."
+  ]
+}

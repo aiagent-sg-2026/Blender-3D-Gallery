@@ -40,3 +40,7 @@ For new artwork, `generate.py -- SLUG --quick-preview` uses actual Blender EEVEE
 ## Gourami and carp anatomy
 
 Gourami profiles replace broad pelvic membranes with two tapered free sensory rays. Each root retains body-spine weights while the tip feathers onto a separately phased cyclic control. Source, GLB and actual delivery verification require both rays to move and retain five-phase skin contact. The optional thick-lip snout uses a tessellated curved cap instead of a non-planar n-gon. Grass carp remains barbel-free; later scaled common-carp profiles use the FAO two-pair diagnostic. Generated dark scale rims support per-tile strength, softer edges and increased placement variation without embedding reference-photo pixels. These controls are artwork approximations, not measured biomechanics.
+
+## Fleshy adipose fins
+
+The `adipose.py` module preserves the reviewed pangasius wedge and can build a longer, rounded volumetric fin for river catfish. A point-domain `fin_span` attribute keeps anatomical root weights independent of the UV seams needed on its closed caps. The fin uses opaque skin pigment, with no invented membrane-ray texture. Five-phase contact, source/GLB deformation, format validation and actual delivery/browser checks remain required.

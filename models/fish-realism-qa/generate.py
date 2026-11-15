@@ -77,6 +77,8 @@ def skin_maps():
    height+=scute*.00035
    if C['markings']=='trevally':color*=1-scute[...,None]*.11
    else:color+=scute[...,None]*.018
+ if C.get('markings')=='hampala':
+  boundary=(R.noise(u,v,65,47,998)-.5)*.12;distance=np.sqrt(((xs-.10-.02*np.sin(world_z*12))/.145)**2+((world_z-.18)/.43)**2);bar=(1-R.smoothstep(.62,1.25,distance+boundary))*flank_mask;color*=1-bar[...,None]*.61
  if C.get('markings')=='jade_perch':
   blotches=np.maximum(np.exp(-((xs+.10)/.17)**2-((world_z-.17)/.14)**2),np.exp(-((xs-.62)/.14)**2-((world_z+.02)/.12)**2))*flank_mask;color*=1-blotches[...,None]*C.get('marking_gain',.10)
   stripe=np.exp(-((world_z+.045-.018*np.sin((xs+1.5)*4))/.020)**2)*R.smoothstep(-1.57,-1.43,xs)*(1-R.smoothstep(-1.12,-.95,xs))*flank_mask;color+=stripe[...,None]*.055
@@ -158,6 +160,11 @@ def fin_mat(tail=False,spiny=False):
  if tail and C.get('tail_dark_margin'):
   color*=1-C['tail_dark_margin']*R.smoothstep(.87,.99,v)[...,None]
  if not tail and C.get('fin_dark_margin'):color*=1-C['fin_dark_margin']*R.smoothstep(.89,.99,v)[...,None]
+ if tail and C.get('tail_submarginal_stripe'):
+  stripe=np.exp(-((v-.85)/.055)**4)*R.smoothstep(.10,.25,np.abs(u-.5));color*=1-stripe[...,None]*C['tail_submarginal_stripe']
+  if C.get('tail_pale_margin'):color+=R.smoothstep(.965,1,v)[...,None]*C['tail_pale_margin']
+ if spiny and C.get('dorsal_black_tip'):
+  tip=R.smoothstep(.72,.91,v)*(1-R.smoothstep(.16,.42,u));color*=1-tip[...,None]*C['dorsal_black_tip']
  if C['pattern']=='grouper':
   for k in range(210):
    px,py=rng.random(2);radius=rng.uniform(.007,.018);d=np.sqrt((u-px)**2+(v-py)**2);a=(1-R.smoothstep(radius*.7,radius*1.1,d))*.55;color=color*(1-a[...,None])+np.array([.065,.045,.022])*a[...,None]
@@ -226,6 +233,7 @@ def fin_sweep(u,anal=False):
  return 0
 
 def fin_height(u,anal=False):
+ if C.get('anal_height_curve' if anal else 'soft_height_curve'):return B.interp(C['anal_height_curve' if anal else 'soft_height_curve'],u)
  if anal and C.get('anal_soft_start_height'):return C['anal_height']*math.sin(PI*u)**.65+C['anal_soft_start_height']*(1-u)**4
  if not anal and C.get('soft_start_height'):return C['soft_height']*math.sin(PI*u)**.7+C['soft_start_height']*(1-u)**4
  if C.get('soft_forward_lobes'):return B.interp([(0,0),(.13,1),(.36,.48),(.72,.13),(1,0)],u)*(C.get('anal_height',.25) if anal else C['soft_height'])
@@ -235,14 +243,14 @@ def fin_height(u,anal=False):
 
 def fins(mat):
  caudal_mat=fin_mat(True) if 'tail_color' in C else mat
- spiny_mat=fin_mat(spiny=True) if C.get('spiny_dorsal_dark_top') else mat
+ spiny_mat=fin_mat(spiny=True) if C.get('spiny_dorsal_dark_top') or C.get('dorsal_black_tip') else mat
  R.fan('Caudal_Membrane',lambda u:(1.18,0,(u-.5)*.15),lambda u:(C.get('tail_end',2.03)-C['tail_fork']*(1-abs(2*u-1)**C.get('tail_power',2)),0,C['tail_height']*(2*u-1)*(1+C.get('tail_lower_extra',0) if u<.5 else 1)),caudal_mat,n=120,m=32,flutter=.020,role='tail')
  start,split,end=C['dorsal_start'],C['dorsal_split'],C['dorsal_end'];spines=C.get('dorsal_spines',6 if slug=='golden-pomfret' else 11)
  def edge(u):
   t=u*(spines-1);i=min(spines-2,int(t));f=t-i;xx=start+(split-start)*u;peak=(.01+C['spine_height']*(1-u)**.85) if C.get('spine_taper') else C['spine_height']*(.68+.32*math.sin(u*PI));peak=B.interp(C['spine_height_curve'],u) if C.get('spine_height_curve') else peak;return(xx,0,profile(xx)[0]+max(.002,peak-(C.get('spine_notch_factor',0)*peak if C.get('spine_notch_factor') else min(.035,.45*C['spine_height']))*math.sin(PI*f)))
  if spines>0:R.fan('Dorsal_SpinyMembrane',lambda u:(start+(split-start)*u,0,profile(start+(split-start)*u)[0]*.995),edge,spiny_mat,n=120,m=24,flutter=.006,role='dorsal')
  second=C.get('dorsal_second_start',split)
- R.fan('Dorsal_SoftRays',lambda u:(second+(end-second)*u,0,profile(second+(end-second)*u)[0]),lambda u:(second+(end-second)*u+fin_sweep(u),0,profile(second+(end-second)*u)[0]+fin_height(u)),mat,n=120,m=32,flutter=.020,role='dorsal',phase=.5)
+ R.fan('Dorsal_SoftRays',lambda u:(second+(end-second)*u,0,profile(second+(end-second)*u)[0]),lambda u:(second+(end-second)*u+fin_sweep(u),0,profile(second+(end-second)*u)[0]+fin_height(u)),spiny_mat if C.get('dorsal_black_tip') else mat,n=120,m=32,flutter=.020,role='dorsal',phase=.5)
  anal_start=C.get('anal_start',.20)
  if C.get('anal_spines'):
   a0=anal_start;a1=C['anal_split'];count=C['anal_spines']
@@ -252,10 +260,8 @@ def fins(mat):
   R.fan('Anal_SpinyMembrane',lambda u:(a0+(a1-a0)*u,0,profile(a0+(a1-a0)*u)[1]),anal_spiny_edge,mat,n=100,m=24,flutter=.005,role='anal');anal_start=a1
  anal_span=C.get('anal_end',1.07)-anal_start
  R.fan('Anal_SoftMembrane',lambda u:(anal_start+anal_span*u,0,profile(anal_start+anal_span*u)[1]),lambda u:(anal_start+anal_span*u+fin_sweep(u,True),0,profile(anal_start+anal_span*u)[1]-fin_height(u,True)),mat,n=100,m=28,flutter=.018,role='anal',phase=1.1)
- if C.get('adipose_fin'):
-  x0,x1,peak=.72,1.03,.84;h0=profile(x0)[0]-.002;h1=profile(x1)[0]-.002;hp=profile(peak)[0]+.10;hr=profile(.98)[0]+.025
-  vertices=[(x0,-.008,h0),(x0,.008,h0),(x1,-.006,h1),(x1,.006,h1),(peak,-.002,hp),(peak,.002,hp),(.98,-.002,hr),(.98,.002,hr)];uv=[(0,0),(.1,0),(.9,0),(1,0),(.25,1),(.35,1),(.75,.25),(.85,.25)]
-  material=B.material('Adipose_FleshySkin',tuple(v/12.92 if v<=.04045 else ((v+.055)/1.055)**2.4 for v in C['back_color']),.46);B.mesh('Dorsal_AdiposeFin',vertices,[(0,4,5,1),(4,6,7,5),(6,2,3,7),(0,2,6,4),(1,5,7,3)],material,uv,deform='dorsal')
+ from adipose import build_adipose
+ build_adipose(B,C,profile)
  for k in range(C.get('finlets',0)):
   x=C.get('finlet_start',.94)+k*C.get('finlet_spacing',.055);height=C.get('finlet_height',.055)*(1-k*C.get('finlet_taper',.12))
   for sign,role in [(1,'dorsal'),(-1,'anal')]:
