@@ -1,0 +1,29 @@
+{
+  "status": "FAILED",
+  "failed_step": "eligible eight is physically potted and ends the match once",
+  "failure": "page.screenshot Timeout30000ms after fonts loaded",
+  "location": "scripts/test-game-browser.mjs:1023",
+  "game_state_at_failure": {
+    "phase": "finished",
+    "winner": 0,
+    "ball8_pocketed": true,
+    "committedShots": 1,
+    "message": "Eight ball pocketed legally."
+  },
+  "observed_host_load_1_5_15_min": [
+    43.34,
+    33.48,
+    24.14
+  ],
+  "resource_causality": "Supported suspicion; concurrent rendering and elevated host load observed, not a proven product root cause.",
+  "experience_suite": "NOT_RUN because first command failed under set-e",
+  "fresh_results_json_written": false,
+  "stale_shared_results_excluded": {
+    "path": "/tmp/blender-gallery-game-qa/results.json",
+    "mtime": "2026-11-14T17:22:34.977950+00:00",
+    "reason": "Predates this run; never counted as current PASS evidence."
+  },
+  "unchanged_assertions_and_timeouts": true,
+  "log": "game-first-attempt.log.gz",
+  "recovery_plan": "Use exact pinned application sources in isolated Linux workspace, full unfiltered original scripts, unique TEST_ARTIFACT_DIR."
+}

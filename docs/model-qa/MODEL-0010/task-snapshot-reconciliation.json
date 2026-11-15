@@ -1,0 +1,38 @@
+{
+  "base": "ea9ed61873cd88c02436bf590c06c3e55df9d78a",
+  "target": "fd087c2dfdeaa08c37b21ef11c52fbbc2eabf57b",
+  "reason": "Upstream overlaps match exact prior guarded-mirror snapshots of this campaign. Preserve newer verified local QA facts; preserve every unrelated upstream file.",
+  "files": [
+    {
+      "path": "docs/3d-model-qa-progress.md",
+      "sha256": "fa4f73c3d654aaba3a94b9ed392c11e6cd7c767296cad2353323c3646e1eaa97",
+      "tracked_before": true
+    },
+    {
+      "path": "docs/model-qa/MODEL-0009/release-evidence.json",
+      "sha256": "f85439fdb8c974a7b188343259310bc955c3b20942065ae798df903c97cd9517",
+      "tracked_before": false
+    },
+    {
+      "path": "docs/model-qa/MODEL-0010/README.md",
+      "sha256": "4766b5fbef5be8da74409412d8419a1028f4a5c7e77dd9a6ef567fef39a0d3d2",
+      "tracked_before": false
+    },
+    {
+      "path": "docs/model-qa/discovery-reconciliation-1e942079.json",
+      "sha256": "e6b3d01a989b01f2483e948021a1d876404271af2cf6716c66b1e4ee1e4fede0",
+      "tracked_before": false
+    },
+    {
+      "path": "docs/model-qa/inventory.json",
+      "sha256": "b23b0d66da5d446f22bc4f18de75c79f96523dc16e1263210f358e489d8ef62d",
+      "tracked_before": true
+    },
+    {
+      "path": "scripts/model-qa-blender.py",
+      "sha256": "479f88af0b02d104a95dec98d2d4035421ab39b719fd528d6936a8507a7677b4",
+      "tracked_before": true
+    }
+  ],
+  "result": "PASS fast-forward and all six newer task-owned files restored byte-for-byte."
+}

@@ -606,7 +606,7 @@
       "name": "Ball 04",
       "collection": "billiards",
       "kind": "catalog-model",
-      "status": "TESTING",
+      "status": "READY_TO_PUSH",
       "export_paths": [
         "models/eight-ball-billiards/exports/ball_04.glb"
       ],
@@ -635,14 +635,34 @@
         "runtime": "PASS four original standalone/assembly desktop1440/tablet768 profiles and exact payload hashes, rotation/zoom/exact reset, no page/HTTP errors.",
         "performance": "PASS157064bytes,5draws/5312triangles in sampled software WebGL; physical-device FPS not established.",
         "animation": "N/A static/unrigged; Game interactions require separate regression acceptance.",
-        "regression": "PASS678unit/45targeted and567-asset build. Full Game first attempt FAILED at screenshot timeout; experience NOT_RUN. Isolated recovery remains IN_PROGRESS.",
-        "mobile": "N/A explicit owner exclusion"
+        "regression": "PASS678 baseline/682 latest units,45 targeted, full unfiltered1e942079 Game46/experience31; ea9ed618 six changed-asset profiles and fresh fd087c2d682-unit/build acceptance. All1197 build files match accepted ea9ed618 output byte-for-byte. Original failures preserved.",
+        "mobile": "N/A explicit owner exclusion",
+        "upstream_integration": "PASS fd087c2d runtime/test/catalog/billiards inputs unchanged; exact prior task snapshots reconciled without losing upstream work. Eleven new uncatalogued files remain PENDING; queue1903.",
+        "latest_main_delta": {
+          "source_sha": "d210eadecbc622dc9161a107468df55402e873e1",
+          "remote_job": "3e3ced76-58d3-440d-9036-25500e90f606",
+          "remote_state": "SUCCEEDED",
+          "unit_tests_passed": 685,
+          "catalog_entries": 567,
+          "browser_profiles_passed": 2,
+          "artifact_hashes_verified": 13,
+          "changed_input_hashes_verified": 148,
+          "archive_bytes": 485914,
+          "archive_sha256": "013aa94c2809aba5b10bdf3d74961b35bec413b9ffe489e49005d032c97afd0a",
+          "full_pinned_game_experience_still_applicable": "Application, original browser scripts, catalogue and billiards products unchanged; required final-commit CI remains pending.",
+          "campaign_model_0067_status": "PENDING",
+          "primary_screenshots_reviewed": [
+            "upstream-d210-1440-loaded.png",
+            "upstream-d210-768-loaded.png"
+          ],
+          "local_unit_discovery_attempt": "Initial node --test without an explicit glob also discovered browser scripts. It was terminated and is not counted as a passing suite. Its generated tracked outputs in this isolated release worktree were restored to exact pre-run HEAD bytes. Standard explicit tests/*.test.mjs then passed 685 tests.",
+          "observed_at": "2026-11-15T08:38:40.969134+00:00"
+        }
       },
       "commit_sha": null,
       "remote_verified": false,
       "remaining_risks": [
-        "Full unfiltered Game/experience recovery pending.",
-        "No model commit, required Actions or production acceptance yet.",
+        "Model commit/publication, required final-commit Actions and production acceptance pending.",
         "Physical mobile excluded by owner; no hardware FPS claim."
       ],
       "report": "docs/model-qa/MODEL-0010/README.md",
@@ -17305,7 +17325,7 @@
       "thumbnail": "models/mall-waste-sorting-station/previews/mall-waste-sorting-station.webp",
       "root": "ASSET_MallWasteSortingStation",
       "runtime_route": "?model=mall-waste-sorting-station",
-      "export_sha256": "52a62e5ace403100b7757ac0c4b464272f5d46c79903c69d5d2db75a83a2e4ae",
+      "export_sha256": "6205b1aa13eb852db768fe19b9e28b6f8d6001ed73671a4afc63c77017d7ce6d",
       "defects": [],
       "repairs": [],
       "qa_results": {},
@@ -17313,6 +17333,13 @@
       "remote_verified": false,
       "remaining_risks": [
         "Not yet inspected under this QA campaign."
+      ],
+      "upstream_observations": [
+        {
+          "head": "d210eadecbc622dc9161a107468df55402e873e1",
+          "evidence": "discovery-reconciliation-d210eade.json",
+          "note": "Upstream source/export geometry repair observed; campaign deep QA remains PENDING."
+        }
       ]
     },
     {
@@ -17346,7 +17373,7 @@
       "thumbnail": "models/mall-essentials/previews/mall-directory-kiosk.webp",
       "root": "ASSET_MallDirectoryKiosk",
       "runtime_route": "?model=mall-directory-kiosk",
-      "export_sha256": "ebf658b6d03602e3ebeaf68e1305ce32788bcbbf3c67a10be65a0ed628836914",
+      "export_sha256": "7bff90ae927a8897d1372d894fc521cbf3317755d5a1dd701aae70242b6e07a7",
       "defects": [],
       "repairs": [],
       "qa_results": {},
@@ -17354,7 +17381,12 @@
       "remote_verified": false,
       "remaining_risks": [
         "Not yet inspected under this QA campaign."
-      ]
+      ],
+      "upstream_observation": {
+        "revision": "ea9ed61873cd88c02436bf590c06c3e55df9d78a",
+        "evidence": "docs/model-qa/discovery-reconciliation-ea9ed618.json",
+        "deep_qa_accepted": false
+      }
     },
     {
       "qa_id": "MODEL-0069",
@@ -17387,7 +17419,7 @@
       "thumbnail": "models/mall-essentials/previews/mall-advertising-lightbox.webp",
       "root": "ASSET_MallAdvertisingLightbox",
       "runtime_route": "?model=mall-advertising-lightbox",
-      "export_sha256": "d56b65558aef88702e53dba4ef6ebad093bd6bcd760fb420042cd4457d9ce100",
+      "export_sha256": "4e050c5b7e595e175ceadc1176a58ca5b4efcd24f246b8c445bcbf2993a5bc33",
       "defects": [],
       "repairs": [],
       "qa_results": {},
@@ -17395,7 +17427,12 @@
       "remote_verified": false,
       "remaining_risks": [
         "Not yet inspected under this QA campaign."
-      ]
+      ],
+      "upstream_observation": {
+        "revision": "ea9ed61873cd88c02436bf590c06c3e55df9d78a",
+        "evidence": "docs/model-qa/discovery-reconciliation-ea9ed618.json",
+        "deep_qa_accepted": false
+      }
     },
     {
       "qa_id": "MODEL-0070",
@@ -17428,7 +17465,7 @@
       "thumbnail": "models/mall-essentials/previews/mall-trash-bin.webp",
       "root": "ASSET_MallTrashBin",
       "runtime_route": "?model=mall-trash-bin",
-      "export_sha256": "11067f6be8acec9d6651afe6f542f9cadc6bcae1e51e6516524190dcc8d0b48c",
+      "export_sha256": "b80fd5f21960f3a9d1b556c276c24d2ce265a4f0ca636bea2fc2aa2ce3c29b89",
       "defects": [],
       "repairs": [],
       "qa_results": {},
@@ -17436,7 +17473,12 @@
       "remote_verified": false,
       "remaining_risks": [
         "Not yet inspected under this QA campaign."
-      ]
+      ],
+      "upstream_observation": {
+        "revision": "ea9ed61873cd88c02436bf590c06c3e55df9d78a",
+        "evidence": "docs/model-qa/discovery-reconciliation-ea9ed618.json",
+        "deep_qa_accepted": false
+      }
     },
     {
       "qa_id": "MODEL-0071",
@@ -63945,17 +63987,236 @@
       "remaining_risks": [
         "Newly discovered upstream asset; not inspected under this campaign."
       ]
+    },
+    {
+      "model_id": "artifact:models/chibi-visitor-v4/archive/chibi-visitor-v4-primitive-v1.glb",
+      "name": "chibi-visitor-v4-primitive-v1.glb",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [
+        "models/chibi-visitor-v4/archive/chibi-visitor-v4-primitive-v1.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "615e6d433507cb4b8bd0a8b8dcac56d475dfc69e44ec37c8a4897249e87d7586",
+      "qa_id": "MODEL-1893",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/chibi-visitor-v4/exports/chibi-visitor-v4.glb",
+      "name": "chibi-visitor-v4.glb",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [
+        "models/chibi-visitor-v4/exports/chibi-visitor-v4.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "2a2c9791ef2c2102c484bead47d68ff6caf15392e41f4bd24cbe2b8a1d5c98b6",
+      "qa_id": "MODEL-1894",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/chibi-visitor-v4/sources/chibi-visitor-v4.blend",
+      "name": "chibi-visitor-v4.blend",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [],
+      "source_candidates": [
+        "models/chibi-visitor-v4/sources/chibi-visitor-v4.blend"
+      ],
+      "sha256": "890d82a468560eb91fc578dadc0676b92372fdcec150d9ead6b3510cb1b7fcbd",
+      "qa_id": "MODEL-1895",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/fish-realism-review/external-candidates/barramundi/original.glb",
+      "name": "original.glb",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [
+        "models/fish-realism-review/external-candidates/barramundi/original.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "ecc3bafb6b00f2c8b810863c388e3768a7b7ea0d0335e8cb8c574c266e571f4a",
+      "qa_id": "MODEL-1896",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/fish-realism-review/external-candidates/betta/original.glb",
+      "name": "original.glb",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [
+        "models/fish-realism-review/external-candidates/betta/original.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "2cec0e42bdcf47f3660ba420b3fcc86d4d846d4f3edf44deeb08541868eaf589",
+      "qa_id": "MODEL-1897",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/fish-realism-review/revision-03/barramundi/barramundi-review.blend",
+      "name": "barramundi-review.blend",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [],
+      "source_candidates": [
+        "models/fish-realism-review/revision-03/barramundi/barramundi-review.blend"
+      ],
+      "sha256": "d81ac3f4b14687df7bc5d5cc9ffdfb51faff98d5ce6a090407ef28ccfccade1b",
+      "qa_id": "MODEL-1898",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/fish-realism-review/revision-03/barramundi/barramundi-review.glb",
+      "name": "barramundi-review.glb",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [
+        "models/fish-realism-review/revision-03/barramundi/barramundi-review.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "d85b6207ab9a0532c1c0c81097f775cffb1d395ef391e9173b3add57701be045",
+      "qa_id": "MODEL-1899",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/fish-realism-review/revision-03/betta/betta-review.blend",
+      "name": "betta-review.blend",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [],
+      "source_candidates": [
+        "models/fish-realism-review/revision-03/betta/betta-review.blend"
+      ],
+      "sha256": "7af70e0bb6be47c1f8d23e871dc1f9e550beafdae7012abad6bf5c198d199dad",
+      "qa_id": "MODEL-1900",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/fish-realism-review/revision-03/betta/betta-review.glb",
+      "name": "betta-review.glb",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [
+        "models/fish-realism-review/revision-03/betta/betta-review.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "81324e66b2a4362c110fe4998fcd67cb6bc8b7a63303fc424b2280692120de74",
+      "qa_id": "MODEL-1901",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/fish-realism-review/revision-04/stingray/stingray-review.blend",
+      "name": "stingray-review.blend",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [],
+      "source_candidates": [
+        "models/fish-realism-review/revision-04/stingray/stingray-review.blend"
+      ],
+      "sha256": "7994f8e43c6b2c81a13b62563e223c62483d348ea57f0cb0ed8c566d8261375b",
+      "qa_id": "MODEL-1902",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/fish-realism-review/revision-04/stingray/stingray-review.glb",
+      "name": "stingray-review.glb",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [
+        "models/fish-realism-review/revision-04/stingray/stingray-review.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "41c923090336ebc049bce640cec4398472bbfbdb3fcb59cc7acd13a4b2a0c2f7",
+      "qa_id": "MODEL-1903",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
     }
   ],
   "reconciliation": {
-    "release_head": "1e94207991e702451ce931d3f76d30925a903453",
-    "observed_at": "2026-11-15T07:23:34.381914+00:00",
+    "release_head": "fd087c2dfdeaa08c37b21ef11c52fbbc2eabf57b",
+    "observed_at": "2026-11-15T08:21:01.736956+00:00",
     "current_release_catalog_entries": 567,
-    "new_tracked_artifacts": 0,
-    "modified_tracked_artifacts": 6,
-    "added_queue_records": 0,
-    "queue_records": 1892,
-    "evidence": "discovery-reconciliation-1e942079.json",
+    "new_tracked_artifacts": 11,
+    "added_queue_records": 11,
+    "queue_records": 1903,
+    "evidence": "discovery-reconciliation-fd087c2d.json",
     "initial_snapshot_counts_preserved": true
   },
   "reconciliation_history": [
@@ -64026,6 +64287,28 @@
       "added_queue_records": 3,
       "queue_records": 1892,
       "evidence": "discovery-reconciliation-7f6291a7.json",
+      "initial_snapshot_counts_preserved": true
+    },
+    {
+      "release_head": "1e94207991e702451ce931d3f76d30925a903453",
+      "observed_at": "2026-11-15T07:23:34.381914+00:00",
+      "current_release_catalog_entries": 567,
+      "new_tracked_artifacts": 0,
+      "modified_tracked_artifacts": 6,
+      "added_queue_records": 0,
+      "queue_records": 1892,
+      "evidence": "discovery-reconciliation-1e942079.json",
+      "initial_snapshot_counts_preserved": true
+    },
+    {
+      "release_head": "ea9ed61873cd88c02436bf590c06c3e55df9d78a",
+      "observed_at": "2026-11-15T08:04:45.843147+00:00",
+      "current_release_catalog_entries": 567,
+      "new_tracked_artifacts": 0,
+      "modified_tracked_artifacts": 6,
+      "added_queue_records": 0,
+      "queue_records": 1892,
+      "evidence": "discovery-reconciliation-ea9ed618.json",
       "initial_snapshot_counts_preserved": true
     }
   ]
