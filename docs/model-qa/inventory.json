@@ -848,7 +848,7 @@
       "name": "Ball 06",
       "collection": "billiards",
       "kind": "catalog-model",
-      "status": "READY_TO_PUSH",
+      "status": "PUSHED",
       "export_paths": [
         "models/eight-ball-billiards/exports/ball_06.glb"
       ],
@@ -910,13 +910,24 @@
         "remaining_limits": [
           "Physical-phone testing excluded by owner; software WebGL and viewport emulation do not establish physical-device FPS."
         ],
-        "evidence_directory": "docs/model-qa/MODEL-0012"
+        "evidence_directory": "docs/model-qa/MODEL-0012",
+        "publication": {
+          "commit_sha": "2f0867ec85c43ddfa04a71a308b31926acdce217",
+          "remote_main_exact_match": true,
+          "remote_blob_verified": true,
+          "required_actions_run": 43714225525,
+          "required_actions_status": "completed success",
+          "production": "NOT_STARTED",
+          "release_complete": true,
+          "actual_production": "PASS;4runtime+5downloaded geometry checks",
+          "accepted_at": "2026-11-15T13:44:58.786281+00:00",
+          "evidence": "docs/model-qa/MODEL-0012/release-evidence.json"
+        }
       },
-      "commit_sha": null,
-      "remote_verified": false,
+      "commit_sha": "2f0867ec85c43ddfa04a71a308b31926acdce217",
+      "remote_verified": true,
       "remaining_risks": [
-        "Physical-phone testing excluded by owner; software WebGL and viewport emulation do not establish physical-device FPS.",
-        "Main push, required hosted Actions/deployment and actual production acceptance pending."
+        "Physical-phone testing excluded by owner;no physical-device FPS claim."
       ]
     },
     {
@@ -26890,7 +26901,7 @@
       "thumbnail": "models/atm-kiosk/previews/hero.webp",
       "root": "ASSET_ATMKiosk",
       "runtime_route": "?model=atm-kiosk",
-      "export_sha256": "0348db21bde7c430940e76e37817ef86c2466ea549238adcbbcbce4f9619498a",
+      "export_sha256": "ffa5ee98530439c60ea629852107e718cabbff48edf8fc9d7ae861ae8e12c044",
       "defects": [],
       "repairs": [],
       "qa_results": {},
@@ -26898,6 +26909,17 @@
       "remote_verified": false,
       "remaining_risks": [
         "Not yet inspected under this QA campaign."
+      ],
+      "upstream_observations": [
+        {
+          "head": "17a0ed6f394a8e89c05fbbac7ce7c568d9a7eec5",
+          "evidence": "discovery-reconciliation-17a0ed6f.json",
+          "modified_paths": [
+            "models/atm-kiosk/exports/optimized.glb",
+            "models/atm-kiosk/sources/atm-kiosk.blend"
+          ],
+          "note": "Upstream ATM/escalator repair observed;individual deep campaign QA remains PENDING."
+        }
       ]
     },
     {
@@ -30489,7 +30511,7 @@
       "thumbnail": "models/escalator/previews/escalator.webp",
       "root": "ASSET_EscalatorV1_ID004",
       "runtime_route": "?model=escalator",
-      "export_sha256": "f8f8bda8b28a4faaf1fb2b03ee2a832fe23b90621eee9ab0a24a26c1b2b89ada",
+      "export_sha256": "b14375e54f366d3238fb32141bb9d25ca87add72664770e9a8541db9266bd501",
       "defects": [],
       "repairs": [],
       "qa_results": {},
@@ -30497,6 +30519,17 @@
       "remote_verified": false,
       "remaining_risks": [
         "Not yet inspected under this QA campaign."
+      ],
+      "upstream_observations": [
+        {
+          "head": "17a0ed6f394a8e89c05fbbac7ce7c568d9a7eec5",
+          "evidence": "discovery-reconciliation-17a0ed6f.json",
+          "modified_paths": [
+            "models/escalator/exports/optimized.glb",
+            "models/escalator/sources/escalator.blend"
+          ],
+          "note": "Upstream ATM/escalator repair observed;individual deep campaign QA remains PENDING."
+        }
       ]
     },
     {
@@ -35578,20 +35611,20 @@
       "kind": "catalog-model",
       "status": "PENDING",
       "export_paths": [
-        "models/singapore-fish/walking-catfish/exports/model.glb"
+        "models/fish-realism-release/walking-catfish/model.glb"
       ],
       "source_candidates": [
-        "models/singapore-fish/walking-catfish/sources/walking-catfish.blend"
+        "models/fish-realism-qa/walking-catfish/walking-catfish.blend"
       ],
-      "source_mapping": "candidate; inspect asset root in Blender before acceptance",
+      "source_mapping": "Current metadata source candidate;exact root mapping awaits individual QA.",
       "generator_candidates": [],
       "render_scripts": [],
       "validation_tools": [],
-      "metadata": "models/singapore-fish/walking-catfish/metadata/model.json",
-      "thumbnail": "models/singapore-fish/walking-catfish/previews/thumbnail.webp",
+      "metadata": "models/fish-realism-release/walking-catfish/metadata.json",
+      "thumbnail": "models/fish-realism-release/walking-catfish/thumbnail.webp",
       "root": null,
       "runtime_route": "?model=fish-walking-catfish",
-      "export_sha256": "b5c05b24191f817be9eef44e8d20d995758e4a1a2322469c6d90da7b5dd09877",
+      "export_sha256": "97db21bd2185aa221285c6903f577c54480ac6c08e3395887032b66f1fd816af",
       "defects": [],
       "repairs": [],
       "qa_results": {},
@@ -35599,6 +35632,31 @@
       "remote_verified": false,
       "remaining_risks": [
         "Not yet inspected under this QA campaign."
+      ],
+      "upstream_observations": [
+        {
+          "head": "17a0ed6f394a8e89c05fbbac7ce7c568d9a7eec5",
+          "previous_export_paths": [
+            "models/singapore-fish/walking-catfish/exports/model.glb"
+          ],
+          "previous_source_candidates": [
+            "models/singapore-fish/walking-catfish/sources/walking-catfish.blend"
+          ],
+          "previous_root": null,
+          "current_export": {
+            "path": "models/fish-realism-release/walking-catfish/model.glb",
+            "bytes": 4211304,
+            "sha256": "97db21bd2185aa221285c6903f577c54480ac6c08e3395887032b66f1fd816af"
+          },
+          "current_source": {
+            "path": "models/fish-realism-qa/walking-catfish/walking-catfish.blend",
+            "bytes": 11546177,
+            "sha256": "fe3c81aadc29d3a040e0e246cfb025dc058d998ec75e4a34ffbe913f456ea56c"
+          },
+          "historical_qa_id": "MODEL-1961",
+          "status": "PENDING",
+          "evidence": "discovery-reconciliation-17a0ed6f.json"
+        }
       ]
     },
     {
@@ -35609,20 +35667,20 @@
       "kind": "catalog-model",
       "status": "PENDING",
       "export_paths": [
-        "models/singapore-fish/pangasius/exports/model.glb"
+        "models/fish-realism-release/pangasius/model.glb"
       ],
       "source_candidates": [
-        "models/singapore-fish/pangasius/sources/pangasius.blend"
+        "models/fish-realism-qa/pangasius/pangasius.blend"
       ],
-      "source_mapping": "candidate; inspect asset root in Blender before acceptance",
+      "source_mapping": "Current metadata source candidate;exact root mapping awaits individual QA.",
       "generator_candidates": [],
       "render_scripts": [],
       "validation_tools": [],
-      "metadata": "models/singapore-fish/pangasius/metadata/model.json",
-      "thumbnail": "models/singapore-fish/pangasius/previews/thumbnail.webp",
+      "metadata": "models/fish-realism-release/pangasius/metadata.json",
+      "thumbnail": "models/fish-realism-release/pangasius/thumbnail.webp",
       "root": null,
       "runtime_route": "?model=fish-pangasius",
-      "export_sha256": "6ca2f9670080d7c5d93dbe1678c479caf2c69d276b6ae6f07183eb194e951af2",
+      "export_sha256": "89af8b63382469aaaee8b3604435b1372e9bf9333fabf40f28ea07fa2f0d24bb",
       "defects": [],
       "repairs": [],
       "qa_results": {},
@@ -35630,6 +35688,31 @@
       "remote_verified": false,
       "remaining_risks": [
         "Not yet inspected under this QA campaign."
+      ],
+      "upstream_observations": [
+        {
+          "head": "17a0ed6f394a8e89c05fbbac7ce7c568d9a7eec5",
+          "previous_export_paths": [
+            "models/singapore-fish/pangasius/exports/model.glb"
+          ],
+          "previous_source_candidates": [
+            "models/singapore-fish/pangasius/sources/pangasius.blend"
+          ],
+          "previous_root": null,
+          "current_export": {
+            "path": "models/fish-realism-release/pangasius/model.glb",
+            "bytes": 4135460,
+            "sha256": "89af8b63382469aaaee8b3604435b1372e9bf9333fabf40f28ea07fa2f0d24bb"
+          },
+          "current_source": {
+            "path": "models/fish-realism-qa/pangasius/pangasius.blend",
+            "bytes": 11444339,
+            "sha256": "9aea8e5ed2eb2436f38aaa80fe28c802f7c25a40f4d906fe04552adbffcb410b"
+          },
+          "historical_qa_id": "MODEL-1962",
+          "status": "PENDING",
+          "evidence": "discovery-reconciliation-17a0ed6f.json"
+        }
       ]
     },
     {
@@ -35640,20 +35723,20 @@
       "kind": "catalog-model",
       "status": "PENDING",
       "export_paths": [
-        "models/singapore-fish/climbing-perch/exports/model.glb"
+        "models/fish-realism-release/climbing-perch/model.glb"
       ],
       "source_candidates": [
-        "models/singapore-fish/climbing-perch/sources/climbing-perch.blend"
+        "models/fish-realism-qa/climbing-perch/climbing-perch.blend"
       ],
-      "source_mapping": "candidate; inspect asset root in Blender before acceptance",
+      "source_mapping": "Current metadata source candidate;exact root mapping awaits individual QA.",
       "generator_candidates": [],
       "render_scripts": [],
       "validation_tools": [],
-      "metadata": "models/singapore-fish/climbing-perch/metadata/model.json",
-      "thumbnail": "models/singapore-fish/climbing-perch/previews/thumbnail.webp",
+      "metadata": "models/fish-realism-release/climbing-perch/metadata.json",
+      "thumbnail": "models/fish-realism-release/climbing-perch/thumbnail.webp",
       "root": null,
       "runtime_route": "?model=fish-climbing-perch",
-      "export_sha256": "590f739f60c8de31cdb2a793a4c479de71b0f6f0490be7347f97c3627b7997c5",
+      "export_sha256": "3a9763d146337d4b8068ea434cf0902f009514c323f86df26b61ebafea84a03f",
       "defects": [],
       "repairs": [],
       "qa_results": {},
@@ -35661,6 +35744,31 @@
       "remote_verified": false,
       "remaining_risks": [
         "Not yet inspected under this QA campaign."
+      ],
+      "upstream_observations": [
+        {
+          "head": "17a0ed6f394a8e89c05fbbac7ce7c568d9a7eec5",
+          "previous_export_paths": [
+            "models/singapore-fish/climbing-perch/exports/model.glb"
+          ],
+          "previous_source_candidates": [
+            "models/singapore-fish/climbing-perch/sources/climbing-perch.blend"
+          ],
+          "previous_root": null,
+          "current_export": {
+            "path": "models/fish-realism-release/climbing-perch/model.glb",
+            "bytes": 4578796,
+            "sha256": "3a9763d146337d4b8068ea434cf0902f009514c323f86df26b61ebafea84a03f"
+          },
+          "current_source": {
+            "path": "models/fish-realism-qa/climbing-perch/climbing-perch.blend",
+            "bytes": 10807539,
+            "sha256": "2421d553fc19ce4140638184ba0cdee743ce0936ee331e7de395c1c63e99bea5"
+          },
+          "historical_qa_id": "MODEL-1963",
+          "status": "PENDING",
+          "evidence": "discovery-reconciliation-17a0ed6f.json"
+        }
       ]
     },
     {
@@ -35671,20 +35779,20 @@
       "kind": "catalog-model",
       "status": "PENDING",
       "export_paths": [
-        "models/singapore-fish/giant-gourami/exports/model.glb"
+        "models/fish-realism-release/giant-gourami/model.glb"
       ],
       "source_candidates": [
-        "models/singapore-fish/giant-gourami/sources/giant-gourami.blend"
+        "models/fish-realism-qa/giant-gourami/giant-gourami.blend"
       ],
-      "source_mapping": "candidate; inspect asset root in Blender before acceptance",
+      "source_mapping": "Current metadata source candidate;exact root mapping awaits individual QA.",
       "generator_candidates": [],
       "render_scripts": [],
       "validation_tools": [],
-      "metadata": "models/singapore-fish/giant-gourami/metadata/model.json",
-      "thumbnail": "models/singapore-fish/giant-gourami/previews/thumbnail.webp",
+      "metadata": "models/fish-realism-release/giant-gourami/metadata.json",
+      "thumbnail": "models/fish-realism-release/giant-gourami/thumbnail.webp",
       "root": null,
       "runtime_route": "?model=fish-giant-gourami",
-      "export_sha256": "c854612c53dd5d0efaab360917fd390d47df46ac3171b9954edbe91b44602e9a",
+      "export_sha256": "80f1f321d5afd635c68b4536dfce489343099785a2b399dfbc2b07162aacc7ed",
       "defects": [],
       "repairs": [],
       "qa_results": {},
@@ -35692,6 +35800,31 @@
       "remote_verified": false,
       "remaining_risks": [
         "Not yet inspected under this QA campaign."
+      ],
+      "upstream_observations": [
+        {
+          "head": "17a0ed6f394a8e89c05fbbac7ce7c568d9a7eec5",
+          "previous_export_paths": [
+            "models/singapore-fish/giant-gourami/exports/model.glb"
+          ],
+          "previous_source_candidates": [
+            "models/singapore-fish/giant-gourami/sources/giant-gourami.blend"
+          ],
+          "previous_root": null,
+          "current_export": {
+            "path": "models/fish-realism-release/giant-gourami/model.glb",
+            "bytes": 4455504,
+            "sha256": "80f1f321d5afd635c68b4536dfce489343099785a2b399dfbc2b07162aacc7ed"
+          },
+          "current_source": {
+            "path": "models/fish-realism-qa/giant-gourami/giant-gourami.blend",
+            "bytes": 10399446,
+            "sha256": "636fc9a32edf1ac27e2de8b4260b3923ce70094269bc8499b7efea971a85ca5f"
+          },
+          "historical_qa_id": "MODEL-1964",
+          "status": "PENDING",
+          "evidence": "discovery-reconciliation-17a0ed6f.json"
+        }
       ]
     },
     {
@@ -35702,20 +35835,20 @@
       "kind": "catalog-model",
       "status": "PENDING",
       "export_paths": [
-        "models/singapore-fish/three-spot-gourami/exports/model.glb"
+        "models/fish-realism-release/three-spot-gourami/model.glb"
       ],
       "source_candidates": [
-        "models/singapore-fish/three-spot-gourami/sources/three-spot-gourami.blend"
+        "models/fish-realism-qa/three-spot-gourami/three-spot-gourami.blend"
       ],
-      "source_mapping": "candidate; inspect asset root in Blender before acceptance",
+      "source_mapping": "Current metadata source candidate;exact root mapping awaits individual QA.",
       "generator_candidates": [],
       "render_scripts": [],
       "validation_tools": [],
-      "metadata": "models/singapore-fish/three-spot-gourami/metadata/model.json",
-      "thumbnail": "models/singapore-fish/three-spot-gourami/previews/thumbnail.webp",
+      "metadata": "models/fish-realism-release/three-spot-gourami/metadata.json",
+      "thumbnail": "models/fish-realism-release/three-spot-gourami/thumbnail.webp",
       "root": null,
       "runtime_route": "?model=fish-three-spot-gourami",
-      "export_sha256": "c3004ecbcf7c92dbb3ea6a606362aa17d04675077342f9c73c3a2761933e5bed",
+      "export_sha256": "340f7b2745a4ac895d181a25e4ae58f5f2693b76fc185778b30fe6e5288f43e3",
       "defects": [],
       "repairs": [],
       "qa_results": {},
@@ -35723,6 +35856,31 @@
       "remote_verified": false,
       "remaining_risks": [
         "Not yet inspected under this QA campaign."
+      ],
+      "upstream_observations": [
+        {
+          "head": "17a0ed6f394a8e89c05fbbac7ce7c568d9a7eec5",
+          "previous_export_paths": [
+            "models/singapore-fish/three-spot-gourami/exports/model.glb"
+          ],
+          "previous_source_candidates": [
+            "models/singapore-fish/three-spot-gourami/sources/three-spot-gourami.blend"
+          ],
+          "previous_root": null,
+          "current_export": {
+            "path": "models/fish-realism-release/three-spot-gourami/model.glb",
+            "bytes": 4483728,
+            "sha256": "340f7b2745a4ac895d181a25e4ae58f5f2693b76fc185778b30fe6e5288f43e3"
+          },
+          "current_source": {
+            "path": "models/fish-realism-qa/three-spot-gourami/three-spot-gourami.blend",
+            "bytes": 11137358,
+            "sha256": "b683342891fe0fcaa5a4e82f7ae46c4f2ede782e8b8b08da3a50d58486e2261c"
+          },
+          "historical_qa_id": "MODEL-1965",
+          "status": "PENDING",
+          "evidence": "discovery-reconciliation-17a0ed6f.json"
+        }
       ]
     },
     {
@@ -35733,20 +35891,20 @@
       "kind": "catalog-model",
       "status": "PENDING",
       "export_paths": [
-        "models/singapore-fish/grass-carp/exports/model.glb"
+        "models/fish-realism-release/grass-carp/model.glb"
       ],
       "source_candidates": [
-        "models/singapore-fish/grass-carp/sources/grass-carp.blend"
+        "models/fish-realism-qa/grass-carp/grass-carp.blend"
       ],
-      "source_mapping": "candidate; inspect asset root in Blender before acceptance",
+      "source_mapping": "Current metadata source candidate;exact root mapping awaits individual QA.",
       "generator_candidates": [],
       "render_scripts": [],
       "validation_tools": [],
-      "metadata": "models/singapore-fish/grass-carp/metadata/model.json",
-      "thumbnail": "models/singapore-fish/grass-carp/previews/thumbnail.webp",
+      "metadata": "models/fish-realism-release/grass-carp/metadata.json",
+      "thumbnail": "models/fish-realism-release/grass-carp/thumbnail.webp",
       "root": null,
       "runtime_route": "?model=fish-grass-carp",
-      "export_sha256": "98f6ac5fa3960f5665ef6fd73d3f52a09af98837e8bf0fa8f0de0ceb16217744",
+      "export_sha256": "05877377ca8a8970012baf16bdd675f3990eec19f7c052470f857635fa643018",
       "defects": [],
       "repairs": [],
       "qa_results": {},
@@ -35754,6 +35912,31 @@
       "remote_verified": false,
       "remaining_risks": [
         "Not yet inspected under this QA campaign."
+      ],
+      "upstream_observations": [
+        {
+          "head": "17a0ed6f394a8e89c05fbbac7ce7c568d9a7eec5",
+          "previous_export_paths": [
+            "models/singapore-fish/grass-carp/exports/model.glb"
+          ],
+          "previous_source_candidates": [
+            "models/singapore-fish/grass-carp/sources/grass-carp.blend"
+          ],
+          "previous_root": null,
+          "current_export": {
+            "path": "models/fish-realism-release/grass-carp/model.glb",
+            "bytes": 4532184,
+            "sha256": "05877377ca8a8970012baf16bdd675f3990eec19f7c052470f857635fa643018"
+          },
+          "current_source": {
+            "path": "models/fish-realism-qa/grass-carp/grass-carp.blend",
+            "bytes": 10784933,
+            "sha256": "cb0928dbd0774fba6e731e82e744e4ccfddf42581b5be7a538e8297c062e9121"
+          },
+          "historical_qa_id": "MODEL-1966",
+          "status": "PENDING",
+          "evidence": "discovery-reconciliation-17a0ed6f.json"
+        }
       ]
     },
     {
@@ -35764,20 +35947,20 @@
       "kind": "catalog-model",
       "status": "PENDING",
       "export_paths": [
-        "models/singapore-fish/common-carp/exports/model.glb"
+        "models/fish-realism-release/common-carp/model.glb"
       ],
       "source_candidates": [
-        "models/singapore-fish/common-carp/sources/common-carp.blend"
+        "models/fish-realism-qa/common-carp/common-carp.blend"
       ],
-      "source_mapping": "candidate; inspect asset root in Blender before acceptance",
+      "source_mapping": "Current metadata source candidate;exact root mapping awaits individual QA.",
       "generator_candidates": [],
       "render_scripts": [],
       "validation_tools": [],
-      "metadata": "models/singapore-fish/common-carp/metadata/model.json",
-      "thumbnail": "models/singapore-fish/common-carp/previews/thumbnail.webp",
+      "metadata": "models/fish-realism-release/common-carp/metadata.json",
+      "thumbnail": "models/fish-realism-release/common-carp/thumbnail.webp",
       "root": null,
       "runtime_route": "?model=fish-common-carp",
-      "export_sha256": "eef6f64fb02e9555e0cc35b0f3e37a755321a2c9d2297e9dd2694c4be34c3268",
+      "export_sha256": "5458e69d40c8341293ce8d465b43dd0dac2b058dacb527f673eb774814263747",
       "defects": [],
       "repairs": [],
       "qa_results": {},
@@ -35785,6 +35968,31 @@
       "remote_verified": false,
       "remaining_risks": [
         "Not yet inspected under this QA campaign."
+      ],
+      "upstream_observations": [
+        {
+          "head": "17a0ed6f394a8e89c05fbbac7ce7c568d9a7eec5",
+          "previous_export_paths": [
+            "models/singapore-fish/common-carp/exports/model.glb"
+          ],
+          "previous_source_candidates": [
+            "models/singapore-fish/common-carp/sources/common-carp.blend"
+          ],
+          "previous_root": null,
+          "current_export": {
+            "path": "models/fish-realism-release/common-carp/model.glb",
+            "bytes": 4663964,
+            "sha256": "5458e69d40c8341293ce8d465b43dd0dac2b058dacb527f673eb774814263747"
+          },
+          "current_source": {
+            "path": "models/fish-realism-qa/common-carp/common-carp.blend",
+            "bytes": 10790221,
+            "sha256": "6d30c941896d74772e60a137fb502a8ab2cfba860bdda1c821e7234621c540fb"
+          },
+          "historical_qa_id": "MODEL-1967",
+          "status": "PENDING",
+          "evidence": "discovery-reconciliation-17a0ed6f.json"
+        }
       ]
     },
     {
@@ -35795,20 +36003,20 @@
       "kind": "catalog-model",
       "status": "PENDING",
       "export_paths": [
-        "models/singapore-fish/jade-perch/exports/model.glb"
+        "models/fish-realism-release/jade-perch/model.glb"
       ],
       "source_candidates": [
-        "models/singapore-fish/jade-perch/sources/jade-perch.blend"
+        "models/fish-realism-qa/jade-perch/jade-perch.blend"
       ],
-      "source_mapping": "candidate; inspect asset root in Blender before acceptance",
+      "source_mapping": "Current metadata source candidate;exact root mapping awaits individual QA.",
       "generator_candidates": [],
       "render_scripts": [],
       "validation_tools": [],
-      "metadata": "models/singapore-fish/jade-perch/metadata/model.json",
-      "thumbnail": "models/singapore-fish/jade-perch/previews/thumbnail.webp",
+      "metadata": "models/fish-realism-release/jade-perch/metadata.json",
+      "thumbnail": "models/fish-realism-release/jade-perch/thumbnail.webp",
       "root": null,
       "runtime_route": "?model=fish-jade-perch",
-      "export_sha256": "d9a3e54bbef363ad3110ca6661250e95ff38de1e9908c526984c6d6d0c246fe3",
+      "export_sha256": "3f11a79a935bf6d621c707ba200edd352c4cc0d84d9da5e451c0b29fc0f091d5",
       "defects": [],
       "repairs": [],
       "qa_results": {},
@@ -35816,6 +36024,31 @@
       "remote_verified": false,
       "remaining_risks": [
         "Not yet inspected under this QA campaign."
+      ],
+      "upstream_observations": [
+        {
+          "head": "17a0ed6f394a8e89c05fbbac7ce7c568d9a7eec5",
+          "previous_export_paths": [
+            "models/singapore-fish/jade-perch/exports/model.glb"
+          ],
+          "previous_source_candidates": [
+            "models/singapore-fish/jade-perch/sources/jade-perch.blend"
+          ],
+          "previous_root": null,
+          "current_export": {
+            "path": "models/fish-realism-release/jade-perch/model.glb",
+            "bytes": 4678656,
+            "sha256": "3f11a79a935bf6d621c707ba200edd352c4cc0d84d9da5e451c0b29fc0f091d5"
+          },
+          "current_source": {
+            "path": "models/fish-realism-qa/jade-perch/jade-perch.blend",
+            "bytes": 11168289,
+            "sha256": "b10a6516c04bb0c468429790d14920cd92b2393ae12e3ad053e7c9359898fd13"
+          },
+          "historical_qa_id": "MODEL-1968",
+          "status": "PENDING",
+          "evidence": "discovery-reconciliation-17a0ed6f.json"
+        }
       ]
     },
     {
@@ -35826,20 +36059,20 @@
       "kind": "catalog-model",
       "status": "PENDING",
       "export_paths": [
-        "models/singapore-fish/grey-mullet/exports/model.glb"
+        "models/fish-realism-release/grey-mullet/model.glb"
       ],
       "source_candidates": [
-        "models/singapore-fish/grey-mullet/sources/grey-mullet.blend"
+        "models/fish-realism-qa/grey-mullet/grey-mullet.blend"
       ],
-      "source_mapping": "candidate; inspect asset root in Blender before acceptance",
+      "source_mapping": "Current metadata source candidate;exact root mapping awaits individual QA.",
       "generator_candidates": [],
       "render_scripts": [],
       "validation_tools": [],
-      "metadata": "models/singapore-fish/grey-mullet/metadata/model.json",
-      "thumbnail": "models/singapore-fish/grey-mullet/previews/thumbnail.webp",
+      "metadata": "models/fish-realism-release/grey-mullet/metadata.json",
+      "thumbnail": "models/fish-realism-release/grey-mullet/thumbnail.webp",
       "root": null,
       "runtime_route": "?model=fish-grey-mullet",
-      "export_sha256": "f053db987bab5b86cd3ac411c2535a91c98a69800b438fe343797434b6b9561f",
+      "export_sha256": "68fe0762dc7b96ec40f020d1008bc1131de73ba00bd64183b32aff583125bc3f",
       "defects": [],
       "repairs": [],
       "qa_results": {},
@@ -35847,6 +36080,31 @@
       "remote_verified": false,
       "remaining_risks": [
         "Not yet inspected under this QA campaign."
+      ],
+      "upstream_observations": [
+        {
+          "head": "17a0ed6f394a8e89c05fbbac7ce7c568d9a7eec5",
+          "previous_export_paths": [
+            "models/singapore-fish/grey-mullet/exports/model.glb"
+          ],
+          "previous_source_candidates": [
+            "models/singapore-fish/grey-mullet/sources/grey-mullet.blend"
+          ],
+          "previous_root": null,
+          "current_export": {
+            "path": "models/fish-realism-release/grey-mullet/model.glb",
+            "bytes": 4527260,
+            "sha256": "68fe0762dc7b96ec40f020d1008bc1131de73ba00bd64183b32aff583125bc3f"
+          },
+          "current_source": {
+            "path": "models/fish-realism-qa/grey-mullet/grey-mullet.blend",
+            "bytes": 10852597,
+            "sha256": "e95162535c2d6a5aa7223f33c454b1b9ebd1ac9e9f27fdcb84312f269b04a697"
+          },
+          "historical_qa_id": "MODEL-1969",
+          "status": "PENDING",
+          "evidence": "discovery-reconciliation-17a0ed6f.json"
+        }
       ]
     },
     {
@@ -35857,20 +36115,20 @@
       "kind": "catalog-model",
       "status": "PENDING",
       "export_paths": [
-        "models/singapore-fish/milkfish/exports/model.glb"
+        "models/fish-realism-release/milkfish/model.glb"
       ],
       "source_candidates": [
-        "models/singapore-fish/milkfish/sources/milkfish.blend"
+        "models/fish-realism-qa/milkfish/milkfish.blend"
       ],
-      "source_mapping": "candidate; inspect asset root in Blender before acceptance",
+      "source_mapping": "Current metadata source candidate;exact root mapping awaits individual QA.",
       "generator_candidates": [],
       "render_scripts": [],
       "validation_tools": [],
-      "metadata": "models/singapore-fish/milkfish/metadata/model.json",
-      "thumbnail": "models/singapore-fish/milkfish/previews/thumbnail.webp",
+      "metadata": "models/fish-realism-release/milkfish/metadata.json",
+      "thumbnail": "models/fish-realism-release/milkfish/thumbnail.webp",
       "root": null,
       "runtime_route": "?model=fish-milkfish",
-      "export_sha256": "be901b07b46400069406714166223cedf4f321ab7ddfcc27d25d67190a98c4f9",
+      "export_sha256": "599c2c7dae10136e7686aebf3c25eb6c87e943f6380656ba997667c0207b661b",
       "defects": [],
       "repairs": [],
       "qa_results": {},
@@ -35878,6 +36136,31 @@
       "remote_verified": false,
       "remaining_risks": [
         "Not yet inspected under this QA campaign."
+      ],
+      "upstream_observations": [
+        {
+          "head": "17a0ed6f394a8e89c05fbbac7ce7c568d9a7eec5",
+          "previous_export_paths": [
+            "models/singapore-fish/milkfish/exports/model.glb"
+          ],
+          "previous_source_candidates": [
+            "models/singapore-fish/milkfish/sources/milkfish.blend"
+          ],
+          "previous_root": null,
+          "current_export": {
+            "path": "models/fish-realism-release/milkfish/model.glb",
+            "bytes": 4057156,
+            "sha256": "599c2c7dae10136e7686aebf3c25eb6c87e943f6380656ba997667c0207b661b"
+          },
+          "current_source": {
+            "path": "models/fish-realism-qa/milkfish/milkfish.blend",
+            "bytes": 10523155,
+            "sha256": "8727bd7786fe7b041f6296b59f8d4cbcd347aa29e31150f30ed6f9115efd822d"
+          },
+          "historical_qa_id": "MODEL-1970",
+          "status": "PENDING",
+          "evidence": "discovery-reconciliation-17a0ed6f.json"
+        }
       ]
     },
     {
@@ -35888,20 +36171,20 @@
       "kind": "catalog-model",
       "status": "PENDING",
       "export_paths": [
-        "models/singapore-fish/malaysian-mahseer/exports/model.glb"
+        "models/fish-realism-release/malaysian-mahseer/model.glb"
       ],
       "source_candidates": [
-        "models/singapore-fish/malaysian-mahseer/sources/malaysian-mahseer.blend"
+        "models/fish-realism-qa/malaysian-mahseer/malaysian-mahseer.blend"
       ],
-      "source_mapping": "candidate; inspect asset root in Blender before acceptance",
+      "source_mapping": "Current metadata source candidate;exact root mapping awaits individual QA.",
       "generator_candidates": [],
       "render_scripts": [],
       "validation_tools": [],
-      "metadata": "models/singapore-fish/malaysian-mahseer/metadata/model.json",
-      "thumbnail": "models/singapore-fish/malaysian-mahseer/previews/thumbnail.webp",
+      "metadata": "models/fish-realism-release/malaysian-mahseer/metadata.json",
+      "thumbnail": "models/fish-realism-release/malaysian-mahseer/thumbnail.webp",
       "root": null,
       "runtime_route": "?model=fish-malaysian-mahseer",
-      "export_sha256": "5e211018fdfb0be9f693880c437e9d0a13f7fdf78921caa18c6eafc9a379a4f1",
+      "export_sha256": "3211feecb52a17f2e15ce4c80287f99203082af2663859fec400bb9e256973b3",
       "defects": [],
       "repairs": [],
       "qa_results": {},
@@ -35909,6 +36192,31 @@
       "remote_verified": false,
       "remaining_risks": [
         "Not yet inspected under this QA campaign."
+      ],
+      "upstream_observations": [
+        {
+          "head": "17a0ed6f394a8e89c05fbbac7ce7c568d9a7eec5",
+          "previous_export_paths": [
+            "models/singapore-fish/malaysian-mahseer/exports/model.glb"
+          ],
+          "previous_source_candidates": [
+            "models/singapore-fish/malaysian-mahseer/sources/malaysian-mahseer.blend"
+          ],
+          "previous_root": null,
+          "current_export": {
+            "path": "models/fish-realism-release/malaysian-mahseer/model.glb",
+            "bytes": 4262152,
+            "sha256": "3211feecb52a17f2e15ce4c80287f99203082af2663859fec400bb9e256973b3"
+          },
+          "current_source": {
+            "path": "models/fish-realism-qa/malaysian-mahseer/malaysian-mahseer.blend",
+            "bytes": 10333641,
+            "sha256": "eb27f9780e6ec506b7e228c05680d5e67759d61692eb567ff00d7a8944057bfd"
+          },
+          "historical_qa_id": "MODEL-1971",
+          "status": "PENDING",
+          "evidence": "discovery-reconciliation-17a0ed6f.json"
+        }
       ]
     },
     {
@@ -35919,20 +36227,20 @@
       "kind": "catalog-model",
       "status": "PENDING",
       "export_paths": [
-        "models/singapore-fish/sultan-fish/exports/model.glb"
+        "models/fish-realism-release/sultan-fish/model.glb"
       ],
       "source_candidates": [
-        "models/singapore-fish/sultan-fish/sources/sultan-fish.blend"
+        "models/fish-realism-qa/sultan-fish/sultan-fish.blend"
       ],
-      "source_mapping": "candidate; inspect asset root in Blender before acceptance",
+      "source_mapping": "Current metadata source candidate;exact root mapping awaits individual QA.",
       "generator_candidates": [],
       "render_scripts": [],
       "validation_tools": [],
-      "metadata": "models/singapore-fish/sultan-fish/metadata/model.json",
-      "thumbnail": "models/singapore-fish/sultan-fish/previews/thumbnail.webp",
+      "metadata": "models/fish-realism-release/sultan-fish/metadata.json",
+      "thumbnail": "models/fish-realism-release/sultan-fish/thumbnail.webp",
       "root": null,
       "runtime_route": "?model=fish-sultan-fish",
-      "export_sha256": "db2452ac89176bab1f8424d45b31b09877fd2e3d9d1a01a57459550d94d299c8",
+      "export_sha256": "95df553e6f8037b0f98ffe704dbab4b1837360a009526564851a6ebb456c6cc9",
       "defects": [],
       "repairs": [],
       "qa_results": {},
@@ -35940,6 +36248,31 @@
       "remote_verified": false,
       "remaining_risks": [
         "Not yet inspected under this QA campaign."
+      ],
+      "upstream_observations": [
+        {
+          "head": "17a0ed6f394a8e89c05fbbac7ce7c568d9a7eec5",
+          "previous_export_paths": [
+            "models/singapore-fish/sultan-fish/exports/model.glb"
+          ],
+          "previous_source_candidates": [
+            "models/singapore-fish/sultan-fish/sources/sultan-fish.blend"
+          ],
+          "previous_root": null,
+          "current_export": {
+            "path": "models/fish-realism-release/sultan-fish/model.glb",
+            "bytes": 4103192,
+            "sha256": "95df553e6f8037b0f98ffe704dbab4b1837360a009526564851a6ebb456c6cc9"
+          },
+          "current_source": {
+            "path": "models/fish-realism-qa/sultan-fish/sultan-fish.blend",
+            "bytes": 10461557,
+            "sha256": "006e8972ed62d1d29a1d6665e0733f7fc6fe13b864ddb48c3a5b0cfdf5b0e3ad"
+          },
+          "historical_qa_id": "MODEL-1972",
+          "status": "PENDING",
+          "evidence": "discovery-reconciliation-17a0ed6f.json"
+        }
       ]
     },
     {
@@ -35950,20 +36283,20 @@
       "kind": "catalog-model",
       "status": "PENDING",
       "export_paths": [
-        "models/singapore-fish/hampala-barb/exports/model.glb"
+        "models/fish-realism-release/hampala-barb/model.glb"
       ],
       "source_candidates": [
-        "models/singapore-fish/hampala-barb/sources/hampala-barb.blend"
+        "models/fish-realism-qa/hampala-barb/hampala-barb.blend"
       ],
-      "source_mapping": "candidate; inspect asset root in Blender before acceptance",
+      "source_mapping": "Current metadata source candidate;exact root mapping awaits individual QA.",
       "generator_candidates": [],
       "render_scripts": [],
       "validation_tools": [],
-      "metadata": "models/singapore-fish/hampala-barb/metadata/model.json",
-      "thumbnail": "models/singapore-fish/hampala-barb/previews/thumbnail.webp",
+      "metadata": "models/fish-realism-release/hampala-barb/metadata.json",
+      "thumbnail": "models/fish-realism-release/hampala-barb/thumbnail.webp",
       "root": null,
       "runtime_route": "?model=fish-hampala-barb",
-      "export_sha256": "9abb1f1e5160bd5132c3a2151005a7194f66d86da73aaabca439db2e79618986",
+      "export_sha256": "bbc0dfbf0c4b043177881900775546f5d3f5a78739eebd9ea4089561768061f4",
       "defects": [],
       "repairs": [],
       "qa_results": {},
@@ -35971,6 +36304,31 @@
       "remote_verified": false,
       "remaining_risks": [
         "Not yet inspected under this QA campaign."
+      ],
+      "upstream_observations": [
+        {
+          "head": "17a0ed6f394a8e89c05fbbac7ce7c568d9a7eec5",
+          "previous_export_paths": [
+            "models/singapore-fish/hampala-barb/exports/model.glb"
+          ],
+          "previous_source_candidates": [
+            "models/singapore-fish/hampala-barb/sources/hampala-barb.blend"
+          ],
+          "previous_root": null,
+          "current_export": {
+            "path": "models/fish-realism-release/hampala-barb/model.glb",
+            "bytes": 4139040,
+            "sha256": "bbc0dfbf0c4b043177881900775546f5d3f5a78739eebd9ea4089561768061f4"
+          },
+          "current_source": {
+            "path": "models/fish-realism-qa/hampala-barb/hampala-barb.blend",
+            "bytes": 10572838,
+            "sha256": "d53540ba9590f4da07b855c8bf59734b17ad92d7e405cebf5c842d29970b2ac6"
+          },
+          "historical_qa_id": "MODEL-1973",
+          "status": "PENDING",
+          "evidence": "discovery-reconciliation-17a0ed6f.json"
+        }
       ]
     },
     {
@@ -35981,20 +36339,20 @@
       "kind": "catalog-model",
       "status": "PENDING",
       "export_paths": [
-        "models/singapore-fish/lampam/exports/model.glb"
+        "models/fish-realism-release/lampam/model.glb"
       ],
       "source_candidates": [
-        "models/singapore-fish/lampam/sources/lampam.blend"
+        "models/fish-realism-qa/lampam/lampam.blend"
       ],
-      "source_mapping": "candidate; inspect asset root in Blender before acceptance",
+      "source_mapping": "Current metadata source candidate;exact root mapping awaits individual QA.",
       "generator_candidates": [],
       "render_scripts": [],
       "validation_tools": [],
-      "metadata": "models/singapore-fish/lampam/metadata/model.json",
-      "thumbnail": "models/singapore-fish/lampam/previews/thumbnail.webp",
+      "metadata": "models/fish-realism-release/lampam/metadata.json",
+      "thumbnail": "models/fish-realism-release/lampam/thumbnail.webp",
       "root": null,
       "runtime_route": "?model=fish-lampam",
-      "export_sha256": "4927967fa841d1f1dfeddf6d625fa0d8464aa0cd3404335897728593f24f998e",
+      "export_sha256": "093cdcba933be5f9f557a53ec70ae042933fafa002b6077f952f1ace4a608608",
       "defects": [],
       "repairs": [],
       "qa_results": {},
@@ -36002,6 +36360,31 @@
       "remote_verified": false,
       "remaining_risks": [
         "Not yet inspected under this QA campaign."
+      ],
+      "upstream_observations": [
+        {
+          "head": "17a0ed6f394a8e89c05fbbac7ce7c568d9a7eec5",
+          "previous_export_paths": [
+            "models/singapore-fish/lampam/exports/model.glb"
+          ],
+          "previous_source_candidates": [
+            "models/singapore-fish/lampam/sources/lampam.blend"
+          ],
+          "previous_root": null,
+          "current_export": {
+            "path": "models/fish-realism-release/lampam/model.glb",
+            "bytes": 4893160,
+            "sha256": "093cdcba933be5f9f557a53ec70ae042933fafa002b6077f952f1ace4a608608"
+          },
+          "current_source": {
+            "path": "models/fish-realism-qa/lampam/lampam.blend",
+            "bytes": 12919002,
+            "sha256": "6e3ef4f9ed25e3547173cdb14494e3fb7cca9a3dd3b1912226d3339128e85c8d"
+          },
+          "historical_qa_id": "MODEL-1974",
+          "status": "PENDING",
+          "evidence": "discovery-reconciliation-17a0ed6f.json"
+        }
       ]
     },
     {
@@ -36012,20 +36395,20 @@
       "kind": "catalog-model",
       "status": "PENDING",
       "export_paths": [
-        "models/singapore-fish/river-catfish/exports/model.glb"
+        "models/fish-realism-release/river-catfish/model.glb"
       ],
       "source_candidates": [
-        "models/singapore-fish/river-catfish/sources/river-catfish.blend"
+        "models/fish-realism-qa/river-catfish/river-catfish.blend"
       ],
-      "source_mapping": "candidate; inspect asset root in Blender before acceptance",
+      "source_mapping": "Current metadata source candidate;exact root mapping awaits individual QA.",
       "generator_candidates": [],
       "render_scripts": [],
       "validation_tools": [],
-      "metadata": "models/singapore-fish/river-catfish/metadata/model.json",
-      "thumbnail": "models/singapore-fish/river-catfish/previews/thumbnail.webp",
+      "metadata": "models/fish-realism-release/river-catfish/metadata.json",
+      "thumbnail": "models/fish-realism-release/river-catfish/thumbnail.webp",
       "root": null,
       "runtime_route": "?model=fish-river-catfish",
-      "export_sha256": "0612d909643d9323eb80ee4ab7464a0bdbef3a22855c8a859ed50d92b8d10933",
+      "export_sha256": "17106e22d1725e7b736a1a14c7637fd0ee3b0bd950fca72fe96b48003a6d79f2",
       "defects": [],
       "repairs": [],
       "qa_results": {},
@@ -36033,6 +36416,31 @@
       "remote_verified": false,
       "remaining_risks": [
         "Not yet inspected under this QA campaign."
+      ],
+      "upstream_observations": [
+        {
+          "head": "17a0ed6f394a8e89c05fbbac7ce7c568d9a7eec5",
+          "previous_export_paths": [
+            "models/singapore-fish/river-catfish/exports/model.glb"
+          ],
+          "previous_source_candidates": [
+            "models/singapore-fish/river-catfish/sources/river-catfish.blend"
+          ],
+          "previous_root": null,
+          "current_export": {
+            "path": "models/fish-realism-release/river-catfish/model.glb",
+            "bytes": 4509420,
+            "sha256": "17106e22d1725e7b736a1a14c7637fd0ee3b0bd950fca72fe96b48003a6d79f2"
+          },
+          "current_source": {
+            "path": "models/fish-realism-qa/river-catfish/river-catfish.blend",
+            "bytes": 11633431,
+            "sha256": "3bf899a91942bdb898e0b422b59a79b88d5ae3c6098da203cb999ed31ef1b6dc"
+          },
+          "historical_qa_id": "MODEL-1975",
+          "status": "PENDING",
+          "evidence": "discovery-reconciliation-17a0ed6f.json"
+        }
       ]
     },
     {
@@ -48500,7 +48908,21 @@
       "commit_sha": null,
       "remote_verified": false,
       "remaining_risks": [
-        "Artifact identity and applicability require inspection; no exemption or PASS assumed."
+        "Artifact identity and applicability require inspection; no exemption or PASS assumed.",
+        "Untracked backup differs from initial content hash. Current variant is preserved locally;initial bytes not found in bounded known-source/history search. Review provenance/current input explicitly during individual QA;do not claim unchanged initial content."
+      ],
+      "inventory_observations": [
+        {
+          "observed_at": "2026-11-15T12:52:29.504248+00:00",
+          "source_head": "2f0867ec85c43ddfa04a71a308b31926acdce217",
+          "evidence": "docs/model-qa/MODEL-0012/inventory-scope-verification.json",
+          "initial_sha256": "7cb690ffb25da76a02ef5c1b32b2019d3b8d01c9031c629b200758e07d5ca801",
+          "observed_current_sha256": "578ac9280880d33d4ece38dc89a4358654e2748a067ca6df2e53aa350b0abf34",
+          "preserved_current_variant": "output/model-qa/inventory-originals/MODEL-1114/578ac9280880d33d4ece38dc89a4358654e2748a067ca6df2e53aa350b0abf34.blend1",
+          "initial_bytes_recovered": false,
+          "source_files_modified": false,
+          "status": "PENDING;bookkeeping observation only,no model QA acceptance"
+        }
       ]
     },
     {
@@ -66507,16 +66929,799 @@
       "remaining_risks": [
         "Not inspected under this campaign; preserved upstream artifact."
       ]
+    },
+    {
+      "qa_id": "MODEL-1960",
+      "model_id": "chibi-mall-guide-v5",
+      "name": "Chibi Mall Guide v5",
+      "collection": "Chibi Mall Guide v5",
+      "kind": "catalog-model",
+      "status": "PENDING",
+      "export_paths": [
+        "models/chibi-mall-guide-v5/final/guide.glb"
+      ],
+      "source_candidates": [
+        "models/chibi-mall-guide-v5/final/guide.blend"
+      ],
+      "source_mapping": "Current metadata source candidate;exact root/reproducibility awaits individual QA.",
+      "generator_candidates": [],
+      "render_scripts": [],
+      "validation_tools": [],
+      "metadata": "models/chibi-mall-guide-v5/metadata.json",
+      "thumbnail": "models/chibi-mall-guide-v5/previews/front.png",
+      "root": null,
+      "runtime_route": "?model=chibi-mall-guide-v5",
+      "export_sha256": "886f1c5b1220c795efc2aa8c4a69192e9ac2e167c91a4521bccd890d26210e3c",
+      "downloadable": false,
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign.",
+        "Upstream development-preview and rights statements remain unverified source evidence;preserve viewing-only/download-disabled configuration."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1961",
+      "model_id": "artifact:models/singapore-fish/walking-catfish/exports/model.glb",
+      "name": "model.glb",
+      "kind": "historical-catalog-export",
+      "status": "PENDING",
+      "export_paths": [
+        "models/singapore-fish/walking-catfish/exports/model.glb"
+      ],
+      "source_candidates": [
+        "models/singapore-fish/walking-catfish/sources/walking-catfish.blend"
+      ],
+      "sha256": "b5c05b24191f817be9eef44e8d20d995758e4a1a2322469c6d90da7b5dd09877",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1962",
+      "model_id": "artifact:models/singapore-fish/pangasius/exports/model.glb",
+      "name": "model.glb",
+      "kind": "historical-catalog-export",
+      "status": "PENDING",
+      "export_paths": [
+        "models/singapore-fish/pangasius/exports/model.glb"
+      ],
+      "source_candidates": [
+        "models/singapore-fish/pangasius/sources/pangasius.blend"
+      ],
+      "sha256": "6ca2f9670080d7c5d93dbe1678c479caf2c69d276b6ae6f07183eb194e951af2",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1963",
+      "model_id": "artifact:models/singapore-fish/climbing-perch/exports/model.glb",
+      "name": "model.glb",
+      "kind": "historical-catalog-export",
+      "status": "PENDING",
+      "export_paths": [
+        "models/singapore-fish/climbing-perch/exports/model.glb"
+      ],
+      "source_candidates": [
+        "models/singapore-fish/climbing-perch/sources/climbing-perch.blend"
+      ],
+      "sha256": "590f739f60c8de31cdb2a793a4c479de71b0f6f0490be7347f97c3627b7997c5",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1964",
+      "model_id": "artifact:models/singapore-fish/giant-gourami/exports/model.glb",
+      "name": "model.glb",
+      "kind": "historical-catalog-export",
+      "status": "PENDING",
+      "export_paths": [
+        "models/singapore-fish/giant-gourami/exports/model.glb"
+      ],
+      "source_candidates": [
+        "models/singapore-fish/giant-gourami/sources/giant-gourami.blend"
+      ],
+      "sha256": "c854612c53dd5d0efaab360917fd390d47df46ac3171b9954edbe91b44602e9a",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1965",
+      "model_id": "artifact:models/singapore-fish/three-spot-gourami/exports/model.glb",
+      "name": "model.glb",
+      "kind": "historical-catalog-export",
+      "status": "PENDING",
+      "export_paths": [
+        "models/singapore-fish/three-spot-gourami/exports/model.glb"
+      ],
+      "source_candidates": [
+        "models/singapore-fish/three-spot-gourami/sources/three-spot-gourami.blend"
+      ],
+      "sha256": "c3004ecbcf7c92dbb3ea6a606362aa17d04675077342f9c73c3a2761933e5bed",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1966",
+      "model_id": "artifact:models/singapore-fish/grass-carp/exports/model.glb",
+      "name": "model.glb",
+      "kind": "historical-catalog-export",
+      "status": "PENDING",
+      "export_paths": [
+        "models/singapore-fish/grass-carp/exports/model.glb"
+      ],
+      "source_candidates": [
+        "models/singapore-fish/grass-carp/sources/grass-carp.blend"
+      ],
+      "sha256": "98f6ac5fa3960f5665ef6fd73d3f52a09af98837e8bf0fa8f0de0ceb16217744",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1967",
+      "model_id": "artifact:models/singapore-fish/common-carp/exports/model.glb",
+      "name": "model.glb",
+      "kind": "historical-catalog-export",
+      "status": "PENDING",
+      "export_paths": [
+        "models/singapore-fish/common-carp/exports/model.glb"
+      ],
+      "source_candidates": [
+        "models/singapore-fish/common-carp/sources/common-carp.blend"
+      ],
+      "sha256": "eef6f64fb02e9555e0cc35b0f3e37a755321a2c9d2297e9dd2694c4be34c3268",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1968",
+      "model_id": "artifact:models/singapore-fish/jade-perch/exports/model.glb",
+      "name": "model.glb",
+      "kind": "historical-catalog-export",
+      "status": "PENDING",
+      "export_paths": [
+        "models/singapore-fish/jade-perch/exports/model.glb"
+      ],
+      "source_candidates": [
+        "models/singapore-fish/jade-perch/sources/jade-perch.blend"
+      ],
+      "sha256": "d9a3e54bbef363ad3110ca6661250e95ff38de1e9908c526984c6d6d0c246fe3",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1969",
+      "model_id": "artifact:models/singapore-fish/grey-mullet/exports/model.glb",
+      "name": "model.glb",
+      "kind": "historical-catalog-export",
+      "status": "PENDING",
+      "export_paths": [
+        "models/singapore-fish/grey-mullet/exports/model.glb"
+      ],
+      "source_candidates": [
+        "models/singapore-fish/grey-mullet/sources/grey-mullet.blend"
+      ],
+      "sha256": "f053db987bab5b86cd3ac411c2535a91c98a69800b438fe343797434b6b9561f",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1970",
+      "model_id": "artifact:models/singapore-fish/milkfish/exports/model.glb",
+      "name": "model.glb",
+      "kind": "historical-catalog-export",
+      "status": "PENDING",
+      "export_paths": [
+        "models/singapore-fish/milkfish/exports/model.glb"
+      ],
+      "source_candidates": [
+        "models/singapore-fish/milkfish/sources/milkfish.blend"
+      ],
+      "sha256": "be901b07b46400069406714166223cedf4f321ab7ddfcc27d25d67190a98c4f9",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1971",
+      "model_id": "artifact:models/singapore-fish/malaysian-mahseer/exports/model.glb",
+      "name": "model.glb",
+      "kind": "historical-catalog-export",
+      "status": "PENDING",
+      "export_paths": [
+        "models/singapore-fish/malaysian-mahseer/exports/model.glb"
+      ],
+      "source_candidates": [
+        "models/singapore-fish/malaysian-mahseer/sources/malaysian-mahseer.blend"
+      ],
+      "sha256": "5e211018fdfb0be9f693880c437e9d0a13f7fdf78921caa18c6eafc9a379a4f1",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1972",
+      "model_id": "artifact:models/singapore-fish/sultan-fish/exports/model.glb",
+      "name": "model.glb",
+      "kind": "historical-catalog-export",
+      "status": "PENDING",
+      "export_paths": [
+        "models/singapore-fish/sultan-fish/exports/model.glb"
+      ],
+      "source_candidates": [
+        "models/singapore-fish/sultan-fish/sources/sultan-fish.blend"
+      ],
+      "sha256": "db2452ac89176bab1f8424d45b31b09877fd2e3d9d1a01a57459550d94d299c8",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1973",
+      "model_id": "artifact:models/singapore-fish/hampala-barb/exports/model.glb",
+      "name": "model.glb",
+      "kind": "historical-catalog-export",
+      "status": "PENDING",
+      "export_paths": [
+        "models/singapore-fish/hampala-barb/exports/model.glb"
+      ],
+      "source_candidates": [
+        "models/singapore-fish/hampala-barb/sources/hampala-barb.blend"
+      ],
+      "sha256": "9abb1f1e5160bd5132c3a2151005a7194f66d86da73aaabca439db2e79618986",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1974",
+      "model_id": "artifact:models/singapore-fish/lampam/exports/model.glb",
+      "name": "model.glb",
+      "kind": "historical-catalog-export",
+      "status": "PENDING",
+      "export_paths": [
+        "models/singapore-fish/lampam/exports/model.glb"
+      ],
+      "source_candidates": [
+        "models/singapore-fish/lampam/sources/lampam.blend"
+      ],
+      "sha256": "4927967fa841d1f1dfeddf6d625fa0d8464aa0cd3404335897728593f24f998e",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1975",
+      "model_id": "artifact:models/singapore-fish/river-catfish/exports/model.glb",
+      "name": "model.glb",
+      "kind": "historical-catalog-export",
+      "status": "PENDING",
+      "export_paths": [
+        "models/singapore-fish/river-catfish/exports/model.glb"
+      ],
+      "source_candidates": [
+        "models/singapore-fish/river-catfish/sources/river-catfish.blend"
+      ],
+      "sha256": "0612d909643d9323eb80ee4ab7464a0bdbef3a22855c8a859ed50d92b8d10933",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1976",
+      "model_id": "artifact:models/atm-kiosk/reports/source-edit-current/control.glb",
+      "name": "control.glb",
+      "kind": "uncatalogued-artifact",
+      "status": "PENDING",
+      "export_paths": [
+        "models/atm-kiosk/reports/source-edit-current/control.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "da8ba27bb4a9d09eaec6ec43261c4ae642f5b6c961dc8fc1fcc8e1953d96c1c5",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1977",
+      "model_id": "artifact:models/atm-kiosk/reports/source-edit-current/edited.blend",
+      "name": "edited.blend",
+      "kind": "uncatalogued-artifact",
+      "status": "PENDING",
+      "export_paths": [],
+      "source_candidates": [
+        "models/atm-kiosk/reports/source-edit-current/edited.blend"
+      ],
+      "sha256": "e8a3dec869bfdfdb6a52866d46a6f265ef9bcaf0d216d184961f70ef76241b13",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1978",
+      "model_id": "artifact:models/atm-kiosk/reports/source-edit-current/edited.glb",
+      "name": "edited.glb",
+      "kind": "uncatalogued-artifact",
+      "status": "PENDING",
+      "export_paths": [
+        "models/atm-kiosk/reports/source-edit-current/edited.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "3c1a721632fecf4e8c62b3df381d24bd1d20901bd234458d7063655274ba18e1",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1979",
+      "model_id": "artifact:models/escalator/reports/circulation-final/source-edit-current/control.glb",
+      "name": "control.glb",
+      "kind": "uncatalogued-artifact",
+      "status": "PENDING",
+      "export_paths": [
+        "models/escalator/reports/circulation-final/source-edit-current/control.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "72cc36af65336120b95815a5a3d1eedb330f54d50a71b9ac0efa9358d393c0f7",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1980",
+      "model_id": "artifact:models/escalator/reports/circulation-final/source-edit-current/edited.blend",
+      "name": "edited.blend",
+      "kind": "uncatalogued-artifact",
+      "status": "PENDING",
+      "export_paths": [],
+      "source_candidates": [
+        "models/escalator/reports/circulation-final/source-edit-current/edited.blend"
+      ],
+      "sha256": "7e70ecc2294a36626057f4e6eee9b955a06715686b2d88e1267bb5f6c6830db8",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1981",
+      "model_id": "artifact:models/escalator/reports/circulation-final/source-edit-current/edited.glb",
+      "name": "edited.glb",
+      "kind": "uncatalogued-artifact",
+      "status": "PENDING",
+      "export_paths": [
+        "models/escalator/reports/circulation-final/source-edit-current/edited.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "ee40c43d132c518cfd57e950f02b27f5cc25f968505f8d94dc3e7e4293c00f42",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1982",
+      "model_id": "artifact:models/fish-realism-qa/climbing-perch/model.glb",
+      "name": "model.glb",
+      "kind": "uncatalogued-artifact",
+      "status": "PENDING",
+      "export_paths": [
+        "models/fish-realism-qa/climbing-perch/model.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "f436f4a627c5e8f286cf10a80b690c2d9ccd6d9cd2dee0c96c683194ee66499c",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1983",
+      "model_id": "artifact:models/fish-realism-qa/common-carp/model.glb",
+      "name": "model.glb",
+      "kind": "uncatalogued-artifact",
+      "status": "PENDING",
+      "export_paths": [
+        "models/fish-realism-qa/common-carp/model.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "b0a1cde71226d275e6330c5ad52df3b80de92eb6c57449b6acfb21a14d2a46ec",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1984",
+      "model_id": "artifact:models/fish-realism-qa/giant-gourami/model.glb",
+      "name": "model.glb",
+      "kind": "uncatalogued-artifact",
+      "status": "PENDING",
+      "export_paths": [
+        "models/fish-realism-qa/giant-gourami/model.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "9a76867a2b06209bf0aef11dc9f4cf55630a6f1e54befc388db9af1a45aab71f",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1985",
+      "model_id": "artifact:models/fish-realism-qa/grass-carp/model.glb",
+      "name": "model.glb",
+      "kind": "uncatalogued-artifact",
+      "status": "PENDING",
+      "export_paths": [
+        "models/fish-realism-qa/grass-carp/model.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "28a035b83e11965ae3d7367703c3461dd54e3cc8087063613a1ca4d94308f077",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1986",
+      "model_id": "artifact:models/fish-realism-qa/grey-mullet/model.glb",
+      "name": "model.glb",
+      "kind": "uncatalogued-artifact",
+      "status": "PENDING",
+      "export_paths": [
+        "models/fish-realism-qa/grey-mullet/model.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "66196354cf5d51e72a4b51fd0bd3deeac9a34d36c7a0f950a52ceae0b40ce411",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1987",
+      "model_id": "artifact:models/fish-realism-qa/hampala-barb/model.glb",
+      "name": "model.glb",
+      "kind": "uncatalogued-artifact",
+      "status": "PENDING",
+      "export_paths": [
+        "models/fish-realism-qa/hampala-barb/model.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "39d81a9092dd175a4d2a9ed6899b03b78deeb1e2422f6a21a1a60b3a72679a8a",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1988",
+      "model_id": "artifact:models/fish-realism-qa/jade-perch/model.glb",
+      "name": "model.glb",
+      "kind": "uncatalogued-artifact",
+      "status": "PENDING",
+      "export_paths": [
+        "models/fish-realism-qa/jade-perch/model.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "99948f339351781b436ff283ec111cda3df3bd66ecfb57a58c709caf9190c4ee",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1989",
+      "model_id": "artifact:models/fish-realism-qa/lampam/model.glb",
+      "name": "model.glb",
+      "kind": "uncatalogued-artifact",
+      "status": "PENDING",
+      "export_paths": [
+        "models/fish-realism-qa/lampam/model.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "ab2a9b6d9c6597289ef2e225f000530be372e9bf12fc8400b6e9450e5fc43c50",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1990",
+      "model_id": "artifact:models/fish-realism-qa/malaysian-mahseer/model.glb",
+      "name": "model.glb",
+      "kind": "uncatalogued-artifact",
+      "status": "PENDING",
+      "export_paths": [
+        "models/fish-realism-qa/malaysian-mahseer/model.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "8982d295beaba455b4d877fc531bf476150c915e26d1cbc3962549adf44ac614",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1991",
+      "model_id": "artifact:models/fish-realism-qa/milkfish/model.glb",
+      "name": "model.glb",
+      "kind": "uncatalogued-artifact",
+      "status": "PENDING",
+      "export_paths": [
+        "models/fish-realism-qa/milkfish/model.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "b3f1f8cc0f2f7f2ea23b28f0fee9a5eaace0c1eaf419bb4a4a302e472a9ceb5a",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1992",
+      "model_id": "artifact:models/fish-realism-qa/pangasius/model.glb",
+      "name": "model.glb",
+      "kind": "uncatalogued-artifact",
+      "status": "PENDING",
+      "export_paths": [
+        "models/fish-realism-qa/pangasius/model.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "1ca10d4b467966f9a82c381f50d78ade996f2e6e2de87d355728778fda0226ea",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1993",
+      "model_id": "artifact:models/fish-realism-qa/river-catfish/model.glb",
+      "name": "model.glb",
+      "kind": "uncatalogued-artifact",
+      "status": "PENDING",
+      "export_paths": [
+        "models/fish-realism-qa/river-catfish/model.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "8ad97a26e7a2e5adf50d8a021a6cbb99abd4fdd069f549727118e45b7fffb25a",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1994",
+      "model_id": "artifact:models/fish-realism-qa/sultan-fish/model.glb",
+      "name": "model.glb",
+      "kind": "uncatalogued-artifact",
+      "status": "PENDING",
+      "export_paths": [
+        "models/fish-realism-qa/sultan-fish/model.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "934a84436c0a727d0b41838419023c8806ce4830a916abb54999397d264e58fd",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1995",
+      "model_id": "artifact:models/fish-realism-qa/three-spot-gourami/model.glb",
+      "name": "model.glb",
+      "kind": "uncatalogued-artifact",
+      "status": "PENDING",
+      "export_paths": [
+        "models/fish-realism-qa/three-spot-gourami/model.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "095e604d2f9fda20b491250a93692a00dad6f5cd8b1fbd33504ca845674b350d",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
+    },
+    {
+      "qa_id": "MODEL-1996",
+      "model_id": "artifact:models/fish-realism-qa/walking-catfish/model.glb",
+      "name": "model.glb",
+      "kind": "uncatalogued-artifact",
+      "status": "PENDING",
+      "export_paths": [
+        "models/fish-realism-qa/walking-catfish/model.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "56d745d6f28b1ef78cf462aadf2f0d43411191a03f93fb8b7616bc6aed272bf1",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Not inspected under this campaign;preserved upstream artifact."
+      ]
     }
   ],
   "reconciliation": {
-    "release_head": "69c5a1a8a14d887d9d105b466bb8521cc4a6a0eb",
-    "observed_at": "2026-11-15T12:20:43.141582+00:00",
-    "current_release_catalog_entries": 567,
-    "new_tracked_artifacts": 9,
-    "added_queue_records": 6,
-    "queue_records": 1959,
-    "evidence": "discovery-reconciliation-69c5a1a8.json",
+    "release_head": "17a0ed6f394a8e89c05fbbac7ce7c568d9a7eec5",
+    "observed_at": "2026-11-15T13:51:52.666873+00:00",
+    "current_release_catalog_entries": 568,
+    "new_tracked_artifacts": 53,
+    "added_queue_records": 37,
+    "queue_records": 1996,
+    "evidence": "discovery-reconciliation-17a0ed6f.json",
     "initial_snapshot_counts_preserved": true
   },
   "reconciliation_history": [
@@ -66699,6 +67904,16 @@
       "added_queue_records": 6,
       "queue_records": 1953,
       "evidence": "discovery-reconciliation-a9887b39.json",
+      "initial_snapshot_counts_preserved": true
+    },
+    {
+      "release_head": "69c5a1a8a14d887d9d105b466bb8521cc4a6a0eb",
+      "observed_at": "2026-11-15T12:20:43.141582+00:00",
+      "current_release_catalog_entries": 567,
+      "new_tracked_artifacts": 9,
+      "added_queue_records": 6,
+      "queue_records": 1959,
+      "evidence": "discovery-reconciliation-69c5a1a8.json",
       "initial_snapshot_counts_preserved": true
     }
   ]

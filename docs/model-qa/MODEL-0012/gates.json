@@ -1,7 +1,7 @@
 {
   "model_id": "MODEL-0012",
   "name": "Ball 06",
-  "status": "READY_TO_PUSH",
+  "status": "PUSHED",
   "verified_at": "2026-11-15T12:29:05.580284+00:00",
   "source_head": "69c5a1a8a14d887d9d105b466bb8521cc4a6a0eb",
   "product_defects": [],
@@ -28,16 +28,14 @@
     "runtime_reuse_basis": "runtime-reuse-basis.json"
   },
   "original_unique_files_unchanged": 26,
-  "commit_sha": null,
-  "remote_verified": false,
-  "pending_release_steps": [
-    "Focused commit and normal fast-forward main push",
-    "Remote commit/blob readback",
-    "Required full Actions build/deployment",
-    "Actual production candidate/assembly runtime and downloaded geometry tests"
-  ],
+  "commit_sha": "2f0867ec85c43ddfa04a71a308b31926acdce217",
+  "remote_verified": true,
+  "pending_release_steps": [],
   "next_model_started": false,
   "remaining_limits": [
     "Physical-phone testing excluded by owner; software WebGL and viewport emulation do not establish physical-device FPS."
-  ]
+  ],
+  "required_actions": "PASS;43714225525 complete original release suite and deployment",
+  "actual_production": "PASS;4runtime profiles and5downloaded geometry tests;18artifact and4script digests verified",
+  "accepted_at": "2026-11-15T13:44:58.786281+00:00"
 }

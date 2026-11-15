@@ -1,10 +1,31 @@
 {
-  "phase": "Precommit QA evidence; release acceptance remains pending",
+  "phase": "Accepted MODEL-0012 release closure;original precommit manifest preserved byte-for-byte separately",
+  "qa_commit": "2f0867ec85c43ddfa04a71a308b31926acdce217",
   "files": [
     {
       "path": "README.md",
-      "bytes": 3446,
-      "sha256": "84d2b7d94cfc9f9395749dd524bf2a9adc3588514b4aa483322d89ab758dc284"
+      "bytes": 4068,
+      "sha256": "66d47ed0f7b88694ae011962ba2ad9affbb355b509525492db546081ff2e3e3e"
+    },
+    {
+      "path": "actions-final.json",
+      "bytes": 6812,
+      "sha256": "a61af4bb4aa8517d1411f8f480f2dea5d850c63e89898ae0cf80320ce4571490"
+    },
+    {
+      "path": "actions-initial.json",
+      "bytes": 568,
+      "sha256": "8bdc2ce75788d879a62cd0d8a13e5ea8cde94bc2d1add4ab21da112d766bdcbd"
+    },
+    {
+      "path": "actions-latest.json",
+      "bytes": 592,
+      "sha256": "db2882db3c370a5fad9a1c4d9fb271cf6e408c21265058bd5f09987c23c7e466"
+    },
+    {
+      "path": "actions.log.gz",
+      "bytes": 188619,
+      "sha256": "8d1d5330180a051390f58bc07cf4ae98c81929d9a73d842bcf41c7a3536ab580"
     },
     {
       "path": "assembly.validation.json",
@@ -40,6 +61,11 @@
       "path": "build-deaf.log.gz",
       "bytes": 30706,
       "sha256": "60b13ec223f1ecf5767238624169d30a819b3155a870f3a17efbacf0c1482a8e"
+    },
+    {
+      "path": "ci-summary.json",
+      "bytes": 1075,
+      "sha256": "7c5e108870e93853124392751496bcdcb3a217c13d277f357053eb0fd652fc5b"
     },
     {
       "path": "contact-reimport/contact.json",
@@ -128,8 +154,8 @@
     },
     {
       "path": "gates.json",
-      "bytes": 2169,
-      "sha256": "33fe0fd3ce2cfdebfda69a2c7f7c1028881ceb8abefa80df156e07c621701af2"
+      "bytes": 2238,
+      "sha256": "dfa2274702bedbe82e71667205c8041e44f5b40fc17558f52a3de43b659b9627"
     },
     {
       "path": "geometry-assessment.json",
@@ -137,9 +163,99 @@
       "sha256": "c695c32b60017604351653b101b6011e8916dc10a606aab97c5885bccd714487"
     },
     {
+      "path": "github-pages-deployment.json",
+      "bytes": 431,
+      "sha256": "27e7b43abd6dd1109bbee016128b747b179a2864884bccf075190928ba59abf1"
+    },
+    {
       "path": "inspection-progress.json",
-      "bytes": 1783,
-      "sha256": "aa59f18aed4306c5c2821df33a92eabe94fa0b1a8fa11de38bd9cbf90be7519e"
+      "bytes": 1637,
+      "sha256": "5640228afa8f01a9c54f7290ba62724376cffed408e555801565c01a9121b385"
+    },
+    {
+      "path": "inventory-scope-verification.json",
+      "bytes": 2525,
+      "sha256": "ce2bd016d3edd265d6ee587bdfda5a9d431eaf40b61b665d6eb831c53fd695b7"
+    },
+    {
+      "path": "latest-main-input-verification.json",
+      "bytes": 1130,
+      "sha256": "08d9e6068ed8802b50f677f742c66d0f786fb2d9697d5b5721167d0070a3ac89"
+    },
+    {
+      "path": "live-1440-loaded.png",
+      "bytes": 34491,
+      "sha256": "5bcf4488bec88b01c3495e213cc8c72e019f3c20148f6a8ccb3b515bc49eb619"
+    },
+    {
+      "path": "live-1440-page.png",
+      "bytes": 92222,
+      "sha256": "9991c6ceb0f481b58af542e5caa146fc05b1f52b1dc8e86731cd73a38c4c9819"
+    },
+    {
+      "path": "live-1440-reset.png",
+      "bytes": 34491,
+      "sha256": "5bcf4488bec88b01c3495e213cc8c72e019f3c20148f6a8ccb3b515bc49eb619"
+    },
+    {
+      "path": "live-768-loaded.png",
+      "bytes": 39720,
+      "sha256": "840c0f54fa1a814d315058f83a3be47613d3c2ca503ea36ef87c8ac6af82bb50"
+    },
+    {
+      "path": "live-768-page.png",
+      "bytes": 69609,
+      "sha256": "53cbe59fbc5592b963b20e373e124704a842af1dce2dffc02d2614e4bd6e9ec4"
+    },
+    {
+      "path": "live-768-reset.png",
+      "bytes": 39720,
+      "sha256": "840c0f54fa1a814d315058f83a3be47613d3c2ca503ea36ef87c8ac6af82bb50"
+    },
+    {
+      "path": "live-assembly-1440-loaded.png",
+      "bytes": 34889,
+      "sha256": "439c14beaf3f0b424509d932f247f72ec2d1bc8ca187b0ce7e65392c2b02f9af"
+    },
+    {
+      "path": "live-assembly-1440-page.png",
+      "bytes": 96201,
+      "sha256": "18120c4ad453ce13499e4c8c8b654d293e541bfdedbd8926b8547a6d85d144b3"
+    },
+    {
+      "path": "live-assembly-1440-reset.png",
+      "bytes": 34889,
+      "sha256": "439c14beaf3f0b424509d932f247f72ec2d1bc8ca187b0ce7e65392c2b02f9af"
+    },
+    {
+      "path": "live-assembly-768-loaded.png",
+      "bytes": 38366,
+      "sha256": "d2492b0205733f6960918160a366a9bed8574ed24cce5a3600df6ba7dd60636d"
+    },
+    {
+      "path": "live-assembly-768-page.png",
+      "bytes": 73688,
+      "sha256": "29932085021d4dc9b6a735a60f4e5f3446835a7bda7582a468089dcfcb35c3b1"
+    },
+    {
+      "path": "live-assembly-768-reset.png",
+      "bytes": 38366,
+      "sha256": "d2492b0205733f6960918160a366a9bed8574ed24cce5a3600df6ba7dd60636d"
+    },
+    {
+      "path": "live-assembly-results.json",
+      "bytes": 2629,
+      "sha256": "ef393ee500ca285645cf7c0dce64de92408189ceba9d0452c55a83f1c60c59cf"
+    },
+    {
+      "path": "live-deployment.json",
+      "bytes": 1846,
+      "sha256": "0deb84e39034a7625bb8a74fd7f2e799e3ed807366ab609f52758a32259fdcc6"
+    },
+    {
+      "path": "live-results.json",
+      "bytes": 2582,
+      "sha256": "5d3d826b4a914a626a00f7f72c155c7b9bc8c490516d0c9a558baaf74a480e3d"
     },
     {
       "path": "native-contact-replay.sh",
@@ -150,6 +266,21 @@
       "path": "original-manifest.json",
       "bytes": 5328,
       "sha256": "4f2d7edfaa77daa61daf44ee09fdf5c5cd63e4122c78cd4b91293eee9d7aaadb"
+    },
+    {
+      "path": "precommit-evidence-manifest.json",
+      "bytes": 20115,
+      "sha256": "c3f271d639320804721b7558b38252ddfe7bf55d51a5a412c0efab497bf60540"
+    },
+    {
+      "path": "production-preflight.json",
+      "bytes": 1369,
+      "sha256": "b788d4c9918cbda5dc44e377bd6681d6f90b3056b34b53525da89d904e7891d1"
+    },
+    {
+      "path": "production-structure-live.log.gz",
+      "bytes": 321,
+      "sha256": "45fc161dd02cbd956e2550c210c0508e9dc3a99701d11cbe3287fbcde97ed2a2"
     },
     {
       "path": "reexport.validation.json",
@@ -182,6 +313,11 @@
       "sha256": "75bd7d02e8fc949f77f2d3f0894e9df88274f9386ca6c0f0eead13fde455d3aa"
     },
     {
+      "path": "release-evidence.json",
+      "bytes": 2315,
+      "sha256": "5f96c7944c72db925dbd55e13fa56913a46ef680a99d430db996005e06fba277"
+    },
+    {
       "path": "remote-acceptance.json",
       "bytes": 481,
       "sha256": "f6dcb768e37036a22d26b3b4b314fe0c102755ae41d3b36f940062801323d6b6"
@@ -197,6 +333,11 @@
       "sha256": "6c8f7be78d5bd08d8297b25fef5a3cd5d5147ae2e293420f181eaeb50474775a"
     },
     {
+      "path": "remote-execution.json",
+      "bytes": 1150,
+      "sha256": "68d8a8d13736d30523967db30a95466831be293ed3af031fa29c59519de1d7b5"
+    },
+    {
       "path": "remote-experience.log.gz",
       "bytes": 702,
       "sha256": "eb57d3ef210be5f2f58ff772d11e434a7ee5bf758b2556735d83cc074cb7ef71"
@@ -205,6 +346,16 @@
       "path": "remote-game.log.gz",
       "bytes": 1760,
       "sha256": "bf6e49699383aeae178ff7418e31311dcb5791785a5709c4b14cf89683aad0d0"
+    },
+    {
+      "path": "remote-live-acceptance.sh",
+      "bytes": 4425,
+      "sha256": "1ecd17dbe2b86acab3e84b9c2b006022f8a411252ba9831a0866df52c6633324"
+    },
+    {
+      "path": "remote-live-prepare.sh",
+      "bytes": 841,
+      "sha256": "bd7ef15925d5de1ada47a1cd9ee6bc0b63e92cc371bb891f3e0ca3f647a0f935"
     },
     {
       "path": "remote-regression-verification.json",
@@ -297,9 +448,19 @@
       "sha256": "d2492b0205733f6960918160a366a9bed8574ed24cce5a3600df6ba7dd60636d"
     },
     {
+      "path": "runtime-assembly-live.log.gz",
+      "bytes": 829,
+      "sha256": "3baf5296ea9ab546750d0ca9e0d5d41eca2875a07c2647a52cb0ba1c0b762d4c"
+    },
+    {
       "path": "runtime-assembly-results.json",
       "bytes": 2627,
       "sha256": "a4bcd1472de74e39f9d8bbb04b9b049bab3f5a902eeddbfe9d0dc2421c7fab5b"
+    },
+    {
+      "path": "runtime-live.log.gz",
+      "bytes": 813,
+      "sha256": "ed67bd9a68c1b29f23427c9ddb5d2e397dbb18ddb3041ddd87a64caf9e6eefd2"
     },
     {
       "path": "runtime-results.json",
