@@ -1098,15 +1098,18 @@
       "slug": "tiger-barb",
       "name": "Tiger barb",
       "priority": "P1",
-      "status": "pending",
+      "status": "qa_pass",
       "checks": {
-        "reference_photos": "pending",
-        "anatomy": "pending",
-        "materials": "pending",
-        "swim_motion": "pending",
-        "glb_roundtrip": "pending",
-        "visual_review": "pending"
-      }
+        "reference_photos": "pass",
+        "anatomy": "pass",
+        "materials": "pass",
+        "swim_motion": "pass",
+        "glb_roundtrip": "pass",
+        "visual_review": "pass",
+        "browser": "pass",
+        "surface_contact": "pass"
+      },
+      "artifact_manifest": "models/fish-realism-qa/tiger-barb/artifacts.json"
     }
   ],
   "publication_policy": "After each individual fish passes source, GLB, delivery and browser QA, replace its gallery entry and commit/push main immediately; do not wait for a batch."
