@@ -1,0 +1,8 @@
+file://<repository>/docs/verification/live-fish-2026-11-15/followup/run-after-deployment.mjs:8
+ if(state.conclusion!=='success')throw new Error(`Deployment concluded ${state.conclusion}; live acceptance not started`);
+                                       ^
+
+Error: Deployment concluded cancelled; live acceptance not started
+    at file://<repository>/docs/verification/live-fish-2026-11-15/followup/run-after-deployment.mjs:8:40
+
+Node.js v23.10.0

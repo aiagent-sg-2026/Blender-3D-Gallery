@@ -1,0 +1,361 @@
+{
+  "smoke": true,
+  "startedAt": "2026-11-14T18:47:55.654Z",
+  "site": "http://127.0.0.1:61866/Blender-3D-Gallery/",
+  "expectedCommit": "65e56ac20802cd8969fac3d9de9131e87319b96a",
+  "devices": [
+    {
+      "name": "chromium-desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "mobileTouch": false,
+      "buildStart": {
+        "build": "52794dce31c58652"
+      },
+      "fishCards": 60,
+      "indexLazy": true,
+      "indexCsp": [],
+      "reducedMotion": true,
+      "finalCsp": [],
+      "buildEnd": {
+        "build": "52794dce31c58652"
+      }
+    },
+    {
+      "name": "chromium-mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "mobileTouch": true,
+      "buildStart": {
+        "build": "52794dce31c58652"
+      },
+      "fishCards": 60,
+      "indexLazy": true,
+      "indexCsp": [],
+      "reducedMotion": true,
+      "finalCsp": [],
+      "buildEnd": {
+        "build": "52794dce31c58652"
+      }
+    },
+    {
+      "name": "webkit-mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "mobileTouch": true,
+      "buildStart": {
+        "build": "52794dce31c58652"
+      },
+      "fishCards": 60,
+      "indexLazy": true,
+      "indexCsp": [
+        {
+          "directive": "style-src-attr",
+          "target": "model-theme",
+          "blocked": "inline",
+          "screenshotSequence": 0
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-category",
+          "blocked": "inline",
+          "screenshotSequence": 0
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-collection",
+          "blocked": "inline",
+          "screenshotSequence": 0
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "demo-category",
+          "blocked": "inline",
+          "screenshotSequence": 0
+        }
+      ],
+      "reducedMotion": true,
+      "finalCsp": [
+        {
+          "directive": "style-src-attr",
+          "target": "model-theme",
+          "blocked": "inline",
+          "screenshotSequence": 0
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-category",
+          "blocked": "inline",
+          "screenshotSequence": 0
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-collection",
+          "blocked": "inline",
+          "screenshotSequence": 0
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "demo-category",
+          "blocked": "inline",
+          "screenshotSequence": 0
+        }
+      ],
+      "buildEnd": {
+        "build": "52794dce31c58652"
+      }
+    }
+  ],
+  "cases": [
+    {
+      "device": "chromium-desktop",
+      "fishId": "FISH-001",
+      "slug": "barramundi",
+      "status": "pass",
+      "stage": "complete",
+      "glbSha256": "418997623ececcc7a32375aee49e1bf12530e3a786bbcdb392712a908245e2fa",
+      "autoplay": true,
+      "rafCallbacksDuringAutoplay": 26,
+      "visibleSwimming": true,
+      "pausedRafCallbacks": 0,
+      "pauseStable": true,
+      "closedCleanly": true,
+      "oneReusableContext": true,
+      "idleFramebufferTiny": true,
+      "csp": []
+    },
+    {
+      "device": "chromium-mobile",
+      "fishId": "FISH-001",
+      "slug": "barramundi",
+      "status": "pass",
+      "stage": "complete",
+      "glbSha256": "418997623ececcc7a32375aee49e1bf12530e3a786bbcdb392712a908245e2fa",
+      "autoplay": true,
+      "rafCallbacksDuringAutoplay": 26,
+      "visibleSwimming": true,
+      "pausedRafCallbacks": 0,
+      "pauseStable": true,
+      "touchPlayback": true,
+      "touchOrbit": true,
+      "closedCleanly": true,
+      "oneReusableContext": true,
+      "idleFramebufferTiny": true,
+      "csp": []
+    },
+    {
+      "device": "webkit-mobile",
+      "fishId": "FISH-001",
+      "slug": "barramundi",
+      "status": "pass",
+      "stage": "complete",
+      "glbSha256": "418997623ececcc7a32375aee49e1bf12530e3a786bbcdb392712a908245e2fa",
+      "autoplay": true,
+      "rafCallbacksDuringAutoplay": 27,
+      "visibleSwimming": true,
+      "pausedRafCallbacks": 0,
+      "pauseStable": true,
+      "touchPlayback": true,
+      "closedCleanly": true,
+      "oneReusableContext": true,
+      "idleFramebufferTiny": true,
+      "csp": [
+        {
+          "directive": "style-src-attr",
+          "target": "model-theme",
+          "blocked": "inline",
+          "screenshotSequence": 0
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-category",
+          "blocked": "inline",
+          "screenshotSequence": 0
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-collection",
+          "blocked": "inline",
+          "screenshotSequence": 0
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "demo-category",
+          "blocked": "inline",
+          "screenshotSequence": 0
+        },
+        {
+          "directive": "style-src-elem",
+          "blocked": "inline",
+          "screenshotSequence": 1
+        },
+        {
+          "directive": "style-src-elem",
+          "blocked": "inline",
+          "screenshotSequence": 2
+        },
+        {
+          "directive": "style-src-elem",
+          "blocked": "inline",
+          "screenshotSequence": 3
+        },
+        {
+          "directive": "style-src-elem",
+          "blocked": "inline",
+          "screenshotSequence": 4
+        },
+        {
+          "directive": "style-src-elem",
+          "blocked": "inline",
+          "screenshotSequence": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    {
+      "case": "chromium-desktop/preflight",
+      "type": "console",
+      "message": "Service Worker registration blocked by Playwright"
+    },
+    {
+      "case": "chromium-desktop/barramundi",
+      "type": "console",
+      "message": "[.WebGL-0x1140043e400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "case": "chromium-desktop/barramundi",
+      "type": "console",
+      "message": "[.WebGL-0x1140043e400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "case": "chromium-desktop/barramundi",
+      "type": "console",
+      "message": "[.WebGL-0x1140043e400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "case": "chromium-desktop/barramundi",
+      "type": "console",
+      "message": "[.WebGL-0x1140043e400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+    },
+    {
+      "case": "chromium-desktop/reduced-motion",
+      "type": "console",
+      "message": "Service Worker registration blocked by Playwright"
+    },
+    {
+      "case": "chromium-mobile/preflight",
+      "type": "console",
+      "message": "Service Worker registration blocked by Playwright"
+    },
+    {
+      "case": "chromium-mobile/barramundi",
+      "type": "console",
+      "message": "[.WebGL-0x12c00442600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "case": "chromium-mobile/barramundi",
+      "type": "console",
+      "message": "[.WebGL-0x12c00442600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "case": "chromium-mobile/barramundi",
+      "type": "console",
+      "message": "[.WebGL-0x12c00442600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "case": "chromium-mobile/barramundi",
+      "type": "console",
+      "message": "[.WebGL-0x12c00442600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+    },
+    {
+      "case": "chromium-mobile/reduced-motion",
+      "type": "console",
+      "message": "Service Worker registration blocked by Playwright"
+    },
+    {
+      "case": "webkit-mobile/preflight",
+      "type": "webkit-csp-classified-by-violation",
+      "message": "Refused to apply a stylesheet because its hash, its nonce, or 'unsafe-inline' does not appear in the style-src directive of the Content Security Policy."
+    },
+    {
+      "case": "webkit-mobile/preflight",
+      "type": "webkit-csp-classified-by-violation",
+      "message": "Refused to apply a stylesheet because its hash, its nonce, or 'unsafe-inline' does not appear in the style-src directive of the Content Security Policy."
+    },
+    {
+      "case": "webkit-mobile/preflight",
+      "type": "webkit-csp-classified-by-violation",
+      "message": "Refused to apply a stylesheet because its hash, its nonce, or 'unsafe-inline' does not appear in the style-src directive of the Content Security Policy."
+    },
+    {
+      "case": "webkit-mobile/preflight",
+      "type": "webkit-csp-classified-by-violation",
+      "message": "Refused to apply a stylesheet because its hash, its nonce, or 'unsafe-inline' does not appear in the style-src directive of the Content Security Policy."
+    },
+    {
+      "case": "webkit-mobile/preflight",
+      "type": "console",
+      "message": "Service Worker registration blocked by Playwright"
+    },
+    {
+      "case": "webkit-mobile/barramundi",
+      "type": "webkit-csp-classified-by-violation",
+      "message": "Refused to apply a stylesheet because its hash, its nonce, or 'unsafe-inline' does not appear in the style-src directive of the Content Security Policy."
+    },
+    {
+      "case": "webkit-mobile/barramundi",
+      "type": "webkit-csp-classified-by-violation",
+      "message": "Refused to apply a stylesheet because its hash, its nonce, or 'unsafe-inline' does not appear in the style-src directive of the Content Security Policy."
+    },
+    {
+      "case": "webkit-mobile/barramundi",
+      "type": "webkit-csp-classified-by-violation",
+      "message": "Refused to apply a stylesheet because its hash, its nonce, or 'unsafe-inline' does not appear in the style-src directive of the Content Security Policy."
+    },
+    {
+      "case": "webkit-mobile/barramundi",
+      "type": "webkit-csp-classified-by-violation",
+      "message": "Refused to apply a stylesheet because its hash, its nonce, or 'unsafe-inline' does not appear in the style-src directive of the Content Security Policy."
+    },
+    {
+      "case": "webkit-mobile/barramundi",
+      "type": "webkit-csp-classified-by-violation",
+      "message": "Refused to apply a stylesheet because its hash, its nonce, or 'unsafe-inline' does not appear in the style-src directive of the Content Security Policy."
+    },
+    {
+      "case": "webkit-mobile/reduced-motion",
+      "type": "webkit-csp-classified-by-violation",
+      "message": "Refused to apply a stylesheet because its hash, its nonce, or 'unsafe-inline' does not appear in the style-src directive of the Content Security Policy."
+    },
+    {
+      "case": "webkit-mobile/reduced-motion",
+      "type": "webkit-csp-classified-by-violation",
+      "message": "Refused to apply a stylesheet because its hash, its nonce, or 'unsafe-inline' does not appear in the style-src directive of the Content Security Policy."
+    },
+    {
+      "case": "webkit-mobile/reduced-motion",
+      "type": "webkit-csp-classified-by-violation",
+      "message": "Refused to apply a stylesheet because its hash, its nonce, or 'unsafe-inline' does not appear in the style-src directive of the Content Security Policy."
+    },
+    {
+      "case": "webkit-mobile/reduced-motion",
+      "type": "webkit-csp-classified-by-violation",
+      "message": "Refused to apply a stylesheet because its hash, its nonce, or 'unsafe-inline' does not appear in the style-src directive of the Content Security Policy."
+    },
+    {
+      "case": "webkit-mobile/reduced-motion",
+      "type": "console",
+      "message": "Service Worker registration blocked by Playwright"
+    }
+  ],
+  "verdict": "pass",
+  "completedAt": "2026-11-14T18:48:11.905Z"
+}

@@ -1,0 +1,25 @@
+{
+  "mainRevision": "345f3104dad5e76bad31c86d63608820a5d65d55",
+  "build": {
+    "command": "npm run build",
+    "exitCode": 0
+  },
+  "unit": {
+    "command": "npm test",
+    "tests": 598,
+    "failures": 0,
+    "exitCode": 0
+  },
+  "library": {
+    "command": "TEST_ARTIFACT_DIR=/tmp/fish-demo-current-library node scripts/test-library-browser.mjs",
+    "exitCode": 0
+  },
+  "additionalCandidateChecks": {
+    "pwaStandard": {
+      "command": "node scripts/test-pwa-standard.mjs",
+      "exitCode": 0,
+      "baseRevision": "5a9546623d7a334e646514339de2f958def5760a"
+    }
+  },
+  "note": "Verified the already-published main correction; the independent candidate commit was not pushed."
+}

@@ -1,0 +1,24 @@
+build	Unit and browser release gates	2026-11-14T17:29:52.0982234Z > blender-3d-gallery@0.1.0 test:library
+build	Unit and browser release gates	2026-11-14T17:29:52.0982554Z > node scripts/test-library-browser.mjs
+build	Unit and browser release gates	2026-11-14T17:29:52.0982671Z
+build	Unit and browser release gates	2026-11-14T17:29:53.2264022Z node:internal/modules/run_main:107
+build	Unit and browser release gates	2026-11-14T17:29:53.2264852Z     triggerUncaughtException(
+build	Unit and browser release gates	2026-11-14T17:29:53.2265369Z     ^
+build	Unit and browser release gates	2026-11-14T17:29:53.2265544Z
+build	Unit and browser release gates	2026-11-14T17:29:53.2265729Z AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+build	Unit and browser release gates	2026-11-14T17:29:53.2265933Z
+build	Unit and browser release gates	2026-11-14T17:29:53.2266028Z 4 !== 3
+build	Unit and browser release gates	2026-11-14T17:29:53.2266138Z
+build	Unit and browser release gates	2026-11-14T17:29:53.2266366Z     at file:///home/runner/work/Blender-3D-Gallery/Blender-3D-Gallery/scripts/test-library-browser.mjs:67:14
+build	Unit and browser release gates	2026-11-14T17:29:53.2266839Z     at async run (file:///home/runner/work/Blender-3D-Gallery/Blender-3D-Gallery/scripts/test-library-browser.mjs:28:5)
+build	Unit and browser release gates	2026-11-14T17:29:53.2267508Z     at async file:///home/runner/work/Blender-3D-Gallery/Blender-3D-Gallery/scripts/test-library-browser.mjs:53:3 {
+build	Unit and browser release gates	2026-11-14T17:29:53.2267784Z   generatedMessage: true,
+build	Unit and browser release gates	2026-11-14T17:29:53.2267926Z   code: 'ERR_ASSERTION',
+build	Unit and browser release gates	2026-11-14T17:29:53.2268062Z   actual: 4,
+build	Unit and browser release gates	2026-11-14T17:29:53.2268178Z   expected: 3,
+build	Unit and browser release gates	2026-11-14T17:29:53.2268300Z   operator: 'strictEqual',
+build	Unit and browser release gates	2026-11-14T17:29:53.2268434Z   diff: 'simple'
+build	Unit and browser release gates	2026-11-14T17:29:53.2268554Z }
+build	Unit and browser release gates	2026-11-14T17:29:53.2268618Z
+build	Unit and browser release gates	2026-11-14T17:29:53.2268666Z Node.js v24.22.2
+build	Unit and browser release gates	2026-11-14T17:29:53.2495413Z ##[error]Process completed with exit code 1.

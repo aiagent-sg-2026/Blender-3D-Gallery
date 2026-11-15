@@ -1,0 +1,60 @@
+{
+  "url": "http://127.0.0.1:58381/Blender-3D-Gallery/?model=pool-table",
+  "errors": [
+    "Refused to apply a stylesheet because its hash, its nonce, or 'unsafe-inline' does not appear in the style-src directive of the Content Security Policy.",
+    "Refused to apply a stylesheet because its hash, its nonce, or 'unsafe-inline' does not appear in the style-src directive of the Content Security Policy.",
+    "Refused to apply a stylesheet because its hash, its nonce, or 'unsafe-inline' does not appear in the style-src directive of the Content Security Policy.",
+    "Refused to apply a stylesheet because its hash, its nonce, or 'unsafe-inline' does not appear in the style-src directive of the Content Security Policy.",
+    "Refused to apply a stylesheet because its hash, its nonce, or 'unsafe-inline' does not appear in the style-src directive of the Content Security Policy."
+  ],
+  "cspBeforeScreenshot": [
+    {
+      "directive": "style-src-attr",
+      "target": "model-theme",
+      "blocked": "inline"
+    },
+    {
+      "directive": "style-src-attr",
+      "target": "model-category",
+      "blocked": "inline"
+    },
+    {
+      "directive": "style-src-attr",
+      "target": "model-collection",
+      "blocked": "inline"
+    },
+    {
+      "directive": "style-src-attr",
+      "target": "demo-category",
+      "blocked": "inline"
+    }
+  ],
+  "cspAfterScreenshot": [
+    {
+      "directive": "style-src-attr",
+      "target": "model-theme",
+      "blocked": "inline"
+    },
+    {
+      "directive": "style-src-attr",
+      "target": "model-category",
+      "blocked": "inline"
+    },
+    {
+      "directive": "style-src-attr",
+      "target": "model-collection",
+      "blocked": "inline"
+    },
+    {
+      "directive": "style-src-attr",
+      "target": "demo-category",
+      "blocked": "inline"
+    },
+    {
+      "directive": "style-src-elem",
+      "blocked": "inline"
+    }
+  ],
+  "fishControls": 0,
+  "toolSource": "playwright-core/lib/coreBundle.js inPagePrepareForScreenshots syncAnimations appends body {} style"
+}

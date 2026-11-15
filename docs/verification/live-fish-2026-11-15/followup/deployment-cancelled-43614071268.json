@@ -1,0 +1,126 @@
+{
+  "checkedAt": "2026-11-14T17:08:03.593Z",
+  "conclusion": "cancelled",
+  "headSha": "65e56ac20802cd8969fac3d9de9131e87319b96a",
+  "jobs": [
+    {
+      "completedAt": "2026-11-14T17:08:01Z",
+      "conclusion": "cancelled",
+      "databaseId": 132512700396,
+      "name": "build",
+      "startedAt": "2026-11-14T16:36:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-14T16:36:34Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-14T16:36:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T16:38:09Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "number": 2,
+          "startedAt": "2026-11-14T16:36:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T16:38:11Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+          "number": 3,
+          "startedAt": "2026-11-14T16:38:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T16:38:12Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 4,
+          "startedAt": "2026-11-14T16:38:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T16:38:20Z",
+          "conclusion": "success",
+          "name": "Run npm run build",
+          "number": 5,
+          "startedAt": "2026-11-14T16:38:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T16:38:57Z",
+          "conclusion": "success",
+          "name": "Install browser test runtime",
+          "number": 6,
+          "startedAt": "2026-11-14T16:38:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T17:07:58Z",
+          "conclusion": "cancelled",
+          "name": "Unit and browser release gates",
+          "number": 7,
+          "startedAt": "2026-11-14T16:38:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T17:07:58Z",
+          "conclusion": "skipped",
+          "name": "Run actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b",
+          "number": 8,
+          "startedAt": "2026-11-14T17:07:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T17:07:58Z",
+          "conclusion": "skipped",
+          "name": "Run actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa",
+          "number": 9,
+          "startedAt": "2026-11-14T17:07:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T17:07:58Z",
+          "conclusion": "skipped",
+          "name": "Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+          "number": 17,
+          "startedAt": "2026-11-14T17:07:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T17:07:59Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "number": 18,
+          "startedAt": "2026-11-14T17:07:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-14T17:07:59Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-14T17:07:59Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/yapweijun1996/Blender-3D-Gallery/actions/runs/43614071268/job/132512700396"
+    },
+    {
+      "completedAt": "2026-11-14T17:08:01Z",
+      "conclusion": "cancelled",
+      "databaseId": 132521481033,
+      "name": "deploy",
+      "startedAt": "2026-11-14T17:08:01Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/yapweijun1996/Blender-3D-Gallery/actions/runs/43614071268/job/132521481033"
+    }
+  ],
+  "status": "completed",
+  "url": "https://github.com/yapweijun1996/Blender-3D-Gallery/actions/runs/43614071268"
+}
