@@ -1,0 +1,39 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "The first twin caudal lobes were overly pointed and straight-edged."
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "pass",
+      "changes": [
+        "Use a smooth original rounded lobe outline and inspect the actual body/head and oblique-tail renders; source/import/browser gates pass."
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "af46f89fe361a28c7c7ed6be9bcb919c4eae089a329de54d15180d356e23bbe0",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png",
+    "tail-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: short rounded metallic fantail form with single high dorsal, divided double caudal and paired anal fins",
+    "surface": "pass: original orange/gold varied scales and thin ray-marked membranes",
+    "head": "pass: small closed mouth and subdued gold iris",
+    "fins": "pass: two forked caudal membranes with four spread rounded lobes and two skin-rooted anal membranes",
+    "surface_contact": "pass: source and actual imported GLB retain five-phase fin/root contact",
+    "motion": "pass: cyclic tail and fin movement survive actual GLB import with matching endpoints",
+    "browser": "pass: exact draft GLB swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed artwork, not a scanned or calibrated specimen.",
+    "A metallic fantail visual study; no certified show-standard specimen or measured biomechanics is claimed. Fine dentition and breeding traits are simplified."
+  ]
+}

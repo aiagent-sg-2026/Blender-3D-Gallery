@@ -79,6 +79,11 @@ def skin_maps():
    height+=scute*.00035
    if C['markings']=='trevally':color*=1-scute[...,None]*.11
    else:color+=scute[...,None]*.018
+ if C.get('markings')=='red_guppy':
+  silver=np.maximum(np.exp(-((xs+.69)/.36)**2-((world_z+.085)/.18)**2),(1-R.smoothstep(-1.41,-1.20,xs))*.55)*flank_mask;silver*=.86;color=color*(1-silver[...,None])+np.array([.74,.78,.73])*silver[...,None]
+ if C.get('markings')=='tiger_barb':
+  from tiger_pattern import paint_bars
+  color=paint_bars(color,xs,world_z,R.smoothstep)
  if C.get('markings')=='koi':
   upper=R.smoothstep(-.65,-.30,z);field=R.noise(u,v,8,7,1080)*.70+R.noise(u,v,23,17,1081)*.30;red=R.smoothstep(.49,.515,field+(R.noise(u,v,85,61,1085)-.5)*.018)*upper*.94;color=color*(1-red[...,None])+np.array([.80,.145,.055])*red[...,None]
   field=R.noise(u,v,15,11,1083)*.70+R.noise(u,v,37,29,1084)*.30;black=R.smoothstep(.63,.66,field)*upper*R.smoothstep(-1.05,-.86,xs)*.97;color=color*(1-black[...,None])+np.array([.025,.030,.026])*black[...,None]
@@ -219,8 +224,8 @@ def fin_mat(tail=False,spiny=False,region=None,mapping=None):
   center=pos+rng.uniform(-.012,.012)*v*v;width=.0013+.0015*(1-v);rays=np.maximum(rays,np.exp(-((u-center)/width)**2));fork=rng.uniform(.3,.6)
   for sign in [-1,1]:
    child=center+sign*.014*np.maximum(0,(v-fork)/(1-fork));branches=np.maximum(branches,np.exp(-((u-child)/(width*.7))**2)*R.smoothstep(fork,fork+.04,v))
- lines=np.maximum(rays,branches*.70);color=np.zeros((n,n,3))+np.array(C['tail_color'] if tail else C.get('paired_fin_color',C['fin_color']) if region is None else C['fin_color']);color+=(coarse-.5)[...,None]*.08; color+=lines[...,None]*np.array([.075,.045,.030]);alpha=np.clip(.74+coarse*.10+lines*.15-.15*R.smoothstep(.80,1,v),.20,.97)
- if region in ['dorsal','anal'] and C.get('markings') in ['butterflyfish','emperor_angelfish']:
+ lines=np.maximum(rays,branches*.70);color=np.zeros((n,n,3))+np.array(C['tail_color'] if tail else C.get('fin_region_colors',{}).get(region,C.get('paired_fin_color',C['fin_color']) if region is None else C['fin_color']));color+=(coarse-.5)[...,None]*.08; color+=lines[...,None]*np.array([.075,.045,.030]);alpha=np.clip(.74+coarse*.10+lines*.15-.15*R.smoothstep(.80,1,v),.20,.97)
+ if region in ['dorsal','anal'] and C.get('markings') in ['butterflyfish','emperor_angelfish','tiger_barb']:
   from butterfly_pattern import paint_bands
   anal=region=='anal'
   start=(C['anal_start'] if spiny else C['anal_split']) if anal else (C['dorsal_start'] if spiny else C['dorsal_split']);end=(C['anal_split'] if spiny else C['anal_end']) if anal else (C['dorsal_split'] if spiny else C['dorsal_end']);xs=start+(end-start)*u
@@ -228,7 +233,11 @@ def fin_mat(tail=False,spiny=False,region=None,mapping=None):
   if spiny:height=np.interp(u,*zip(*C['spine_height_curve'])) if not anal and C.get('spine_height_curve') else (C.get('anal_spine_height',.10) if anal else C['spine_height'])*(.68+.32*np.sin(u*PI))
   else:height=np.interp(u,*zip(*C['anal_height_curve' if anal else 'soft_height_curve']))
   world_z=base+(-1 if anal else 1)*height*v
-  if C.get('markings')=='emperor_angelfish':
+  if C.get('markings')=='tiger_barb':
+   from tiger_pattern import paint_bars
+   color=paint_bars(color,xs,world_z,R.smoothstep)
+   if region=='dorsal':color*=1-(R.smoothstep(.04,.15,v)*(1-R.smoothstep(.83,.95,v)))[...,None]*.80
+  elif C.get('markings')=='emperor_angelfish':
    from angel_pattern import paint_stripes
    color=paint_stripes(color,xs,world_z,R.smoothstep)
   else:color=paint_bands(color,xs,world_z,R.smoothstep)
@@ -267,6 +276,7 @@ def fin_mat(tail=False,spiny=False,region=None,mapping=None):
  if C['pattern']=='grouper':
   for k in range(210):
    px,py=rng.random(2);radius=rng.uniform(.007,.018);d=np.sqrt((u-px)**2+(v-py)**2);a=(1-R.smoothstep(radius*.7,radius*1.1,d))*.55;color=color*(1-a[...,None])+np.array([.065,.045,.022])*a[...,None]
+ color*=1-lines[...,None]*C.get('fin_rays_darkening',0)
  height=lines*.00075+(grain-.5)*.0001;images={key:R.image_file(prefix+'_'+key,data,TEX,key!='color') for key,data in [('color',np.clip(color,0,1)),('normal',normal_map(height,1.2,.45)),('rough',.45+(grain-.5)*.09),('alpha',alpha)]}
  return pbr('Fin_ThinBranchingMembrane',images,.0)
 
@@ -358,7 +368,10 @@ def fins(mat):
   return
  caudal_mat=fin_mat(True) if 'tail_color' in C else mat
  spiny_mat=fin_mat(spiny=True) if C.get('spiny_dorsal_dark_top') or C.get('dorsal_black_tip') or C.get('markings')=='clownfish' else mat
- R.fan('Caudal_Membrane',lambda u:(1.18,0,(u-.5)*.15),lambda u:(C.get('tail_end',2.03)-C['tail_fork']*(1-abs(2*u-1)**C.get('tail_power',2)),0,C['tail_height']*(2*u-1)*(1+C.get('tail_lower_extra',0) if u<.5 else 1)),caudal_mat,n=120,m=32,flutter=.020,role='tail')
+ if C.get('caudal_outline'):
+  from ornamental_fins import outline_edge
+ tail_edge=(lambda u:outline_edge(C['caudal_outline'],u)) if C.get('caudal_outline') else lambda u:(C.get('tail_end',2.03)-C['tail_fork']*(1-abs(2*u-1)**C.get('tail_power',2)),0,C['tail_height']*(2*u-1)*(1+C.get('tail_lower_extra',0) if u<.5 else 1))
+ R.fan('Caudal_Membrane',lambda u:(1.18,0,(u-.5)*.15),tail_edge,caudal_mat,n=120,m=32,flutter=.020,role='tail')
  dorsal_mat=fin_mat(region='dorsal') if (C.get('markings') in ['butterflyfish','emperor_angelfish'] or C.get('separate_fin_colors')) else mat
  anal_mat=fin_mat(region='anal') if (C.get('markings') in ['butterflyfish','emperor_angelfish'] or C.get('separate_fin_colors')) else mat
  anal_spiny_mat=fin_mat(spiny=True,region='anal') if (C.get('markings') in ['butterflyfish','emperor_angelfish'] or C.get('separate_fin_colors')) else mat
@@ -415,7 +428,7 @@ def fins(mat):
     u,t=coordinates[vertex.index];noise=.008*math.sin(u*113+side)+.005*math.sin(u*197+1.7)+.004*math.sin(u*61+.4);vertex.co.z-=noise*t**5*.85
    pectoral.data.update()
   if C.get('pelvic',True):
-   pelvic=R.fan('Pelvic_'+str(side),lambda u:pelvic_base(profile,side,u,C.get('pelvic_root_x',-.44)),lambda u:(C.get('pelvic_start_x',-.21)+(C.get('pelvic_end_x',.06)-C.get('pelvic_start_x',-.21))*u,side*(.13+.07*math.sin(PI*u)),profile(C.get('pelvic_root_x',-.44))[1]-C.get('pelvic_length',.19)*math.sin(PI*u)),pelvic_mat,n=66,m=20,flutter=.012,role='anal',phase=side*.4)
+   pelvic=R.fan('Pelvic_'+str(side),lambda u:pelvic_base(profile,side,u,C.get('pelvic_root_x',-.44)),lambda u:(C.get('pelvic_start_x',-.21)+(C.get('pelvic_end_x',.06)-C.get('pelvic_start_x',-.21))*u,side*(C.get('pelvic_edge_y',.13)+C.get('pelvic_edge_spread',.07)*math.sin(PI*u)),profile(C.get('pelvic_root_x',-.44))[1]-C.get('pelvic_length',.19)*math.sin(PI*u)),pelvic_mat,n=66,m=20,flutter=.012,role='anal',phase=side*.4)
    pelvic['pelvic_surface_anchor']='Ventrolateral body surface with a small embedded root curve'
  if 'fin_edge_noise_gain' in C:
   # The review utility's fixed edge displacement overwhelms small soft fins.
@@ -433,6 +446,9 @@ print('BUILD_MAPS',slug,flush=True);skin=pbr('Skin_Microstructure' if C['pattern
 sys.path.insert(0,str(HERE))
 from filaments import build_filaments
 build_filaments(B,C,profile,flank)
+if C.get('double_caudal') or C.get('gonopodium'):
+ from ornamental_fins import build_variants
+ build_variants(B,C,profile)
 from filaments import build_pelvic_filaments,bind_pelvic_filaments
 build_pelvic_filaments(B,C,profile)
 from barbels import build_barbels
@@ -460,7 +476,9 @@ if C.get('body_wave_gain'):
     for curve in bag.fcurves:
      if 'Spine_' not in curve.data_path:continue
      for point in curve.keyframe_points:
-      point.co.y*=C['body_wave_gain'];point.handle_left.y*=C['body_wave_gain'];point.handle_right.y*=C['body_wave_gain']
+      if C.get('body_cycles'):
+       index=int(curve.data_path.split('Spine_')[1][:2]);phase=2*PI*C['body_cycles']*(point.co.x-1)/72-index*.65;point.co.y=(.065*(index/6)**1.5*C['body_wave_gain']*math.sin(phase)) if curve.array_index==2 else 0;point.handle_left_type='AUTO';point.handle_right_type='AUTO'
+      else:point.co.y*=C['body_wave_gain'];point.handle_left.y*=C['body_wave_gain'];point.handle_right.y*=C['body_wave_gain']
      curve.update()
 
 sys.path.insert(0,str(HERE))
@@ -477,6 +495,10 @@ spec=importlib.util.spec_from_file_location('studio',HERE.parent/'fish-realism-r
 if '--quick-preview' in sys.argv:s.render.engine='BLENDER_EEVEE'
 bpy.ops.wm.save_as_mainfile(filepath=str(OUT/(slug+'.blend')));bpy.ops.render.render(write_still=True)
 s.camera.location=(-1.15,-7,.55);P.aim(s.camera,(-1.03,0,.02));s.camera.data.ortho_scale=1.65;s.render.filepath=str(OUT/'head-detail.png');bpy.ops.render.render(write_still=True)
+if C.get('gonopodium'):
+ s.camera.location=(-.10,-7,.40);P.aim(s.camera,(.05,0,-.15));s.camera.data.ortho_scale=1.1;s.render.filepath=str(OUT/'fin-detail.png');bpy.ops.render.render(write_still=True)
+if C.get('double_caudal'):
+ s.camera.location=(3,-5,2);P.aim(s.camera,(1.50,0,0));s.camera.data.ortho_scale=2.5;s.render.filepath=str(OUT/'tail-detail.png');bpy.ops.render.render(write_still=True)
 if C.get('shark_kind')=='whale':
  s.camera.location=(-6,-1.7,1.4);P.aim(s.camera,(-1.30,0,0));s.camera.data.ortho_scale=1.7;s.render.filepath=str(OUT/'frontal-detail.png');bpy.ops.render.render(write_still=True)
 if C.get('pectoral_filaments'):
