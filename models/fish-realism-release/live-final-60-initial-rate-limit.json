@@ -1,0 +1,17 @@
+{
+  "deployment_commit": "08b78f384933836d5b07a06b3780ae536414d9da",
+  "attempt": "Initial two-engine parallel live run",
+  "passed_cases_retained": 46,
+  "chromium_cases": 24,
+  "webkit_cases": 22,
+  "failure": "Both harnesses subsequently timed out waiting for the playback control while Pages served a rate-limit page.",
+  "confirmed_response": {
+    "url": "https://yapweijun1996.github.io/Blender-3D-Gallery/",
+    "http_status": 429,
+    "date_header": "Sun, 15 Nov 2026 17:03:58 GMT",
+    "page_title": "Rate limit exceeded",
+    "retry_after_header": "0"
+  },
+  "recovery": "Wait for HTTP 200; resume the unchanged assertion harness serially with 25-second pauses between selected fish and bounded 60-second backoff on HTTP 429. Finish with full-manifest resume passes and exact all-240 coverage assertions.",
+  "assertions_weakened": false
+}
