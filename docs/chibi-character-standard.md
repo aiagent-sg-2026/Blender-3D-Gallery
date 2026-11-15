@@ -80,3 +80,11 @@ Status words: PASS, FAIL, REWORK, NOT_RUN. Record evidence in `qa/run-NNN/`. Do 
 - Expressions: the three shape keys also drive eyebrows and cheeks. The head topology needs edge loops around the brows, eyes, mouth and cheeks.
 - Look: keep the boy character of sheet B.
 - Budget impact: the 40,000 triangle / 20 draw call budget still applies; the swappable icon must not add a second large texture (use a small atlas).
+
+## 10. Mall Guide v5 detail decisions (2026-11-15)
+
+- Sign icons (small atlas, symbols only, no readable text): four direction arrows; facility icons (restroom, lift, escalator, service desk); welcome and open/closed status; shop icons. The New Moon brand mark needs rights confirmation before use; use a neutral icon for Sample Store.
+- Walk: two loops, a bouncy small-step walk and a calm normal walk, plus a slower and a faster variant is *not* required unless the first two are accepted.
+- Gestures: three clips, wave (left hand), hold-and-point (right hand, sign raised), put sign down. Because the sign can be put down, it must be a separate prop that can attach to and detach from the right-hand bone.
+- Use cases: NPC in the mall scene, display model on gallery cards, assistant avatar in dialogs.
+- Consequences (to verify during the build, not yet tested): many NPCs at once make the triangle and draw-call budget the critical limit, so a lower-detail variant for distant NPCs should be planned; the dialog avatar shows the upper body, so the face and expression quality gate applies to the head close-up views; the card model needs the face and hair to hold up close.
