@@ -339,7 +339,7 @@
       "name": "Chalk",
       "collection": "billiards",
       "kind": "catalog-model",
-      "status": "READY_TO_PUSH",
+      "status": "PUSHED",
       "export_paths": [
         "models/eight-ball-billiards/exports/chalk.glb"
       ],
@@ -378,18 +378,19 @@
         "performance": "PASS chalk2 calls/216 triangles and assembly148/98100 in sampled software WebGL; no hardware FPS claim.",
         "regression": "PASS648 unit/22 targeted, exact guarded migration replay, full Game46 including561 catalog entries and experience31 with no filters/errors.",
         "mobile": "N/A explicit owner exclusion",
-        "github_main": "NOT_RUN",
-        "github_actions": "NOT_RUN",
-        "live": "NOT_RUN"
+        "github_main": "PASS exact8c61a369 main; changed assembly364df701 and standalone d1f82dc1 blobs/sizes verified.",
+        "github_actions": "PASS required Actions43660711896 on8c61a369,648 unit plus full browser gates and deployment.",
+        "live": "PASS production changed-assembly6e11310f and standalone218bb66d exact payloads, four fresh profiles and3 actual downloaded-file support/scale regressions."
       },
-      "commit_sha": null,
-      "remote_verified": false,
+      "commit_sha": "8c61a3695d2eeb35a9ae1c0832a7b867f918a135",
+      "remote_verified": true,
       "remaining_risks": [
-        "Main push, required Actions and actual changed-assembly plus standalone production acceptance pending.",
-        "Physical mobile excluded; no hardware FPS claim."
+        "Physical mobile testing excluded by owner; no hardware FPS claim."
       ],
       "report": "docs/model-qa/MODEL-0005/README.md",
-      "required_remote_checks_passed": false
+      "required_remote_checks_passed": true,
+      "actions_run_id": 43660711896,
+      "release_evidence": "docs/model-qa/MODEL-0005/release-evidence.json"
     },
     {
       "qa_id": "MODEL-0006",
@@ -397,14 +398,14 @@
       "name": "Cue Ball",
       "collection": "billiards",
       "kind": "catalog-model",
-      "status": "PENDING",
+      "status": "READY_TO_PUSH",
       "export_paths": [
         "models/eight-ball-billiards/exports/ball_00.glb"
       ],
       "source_candidates": [
         "models/eight-ball-billiards/scene.blend"
       ],
-      "source_mapping": "candidate; inspect asset root in Blender before acceptance",
+      "source_mapping": "Verified ASSET_Ball_00: one unnumbered resin body,57.15mm diameter/3968 triangles.",
       "generator_candidates": [
         "models/eight-ball-billiards/generate.py"
       ],
@@ -417,12 +418,30 @@
       "export_sha256": "6fde7586234f2c7d4082a42e72e825aec4dd2205f30b2066c73108651558a732",
       "defects": [],
       "repairs": [],
-      "qa_results": {},
+      "qa_results": {
+        "geometry": "PASS closed positive source/import sphere; analytic-radius/outward normals and true cloth-triangle contact within1 micron.",
+        "uv_textures": "PASS finite original UV; texture atlas/stretch N/A untextured material.",
+        "pbr": "PASS original opaque ivory dielectric metallic0 roughness0.24.",
+        "visual": "PASS seven source/import views and two contact views each; independent accepts no repair,89/100.",
+        "glb": "PASS original leaf/assembly/scratch validator0 errors/0 warnings; semantic replay only, index submission order differs; original failed byte check retained.",
+        "animation": "N/A static unrigged model; Game interactions tested separately.",
+        "runtime": "PASS desktop/tablet exact original6fde payload/controls; no page/HTTP errors.",
+        "performance": "PASS1 draw/3968 triangles,93692 bytes in sampled software WebGL; no hardware FPS claim.",
+        "regression": "PASS651 unit/25 targeted and full Game46 including561 catalog entries plus experience31; no filters/page errors.",
+        "mobile": "N/A explicit owner exclusion",
+        "github_main": "NOT_RUN",
+        "github_actions": "NOT_RUN",
+        "live": "NOT_RUN"
+      },
       "commit_sha": null,
       "remote_verified": false,
       "remaining_risks": [
-        "Not yet inspected under this QA campaign."
-      ]
+        "QA main push, required Actions and actual production acceptance pending.",
+        "Physical mobile excluded; no hardware FPS claim."
+      ],
+      "report": "docs/model-qa/MODEL-0006/README.md",
+      "repairs_required": false,
+      "required_remote_checks_passed": false
     },
     {
       "qa_id": "MODEL-0007",

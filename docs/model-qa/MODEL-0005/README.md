@@ -1,9 +1,10 @@
 # MODEL-0005: Chalk
 
-Status: READY_TO_PUSH. CHALK-001 is repaired; current648 unit/22 targeted,
-source/import, export, guarded migration replay, Viewer, independent visual
-and full Game46/experience31 checks pass. No commit/main/Actions/production
-PASS is claimed. MODEL-0006 has not started.
+Status: PUSHED / accepted. Repair `8c61a3695d2eeb35a9ae1c0832a7b867f918a135` is verified
+on main. Required Actions43660711896 and Pages deployment succeeded. Actual
+production standalone and changed-assembly payloads match; four fresh browser
+profiles and three tests on downloaded production files pass. CHALK-001 is
+closed. MODEL-0006 had not started at this acceptance.
 
 Selected only after final MODEL-0004 release51dfcfe3 passed required
 Actions43655719588 and exact production/runtime acceptance. Source:
@@ -90,10 +91,14 @@ support selection and measurements; scripts reproduce views without saving.
 
 The [support-contact lesson](../billiards-support-contacts.md) records independent
 regression ownership for repeated placement defects. No global Skill or KB
-memory was changed. Current regression is complete. Scoped review/main synchronization,
-separate commit/push, required Actions and actual production acceptance must
-pass before MODEL-0006 starts. The overall campaign remains incomplete.
+memory was changed. Current regression, scoped review, main synchronization,
+separate commit/push and exact main/blob verification are complete. Required
+Actions and actual production acceptance passed before selecting MODEL-0006. The overall campaign remains incomplete.
 
-Because this repair affects assembly placement, actual production acceptance must
-cover the changed assembly payload/hash and Viewer as well as the unchanged
-standalone chalk. A standalone-only production check would not prove this fix.
+Production acceptance covered both unchanged standalone and changed assembly
+payloads/Viewer. Direct ray/support regressions on the downloaded production
+GLBs also pass, proving the repaired placement reached the real published asset.
+
+Publication evidence: `release-evidence.json`. Post-push closure metadata will
+travel with the next validated campaign commit; no metadata-only push supersedes
+the current required checks.

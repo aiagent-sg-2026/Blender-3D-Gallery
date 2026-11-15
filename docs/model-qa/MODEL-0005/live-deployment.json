@@ -1,0 +1,43 @@
+{
+  "observed_at": "2026-11-15T01:29:19.790Z",
+  "release_head": "8c61a3695d2eeb35a9ae1c0832a7b867f918a135",
+  "actions_run_id": 43660711896,
+  "both_standalone_and_changed_assembly_accepted": true,
+  "artifacts": [
+    {
+      "model_id": "chalk",
+      "url": "https://yapweijun1996.github.io/Blender-3D-Gallery/assets/chalk-_1udr_v0.glb",
+      "status": 200,
+      "content_encoding": "gzip",
+      "content_length_header": "3376",
+      "decoded_bytes": 16768,
+      "sha256": "218bb66d9eb918e0d6131800e5f3446e5820e5c74a2ba4c56840faccdbe25915",
+      "matches_validated_candidate": true,
+      "browser_results": "output/playwright/model-qa/MODEL-0005-live-chalk-8c61a369/results.json"
+    },
+    {
+      "model_id": "eight-ball-billiards",
+      "url": "https://yapweijun1996.github.io/Blender-3D-Gallery/assets/billiards-scene-MKVWDBcv.glb",
+      "status": 200,
+      "content_encoding": "gzip",
+      "content_length_header": "1083990",
+      "decoded_bytes": 3518732,
+      "sha256": "6e11310f233ca08c86cffa9b075500fd47d07396deb78b3e5ef06af611c3e7ff",
+      "matches_validated_candidate": true,
+      "browser_results": "output/playwright/model-qa/MODEL-0005-live-assembly-8c61a369/results.json",
+      "chalk_root": {
+        "children": [
+          159,
+          160
+        ],
+        "name": "ASSET_Chalk",
+        "translation": [
+          -0.8299999833106995,
+          0.8783999681472778,
+          -0.6359999775886536
+        ]
+      }
+    }
+  ],
+  "physical_mobile": "Excluded by explicit owner instruction"
+}

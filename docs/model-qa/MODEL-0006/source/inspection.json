@@ -1,0 +1,88 @@
+{
+  "blender_version": "5.1.2",
+  "source": "/private/tmp/blender-model-qa-release/models/eight-ball-billiards/scene.blend",
+  "input_sha256": "6b06dedf3da537c411afc7c6c4589268fb6945e4dfd22e8af4ed35a5abc71672",
+  "imported_glb": null,
+  "root": "ASSET_Ball_00",
+  "root_location": [
+    -0.699999988079071,
+    -0.11999999731779099,
+    0.807075023651123
+  ],
+  "unit_system": "METRIC",
+  "bounds_min": [
+    -0.7285749912261963,
+    -0.14857499301433563,
+    0.7785000205039978
+  ],
+  "bounds_max": [
+    -0.6714249849319458,
+    -0.09142501652240753,
+    0.8356500267982483
+  ],
+  "dimensions": [
+    0.05715000629425049,
+    0.0571499764919281,
+    0.05715000629425049
+  ],
+  "mesh_count": 1,
+  "triangles": 3968,
+  "armatures": [],
+  "animation_data": [],
+  "materials": [
+    {
+      "name": "Ivory resin",
+      "use_nodes": true,
+      "base_color": [
+        0.9200000166893005,
+        0.8999999761581421,
+        0.8199999928474426,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.23999999463558197,
+      "alpha": 1.0,
+      "image_nodes": []
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Ball 00 | resin",
+      "vertices": 1986,
+      "triangles": 3968,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 9.734246989451348e-05,
+      "connected_components": 1,
+      "bounds_min": [
+        -0.7285749912261963,
+        -0.14857499301433563,
+        0.7785000205039978
+      ],
+      "bounds_max": [
+        -0.6714249849319458,
+        -0.09142501652240753,
+        0.8356500267982483
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Ivory resin"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    }
+  ]
+}

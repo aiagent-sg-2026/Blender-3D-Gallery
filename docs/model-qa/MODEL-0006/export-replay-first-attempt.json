@@ -1,0 +1,10 @@
+{
+  "predicate": "Exact file byte equality",
+  "result": "FAIL",
+  "source_sha256": "6b06dedf3da537c411afc7c6c4589268fb6945e4dfd22e8af4ed35a5abc71672",
+  "reference_sha256": "6fde7586234f2c7d4082a42e72e825aec4dd2205f30b2066c73108651558a732",
+  "attempt_sha256": "aabd0a694deb26bd2df038debc334717dd17776be259b25179e832409ed819fd",
+  "script_sha256": "e9ec1f74e927502a71fd4416699cc0000331c981c0c357f574fb44e633d8d9d2",
+  "script": "\"\"\"Replay one cue-ball export to a scratch directory without saving source.\"\"\"\nimport bpy,hashlib,json,sys\nfrom pathlib import Path\nsource=Path(bpy.data.filepath);expected='6b06dedf3da537c411afc7c6c4589268fb6945e4dfd22e8af4ed35a5abc71672';assert hashlib.sha256(source.read_bytes()).hexdigest()==expected\nout=Path(sys.argv[sys.argv.index('--')+1]).resolve();assert out!=source.parent/'exports';out.mkdir(parents=True,exist_ok=True)\nroot=bpy.data.objects['ASSET_Ball_00'];bpy.ops.object.select_all(action='DESELECT');root.select_set(True)\nfor ob in root.children_recursive:ob.select_set(True)\nroot.location=(0,0,0)\nbpy.ops.export_scene.gltf(filepath=str(out/'ball_00.glb'),export_format='GLB',use_selection=True,export_apply=True)\nreference=(source.parent/'exports/ball_00.glb').read_bytes();actual=(out/'ball_00.glb').read_bytes();assert actual==reference,'Current source export differs from published standalone'\nassert hashlib.sha256(source.read_bytes()).hexdigest()==expected\n(out/'results.json').write_text(json.dumps(dict(input_source_sha256=expected,output_sha256=hashlib.sha256(actual).hexdigest(),bytes=len(actual),exact_standalone_replay=True,source_and_product_files_unchanged=True),indent=2)+'\\n')\n",
+  "diagnosis": "Only index submission order differs. Full JSON and all position/normal/UV bytes match; all3968 oriented triangles including multiplicity match. Preserve raw failed attempt, then use canonical oriented-triangle equality uniformly, without changing the model."
+}

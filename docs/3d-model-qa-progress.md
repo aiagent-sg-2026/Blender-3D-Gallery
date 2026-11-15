@@ -1,6 +1,6 @@
 # 3D Model QA Progress
 
-Sequential QA campaign. MODEL-0001 (pool-table), MODEL-0002 (cue-stick-01), MODEL-0003 (cue-stick-02) and MODEL-0004 (rack) completed verified main, required Actions and production acceptance. Active model: MODEL-0005 (chalk). Remaining models await sequential QA. Historical evidence is reference material, not current acceptance.
+Sequential QA campaign. MODEL-0001 through MODEL-0005 completed verified main, required Actions and actual production acceptance. Active model: MODEL-0006 (cue-ball). Remaining models await sequential QA. Historical evidence is reference material, not current acceptance.
 
 Physical mobile testing is excluded for the entire campaign by the owner ("no need test by mobile"). Desktop/tablet viewport checks and existing CI browser suites remain applicable; they do not establish physical-device FPS.
 
@@ -16,8 +16,8 @@ All other initial records are PENDING. Uncatalogued/historical artifacts remain 
 | MODEL-0002 | cue-stick-01 | models/eight-ball-billiards/exports/cue_01.glb, models/eight-ball-billiards/scene.blend | PUSHED | CUE-001 repaired; local and full remote gates, production exact hash/runtime PASS | 13ef9c102e2fc8b3197be0295dc6c57881906241 / main ancestor and blob verified; Actions43637504290 success | Physical mobile excluded; stylized asset |
 | MODEL-0003 | cue-stick-02 | models/eight-ball-billiards/exports/cue_02.glb, models/eight-ball-billiards/scene.blend | PUSHED | CUE-002 repaired; local and full remote gates, production exact hash/runtime PASS | 8d96b619a8f7b1492aa1accfb44bce4729802270 / exact main and GLB blob verified; Actions43648248917 success | Physical mobile excluded; stylized asset |
 | MODEL-0004 | rack | models/eight-ball-billiards/exports/triangle_rack.glb, models/eight-ball-billiards/scene.blend | PUSHED | All4 defects repaired; current local/full remote gates and exact production payload/runtime PASS | 51dfcfe36477df12895287b0db3aee3d5a29a43f / exact main and blob verified; Actions43655719588 success | Physical mobile excluded |
-| MODEL-0005 | chalk | models/eight-ball-billiards/exports/chalk.glb, models/eight-ball-billiards/scene.blend | READY_TO_PUSH | CHALK-001 repaired;648 unit/22 targeted, export replay, Game46/experience31, Viewer and independent review PASS | — / unverified | Main/Actions/changed-assembly production acceptance pending |
-| MODEL-0006 | cue-ball | models/eight-ball-billiards/exports/ball_00.glb, models/eight-ball-billiards/scene.blend | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-0005 | chalk | models/eight-ball-billiards/exports/chalk.glb, models/eight-ball-billiards/scene.blend | PUSHED | CHALK-001 repaired; local/full remote gates and actual changed-assembly/standalone acceptance PASS | 8c61a3695d2eeb35a9ae1c0832a7b867f918a135 / exact main and both blobs verified; Actions43660711896 success | Physical mobile excluded |
+| MODEL-0006 | cue-ball | models/eight-ball-billiards/exports/ball_00.glb, models/eight-ball-billiards/scene.blend | READY_TO_PUSH | No repair required;651 unit/25 targeted, semantic replay, Game46/experience31, Viewer and independent review PASS | — / unverified | QA main/Actions/production pending |
 | MODEL-0007 | ball-01 | models/eight-ball-billiards/exports/ball_01.glb, models/eight-ball-billiards/scene.blend | PENDING | Not inspected | — / unverified | QA pending |
 | MODEL-0008 | ball-02 | models/eight-ball-billiards/exports/ball_02.glb, models/eight-ball-billiards/scene.blend | PENDING | Not inspected | — / unverified | QA pending |
 | MODEL-0009 | ball-03 | models/eight-ball-billiards/exports/ball_03.glb, models/eight-ball-billiards/scene.blend | PENDING | Not inspected | — / unverified | QA pending |
