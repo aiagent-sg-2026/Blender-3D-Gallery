@@ -1,0 +1,42 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "scale tiles too broad and pale compared with live aquarium photograph"
+      ],
+      "changes": [
+        "increase scale density and lower edge/pigment contrast while retaining irregular rims"
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "pass",
+      "changes": [
+        "increased scale density and subdued rim/pigment contrast",
+        "confirmed source detail, GLB contact and actual browser playback"
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "91aa0b0b12609c86bb854f47e442ac159e8f11ced9358a5c17a1172fe27ebfa3",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "visual_checks": {
+    "anatomy": "pass: deep pink-silver oval body and gently sloping forehead follow the live reference",
+    "surface": "pass: denser lower-contrast irregular scales and tiny upper-flank blue-green spots after iteration two",
+    "head": "pass: amber iris, large pupil and restrained closed mouth/gill creases",
+    "fins": "pass: long tapered pectorals, continuous spiny-soft dorsal, short spiny anal and rose forked caudal",
+    "surface_contact": "pass: source and imported GLB contact the posed body at five phases",
+    "motion": "pass: cyclic tail propulsion and fin stabilization survive real export/reimport",
+    "browser": "pass: exact draft GLB visibly swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Photo-informed Pagrus major artwork, not a scanned specimen.",
+    "The supplied Chinese name and English Red seabream name overlap inconsistently; artwork follows the English label and declares its visual species.",
+    "Draft captions remain baseline."
+  ]
+}

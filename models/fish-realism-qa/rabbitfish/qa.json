@@ -1,0 +1,45 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "spots too broad and conspicuous against the flank",
+        "dorsal spine notches too shallow compared with specimen"
+      ],
+      "changes": [
+        "reduce spot diameter and lighten the silver flank",
+        "deepen the membrane valleys between dorsal spines"
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "pass",
+      "changes": [
+        "reduced spot sizes and lightened the silver flanks",
+        "deepened dorsal spine valleys",
+        "confirmed source/head renders, actual GLB contact and browser swimming"
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "cb5ec0eb6d36dc5b5eff251cf320a692c8bfdd32992b92213acda728e9459ac8",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "visual_checks": {
+    "anatomy": "pass: compressed olive-silver oval body, small pointed mouth and shallow forked tail follow the museum specimen",
+    "surface": "pass: smaller irregular pale spots and subdued fine scale relief after the second iteration",
+    "head": "pass: gold iris with dark pupil, compact mouth crease and integrated gill cover",
+    "fins": "pass: thirteen dorsal spines and seven anal spines have distinct membrane valleys; tapered pectorals",
+    "surface_contact": "pass: evaluated source and reimported GLB roots contact the posed body at five phases",
+    "motion": "pass: tail and stabilizing fins move and return through real GLB export",
+    "browser": "pass: exact draft GLB visibly swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed artwork of Siganus canaliculatus, not a scanned specimen.",
+    "Supplied common name retained; no certified taxonomic identification.",
+    "Draft captions remain baseline."
+  ]
+}
