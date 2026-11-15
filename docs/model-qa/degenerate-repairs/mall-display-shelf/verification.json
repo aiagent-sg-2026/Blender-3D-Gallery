@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "id": "mall-display-shelf",
+  "base_main_commit": "3fe1cbb1126b47bf8c458de6735ddf7a2209a48b",
+  "before_zero_area_triangles": 164,
+  "after_zero_area_triangles": 0,
+  "source_precision_residues_removed": 0,
+  "triangles": 5548,
+  "bytes": 172420,
+  "glb_sha256": "7a4013e800dd587b2b1ec1934973850da9addb981268399de8cc629e6357f907",
+  "source_sha256": "f95e5c0ba9942850c24ebfd02ce635cce9f1a9224db30e7b8bc9c2ab04a744ee",
+  "editable_parts": 31,
+  "source_authored_data_preserved_and_reopened": true,
+  "native_and_delivered_reimport_zero_triangles": 0,
+  "vertex_and_normal_delta": 0,
+  "full_tests_passed": 687,
+  "fresh_native_generator_and_actual_glb": "PASS; all four factory cleanup regressions, plus complete shelf source/studio/export without preview rendering",
+  "build": "PASS; existing chunk advisory",
+  "browser_cases_passed": 15,
+  "browser_scope": "All four essentials at 1440/768/390; consumed GLB SHA, discovery, orbit/zoom/reset/reload, close/reopen, focus and render-loop cleanup",
+  "limits": [
+    "No physical-device/FPS or deployment claim",
+    "Nine other affected assets remain pending"
+  ],
+  "upstream_integration": {
+    "tested_main_commit": "9512937490183fc86c4aa61f7e7b8465e668a02e",
+    "full_tests_passed": 687,
+    "build": "PASS",
+    "browser_cases_passed": 15,
+    "target_asset_changed_in_upstream": false,
+    "viewer_change": "Additional optional attribution links; revalidated all essentials",
+    "asset_hashes_unchanged": true
+  }
+}

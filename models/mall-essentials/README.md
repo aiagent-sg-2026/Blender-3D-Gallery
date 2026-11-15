@@ -7,16 +7,16 @@ Four original Blender-created fixtures matching the gallery's jade, champagne-br
 | Directory kiosk | 0.960 / 2.050 / 0.680 | 4,940 | 178,068 |
 | Advertising lightbox | 1.160 / 2.310 / 0.580 | 6,968 | 235,832 |
 | Trash bin | 0.620 / 0.960 / 0.646 | 7,616 | 338,232 |
-| Display shelf | 1.520 / 1.960 / 0.580 | 5,712 | 172,420 |
+| Display shelf | 1.520 / 1.960 / 0.580 | 5,548 | 172,420 |
 
-Measurements and SHA-256 hashes come from actual exported geometry in [reports/assets.json](reports/assets.json). All four total 924,552 bytes and 25,236 triangles. Each export has 5–6 material primitives, no external textures, cameras, lights, animation, or compression-decoder dependency.
+Measurements and SHA-256 hashes come from actual exported geometry in [reports/assets.json](reports/assets.json). All four total 924,552 bytes and 25,072 triangles. Each export has 5–6 material primitives, no external textures, cameras, lights, animation, or compression-decoder dependency.
 
 - **Directory kiosk:** illustrative shop blocks, route and location marker, portrait housing, touch-category shapes and rear service cover. The map is fictional and the screen is decorative, not functional software.
 - **Advertising lightbox:** a softly emissive poster panel with original geometric campaign artwork and editable labels. Rear panel and fasteners are modeled. Geometry represents a lightbox, not a physical lighting specification.
 - **Trash bin:** real open annular aperture, recessed liner and base, walnut slats and separate front badge. It is a decorative concept, not a waste-system or manufacturing specification.
 - **Display shelf:** four empty usable shelves, slim supports, brass nosings, diagonal rear braces and a labeled header.
 
-The [2026-11-15 trash-bin repair](../../docs/model-qa/degenerate-repairs/mall-trash-bin/README.md) updates its source to Blender 5.1.2 with a non-destructive cleanup modifier on six reviewed parts. Its GLB retains the original vertex attributes and shading, removing 470 exact-zero triangles and two reviewed nanometre-height source residues through index reconstruction. Dimensions, materials and previews are unchanged. The [directory kiosk repair](../../docs/model-qa/degenerate-repairs/mall-directory-kiosk/README.md) similarly cleans its fourteen reviewed parts while retaining its 23 editable components and original delivered shading. The [advertising-lightbox repair](../../docs/model-qa/degenerate-repairs/mall-advertising-lightbox/README.md) removes its 200 degenerate triangles and retains its original emission/shading. Only display shelf remains pending a separate repair in this collection.
+The [2026-11-15 trash-bin repair](../../docs/model-qa/degenerate-repairs/mall-trash-bin/README.md) updates its source to Blender 5.1.2 with a non-destructive cleanup modifier on six reviewed parts. Its GLB retains the original vertex attributes and shading, removing 470 exact-zero triangles and two reviewed nanometre-height source residues through index reconstruction. Dimensions, materials and previews are unchanged. The [directory kiosk repair](../../docs/model-qa/degenerate-repairs/mall-directory-kiosk/README.md) similarly cleans its fourteen reviewed parts while retaining its 23 editable components and original delivered shading. The [advertising-lightbox repair](../../docs/model-qa/degenerate-repairs/mall-advertising-lightbox/README.md) removes its 200 degenerate triangles and retains its original emission/shading. All four essentials now have zero-area triangle repairs documented in the campaign.
 
 ## Reproduce
 
@@ -55,3 +55,7 @@ Original asset; reuse in the owner's projects is authorized. Public redistributi
 Keep the generator, metadata and attribution with project reuse. Consumers should pin an exact commit and record the hashes. No files were added to other repositories or existing offline installation packs.
 
 See [verification.md](verification.md) for tested behavior and limitations. This is a proposed gallery addition, not a deployment.
+
+## Display shelf topology follow-up (2026-11-15)
+
+The display shelf now joins the other three repaired essentials: zero degenerate triangles, 5,548 total triangles and 172,420 bytes. All 31 authored parts remain editable in the Blender 5.1.2 source. Six reviewed parts use idempotent cleanup, including the COLLECTION text. Positions, normals and materials in the canonical GLB are unchanged; only triangle indices differ. Existing preview images remain applicable. See [the repair evidence](../../docs/model-qa/degenerate-repairs/mall-display-shelf/README.md). The native regression now covers all four factories and saves/validates a complete fresh shelf source/export without rendering previews.
