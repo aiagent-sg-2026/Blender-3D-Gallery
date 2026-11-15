@@ -1,0 +1,21 @@
+{
+  "status": "agent_qa_pass",
+  "iterations": 5,
+  "reviewed_source_sha256": "edb969505b4cd8be731d7528cdfff9cab854c530a4cdee657eeaa0c0d1429d73",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "visual_checks": {
+    "anatomy": "pass: robust head, closed terminal mouth and thick body; rounded tail and continuous low dorsal",
+    "surface": "pass: dense irregular brown spots, pale underside, faint angled bars and finer head pigment",
+    "fins": "pass: spotted membranes with branching rays; roots remain linked to the body",
+    "head": "pass: conforming iris and integrated mouth/opercular recesses, no detached jaw tubes",
+    "browser": "pass: desktop/mobile viewer loads the draft GLB, visible swim, stable pause and disposal"
+  },
+  "limitations": [
+    "Photo-informed original art study, not a measured specimen or photogrammetric scan.",
+    "The browser fixture substitutes the GLB; unchanged catalog captions describe the baseline entry.",
+    "No production gallery model is replaced in this QA artifact."
+  ]
+}

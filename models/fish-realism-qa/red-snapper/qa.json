@@ -1,0 +1,26 @@
+{
+  "status": "agent_qa_pass",
+  "iterations": 4,
+  "visual_checks": {
+    "proportions": "pass: deeper adult body, sloping forehead and narrow caudal peduncle",
+    "head": "pass: conforming iris, natural closed mouth and shallow opercular detail; no attached wire creases or detached jaw",
+    "surface": "pass: fine overlapping scales replace separate decorative hexagonal tiles; varied red-pink pigment and a paler underside",
+    "fins": "pass: thin branching red membranes and near-truncate tail",
+    "motion": "pass: source and exported tail/dorsal/anal/pectoral meshes deform and loop endpoints match",
+    "browser": "pass: actual draft GLB loaded in the existing viewer at desktop/mobile widths, visible swim, stable pause, dispose and no page errors",
+    "fin_roots": "pass: body-linked root weights feather to independent motion at the tips"
+  },
+  "export_fixes": [
+    "temporarily flatten skinned meshes for glTF",
+    "triangulate and remap closed body caps to export tangent space"
+  ],
+  "limitations": [
+    "Original photo-informed art study; not a photogrammetric capture or scientific identification model.",
+    "No production gallery replacement in this QA artifact."
+  ],
+  "reviewed_source_sha256": "cc7a97a440ee188cbb8e5387c1baebc6e32325ff53d6c59f4fa4dcf23c529e5d",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ]
+}

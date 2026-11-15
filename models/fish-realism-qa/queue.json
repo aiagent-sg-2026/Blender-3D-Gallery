@@ -1,0 +1,948 @@
+{
+  "mode": "sequential_automatic_qa_small_batch_previews",
+  "owner_authorized_on": "2026-11-15",
+  "preserved_accepted": [
+    "barramundi",
+    "betta",
+    "stingray"
+  ],
+  "items": [
+    {
+      "fish_id": "FISH-002",
+      "slug": "red-snapper",
+      "name": "Red snapper / Merah",
+      "priority": "P0",
+      "status": "qa_pass",
+      "checks": {
+        "reference_photos": "pass",
+        "anatomy": "pass",
+        "materials": "pass",
+        "swim_motion": "pass",
+        "glb_roundtrip": "pass",
+        "visual_review": "pass",
+        "browser": "pass"
+      },
+      "iterations": [
+        {
+          "iteration": 1,
+          "result": "revise",
+          "findings": [
+            "body too shallow and long",
+            "head too pointed",
+            "scale pattern too uniform",
+            "dorsal too tall and stiff"
+          ]
+        },
+        {
+          "iteration": 2,
+          "result": "revise",
+          "findings": [
+            "unstructured pigment variation masks the fine scales",
+            "lower jaw too pale and protruding",
+            "fin membrane is too dark"
+          ]
+        },
+        {
+          "iteration": 3,
+          "result": "qa_pass",
+          "findings": [
+            "rebalanced scales and pigment",
+            "reduced jaw projection",
+            "corrected glTF skin parenting and tangent export"
+          ]
+        },
+        {
+          "iteration": 4,
+          "result": "detail_revision",
+          "findings": [
+            "close-up reveals detached mouth and gill tubes",
+            "replace closed-mouth and opercular lines with integrated skin recess maps",
+            "replace layered eyeballs with textured conforming iris caps"
+          ]
+        }
+      ],
+      "artifact_manifest": "models/fish-realism-qa/red-snapper/artifacts.json"
+    },
+    {
+      "fish_id": "FISH-003",
+      "slug": "grouper",
+      "name": "Grouper / Kerapu",
+      "priority": "P0",
+      "status": "qa_pass",
+      "checks": {
+        "reference_photos": "pass",
+        "anatomy": "pass",
+        "materials": "pass",
+        "swim_motion": "pass",
+        "glb_roundtrip": "pass",
+        "visual_review": "pass",
+        "browser": "pass"
+      },
+      "iterations": [
+        {
+          "iteration": 1,
+          "result": "revise",
+          "findings": [
+            "head too flat and jaw lacks volume",
+            "spot field too sparse",
+            "median fins lack spots"
+          ]
+        },
+        {
+          "iteration": 2,
+          "result": "revise",
+          "findings": [
+            "lip too pale and isolated",
+            "mouth corner slopes in the wrong direction"
+          ]
+        },
+        {
+          "iteration": 3,
+          "result": "detail_and_motion_revision",
+          "findings": [
+            "integrated closed mouth and gill recesses",
+            "conforming iris and fin-root weights",
+            "desktop/mobile draft GLB verified"
+          ]
+        }
+      ],
+      "artifact_manifest": "models/fish-realism-qa/grouper/artifacts.json"
+    },
+    {
+      "fish_id": "FISH-004",
+      "slug": "golden-pomfret",
+      "name": "Golden pomfret / Bawal emas",
+      "priority": "P0",
+      "status": "in_progress",
+      "checks": {
+        "reference_photos": "pass",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      },
+      "iterations": [
+        {
+          "iteration": 1,
+          "result": "revise",
+          "findings": [
+            "snout outline too flat",
+            "tail lobes too needle-like",
+            "dorsal/anal lobes too tall relative to the photographed body"
+          ]
+        }
+      ]
+    },
+    {
+      "fish_id": "FISH-005",
+      "slug": "silver-pomfret",
+      "name": "Silver pomfret / Bawal putih",
+      "priority": "P0",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-006",
+      "slug": "black-pomfret",
+      "name": "Black pomfret / Bawal hitam",
+      "priority": "P1",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-007",
+      "slug": "indian-mackerel",
+      "name": "Indian mackerel / Ikan kembung",
+      "priority": "P0",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-008",
+      "slug": "spanish-mackerel",
+      "name": "Spanish mackerel / Tenggiri",
+      "priority": "P0",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-009",
+      "slug": "yellowtail-scad",
+      "name": "Yellowtail scad / Selar kuning",
+      "priority": "P1",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-010",
+      "slug": "scad",
+      "name": "Scad / Selar",
+      "priority": "P1",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-011",
+      "slug": "crimson-snapper",
+      "name": "Crimson snapper / Jenahak",
+      "priority": "P1",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-012",
+      "slug": "threadfin",
+      "name": "Threadfin / Kurau",
+      "priority": "P1",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-013",
+      "slug": "fourfinger-threadfin",
+      "name": "Fourfinger threadfin",
+      "priority": "P1",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-014",
+      "slug": "ribbonfish",
+      "name": "Ribbonfish / Ikan parang",
+      "priority": "P1",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-015",
+      "slug": "sardine",
+      "name": "Sardine / Sardin",
+      "priority": "P1",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-016",
+      "slug": "anchovy",
+      "name": "Anchovy / Ikan bilis",
+      "priority": "P0",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-017",
+      "slug": "rabbitfish",
+      "name": "Rabbitfish / Ikan dengkis",
+      "priority": "P1",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-018",
+      "slug": "red-seabream",
+      "name": "Red seabream",
+      "priority": "P2",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-019",
+      "slug": "croaker",
+      "name": "Croaker",
+      "priority": "P2",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-020",
+      "slug": "trevally",
+      "name": "Trevally",
+      "priority": "P2",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-021",
+      "slug": "red-tilapia",
+      "name": "Red tilapia",
+      "priority": "P0",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-022",
+      "slug": "tilapia",
+      "name": "Tilapia",
+      "priority": "P0",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-023",
+      "slug": "marble-goby",
+      "name": "Marble goby / Ikan ketutu",
+      "priority": "P0",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-024",
+      "slug": "snakehead",
+      "name": "Snakehead / Ikan haruan",
+      "priority": "P0",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-025",
+      "slug": "giant-snakehead",
+      "name": "Giant snakehead / Ikan toman",
+      "priority": "P1",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-026",
+      "slug": "walking-catfish",
+      "name": "Walking catfish / Ikan keli",
+      "priority": "P0",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-027",
+      "slug": "pangasius",
+      "name": "Pangasius catfish / Ikan patin",
+      "priority": "P0",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-028",
+      "slug": "climbing-perch",
+      "name": "Climbing perch / Ikan puyu",
+      "priority": "P1",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-029",
+      "slug": "giant-gourami",
+      "name": "Giant gourami / Ikan kaloi",
+      "priority": "P1",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-030",
+      "slug": "three-spot-gourami",
+      "name": "Three-spot gourami",
+      "priority": "P2",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-031",
+      "slug": "grass-carp",
+      "name": "Grass carp",
+      "priority": "P1",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-032",
+      "slug": "common-carp",
+      "name": "Common carp",
+      "priority": "P1",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-033",
+      "slug": "jade-perch",
+      "name": "Jade perch",
+      "priority": "P2",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-034",
+      "slug": "grey-mullet",
+      "name": "Grey mullet",
+      "priority": "P1",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-035",
+      "slug": "milkfish",
+      "name": "Milkfish / Bandeng",
+      "priority": "P2",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-036",
+      "slug": "malaysian-mahseer",
+      "name": "Malaysian mahseer / Ikan kelah",
+      "priority": "P1",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-037",
+      "slug": "sultan-fish",
+      "name": "Sultan fish / Ikan jelawat",
+      "priority": "P1",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-038",
+      "slug": "hampala-barb",
+      "name": "Hampala barb",
+      "priority": "P1",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-039",
+      "slug": "lampam",
+      "name": "Barb / Ikan lampam",
+      "priority": "P2",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-040",
+      "slug": "river-catfish",
+      "name": "River catfish / Ikan baung",
+      "priority": "P1",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-041",
+      "slug": "swamp-eel",
+      "name": "Swamp eel / Ikan belut",
+      "priority": "P2",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-042",
+      "slug": "freshwater-pufferfish",
+      "name": "Freshwater pufferfish",
+      "priority": "P2",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-044",
+      "slug": "clownfish",
+      "name": "Clownfish",
+      "priority": "P0",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-045",
+      "slug": "lionfish",
+      "name": "Lionfish",
+      "priority": "P1",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-046",
+      "slug": "parrotfish",
+      "name": "Parrotfish",
+      "priority": "P1",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-047",
+      "slug": "butterflyfish",
+      "name": "Butterflyfish",
+      "priority": "P1",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-048",
+      "slug": "marine-angelfish",
+      "name": "Marine angelfish",
+      "priority": "P1",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-049",
+      "slug": "pufferfish",
+      "name": "Pufferfish",
+      "priority": "P1",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-050",
+      "slug": "triggerfish",
+      "name": "Triggerfish",
+      "priority": "P2",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-051",
+      "slug": "reef-shark",
+      "name": "Reef shark",
+      "priority": "P1",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-052",
+      "slug": "whale-shark",
+      "name": "Whale shark",
+      "priority": "P2",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-053",
+      "slug": "wrasse",
+      "name": "Wrasse",
+      "priority": "P2",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-054",
+      "slug": "surgeonfish",
+      "name": "Surgeonfish / Tang",
+      "priority": "P2",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-055",
+      "slug": "asian-arowana",
+      "name": "Asian arowana / Dragon fish",
+      "priority": "P0",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-057",
+      "slug": "koi",
+      "name": "Koi",
+      "priority": "P0",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-058",
+      "slug": "goldfish",
+      "name": "Goldfish",
+      "priority": "P0",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-059",
+      "slug": "guppy",
+      "name": "Guppy",
+      "priority": "P1",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    },
+    {
+      "fish_id": "FISH-060",
+      "slug": "tiger-barb",
+      "name": "Tiger barb",
+      "priority": "P1",
+      "status": "pending",
+      "checks": {
+        "reference_photos": "pending",
+        "anatomy": "pending",
+        "materials": "pending",
+        "swim_motion": "pending",
+        "glb_roundtrip": "pending",
+        "visual_review": "pending"
+      }
+    }
+  ]
+}
