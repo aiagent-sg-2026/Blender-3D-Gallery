@@ -22,7 +22,15 @@ for slug in args.slugs:
  assert [r['width'] for r in browser['results']]==[1440,390]
  assert all(r['loaded_draft_sha256']==motion['glb_sha256'] and r['visible_swim_change'] and r['paused_stable'] and r['viewer_disposed'] and r['no_page_errors'] for r in browser['results'])
  assert all(value.startswith('pass:') for value in qa['visual_checks'].values())
- prepared.append((slug,source,artifact,read(source/'profile-snapshot.json')))
+ profile=read(source/'profile-snapshot.json');expected_barbels=2*len(profile.get('barbels',[]))
+ for label in ['source','export']:
+  actual=[name for name in motion[label]['motion_by_mesh'] if name.startswith('Barbel_')];assert len(actual)==expected_barbels,('Mouth-barbel count',slug,label)
+  if expected_barbels:
+   assert motion[label]['barbel_meshes']==expected_barbels
+   assert all(sum(name.startswith('Barbel_') for name in phase['fins'])==expected_barbels for phase in motion[label]['surface_contact'])
+  if profile.get('adipose_fin'):
+   adipose=[value for name,value in motion[label]['motion_by_mesh'].items() if name.startswith('Dorsal_AdiposeFin')];assert len(adipose)==1 and adipose[0]['motion']>.001,('Missing moving adipose fin',slug,label)
+ prepared.append((slug,source,artifact,profile))
 
 manifest=read(HERE/'releases.json');queue=read(REPO/'models/fish-realism-qa/queue.json');profiles=read(REPO/'models/fish-realism-qa/profiles.json')
 for slug,source,artifact,profile in prepared:

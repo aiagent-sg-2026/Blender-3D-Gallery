@@ -75,6 +75,9 @@ def skin_maps():
    height+=scute*.00035
    if C['markings']=='trevally':color*=1-scute[...,None]*.11
    else:color+=scute[...,None]*.018
+ if C.get('markings')=='climbing_perch':
+  edge_noise=(R.noise(u,v,120,90,989)-.5)*.20;d1=np.sqrt(((xs+.86)/.05)**2+((world_z-.13)/.065)**2);d2=np.sqrt(((xs-1.09)/.055)**2+(world_z/.065)**2);spot=np.maximum(1-R.smoothstep(.65,1.10,d1+edge_noise),1-R.smoothstep(.65,1.10,d2+edge_noise));color*=1-spot[...,None]*flank_mask[...,None]*.82
+  bars=np.exp(-(np.sin(PI*(u*7+.10*np.sin(v*16)))/.53)**2)*R.smoothstep(.30,.42,u)*(1-R.smoothstep(.91,.98,u));color*=1-bars[...,None]*.10
  if C.get('markings')=='giant_snakehead':
   boundary=-.04+.035*np.sin(xs*17)+.014*np.sin(xs*43);band=(1-R.smoothstep(boundary+.025,boundary+.10,world_z))*R.smoothstep(-.22,-.13,world_z)*flank_mask*R.smoothstep(-1.40,-1.05,xs);color=color*(1-band[...,None]*.68)+np.array([.10,.135,.15])*band[...,None]*.68
  if C.get('markings')=='snakehead':
@@ -190,6 +193,7 @@ def fin_sweep(u,anal=False):
  return 0
 
 def fin_height(u,anal=False):
+ if anal and C.get('anal_soft_start_height'):return C['anal_height']*math.sin(PI*u)**.65+C['anal_soft_start_height']*(1-u)**4
  if not anal and C.get('soft_start_height'):return C['soft_height']*math.sin(PI*u)**.7+C['soft_start_height']*(1-u)**4
  if C.get('soft_forward_lobes'):return B.interp([(0,0),(.13,1),(.36,.48),(.72,.13),(1,0)],u)*(C.get('anal_height',.25) if anal else C['soft_height'])
  if slug=='golden-pomfret':return B.interp([(0,0),(.12,.44),(.27,.25),(.6,.10),(1,0)] if anal else [(0,0),(.10,.47),(.24,.28),(.55,.10),(1,0)],u)
@@ -215,6 +219,10 @@ def fins(mat):
   R.fan('Anal_SpinyMembrane',lambda u:(a0+(a1-a0)*u,0,profile(a0+(a1-a0)*u)[1]),anal_spiny_edge,mat,n=100,m=24,flutter=.005,role='anal');anal_start=a1
  anal_span=C.get('anal_end',1.07)-anal_start
  R.fan('Anal_SoftMembrane',lambda u:(anal_start+anal_span*u,0,profile(anal_start+anal_span*u)[1]),lambda u:(anal_start+anal_span*u+fin_sweep(u,True),0,profile(anal_start+anal_span*u)[1]-fin_height(u,True)),mat,n=100,m=28,flutter=.018,role='anal',phase=1.1)
+ if C.get('adipose_fin'):
+  x0,x1,peak=.72,1.03,.84;h0=profile(x0)[0]-.002;h1=profile(x1)[0]-.002;hp=profile(peak)[0]+.10;hr=profile(.98)[0]+.025
+  vertices=[(x0,-.008,h0),(x0,.008,h0),(x1,-.006,h1),(x1,.006,h1),(peak,-.002,hp),(peak,.002,hp),(.98,-.002,hr),(.98,.002,hr)];uv=[(0,0),(.1,0),(.9,0),(1,0),(.25,1),(.35,1),(.75,.25),(.85,.25)]
+  material=B.material('Adipose_FleshySkin',tuple(v/12.92 if v<=.04045 else ((v+.055)/1.055)**2.4 for v in C['back_color']),.46);B.mesh('Dorsal_AdiposeFin',vertices,[(0,4,5,1),(4,6,7,5),(6,2,3,7),(0,2,6,4),(1,5,7,3)],material,uv,deform='dorsal')
  for k in range(C.get('finlets',0)):
   x=C.get('finlet_start',.94)+k*C.get('finlet_spacing',.055);height=C.get('finlet_height',.055)*(1-k*C.get('finlet_taper',.12))
   for sign,role in [(1,'dorsal'),(-1,'anal')]:

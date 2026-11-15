@@ -1,0 +1,46 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "snout is too pointed for the rounded reference head",
+        "opercular and tail-peduncle spots look overly blurred"
+      ],
+      "changes": [
+        "broaden and round the forehead/snout profile",
+        "use sharper irregular spot boundaries while retaining olive-silver skin variation"
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "pass",
+      "changes": [
+        "rounded and broadened forehead/snout",
+        "replaced diffuse spots with sharper irregular pigment boundaries",
+        "checked source detail, GLB contact and native browser swimming"
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "2421d553fc19ce4140638184ba0cdee743ce0936ee331e7de395c1c63e99bea5",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: rectangular olive-silver body and more rounded forehead/snout match the live climbing perch",
+    "surface": "pass: irregular scales, faint bars and sharper dark opercular/peduncle patches after the second iteration",
+    "head": "pass: golden reddish iris and compact mouth remain integrated with the head",
+    "fins": "pass: continuous spiny-soft dorsal/anal, truncate caudal and small paired fins",
+    "surface_contact": "pass: evaluated source and actual imported GLB roots contact posed skin at five phases",
+    "motion": "pass: actual tail and fins move and return through GLB export/reimport",
+    "browser": "pass: exact draft GLB visibly swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed Anabas testudineus artwork, not a scanned or calibrated specimen.",
+    "Swimming is delivered; no terrestrial climbing behavior is claimed.",
+    "Draft captions remain baseline."
+  ]
+}

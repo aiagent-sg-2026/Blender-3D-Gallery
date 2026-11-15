@@ -1,0 +1,46 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "actual frame-one nasal barbel root is 0.0052 to 0.0071 units outside the rounded head skin",
+        "analytical profile placement omitted the head-cap rounding offset"
+      ],
+      "changes": [
+        "project each barbel root onto the actual authored body mesh and embed its center slightly",
+        "retain the existing contact tolerances and repeat source/GLB/browser checks"
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "pass",
+      "changes": [
+        "projected mouth barbel roots onto the actual rounded body mesh",
+        "source and imported GLB both retain eight barbels and pass five-phase contact",
+        "confirmed native desktop/mobile browser swimming"
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "fe3c81aadc29d3a040e0e246cfb025dc058d998ec75e4a34ffbe913f456ea56c",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: dark scaleless elongated body, flattened broad head and small eyes",
+    "surface": "pass: subtle skin microstructure replaces scale tiles; belly remains subdued",
+    "head": "pass: eight tapered mouth barbels survive source and GLB export; small iris remains embedded",
+    "fins": "pass: long low dorsal/anal membranes, rounded tail and compact paired fins follow the reference",
+    "surface_contact": "pass: actual-body projection fixes the nasal barbel gap; all fin/barbel roots pass five source and GLB phases without changing tolerance",
+    "motion": "pass: travelling body/tail flex and body-following long fins survive actual GLB round trip",
+    "browser": "pass: exact draft GLB visibly swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed Clarias batrachus artwork, not a scanned or calibrated specimen.",
+    "Swimming is delivered; no terrestrial walking animation is claimed.",
+    "Draft captions remain baseline."
+  ]
+}

@@ -5,6 +5,7 @@ HERE=Path(__file__).resolve().parent
 sys.path.insert(0,str(HERE.parent/'fish-realism-qa'))
 from fin_attachment import check_surface_contact
 manifest=json.loads((HERE/'releases.json').read_text())
+profiles=json.loads((HERE.parent/'fish-realism-qa'/'profiles.json').read_text())
 results=[]
 for directory in sorted(HERE.iterdir()):
  file=directory/'model.glb'
@@ -24,6 +25,8 @@ for directory in sorted(HERE.iterdir()):
  if manifest['models'][directory.name].get('surface_contact_qa'):
   for frame in [start,start+(end-start)*.25,start+(end-start)*.50,start+(end-start)*.75,end]:
    s.frame_set(int(frame),subframe=frame-int(frame));contacts.append({'frame':frame,'fins':check_surface_contact(s)})
- results.append({'surface_contact':contacts,'slug':directory.name,'sha256':hashlib.sha256(file.read_bytes()).hexdigest(),'vertices':len(poses[0]),'actions':[a.name for a in actions],'start':start,'end':end,'motion':motion,'loop_error':loop})
+ profile=profiles.get(directory.name,{});expected_barbels=2*len(profile.get('barbels',[]));barbels=[o for o in meshes if o.name.startswith('Barbel_')];assert len(barbels)==expected_barbels,(directory.name,'Delivery mouth-barbel count',len(barbels),expected_barbels)
+ adipose=[o for o in meshes if o.name.startswith('Dorsal_AdiposeFin')];assert len(adipose)==(1 if profile.get('adipose_fin') else 0),(directory.name,'Delivery adipose-fin count')
+ results.append({'barbel_meshes':len(barbels),'adipose_fins':len(adipose),'surface_contact':contacts,'slug':directory.name,'sha256':hashlib.sha256(file.read_bytes()).hexdigest(),'vertices':len(poses[0]),'actions':[a.name for a in actions],'start':start,'end':end,'motion':motion,'loop_error':loop})
 (HERE/'motion-verification.json').write_text(json.dumps(results,indent=2)+'\n')
 print('PASS delivery deformation',len(results))

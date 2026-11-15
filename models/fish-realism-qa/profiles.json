@@ -3012,5 +3012,547 @@
     "stabilizer_tip_blend": 0.35,
     "scale_rim_gain": 0.012,
     "scale_pigment_gain": 0.01
+  },
+  "walking-catfish": {
+    "fish_id": "FISH-026",
+    "visual_species": "Clarias batrachus visual study",
+    "references": [
+      "https://www.nparks.gov.sg/FloraFaunaWeb/Fauna/8/9/897"
+    ],
+    "profile_x": [
+      -1.65,
+      -1.5,
+      -1.25,
+      -0.9,
+      -0.4,
+      0.15,
+      0.65,
+      1.03,
+      1.25
+    ],
+    "top": [
+      0.025,
+      0.105,
+      0.16,
+      0.19,
+      0.21,
+      0.2,
+      0.17,
+      0.11,
+      0.07
+    ],
+    "bottom": [
+      -0.12,
+      -0.19,
+      -0.24,
+      -0.25,
+      -0.23,
+      -0.2,
+      -0.16,
+      -0.09,
+      -0.06
+    ],
+    "width": [
+      0.1,
+      0.24,
+      0.32,
+      0.3,
+      0.24,
+      0.205,
+      0.15,
+      0.09,
+      0.05
+    ],
+    "back_color": [
+      0.1,
+      0.13,
+      0.13
+    ],
+    "side_color": [
+      0.23,
+      0.26,
+      0.25
+    ],
+    "belly_color": [
+      0.41,
+      0.42,
+      0.37
+    ],
+    "fin_color": [
+      0.19,
+      0.22,
+      0.21
+    ],
+    "pattern": "scaleless",
+    "eye": [
+      -1.35,
+      0.055,
+      0.033
+    ],
+    "dorsal_start": -0.84,
+    "dorsal_split": -0.84,
+    "dorsal_end": 1.2,
+    "spine_height": 0.23,
+    "soft_height": 0.095,
+    "tail_height": 0.19,
+    "tail_fork": -0.065,
+    "mouth_end": [
+      -1.06,
+      -0.13
+    ],
+    "gill_x": -0.82,
+    "qa_targets": [
+      "slender dark scaleless body with a broad flattened head and very small eyes",
+      "four barbel pairs around the mouth with tapered natural outlines",
+      "long low soft dorsal and anal membranes, separate rounded caudal",
+      "small rounded pectorals and travelling body/tail flex"
+    ],
+    "eye_color": [
+      0.28,
+      0.29,
+      0.24
+    ],
+    "metallic": 0.025,
+    "surface_roughness": 0.42,
+    "anal_start": -0.38,
+    "anal_end": 1.18,
+    "round_snout": 0.03,
+    "tail_power": 1.4,
+    "dorsal_second_start": -0.84,
+    "dorsal_spines": 0,
+    "spine_taper": true,
+    "fin_shape": "separate_dorsals",
+    "anal_height": 0.08,
+    "finlets": 0,
+    "pelvic": true,
+    "pelvic_length": 0.07,
+    "pectoral_length": 0.26,
+    "tail_lower_extra": 0,
+    "mouth_start_z": -0.07,
+    "markings": "none",
+    "swim_seconds": 2.8,
+    "pectoral_height": 0.18,
+    "pectoral_droop": 0.08,
+    "pupil_radius": 0.78,
+    "alias_note": "Walking catfish / Ikan keli follows Clarias batrachus as the explicit visual reference; no cryptic-species identification is certified.",
+    "tail_color": [
+      0.21,
+      0.24,
+      0.23
+    ],
+    "spine_height_curve": [
+      [
+        0,
+        0.02
+      ],
+      [
+        0.25,
+        0.23
+      ],
+      [
+        0.65,
+        0.2
+      ],
+      [
+        1,
+        0.02
+      ]
+    ],
+    "tail_end": 1.57,
+    "pectoral_shape": "rounded",
+    "pectoral_root_z": -0.08,
+    "pectoral_surface_anchor": true,
+    "soft_forward_lobes": false,
+    "fin_markings": "none",
+    "body_wave_gain": 1.55,
+    "stabilizer_tip_blend": 0.3,
+    "scale_rim_gain": 0.012,
+    "scale_pigment_gain": 0.01,
+    "barbel_color": [
+      0.28,
+      0.3,
+      0.27
+    ],
+    "barbels": [
+      {
+        "root_x": -1.55,
+        "root_height": 0.65,
+        "tip": [
+          -1.91,
+          0.22,
+          0.14
+        ]
+      },
+      {
+        "root_x": -1.49,
+        "root_height": -0.12,
+        "tip": [
+          -1.67,
+          0.69,
+          -0.15
+        ]
+      },
+      {
+        "root_x": -1.48,
+        "root_height": -0.8,
+        "tip": [
+          -1.78,
+          0.37,
+          -0.32
+        ]
+      },
+      {
+        "root_x": -1.56,
+        "root_height": -0.9,
+        "tip": [
+          -1.93,
+          0.16,
+          -0.3
+        ]
+      }
+    ]
+  },
+  "pangasius": {
+    "fish_id": "FISH-027",
+    "visual_species": "Pangasianodon hypophthalmus visual study",
+    "references": [
+      "https://commons.wikimedia.org/wiki/File:Iridescent_Shark_Catfish.jpg",
+      "https://www.fao.org/fishery/docs/DOCUMENT/aquaculture/aq2008_09/root/i0254e.pdf"
+    ],
+    "profile_x": [
+      -1.65,
+      -1.5,
+      -1.25,
+      -0.9,
+      -0.4,
+      0.15,
+      0.65,
+      1.03,
+      1.25
+    ],
+    "top": [
+      -0.015,
+      0.16,
+      0.36,
+      0.51,
+      0.58,
+      0.52,
+      0.33,
+      0.15,
+      0.08
+    ],
+    "bottom": [
+      -0.22,
+      -0.35,
+      -0.48,
+      -0.51,
+      -0.5,
+      -0.4,
+      -0.27,
+      -0.12,
+      -0.07
+    ],
+    "width": [
+      0.08,
+      0.21,
+      0.3,
+      0.34,
+      0.36,
+      0.3,
+      0.19,
+      0.1,
+      0.055
+    ],
+    "back_color": [
+      0.19,
+      0.23,
+      0.25
+    ],
+    "side_color": [
+      0.57,
+      0.61,
+      0.59
+    ],
+    "belly_color": [
+      0.75,
+      0.75,
+      0.64
+    ],
+    "fin_color": [
+      0.38,
+      0.43,
+      0.42
+    ],
+    "pattern": "scaleless",
+    "eye": [
+      -1.38,
+      -0.09,
+      0.059
+    ],
+    "dorsal_start": -0.77,
+    "dorsal_split": -0.77,
+    "dorsal_end": -0.06,
+    "spine_height": 0.23,
+    "soft_height": 0.39,
+    "tail_height": 0.42,
+    "tail_fork": 0.33,
+    "mouth_end": [
+      -1.06,
+      -0.27
+    ],
+    "gill_x": -0.84,
+    "qa_targets": [
+      "deep silver-grey scaleless body with a darker back and pale belly",
+      "broad rounded head, low-set eyes and two short barbel pairs",
+      "a tall anterior dorsal, small fleshy adipose fin and long rear anal",
+      "deep forked tail with compact paired fins"
+    ],
+    "eye_color": [
+      0.46,
+      0.5,
+      0.43
+    ],
+    "metallic": 0.13,
+    "surface_roughness": 0.37,
+    "anal_start": -0.07,
+    "anal_end": 1.13,
+    "round_snout": 0.03,
+    "tail_power": 1.4,
+    "dorsal_second_start": -0.77,
+    "dorsal_spines": 0,
+    "spine_taper": true,
+    "fin_shape": "separate_dorsals",
+    "anal_height": 0.17,
+    "finlets": 0,
+    "pelvic": true,
+    "pelvic_length": 0.14,
+    "pectoral_length": 0.43,
+    "tail_lower_extra": 0,
+    "mouth_start_z": -0.15,
+    "markings": "none",
+    "swim_seconds": 2.4,
+    "pectoral_height": 0.2,
+    "pectoral_droop": 0.16,
+    "pupil_radius": 0.73,
+    "alias_note": "The supplied Pangasius / Patin label is broad; this artwork declares Pangasianodon hypophthalmus as its visual species, not a unique common-name mapping.",
+    "tail_color": [
+      0.34,
+      0.4,
+      0.4
+    ],
+    "spine_height_curve": [
+      [
+        0,
+        0.02
+      ],
+      [
+        0.25,
+        0.23
+      ],
+      [
+        0.65,
+        0.2
+      ],
+      [
+        1,
+        0.02
+      ]
+    ],
+    "tail_end": 1.91,
+    "pectoral_shape": "tapered",
+    "pectoral_root_z": -0.23,
+    "pectoral_surface_anchor": true,
+    "soft_forward_lobes": true,
+    "fin_markings": "none",
+    "body_wave_gain": 1.0,
+    "stabilizer_tip_blend": 0.55,
+    "scale_rim_gain": 0.012,
+    "scale_pigment_gain": 0.01,
+    "barbel_color": [
+      0.53,
+      0.55,
+      0.48
+    ],
+    "barbels": [
+      {
+        "root_x": -1.5,
+        "root_height": -0.15,
+        "tip": [
+          -1.8,
+          0.34,
+          -0.18
+        ]
+      },
+      {
+        "root_x": -1.51,
+        "root_height": -0.8,
+        "tip": [
+          -1.74,
+          0.17,
+          -0.34
+        ]
+      }
+    ],
+    "adipose_fin": true
+  },
+  "climbing-perch": {
+    "fish_id": "FISH-028",
+    "visual_species": "Anabas testudineus visual study",
+    "references": [
+      "https://www.nparks.gov.sg/florafaunaweb/fauna/9/1/913",
+      "https://www.fishbase.se/FieldGuide/FieldGuideSummary.php?c_code=036&genusname=Anabas&speciesname=testudineus"
+    ],
+    "profile_x": [
+      -1.65,
+      -1.5,
+      -1.25,
+      -0.9,
+      -0.4,
+      0.15,
+      0.65,
+      1.03,
+      1.25
+    ],
+    "top": [
+      0.025,
+      0.27,
+      0.49,
+      0.6,
+      0.62,
+      0.58,
+      0.39,
+      0.18,
+      0.1
+    ],
+    "bottom": [
+      -0.18,
+      -0.3,
+      -0.42,
+      -0.45,
+      -0.44,
+      -0.37,
+      -0.25,
+      -0.13,
+      -0.08
+    ],
+    "width": [
+      0.04,
+      0.11,
+      0.17,
+      0.205,
+      0.23,
+      0.21,
+      0.15,
+      0.075,
+      0.045
+    ],
+    "back_color": [
+      0.32,
+      0.34,
+      0.22
+    ],
+    "side_color": [
+      0.55,
+      0.55,
+      0.37
+    ],
+    "belly_color": [
+      0.71,
+      0.68,
+      0.51
+    ],
+    "fin_color": [
+      0.43,
+      0.44,
+      0.28
+    ],
+    "pattern": "scales",
+    "eye": [
+      -1.34,
+      0.12,
+      0.078
+    ],
+    "dorsal_start": -1.05,
+    "dorsal_split": 0.46,
+    "dorsal_end": 1.1,
+    "spine_height": 0.21,
+    "soft_height": 0.19,
+    "tail_height": 0.29,
+    "tail_fork": 0,
+    "mouth_end": [
+      -1.27,
+      -0.2
+    ],
+    "gill_x": -0.92,
+    "qa_targets": [
+      "rectangular olive-grey scaled body with a rounded head",
+      "dark opercular and caudal-peduncle spots with faint irregular flank bars",
+      "long continuous spiny-soft dorsal and anal margins",
+      "truncate caudal and compact paired fins"
+    ],
+    "alias_note": "Climbing perch / Ikan puyu follows Anabas testudineus as the explicit visual reference; only swimming is delivered.",
+    "eye_color": [
+      0.61,
+      0.37,
+      0.12
+    ],
+    "pupil_radius": 0.7,
+    "mouth_start_z": -0.12,
+    "dorsal_spines": 18,
+    "tail_end": 1.77,
+    "anal_start": -0.15,
+    "anal_split": 0.47,
+    "anal_end": 1.09,
+    "anal_spines": 10,
+    "anal_spine_height": 0.17,
+    "anal_height": 0.17,
+    "pelvic_length": 0.12,
+    "pectoral_length": 0.4,
+    "pectoral_height": 0.18,
+    "pectoral_droop": 0.11,
+    "pectoral_shape": "tapered",
+    "pectoral_root_z": -0.16,
+    "pectoral_surface_anchor": true,
+    "markings": "climbing_perch",
+    "surface_roughness": 0.47,
+    "swim_seconds": 2.6,
+    "tail_color": [
+      0.45,
+      0.45,
+      0.29
+    ],
+    "tail_dark_margin": 0.12,
+    "scale_density": [
+      60,
+      38
+    ],
+    "scale_pigment_gain": 0.016,
+    "scale_rim_gain": 0.022,
+    "spine_height_curve": [
+      [
+        0,
+        0.035
+      ],
+      [
+        0.2,
+        0.17
+      ],
+      [
+        0.65,
+        0.21
+      ],
+      [
+        1,
+        0.15
+      ]
+    ],
+    "metallic": 0.04,
+    "fin_markings": "none",
+    "soft_start_height": 0.15,
+    "round_snout": 0.06,
+    "anal_soft_start_height": 0.1105,
+    "pelvic_root_x": -0.67,
+    "pelvic_start_x": -0.48,
+    "pelvic_end_x": -0.2
   }
 }
