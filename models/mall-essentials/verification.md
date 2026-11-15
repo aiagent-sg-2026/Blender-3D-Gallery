@@ -1,3 +1,5 @@
+Current follow-up: [2026-11-15 directory-kiosk geometry repair](../../docs/model-qa/degenerate-repairs/mall-directory-kiosk/README.md).
+
 Current follow-up: [2026-11-15 trash-bin geometry repair](../../docs/model-qa/degenerate-repairs/mall-trash-bin/README.md). Earlier checks below remain historical.
 
 # Mall Essentials verification

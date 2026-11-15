@@ -46,7 +46,9 @@ async function inspect(file) {
         .cross(new Vector3(...quantized[2]).sub(new Vector3(...quantized[0]))).lengthSq();
       const normals = [0, 1, 2].map(k => new Vector3().fromBufferAttribute(normal, ids[(rotation.j + k) % 3]).toArray());
       const longestEdge = Math.max(...points.map((p, j) => p.distanceTo(points[(j + 1) % 3])));
-      const record = { area, altitude: 2 * area / longestEdge, quantizedCollinear: quantizedArea === 0, normals };
+      const orderedPoints = [0, 1, 2].map(k => points[(rotation.j + k) % 3].toArray());
+      const record = { area, altitude: 2 * area / longestEdge, quantizedCollinear: quantizedArea === 0,
+        material: object.material.name, points: orderedPoints, normals };
       if (!surfaces.has(key)) surfaces.set(key, []);
       surfaces.get(key).push(record);
     }
@@ -60,24 +62,55 @@ const summarize = value => ({ ...value, surfaces: undefined });
 let receipt;
 try {
   const before = await inspect(beforePath), after = await inspect(afterPath);
-  const removed = [], added = [];
+  const removed = [], added = [], unmatchedOld = [], unmatchedNew = [], pairs = [];
   let changedNormalTriangles = 0, maxNormalDelta = 0;
   for (const [key, old] of before.surfaces) {
     const current = after.surfaces.get(key) ?? [];
-    removed.push(...old.slice(current.length).map(record => ({ key, area: record.area, altitude: record.altitude, quantizedCollinear: record.quantizedCollinear })));
-    for (let i = 0; i < Math.min(old.length, current.length); i++) {
-      const delta = Math.max(...old[i].normals.flatMap((n, j) => n.map((v, k) => Math.abs(v - current[i].normals[j][k]))));
-      maxNormalDelta = Math.max(maxNormalDelta, delta);
-      if (delta > 1e-4) changedNormalTriangles++;
-    }
+    unmatchedOld.push(...old.slice(current.length).map(record => ({ key, record })));
+    for (let i = 0; i < Math.min(old.length, current.length); i++) pairs.push({ old: old[i], current: current[i], rotation: 0 });
   }
   for (const [key, current] of after.surfaces) {
-    if (current.length > (before.surfaces.get(key)?.length ?? 0)) added.push(key);
+    unmatchedNew.push(...current.slice(before.surfaces.get(key)?.length ?? 0).map(record => ({ key, record, used: false })));
+  }
+  // Quantization hashes are only an accelerator: two coordinates on opposite
+  // sides of a grid boundary can still be arbitrarily close in actual distance.
+  const centroidCell = r => [0, 1, 2].map(axis => Math.floor(r.points.reduce((sum, p) => sum + p[axis], 0) / 3 / POSITION_QUANTIZATION));
+  const buckets = new Map();
+  for (const candidate of unmatchedNew) {
+    const key = candidate.record.material + ':' + centroidCell(candidate.record).join(',');
+    if (!buckets.has(key)) buckets.set(key, []);
+    buckets.get(key).push(candidate);
+  }
+  for (const old of unmatchedOld) {
+    const cell = centroidCell(old.record); let best;
+    for (let x = -1; x <= 1; x++) for (let y = -1; y <= 1; y++) for (let z = -1; z <= 1; z++) {
+      const key = old.record.material + ':' + [cell[0] + x, cell[1] + y, cell[2] + z].join(',');
+      for (const candidate of buckets.get(key) ?? []) {
+        if (candidate.used) continue;
+        for (let rotation = 0; rotation < 3; rotation++) {
+          const distance = Math.max(...old.record.points.map((p, j) => Math.hypot(...p.map((v, k) => v - candidate.record.points[(j + rotation) % 3][k]))));
+          if (distance <= POSITION_QUANTIZATION && (!best || distance < best.distance)) best = { candidate, rotation, distance };
+        }
+      }
+    }
+    if (best) {
+      best.candidate.used = true;
+      pairs.push({ old: old.record, current: best.candidate.record, rotation: best.rotation });
+    } else removed.push({ key: old.key, area: old.record.area, altitude: old.record.altitude, quantizedCollinear: old.record.quantizedCollinear });
+  }
+  added.push(...unmatchedNew.filter(r => !r.used).map(r => r.key));
+  let maxPositionDeltaM = 0;
+  for (const pair of pairs) {
+    const delta = Math.max(...pair.old.normals.flatMap((n, j) => n.map((v, k) => Math.abs(v - pair.current.normals[(j + pair.rotation) % 3][k]))));
+    maxPositionDeltaM = Math.max(maxPositionDeltaM, ...pair.old.points.map((p, j) => Math.hypot(...p.map((v, k) => v - pair.current.points[(j + pair.rotation) % 3][k]))));
+    maxNormalDelta = Math.max(maxNormalDelta, delta);
+    if (delta > 1e-4) changedNormalTriangles++;
   }
   receipt = { status: 'PENDING', before: summarize(before), after: summarize(after),
-    positionQuantizationM: POSITION_QUANTIZATION, numericalResidueAltitudeLimitM: NUMERICAL_RESIDUE_ALTITUDE,
+    positionToleranceM: POSITION_QUANTIZATION, maxPositionDeltaM, numericalResidueAltitudeLimitM: NUMERICAL_RESIDUE_ALTITUDE,
     removedPositiveAreaResidues: removed, addedSurfaceKeys: added, changedNormalTriangles, maxNormalDelta };
   assert.equal(after.zero, 0); assert.equal(after.invalidNormals, 0);
+  assert.ok(maxPositionDeltaM <= POSITION_QUANTIZATION, 'Matched surface vertex displacement exceeds tolerance');
   assert.equal(added.length, 0, 'Unintended oriented/material surfaces added');
   assert.ok(removed.every(r => r.altitude <= NUMERICAL_RESIDUE_ALTITUDE && r.quantizedCollinear), 'Meaningful original surfaces removed');
   if (!allowNormalDrift) assert.equal(changedNormalTriangles, 0, 'Delivered shading normals must be preserved');

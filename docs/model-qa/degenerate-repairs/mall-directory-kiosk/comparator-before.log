@@ -1,0 +1,44 @@
+✖ GLB cleanup retains real tiny geometry and normals while removing reviewed collapse (1083.256917ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1165.503667
+
+✖ failing tests:
+
+test at tests/glb-degenerate-tools.test.mjs:34:1
+✖ GLB cleanup retains real tiny geometry and normals while removing reviewed collapse (1083.256917ms)
+  AssertionError [ERR_ASSERTION]: Coordinates within 1 micrometre must match even across quantization boundaries: node:internal/modules/run_main:104
+      triggerUncaughtException(
+      ^
+
+  AssertionError [ERR_ASSERTION]: Unintended oriented/material surfaces added
+
+  2 !== 0
+
+      at file:///private/tmp/blender-mall-degenerate-44yfvxbl/worktree/scripts/check-degenerate-repair.mjs:81:10 {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 0,
+    operator: 'strictEqual'
+  }
+
+  Node.js v23.10.0
+
+
+  1 !== 0
+
+      at TestContext.<anonymous> (file:///private/tmp/blender-mall-degenerate-44yfvxbl/worktree/tests/glb-degenerate-tools.test.mjs:67:10)
+      at async Test.run (node:internal/test_runner/test:1054:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:297:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual'
+  }

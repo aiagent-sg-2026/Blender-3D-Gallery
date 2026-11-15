@@ -5,10 +5,14 @@ import os from 'node:os';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 
-function fixture(indices, reverseNormals = false) {
+function fixture(indices, reverseNormals = false, xShift = 0) {
   const points = [0,0,0, 1,0,0, 0,1,0, 0,0,0, 0,0,0, 1,0,0,
     .1,.1,0, .11,.1,0, .105,.10000001,0, .2,.2,0, .20001,.2,0, .2,.20001,0];
-  const positions = Buffer.from(new Float32Array(points).buffer);
+  const shift = Array.isArray(xShift) ? xShift : [xShift,0,0];
+  const positions = Buffer.from(new Float32Array(points.map((v, i) => v + shift[i % 3])).buffer);
+  const values = new Float32Array(positions.buffer,positions.byteOffset,points.length);
+  const min = [0,1,2].map(axis => Math.min(...values.filter((_,i) => i % 3 === axis)));
+  const max = [0,1,2].map(axis => Math.max(...values.filter((_,i) => i % 3 === axis)));
   const normals = Buffer.from(new Float32Array(Array.from({length:12}, () => [0,0,reverseNormals ? -1 : 1]).flat()).buffer);
   const indexData = Buffer.from(new Uint16Array(indices).buffer);
   const bin = Buffer.concat([positions, normals, indexData, Buffer.alloc((4 - indexData.length % 4) % 4)]);
@@ -17,7 +21,7 @@ function fixture(indices, reverseNormals = false) {
     buffers:[{byteLength:bin.length}],bufferViews:[{buffer:0,byteOffset:0,byteLength:positions.length,target:34962},
       {buffer:0,byteOffset:positions.length,byteLength:normals.length,target:34962},
       {buffer:0,byteOffset:positions.length+normals.length,byteLength:indexData.length,target:34963}],
-    accessors:[{bufferView:0,componentType:5126,count:12,type:'VEC3',min:[0,0,0],max:[1,1,0]},
+    accessors:[{bufferView:0,componentType:5126,count:12,type:'VEC3',min,max},
       {bufferView:1,componentType:5126,count:12,type:'VEC3'},
       {bufferView:2,componentType:5123,count:indices.length,type:'SCALAR',min:[Math.min(...indices)],max:[Math.max(...indices)]}]};
   const text = Buffer.from(JSON.stringify(json)), padded = Buffer.alloc(Math.ceil(text.length/4)*4,32);text.copy(padded);
@@ -58,4 +62,14 @@ test('GLB cleanup retains real tiny geometry and normals while removing reviewed
   const normals = run('scripts/check-degenerate-repair.mjs',[before,badNormals,path.join(dir,'bad-normals.json')]);
   assert.notEqual(normals.status,0);
   assert.match(normals.stderr,/shading normals must be preserved/);
+  const shifted = path.join(dir,'submicrometre-shift.glb');
+  await fs.writeFile(shifted,fixture([0,1,2,9,10,11],false,7.5e-7));
+  const tolerance = run('scripts/check-degenerate-repair.mjs',[before,shifted,path.join(dir,'shifted.json')]);
+  assert.equal(tolerance.status,0,'Coordinates within 1 micrometre must match even across quantization boundaries: '+tolerance.stderr);
+  const diagonalBefore = path.join(dir,'diagonal-before.glb'), diagonalAfter = path.join(dir,'diagonal-after.glb');
+  await fs.writeFile(diagonalBefore,fixture(Array.from({length:12},(_,i)=>i),false,[-4.9e-7,-4.9e-7,0]));
+  await fs.writeFile(diagonalAfter,fixture([0,1,2,9,10,11],false,[4.9e-7,4.9e-7,0]));
+  const displacement = run('scripts/check-degenerate-repair.mjs',[diagonalBefore,diagonalAfter,path.join(dir,'too-far.json')]);
+  assert.notEqual(displacement.status,0,'A shared quantization cell must not excuse Euclidean displacement above 1 micrometre');
+  assert.match(displacement.stderr,/displacement exceeds tolerance|surfaces added/);
 });

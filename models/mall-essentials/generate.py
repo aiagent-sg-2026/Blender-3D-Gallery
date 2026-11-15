@@ -15,6 +15,11 @@ sys.path.insert(0, str(HERE.parents[1] / "scripts"))
 from blender_degenerate_cleanup import add_cleanup
 
 CLEANUP_PARTS = {
+    "mall-directory-kiosk": ("Illustrative shop block", "Illustrative shop block.001",
+        "Illustrative shop block.002", "Illustrative shop block.003", "Label - DIRECTORY",
+        "Map surface", "Rear service cover", "Rear ventilation strip", "Rear ventilation strip.001",
+        "Screen brass surround", "Screen inset", "Touch category tile", "Touch category tile.001",
+        "Touch category tile.002"),
     "mall-trash-bin": ("Recessed charcoal foot", "Jade open vessel", "Inset dark liner",
                        "Front jade label badge", "Label - WASTE", "Label - THANK YOU"),
 }

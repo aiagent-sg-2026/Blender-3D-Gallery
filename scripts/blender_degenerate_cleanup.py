@@ -73,6 +73,14 @@ def source_fingerprint():
         if obj.type == 'FONT':
             record['text'] = {k: serial(getattr(obj.data, k)) for k in
                               ['body', 'font', 'size', 'extrude', 'bevel_depth', 'resolution_u', 'align_x', 'align_y']}
+        if obj.type == 'CURVE':
+            record['curve_settings'] = {k: serial(getattr(obj.data, k)) for k in
+                                        ['dimensions', 'resolution_u', 'bevel_depth', 'bevel_resolution', 'extrude', 'use_fill_caps']}
+            record['splines'] = [{'type': spline.type, 'cyclic': spline.use_cyclic_u,
+                                  'points': [list(point.co) for point in spline.points],
+                                  'bezier': [(list(point.co), list(point.handle_left), list(point.handle_right))
+                                             for point in spline.bezier_points]}
+                                 for spline in obj.data.splines]
         objects.append(record)
     materials = []
     for material in sorted(bpy.data.materials, key=lambda value: value.name):
