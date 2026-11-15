@@ -1,0 +1,50 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "snout too pointed compared with rounded specimen mouth",
+        "pectoral outline too rectangular"
+      ],
+      "changes": [
+        "remove the head-tip sharpening offset",
+        "use a tapered swept pectoral membrane"
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "revise",
+      "finding": "The fixed edge ripple from the legacy utility overwhelms the smaller tapered pectoral membrane",
+      "change": "Reduce only that geometry ripple, preserving slight irregularity and branching membrane texture"
+    },
+    {
+      "iteration": 3,
+      "result": "pass",
+      "changes": [
+        "restrained edge ripple on the tapered small pectoral membrane",
+        "confirmed posed surface contact and actual browser swimming"
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "614ea9a229f92ccb480315998e46aa5d73eb1cc7696dd172bc5322ee0ed20f29",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "visual_checks": {
+    "anatomy": "pass: silver spindle body with one midbody soft dorsal fin and low posterior anal membrane",
+    "surface": "pass: blue-green back, muted silver sides and subdued flank sheen replace baseline random dark spots",
+    "head": "pass: compact terminal mouth, large pupil and fine iris detail remain separated",
+    "fins": "pass: swept tapered small pectorals have restrained edge irregularity; compact forked caudal and paired pelvic roots fit the reference",
+    "surface_contact": "pass: actual evaluated source and GLB fin/body contact pass five phases",
+    "motion": "pass: faster cyclic tail propulsion and stabilizing fins survive real GLB reimport",
+    "browser": "pass: actual draft GLB swims, pauses and disposes at desktop/mobile sizes"
+  },
+  "limitations": [
+    "Original photo-informed visual study of Sardinella gibbosa, not a scanned specimen.",
+    "One fish is delivered; a school or dried-goods variant is not claimed.",
+    "Draft browser captions are baseline."
+  ]
+}

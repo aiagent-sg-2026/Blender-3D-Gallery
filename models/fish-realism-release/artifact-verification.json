@@ -373,8 +373,8 @@
     },
     {
       "slug": "indian-mackerel",
-      "sha256": "7039a8a2eea3ac782e377cffd86ac38afacd7863b8679a51eb24bb8b80fc5d1a",
-      "bytes": 3962636,
+      "sha256": "9ef3bc7a705e3e07fdf625456deb85ad36c7aa27772d1fac38f4f4c584db08be",
+      "bytes": 3953796,
       "issues": {
         "numErrors": 0,
         "numWarnings": 0,
@@ -423,8 +423,8 @@
     },
     {
       "slug": "spanish-mackerel",
-      "sha256": "ac36d99582d8171e3a6b1ae996ee89c11165f4a3febc1a84795a6eac2c7c1a48",
-      "bytes": 3984572,
+      "sha256": "3e108137a0a271a6682469b716e7261db7c136fa5f7bee7137683f059ddc3fe0",
+      "bytes": 3975732,
       "issues": {
         "numErrors": 0,
         "numWarnings": 0,
@@ -473,8 +473,8 @@
     },
     {
       "slug": "yellowtail-scad",
-      "sha256": "656e4c91df0dd600d6e037fd2c38fc4c118dc1a6283eca879006dfef87f1b507",
-      "bytes": 4291592,
+      "sha256": "e8046193b8afd5bb0d2d085235e6cac0a3a14c9fd935fa3ecc870e2a39328c53",
+      "bytes": 4282752,
       "issues": {
         "numErrors": 0,
         "numWarnings": 0,
@@ -1126,6 +1126,56 @@
             "message": "Tangents are not used because the material has no normal texture.",
             "severity": 2,
             "pointer": "/meshes/18/primitives/0/attributes/TANGENT"
+          }
+        ],
+        "truncated": false
+      }
+    },
+    {
+      "slug": "sardine",
+      "sha256": "c7d124c9087a287ad2709f97fdf9c24318395b35b8f01109215456792c8e86ec",
+      "bytes": 3641124,
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 6,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "UNUSED_MESH_TANGENT",
+            "message": "Tangents are not used because the material has no normal texture.",
+            "severity": 2,
+            "pointer": "/meshes/1/primitives/0/attributes/TANGENT"
+          },
+          {
+            "code": "UNUSED_MESH_TANGENT",
+            "message": "Tangents are not used because the material has no normal texture.",
+            "severity": 2,
+            "pointer": "/meshes/2/primitives/0/attributes/TANGENT"
+          },
+          {
+            "code": "UNUSED_MESH_TANGENT",
+            "message": "Tangents are not used because the material has no normal texture.",
+            "severity": 2,
+            "pointer": "/meshes/3/primitives/0/attributes/TANGENT"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/3/primitives/0/attributes/TEXCOORD_0"
+          },
+          {
+            "code": "UNUSED_MESH_TANGENT",
+            "message": "Tangents are not used because the material has no normal texture.",
+            "severity": 2,
+            "pointer": "/meshes/4/primitives/0/attributes/TANGENT"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/4/primitives/0/attributes/TEXCOORD_0"
           }
         ],
         "truncated": false

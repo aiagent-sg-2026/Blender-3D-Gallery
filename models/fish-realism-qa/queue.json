@@ -178,7 +178,7 @@
       "slug": "indian-mackerel",
       "name": "Indian mackerel / Ikan kembung",
       "priority": "P0",
-      "status": "needs_surface_contact_revision",
+      "status": "qa_pass",
       "checks": {
         "reference_photos": "pass",
         "anatomy": "pass",
@@ -187,7 +187,7 @@
         "glb_roundtrip": "pass",
         "visual_review": "pass",
         "browser": "pass",
-        "surface_contact": "pending"
+        "surface_contact": "pass"
       },
       "artifact_manifest": "models/fish-realism-qa/indian-mackerel/artifacts.json"
     },
@@ -196,7 +196,7 @@
       "slug": "spanish-mackerel",
       "name": "Spanish mackerel / Tenggiri",
       "priority": "P0",
-      "status": "needs_surface_contact_revision",
+      "status": "qa_pass",
       "checks": {
         "reference_photos": "pass",
         "anatomy": "pass",
@@ -205,7 +205,7 @@
         "glb_roundtrip": "pass",
         "visual_review": "pass",
         "browser": "pass",
-        "surface_contact": "pending"
+        "surface_contact": "pass"
       },
       "artifact_manifest": "models/fish-realism-qa/spanish-mackerel/artifacts.json"
     },
@@ -214,7 +214,7 @@
       "slug": "yellowtail-scad",
       "name": "Yellowtail scad / Selar kuning",
       "priority": "P1",
-      "status": "needs_surface_contact_revision",
+      "status": "qa_pass",
       "checks": {
         "reference_photos": "pass",
         "anatomy": "pass",
@@ -223,7 +223,7 @@
         "glb_roundtrip": "pass",
         "visual_review": "pass",
         "browser": "pass",
-        "surface_contact": "pending"
+        "surface_contact": "pass"
       },
       "artifact_manifest": "models/fish-realism-qa/yellowtail-scad/artifacts.json"
     },
@@ -322,15 +322,18 @@
       "slug": "sardine",
       "name": "Sardine / Sardin",
       "priority": "P1",
-      "status": "pending",
+      "status": "qa_pass",
       "checks": {
-        "reference_photos": "pending",
-        "anatomy": "pending",
-        "materials": "pending",
-        "swim_motion": "pending",
-        "glb_roundtrip": "pending",
-        "visual_review": "pending"
-      }
+        "reference_photos": "pass",
+        "anatomy": "pass",
+        "materials": "pass",
+        "swim_motion": "pass",
+        "glb_roundtrip": "pass",
+        "visual_review": "pass",
+        "browser": "pass",
+        "surface_contact": "pass"
+      },
+      "artifact_manifest": "models/fish-realism-qa/sardine/artifacts.json"
     },
     {
       "fish_id": "FISH-016",

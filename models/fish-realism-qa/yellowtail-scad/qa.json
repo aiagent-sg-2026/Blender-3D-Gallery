@@ -22,10 +22,11 @@
       ]
     }
   ],
-  "reviewed_source_sha256": "f9854aaa66ae0423467831072496832ac86fe6450bc926be3572d0d3a4648be6",
+  "reviewed_source_sha256": "55cd91f0643d60c06571332ef6cc4fb66ca3863a091caab0549b8065a4e8740e",
   "reviewed_images": [
     "preview.png",
-    "head-detail.png"
+    "head-detail.png",
+    "pelvic-detail.png"
   ],
   "visual_checks": {
     "anatomy": "pass: compressed fusiform body, separate dorsal fins and deeply forked tail",
@@ -33,11 +34,24 @@
     "head": "pass: larger black pupil and thinner textured iris ring, integrated mouth and operculum",
     "fins": "pass: yellow tail is distinct from pale other membranes with anchored roots",
     "motion": "pass: cyclic tail and restrained fin movement survive GLB import with stable endpoints",
-    "browser": "pass: actual draft GLB rendered, swims and pauses at desktop/mobile sizes"
+    "browser": "pass: actual draft GLB rendered, swims and pauses at desktop/mobile sizes",
+    "surface_contact": "pass: embedded paired pelvic bases inspected from below; posed source and GLB skin contact verified at five phases including finlet roots"
   },
   "limitations": [
     "Photo-informed original art, not a scan.",
     "Supplied Yellowtail scad alias is represented by a documented Selaroides leptolepis visual study.",
     "Draft browser fixture uses baseline captions."
+  ],
+  "attachment_revisions": [
+    {
+      "prior_source_sha256": "f9854aaa66ae0423467831072496832ac86fe6450bc926be3572d0d3a4648be6",
+      "finding": "Fixed paired pelvic-base coordinate lay outside the curved skin despite correct dynamic weights",
+      "repair": "Only pelvic mesh bases reprojected onto an embedded ventrolateral root curve; body, materials and actions retained",
+      "repaired_meshes": [
+        "Pelvic_-1",
+        "Pelvic_1"
+      ],
+      "result": "pass"
+    }
   ]
 }

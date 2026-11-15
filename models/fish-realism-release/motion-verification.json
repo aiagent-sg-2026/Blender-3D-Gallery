@@ -543,10 +543,486 @@
     "loop_error": 0.0
   },
   {
-    "surface_contact": [],
+    "surface_contact": [
+      {
+        "frame": 1.0,
+        "fins": {
+          "Caudal_Membrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.052222553131286986,
+            "max_signed_distance": -0.020273027039365843
+          },
+          "Dorsal_SpinyMembrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.0021020107973726,
+            "max_signed_distance": -0.001976608364202548
+          },
+          "Dorsal_SoftRays": {
+            "root_vertices": 121,
+            "min_signed_distance": -2.1955118214123104e-05,
+            "max_signed_distance": -1.0168508365882012e-07
+          },
+          "Anal_SoftMembrane": {
+            "root_vertices": 101,
+            "min_signed_distance": -3.77775255877566e-06,
+            "max_signed_distance": 1.1422121415805009e-05
+          },
+          "Finlet_dorsal_0": {
+            "root_vertices": 3,
+            "min_signed_distance": 3.9133854473627494e-07,
+            "max_signed_distance": 2.9152033196311322e-06
+          },
+          "Finlet_anal_0": {
+            "root_vertices": 3,
+            "min_signed_distance": -5.130302453082436e-06,
+            "max_signed_distance": -1.403853928882981e-06
+          },
+          "Finlet_dorsal_1": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.0435805344322091e-06,
+            "max_signed_distance": 3.203479552738031e-06
+          },
+          "Finlet_anal_1": {
+            "root_vertices": 3,
+            "min_signed_distance": -5.5513291297160094e-06,
+            "max_signed_distance": -1.0435805868347359e-06
+          },
+          "Finlet_dorsal_2": {
+            "root_vertices": 3,
+            "min_signed_distance": -3.017193407117702e-06,
+            "max_signed_distance": -2.167144003806243e-06
+          },
+          "Finlet_anal_2": {
+            "root_vertices": 3,
+            "min_signed_distance": -3.03142300772663e-06,
+            "max_signed_distance": -2.1674085006750943e-06
+          },
+          "Finlet_dorsal_3": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.0508048893242972e-06,
+            "max_signed_distance": -6.458957151345146e-07
+          },
+          "Finlet_anal_3": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.0508048671198367e-06,
+            "max_signed_distance": -6.786412807269215e-07
+          },
+          "Finlet_dorsal_4": {
+            "root_vertices": 3,
+            "min_signed_distance": -6.090961526261651e-07,
+            "max_signed_distance": 7.88056341072263e-07
+          },
+          "Finlet_anal_4": {
+            "root_vertices": 3,
+            "min_signed_distance": -6.0909578736279e-07,
+            "max_signed_distance": 7.880536692095319e-07
+          },
+          "Pectoral_-1": {
+            "root_vertices": 83,
+            "min_signed_distance": -0.015004302575107431,
+            "max_signed_distance": -0.00850089937193843
+          },
+          "Pelvic_-1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.0003825094653961969,
+            "max_signed_distance": -0.0003736426418186056
+          },
+          "Pectoral_1": {
+            "root_vertices": 83,
+            "min_signed_distance": -0.014980289150116732,
+            "max_signed_distance": -0.008487154023896437
+          },
+          "Pelvic_1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.000382565053541839,
+            "max_signed_distance": -0.0003747120764501233
+          }
+        }
+      },
+      {
+        "frame": 13.0,
+        "fins": {
+          "Caudal_Membrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.05208088223844243,
+            "max_signed_distance": -0.020267702253477182
+          },
+          "Dorsal_SpinyMembrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.002102016853129385,
+            "max_signed_distance": -0.001976772213311051
+          },
+          "Dorsal_SoftRays": {
+            "root_vertices": 121,
+            "min_signed_distance": -2.1818133838280573e-05,
+            "max_signed_distance": -8.722675684524894e-08
+          },
+          "Anal_SoftMembrane": {
+            "root_vertices": 101,
+            "min_signed_distance": -3.6349122805034995e-06,
+            "max_signed_distance": 1.1542033572453647e-05
+          },
+          "Finlet_dorsal_0": {
+            "root_vertices": 3,
+            "min_signed_distance": 4.630160226337665e-07,
+            "max_signed_distance": 3.532749080825681e-06
+          },
+          "Finlet_anal_0": {
+            "root_vertices": 3,
+            "min_signed_distance": -4.5304809326296436e-06,
+            "max_signed_distance": -1.331778442192899e-06
+          },
+          "Finlet_dorsal_1": {
+            "root_vertices": 3,
+            "min_signed_distance": -8.822909043360028e-07,
+            "max_signed_distance": 3.850298185170686e-06
+          },
+          "Finlet_anal_1": {
+            "root_vertices": 3,
+            "min_signed_distance": -4.907265503284464e-06,
+            "max_signed_distance": -8.822448809286954e-07
+          },
+          "Finlet_dorsal_2": {
+            "root_vertices": 3,
+            "min_signed_distance": -2.593340439283054e-06,
+            "max_signed_distance": -1.6724014595403958e-06
+          },
+          "Finlet_anal_2": {
+            "root_vertices": 3,
+            "min_signed_distance": -2.6345505022007387e-06,
+            "max_signed_distance": -1.6723331661694374e-06
+          },
+          "Finlet_dorsal_3": {
+            "root_vertices": 3,
+            "min_signed_distance": -7.538224233716306e-07,
+            "max_signed_distance": -5.819508583360111e-08
+          },
+          "Finlet_anal_3": {
+            "root_vertices": 3,
+            "min_signed_distance": -7.803240844594939e-07,
+            "max_signed_distance": -6.55181308373276e-08
+          },
+          "Finlet_dorsal_4": {
+            "root_vertices": 3,
+            "min_signed_distance": -2.183959045554129e-08,
+            "max_signed_distance": 1.0346791741167038e-06
+          },
+          "Finlet_anal_4": {
+            "root_vertices": 3,
+            "min_signed_distance": -2.8925623667130917e-08,
+            "max_signed_distance": 1.0347488150763695e-06
+          },
+          "Pectoral_-1": {
+            "root_vertices": 83,
+            "min_signed_distance": -0.014989242154115345,
+            "max_signed_distance": -0.008491724487612373
+          },
+          "Pelvic_-1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.0003825084916684318,
+            "max_signed_distance": -0.00037263780271246105
+          },
+          "Pectoral_1": {
+            "root_vertices": 83,
+            "min_signed_distance": -0.014997108752140775,
+            "max_signed_distance": -0.008497339087625733
+          },
+          "Pelvic_1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.00038259029130927047,
+            "max_signed_distance": -0.00037565214897483656
+          }
+        }
+      },
+      {
+        "frame": 25.0,
+        "fins": {
+          "Caudal_Membrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.052222553620595136,
+            "max_signed_distance": -0.02027302149872412
+          },
+          "Dorsal_SpinyMembrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.002102012189453717,
+            "max_signed_distance": -0.0019765666675084503
+          },
+          "Dorsal_SoftRays": {
+            "root_vertices": 121,
+            "min_signed_distance": -2.1969199856641808e-05,
+            "max_signed_distance": -1.0412701101358834e-07
+          },
+          "Anal_SoftMembrane": {
+            "root_vertices": 101,
+            "min_signed_distance": -3.765031246771855e-06,
+            "max_signed_distance": 1.1435007889915028e-05
+          },
+          "Finlet_dorsal_0": {
+            "root_vertices": 3,
+            "min_signed_distance": 4.0592578942622026e-07,
+            "max_signed_distance": 2.914676193732646e-06
+          },
+          "Finlet_anal_0": {
+            "root_vertices": 3,
+            "min_signed_distance": -5.116886985234714e-06,
+            "max_signed_distance": -1.403514860331967e-06
+          },
+          "Finlet_dorsal_1": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.0435805832820222e-06,
+            "max_signed_distance": 3.2032172221363453e-06
+          },
+          "Finlet_anal_1": {
+            "root_vertices": 3,
+            "min_signed_distance": -5.537120186360767e-06,
+            "max_signed_distance": -1.0435805273267817e-06
+          },
+          "Finlet_dorsal_2": {
+            "root_vertices": 3,
+            "min_signed_distance": -3.0314229935157755e-06,
+            "max_signed_distance": -2.1671439522918945e-06
+          },
+          "Finlet_anal_2": {
+            "root_vertices": 3,
+            "min_signed_distance": -3.0432420441428576e-06,
+            "max_signed_distance": -2.160155784025619e-06
+          },
+          "Finlet_dorsal_3": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.0510694226084638e-06,
+            "max_signed_distance": -6.786412800607877e-07
+          },
+          "Finlet_anal_3": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.0508049941293507e-06,
+            "max_signed_distance": -6.53151834173471e-07
+          },
+          "Finlet_dorsal_4": {
+            "root_vertices": 3,
+            "min_signed_distance": -6.093569222542783e-07,
+            "max_signed_distance": 7.880536769810931e-07
+          },
+          "Finlet_anal_4": {
+            "root_vertices": 3,
+            "min_signed_distance": -6.090961517379867e-07,
+            "max_signed_distance": 7.808006232679077e-07
+          },
+          "Pectoral_-1": {
+            "root_vertices": 83,
+            "min_signed_distance": -0.014979376890551066,
+            "max_signed_distance": -0.0084857774527336
+          },
+          "Pelvic_-1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.0003825202016400908,
+            "max_signed_distance": -0.00037209939628723987
+          },
+          "Pectoral_1": {
+            "root_vertices": 83,
+            "min_signed_distance": -0.01500522913192981,
+            "max_signed_distance": -0.008502319133185665
+          },
+          "Pelvic_1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.00038257871270275245,
+            "max_signed_distance": -0.0003761874412475663
+          }
+        }
+      },
+      {
+        "frame": 37.0,
+        "fins": {
+          "Caudal_Membrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.052080891087825876,
+            "max_signed_distance": -0.020267702602723148
+          },
+          "Dorsal_SpinyMembrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.0021020153506299266,
+            "max_signed_distance": -0.001976742898932571
+          },
+          "Dorsal_SoftRays": {
+            "root_vertices": 121,
+            "min_signed_distance": -2.1831978799013996e-05,
+            "max_signed_distance": -1.0103369260661133e-07
+          },
+          "Anal_SoftMembrane": {
+            "root_vertices": 101,
+            "min_signed_distance": -3.62037067436205e-06,
+            "max_signed_distance": 1.1555099924009937e-05
+          },
+          "Finlet_dorsal_0": {
+            "root_vertices": 3,
+            "min_signed_distance": 4.775191841943638e-07,
+            "max_signed_distance": 3.532749325962925e-06
+          },
+          "Finlet_anal_0": {
+            "root_vertices": 3,
+            "min_signed_distance": -4.502197056055479e-06,
+            "max_signed_distance": -1.3603476245460655e-06
+          },
+          "Finlet_dorsal_1": {
+            "root_vertices": 3,
+            "min_signed_distance": -8.822448773759817e-07,
+            "max_signed_distance": 3.850134503657898e-06
+          },
+          "Finlet_anal_1": {
+            "root_vertices": 3,
+            "min_signed_distance": -4.907172866275289e-06,
+            "max_signed_distance": -8.823141268710089e-07
+          },
+          "Finlet_dorsal_2": {
+            "root_vertices": 3,
+            "min_signed_distance": -2.6345735331112508e-06,
+            "max_signed_distance": -1.672423483700669e-06
+          },
+          "Finlet_anal_2": {
+            "root_vertices": 3,
+            "min_signed_distance": -2.5933636660369075e-06,
+            "max_signed_distance": -1.6723328455370279e-06
+          },
+          "Finlet_dorsal_3": {
+            "root_vertices": 3,
+            "min_signed_distance": -7.803466640643464e-07,
+            "max_signed_distance": -5.810930509692058e-08
+          },
+          "Finlet_anal_3": {
+            "root_vertices": 3,
+            "min_signed_distance": -7.465674956019797e-07,
+            "max_signed_distance": -5.817317422218693e-08
+          },
+          "Finlet_dorsal_4": {
+            "root_vertices": 3,
+            "min_signed_distance": -2.1774861025392056e-08,
+            "max_signed_distance": 1.0347387311426814e-06
+          },
+          "Finlet_anal_4": {
+            "root_vertices": 3,
+            "min_signed_distance": -2.181767884065766e-08,
+            "max_signed_distance": 1.0346791710080794e-06
+          },
+          "Pectoral_-1": {
+            "root_vertices": 83,
+            "min_signed_distance": -0.014996177851571701,
+            "max_signed_distance": -0.008495913538354216
+          },
+          "Pelvic_-1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.00038249230925657685,
+            "max_signed_distance": -0.00037307406876152527
+          },
+          "Pectoral_1": {
+            "root_vertices": 83,
+            "min_signed_distance": -0.014990157371357782,
+            "max_signed_distance": -0.00849312740683672
+          },
+          "Pelvic_1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.00038257912794392723,
+            "max_signed_distance": -0.0003752498872415799
+          }
+        }
+      },
+      {
+        "frame": 49.0,
+        "fins": {
+          "Caudal_Membrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.052222553131286986,
+            "max_signed_distance": -0.020273027039365843
+          },
+          "Dorsal_SpinyMembrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.0021020107973726,
+            "max_signed_distance": -0.001976608364202548
+          },
+          "Dorsal_SoftRays": {
+            "root_vertices": 121,
+            "min_signed_distance": -2.1955118214123104e-05,
+            "max_signed_distance": -1.0168508365882012e-07
+          },
+          "Anal_SoftMembrane": {
+            "root_vertices": 101,
+            "min_signed_distance": -3.77775255877566e-06,
+            "max_signed_distance": 1.1422121415805009e-05
+          },
+          "Finlet_dorsal_0": {
+            "root_vertices": 3,
+            "min_signed_distance": 3.9133854473627494e-07,
+            "max_signed_distance": 2.9152033196311322e-06
+          },
+          "Finlet_anal_0": {
+            "root_vertices": 3,
+            "min_signed_distance": -5.130302453082436e-06,
+            "max_signed_distance": -1.403853928882981e-06
+          },
+          "Finlet_dorsal_1": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.0435805344322091e-06,
+            "max_signed_distance": 3.203479552738031e-06
+          },
+          "Finlet_anal_1": {
+            "root_vertices": 3,
+            "min_signed_distance": -5.5513291297160094e-06,
+            "max_signed_distance": -1.0435805868347359e-06
+          },
+          "Finlet_dorsal_2": {
+            "root_vertices": 3,
+            "min_signed_distance": -3.017193407117702e-06,
+            "max_signed_distance": -2.167144003806243e-06
+          },
+          "Finlet_anal_2": {
+            "root_vertices": 3,
+            "min_signed_distance": -3.03142300772663e-06,
+            "max_signed_distance": -2.1674085006750943e-06
+          },
+          "Finlet_dorsal_3": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.0508048893242972e-06,
+            "max_signed_distance": -6.458957151345146e-07
+          },
+          "Finlet_anal_3": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.0508048671198367e-06,
+            "max_signed_distance": -6.786412807269215e-07
+          },
+          "Finlet_dorsal_4": {
+            "root_vertices": 3,
+            "min_signed_distance": -6.090961526261651e-07,
+            "max_signed_distance": 7.88056341072263e-07
+          },
+          "Finlet_anal_4": {
+            "root_vertices": 3,
+            "min_signed_distance": -6.0909578736279e-07,
+            "max_signed_distance": 7.880536692095319e-07
+          },
+          "Pectoral_-1": {
+            "root_vertices": 83,
+            "min_signed_distance": -0.015004302575107431,
+            "max_signed_distance": -0.00850089937193843
+          },
+          "Pelvic_-1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.0003825094653961969,
+            "max_signed_distance": -0.0003736426418186056
+          },
+          "Pectoral_1": {
+            "root_vertices": 83,
+            "min_signed_distance": -0.014980289150116732,
+            "max_signed_distance": -0.008487154023896437
+          },
+          "Pelvic_1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.000382565053541839,
+            "max_signed_distance": -0.0003747120764501233
+          }
+        }
+      }
+    ],
     "slug": "indian-mackerel",
-    "sha256": "7039a8a2eea3ac782e377cffd86ac38afacd7863b8679a51eb24bb8b80fc5d1a",
-    "vertices": 39519,
+    "sha256": "9ef3bc7a705e3e07fdf625456deb85ad36c7aa27772d1fac38f4f4c584db08be",
+    "vertices": 39389,
     "actions": [
       "Swim_Loop"
     ],
@@ -909,6 +1385,220 @@
     "loop_error": 0.0
   },
   {
+    "surface_contact": [
+      {
+        "frame": 1.0,
+        "fins": {
+          "Caudal_Membrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.024454212902128347,
+            "max_signed_distance": 0.03163306928217935
+          },
+          "Dorsal_SoftRays": {
+            "root_vertices": 121,
+            "min_signed_distance": 1.214522375725391e-07,
+            "max_signed_distance": 2.7997184965045108e-05
+          },
+          "Anal_SoftMembrane": {
+            "root_vertices": 101,
+            "min_signed_distance": -6.135771729987027e-05,
+            "max_signed_distance": 2.3276764469670752e-05
+          },
+          "Pectoral_-1": {
+            "root_vertices": 83,
+            "min_signed_distance": 0.0009829550708673196,
+            "max_signed_distance": 0.0010732840855780523
+          },
+          "Pelvic_-1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.00037323863678295766,
+            "max_signed_distance": -0.0003538177211908078
+          },
+          "Pectoral_1": {
+            "root_vertices": 83,
+            "min_signed_distance": 0.000983378495220677,
+            "max_signed_distance": 0.0010716076080825587
+          },
+          "Pelvic_1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.0003733913946462053,
+            "max_signed_distance": -0.00035554572974660914
+          }
+        }
+      },
+      {
+        "frame": 8.0,
+        "fins": {
+          "Caudal_Membrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.024401652548476704,
+            "max_signed_distance": 0.03162516653355851
+          },
+          "Dorsal_SoftRays": {
+            "root_vertices": 121,
+            "min_signed_distance": 1.2157573259230503e-07,
+            "max_signed_distance": 2.780857798256875e-05
+          },
+          "Anal_SoftMembrane": {
+            "root_vertices": 101,
+            "min_signed_distance": -6.078203823278727e-05,
+            "max_signed_distance": 2.3429853982293025e-05
+          },
+          "Pectoral_-1": {
+            "root_vertices": 83,
+            "min_signed_distance": 0.0009834614061219327,
+            "max_signed_distance": 0.0010737933412201528
+          },
+          "Pelvic_-1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.00037319999415785787,
+            "max_signed_distance": -0.00035263256361872664
+          },
+          "Pectoral_1": {
+            "root_vertices": 83,
+            "min_signed_distance": 0.0009828650158851815,
+            "max_signed_distance": 0.001071115001650469
+          },
+          "Pelvic_1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.00037345333336702424,
+            "max_signed_distance": -0.0003566671251178377
+          }
+        }
+      },
+      {
+        "frame": 15.0,
+        "fins": {
+          "Caudal_Membrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.024454265387248597,
+            "max_signed_distance": 0.031632819891456165
+          },
+          "Dorsal_SoftRays": {
+            "root_vertices": 121,
+            "min_signed_distance": 1.2152929779185584e-07,
+            "max_signed_distance": 2.7700644785966233e-05
+          },
+          "Anal_SoftMembrane": {
+            "root_vertices": 101,
+            "min_signed_distance": -6.137668009387198e-05,
+            "max_signed_distance": 2.327730033968578e-05
+          },
+          "Pectoral_-1": {
+            "root_vertices": 83,
+            "min_signed_distance": 0.00098339857549945,
+            "max_signed_distance": 0.0010737207016973116
+          },
+          "Pelvic_-1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.0003731794459724824,
+            "max_signed_distance": -0.0003519716228197467
+          },
+          "Pectoral_1": {
+            "root_vertices": 83,
+            "min_signed_distance": 0.0009829391779021535,
+            "max_signed_distance": 0.0010711651452766091
+          },
+          "Pelvic_1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.00037347584972735604,
+            "max_signed_distance": -0.00035732393958198827
+          }
+        }
+      },
+      {
+        "frame": 22.0,
+        "fins": {
+          "Caudal_Membrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.024401610226959747,
+            "max_signed_distance": 0.031624161433683184
+          },
+          "Dorsal_SoftRays": {
+            "root_vertices": 121,
+            "min_signed_distance": 1.2154295020438965e-07,
+            "max_signed_distance": 2.7890920158313293e-05
+          },
+          "Anal_SoftMembrane": {
+            "root_vertices": 101,
+            "min_signed_distance": -6.076957811274042e-05,
+            "max_signed_distance": 2.341631885371953e-05
+          },
+          "Pectoral_-1": {
+            "root_vertices": 83,
+            "min_signed_distance": 0.000982885037046799,
+            "max_signed_distance": 0.001073230009751569
+          },
+          "Pelvic_-1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.000373242184650735,
+            "max_signed_distance": -0.00035315379219014176
+          },
+          "Pectoral_1": {
+            "root_vertices": 83,
+            "min_signed_distance": 0.0009834375068749068,
+            "max_signed_distance": 0.0010716616543504642
+          },
+          "Pelvic_1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.00037341288165748665,
+            "max_signed_distance": -0.0003561762818549141
+          }
+        }
+      },
+      {
+        "frame": 29.0,
+        "fins": {
+          "Caudal_Membrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.024454212902128347,
+            "max_signed_distance": 0.03163306928217935
+          },
+          "Dorsal_SoftRays": {
+            "root_vertices": 121,
+            "min_signed_distance": 1.214522375725391e-07,
+            "max_signed_distance": 2.7997184965045108e-05
+          },
+          "Anal_SoftMembrane": {
+            "root_vertices": 101,
+            "min_signed_distance": -6.135771729987027e-05,
+            "max_signed_distance": 2.3276764469670752e-05
+          },
+          "Pectoral_-1": {
+            "root_vertices": 83,
+            "min_signed_distance": 0.0009829550708673196,
+            "max_signed_distance": 0.0010732840855780523
+          },
+          "Pelvic_-1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.00037323863678295766,
+            "max_signed_distance": -0.0003538177211908078
+          },
+          "Pectoral_1": {
+            "root_vertices": 83,
+            "min_signed_distance": 0.000983378495220677,
+            "max_signed_distance": 0.0010716076080825587
+          },
+          "Pelvic_1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.0003733913946462053,
+            "max_signed_distance": -0.00035554572974660914
+          }
+        }
+      }
+    ],
+    "slug": "sardine",
+    "sha256": "c7d124c9087a287ad2709f97fdf9c24318395b35b8f01109215456792c8e86ec",
+    "vertices": 36304,
+    "actions": [
+      "Swim_Loop"
+    ],
+    "start": 1.0,
+    "end": 29.0,
+    "motion": 0.04821667249687431,
+    "loop_error": 0.0
+  },
+  {
     "surface_contact": [],
     "slug": "scad",
     "sha256": "33cc9e0f270f96c793b7ade4c148afbc2efad67e119088b06942c293d872b957",
@@ -935,10 +1625,736 @@
     "loop_error": 0.0
   },
   {
-    "surface_contact": [],
+    "surface_contact": [
+      {
+        "frame": 1.0,
+        "fins": {
+          "Caudal_Membrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.024691210099263117,
+            "max_signed_distance": 0.031021495748973393
+          },
+          "Dorsal_SpinyMembrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.0014294888863730648,
+            "max_signed_distance": -0.0011219818866265996
+          },
+          "Dorsal_SoftRays": {
+            "root_vertices": 121,
+            "min_signed_distance": 1.3277483526530354e-07,
+            "max_signed_distance": 4.291998021699328e-05
+          },
+          "Anal_SoftMembrane": {
+            "root_vertices": 101,
+            "min_signed_distance": 2.936143381898626e-08,
+            "max_signed_distance": 2.571525886452264e-05
+          },
+          "Finlet_dorsal_0": {
+            "root_vertices": 3,
+            "min_signed_distance": 5.693016307262155e-06,
+            "max_signed_distance": 3.002347022373897e-05
+          },
+          "Finlet_anal_0": {
+            "root_vertices": 3,
+            "min_signed_distance": 2.5694374126139508e-06,
+            "max_signed_distance": 1.6594748128540004e-05
+          },
+          "Finlet_dorsal_1": {
+            "root_vertices": 3,
+            "min_signed_distance": 5.0536806011081126e-06,
+            "max_signed_distance": 9.750564686328289e-06
+          },
+          "Finlet_anal_1": {
+            "root_vertices": 3,
+            "min_signed_distance": 2.0409781078534195e-06,
+            "max_signed_distance": 2.4541942460487576e-06
+          },
+          "Finlet_dorsal_2": {
+            "root_vertices": 3,
+            "min_signed_distance": 4.771272860137898e-07,
+            "max_signed_distance": 8.92750315628632e-06
+          },
+          "Finlet_anal_2": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.7371964653456473e-06,
+            "max_signed_distance": 1.9613483273062116e-06
+          },
+          "Finlet_dorsal_3": {
+            "root_vertices": 3,
+            "min_signed_distance": -8.229447201912876e-06,
+            "max_signed_distance": 1.057245979207977e-06
+          },
+          "Finlet_anal_3": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.006792275326518e-05,
+            "max_signed_distance": -3.155627017470408e-06
+          },
+          "Finlet_dorsal_4": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.6503810549295395e-05,
+            "max_signed_distance": -4.663360359202784e-06
+          },
+          "Finlet_anal_4": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.6430094696318065e-05,
+            "max_signed_distance": -5.753854626533439e-06
+          },
+          "Finlet_dorsal_5": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.8685116216943243e-05,
+            "max_signed_distance": -8.37053296720569e-06
+          },
+          "Finlet_anal_5": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.8658057065579214e-05,
+            "max_signed_distance": -1.2340071045002787e-05
+          },
+          "Finlet_dorsal_6": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.9481567015589007e-05,
+            "max_signed_distance": -6.8209050994028075e-06
+          },
+          "Finlet_anal_6": {
+            "root_vertices": 3,
+            "min_signed_distance": -3.529153741510527e-05,
+            "max_signed_distance": -6.203723017961238e-06
+          },
+          "Finlet_dorsal_7": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.7481739320146517e-05,
+            "max_signed_distance": -4.695616960148641e-06
+          },
+          "Finlet_anal_7": {
+            "root_vertices": 3,
+            "min_signed_distance": -3.169833270533218e-05,
+            "max_signed_distance": -8.517417178666165e-06
+          },
+          "Finlet_dorsal_8": {
+            "root_vertices": 3,
+            "min_signed_distance": -8.829186533887423e-06,
+            "max_signed_distance": 1.2045415703765272e-07
+          },
+          "Finlet_anal_8": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.5994219609183347e-05,
+            "max_signed_distance": 1.595380565433402e-07
+          },
+          "Caudal_PeduncleKeel_-1": {
+            "root_vertices": 4,
+            "min_signed_distance": 9.786912754705668e-05,
+            "max_signed_distance": 0.0002733596940061034
+          },
+          "Caudal_PeduncleKeel_1": {
+            "root_vertices": 4,
+            "min_signed_distance": 0.00010195209443430997,
+            "max_signed_distance": 0.00027324352549840114
+          },
+          "Pectoral_-1": {
+            "root_vertices": 83,
+            "min_signed_distance": -0.00900303313119366,
+            "max_signed_distance": -0.001832922239373147
+          },
+          "Pelvic_-1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.0004266686497089722,
+            "max_signed_distance": -0.0004158075304783182
+          },
+          "Pectoral_1": {
+            "root_vertices": 83,
+            "min_signed_distance": -0.009022213483376618,
+            "max_signed_distance": -0.0018549014303061995
+          },
+          "Pelvic_1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.0004265619740664306,
+            "max_signed_distance": -0.00041408674488718766
+          }
+        }
+      },
+      {
+        "frame": 12.0,
+        "fins": {
+          "Caudal_Membrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.02463440695009922,
+            "max_signed_distance": 0.031014860879622574
+          },
+          "Dorsal_SpinyMembrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.0014294919781292492,
+            "max_signed_distance": -0.0011219611405977048
+          },
+          "Dorsal_SoftRays": {
+            "root_vertices": 121,
+            "min_signed_distance": 1.3736395110264255e-07,
+            "max_signed_distance": 4.308342236925e-05
+          },
+          "Anal_SoftMembrane": {
+            "root_vertices": 101,
+            "min_signed_distance": 2.9375695334565854e-08,
+            "max_signed_distance": 2.58587361159357e-05
+          },
+          "Finlet_dorsal_0": {
+            "root_vertices": 3,
+            "min_signed_distance": 5.752504595335495e-06,
+            "max_signed_distance": 3.017906574598328e-05
+          },
+          "Finlet_anal_0": {
+            "root_vertices": 3,
+            "min_signed_distance": 2.6211072645665467e-06,
+            "max_signed_distance": 1.674618953373397e-05
+          },
+          "Finlet_dorsal_1": {
+            "root_vertices": 3,
+            "min_signed_distance": 5.070080204561123e-06,
+            "max_signed_distance": 9.882843151842735e-06
+          },
+          "Finlet_anal_1": {
+            "root_vertices": 3,
+            "min_signed_distance": 2.1793266964387215e-06,
+            "max_signed_distance": 2.505016414744432e-06
+          },
+          "Finlet_dorsal_2": {
+            "root_vertices": 3,
+            "min_signed_distance": 5.375057349210621e-07,
+            "max_signed_distance": 9.045198517299013e-06
+          },
+          "Finlet_anal_2": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.6870351635667191e-06,
+            "max_signed_distance": 2.0990903562001506e-06
+          },
+          "Finlet_dorsal_3": {
+            "root_vertices": 3,
+            "min_signed_distance": -8.136268027314486e-06,
+            "max_signed_distance": 1.1433337174793223e-06
+          },
+          "Finlet_anal_3": {
+            "root_vertices": 3,
+            "min_signed_distance": -9.968677883165356e-06,
+            "max_signed_distance": -3.055284107489342e-06
+          },
+          "Finlet_dorsal_4": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.5916222043443895e-05,
+            "max_signed_distance": -4.624694658339479e-06
+          },
+          "Finlet_anal_4": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.585289328431827e-05,
+            "max_signed_distance": -5.676505564267131e-06
+          },
+          "Finlet_dorsal_5": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.8022125974681558e-05,
+            "max_signed_distance": -8.134078360200192e-06
+          },
+          "Finlet_anal_5": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.8017798357305992e-05,
+            "max_signed_distance": -1.2128815722434183e-05
+          },
+          "Finlet_dorsal_6": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.8874358605813768e-05,
+            "max_signed_distance": -6.629460798990294e-06
+          },
+          "Finlet_anal_6": {
+            "root_vertices": 3,
+            "min_signed_distance": -3.466220542236442e-05,
+            "max_signed_distance": -6.050229073295554e-06
+          },
+          "Finlet_dorsal_7": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.6951275938481558e-05,
+            "max_signed_distance": -4.397839527214842e-06
+          },
+          "Finlet_anal_7": {
+            "root_vertices": 3,
+            "min_signed_distance": -3.1175186173015845e-05,
+            "max_signed_distance": -8.225934562844373e-06
+          },
+          "Finlet_dorsal_8": {
+            "root_vertices": 3,
+            "min_signed_distance": -8.311017335671522e-06,
+            "max_signed_distance": 6.521237324585982e-07
+          },
+          "Finlet_anal_8": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.548485780844544e-05,
+            "max_signed_distance": 6.594864063735884e-07
+          },
+          "Caudal_PeduncleKeel_-1": {
+            "root_vertices": 4,
+            "min_signed_distance": 9.64980398858728e-05,
+            "max_signed_distance": 0.0002726859152630823
+          },
+          "Caudal_PeduncleKeel_1": {
+            "root_vertices": 4,
+            "min_signed_distance": 0.0001033303095070437,
+            "max_signed_distance": 0.00027368449877940293
+          },
+          "Pectoral_-1": {
+            "root_vertices": 83,
+            "min_signed_distance": -0.00901532071497968,
+            "max_signed_distance": -0.0018472292967999238
+          },
+          "Pelvic_-1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.000426642389420806,
+            "max_signed_distance": -0.0004147151806634941
+          },
+          "Pectoral_1": {
+            "root_vertices": 83,
+            "min_signed_distance": -0.009010101662852321,
+            "max_signed_distance": -0.0018406630665595003
+          },
+          "Pelvic_1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.0004266386764797403,
+            "max_signed_distance": -0.00041517442891603196
+          }
+        }
+      },
+      {
+        "frame": 23.0,
+        "fins": {
+          "Caudal_Membrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.02469110774654837,
+            "max_signed_distance": 0.031020810349218664
+          },
+          "Dorsal_SpinyMembrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.0014294885879735375,
+            "max_signed_distance": -0.0011219651696592337
+          },
+          "Dorsal_SoftRays": {
+            "root_vertices": 121,
+            "min_signed_distance": 1.3733152443018426e-07,
+            "max_signed_distance": 4.2919365341731464e-05
+          },
+          "Anal_SoftMembrane": {
+            "root_vertices": 101,
+            "min_signed_distance": 2.737221982407334e-08,
+            "max_signed_distance": 2.5701081163731487e-05
+          },
+          "Finlet_dorsal_0": {
+            "root_vertices": 3,
+            "min_signed_distance": 5.707130126708648e-06,
+            "max_signed_distance": 3.002280745789676e-05
+          },
+          "Finlet_anal_0": {
+            "root_vertices": 3,
+            "min_signed_distance": 2.5695328425001662e-06,
+            "max_signed_distance": 1.659524523134337e-05
+          },
+          "Finlet_dorsal_1": {
+            "root_vertices": 3,
+            "min_signed_distance": 5.039264262762799e-06,
+            "max_signed_distance": 9.750388356266626e-06
+          },
+          "Finlet_anal_1": {
+            "root_vertices": 3,
+            "min_signed_distance": 2.0483026430540008e-06,
+            "max_signed_distance": 2.467930339644653e-06
+          },
+          "Finlet_dorsal_2": {
+            "root_vertices": 3,
+            "min_signed_distance": 4.945386609112035e-07,
+            "max_signed_distance": 8.89607970755435e-06
+          },
+          "Finlet_anal_2": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.7441704458498464e-06,
+            "max_signed_distance": 1.9613493957848505e-06
+          },
+          "Finlet_dorsal_3": {
+            "root_vertices": 3,
+            "min_signed_distance": -8.236325067301209e-06,
+            "max_signed_distance": 1.0603375639739454e-06
+          },
+          "Finlet_anal_3": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.0053516861674439e-05,
+            "max_signed_distance": -3.155719292990966e-06
+          },
+          "Finlet_dorsal_4": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.6488408569159674e-05,
+            "max_signed_distance": -4.680486091146463e-06
+          },
+          "Finlet_anal_4": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.6417464010487492e-05,
+            "max_signed_distance": -5.746698088060498e-06
+          },
+          "Finlet_dorsal_5": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.870176445351035e-05,
+            "max_signed_distance": -8.370533294055349e-06
+          },
+          "Finlet_anal_5": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.8664791120670543e-05,
+            "max_signed_distance": -1.2318490469453991e-05
+          },
+          "Finlet_dorsal_6": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.9481567647972042e-05,
+            "max_signed_distance": -6.79096597977491e-06
+          },
+          "Finlet_anal_6": {
+            "root_vertices": 3,
+            "min_signed_distance": -3.527403025316289e-05,
+            "max_signed_distance": -6.203459626874519e-06
+          },
+          "Finlet_dorsal_7": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.748871333262514e-05,
+            "max_signed_distance": -4.7172808077533546e-06
+          },
+          "Finlet_anal_7": {
+            "root_vertices": 3,
+            "min_signed_distance": -3.170226182191982e-05,
+            "max_signed_distance": -8.513980372271135e-06
+          },
+          "Finlet_dorsal_8": {
+            "root_vertices": 3,
+            "min_signed_distance": -8.829186199932337e-06,
+            "max_signed_distance": 1.1708527702936067e-07
+          },
+          "Finlet_anal_8": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.599397005946912e-05,
+            "max_signed_distance": 1.5953857002148908e-07
+          },
+          "Caudal_PeduncleKeel_-1": {
+            "root_vertices": 4,
+            "min_signed_distance": 0.00010201563049783147,
+            "max_signed_distance": 0.0002732380203269713
+          },
+          "Caudal_PeduncleKeel_1": {
+            "root_vertices": 4,
+            "min_signed_distance": 9.781276972731234e-05,
+            "max_signed_distance": 0.0002733471700366863
+          },
+          "Pectoral_-1": {
+            "root_vertices": 83,
+            "min_signed_distance": -0.009022249570989516,
+            "max_signed_distance": -0.0018553982345110853
+          },
+          "Pelvic_-1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.00042656324378853583,
+            "max_signed_distance": -0.0004140933199715535
+          },
+          "Pectoral_1": {
+            "root_vertices": 83,
+            "min_signed_distance": -0.009002994017464516,
+            "max_signed_distance": -0.0018324264351576858
+          },
+          "Pelvic_1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.0004266661838059349,
+            "max_signed_distance": -0.0004157756515024147
+          }
+        }
+      },
+      {
+        "frame": 34.0,
+        "fins": {
+          "Caudal_Membrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.024634514054469037,
+            "max_signed_distance": 0.03101353337888213
+          },
+          "Dorsal_SpinyMembrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.0014294907846874594,
+            "max_signed_distance": -0.0011219671250728425
+          },
+          "Dorsal_SoftRays": {
+            "root_vertices": 121,
+            "min_signed_distance": 1.3733376735824976e-07,
+            "max_signed_distance": 4.306791626618178e-05
+          },
+          "Anal_SoftMembrane": {
+            "root_vertices": 101,
+            "min_signed_distance": 2.9375721938285082e-08,
+            "max_signed_distance": 2.5885325129593184e-05
+          },
+          "Finlet_dorsal_0": {
+            "root_vertices": 3,
+            "min_signed_distance": 5.7501593602182766e-06,
+            "max_signed_distance": 3.0178256267276993e-05
+          },
+          "Finlet_anal_0": {
+            "root_vertices": 3,
+            "min_signed_distance": 2.621267826796725e-06,
+            "max_signed_distance": 1.676126143834722e-05
+          },
+          "Finlet_dorsal_1": {
+            "root_vertices": 3,
+            "min_signed_distance": 5.069869384755066e-06,
+            "max_signed_distance": 9.868387818912083e-06
+          },
+          "Finlet_anal_1": {
+            "root_vertices": 3,
+            "min_signed_distance": 2.1935095197989085e-06,
+            "max_signed_distance": 2.5122591162940466e-06
+          },
+          "Finlet_dorsal_2": {
+            "root_vertices": 3,
+            "min_signed_distance": 5.37480955298264e-07,
+            "max_signed_distance": 9.027759650948042e-06
+          },
+          "Finlet_anal_2": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.687189372212572e-06,
+            "max_signed_distance": 2.0991949987170244e-06
+          },
+          "Finlet_dorsal_3": {
+            "root_vertices": 3,
+            "min_signed_distance": -8.136006529824158e-06,
+            "max_signed_distance": 1.1432357120977343e-06
+          },
+          "Finlet_anal_3": {
+            "root_vertices": 3,
+            "min_signed_distance": -9.94835382961412e-06,
+            "max_signed_distance": -3.0478731813943227e-06
+          },
+          "Finlet_dorsal_4": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.5945668145889158e-05,
+            "max_signed_distance": -4.600410009381051e-06
+          },
+          "Finlet_anal_4": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.5839118628235838e-05,
+            "max_signed_distance": -5.69003367623111e-06
+          },
+          "Finlet_dorsal_5": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.803557482205065e-05,
+            "max_signed_distance": -8.140990193084008e-06
+          },
+          "Finlet_anal_5": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.7998607489744245e-05,
+            "max_signed_distance": -1.2129183762255025e-05
+          },
+          "Finlet_dorsal_6": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.888125961002629e-05,
+            "max_signed_distance": -6.629206581010294e-06
+          },
+          "Finlet_anal_6": {
+            "root_vertices": 3,
+            "min_signed_distance": -3.4662656972273e-05,
+            "max_signed_distance": -6.043176561831842e-06
+          },
+          "Finlet_dorsal_7": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.699994720283371e-05,
+            "max_signed_distance": -4.397816551815481e-06
+          },
+          "Finlet_anal_7": {
+            "root_vertices": 3,
+            "min_signed_distance": -3.118295332882326e-05,
+            "max_signed_distance": -8.22595959171224e-06
+          },
+          "Finlet_dorsal_8": {
+            "root_vertices": 3,
+            "min_signed_distance": -8.318413753372056e-06,
+            "max_signed_distance": 6.121866588104652e-07
+          },
+          "Finlet_anal_8": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.5496802404868504e-05,
+            "max_signed_distance": 6.735842892346966e-07
+          },
+          "Caudal_PeduncleKeel_-1": {
+            "root_vertices": 4,
+            "min_signed_distance": 0.00010338543462751204,
+            "max_signed_distance": 0.00027368441624275874
+          },
+          "Caudal_PeduncleKeel_1": {
+            "root_vertices": 4,
+            "min_signed_distance": 9.644036109612841e-05,
+            "max_signed_distance": 0.0002726973947915212
+          },
+          "Pectoral_-1": {
+            "root_vertices": 83,
+            "min_signed_distance": -0.00901014867054073,
+            "max_signed_distance": -0.0018411601049592718
+          },
+          "Pelvic_-1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.0004266419331884208,
+            "max_signed_distance": -0.0004152061012447916
+          },
+          "Pectoral_1": {
+            "root_vertices": 83,
+            "min_signed_distance": -0.009015278417109585,
+            "max_signed_distance": -0.0018467232589500782
+          },
+          "Pelvic_1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.00042661318047265695,
+            "max_signed_distance": -0.00041471105452084434
+          }
+        }
+      },
+      {
+        "frame": 45.0,
+        "fins": {
+          "Caudal_Membrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.024691210099263117,
+            "max_signed_distance": 0.031021495748973393
+          },
+          "Dorsal_SpinyMembrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.0014294888863730648,
+            "max_signed_distance": -0.0011219818866265996
+          },
+          "Dorsal_SoftRays": {
+            "root_vertices": 121,
+            "min_signed_distance": 1.3277483526530354e-07,
+            "max_signed_distance": 4.291998021699328e-05
+          },
+          "Anal_SoftMembrane": {
+            "root_vertices": 101,
+            "min_signed_distance": 2.936143381898626e-08,
+            "max_signed_distance": 2.571525886452264e-05
+          },
+          "Finlet_dorsal_0": {
+            "root_vertices": 3,
+            "min_signed_distance": 5.693016307262155e-06,
+            "max_signed_distance": 3.002347022373897e-05
+          },
+          "Finlet_anal_0": {
+            "root_vertices": 3,
+            "min_signed_distance": 2.5694374126139508e-06,
+            "max_signed_distance": 1.6594748128540004e-05
+          },
+          "Finlet_dorsal_1": {
+            "root_vertices": 3,
+            "min_signed_distance": 5.0536806011081126e-06,
+            "max_signed_distance": 9.750564686328289e-06
+          },
+          "Finlet_anal_1": {
+            "root_vertices": 3,
+            "min_signed_distance": 2.0409781078534195e-06,
+            "max_signed_distance": 2.4541942460487576e-06
+          },
+          "Finlet_dorsal_2": {
+            "root_vertices": 3,
+            "min_signed_distance": 4.771272860137898e-07,
+            "max_signed_distance": 8.92750315628632e-06
+          },
+          "Finlet_anal_2": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.7371964653456473e-06,
+            "max_signed_distance": 1.9613483273062116e-06
+          },
+          "Finlet_dorsal_3": {
+            "root_vertices": 3,
+            "min_signed_distance": -8.229447201912876e-06,
+            "max_signed_distance": 1.057245979207977e-06
+          },
+          "Finlet_anal_3": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.006792275326518e-05,
+            "max_signed_distance": -3.155627017470408e-06
+          },
+          "Finlet_dorsal_4": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.6503810549295395e-05,
+            "max_signed_distance": -4.663360359202784e-06
+          },
+          "Finlet_anal_4": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.6430094696318065e-05,
+            "max_signed_distance": -5.753854626533439e-06
+          },
+          "Finlet_dorsal_5": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.8685116216943243e-05,
+            "max_signed_distance": -8.37053296720569e-06
+          },
+          "Finlet_anal_5": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.8658057065579214e-05,
+            "max_signed_distance": -1.2340071045002787e-05
+          },
+          "Finlet_dorsal_6": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.9481567015589007e-05,
+            "max_signed_distance": -6.8209050994028075e-06
+          },
+          "Finlet_anal_6": {
+            "root_vertices": 3,
+            "min_signed_distance": -3.529153741510527e-05,
+            "max_signed_distance": -6.203723017961238e-06
+          },
+          "Finlet_dorsal_7": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.7481739320146517e-05,
+            "max_signed_distance": -4.695616960148641e-06
+          },
+          "Finlet_anal_7": {
+            "root_vertices": 3,
+            "min_signed_distance": -3.169833270533218e-05,
+            "max_signed_distance": -8.517417178666165e-06
+          },
+          "Finlet_dorsal_8": {
+            "root_vertices": 3,
+            "min_signed_distance": -8.829186533887423e-06,
+            "max_signed_distance": 1.2045415703765272e-07
+          },
+          "Finlet_anal_8": {
+            "root_vertices": 3,
+            "min_signed_distance": -1.5994219609183347e-05,
+            "max_signed_distance": 1.595380565433402e-07
+          },
+          "Caudal_PeduncleKeel_-1": {
+            "root_vertices": 4,
+            "min_signed_distance": 9.786912754705668e-05,
+            "max_signed_distance": 0.0002733596940061034
+          },
+          "Caudal_PeduncleKeel_1": {
+            "root_vertices": 4,
+            "min_signed_distance": 0.00010195209443430997,
+            "max_signed_distance": 0.00027324352549840114
+          },
+          "Pectoral_-1": {
+            "root_vertices": 83,
+            "min_signed_distance": -0.00900303313119366,
+            "max_signed_distance": -0.001832922239373147
+          },
+          "Pelvic_-1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.0004266686497089722,
+            "max_signed_distance": -0.0004158075304783182
+          },
+          "Pectoral_1": {
+            "root_vertices": 83,
+            "min_signed_distance": -0.009022213483376618,
+            "max_signed_distance": -0.0018549014303061995
+          },
+          "Pelvic_1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.0004265619740664306,
+            "max_signed_distance": -0.00041408674488718766
+          }
+        }
+      }
+    ],
     "slug": "spanish-mackerel",
-    "sha256": "ac36d99582d8171e3a6b1ae996ee89c11165f4a3febc1a84795a6eac2c7c1a48",
-    "vertices": 39594,
+    "sha256": "3e108137a0a271a6682469b716e7261db7c136fa5f7bee7137683f059ddc3fe0",
+    "vertices": 39464,
     "actions": [
       "Swim_Loop"
     ],
@@ -974,10 +2390,236 @@
     "loop_error": 0.0
   },
   {
-    "surface_contact": [],
+    "surface_contact": [
+      {
+        "frame": 1.0,
+        "fins": {
+          "Caudal_Membrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.026864974332966085,
+            "max_signed_distance": 0.027101570125523722
+          },
+          "Dorsal_SpinyMembrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.0024563698032196157,
+            "max_signed_distance": -0.002290880696818931
+          },
+          "Dorsal_SoftRays": {
+            "root_vertices": 121,
+            "min_signed_distance": -2.8135880043578254e-05,
+            "max_signed_distance": 3.934750280620847e-05
+          },
+          "Anal_SoftMembrane": {
+            "root_vertices": 101,
+            "min_signed_distance": -3.1835985495831665e-05,
+            "max_signed_distance": 4.145554747481128e-05
+          },
+          "Pectoral_-1": {
+            "root_vertices": 83,
+            "min_signed_distance": -0.01172244292229152,
+            "max_signed_distance": -0.008148788834660081
+          },
+          "Pelvic_-1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.00031841402044108236,
+            "max_signed_distance": -0.00029683853429318674
+          },
+          "Pectoral_1": {
+            "root_vertices": 83,
+            "min_signed_distance": -0.011721726437826874,
+            "max_signed_distance": -0.008150140078214463
+          },
+          "Pelvic_1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.0003184789340195948,
+            "max_signed_distance": -0.0002978932854773575
+          }
+        }
+      },
+      {
+        "frame": 14.0,
+        "fins": {
+          "Caudal_Membrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.026801976673596073,
+            "max_signed_distance": 0.027094028433566564
+          },
+          "Dorsal_SpinyMembrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.0024563436280420348,
+            "max_signed_distance": -0.002290920669111074
+          },
+          "Dorsal_SoftRays": {
+            "root_vertices": 121,
+            "min_signed_distance": -2.75647126812828e-05,
+            "max_signed_distance": 3.954195410926786e-05
+          },
+          "Anal_SoftMembrane": {
+            "root_vertices": 101,
+            "min_signed_distance": -3.1321825105123935e-05,
+            "max_signed_distance": 4.164497200065398e-05
+          },
+          "Pectoral_-1": {
+            "root_vertices": 83,
+            "min_signed_distance": -0.011721487421709753,
+            "max_signed_distance": -0.008147985259711277
+          },
+          "Pelvic_-1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.00031838709580256364,
+            "max_signed_distance": -0.00029549928501637623
+          },
+          "Pectoral_1": {
+            "root_vertices": 83,
+            "min_signed_distance": -0.011722696119250031,
+            "max_signed_distance": -0.008150975507305702
+          },
+          "Pelvic_1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.00031850575246039625,
+            "max_signed_distance": -0.00029920854262854846
+          }
+        }
+      },
+      {
+        "frame": 27.0,
+        "fins": {
+          "Caudal_Membrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.026864998447308608,
+            "max_signed_distance": 0.0271001248875109
+          },
+          "Dorsal_SpinyMembrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.0024563693880068627,
+            "max_signed_distance": -0.002290943968546344
+          },
+          "Dorsal_SoftRays": {
+            "root_vertices": 121,
+            "min_signed_distance": -2.8111551230836085e-05,
+            "max_signed_distance": 3.9345719116568034e-05
+          },
+          "Anal_SoftMembrane": {
+            "root_vertices": 101,
+            "min_signed_distance": -3.183944015461293e-05,
+            "max_signed_distance": 4.143725439575974e-05
+          },
+          "Pectoral_-1": {
+            "root_vertices": 83,
+            "min_signed_distance": -0.011721613951522158,
+            "max_signed_distance": -0.008148061377141858
+          },
+          "Pelvic_-1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.0003183716102199696,
+            "max_signed_distance": -0.00029474005206964193
+          },
+          "Pectoral_1": {
+            "root_vertices": 83,
+            "min_signed_distance": -0.011722556039785559,
+            "max_signed_distance": -0.008150876423314912
+          },
+          "Pelvic_1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.000318497783794669,
+            "max_signed_distance": -0.000299938742955419
+          }
+        }
+      },
+      {
+        "frame": 40.0,
+        "fins": {
+          "Caudal_Membrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.026801941004123364,
+            "max_signed_distance": 0.027107166759378742
+          },
+          "Dorsal_SpinyMembrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.002456371409923719,
+            "max_signed_distance": -0.0022908883493073517
+          },
+          "Dorsal_SoftRays": {
+            "root_vertices": 121,
+            "min_signed_distance": -2.7575598402052037e-05,
+            "max_signed_distance": 3.9532690124133296e-05
+          },
+          "Anal_SoftMembrane": {
+            "root_vertices": 101,
+            "min_signed_distance": -3.1296966319871444e-05,
+            "max_signed_distance": 4.164747575430283e-05
+          },
+          "Pectoral_-1": {
+            "root_vertices": 83,
+            "min_signed_distance": -0.01172256525933335,
+            "max_signed_distance": -0.008148909404553706
+          },
+          "Pelvic_-1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.00031839772638875274,
+            "max_signed_distance": -0.00029607704323453277
+          },
+          "Pectoral_1": {
+            "root_vertices": 83,
+            "min_signed_distance": -0.01172161916110781,
+            "max_signed_distance": -0.008150056874001166
+          },
+          "Pelvic_1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.0003184923822914243,
+            "max_signed_distance": -0.000298628687545488
+          }
+        }
+      },
+      {
+        "frame": 53.0,
+        "fins": {
+          "Caudal_Membrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.026864974332966085,
+            "max_signed_distance": 0.027101570125523722
+          },
+          "Dorsal_SpinyMembrane": {
+            "root_vertices": 121,
+            "min_signed_distance": -0.0024563698032196157,
+            "max_signed_distance": -0.002290880696818931
+          },
+          "Dorsal_SoftRays": {
+            "root_vertices": 121,
+            "min_signed_distance": -2.8135880043578254e-05,
+            "max_signed_distance": 3.934750280620847e-05
+          },
+          "Anal_SoftMembrane": {
+            "root_vertices": 101,
+            "min_signed_distance": -3.1835985495831665e-05,
+            "max_signed_distance": 4.145554747481128e-05
+          },
+          "Pectoral_-1": {
+            "root_vertices": 83,
+            "min_signed_distance": -0.01172244292229152,
+            "max_signed_distance": -0.008148788834660081
+          },
+          "Pelvic_-1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.00031841402044108236,
+            "max_signed_distance": -0.00029683853429318674
+          },
+          "Pectoral_1": {
+            "root_vertices": 83,
+            "min_signed_distance": -0.011721726437826874,
+            "max_signed_distance": -0.008150140078214463
+          },
+          "Pelvic_1": {
+            "root_vertices": 67,
+            "min_signed_distance": -0.0003184789340195948,
+            "max_signed_distance": -0.0002978932854773575
+          }
+        }
+      }
+    ],
     "slug": "yellowtail-scad",
-    "sha256": "656e4c91df0dd600d6e037fd2c38fc4c118dc1a6283eca879006dfef87f1b507",
-    "vertices": 39460,
+    "sha256": "e8046193b8afd5bb0d2d085235e6cac0a3a14c9fd935fa3ecc870e2a39328c53",
+    "vertices": 39330,
     "actions": [
       "Swim_Loop"
     ],

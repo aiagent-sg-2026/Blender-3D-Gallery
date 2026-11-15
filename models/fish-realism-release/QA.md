@@ -43,3 +43,13 @@ A geometric audit found the prior fixed pelvic-root coordinates outside the curv
 Ribbonfish is a distinct scaleless reconstruction with a welded open-jaw/body shell, small fang geometry, a tapered body tail, and independent dorsal-wave controls. Three actual reimported dorsal probes show different moving phases. Its modeled anatomy avoids a separate caudal/pelvic fin or broad anal membrane. Dedicated source, GLB, browser, dorsal-detail and head-detail evidence is included.
 
 Earlier live receipts prove their recorded deployment/artifact versions and playback scope; they do not retroactively establish the later geometric contact criterion. A fresh deployment and hash-bound live check are still required for the corrected delivery files.
+
+## Live verification: second and third batches
+
+GitHub Pages run [43701022605](https://github.com/yapweijun1996/Blender-3D-Gallery/actions/runs/43701022605) successfully deployed commit `21a3fe495d9dcd8ad66cabea3537acc4f1a8eb7f`. All 24 live Chromium/WebKit desktop/mobile scenarios pass for silver pomfret, black pomfret, Indian mackerel, Spanish mackerel, yellowstripe scad and bigeye scad. Response hashes identify the exact deployed files. This is availability/playback evidence for those versions; later pelvic-contact corrections require their own deployment verification.
+
+## Fin-contact follow-up 02 and sardine
+
+Indian mackerel, Spanish mackerel and yellowstripe scad now pass five-phase contact checks in source, imported draft and actual delivery GLB, including their finlets. Other mesh-motion metrics remain unchanged within 0.00001. The thirteen other previous delivery binaries remain unchanged. All 16 incremental Chromium/WebKit desktop/mobile scenarios pass. Four earlier affected upgrades remain queued for correction.
+
+Sardine follows an explicit Sardinella gibbosa visual reference, with one midbody dorsal fin, compact caudal outline, small paired fins and faster tail-driven swimming. Three visual iterations corrected the pointed snout, rectangular pectoral outline and excessive edge ripple. It is one live fish, not a claimed school/dried-goods variant. All source/export/delivery contact and playback gates pass.

@@ -188,7 +188,19 @@ def fins(mat):
    B.mesh('Caudal_PeduncleKeel_'+str(side),vertices,faces,mat,uv)
  for side in [-1,1]:
   gx=C['gill_x'];rootx=gx+.10;h,l,w=profile(rootx);root_z=C.get('pectoral_root_z',-.05)
-  R.fan('Pectoral_'+str(side),lambda u:(rootx,flank(rootx,root_z+(u-.5)*.07,side,.001) if C.get('pectoral_surface_anchor') else side*w*.92,root_z+(u-.5)*.07),lambda u:(rootx+C.get('pectoral_length',.46)+.05*math.sin(PI*u),side*(w+.13*math.sin(PI*u)),root_z-C.get('pectoral_droop',.09)+(u-.5)*C.get('pectoral_height',.24)),mat,n=82,m=24,flutter=.018,role='pectoral',phase=side)
+  def pectoral_edge(u):
+   if C.get('pectoral_shape')=='tapered':
+    spread=B.interp([(0,0),(.22,1),(.64,.55),(1,0)],u)
+    return(rootx+C.get('pectoral_length',.46)*spread,side*(w+.08*math.sin(PI*u)),root_z-C.get('pectoral_droop',.09)*spread+(u-.5)*C.get('pectoral_height',.24)*(1-.5*spread))
+   return(rootx+C.get('pectoral_length',.46)+.05*math.sin(PI*u),side*(w+.13*math.sin(PI*u)),root_z-C.get('pectoral_droop',.09)+(u-.5)*C.get('pectoral_height',.24))
+  pectoral=R.fan('Pectoral_'+str(side),lambda u:(rootx,flank(rootx,root_z+(u-.5)*.07,side,.001) if C.get('pectoral_surface_anchor') else side*w*.92,root_z+(u-.5)*.07),pectoral_edge,mat,n=82,m=24,flutter=.018,role='pectoral',phase=side)
+  if C.get('pectoral_shape')=='tapered':
+   # The preserved review utility used a fixed world-space edge ripple, which
+   # overwhelms small membranes. Retain only a slight natural irregularity.
+   uv=pectoral.data.uv_layers.active;coordinates={loop.vertex_index:uv.data[loop.index].uv.copy() for loop in pectoral.data.loops}
+   for vertex in pectoral.data.vertices:
+    u,t=coordinates[vertex.index];noise=.008*math.sin(u*113+side)+.005*math.sin(u*197+1.7)+.004*math.sin(u*61+.4);vertex.co.z-=noise*t**5*.85
+   pectoral.data.update()
   if C.get('pelvic',True):
    pelvic=R.fan('Pelvic_'+str(side),lambda u:pelvic_base(profile,side,u,C.get('pelvic_root_x',-.44)),lambda u:(C.get('pelvic_start_x',-.21)+(C.get('pelvic_end_x',.06)-C.get('pelvic_start_x',-.21))*u,side*(.13+.07*math.sin(PI*u)),profile(C.get('pelvic_root_x',-.44))[1]-C.get('pelvic_length',.19)*math.sin(PI*u)),mat,n=66,m=20,flutter=.012,role='anal',phase=side*.4)
    pelvic['pelvic_surface_anchor']='Ventrolateral body surface with a small embedded root curve'

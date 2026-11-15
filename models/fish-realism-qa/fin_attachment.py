@@ -1,5 +1,5 @@
 """Place paired pelvic bases on the skin and verify actual posed surface contact."""
-import math
+import bpy,math
 from mathutils import Vector
 from mathutils.bvhtree import BVHTree
 
@@ -21,9 +21,9 @@ def repair_pelvic_roots(scene,profile):
 def check_surface_contact(scene):
  meshes=[o for o in scene.objects if o.type=='MESH'];body=next((o for o in meshes if o.name.startswith(('Skin_AnatomicalProfile','Ribbon_ContinuousBody'))),None)
  assert body is not None,'Need the real body surface for fin contact QA'
- dg=__import__('bpy').context.evaluated_depsgraph_get();evaluated=body.evaluated_get(dg);tree=BVHTree.FromPolygons([evaluated.matrix_world@v.co for v in evaluated.data.vertices],[list(p.vertices) for p in evaluated.data.polygons]);results={}
+ dg=bpy.context.evaluated_depsgraph_get();evaluated=body.evaluated_get(dg);tree=BVHTree.FromPolygons([evaluated.matrix_world@v.co for v in evaluated.data.vertices],[list(p.vertices) for p in evaluated.data.polygons]);results={}
  for obj in meshes:
-  if not obj.name.startswith(('Dorsal_','Anal_','Pelvic_','Pectoral_','Caudal_')) or not obj.data.uv_layers.active:continue
+  if not obj.name.startswith(('Dorsal_','Anal_','Pelvic_','Pectoral_','Caudal_','Finlet_')) or not obj.data.uv_layers.active:continue
   uv=obj.data.uv_layers.active;indices={loop.vertex_index for loop in obj.data.loops if abs(uv.data[loop.index].uv.y)<1e-7};assert indices,obj.name;evaluated=obj.evaluated_get(dg);signed=[]
   for i in indices:
    p=evaluated.matrix_world@evaluated.data.vertices[i].co;point,normal,_,distance=tree.find_nearest(p);signed.append((p-point).dot(normal))
