@@ -1,0 +1,23 @@
+{
+  "id": "chibi-mall-guide-v5",
+  "name": "Chibi Mall Guide v5",
+  "category": "Characters",
+  "status": "development-preview",
+  "author": "Blender 3D Gallery / agent-assisted image-to-3D reconstruction and rigging",
+  "creation_method": "Reconstructed from an AI-generated reference sheet with Microsoft TRELLIS (image-to-3D), then retouched, rigged with 20 bones and given four animation clips in Blender. Not hand-modelled.",
+  "paths": {
+    "glb": "final/guide.glb",
+    "source": "final/guide.blend",
+    "preview": "previews/front.png"
+  },
+  "display": {
+    "previewRotationY": 0,
+    "previewCameraDirection": [0.15, 0.1, 1]
+  },
+  "accuracy_notes": "Development preview. The face is a fixed baked expression, the texture is soft, and the skinned arms and sign are crude; an independent review rated it a placeholder, not the finished character. The gallery viewer shows it at rest only; the clips (idle, walk_calm, walk_bouncy, point) were checked in Three.js but are not played by the gallery.",
+  "attribution": [
+    {"credit": "Reconstruction with Microsoft TRELLIS (MIT-licensed code); training-data and weight terms were not reviewed."},
+    {"credit": "Input reference sheet is an AI-generated concept image with uncleared rights; it is not embedded in the GLB."}
+  ],
+  "rights": "Rights not cleared; public redistribution terms have not been specified. Listed for viewing only, not downloadable."
+}
