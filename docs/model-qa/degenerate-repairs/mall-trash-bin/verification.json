@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "base_main_commit": "1e94207991e702451ce931d3f76d30925a903453",
+  "id": "mall-trash-bin",
+  "zero_area_triangles": {
+    "before": 470,
+    "after": 0
+  },
+  "source_precision_residues_removed": 2,
+  "triangles": 7616,
+  "bytes": 338232,
+  "source_sha256": "c645517238821a01c5775e74947f39bb27e41cbe163a24241ce4c3b7eb4b48e9",
+  "glb_sha256": "b80fd5f21960f3a9d1b556c276c24d2ce265a4f0ca636bea2fc2aa2ce3c29b89",
+  "editable_parts": 32,
+  "source_reopened_and_clean": true,
+  "delivered_glb_reimported_and_clean": true,
+  "original_vertex_attributes_and_materials_preserved": true,
+  "remaining_surface_normal_differences": 0,
+  "focused_tests_passed": 7,
+  "full_tests_passed": 675,
+  "tool_guard_tests": "PASS including rejection of meaningful tiny-face deletion and flipped normals",
+  "generator_cleanup_regression": "PASS; raw authored data preserved; idempotent cleanup",
+  "build": "PASS; original large-chunk advisory remains",
+  "built_asset_sha256": "PASS",
+  "browser_cases_passed": 15,
+  "browser": "156.0.8078.4",
+  "browser_scope": "Four fixture discovery/viewer checks at 1440,768,390; actual consumed GLB hashes, orbit/zoom/reset/reload/close/disposal",
+  "visual_inspection": "Desktop initial Viewer capture: open annular rim, jade vessel, walnut slats and front labels present",
+  "limits": [
+    "No physical-device/FPS or deployment verification",
+    "Other fourteen affected assets remain pending"
+  ]
+}

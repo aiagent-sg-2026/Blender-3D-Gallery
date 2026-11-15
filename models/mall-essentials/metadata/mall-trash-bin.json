@@ -17,7 +17,7 @@
   "status": "validated",
   "created": "2026-11-12",
   "author": "Yap Wei Jun project / agent-assisted procedural modeling",
-  "blender_version": "4.0.2",
+  "blender_version": "5.1.2",
   "creation_method": "Original deterministic Blender Python geometry and Principled BSDF materials. Blender bundled Bfont labels are converted to mesh in the GLB. No external textures or models.",
   "generator": "generate.py",
   "paths": {
@@ -41,9 +41,10 @@
   "rights": "Original asset; reuse in the owner's projects is authorized. Public redistribution terms have not been specified.",
   "metrics": {
     "glb_bytes": 338232,
-    "triangles": 8088,
+    "triangles": 7616,
     "vertices": 11883,
     "primitives": 5,
+    "zero_area_triangles": 0,
     "materials": 5,
     "animations": 0,
     "dimensions": [
@@ -63,11 +64,23 @@
         0.3100000023841858
       ]
     },
-    "sha256": "11067f6be8acec9d6651afe6f542f9cadc6bcae1e51e6516524190dcc8d0b48c"
+    "sha256": "b80fd5f21960f3a9d1b556c276c24d2ce265a4f0ca636bea2fc2aa2ce3c29b89"
   },
   "validation": {
     "errors": 0,
     "warnings": 0,
     "validator": "2.0.0-dev.3.10"
+  },
+  "source_sha256": "c645517238821a01c5775e74947f39bb27e41cbe163a24241ce4c3b7eb4b48e9",
+  "topology_repair": {
+    "date": "2026-11-15",
+    "previous_source_blender_version": "4.0.2",
+    "reference_commit": "1e94207991e702451ce931d3f76d30925a903453",
+    "reference_glb_sha256": "11067f6be8acec9d6651afe6f542f9cadc6bcae1e51e6516524190dcc8d0b48c",
+    "source_method": "Non-destructive triangulate, 1e-7 m weld and exact zero-face deletion on six reviewed parts; authored data retained.",
+    "delivery_method": "Reconstructed original GLB indices; original vertex, normal and material payloads retained.",
+    "zero_area_triangles_removed": 470,
+    "reviewed_source_precision_residues_removed": 2,
+    "evidence": "docs/model-qa/degenerate-repairs/mall-trash-bin/README.md"
   }
 }

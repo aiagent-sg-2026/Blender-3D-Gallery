@@ -1,3 +1,5 @@
+Current follow-up: [2026-11-15 trash-bin geometry repair](../../docs/model-qa/degenerate-repairs/mall-trash-bin/README.md). Earlier checks below remain historical.
+
 # Mall Essentials verification
 
 Status: four assets implemented and validated; local browser diagnostics have explicit failures. This is a reviewable gallery addition, **not** a fully green browser suite or deployment.

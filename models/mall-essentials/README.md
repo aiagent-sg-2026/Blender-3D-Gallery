@@ -6,25 +6,28 @@ Four original Blender-created fixtures matching the gallery's jade, champagne-br
 | --- | --- | ---: | ---: |
 | Directory kiosk | 0.960 / 2.050 / 0.680 | 5,360 | 178,068 |
 | Advertising lightbox | 1.160 / 2.310 / 0.580 | 7,168 | 235,832 |
-| Trash bin | 0.620 / 0.960 / 0.646 | 8,088 | 338,232 |
+| Trash bin | 0.620 / 0.960 / 0.646 | 7,616 | 338,232 |
 | Display shelf | 1.520 / 1.960 / 0.580 | 5,712 | 172,420 |
 
-Measurements and SHA-256 hashes come from actual exported geometry in [reports/assets.json](reports/assets.json). All four total 924,552 bytes and 26,328 triangles. Each export has 5–6 material primitives, no external textures, cameras, lights, animation, or compression-decoder dependency.
+Measurements and SHA-256 hashes come from actual exported geometry in [reports/assets.json](reports/assets.json). All four total 924,552 bytes and 25,856 triangles. Each export has 5–6 material primitives, no external textures, cameras, lights, animation, or compression-decoder dependency.
 
 - **Directory kiosk:** illustrative shop blocks, route and location marker, portrait housing, touch-category shapes and rear service cover. The map is fictional and the screen is decorative, not functional software.
 - **Advertising lightbox:** a softly emissive poster panel with original geometric campaign artwork and editable labels. Rear panel and fasteners are modeled. Geometry represents a lightbox, not a physical lighting specification.
 - **Trash bin:** real open annular aperture, recessed liner and base, walnut slats and separate front badge. It is a decorative concept, not a waste-system or manufacturing specification.
 - **Display shelf:** four empty usable shelves, slim supports, brass nosings, diagonal rear braces and a labeled header.
 
+The [2026-11-15 trash-bin repair](../../docs/model-qa/degenerate-repairs/mall-trash-bin/README.md) updates its source to Blender 5.1.2 with a non-destructive cleanup modifier on six reviewed parts. Its GLB retains the original vertex attributes and shading, removing 470 exact-zero triangles and two reviewed nanometre-height source residues through index reconstruction. Dimensions, materials and previews are unchanged. The other three fixtures are still pending their separate geometry repairs.
+
 ## Reproduce
 
-Authored with Blender **4.0.2**, official Ubuntu 24.04 ARM64 packages, CPU Cycles. The deterministic Python generator uses Blender and its bundled Bfont only. Font outlines become mesh in GLB; labels and component objects remain editable in the source. There are no externally downloaded models, images or fonts.
+Originally authored with Blender **4.0.2**, official Ubuntu 24.04 ARM64 packages, CPU Cycles. The deterministic Python generator uses Blender and its bundled Bfont only. Font outlines become mesh in GLB; labels and component objects remain editable in the source. There are no externally downloaded models, images or fonts.
 
 From the repository root:
 
 ```sh
 blender --background --threads 4 --python-exit-code 1 --python models/mall-essentials/generate.py
 blender --background --python-exit-code 1 --python models/mall-essentials/inspect_sources.py
+blender --background --factory-startup --disable-autoexec --python-exit-code 23 --python models/mall-essentials/test_degenerate_cleanup.py
 # Authoring-only Python dependency: Pillow; Blender's exporter also needs NumPy.
 python3 models/mall-essentials/prepare_previews.py
 npm ci

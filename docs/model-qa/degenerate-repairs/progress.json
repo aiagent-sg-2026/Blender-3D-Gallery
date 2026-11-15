@@ -1,0 +1,84 @@
+{
+  "objective": "Repair the remaining mall degenerate geometry one asset at a time and push each verified repair to main.",
+  "status": "active",
+  "baseline_assets_with_zero_area_triangles": 15,
+  "assets": [
+    {
+      "id": "mall-trash-bin",
+      "before_zero_area_triangles": 470,
+      "state": "repaired",
+      "after_zero_area_triangles": 0,
+      "evidence": "mall-trash-bin/README.md"
+    },
+    {
+      "id": "mall-directory-kiosk",
+      "before_zero_area_triangles": 394,
+      "state": "pending"
+    },
+    {
+      "id": "mall-advertising-lightbox",
+      "before_zero_area_triangles": 200,
+      "state": "pending"
+    },
+    {
+      "id": "mall-waste-sorting-station",
+      "before_zero_area_triangles": 199,
+      "state": "pending"
+    },
+    {
+      "id": "mall-service-desk",
+      "before_zero_area_triangles": 172,
+      "state": "pending"
+    },
+    {
+      "id": "mall-display-shelf",
+      "before_zero_area_triangles": 164,
+      "state": "pending"
+    },
+    {
+      "id": "mall-floor-direction-sign",
+      "before_zero_area_triangles": 139,
+      "state": "pending"
+    },
+    {
+      "id": "mall-event-booth",
+      "before_zero_area_triangles": 118,
+      "state": "pending"
+    },
+    {
+      "id": "gjh-areca-planter",
+      "before_zero_area_triangles": 100,
+      "state": "pending"
+    },
+    {
+      "id": "gjh-m057-premium-wall-shelf-corner",
+      "before_zero_area_triangles": 60,
+      "state": "pending"
+    },
+    {
+      "id": "escalator",
+      "before_zero_area_triangles": 11,
+      "state": "pending"
+    },
+    {
+      "id": "atm-kiosk",
+      "before_zero_area_triangles": 4,
+      "state": "pending"
+    },
+    {
+      "id": "passenger-lift",
+      "before_zero_area_triangles": 4,
+      "state": "pending"
+    },
+    {
+      "id": "mall-food-court-tray-station",
+      "before_zero_area_triangles": 2,
+      "state": "pending"
+    },
+    {
+      "id": "mall-wayfinding-ceiling-sign",
+      "before_zero_area_triangles": 2,
+      "state": "pending"
+    }
+  ]
+}
