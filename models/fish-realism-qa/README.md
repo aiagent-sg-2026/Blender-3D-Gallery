@@ -56,3 +56,7 @@ Run Blender in background mode with `--python-exit-code 1 --python models/fish-r
 ## Lionfish radial fins and anatomy counts
 
 `lion_fins.py` builds separately countable dorsal spines and radiating pectoral rays with deeply notched membranes. Their actual skin-embedded bases retain body weights and distal stabilizer motion. Optional `required_mesh_counts` profiles check retained geometry in source/import/promotion/delivery; `required_moving_prefixes` applies motion gates only to designated fins, avoiding invented independent strokes for near-static head appendages. Photo-informed dermal detail remains simplified.
+
+## Shared reef-fish pigment
+
+`butterfly_pattern.py` maps curved bands in anatomical coordinates across the body and median fins; region-specific fin maps preserve roots and appearance at fin junctions. The source retains packed full-resolution maps. The release exporter may use an explicit per-entry fin-image limit on temporary image copies; source hashes and actual final-delivery playback remain separately checked.

@@ -18,6 +18,22 @@ for o in [o for o in selected if o.type=='MESH' and not o.data.shape_keys]:
  if ngons:bmesh.ops.triangulate(bm,faces=ngons)
  bm.to_mesh(o.data);bm.free();o.data.update()
  bpy.ops.object.select_all(action='DESELECT');o.select_set(True);bpy.context.view_layer.objects.active=o;bpy.ops.object.transform_apply(location=True,rotation=True,scale=True)
+limit=item.get('delivery_fin_texture_limit')
+if limit:
+ assert isinstance(limit,int) and 128<=limit<=1024
+ resized={}
+ for obj in selected:
+  if obj.type!='MESH':continue
+  for material in obj.data.materials:
+   if not material or not material.use_nodes:continue
+   for node in material.node_tree.nodes:
+    if node.type!='TEX_IMAGE' or not node.image:continue
+    image=node.image
+    if image in resized:node.image=resized[image];continue
+    if not image.name.startswith(tuple(slug+part for part in ['_fin_','_spiny_','_tail_'])) or max(image.size)<=limit:continue
+    copy=image.copy();copy.name=image.name+'_Delivery'+str(limit);ratio=limit/max(image.size);copy.scale(max(1,round(image.size[0]*ratio)),max(1,round(image.size[1]*ratio)));copy.pack();resized[image]=copy;node.image=copy
+ assert resized,'Requested fin texture limit must resize actual fin images'
+ print('DOWNSAMPLED_FIN_IMAGES',len(resized),limit,flush=True)
 bpy.ops.object.select_all(action='DESELECT')
 for o in selected:o.select_set(True)
 output=out/'model.glb'
