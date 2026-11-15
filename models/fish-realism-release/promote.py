@@ -33,6 +33,9 @@ for slug in args.slugs:
   pelvic=[value for name,value in motion[label]['motion_by_mesh'].items() if name.startswith('Pelvic_Filament_')]
   assert len(pelvic)==(2 if profile.get('pelvic_filaments') else 0) and all(value['motion']>.001 for value in pelvic),('Pelvic sensory-ray motion',slug,label)
   names=motion[label]['motion_by_mesh']
+  for prefix,expected in profile.get('required_mesh_counts',{}).items():
+   found=[value for name,value in names.items() if name.startswith(prefix)];assert len(found)==expected,('Required anatomical meshes',slug,label,prefix,len(found),expected)
+   if prefix in profile.get('required_moving_prefixes',[]):assert all(value['motion']>.001 for value in found),('Fin anatomy must move',slug,label,prefix)
   if profile.get('body_only'):
    assert motion[label]['body_only_wave']['tapered_tail_motion']>.005 and not any(name.startswith(('Caudal_','Dorsal_','Anal_','Pectoral_','Pelvic_')) for name in names),('Body-only anatomy and tail motion',slug,label)
   if profile.get('pelvic') is False:assert not any(name.startswith('Pelvic_') and not name.startswith('Pelvic_Filament_') for name in names),('Invented pelvic fins',slug,label)

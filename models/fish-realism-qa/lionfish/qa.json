@@ -1,0 +1,52 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "Long spines were clipped by the preview framing, body bands were too soft and the spine array too regular."
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "revise",
+      "changes": [
+        "Fit the full fin silhouette and deepen irregular maroon bars; vary spine height/lean and use banded ray pigment rather than stretched body maps."
+      ]
+    },
+    {
+      "iteration": 3,
+      "result": "revise",
+      "changes": [
+        "Viewed the current full-body, head and moving-frame renders after revisions; actual source, imported GLB and desktop/mobile playback pass."
+      ]
+    },
+    {
+      "iteration": 4,
+      "result": "pass",
+      "changes": [
+        "Reduce redundant tube and web tessellation while retaining all anatomical meshes, re-view actual full-body/head renders and repeat current source/GLB/browser QA."
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "7b68089f7b55c6e6931558d5a388482379932782fdd08ba662ffbfcb3f478c1e",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: thirteen separated long dorsal spines, fourteen pectoral rays per flank, two radial membranes and supraorbital cirri",
+    "surface": "pass: irregular cream/maroon bars and spotted membranes are original generated pigment",
+    "head": "pass: broad striped head, embedded dark pupil/iris and restrained chin appendages",
+    "fins": "pass: variable spine height/lean, incised radial pectoral membranes and rounded spotted caudal",
+    "surface_contact": "pass: source and real imported GLB retain five-phase skin contact at unchanged tolerances",
+    "motion": "pass: spine and pectoral ray/web motion survives round-trip; static-head cirri require count presence rather than invented independent swimming strokes",
+    "browser": "pass: exact draft GLB swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed artwork, not a scan or calibrated specimen.",
+    "Small dermal appendages and microscopic dentition are simplified. The hovering loop is artist-tuned, not measured hydrodynamics."
+  ]
+}

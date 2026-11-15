@@ -60,6 +60,9 @@ def observe(label):
   assert all(v['motion']>.001 for v in filaments),(label,'Sensory rays must move with their fins')
  pelvic_rays=[v for name,v in roles.items() if name.startswith('Pelvic_Filament_')];assert len(pelvic_rays)==(2 if config.get('pelvic_filaments') else 0),(label,'Pelvic sensory-ray count')
  assert all(v['motion']>.001 for v in pelvic_rays),(label,'Pelvic sensory rays must move')
+ for prefix,expected in config.get('required_mesh_counts',{}).items():
+  found=[value for name,value in roles.items() if name.startswith(prefix)];assert len(found)==expected,(label,prefix,'Required anatomical meshes',len(found),expected)
+  if prefix in config.get('required_moving_prefixes',[]):assert all(value['motion']>.001 for value in found),(label,prefix,'Fin anatomy must move')
  expected_barbels=2*len(config.get('barbels',[]));barbels=[o for o in meshes if o.name.startswith('Barbel_')];assert len(barbels)==expected_barbels,(label,'Mouth-barbel count',len(barbels),expected_barbels)
  assert any(o.type=='ARMATURE' for o in s.objects)
  return {'body_only_wave':body_only_wave,'pelvic_sensory_rays':len(pelvic_rays),'barbel_meshes':len(barbels),'surface_contact':contacts,'ribbon_wave':ribbon_wave,'fin_roots_checked':anchors,'meshes':len(meshes),'vertices':sum(len(o.data.vertices) for o in meshes),'motion_by_mesh':roles,'frames':frames,'packed_images':all(i.packed_file for i in bpy.data.images if i.source=='FILE')}

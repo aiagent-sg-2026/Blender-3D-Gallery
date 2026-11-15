@@ -35,6 +35,7 @@ def skin_maps():
   px=(u[y0:y1,x0:x1]-cx)*nx;py=(v[y0:y1,x0:x1]-cy)*ny;xx=px*math.cos(ang)+py*math.sin(ang);yy=-px*math.sin(ang)+py*math.cos(ang);d=np.sqrt((xx/rx)**2+(yy/ry)**2)
   mask=(1-R.smoothstep(.91,1,d))*R.smoothstep(.16,.27,u[y0:y1,x0:x1]);rim=np.exp(-((d-.94)/.045)**2)*R.smoothstep(-.45,.40,xx/rx);local=base[y0:y1,x0:x1]+pigment*C.get('scale_pigment_gain',.007 if C['pattern']=='fine_scales' else .027)+rim[...,None]*C.get('scale_rim_gain',.012 if C['pattern']=='fine_scales' else .015 if C['pattern']=='grouper' else .052)+(micro[y0:y1,x0:x1]-.5)[...,None]*.022+(fine[y0:y1,x0:x1]-.5)[...,None]*.012
   dark_rim=np.exp(-((d-.94)/C.get('scale_dark_rim_width',.045))**2)*R.smoothstep(-.45,.40,xx/rx)
+  if C.get('scale_rim_tint'):local+=dark_rim[...,None]*np.array(C['scale_rim_tint'])*(.65+.35*pigment)
   local-=dark_rim[...,None]*C.get('scale_dark_rim_gain',0)*(.8+.2*pigment)
   color[y0:y1,x0:x1]=color[y0:y1,x0:x1]*(1-mask[...,None])+local*mask[...,None];raised=(.00012 if C['pattern']=='fine_scales' else .00045)*rim+.00015*np.maximum(0,1-d*d)
   height[y0:y1,x0:x1]=height[y0:y1,x0:x1]*(1-mask)+raised*mask;rough[y0:y1,x0:x1]=rough[y0:y1,x0:x1]*(1-mask)+(C.get('surface_roughness',.51)+.06*pigment+rim*.02)*mask
@@ -77,6 +78,13 @@ def skin_maps():
    height+=scute*.00035
    if C['markings']=='trevally':color*=1-scute[...,None]*.11
    else:color+=scute[...,None]*.018
+ if C.get('markings')=='parrotfish':
+  bars=np.exp(-(np.sin(PI*((xs+.9)*1.9+.1*np.sin(world_z*10)))/.65)**2)*R.smoothstep(-.93,-.65,xs)*flank_mask;color*=1-bars[...,None]*.13
+  lines=np.zeros_like(xs)
+  for level in [-.15,-.02,.16]:lines=np.maximum(lines,np.exp(-((world_z-level-.045*np.sin((xs+1.6)*6))/.011)**2))
+  lines*=R.smoothstep(-1.66,-1.55,xs)*(1-R.smoothstep(-.96,-.80,xs))*flank_mask;color=color*(1-lines[...,None]*.84)+np.array([.08,.47,.49])*lines[...,None]*.84
+ if C.get('markings')=='lionfish':
+  phase=(xs+1.65)*3.0+.20*np.sin(world_z*5)+.07*np.sin(world_z*17+xs*8)+(R.noise(u,v,35,26,1030)-.5)*.09;bars=1-R.smoothstep(.45,.70,np.abs(np.sin(PI*phase)));narrow=np.exp(-(np.sin(PI*(phase*3+.25))/.24)**2);a=np.maximum(bars*.95,narrow*.64);color=color*(1-a[...,None])+np.array([.19,.035,.023])*a[...,None]
  if C.get('markings')=='clownfish':
   from clown_pattern import paint_bands
   color=paint_bands(color,xs,world_z,R.smoothstep)
@@ -154,6 +162,10 @@ def fin_mat(tail=False,spiny=False):
   for sign in [-1,1]:
    child=center+sign*.014*np.maximum(0,(v-fork)/(1-fork));branches=np.maximum(branches,np.exp(-((u-child)/(width*.7))**2)*R.smoothstep(fork,fork+.04,v))
  lines=np.maximum(rays,branches*.70);color=np.zeros((n,n,3))+np.array(C['tail_color'] if tail else C['fin_color']);color+=(coarse-.5)[...,None]*.08; color+=lines[...,None]*np.array([.075,.045,.030]);alpha=np.clip(.74+coarse*.10+lines*.15-.15*R.smoothstep(.80,1,v),.20,.97)
+ if C.get('fin_markings')=='lionfish':
+  dots=np.exp(-(np.sin(PI*(u*14+.12*np.sin(v*8)))/.28)**2-(np.sin(PI*(v*7+.15*np.sin(u*15)))/.33)**2);color=color*(1-dots[...,None]*.83);alpha=np.maximum(.40+lines*.32,dots*.9)
+ if spiny and C.get('lion_radial_fins'):
+  band=1-R.smoothstep(.35,.64,np.abs(np.sin(PI*(v*8+.07*np.sin(u*7)))));color=color*(1-band[...,None]*.92)+np.array([.20,.035,.024])*band[...,None]*.92;alpha=np.ones_like(v)
  if C.get('fin_markings')=='marble':
   patch=R.smoothstep(.41,.64,coarse)*.65;color=color*(1-patch[...,None])+np.array([.10,.08,.045])*patch[...,None]
  if C.get('fin_markings')=='tilapia':
@@ -173,6 +185,8 @@ def fin_mat(tail=False,spiny=False):
  if spiny and C.get('markings')=='clownfish':
   from clown_pattern import paint_bands
   xs=C['dorsal_start']+(C['dorsal_split']-C['dorsal_start'])*u;world_z=np.interp(xs,C['profile_x'],C['top'])+C['spine_height']*v;color=paint_bands(color,xs,world_z,R.smoothstep);color*=1-C.get('fin_dark_margin',.72)*R.smoothstep(.93,.99,v)[...,None]
+ if C.get('fin_margin_color'):
+  margin=R.smoothstep(.87,.97,v)*C.get('fin_margin_gain',.85);color=color*(1-margin[...,None])+np.array(C['fin_margin_color'])*margin[...,None]
  if C['pattern']=='grouper':
   for k in range(210):
    px,py=rng.random(2);radius=rng.uniform(.007,.018);d=np.sqrt((u-px)**2+(v-py)**2);a=(1-R.smoothstep(radius*.7,radius*1.1,d))*.55;color=color*(1-a[...,None])+np.array([.065,.045,.022])*a[...,None]
@@ -326,6 +340,12 @@ from filaments import build_pelvic_filaments,bind_pelvic_filaments
 build_pelvic_filaments(B,C,profile)
 from barbels import build_barbels
 build_barbels(B,C,profile)
+if C.get('dental_plates'):
+ from beak import build_beak
+ build_beak(B,C)
+if C.get('lion_radial_fins'):
+ from lion_fins import build_lion_fins
+ build_lion_fins(B,R.fan,C,profile,flank,fm,fin_mat(spiny=True))
 print('BIND_SWIM',slug,flush=True);rig=B.add_rig('bass')
 bind_pelvic_filaments(rig)
 from fanning import retarget_fanning
@@ -349,7 +369,7 @@ for o in B.ROOT.children_recursive:
  for mod in o.modifiers:
   if mod.type=='ARMATURE':mod.use_deform_preserve_volume=True
 # Studio utility uses a neutral environment; no habitat hides anatomical detail.
-spec=importlib.util.spec_from_file_location('studio',HERE.parent/'fish-realism-review'/'revision-03'/'create_review.py');P=importlib.util.module_from_spec(spec);spec.loader.exec_module(P);s=P.studio(OUT);s.camera.data.ortho_scale=4.6;s.camera.location=(-.15,-9,.85);P.aim(s.camera,(.14,0,.02));s.frame_set(13);s.frame_end=end_frame
+spec=importlib.util.spec_from_file_location('studio',HERE.parent/'fish-realism-review'/'revision-03'/'create_review.py');P=importlib.util.module_from_spec(spec);spec.loader.exec_module(P);s=P.studio(OUT);s.camera.data.ortho_scale=C.get('preview_scale',4.6);s.camera.location=(-.15,-9,.85);P.aim(s.camera,(.14,0,C.get('preview_z',.02)));s.frame_set(13);s.frame_end=end_frame
 # EEVEE provides an early owning-runtime sample close to the realtime viewer.
 if '--quick-preview' in sys.argv:s.render.engine='BLENDER_EEVEE'
 bpy.ops.wm.save_as_mainfile(filepath=str(OUT/(slug+'.blend')));bpy.ops.render.render(write_still=True)

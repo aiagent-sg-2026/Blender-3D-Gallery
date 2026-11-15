@@ -52,3 +52,7 @@ Run Blender in background mode with `--python-exit-code 1 --python models/fish-r
 ## Local fin fanning
 
 `fanning.py` supports profile-selected cyclic fin controls with optional local anatomical hinges. Dorsal and anal controls use longitudinal fin-root axes; pectoral controls use vertical surface-root axes. This keeps small fin strokes local instead of swinging them around distant body axes. Source and imported GLB motion and contact checks remain required. These artist-tuned cycles are not measured hydrodynamics.
+
+## Lionfish radial fins and anatomy counts
+
+`lion_fins.py` builds separately countable dorsal spines and radiating pectoral rays with deeply notched membranes. Their actual skin-embedded bases retain body weights and distal stabilizer motion. Optional `required_mesh_counts` profiles check retained geometry in source/import/promotion/delivery; `required_moving_prefixes` applies motion gates only to designated fins, avoiding invented independent strokes for near-static head appendages. Photo-informed dermal detail remains simplified.
