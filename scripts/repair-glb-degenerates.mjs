@@ -26,15 +26,13 @@ assert.equal(json.scenes.length, 1);
 const gltf = await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength), '');
 gltf.scene.updateMatrixWorld(true);
 let zeroRemoved = 0, residueRemoved = 0;
-const usedAccessors = new Set();
+const usedAccessors = new Map();
 gltf.scene.traverse(object => {
   if (!object.isMesh) return;
   const association = gltf.parser.associations.get(object);
   const primitive = json.meshes[association.meshes].primitives[association.primitives];
   assert.equal(primitive.mode ?? 4, 4);
   assert.ok(primitive.indices !== undefined);
-  assert.ok(!usedAccessors.has(primitive.indices), 'Shared index accessors need a separate review');
-  usedAccessors.add(primitive.indices);
   const accessor = json.accessors[primitive.indices], view = json.bufferViews[accessor.bufferView];
   assert.equal(view.buffer, 0); assert.ok(!accessor.sparse && !view.byteStride);
   const width = { 5121: 1, 5123: 2, 5125: 4 }[accessor.componentType]; assert.ok(width);
@@ -51,6 +49,11 @@ gltf.scene.traverse(object => {
     retained.push(...ids);
   }
   assert.ok(retained.length);
+  if (usedAccessors.has(primitive.indices)) {
+    assert.deepEqual(retained, usedAccessors.get(primitive.indices), 'Shared index accessor requires identical retained indices for every use');
+    return;
+  }
+  usedAccessors.set(primitive.indices, retained);
   const offset = (view.byteOffset ?? 0) + (accessor.byteOffset ?? 0);
   for (let i = 0; i < retained.length; i++) binary.writeUIntLE(retained[i], offset + i * width, width);
   accessor.count = retained.length;

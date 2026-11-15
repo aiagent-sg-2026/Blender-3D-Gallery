@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "id": "mall-waste-sorting-station",
+  "base_main_commit": "ea9ed61873cd88c02436bf590c06c3e55df9d78a",
+  "before_zero_area_triangles": 199,
+  "after_zero_area_triangles": 0,
+  "source_precision_residues_removed": 9,
+  "triangles": 11300,
+  "bytes": 479436,
+  "glb_sha256": "6205b1aa13eb852db768fe19b9e28b6f8d6001ed73671a4afc63c77017d7ce6d",
+  "source_sha256": "8369f1794fb14f4804b9967a2a00c10ff3275f3c24d0ac4cb3713422f90d0c0b",
+  "editable_parts": 59,
+  "module_collections": 7,
+  "source_membership_and_authored_data_preserved_and_reopened": true,
+  "native_and_delivered_reimport_zero_triangles": 0,
+  "vertex_and_normal_delta": 0,
+  "shared_index_review": "Two shared accessors with identical empty deletion masks; incompatible masks refused without output by a separate fixture.",
+  "source_edit": "PASS; same-toolchain source control vs saved PLASTIC edit; RecycleLid only; six siblings byte-identical in geometry/material hash; original source/GLB unchanged; all three GLBs zero degenerates.",
+  "full_tests_passed": 680,
+  "fresh_native_generator_and_actual_glb": "PASS; complete fresh source/studio configuration saved; preview render skipped; seven collections, 59 editable parts; actual generated GLB clean; cleanup idempotent",
+  "raycast_and_replacement_regressions": "PASS; three genuine apertures and independent lid/body replacements",
+  "build": "PASS; existing chunk advisory",
+  "built_asset_sha256": "PASS",
+  "browser_cases_passed": 3,
+  "browser_scope": "1440/768/390; actual consumed GLB SHA, render, orbit, zoom, reset, no horizontal overflow or errors",
+  "visual_inspection": "Desktop actual Viewer capture inspected: three open lids, colored modules, bottle/leaf/bag pictograms and labels intact",
+  "remaining_primary_mall_assets_with_zero_triangles": [
+    {
+      "id": "mall-event-booth",
+      "zero_area_triangles": 118
+    },
+    {
+      "id": "gjh-m057-premium-wall-shelf-corner",
+      "zero_area_triangles": 60
+    },
+    {
+      "id": "gjh-areca-planter",
+      "zero_area_triangles": 100
+    },
+    {
+      "id": "escalator",
+      "zero_area_triangles": 11
+    },
+    {
+      "id": "mall-display-shelf",
+      "zero_area_triangles": 164
+    },
+    {
+      "id": "mall-food-court-tray-station",
+      "zero_area_triangles": 2
+    },
+    {
+      "id": "mall-wayfinding-ceiling-sign",
+      "zero_area_triangles": 2
+    },
+    {
+      "id": "atm-kiosk",
+      "zero_area_triangles": 4
+    },
+    {
+      "id": "mall-floor-direction-sign",
+      "zero_area_triangles": 139
+    },
+    {
+      "id": "mall-service-desk",
+      "zero_area_triangles": 172
+    },
+    {
+      "id": "passenger-lift",
+      "zero_area_triangles": 4
+    }
+  ],
+  "limits": [
+    "No physical-device/FPS or deployment claim",
+    "Eleven other affected assets remain pending"
+  ],
+  "upstream_integration": {
+    "tested_main_commit": "e238bf51bb3e4ea4cec5302f1163a634f6815acd",
+    "full_tests_passed": 680,
+    "build": "PASS",
+    "runtime_dependency_or_target_asset_changes_in_upstream": false,
+    "repair_asset_hashes_unchanged": true
+  }
+}

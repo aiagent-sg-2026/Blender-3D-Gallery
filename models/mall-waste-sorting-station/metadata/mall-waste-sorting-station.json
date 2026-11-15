@@ -18,7 +18,7 @@
   "status": "validated",
   "created": "2026-11-12",
   "author": "Yap Wei Jun project / agent-assisted procedural modeling",
-  "blender_version": "4.0.2",
+  "blender_version": "5.1.2",
   "creation_method": "Original deterministic Blender Python geometry and Principled BSDF materials. Blender bundled Bfont is retained as editable source text and exported as mesh geometry. No external models or textures.",
   "generator": "generate.py",
   "paths": {
@@ -56,9 +56,10 @@
   "rights": "Original asset; reuse in the owner's projects is authorized. Public redistribution terms have not been specified.",
   "metrics": {
     "glb_bytes": 479436,
-    "triangles": 11508,
+    "triangles": 11300,
     "vertices": 16835,
     "primitives": 22,
+    "zero_area_triangles": 0,
     "materials": 7,
     "animations": 0,
     "dimensions": [
@@ -78,11 +79,23 @@
         0.3149999976158142
       ]
     },
-    "sha256": "52a62e5ace403100b7757ac0c4b464272f5d46c79903c69d5d2db75a83a2e4ae"
+    "sha256": "6205b1aa13eb852db768fe19b9e28b6f8d6001ed73671a4afc63c77017d7ce6d"
   },
   "validation": {
     "errors": 0,
     "warnings": 0,
     "validator": "2.0.0-dev.3.10"
+  },
+  "source_sha256": "8369f1794fb14f4804b9967a2a00c10ff3275f3c24d0ac4cb3713422f90d0c0b",
+  "topology_repair": {
+    "date": "2026-11-15",
+    "previous_source_blender_version": "4.0.2",
+    "reference_commit": "ea9ed61873cd88c02436bf590c06c3e55df9d78a",
+    "reference_glb_sha256": "52a62e5ace403100b7757ac0c4b464272f5d46c79903c69d5d2db75a83a2e4ae",
+    "source_method": "Non-destructive cleanup on seven reviewed meshes and all editable text; 59 authored parts and seven collection modules retained.",
+    "delivery_method": "Original GLB indices reconstructed after reviewing shared-accessor masks; original vertex, normal and material payloads retained.",
+    "zero_area_triangles_removed": 199,
+    "reviewed_source_precision_residues_removed": 9,
+    "evidence": "docs/model-qa/degenerate-repairs/mall-waste-sorting-station/README.md"
   }
 }

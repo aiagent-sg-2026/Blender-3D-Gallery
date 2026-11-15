@@ -93,7 +93,11 @@ def source_fingerprint():
                      for l in material.node_tree.links]
         materials.append((material.name, list(material.diffuse_color), nodes, links))
     scene = bpy.context.scene
-    data = {'objects': objects, 'materials': materials, 'cursor': list(scene.cursor.location),
+    collections = [{'name': c.name, 'objects': sorted(o.name for o in c.objects),
+                    'children': sorted(child.name for child in c.children),
+                    'properties': {k: serial(v) for k, v in c.items()}}
+                   for c in sorted(bpy.data.collections, key=lambda value: value.name)]
+    data = {'objects': objects, 'materials': materials, 'collections': collections, 'cursor': list(scene.cursor.location),
             'active': bpy.context.view_layer.objects.active.name if bpy.context.view_layer.objects.active else None,
             'units': [scene.unit_settings.system, scene.unit_settings.scale_length],
             'camera': scene.camera.name if scene.camera else None, 'frame': scene.frame_current}

@@ -5,6 +5,14 @@ import os from 'node:os';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 
+function pack(json, bin) {
+  const text = Buffer.from(JSON.stringify(json)), padded = Buffer.alloc(Math.ceil(text.length/4)*4,32);text.copy(padded);
+  const output = Buffer.alloc(28+padded.length+bin.length);
+  output.writeUInt32LE(0x46546c67,0);output.writeUInt32LE(2,4);output.writeUInt32LE(output.length,8);
+  output.writeUInt32LE(padded.length,12);output.writeUInt32LE(0x4e4f534a,16);padded.copy(output,20);
+  output.writeUInt32LE(bin.length,20+padded.length);output.writeUInt32LE(0x004e4942,24+padded.length);bin.copy(output,28+padded.length);
+  return output;
+}
 function fixture(indices, reverseNormals = false, xShift = 0) {
   const points = [0,0,0, 1,0,0, 0,1,0, 0,0,0, 0,0,0, 1,0,0,
     .1,.1,0, .11,.1,0, .105,.10000001,0, .2,.2,0, .20001,.2,0, .2,.20001,0];
@@ -24,12 +32,7 @@ function fixture(indices, reverseNormals = false, xShift = 0) {
     accessors:[{bufferView:0,componentType:5126,count:12,type:'VEC3',min,max},
       {bufferView:1,componentType:5126,count:12,type:'VEC3'},
       {bufferView:2,componentType:5123,count:indices.length,type:'SCALAR',min:[Math.min(...indices)],max:[Math.max(...indices)]}]};
-  const text = Buffer.from(JSON.stringify(json)), padded = Buffer.alloc(Math.ceil(text.length/4)*4,32);text.copy(padded);
-  const output = Buffer.alloc(28+padded.length+bin.length);
-  output.writeUInt32LE(0x46546c67,0);output.writeUInt32LE(2,4);output.writeUInt32LE(output.length,8);
-  output.writeUInt32LE(padded.length,12);output.writeUInt32LE(0x4e4f534a,16);padded.copy(output,20);
-  output.writeUInt32LE(bin.length,20+padded.length);output.writeUInt32LE(0x004e4942,24+padded.length);bin.copy(output,28+padded.length);
-  return output;
+  return pack(json,bin);
 }
 const run = (script, args) => spawnSync(process.execPath, [script, ...args], {encoding:'utf8'});
 test('GLB cleanup retains real tiny geometry and normals while removing reviewed collapse', async context => {
@@ -72,4 +75,58 @@ test('GLB cleanup retains real tiny geometry and normals while removing reviewed
   const displacement = run('scripts/check-degenerate-repair.mjs',[diagonalBefore,diagonalAfter,path.join(dir,'too-far.json')]);
   assert.notEqual(displacement.status,0,'A shared quantization cell must not excuse Euclidean displacement above 1 micrometre');
   assert.match(displacement.stderr,/displacement exceeds tolerance|surfaces added/);
+});
+
+test('shared index accessors are repaired once when every instance has the same cleanup mask', async context => {
+  const dir = await fs.mkdtemp(path.join(os.tmpdir(),'glb-shared-index-test-'));
+  context.after(() => fs.rm(dir,{recursive:true,force:true}));
+  const duplicate = bytes => {
+    const json = JSON.parse(bytes.toString('utf8',20,20+bytes.readUInt32LE(12)));
+    json.nodes.push({name:'FixtureCopy',mesh:0}); json.scenes[0].nodes.push(1);
+    return pack(json,bytes.subarray(28+bytes.readUInt32LE(12)));
+  };
+  const before = path.join(dir,'before.glb'), clean = path.join(dir,'clean.glb'), comparison = path.join(dir,'comparison.json');
+  await fs.writeFile(before,duplicate(fixture(Array.from({length:12},(_,i)=>i))));
+  await fs.writeFile(clean,duplicate(fixture([0,1,2,9,10,11])));
+  const compare = run('scripts/check-degenerate-repair.mjs',[before,clean,comparison]);assert.equal(compare.status,0,compare.stderr);
+  const repaired = path.join(dir,'repaired.glb'), evidence = path.join(dir,'repair.json');
+  const repair = run('scripts/repair-glb-degenerates.mjs',[before,repaired,evidence,comparison]);
+  assert.equal(repair.status,0,repair.stderr);
+  const receipt = JSON.parse(await fs.readFile(evidence));
+  assert.equal(receipt.zeroRemoved,2); assert.equal(receipt.residueRemoved,2);
+  const actual = run('scripts/check-degenerate-repair.mjs',[before,repaired,path.join(dir,'actual.json')]);
+  assert.equal(actual.status,0,actual.stderr);
+});
+
+test('shared indices with different per-mesh cleanup masks are rejected without writing output', async context => {
+  const dir = await fs.mkdtemp(path.join(os.tmpdir(),'glb-shared-mask-test-'));
+  context.after(() => fs.rm(dir,{recursive:true,force:true}));
+  const all = Array.from({length:12},(_,i)=>i);
+  const shared = clean => {
+    const bytes=fixture(clean?[0,1,2,6,7,8,9,10,11]:all);
+    const json=JSON.parse(bytes.toString('utf8',20,20+bytes.readUInt32LE(12)));
+    let bin=Buffer.from(bytes.subarray(28+bytes.readUInt32LE(12)));
+    const positions=Buffer.from(bin.subarray(0,144));
+    // Indices 3/4/5 collapse in the first mesh but form a real face here.
+    positions.writeFloatLE(.1,4*3*4);positions.writeFloatLE(.1,(5*3+1)*4);
+    const view=json.bufferViews.length;json.bufferViews.push({buffer:0,byteOffset:bin.length,byteLength:144,target:34962});
+    const accessor=json.accessors.length;json.accessors.push({bufferView:view,componentType:5126,count:12,type:'VEC3',min:[0,0,0],max:[1,1,0]});
+    bin=Buffer.concat([bin,positions]);
+    const primitive={attributes:{POSITION:accessor,NORMAL:1},indices:2,material:0};
+    if(clean){
+      const indexData=Buffer.from(new Uint16Array(all).buffer),indexView=json.bufferViews.length;
+      json.bufferViews.push({buffer:0,byteOffset:bin.length,byteLength:indexData.length,target:34963});
+      primitive.indices=json.accessors.length;json.accessors.push({bufferView:indexView,componentType:5123,count:12,type:'SCALAR',min:[0],max:[11]});
+      bin=Buffer.concat([bin,indexData]);
+    }
+    json.meshes.push({primitives:[primitive]});json.nodes.push({name:'DifferentMesh',mesh:1});json.scenes[0].nodes.push(1);
+    json.buffers[0].byteLength=bin.length;return pack(json,bin);
+  };
+  const before=path.join(dir,'before.glb'),clean=path.join(dir,'clean.glb'),comparison=path.join(dir,'comparison.json');
+  await fs.writeFile(before,shared(false));await fs.writeFile(clean,shared(true));
+  const check=run('scripts/check-degenerate-repair.mjs',[before,clean,comparison]);assert.equal(check.status,0,check.stderr);
+  const output=path.join(dir,'must-not-exist.glb');
+  const repair=run('scripts/repair-glb-degenerates.mjs',[before,output,path.join(dir,'receipt.json'),comparison]);
+  assert.notEqual(repair.status,0);assert.match(repair.stderr,/Shared index accessor requires identical retained indices/);
+  await assert.rejects(fs.access(output),{code:'ENOENT'});
 });

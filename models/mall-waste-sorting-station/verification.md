@@ -1,3 +1,5 @@
+Current follow-up: [2026-11-15 degenerate geometry repair](../../docs/model-qa/degenerate-repairs/mall-waste-sorting-station/README.md). Original checks below are historical; current source-edit validation uses a same-toolchain unchanged-source control and verifies the shipped source/GLB hashes separately.
+
 # Waste sorting station verification
 
 Date: 2026-11-12. Base: `f0017a7` (fresh main, includes merged floor-direction-sign PR #10). No UI, viewer architecture, prior assets or existing tests changed. Catalog adds one collection immediately before `mall-essentials`; the existing single `mall-trash-bin` remains intact.

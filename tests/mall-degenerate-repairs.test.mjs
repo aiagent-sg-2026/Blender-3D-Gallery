@@ -7,7 +7,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { loadCatalog } from '../scripts/catalog.mjs';
 
 // Add each asset only with its verified source/export repair.
-const repairedIds = ['mall-trash-bin', 'mall-directory-kiosk', 'mall-advertising-lightbox'];
+const repairedIds = ['mall-trash-bin', 'mall-directory-kiosk', 'mall-advertising-lightbox', 'mall-waste-sorting-station'];
 const catalog = loadCatalog();
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 for (const id of repairedIds) {
