@@ -1,0 +1,54 @@
+{
+  "id": "new-year-countdown-clock",
+  "name": "New Year Countdown Clock",
+  "summary": "A year-independent near-midnight clock with festive star decorations.",
+  "description": "Original stylized 11:55 clock display with gold bezel, separate hands, markers and stars.",
+  "category": "Festivals & Local Life",
+  "tags": [
+    "new year",
+    "countdown",
+    "clock",
+    "festive",
+    "singapore",
+    "malaysia"
+  ],
+  "status": "draft",
+  "created": "2026-11-15",
+  "author": "Blender 3D Gallery / agent-assisted procedural modeling",
+  "blender_version": "5.1.2",
+  "creation_method": "Original procedural Blender Python geometry and materials; numerals use Blender's bundled Bfont converted to editable meshes. No external models or imagery.",
+  "generator": "generate.py",
+  "paths": {
+    "glb": "exports/new-year-countdown-clock.glb",
+    "source": "sources/new-year-countdown-clock.blend",
+    "preview": "previews/hero.webp",
+    "render": "previews/hero.png"
+  },
+  "display": {
+    "previewRotationY": 0,
+    "units": "metres",
+    "up_axis": "Blender +Z / glTF +Y",
+    "front_axis": "Blender -Y / glTF +Z",
+    "origin": "ground-plane centre"
+  },
+  "rights": "Original asset; public redistribution terms have not been specified.",
+  "attribution": [
+    {
+      "credit": "Original geometry and materials created for Blender 3D Gallery; numerals use Blender bundled Bfont converted to mesh."
+    }
+  ],
+  "accuracy_notes": "Stylized static clock face set to 11:55. It is not a live countdown, timepiece or animated clock.",
+  "material_notes": "Clock face, hands, numerals, markers and stars remain separate in the Blender source; the GLB batches meshes by material.",
+  "budgets": {
+    "max_glb_bytes": 5242880,
+    "max_triangles": 100000
+  },
+  "metrics": {
+    "glb_bytes": 845684,
+    "triangles": 16004,
+    "meshes": 5,
+    "materials": 5,
+    "validator_errors": 0,
+    "validator_warnings": 0
+  }
+}
