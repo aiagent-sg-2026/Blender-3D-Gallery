@@ -224,3 +224,22 @@ presence in the catalog is not a completed quality assessment.
 
 This gate is a reusable checklist for **each** item; consult its individual
 evidence before marking it complete. No deployment, commit or push is implied by this planning entry.
+
+---
+
+# Chibi Character Standard and Mall Guide v5 — 2026-11-15
+
+**Status:** Planning and documentation only. No v5 Blender model, GLB or catalog entry exists; nothing below is implemented or verified. See the [chibi standard](docs/chibi-character-standard.md) and the [v5 plan](docs/chibi-mall-guide-v5/plan.md).
+
+- [x] Concept turnaround B generated and locked as the v5 reference (AI concept image; rights not cleared, internal reference only).
+- [x] Owner decisions recorded: 40,000 triangle / 20 draw-call budget; mandatory rig (20 bones or fewer) with three shape keys driving brows and cheeks; fresh-agent review then owner check; animations idle+blink, two walk styles, wave, hold-and-point, put-sign-down; swappable sign icons; boy look kept.
+- [ ] Open: low-detail variant for distant NPCs; dialog avatar framing; owner approval of the standard.
+- [ ] S1 reference pack fixed and provenance note kept.
+- [ ] S2 proportion blockout (about 2.5 heads, eyes in the lower third).
+- [ ] S3 parts, head with brow/eye/mouth/cheek edge loops, thick-lock hair fitted under the cap.
+- [ ] S4 materials and sign-icon atlas within budget.
+- [ ] S5 armature, shape keys and animation clips.
+- [ ] S6 GLB export and QA gate run 001 (G1 to G6) with a fresh-agent review.
+- [ ] S7 catalog registration only after the gate passes.
+
+Chibi Visitor v4 predates the standard (no rig, 113,428 triangles) and is in REWORK status; see its README.
