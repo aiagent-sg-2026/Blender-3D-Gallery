@@ -257,7 +257,7 @@
       "name": "Triangle Rack",
       "collection": "billiards",
       "kind": "catalog-model",
-      "status": "READY_TO_PUSH",
+      "status": "PUSHED",
       "export_paths": [
         "models/eight-ball-billiards/exports/triangle_rack.glb"
       ],
@@ -315,23 +315,23 @@
         "performance": "PASS rack3 calls/132 triangles, assembly148/98100 sampled software WebGL; physical phone/FPS excluded.",
         "regression": "PASS645 current unit,19 targeted, full Game46 including561 catalog entries and experience31; no filters/page errors.",
         "mobile": "N/A explicit owner exclusion",
-        "github_main": "Initial cb0c0c60 reached main. Capacity follow-up candidate is not committed/published yet.",
-        "github_actions": "Initial own run43653564436 cancelled before deployment due RACK-004; current candidate NOT_RUN.",
-        "live": "NOT_RUN for final candidate."
+        "github_main": "PASS exact51dfcfe3 main and current4ee6a3b8 GLB blob/8136 bytes verified after normal fast-forward push.",
+        "github_actions": "PASS required Actions43655719588 completed successfully on51dfcfe3 including deploy; initial cancelled attempt not counted.",
+        "live": "PASS independent production bb5ffe12 payload fetch and fresh desktop/tablet controls, zero page/HTTP errors."
       },
-      "commit_sha": null,
-      "remote_verified": false,
+      "commit_sha": "51dfcfe36477df12895287b0db3aee3d5a29a43f",
+      "remote_verified": true,
       "remaining_risks": [
-        "Final follow-up main push, required Actions and actual production acceptance pending.",
-        "Physical mobile excluded; no hardware FPS claim."
+        "Physical mobile excluded by owner; no hardware FPS claim."
       ],
       "report": "docs/model-qa/MODEL-0004/README.md",
-      "required_remote_checks_passed": false,
-      "actions_run_id": 43653564436,
+      "required_remote_checks_passed": true,
+      "actions_run_id": 43655719588,
       "previous_unaccepted_commits": [
         "cb0c0c608b8c4dd9e5c908f45f15b6d4146a821e"
       ],
-      "initial_release_evidence": "docs/model-qa/MODEL-0004/initial-release-evidence.json"
+      "initial_release_evidence": "docs/model-qa/MODEL-0004/initial-release-evidence.json",
+      "release_evidence": "docs/model-qa/MODEL-0004/release-evidence.json"
     },
     {
       "qa_id": "MODEL-0005",
@@ -339,14 +339,14 @@
       "name": "Chalk",
       "collection": "billiards",
       "kind": "catalog-model",
-      "status": "PENDING",
+      "status": "READY_TO_PUSH",
       "export_paths": [
         "models/eight-ball-billiards/exports/chalk.glb"
       ],
       "source_candidates": [
         "models/eight-ball-billiards/scene.blend"
       ],
-      "source_mapping": "candidate; inspect asset root in Blender before acceptance",
+      "source_mapping": "Verified ASSET_Chalk with two mesh objects/216 triangles,25\u00d725\u00d727mm.",
       "generator_candidates": [
         "models/eight-ball-billiards/generate.py"
       ],
@@ -357,14 +357,39 @@
       "root": "ASSET_Chalk",
       "runtime_route": "?model=chalk",
       "export_sha256": "218bb66d9eb918e0d6131800e5f3446e5820e5c74a2ba4c56840faccdbe25915",
-      "defects": [],
-      "repairs": [],
-      "qa_results": {},
+      "defects": [
+        {
+          "id": "CHALK-001",
+          "severity": "P2",
+          "description": "Chalk floats1.5mm above the actual flat wooden rail; numeric source/import and real triangle ray check reproduce the gap."
+        }
+      ],
+      "repairs": [
+        "Lower only root1.6mm to seat base with0.1mm overlap. All mesh data/materials/normals/UVs and21 standalone files preserved."
+      ],
+      "qa_results": {
+        "geometry": "PASS source/assembly re-import; closed positive volumes, no degeneracy/winding/loose/nonfinite UV; true triangle support and core/sleeve dimensions.",
+        "uv_textures": "PASS finite preserved UV; texture atlas/stretch N/A untextured asset.",
+        "pbr": "PASS unchanged opaque blue dielectric materials roughness0.6/0.95, metallic0.",
+        "visual": "PASS seven source/import views and two contact views each; independent acceptance89/100.",
+        "glb": "PASS both exports0 errors/0 warnings; chalk16768 bytes unchanged; assembly3518732 bytes.",
+        "animation": "N/A static unrigged model.",
+        "runtime": "PASS chalk and assembly desktop/tablet exact payload/hash and controls with no page/HTTP errors.",
+        "performance": "PASS chalk2 calls/216 triangles and assembly148/98100 in sampled software WebGL; no hardware FPS claim.",
+        "regression": "PASS648 unit/22 targeted, exact guarded migration replay, full Game46 including561 catalog entries and experience31 with no filters/errors.",
+        "mobile": "N/A explicit owner exclusion",
+        "github_main": "NOT_RUN",
+        "github_actions": "NOT_RUN",
+        "live": "NOT_RUN"
+      },
       "commit_sha": null,
       "remote_verified": false,
       "remaining_risks": [
-        "Not yet inspected under this QA campaign."
-      ]
+        "Main push, required Actions and actual changed-assembly plus standalone production acceptance pending.",
+        "Physical mobile excluded; no hardware FPS claim."
+      ],
+      "report": "docs/model-qa/MODEL-0005/README.md",
+      "required_remote_checks_passed": false
     },
     {
       "qa_id": "MODEL-0006",

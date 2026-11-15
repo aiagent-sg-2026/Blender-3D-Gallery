@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 def render_previews(root_name, output):
-    assert root_name in {'ASSET_Cue_01', 'ASSET_Cue_02', 'ASSET_Triangle_Rack'}
+    assert root_name in {'ASSET_Cue_01', 'ASSET_Cue_02', 'ASSET_Triangle_Rack', 'ASSET_Chalk'}
     scene = bpy.context.scene
     out = Path(output)
     out.mkdir(exist_ok=True)

@@ -258,6 +258,7 @@ rack.location.z -= .0126
 chalk=root('ASSET_Chalk',(-.83,.636,.88))
 cube('Chalk | paper sleeve',(-.83,.636,.866),(.025,.025,.022),chalkpaper,chalk,.001)
 cube('Chalk | blue top',(-.83,.636,.879),(.023,.023,.006),chalkblue,chalk,.001)
+chalk.location.z -= .0016  # Seat the base on the rail with 0.1 mm overlap.
 assets=[table,*balls,*cues,rack,chalk]
 for ob in bpy.data.objects: export_uv(ob)
 

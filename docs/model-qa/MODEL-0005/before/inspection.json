@@ -1,0 +1,140 @@
+{
+  "blender_version": "5.1.2",
+  "source": "/private/tmp/blender-model-qa-release/models/eight-ball-billiards/scene.blend",
+  "input_sha256": "907f2038d32c0ded1906d89d7f14bc6b2364cde22002c337d8187c5d3431c287",
+  "imported_glb": null,
+  "root": "ASSET_Chalk",
+  "root_location": [
+    -0.8299999833106995,
+    0.6359999775886536,
+    0.8799999952316284
+  ],
+  "unit_system": "METRIC",
+  "bounds_min": [
+    -0.8424999713897705,
+    0.6234999895095825,
+    0.8550000190734863
+  ],
+  "bounds_max": [
+    -0.8174999952316284,
+    0.6484999656677246,
+    0.8820000290870667
+  ],
+  "dimensions": [
+    0.02499997615814209,
+    0.02499997615814209,
+    0.027000010013580322
+  ],
+  "mesh_count": 2,
+  "triangles": 216,
+  "armatures": [],
+  "animation_data": [],
+  "materials": [
+    {
+      "name": "Chalk wrapper | dark blue",
+      "use_nodes": true,
+      "base_color": [
+        0.02500000037252903,
+        0.04500000178813934,
+        0.12999999523162842,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.6000000238418579,
+      "alpha": 1.0,
+      "image_nodes": []
+    },
+    {
+      "name": "Chalk | blue",
+      "use_nodes": true,
+      "base_color": [
+        0.03500000014901161,
+        0.11999999731779099,
+        0.3499999940395355,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.949999988079071,
+      "alpha": 1.0,
+      "image_nodes": []
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Chalk | blue top",
+      "vertices": 56,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 3.115262242895699e-06,
+      "connected_components": 1,
+      "bounds_min": [
+        -0.8414999842643738,
+        0.6244999766349792,
+        0.8759999871253967
+      ],
+      "bounds_max": [
+        -0.8184999823570251,
+        0.6474999785423279,
+        0.8820000290870667
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Chalk | blue"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Chalk | paper sleeve",
+      "vertices": 56,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 1.3667831303351946e-05,
+      "connected_components": 1,
+      "bounds_min": [
+        -0.8424999713897705,
+        0.6234999895095825,
+        0.8550000190734863
+      ],
+      "bounds_max": [
+        -0.8174999952316284,
+        0.6484999656677246,
+        0.8769999742507935
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Chalk wrapper | dark blue"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    }
+  ]
+}

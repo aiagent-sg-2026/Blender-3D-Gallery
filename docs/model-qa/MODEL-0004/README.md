@@ -1,10 +1,11 @@
 # MODEL-0004: Triangle Rack
 
-Status: READY_TO_PUSH (capacity follow-up). All four confirmed defects are
-repaired. Current645 unit/19 targeted, render, export, Viewer, full Game46 and
-experience31 checks pass. Initial commit cb0c0c60 is not accepted:
-its own Actions43653564436 was cancelled before deployment after RACK-004 was
-found. No final Actions or production PASS is claimed. MODEL-0005 has not started.
+Status: PUSHED / accepted. Final `51dfcfe36477df12895287b0db3aee3d5a29a43f` is
+verified on main. Required Actions43655719588 completed successfully, including
+Pages deployment. Independent production fetch matchesbb5ffe12; fresh desktop
+and tablet Viewer controls pass. All four defects are closed. The initial
+cb0c0c60 attempt remains historical and unaccepted. MODEL-0005 had not started
+at this acceptance.
 
 This model was selected only after MODEL-0003 passed main, required Actions and
 exact production payload/runtime acceptance. Source:
@@ -107,8 +108,11 @@ comparisons used native images. The initial52-image manifest remains historical.
 current repaired inputs use observation mode. The historical initial intermediate
 candidate predates analytic radial normals, as recorded in its settings.
 
-Current regression is complete. Scoped diff/main synchronization, follow-up
-commit/push, required Actions and actual production acceptance must pass before
-MODEL-0005 starts. Initial own-run cancellation is not success. Post-push closure
+Current regression, scoped diff/main synchronization, follow-up commit/push,
+exact main/blob verification, required Actions and actual production acceptance
+are complete before selecting MODEL-0005. Initial own-run cancellation is not success. Post-push closure
 metadata will travel with the next validated campaign commit instead of creating
 a metadata-only push that supersedes required checks. Campaign remains incomplete.
+
+Current publication evidence: `release-evidence.json`. Initial cancelled attempt
+is retained separately in `initial-release-evidence.json`.

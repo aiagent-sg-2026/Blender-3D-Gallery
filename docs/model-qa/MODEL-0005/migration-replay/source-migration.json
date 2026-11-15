@@ -1,0 +1,1357 @@
+{
+  "defect": "CHALK-001",
+  "input_sha256": "907f2038d32c0ded1906d89d7f14bc6b2364cde22002c337d8187c5d3431c287",
+  "output_sha256": "08fbca4ebfb25e976a1a99cebe34f56d59edf08827f6cfbe973db2418833419b",
+  "root_lowered_m": 0.0016,
+  "expected_rail_overlap_m": 0.0001,
+  "changed_transform_objects": [
+    "ASSET_Chalk",
+    "Chalk | blue top",
+    "Chalk | paper sleeve"
+  ],
+  "all_geometry_uv_material_assignments_and_normals_unchanged": true,
+  "unrelated_transforms_unchanged": true,
+  "normalized_standalone_semantically_identical": true,
+  "standalone_reexport_sha256": "5654c9d3c1c247ff42978086d27f51044229cc11c6e4154603f8961d717e1fde",
+  "standalone_preserved_sha256": "218bb66d9eb918e0d6131800e5f3446e5820e5c74a2ba4c56840faccdbe25915",
+  "before": {
+    "ASSET_Ball_00": {
+      "transform": "9ea9eae391ad2d40a4c98aca20a0f76c7f724d8e4faa83b4a7bb1394069b696a",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Ball_01": {
+      "transform": "f1293ade76eb2eaca7d386eaba2f1f36588c48f3b9fd813980da36587559a819",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Ball_02": {
+      "transform": "4db37086c5dacb335a00a2a3d79e0e876bdd69417560aa16e7a18c8c8faffbbe",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Ball_03": {
+      "transform": "f5138a1b48b68980eb47bbfc86fbdafc692e4bd339a08d6bc029e5bab6c758e5",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Ball_04": {
+      "transform": "92f822f50eb7a619778e0985cfd8d155ff706abaa5902e6fab86b49f47d51dba",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Ball_05": {
+      "transform": "59006357c26113d3c025a5b3641bb2111615872b3d4d2f66900126272ebf147f",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Ball_06": {
+      "transform": "8dd28d367182601e865938a4fa9d55709bc68212616068bdc06b755c96f7e4cb",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Ball_07": {
+      "transform": "5b8d9ef5e425a579f809b960414f3ded09b69c539a386f16498abf201366f932",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Ball_08": {
+      "transform": "2554bddf8e21be5423678e85bdc65790513aa596b3da6c8023dc57ea7113fa8c",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Ball_09": {
+      "transform": "0d5de3b5fcbf91847c54af1128520e8fa370124613861a7e3ceaa7ba9d74e77d",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Ball_10": {
+      "transform": "47fcd2973889d5f7bd270b219239907a4a7fe259da5715513f50b164f7731b91",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Ball_11": {
+      "transform": "a675a4401c7251e2e7f6af2165837b777c2306816ba532d0b0c22b3bf701f82a",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Ball_12": {
+      "transform": "82e5dff312ed4d69b4bf9ae16828f0fc2df6f012193add2d16169db84da3895c",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Ball_13": {
+      "transform": "d5052f71e937762c38c4fd5123adc43dc8f1c437f1ea216fe58d5c230e9dacf4",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Ball_14": {
+      "transform": "1317586cde4cf6eba2dd1cd8e5b2afe0a76d7aa666098bcadf6b7d8b6500beb9",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Ball_15": {
+      "transform": "2fcf5f83a2ff82f19a95ef13e0ae0bc73f74fb5a3a428e5627c62c1e3172a10e",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Chalk": {
+      "transform": "fdf89e43a2a881d3d7e27c2402e1705829c3fc257cdb59a21edafbee3e5f5ac1",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Cue_01": {
+      "transform": "180f9cc5e1034cc80b58d15840bf72a8a3dd7d921edbb7d17ace61e7c3a71402",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Cue_02": {
+      "transform": "419546f5becf060a98c65288f6722a6bdd550e1e802583d0ef8c52747349cf67",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Table": {
+      "transform": "119b9519094a95eb2fd3a9fda2235079519f52705ce563dcac619cb9f1133a12",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Triangle_Rack": {
+      "transform": "b3e91ca36a67957e2748cd06f14cd1dba61a9935c9f55740189f698ae63cc50f",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "Ball 00 | resin": {
+      "transform": "6a3f2f92ae6ff61ea600fab924239af6b6a4e20919e886045a57d61259980144",
+      "geometry": "5228fa5be297e2dfc330330a9cb88207cfd3aa477d69c33bcffe6923e2e9201b"
+    },
+    "Ball 01 | number medallion": {
+      "transform": "f2aeb568cd4044cc5d3460d5a0738f62c6296673ffc6ba9d93de6babd047e055",
+      "geometry": "09b384b485869c5abc3de7a1c21492c3aec055265f00108bd582f1698e3bee74"
+    },
+    "Ball 01 | number medallion | opposite": {
+      "transform": "f2aeb568cd4044cc5d3460d5a0738f62c6296673ffc6ba9d93de6babd047e055",
+      "geometry": "ada02bd590d389093f5ac14a417f65b187351dd820f9fc425075f9971a49d3bc"
+    },
+    "Ball 01 | numeral 1": {
+      "transform": "f2aeb568cd4044cc5d3460d5a0738f62c6296673ffc6ba9d93de6babd047e055",
+      "geometry": "8fdc54dc1362521ea77a4980ca4934dcd8ca8d5b33edcade1f5f677a16569b2e"
+    },
+    "Ball 01 | numeral 1 | opposite": {
+      "transform": "f2aeb568cd4044cc5d3460d5a0738f62c6296673ffc6ba9d93de6babd047e055",
+      "geometry": "d604e335f069e34ece2bf981e5b6bcf02b57126f30c109cb37684f096ed679f4"
+    },
+    "Ball 01 | resin": {
+      "transform": "f2aeb568cd4044cc5d3460d5a0738f62c6296673ffc6ba9d93de6babd047e055",
+      "geometry": "7920cf22e9230622ee7479c3ac87bcdaa467dfc8c20581dd45b6319b46f53e74"
+    },
+    "Ball 02 | number medallion": {
+      "transform": "50c17d24ecac700f94f8f1ea87394a6c06ce0f6463f01ea5ac0eee8390b85ac7",
+      "geometry": "09b384b485869c5abc3de7a1c21492c3aec055265f00108bd582f1698e3bee74"
+    },
+    "Ball 02 | number medallion | opposite": {
+      "transform": "50c17d24ecac700f94f8f1ea87394a6c06ce0f6463f01ea5ac0eee8390b85ac7",
+      "geometry": "ada02bd590d389093f5ac14a417f65b187351dd820f9fc425075f9971a49d3bc"
+    },
+    "Ball 02 | numeral 2": {
+      "transform": "50c17d24ecac700f94f8f1ea87394a6c06ce0f6463f01ea5ac0eee8390b85ac7",
+      "geometry": "69711a1a62cc3997ed32878d01de289712747cc8fe55c32d9608a9712d2867d1"
+    },
+    "Ball 02 | numeral 2 | opposite": {
+      "transform": "50c17d24ecac700f94f8f1ea87394a6c06ce0f6463f01ea5ac0eee8390b85ac7",
+      "geometry": "d133733df78707284e5579ac4565bdd4a538b11b53a8b6f6d9dbc762e2c05a8b"
+    },
+    "Ball 02 | resin": {
+      "transform": "50c17d24ecac700f94f8f1ea87394a6c06ce0f6463f01ea5ac0eee8390b85ac7",
+      "geometry": "b1130402244888ab8448581287f00552ae0487d08105bbe5213f10a1a37d3a7f"
+    },
+    "Ball 03 | number medallion": {
+      "transform": "e5c2459ac22174d5c3f970c7be9c59ae859e88de7e57806b32e8d22337288a68",
+      "geometry": "09b384b485869c5abc3de7a1c21492c3aec055265f00108bd582f1698e3bee74"
+    },
+    "Ball 03 | number medallion | opposite": {
+      "transform": "e5c2459ac22174d5c3f970c7be9c59ae859e88de7e57806b32e8d22337288a68",
+      "geometry": "ada02bd590d389093f5ac14a417f65b187351dd820f9fc425075f9971a49d3bc"
+    },
+    "Ball 03 | numeral 3": {
+      "transform": "e5c2459ac22174d5c3f970c7be9c59ae859e88de7e57806b32e8d22337288a68",
+      "geometry": "98d62ed209a73bc5a1ce1094e63ca77c453d2862c8d57828297fd40eeeab9683"
+    },
+    "Ball 03 | numeral 3 | opposite": {
+      "transform": "e5c2459ac22174d5c3f970c7be9c59ae859e88de7e57806b32e8d22337288a68",
+      "geometry": "718883ac9789903f324b808c1020fe3479be979c91f023b13120e0ff0b77577a"
+    },
+    "Ball 03 | resin": {
+      "transform": "e5c2459ac22174d5c3f970c7be9c59ae859e88de7e57806b32e8d22337288a68",
+      "geometry": "37000f6ed752f76425b091110110698f06b3ab917e2244d7e920dfc8ba5fc71d"
+    },
+    "Ball 04 | number medallion": {
+      "transform": "88fa654caef3111256b7ddec81edddcf1e0a7aa42cce75d0c6bde2dbe6f20ade",
+      "geometry": "09b384b485869c5abc3de7a1c21492c3aec055265f00108bd582f1698e3bee74"
+    },
+    "Ball 04 | number medallion | opposite": {
+      "transform": "88fa654caef3111256b7ddec81edddcf1e0a7aa42cce75d0c6bde2dbe6f20ade",
+      "geometry": "ada02bd590d389093f5ac14a417f65b187351dd820f9fc425075f9971a49d3bc"
+    },
+    "Ball 04 | numeral 4": {
+      "transform": "88fa654caef3111256b7ddec81edddcf1e0a7aa42cce75d0c6bde2dbe6f20ade",
+      "geometry": "0a2009c5cafde243ca6a50432a9601a7a8bb7cc5176adc9dca32ead82db2805d"
+    },
+    "Ball 04 | numeral 4 | opposite": {
+      "transform": "88fa654caef3111256b7ddec81edddcf1e0a7aa42cce75d0c6bde2dbe6f20ade",
+      "geometry": "6dfc34b25659b81b6e0425e2b6f4d907c8b11d3f1d7d6c0a4909f9d7ccb5d635"
+    },
+    "Ball 04 | resin": {
+      "transform": "88fa654caef3111256b7ddec81edddcf1e0a7aa42cce75d0c6bde2dbe6f20ade",
+      "geometry": "aa95b2137e5e46df594aecb85899029068d59e6906178b2e7a939ca7b01526da"
+    },
+    "Ball 05 | number medallion": {
+      "transform": "c2f6318e865d1d51e71194766aa12f8737adc8229f09cd9a9f949b61bfe2479f",
+      "geometry": "09b384b485869c5abc3de7a1c21492c3aec055265f00108bd582f1698e3bee74"
+    },
+    "Ball 05 | number medallion | opposite": {
+      "transform": "c2f6318e865d1d51e71194766aa12f8737adc8229f09cd9a9f949b61bfe2479f",
+      "geometry": "ada02bd590d389093f5ac14a417f65b187351dd820f9fc425075f9971a49d3bc"
+    },
+    "Ball 05 | numeral 5": {
+      "transform": "c2f6318e865d1d51e71194766aa12f8737adc8229f09cd9a9f949b61bfe2479f",
+      "geometry": "72047875832574db8958b69eff6ba21ff060867e7bbde9f0f8f1b490b7014b71"
+    },
+    "Ball 05 | numeral 5 | opposite": {
+      "transform": "c2f6318e865d1d51e71194766aa12f8737adc8229f09cd9a9f949b61bfe2479f",
+      "geometry": "89bda3c3de5a7b2512ecd0ae4189e3df0e62991d193983ea7ce3a8faadd37b8f"
+    },
+    "Ball 05 | resin": {
+      "transform": "c2f6318e865d1d51e71194766aa12f8737adc8229f09cd9a9f949b61bfe2479f",
+      "geometry": "fcf7880dec305dbc38460d8c290d97a5424d43800e55b9d64ef1e1cc96ec1789"
+    },
+    "Ball 06 | number medallion": {
+      "transform": "e7a3d5bf7943c48fa1a0ed03bd8f3e8c8e5b2d5d8c696fe16877a7d183e9cae7",
+      "geometry": "09b384b485869c5abc3de7a1c21492c3aec055265f00108bd582f1698e3bee74"
+    },
+    "Ball 06 | number medallion | opposite": {
+      "transform": "e7a3d5bf7943c48fa1a0ed03bd8f3e8c8e5b2d5d8c696fe16877a7d183e9cae7",
+      "geometry": "ada02bd590d389093f5ac14a417f65b187351dd820f9fc425075f9971a49d3bc"
+    },
+    "Ball 06 | numeral 6": {
+      "transform": "e7a3d5bf7943c48fa1a0ed03bd8f3e8c8e5b2d5d8c696fe16877a7d183e9cae7",
+      "geometry": "e01731d28ca9e123f331bf512bbece8749fd0e74ca526a5a52efa4643a3c76ff"
+    },
+    "Ball 06 | numeral 6 | opposite": {
+      "transform": "e7a3d5bf7943c48fa1a0ed03bd8f3e8c8e5b2d5d8c696fe16877a7d183e9cae7",
+      "geometry": "6064273b7b932fe97c41a928fccbb404e178be12ebba338931d1a22158cf3fdb"
+    },
+    "Ball 06 | resin": {
+      "transform": "e7a3d5bf7943c48fa1a0ed03bd8f3e8c8e5b2d5d8c696fe16877a7d183e9cae7",
+      "geometry": "ad4cf1008b8257eaeb2e0a73119dcc22e1c988c875c275482913ba94892c4c31"
+    },
+    "Ball 07 | number medallion": {
+      "transform": "41ada7764c08f28c1d8ec9ecdd5f861be9c45a14fee943fc8dedc4b0d318b26e",
+      "geometry": "09b384b485869c5abc3de7a1c21492c3aec055265f00108bd582f1698e3bee74"
+    },
+    "Ball 07 | number medallion | opposite": {
+      "transform": "41ada7764c08f28c1d8ec9ecdd5f861be9c45a14fee943fc8dedc4b0d318b26e",
+      "geometry": "ada02bd590d389093f5ac14a417f65b187351dd820f9fc425075f9971a49d3bc"
+    },
+    "Ball 07 | numeral 7": {
+      "transform": "41ada7764c08f28c1d8ec9ecdd5f861be9c45a14fee943fc8dedc4b0d318b26e",
+      "geometry": "0c9aee2fa2ec724f121b1c16f825b702b14047c3587012767d109570ee339f41"
+    },
+    "Ball 07 | numeral 7 | opposite": {
+      "transform": "41ada7764c08f28c1d8ec9ecdd5f861be9c45a14fee943fc8dedc4b0d318b26e",
+      "geometry": "1c3d4da010dade13995e8c3c034572b7cb19ce12a5985706a309ae65da8cae94"
+    },
+    "Ball 07 | resin": {
+      "transform": "41ada7764c08f28c1d8ec9ecdd5f861be9c45a14fee943fc8dedc4b0d318b26e",
+      "geometry": "3167e1fcc208cc5a9bfbf610be0e2b16a5af54413ab9acea07415e950af42c89"
+    },
+    "Ball 08 | number medallion": {
+      "transform": "68afcb5c8522355172e8edd5233a3b0632c2a05e7eafa691704e98d14c0e4154",
+      "geometry": "09b384b485869c5abc3de7a1c21492c3aec055265f00108bd582f1698e3bee74"
+    },
+    "Ball 08 | number medallion | opposite": {
+      "transform": "68afcb5c8522355172e8edd5233a3b0632c2a05e7eafa691704e98d14c0e4154",
+      "geometry": "ada02bd590d389093f5ac14a417f65b187351dd820f9fc425075f9971a49d3bc"
+    },
+    "Ball 08 | numeral 8": {
+      "transform": "68afcb5c8522355172e8edd5233a3b0632c2a05e7eafa691704e98d14c0e4154",
+      "geometry": "5dfde0ffa2f2f6933720e17406d0d694060792478af7a1478765f8a3b43046eb"
+    },
+    "Ball 08 | numeral 8 | opposite": {
+      "transform": "68afcb5c8522355172e8edd5233a3b0632c2a05e7eafa691704e98d14c0e4154",
+      "geometry": "9a1e3f7b17e02c1e86765a4661ae144d5e367655aaaad4e0df5963db7c096a58"
+    },
+    "Ball 08 | resin": {
+      "transform": "68afcb5c8522355172e8edd5233a3b0632c2a05e7eafa691704e98d14c0e4154",
+      "geometry": "642f7486f6fdb9eb487931e7c11cdb508e06f188c40421bcff6b56a03a3fc602"
+    },
+    "Ball 09 | number medallion": {
+      "transform": "60c4eb1edfcd40abafffb32583f15825cb8aba1a790111fa72c14627aa6ef4fe",
+      "geometry": "09b384b485869c5abc3de7a1c21492c3aec055265f00108bd582f1698e3bee74"
+    },
+    "Ball 09 | number medallion | opposite": {
+      "transform": "60c4eb1edfcd40abafffb32583f15825cb8aba1a790111fa72c14627aa6ef4fe",
+      "geometry": "ada02bd590d389093f5ac14a417f65b187351dd820f9fc425075f9971a49d3bc"
+    },
+    "Ball 09 | numeral 9": {
+      "transform": "60c4eb1edfcd40abafffb32583f15825cb8aba1a790111fa72c14627aa6ef4fe",
+      "geometry": "185d9b6bf1e72e31bf6aad29aec5cfe699375295e35b3a46f34fe8f04d02e397"
+    },
+    "Ball 09 | numeral 9 | opposite": {
+      "transform": "60c4eb1edfcd40abafffb32583f15825cb8aba1a790111fa72c14627aa6ef4fe",
+      "geometry": "769fe593d843a6fb23012bb3cb764d6748617bb85db3e00de51a385397a6182d"
+    },
+    "Ball 09 | resin": {
+      "transform": "60c4eb1edfcd40abafffb32583f15825cb8aba1a790111fa72c14627aa6ef4fe",
+      "geometry": "f779d7d9df6501d45c648c41cacad35a0555735fb4e897134f28765523ced0af"
+    },
+    "Ball 10 | number medallion": {
+      "transform": "e0595832b4daefb803e4798a78ff8bb7e77d8ddab280800090dee3514dc075f5",
+      "geometry": "09b384b485869c5abc3de7a1c21492c3aec055265f00108bd582f1698e3bee74"
+    },
+    "Ball 10 | number medallion | opposite": {
+      "transform": "e0595832b4daefb803e4798a78ff8bb7e77d8ddab280800090dee3514dc075f5",
+      "geometry": "ada02bd590d389093f5ac14a417f65b187351dd820f9fc425075f9971a49d3bc"
+    },
+    "Ball 10 | numeral 10": {
+      "transform": "e0595832b4daefb803e4798a78ff8bb7e77d8ddab280800090dee3514dc075f5",
+      "geometry": "dbffa91c2abb8b11e77087367f7ad589146d5da7c8393e45db953cfeb1cbee2c"
+    },
+    "Ball 10 | numeral 10 | opposite": {
+      "transform": "e0595832b4daefb803e4798a78ff8bb7e77d8ddab280800090dee3514dc075f5",
+      "geometry": "2242a96804d51e338f60adb70e192825b949e59ed91087956a071b03808add6c"
+    },
+    "Ball 10 | resin": {
+      "transform": "e0595832b4daefb803e4798a78ff8bb7e77d8ddab280800090dee3514dc075f5",
+      "geometry": "0d3eb7f82e63ced6f5e350be11ad4253a0063af9549ae1e9e34a2fdff44f755b"
+    },
+    "Ball 11 | number medallion": {
+      "transform": "4a252229de9e78e46dbc78e626991099362ac5da55bec7e32c5a0a0d331343a3",
+      "geometry": "09b384b485869c5abc3de7a1c21492c3aec055265f00108bd582f1698e3bee74"
+    },
+    "Ball 11 | number medallion | opposite": {
+      "transform": "4a252229de9e78e46dbc78e626991099362ac5da55bec7e32c5a0a0d331343a3",
+      "geometry": "ada02bd590d389093f5ac14a417f65b187351dd820f9fc425075f9971a49d3bc"
+    },
+    "Ball 11 | numeral 11": {
+      "transform": "4a252229de9e78e46dbc78e626991099362ac5da55bec7e32c5a0a0d331343a3",
+      "geometry": "c79c6aac362a8dc2b6bef144234e3c2369dd4fbad263fa7cd28c2af1362ecf14"
+    },
+    "Ball 11 | numeral 11 | opposite": {
+      "transform": "4a252229de9e78e46dbc78e626991099362ac5da55bec7e32c5a0a0d331343a3",
+      "geometry": "290b95da574d091a61019426d499b83932dff86bfcfd49c9060a1a95ba53af8f"
+    },
+    "Ball 11 | resin": {
+      "transform": "4a252229de9e78e46dbc78e626991099362ac5da55bec7e32c5a0a0d331343a3",
+      "geometry": "ee48642c8b11e5054097db032c1c7bc7845ea7ed6b136be244e53eedd42f28d7"
+    },
+    "Ball 12 | number medallion": {
+      "transform": "02a41c7a32af45fc4334d106259369ee77a3261206ce56dc801f72308ea77239",
+      "geometry": "09b384b485869c5abc3de7a1c21492c3aec055265f00108bd582f1698e3bee74"
+    },
+    "Ball 12 | number medallion | opposite": {
+      "transform": "02a41c7a32af45fc4334d106259369ee77a3261206ce56dc801f72308ea77239",
+      "geometry": "ada02bd590d389093f5ac14a417f65b187351dd820f9fc425075f9971a49d3bc"
+    },
+    "Ball 12 | numeral 12": {
+      "transform": "02a41c7a32af45fc4334d106259369ee77a3261206ce56dc801f72308ea77239",
+      "geometry": "a6a97615943b68c4810a59fb2b86bb7e206d9c01de550bc053ca121119145242"
+    },
+    "Ball 12 | numeral 12 | opposite": {
+      "transform": "02a41c7a32af45fc4334d106259369ee77a3261206ce56dc801f72308ea77239",
+      "geometry": "e09e5dc6916af448519948844e9e100036e6eec3d355ca4bf491513f4c1758be"
+    },
+    "Ball 12 | resin": {
+      "transform": "02a41c7a32af45fc4334d106259369ee77a3261206ce56dc801f72308ea77239",
+      "geometry": "359d1b8afe3ee94cd70c34728d69596b645865de82dbb4eb8842ead670974f91"
+    },
+    "Ball 13 | number medallion": {
+      "transform": "3808d30fe2c453cd9f82179d4e0dfa556477f27b635807927e1d55029038bb07",
+      "geometry": "09b384b485869c5abc3de7a1c21492c3aec055265f00108bd582f1698e3bee74"
+    },
+    "Ball 13 | number medallion | opposite": {
+      "transform": "3808d30fe2c453cd9f82179d4e0dfa556477f27b635807927e1d55029038bb07",
+      "geometry": "ada02bd590d389093f5ac14a417f65b187351dd820f9fc425075f9971a49d3bc"
+    },
+    "Ball 13 | numeral 13": {
+      "transform": "3808d30fe2c453cd9f82179d4e0dfa556477f27b635807927e1d55029038bb07",
+      "geometry": "cf741322e460b08c4a981ad9994f4f8d1d324194aa4d235d406387c512645159"
+    },
+    "Ball 13 | numeral 13 | opposite": {
+      "transform": "3808d30fe2c453cd9f82179d4e0dfa556477f27b635807927e1d55029038bb07",
+      "geometry": "1ed93cd4abecb1232f58f9b5fecd636fb6376b997a3f8a52b00d9c105f5aeada"
+    },
+    "Ball 13 | resin": {
+      "transform": "3808d30fe2c453cd9f82179d4e0dfa556477f27b635807927e1d55029038bb07",
+      "geometry": "304b9451e451519431e1079abba6f88d5cd62b5828457a665740c9e4af2a2139"
+    },
+    "Ball 14 | number medallion": {
+      "transform": "e240ecde31463ba24ff8633676a8eb22dfa666cbafd8fff99e9d22db34dd7c32",
+      "geometry": "09b384b485869c5abc3de7a1c21492c3aec055265f00108bd582f1698e3bee74"
+    },
+    "Ball 14 | number medallion | opposite": {
+      "transform": "e240ecde31463ba24ff8633676a8eb22dfa666cbafd8fff99e9d22db34dd7c32",
+      "geometry": "ada02bd590d389093f5ac14a417f65b187351dd820f9fc425075f9971a49d3bc"
+    },
+    "Ball 14 | numeral 14": {
+      "transform": "e240ecde31463ba24ff8633676a8eb22dfa666cbafd8fff99e9d22db34dd7c32",
+      "geometry": "526ea85ffa8d410790c85ce4567cf666ace30313fc11783c02e1ec7b9a664ee0"
+    },
+    "Ball 14 | numeral 14 | opposite": {
+      "transform": "e240ecde31463ba24ff8633676a8eb22dfa666cbafd8fff99e9d22db34dd7c32",
+      "geometry": "3fa757a83fc1119a123b5223b8842291297f4f95684be0ab9d933e570b3b6074"
+    },
+    "Ball 14 | resin": {
+      "transform": "e240ecde31463ba24ff8633676a8eb22dfa666cbafd8fff99e9d22db34dd7c32",
+      "geometry": "4599cd7f691fff6a9433fcd557848121370c53143465c7561c4f09bd270ae3d1"
+    },
+    "Ball 15 | number medallion": {
+      "transform": "d567d9a3d7983b16c7cf1ecde23167a898f6d67b1430e192d46c0e4c37d69620",
+      "geometry": "09b384b485869c5abc3de7a1c21492c3aec055265f00108bd582f1698e3bee74"
+    },
+    "Ball 15 | number medallion | opposite": {
+      "transform": "d567d9a3d7983b16c7cf1ecde23167a898f6d67b1430e192d46c0e4c37d69620",
+      "geometry": "ada02bd590d389093f5ac14a417f65b187351dd820f9fc425075f9971a49d3bc"
+    },
+    "Ball 15 | numeral 15": {
+      "transform": "d567d9a3d7983b16c7cf1ecde23167a898f6d67b1430e192d46c0e4c37d69620",
+      "geometry": "e71e267a6d821d8fc241c5753ecfc2b7b6fccaf58faf853923ad8b7d4a034cc2"
+    },
+    "Ball 15 | numeral 15 | opposite": {
+      "transform": "d567d9a3d7983b16c7cf1ecde23167a898f6d67b1430e192d46c0e4c37d69620",
+      "geometry": "baf68838d60cc2d8f6a6e3a3791987932cd39c7cb24936f79559a28723c065af"
+    },
+    "Ball 15 | resin": {
+      "transform": "d567d9a3d7983b16c7cf1ecde23167a898f6d67b1430e192d46c0e4c37d69620",
+      "geometry": "f894f8331b7ea1af711e3bd4ee1a07f3fdb72b491f7c46a2caf995f3012b6d1c"
+    },
+    "Chalk | blue top": {
+      "transform": "e8c5610d4998e937851cccde95f57ecf0dcb4d490203e011e7bfbd78ca159bd2",
+      "geometry": "bf166d90df16fa4c4c0a27cc2e252b9cf29013d6790332a7aea674a966d0ec25"
+    },
+    "Chalk | paper sleeve": {
+      "transform": "ccbffb5641eebfebb08f4fb285b24fa8374d0b43a2ce54238d0cc0db340af049",
+      "geometry": "2eadf1c3f417351349dbe35acd8963af5e4ad97e5a9299ae190f2d66851c2b6e"
+    },
+    "Cue 1 | butt": {
+      "transform": "e43a41e9a17e681e6c9b3bbef2745a4172dba9e349d2ea8a5f9efe1018a95ddc",
+      "geometry": "3d0ae453d47cd88b352b96ae20d3995123293d5bde62ec8ccb46f1640b87b356"
+    },
+    "Cue 1 | ferrule": {
+      "transform": "a7eff3c78298ee730c7c355abbb42b1c2366cfcd305cf824c999209ff44f25b8",
+      "geometry": "8e34358ee05507e9e954fa4a7bd71bc4902e3356b48149ae8b6a687270f64c3a"
+    },
+    "Cue 1 | shaft": {
+      "transform": "5b3a484a643d06acd5296b68846913e284898e9c3124612f847de595c189e987",
+      "geometry": "ecb92e93d04b629cf85d90f2f02e7ce2effa0000a1fcbff14024f884288b67cc"
+    },
+    "Cue 1 | tip": {
+      "transform": "62e1de07ffd021f46608284f025bb72b6bf3a983c41ca5b4d6ee3dc3c33771e7",
+      "geometry": "3425be4358ad2e0f9b662c00cc9b6af270a9b62f6488405acac6aadaf11ca4ef"
+    },
+    "Cue 2 | butt": {
+      "transform": "0fbbd820ebfd776cac40c5cc3955a22710187bc743ef1e3510a7a98186f08922",
+      "geometry": "3d0ae453d47cd88b352b96ae20d3995123293d5bde62ec8ccb46f1640b87b356"
+    },
+    "Cue 2 | ferrule": {
+      "transform": "5579d759e4b13f54bd5440e3deab582a6fd401b6aeb9f8942354c6e0a56c8ad8",
+      "geometry": "8e34358ee05507e9e954fa4a7bd71bc4902e3356b48149ae8b6a687270f64c3a"
+    },
+    "Cue 2 | shaft": {
+      "transform": "bb7940f6bd697c6a9fe7d0a69e777af6aacf7fdc4b10ad7070f686ea79cf6816",
+      "geometry": "ecb92e93d04b629cf85d90f2f02e7ce2effa0000a1fcbff14024f884288b67cc"
+    },
+    "Cue 2 | tip": {
+      "transform": "b46fa41247bd6bba48e41783dceb9cd131a9e7f22f0cb1963cf0d2be04e7a2d8",
+      "geometry": "3425be4358ad2e0f9b662c00cc9b6af270a9b62f6488405acac6aadaf11ca4ef"
+    },
+    "Cushion": {
+      "transform": "3b93caa235871c6700416eb8e59fdb3fb171d7e197d3d87fa6d290ec9215236d",
+      "geometry": "f1a4dbf0031156157ae147ab54f72d15c4db793f57ab588448e675a27c387cc4"
+    },
+    "Cushion.001": {
+      "transform": "cb2a1cd1dece6a8bc8536a6965ee1a42b5cf79d3240211176c23523e999f0866",
+      "geometry": "f1a4dbf0031156157ae147ab54f72d15c4db793f57ab588448e675a27c387cc4"
+    },
+    "Cushion.002": {
+      "transform": "74d05824b37734063f7f6a1ff4e081f9d45c157b74d6f77343de9027cddbfe17",
+      "geometry": "f1a4dbf0031156157ae147ab54f72d15c4db793f57ab588448e675a27c387cc4"
+    },
+    "Cushion.003": {
+      "transform": "dcc63a54b32d51b1804ec82d3813f3022b3148830c0e8d08c5fa235ceb679765",
+      "geometry": "f1a4dbf0031156157ae147ab54f72d15c4db793f57ab588448e675a27c387cc4"
+    },
+    "Cushion.004": {
+      "transform": "4319a8d1f39066f16339e0890111ee10410afc5c1c5eed37179b7582f095c944",
+      "geometry": "d5af22dd14b6780df8a2404f0fd9f63d2f0b0dcf92f6971f37eaa205b87c5785"
+    },
+    "Cushion.005": {
+      "transform": "0848c0cb9aed1a6df88dbe0ef37ff9ab129f1cae720fe0c3dff27e255519df45",
+      "geometry": "d5af22dd14b6780df8a2404f0fd9f63d2f0b0dcf92f6971f37eaa205b87c5785"
+    },
+    "End rail": {
+      "transform": "6b2473905be7f9177c74fa731893fc79593d456f9c2ee6ac07825c3461b30e0a",
+      "geometry": "d029f628baa9709478b6a461f15274830b8a46eb8098acd57908517a34c5b5d7"
+    },
+    "End rail.001": {
+      "transform": "d44ceffc8d364e6fc285a9c0ee413d8a9a23bcc9b5f8801e322b177e51a2df57",
+      "geometry": "d029f628baa9709478b6a461f15274830b8a46eb8098acd57908517a34c5b5d7"
+    },
+    "Leg foot": {
+      "transform": "e55621a2c02b5b3bb8af3e289116c6f516c166a081c37bc1263fd3c9d257b537",
+      "geometry": "7f83ed8638df41b29fc86d07df7cfdc6d5fd059f1119eeb75317689b1b13f840"
+    },
+    "Leg foot.001": {
+      "transform": "29817661f331fe7ee5c5e811b9e3c038564ec80784549bf5f9d57edaca43996a",
+      "geometry": "7f83ed8638df41b29fc86d07df7cfdc6d5fd059f1119eeb75317689b1b13f840"
+    },
+    "Leg foot.002": {
+      "transform": "ca8f1458024eed864e606a6d6c10eb8981c28ca802ca0f733a553882787e0ec0",
+      "geometry": "7f83ed8638df41b29fc86d07df7cfdc6d5fd059f1119eeb75317689b1b13f840"
+    },
+    "Leg foot.003": {
+      "transform": "0aab643f990c6addb6d9d938985c8c9e801b7ee90c0a4d5915dfb1f895bdcb52",
+      "geometry": "7f83ed8638df41b29fc86d07df7cfdc6d5fd059f1119eeb75317689b1b13f840"
+    },
+    "Long rail": {
+      "transform": "ab056adf0150424123134a483056403eea64b026ef2fef81aec07a12793b64bc",
+      "geometry": "4af9b96af93622f16384644fd3e8d94d67b02c70d022209ff45a791b1dd0eade"
+    },
+    "Long rail.001": {
+      "transform": "a08a14a68d9b8c93c8f4b11cb8564716100254ec308676d0fc62e4373d6cfc4d",
+      "geometry": "4af9b96af93622f16384644fd3e8d94d67b02c70d022209ff45a791b1dd0eade"
+    },
+    "Long rail.002": {
+      "transform": "b2bc6e712455145a1cb693caf6f97fe54354ca241a539604cfee05ca8bc23447",
+      "geometry": "4af9b96af93622f16384644fd3e8d94d67b02c70d022209ff45a791b1dd0eade"
+    },
+    "Long rail.003": {
+      "transform": "b5448d84505ad543f0b3f892c4492eed7b55790ead86c09c8c0cf913d6d7c693",
+      "geometry": "4af9b96af93622f16384644fd3e8d94d67b02c70d022209ff45a791b1dd0eade"
+    },
+    "Pocket 1 | recessed liner": {
+      "transform": "3cfbdea88edc27ab7dc002086afc1606a01818dd7941d0d5e512cdaf754308a7",
+      "geometry": "4a573a62aca33f01e31be5929a12b866d9d049ad03b2b8eef4d8013054f9b227"
+    },
+    "Pocket 2 | recessed liner": {
+      "transform": "71782c0ac6bb8630040dbe06c726e0a13708408a742ba984d722855bae3696f0",
+      "geometry": "4a573a62aca33f01e31be5929a12b866d9d049ad03b2b8eef4d8013054f9b227"
+    },
+    "Pocket 3 | recessed liner": {
+      "transform": "b2f8271a7eadddeaf02f7becff134ebf88b64a320c0ba25399b7761253190d98",
+      "geometry": "4a573a62aca33f01e31be5929a12b866d9d049ad03b2b8eef4d8013054f9b227"
+    },
+    "Pocket 4 | recessed liner": {
+      "transform": "49bb03d08da4f708a0737c665f40c67ae7d12e6fb4f31e55c683ec23f0282803",
+      "geometry": "4a573a62aca33f01e31be5929a12b866d9d049ad03b2b8eef4d8013054f9b227"
+    },
+    "Pocket 5 | recessed liner": {
+      "transform": "5b73c8b03d3c16b961dec802a52e6b1645a62881c1db78a5244aa4110948b1ce",
+      "geometry": "4a573a62aca33f01e31be5929a12b866d9d049ad03b2b8eef4d8013054f9b227"
+    },
+    "Pocket 6 | recessed liner": {
+      "transform": "25b11bbd164713bed8a355c1fd8e4099217df4b164b6fe28f1aabfb6c2803df5",
+      "geometry": "4a573a62aca33f01e31be5929a12b866d9d049ad03b2b8eef4d8013054f9b227"
+    },
+    "Pocket jaw": {
+      "transform": "5dbead60905ff3a9b4044070c910333dede60b0cb9797d3a565f08940b3bf7e0",
+      "geometry": "d7620c428cc3f295a1074079cd04271cc524bff6294ecc44c44e0908c3816c2d"
+    },
+    "Pocket jaw.001": {
+      "transform": "9e875c6a67cdf196b3dd4bc01e8ec14697ea3727eee67653202401b19320af7c",
+      "geometry": "44b91084dd23b31a5ed62cd7587efa07f015bdee26c5c908e0b513b25fdf508e"
+    },
+    "Pocket jaw.002": {
+      "transform": "469a658e7d07d641754e8e4e6bbfdf54fcd02d7e0b026e611698d936c27ae1a6",
+      "geometry": "d26bee62a47cab7d654ade2fe68f63ebbef155ff07073aed7ffaa21d9ae539db"
+    },
+    "Pocket jaw.003": {
+      "transform": "8410e7abc52c50bf1c09dc15077d28668f70f27133a86bcd9db4301852f945fb",
+      "geometry": "d7620c428cc3f295a1074079cd04271cc524bff6294ecc44c44e0908c3816c2d"
+    },
+    "Pocket jaw.004": {
+      "transform": "f5449390fd35512c833cfeb0886ec02e4934380f8fd6b783eeaa63b5d4ff9ea6",
+      "geometry": "44b91084dd23b31a5ed62cd7587efa07f015bdee26c5c908e0b513b25fdf508e"
+    },
+    "Pocket jaw.005": {
+      "transform": "8ed9442505af5901b81ba2cda52a0899e5668839571823733be4bc1f5d415157",
+      "geometry": "d26bee62a47cab7d654ade2fe68f63ebbef155ff07073aed7ffaa21d9ae539db"
+    },
+    "Pocket jaw.006": {
+      "transform": "9496bbbd34689d9002deb454a537962e7791c273d2efc6e7674553d4a7d9f8c7",
+      "geometry": "d7620c428cc3f295a1074079cd04271cc524bff6294ecc44c44e0908c3816c2d"
+    },
+    "Pocket jaw.007": {
+      "transform": "e8523666f72e8150facab5788ea231b284e8c80d4633e9dbe976b996ef6c6aaa",
+      "geometry": "44b91084dd23b31a5ed62cd7587efa07f015bdee26c5c908e0b513b25fdf508e"
+    },
+    "Pocket jaw.008": {
+      "transform": "66a798c65b401f7ac593f399539fd96a22c572ff2a465b2bfb490c13682412b1",
+      "geometry": "d26bee62a47cab7d654ade2fe68f63ebbef155ff07073aed7ffaa21d9ae539db"
+    },
+    "Pocket jaw.009": {
+      "transform": "b4d109ec1639caf6cff0f34f268f9663f9d0d5aa5a792988c3393db17b169cb7",
+      "geometry": "d7620c428cc3f295a1074079cd04271cc524bff6294ecc44c44e0908c3816c2d"
+    },
+    "Pocket jaw.010": {
+      "transform": "ca234a6efd99fa58255244dcd5bc3a22543c106d932b0588348de7e898892473",
+      "geometry": "44b91084dd23b31a5ed62cd7587efa07f015bdee26c5c908e0b513b25fdf508e"
+    },
+    "Pocket jaw.011": {
+      "transform": "4a7e77f14b3841adbf57963fe198fd927ef239326724cde73be186f405ad540e",
+      "geometry": "d26bee62a47cab7d654ade2fe68f63ebbef155ff07073aed7ffaa21d9ae539db"
+    },
+    "Rack | wooden side": {
+      "transform": "fc13f8b5a4e0abbf1c01df42a0ad981bf3a1a13ecae632c6a72d6fc38eb46b64",
+      "geometry": "6d5607000309692d203c80ccfa16f70e5a312f6a15bedbd7dd7591ee46dd3b63"
+    },
+    "Rack | wooden side.001": {
+      "transform": "c85e788a0948273359e6ec6138101c857a59a8d3c8db92d229c5dd434a7c4024",
+      "geometry": "1b44d373c0385fb5261c0f69089ce405003fb55c6779b0eaf0a584d06171b54e"
+    },
+    "Rack | wooden side.002": {
+      "transform": "a33266b8ddff702e364d993f7b407785ab153338bcf7a5f7336c5f93b6d35ce2",
+      "geometry": "3b53ca3ed52dfd94e730d15456ca1d54794aeae0e3bbfc77ef3655a4d4f58d85"
+    },
+    "Rail sight": {
+      "transform": "4cd7673feffb01bc58dc7234ec1b9b536e7e7054a2dca8ef673f0ea2cf92634a",
+      "geometry": "0a12ccbe8ed8a584a29aeb602f5ea637e376da8428ba9316ba5994c07fe2c485"
+    },
+    "Rail sight.001": {
+      "transform": "07ba3756d62869fd1c1c1ab6b412391aa827a6a735813cac85fd06dbca3ff0b5",
+      "geometry": "0a12ccbe8ed8a584a29aeb602f5ea637e376da8428ba9316ba5994c07fe2c485"
+    },
+    "Rail sight.002": {
+      "transform": "78d42836a181944c2c858fd8d6f034a4633b7b72be69c337b8d7e3f0e5fbdd4e",
+      "geometry": "0a12ccbe8ed8a584a29aeb602f5ea637e376da8428ba9316ba5994c07fe2c485"
+    },
+    "Rail sight.003": {
+      "transform": "d2f6d6b2a35984dd1a30cbc3fb842b63f4991391e09852d0207973650c066736",
+      "geometry": "0a12ccbe8ed8a584a29aeb602f5ea637e376da8428ba9316ba5994c07fe2c485"
+    },
+    "Rail sight.004": {
+      "transform": "6cb54c1dd2dd5d69d17ccbe444186f2ec7dd697bbbad7baabaf4b6fc5cb4200f",
+      "geometry": "0a12ccbe8ed8a584a29aeb602f5ea637e376da8428ba9316ba5994c07fe2c485"
+    },
+    "Rail sight.005": {
+      "transform": "d6a7117393b7f59857d88ee5efb78702974de2bc96cca9b06c74007a8b78995d",
+      "geometry": "0a12ccbe8ed8a584a29aeb602f5ea637e376da8428ba9316ba5994c07fe2c485"
+    },
+    "Rail sight.006": {
+      "transform": "8467fadd868efeaa011971d2a01f1881c6de28399c3266fb432fa2f1d59f461d",
+      "geometry": "0a12ccbe8ed8a584a29aeb602f5ea637e376da8428ba9316ba5994c07fe2c485"
+    },
+    "Rail sight.007": {
+      "transform": "c24eefa2edfbcfd803a8de7115f451c56e1765249d361581127205c335efadfe",
+      "geometry": "0a12ccbe8ed8a584a29aeb602f5ea637e376da8428ba9316ba5994c07fe2c485"
+    },
+    "Rail sight.008": {
+      "transform": "8881b9c73e373e371e1bff77d4208eb3fbf5c23fb9976e4dd16bf7d5bb762eac",
+      "geometry": "0a12ccbe8ed8a584a29aeb602f5ea637e376da8428ba9316ba5994c07fe2c485"
+    },
+    "Rail sight.009": {
+      "transform": "8502dc64c1bc822c2222cb4a96c07002d5bc70b1044b3db843587ef97256d53e",
+      "geometry": "0a12ccbe8ed8a584a29aeb602f5ea637e376da8428ba9316ba5994c07fe2c485"
+    },
+    "Rail sight.010": {
+      "transform": "b48bc47cd37ed4f2e5a207e53ebff7f40a5357377773768dbf87afbdb9c5ca12",
+      "geometry": "0a12ccbe8ed8a584a29aeb602f5ea637e376da8428ba9316ba5994c07fe2c485"
+    },
+    "Rail sight.011": {
+      "transform": "4d111b073cb19e9b9cc331957feb4eb7c47ac1c76b649440e06520b14eb34110",
+      "geometry": "0a12ccbe8ed8a584a29aeb602f5ea637e376da8428ba9316ba5994c07fe2c485"
+    },
+    "Studio floor": {
+      "transform": "5dc95cb0d52be8462fa63a24657a9bd73cffec5a6fcae2ba003461f6a29f7ef5",
+      "geometry": "189afaba702e79dc4e5fe11636a36ed778598903484238ae1e933866dede367a"
+    },
+    "Studio | camera": {
+      "transform": "26113d52b17d2ce1886b1f2774a76a794b7d69dc31ed5a9f28d34bb3faf40d5b",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "Studio | fill": {
+      "transform": "3639f2805f39f3c125e928873103c9a88b9741e57c375bc714b3fc139225d645",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "Studio | key": {
+      "transform": "4d2d5a2e3fccca1c16008e4cdc57ee8877cfc0fb05503b1e71c3bbff9e2f9cee",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "STUDIO | not exported": {
+      "transform": "119b9519094a95eb2fd3a9fda2235079519f52705ce563dcac619cb9f1133a12",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "Table leg": {
+      "transform": "80f18bfb69ad9fb6ce0a2865127ba3e736f2a2d26a2f376a6920eccaed350a7a",
+      "geometry": "70a2c843a2f682d56efcc3598cf3b643a03ef916a5b39842de3010242ff31190"
+    },
+    "Table leg.001": {
+      "transform": "4932198ffbf13a5ef9cdd65fe758cf9db441fd8ec7c945f4b9a1d179aa9d8de2",
+      "geometry": "70a2c843a2f682d56efcc3598cf3b643a03ef916a5b39842de3010242ff31190"
+    },
+    "Table leg.002": {
+      "transform": "a4cf00075a848d192b2d64be8acf84763108d11b50efa0068d6ca8ce1a1ce780",
+      "geometry": "70a2c843a2f682d56efcc3598cf3b643a03ef916a5b39842de3010242ff31190"
+    },
+    "Table leg.003": {
+      "transform": "981b32ef6884ed5373c9a2502f93345d5d785fd7b4c6a1fe3c04f2342c753462",
+      "geometry": "70a2c843a2f682d56efcc3598cf3b643a03ef916a5b39842de3010242ff31190"
+    },
+    "Table | slate and green cloth": {
+      "transform": "eb552cc03f086ee7ec6a2cf9500b9f8c21af96fff9846abbdfbee211a9d707bb",
+      "geometry": "090e9989892696b7001a46fc8a20a7c19b0754843dcf340f2f0f2815f719fe92"
+    },
+    "Table | solid walnut cabinet": {
+      "transform": "74f01dd570a137b9581bacec401c46a1eb2a824d1d5561d7d50ed5dca2c18ef9",
+      "geometry": "0a938e9b1429e7a08d4eb1f6e67cb2d47c92c4c9ec651ddfe6e83e1ec5653c81"
+    }
+  },
+  "after": {
+    "ASSET_Ball_00": {
+      "transform": "9ea9eae391ad2d40a4c98aca20a0f76c7f724d8e4faa83b4a7bb1394069b696a",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Ball_01": {
+      "transform": "f1293ade76eb2eaca7d386eaba2f1f36588c48f3b9fd813980da36587559a819",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Ball_02": {
+      "transform": "4db37086c5dacb335a00a2a3d79e0e876bdd69417560aa16e7a18c8c8faffbbe",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Ball_03": {
+      "transform": "f5138a1b48b68980eb47bbfc86fbdafc692e4bd339a08d6bc029e5bab6c758e5",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Ball_04": {
+      "transform": "92f822f50eb7a619778e0985cfd8d155ff706abaa5902e6fab86b49f47d51dba",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Ball_05": {
+      "transform": "59006357c26113d3c025a5b3641bb2111615872b3d4d2f66900126272ebf147f",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Ball_06": {
+      "transform": "8dd28d367182601e865938a4fa9d55709bc68212616068bdc06b755c96f7e4cb",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Ball_07": {
+      "transform": "5b8d9ef5e425a579f809b960414f3ded09b69c539a386f16498abf201366f932",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Ball_08": {
+      "transform": "2554bddf8e21be5423678e85bdc65790513aa596b3da6c8023dc57ea7113fa8c",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Ball_09": {
+      "transform": "0d5de3b5fcbf91847c54af1128520e8fa370124613861a7e3ceaa7ba9d74e77d",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Ball_10": {
+      "transform": "47fcd2973889d5f7bd270b219239907a4a7fe259da5715513f50b164f7731b91",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Ball_11": {
+      "transform": "a675a4401c7251e2e7f6af2165837b777c2306816ba532d0b0c22b3bf701f82a",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Ball_12": {
+      "transform": "82e5dff312ed4d69b4bf9ae16828f0fc2df6f012193add2d16169db84da3895c",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Ball_13": {
+      "transform": "d5052f71e937762c38c4fd5123adc43dc8f1c437f1ea216fe58d5c230e9dacf4",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Ball_14": {
+      "transform": "1317586cde4cf6eba2dd1cd8e5b2afe0a76d7aa666098bcadf6b7d8b6500beb9",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Ball_15": {
+      "transform": "2fcf5f83a2ff82f19a95ef13e0ae0bc73f74fb5a3a428e5627c62c1e3172a10e",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Chalk": {
+      "transform": "f68a56f0646ba9718d7ff4a24a61d03341f35607a6900f84ff9a77db8c13c819",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Cue_01": {
+      "transform": "180f9cc5e1034cc80b58d15840bf72a8a3dd7d921edbb7d17ace61e7c3a71402",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Cue_02": {
+      "transform": "419546f5becf060a98c65288f6722a6bdd550e1e802583d0ef8c52747349cf67",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Table": {
+      "transform": "119b9519094a95eb2fd3a9fda2235079519f52705ce563dcac619cb9f1133a12",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "ASSET_Triangle_Rack": {
+      "transform": "b3e91ca36a67957e2748cd06f14cd1dba61a9935c9f55740189f698ae63cc50f",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "Ball 00 | resin": {
+      "transform": "6a3f2f92ae6ff61ea600fab924239af6b6a4e20919e886045a57d61259980144",
+      "geometry": "5228fa5be297e2dfc330330a9cb88207cfd3aa477d69c33bcffe6923e2e9201b"
+    },
+    "Ball 01 | number medallion": {
+      "transform": "f2aeb568cd4044cc5d3460d5a0738f62c6296673ffc6ba9d93de6babd047e055",
+      "geometry": "09b384b485869c5abc3de7a1c21492c3aec055265f00108bd582f1698e3bee74"
+    },
+    "Ball 01 | number medallion | opposite": {
+      "transform": "f2aeb568cd4044cc5d3460d5a0738f62c6296673ffc6ba9d93de6babd047e055",
+      "geometry": "ada02bd590d389093f5ac14a417f65b187351dd820f9fc425075f9971a49d3bc"
+    },
+    "Ball 01 | numeral 1": {
+      "transform": "f2aeb568cd4044cc5d3460d5a0738f62c6296673ffc6ba9d93de6babd047e055",
+      "geometry": "8fdc54dc1362521ea77a4980ca4934dcd8ca8d5b33edcade1f5f677a16569b2e"
+    },
+    "Ball 01 | numeral 1 | opposite": {
+      "transform": "f2aeb568cd4044cc5d3460d5a0738f62c6296673ffc6ba9d93de6babd047e055",
+      "geometry": "d604e335f069e34ece2bf981e5b6bcf02b57126f30c109cb37684f096ed679f4"
+    },
+    "Ball 01 | resin": {
+      "transform": "f2aeb568cd4044cc5d3460d5a0738f62c6296673ffc6ba9d93de6babd047e055",
+      "geometry": "7920cf22e9230622ee7479c3ac87bcdaa467dfc8c20581dd45b6319b46f53e74"
+    },
+    "Ball 02 | number medallion": {
+      "transform": "50c17d24ecac700f94f8f1ea87394a6c06ce0f6463f01ea5ac0eee8390b85ac7",
+      "geometry": "09b384b485869c5abc3de7a1c21492c3aec055265f00108bd582f1698e3bee74"
+    },
+    "Ball 02 | number medallion | opposite": {
+      "transform": "50c17d24ecac700f94f8f1ea87394a6c06ce0f6463f01ea5ac0eee8390b85ac7",
+      "geometry": "ada02bd590d389093f5ac14a417f65b187351dd820f9fc425075f9971a49d3bc"
+    },
+    "Ball 02 | numeral 2": {
+      "transform": "50c17d24ecac700f94f8f1ea87394a6c06ce0f6463f01ea5ac0eee8390b85ac7",
+      "geometry": "69711a1a62cc3997ed32878d01de289712747cc8fe55c32d9608a9712d2867d1"
+    },
+    "Ball 02 | numeral 2 | opposite": {
+      "transform": "50c17d24ecac700f94f8f1ea87394a6c06ce0f6463f01ea5ac0eee8390b85ac7",
+      "geometry": "d133733df78707284e5579ac4565bdd4a538b11b53a8b6f6d9dbc762e2c05a8b"
+    },
+    "Ball 02 | resin": {
+      "transform": "50c17d24ecac700f94f8f1ea87394a6c06ce0f6463f01ea5ac0eee8390b85ac7",
+      "geometry": "b1130402244888ab8448581287f00552ae0487d08105bbe5213f10a1a37d3a7f"
+    },
+    "Ball 03 | number medallion": {
+      "transform": "e5c2459ac22174d5c3f970c7be9c59ae859e88de7e57806b32e8d22337288a68",
+      "geometry": "09b384b485869c5abc3de7a1c21492c3aec055265f00108bd582f1698e3bee74"
+    },
+    "Ball 03 | number medallion | opposite": {
+      "transform": "e5c2459ac22174d5c3f970c7be9c59ae859e88de7e57806b32e8d22337288a68",
+      "geometry": "ada02bd590d389093f5ac14a417f65b187351dd820f9fc425075f9971a49d3bc"
+    },
+    "Ball 03 | numeral 3": {
+      "transform": "e5c2459ac22174d5c3f970c7be9c59ae859e88de7e57806b32e8d22337288a68",
+      "geometry": "98d62ed209a73bc5a1ce1094e63ca77c453d2862c8d57828297fd40eeeab9683"
+    },
+    "Ball 03 | numeral 3 | opposite": {
+      "transform": "e5c2459ac22174d5c3f970c7be9c59ae859e88de7e57806b32e8d22337288a68",
+      "geometry": "718883ac9789903f324b808c1020fe3479be979c91f023b13120e0ff0b77577a"
+    },
+    "Ball 03 | resin": {
+      "transform": "e5c2459ac22174d5c3f970c7be9c59ae859e88de7e57806b32e8d22337288a68",
+      "geometry": "37000f6ed752f76425b091110110698f06b3ab917e2244d7e920dfc8ba5fc71d"
+    },
+    "Ball 04 | number medallion": {
+      "transform": "88fa654caef3111256b7ddec81edddcf1e0a7aa42cce75d0c6bde2dbe6f20ade",
+      "geometry": "09b384b485869c5abc3de7a1c21492c3aec055265f00108bd582f1698e3bee74"
+    },
+    "Ball 04 | number medallion | opposite": {
+      "transform": "88fa654caef3111256b7ddec81edddcf1e0a7aa42cce75d0c6bde2dbe6f20ade",
+      "geometry": "ada02bd590d389093f5ac14a417f65b187351dd820f9fc425075f9971a49d3bc"
+    },
+    "Ball 04 | numeral 4": {
+      "transform": "88fa654caef3111256b7ddec81edddcf1e0a7aa42cce75d0c6bde2dbe6f20ade",
+      "geometry": "0a2009c5cafde243ca6a50432a9601a7a8bb7cc5176adc9dca32ead82db2805d"
+    },
+    "Ball 04 | numeral 4 | opposite": {
+      "transform": "88fa654caef3111256b7ddec81edddcf1e0a7aa42cce75d0c6bde2dbe6f20ade",
+      "geometry": "6dfc34b25659b81b6e0425e2b6f4d907c8b11d3f1d7d6c0a4909f9d7ccb5d635"
+    },
+    "Ball 04 | resin": {
+      "transform": "88fa654caef3111256b7ddec81edddcf1e0a7aa42cce75d0c6bde2dbe6f20ade",
+      "geometry": "aa95b2137e5e46df594aecb85899029068d59e6906178b2e7a939ca7b01526da"
+    },
+    "Ball 05 | number medallion": {
+      "transform": "c2f6318e865d1d51e71194766aa12f8737adc8229f09cd9a9f949b61bfe2479f",
+      "geometry": "09b384b485869c5abc3de7a1c21492c3aec055265f00108bd582f1698e3bee74"
+    },
+    "Ball 05 | number medallion | opposite": {
+      "transform": "c2f6318e865d1d51e71194766aa12f8737adc8229f09cd9a9f949b61bfe2479f",
+      "geometry": "ada02bd590d389093f5ac14a417f65b187351dd820f9fc425075f9971a49d3bc"
+    },
+    "Ball 05 | numeral 5": {
+      "transform": "c2f6318e865d1d51e71194766aa12f8737adc8229f09cd9a9f949b61bfe2479f",
+      "geometry": "72047875832574db8958b69eff6ba21ff060867e7bbde9f0f8f1b490b7014b71"
+    },
+    "Ball 05 | numeral 5 | opposite": {
+      "transform": "c2f6318e865d1d51e71194766aa12f8737adc8229f09cd9a9f949b61bfe2479f",
+      "geometry": "89bda3c3de5a7b2512ecd0ae4189e3df0e62991d193983ea7ce3a8faadd37b8f"
+    },
+    "Ball 05 | resin": {
+      "transform": "c2f6318e865d1d51e71194766aa12f8737adc8229f09cd9a9f949b61bfe2479f",
+      "geometry": "fcf7880dec305dbc38460d8c290d97a5424d43800e55b9d64ef1e1cc96ec1789"
+    },
+    "Ball 06 | number medallion": {
+      "transform": "e7a3d5bf7943c48fa1a0ed03bd8f3e8c8e5b2d5d8c696fe16877a7d183e9cae7",
+      "geometry": "09b384b485869c5abc3de7a1c21492c3aec055265f00108bd582f1698e3bee74"
+    },
+    "Ball 06 | number medallion | opposite": {
+      "transform": "e7a3d5bf7943c48fa1a0ed03bd8f3e8c8e5b2d5d8c696fe16877a7d183e9cae7",
+      "geometry": "ada02bd590d389093f5ac14a417f65b187351dd820f9fc425075f9971a49d3bc"
+    },
+    "Ball 06 | numeral 6": {
+      "transform": "e7a3d5bf7943c48fa1a0ed03bd8f3e8c8e5b2d5d8c696fe16877a7d183e9cae7",
+      "geometry": "e01731d28ca9e123f331bf512bbece8749fd0e74ca526a5a52efa4643a3c76ff"
+    },
+    "Ball 06 | numeral 6 | opposite": {
+      "transform": "e7a3d5bf7943c48fa1a0ed03bd8f3e8c8e5b2d5d8c696fe16877a7d183e9cae7",
+      "geometry": "6064273b7b932fe97c41a928fccbb404e178be12ebba338931d1a22158cf3fdb"
+    },
+    "Ball 06 | resin": {
+      "transform": "e7a3d5bf7943c48fa1a0ed03bd8f3e8c8e5b2d5d8c696fe16877a7d183e9cae7",
+      "geometry": "ad4cf1008b8257eaeb2e0a73119dcc22e1c988c875c275482913ba94892c4c31"
+    },
+    "Ball 07 | number medallion": {
+      "transform": "41ada7764c08f28c1d8ec9ecdd5f861be9c45a14fee943fc8dedc4b0d318b26e",
+      "geometry": "09b384b485869c5abc3de7a1c21492c3aec055265f00108bd582f1698e3bee74"
+    },
+    "Ball 07 | number medallion | opposite": {
+      "transform": "41ada7764c08f28c1d8ec9ecdd5f861be9c45a14fee943fc8dedc4b0d318b26e",
+      "geometry": "ada02bd590d389093f5ac14a417f65b187351dd820f9fc425075f9971a49d3bc"
+    },
+    "Ball 07 | numeral 7": {
+      "transform": "41ada7764c08f28c1d8ec9ecdd5f861be9c45a14fee943fc8dedc4b0d318b26e",
+      "geometry": "0c9aee2fa2ec724f121b1c16f825b702b14047c3587012767d109570ee339f41"
+    },
+    "Ball 07 | numeral 7 | opposite": {
+      "transform": "41ada7764c08f28c1d8ec9ecdd5f861be9c45a14fee943fc8dedc4b0d318b26e",
+      "geometry": "1c3d4da010dade13995e8c3c034572b7cb19ce12a5985706a309ae65da8cae94"
+    },
+    "Ball 07 | resin": {
+      "transform": "41ada7764c08f28c1d8ec9ecdd5f861be9c45a14fee943fc8dedc4b0d318b26e",
+      "geometry": "3167e1fcc208cc5a9bfbf610be0e2b16a5af54413ab9acea07415e950af42c89"
+    },
+    "Ball 08 | number medallion": {
+      "transform": "68afcb5c8522355172e8edd5233a3b0632c2a05e7eafa691704e98d14c0e4154",
+      "geometry": "09b384b485869c5abc3de7a1c21492c3aec055265f00108bd582f1698e3bee74"
+    },
+    "Ball 08 | number medallion | opposite": {
+      "transform": "68afcb5c8522355172e8edd5233a3b0632c2a05e7eafa691704e98d14c0e4154",
+      "geometry": "ada02bd590d389093f5ac14a417f65b187351dd820f9fc425075f9971a49d3bc"
+    },
+    "Ball 08 | numeral 8": {
+      "transform": "68afcb5c8522355172e8edd5233a3b0632c2a05e7eafa691704e98d14c0e4154",
+      "geometry": "5dfde0ffa2f2f6933720e17406d0d694060792478af7a1478765f8a3b43046eb"
+    },
+    "Ball 08 | numeral 8 | opposite": {
+      "transform": "68afcb5c8522355172e8edd5233a3b0632c2a05e7eafa691704e98d14c0e4154",
+      "geometry": "9a1e3f7b17e02c1e86765a4661ae144d5e367655aaaad4e0df5963db7c096a58"
+    },
+    "Ball 08 | resin": {
+      "transform": "68afcb5c8522355172e8edd5233a3b0632c2a05e7eafa691704e98d14c0e4154",
+      "geometry": "642f7486f6fdb9eb487931e7c11cdb508e06f188c40421bcff6b56a03a3fc602"
+    },
+    "Ball 09 | number medallion": {
+      "transform": "60c4eb1edfcd40abafffb32583f15825cb8aba1a790111fa72c14627aa6ef4fe",
+      "geometry": "09b384b485869c5abc3de7a1c21492c3aec055265f00108bd582f1698e3bee74"
+    },
+    "Ball 09 | number medallion | opposite": {
+      "transform": "60c4eb1edfcd40abafffb32583f15825cb8aba1a790111fa72c14627aa6ef4fe",
+      "geometry": "ada02bd590d389093f5ac14a417f65b187351dd820f9fc425075f9971a49d3bc"
+    },
+    "Ball 09 | numeral 9": {
+      "transform": "60c4eb1edfcd40abafffb32583f15825cb8aba1a790111fa72c14627aa6ef4fe",
+      "geometry": "185d9b6bf1e72e31bf6aad29aec5cfe699375295e35b3a46f34fe8f04d02e397"
+    },
+    "Ball 09 | numeral 9 | opposite": {
+      "transform": "60c4eb1edfcd40abafffb32583f15825cb8aba1a790111fa72c14627aa6ef4fe",
+      "geometry": "769fe593d843a6fb23012bb3cb764d6748617bb85db3e00de51a385397a6182d"
+    },
+    "Ball 09 | resin": {
+      "transform": "60c4eb1edfcd40abafffb32583f15825cb8aba1a790111fa72c14627aa6ef4fe",
+      "geometry": "f779d7d9df6501d45c648c41cacad35a0555735fb4e897134f28765523ced0af"
+    },
+    "Ball 10 | number medallion": {
+      "transform": "e0595832b4daefb803e4798a78ff8bb7e77d8ddab280800090dee3514dc075f5",
+      "geometry": "09b384b485869c5abc3de7a1c21492c3aec055265f00108bd582f1698e3bee74"
+    },
+    "Ball 10 | number medallion | opposite": {
+      "transform": "e0595832b4daefb803e4798a78ff8bb7e77d8ddab280800090dee3514dc075f5",
+      "geometry": "ada02bd590d389093f5ac14a417f65b187351dd820f9fc425075f9971a49d3bc"
+    },
+    "Ball 10 | numeral 10": {
+      "transform": "e0595832b4daefb803e4798a78ff8bb7e77d8ddab280800090dee3514dc075f5",
+      "geometry": "dbffa91c2abb8b11e77087367f7ad589146d5da7c8393e45db953cfeb1cbee2c"
+    },
+    "Ball 10 | numeral 10 | opposite": {
+      "transform": "e0595832b4daefb803e4798a78ff8bb7e77d8ddab280800090dee3514dc075f5",
+      "geometry": "2242a96804d51e338f60adb70e192825b949e59ed91087956a071b03808add6c"
+    },
+    "Ball 10 | resin": {
+      "transform": "e0595832b4daefb803e4798a78ff8bb7e77d8ddab280800090dee3514dc075f5",
+      "geometry": "0d3eb7f82e63ced6f5e350be11ad4253a0063af9549ae1e9e34a2fdff44f755b"
+    },
+    "Ball 11 | number medallion": {
+      "transform": "4a252229de9e78e46dbc78e626991099362ac5da55bec7e32c5a0a0d331343a3",
+      "geometry": "09b384b485869c5abc3de7a1c21492c3aec055265f00108bd582f1698e3bee74"
+    },
+    "Ball 11 | number medallion | opposite": {
+      "transform": "4a252229de9e78e46dbc78e626991099362ac5da55bec7e32c5a0a0d331343a3",
+      "geometry": "ada02bd590d389093f5ac14a417f65b187351dd820f9fc425075f9971a49d3bc"
+    },
+    "Ball 11 | numeral 11": {
+      "transform": "4a252229de9e78e46dbc78e626991099362ac5da55bec7e32c5a0a0d331343a3",
+      "geometry": "c79c6aac362a8dc2b6bef144234e3c2369dd4fbad263fa7cd28c2af1362ecf14"
+    },
+    "Ball 11 | numeral 11 | opposite": {
+      "transform": "4a252229de9e78e46dbc78e626991099362ac5da55bec7e32c5a0a0d331343a3",
+      "geometry": "290b95da574d091a61019426d499b83932dff86bfcfd49c9060a1a95ba53af8f"
+    },
+    "Ball 11 | resin": {
+      "transform": "4a252229de9e78e46dbc78e626991099362ac5da55bec7e32c5a0a0d331343a3",
+      "geometry": "ee48642c8b11e5054097db032c1c7bc7845ea7ed6b136be244e53eedd42f28d7"
+    },
+    "Ball 12 | number medallion": {
+      "transform": "02a41c7a32af45fc4334d106259369ee77a3261206ce56dc801f72308ea77239",
+      "geometry": "09b384b485869c5abc3de7a1c21492c3aec055265f00108bd582f1698e3bee74"
+    },
+    "Ball 12 | number medallion | opposite": {
+      "transform": "02a41c7a32af45fc4334d106259369ee77a3261206ce56dc801f72308ea77239",
+      "geometry": "ada02bd590d389093f5ac14a417f65b187351dd820f9fc425075f9971a49d3bc"
+    },
+    "Ball 12 | numeral 12": {
+      "transform": "02a41c7a32af45fc4334d106259369ee77a3261206ce56dc801f72308ea77239",
+      "geometry": "a6a97615943b68c4810a59fb2b86bb7e206d9c01de550bc053ca121119145242"
+    },
+    "Ball 12 | numeral 12 | opposite": {
+      "transform": "02a41c7a32af45fc4334d106259369ee77a3261206ce56dc801f72308ea77239",
+      "geometry": "e09e5dc6916af448519948844e9e100036e6eec3d355ca4bf491513f4c1758be"
+    },
+    "Ball 12 | resin": {
+      "transform": "02a41c7a32af45fc4334d106259369ee77a3261206ce56dc801f72308ea77239",
+      "geometry": "359d1b8afe3ee94cd70c34728d69596b645865de82dbb4eb8842ead670974f91"
+    },
+    "Ball 13 | number medallion": {
+      "transform": "3808d30fe2c453cd9f82179d4e0dfa556477f27b635807927e1d55029038bb07",
+      "geometry": "09b384b485869c5abc3de7a1c21492c3aec055265f00108bd582f1698e3bee74"
+    },
+    "Ball 13 | number medallion | opposite": {
+      "transform": "3808d30fe2c453cd9f82179d4e0dfa556477f27b635807927e1d55029038bb07",
+      "geometry": "ada02bd590d389093f5ac14a417f65b187351dd820f9fc425075f9971a49d3bc"
+    },
+    "Ball 13 | numeral 13": {
+      "transform": "3808d30fe2c453cd9f82179d4e0dfa556477f27b635807927e1d55029038bb07",
+      "geometry": "cf741322e460b08c4a981ad9994f4f8d1d324194aa4d235d406387c512645159"
+    },
+    "Ball 13 | numeral 13 | opposite": {
+      "transform": "3808d30fe2c453cd9f82179d4e0dfa556477f27b635807927e1d55029038bb07",
+      "geometry": "1ed93cd4abecb1232f58f9b5fecd636fb6376b997a3f8a52b00d9c105f5aeada"
+    },
+    "Ball 13 | resin": {
+      "transform": "3808d30fe2c453cd9f82179d4e0dfa556477f27b635807927e1d55029038bb07",
+      "geometry": "304b9451e451519431e1079abba6f88d5cd62b5828457a665740c9e4af2a2139"
+    },
+    "Ball 14 | number medallion": {
+      "transform": "e240ecde31463ba24ff8633676a8eb22dfa666cbafd8fff99e9d22db34dd7c32",
+      "geometry": "09b384b485869c5abc3de7a1c21492c3aec055265f00108bd582f1698e3bee74"
+    },
+    "Ball 14 | number medallion | opposite": {
+      "transform": "e240ecde31463ba24ff8633676a8eb22dfa666cbafd8fff99e9d22db34dd7c32",
+      "geometry": "ada02bd590d389093f5ac14a417f65b187351dd820f9fc425075f9971a49d3bc"
+    },
+    "Ball 14 | numeral 14": {
+      "transform": "e240ecde31463ba24ff8633676a8eb22dfa666cbafd8fff99e9d22db34dd7c32",
+      "geometry": "526ea85ffa8d410790c85ce4567cf666ace30313fc11783c02e1ec7b9a664ee0"
+    },
+    "Ball 14 | numeral 14 | opposite": {
+      "transform": "e240ecde31463ba24ff8633676a8eb22dfa666cbafd8fff99e9d22db34dd7c32",
+      "geometry": "3fa757a83fc1119a123b5223b8842291297f4f95684be0ab9d933e570b3b6074"
+    },
+    "Ball 14 | resin": {
+      "transform": "e240ecde31463ba24ff8633676a8eb22dfa666cbafd8fff99e9d22db34dd7c32",
+      "geometry": "4599cd7f691fff6a9433fcd557848121370c53143465c7561c4f09bd270ae3d1"
+    },
+    "Ball 15 | number medallion": {
+      "transform": "d567d9a3d7983b16c7cf1ecde23167a898f6d67b1430e192d46c0e4c37d69620",
+      "geometry": "09b384b485869c5abc3de7a1c21492c3aec055265f00108bd582f1698e3bee74"
+    },
+    "Ball 15 | number medallion | opposite": {
+      "transform": "d567d9a3d7983b16c7cf1ecde23167a898f6d67b1430e192d46c0e4c37d69620",
+      "geometry": "ada02bd590d389093f5ac14a417f65b187351dd820f9fc425075f9971a49d3bc"
+    },
+    "Ball 15 | numeral 15": {
+      "transform": "d567d9a3d7983b16c7cf1ecde23167a898f6d67b1430e192d46c0e4c37d69620",
+      "geometry": "e71e267a6d821d8fc241c5753ecfc2b7b6fccaf58faf853923ad8b7d4a034cc2"
+    },
+    "Ball 15 | numeral 15 | opposite": {
+      "transform": "d567d9a3d7983b16c7cf1ecde23167a898f6d67b1430e192d46c0e4c37d69620",
+      "geometry": "baf68838d60cc2d8f6a6e3a3791987932cd39c7cb24936f79559a28723c065af"
+    },
+    "Ball 15 | resin": {
+      "transform": "d567d9a3d7983b16c7cf1ecde23167a898f6d67b1430e192d46c0e4c37d69620",
+      "geometry": "f894f8331b7ea1af711e3bd4ee1a07f3fdb72b491f7c46a2caf995f3012b6d1c"
+    },
+    "Chalk | blue top": {
+      "transform": "484917d9328f8699213c85bf9d85c72af372ee9b011ee107387adbc65010eaa8",
+      "geometry": "bf166d90df16fa4c4c0a27cc2e252b9cf29013d6790332a7aea674a966d0ec25"
+    },
+    "Chalk | paper sleeve": {
+      "transform": "e2d26a264105628f431f9d6b762e92af7d099ceb01d98c85ad3728f778d84aca",
+      "geometry": "2eadf1c3f417351349dbe35acd8963af5e4ad97e5a9299ae190f2d66851c2b6e"
+    },
+    "Cue 1 | butt": {
+      "transform": "e43a41e9a17e681e6c9b3bbef2745a4172dba9e349d2ea8a5f9efe1018a95ddc",
+      "geometry": "3d0ae453d47cd88b352b96ae20d3995123293d5bde62ec8ccb46f1640b87b356"
+    },
+    "Cue 1 | ferrule": {
+      "transform": "a7eff3c78298ee730c7c355abbb42b1c2366cfcd305cf824c999209ff44f25b8",
+      "geometry": "8e34358ee05507e9e954fa4a7bd71bc4902e3356b48149ae8b6a687270f64c3a"
+    },
+    "Cue 1 | shaft": {
+      "transform": "5b3a484a643d06acd5296b68846913e284898e9c3124612f847de595c189e987",
+      "geometry": "ecb92e93d04b629cf85d90f2f02e7ce2effa0000a1fcbff14024f884288b67cc"
+    },
+    "Cue 1 | tip": {
+      "transform": "62e1de07ffd021f46608284f025bb72b6bf3a983c41ca5b4d6ee3dc3c33771e7",
+      "geometry": "3425be4358ad2e0f9b662c00cc9b6af270a9b62f6488405acac6aadaf11ca4ef"
+    },
+    "Cue 2 | butt": {
+      "transform": "0fbbd820ebfd776cac40c5cc3955a22710187bc743ef1e3510a7a98186f08922",
+      "geometry": "3d0ae453d47cd88b352b96ae20d3995123293d5bde62ec8ccb46f1640b87b356"
+    },
+    "Cue 2 | ferrule": {
+      "transform": "5579d759e4b13f54bd5440e3deab582a6fd401b6aeb9f8942354c6e0a56c8ad8",
+      "geometry": "8e34358ee05507e9e954fa4a7bd71bc4902e3356b48149ae8b6a687270f64c3a"
+    },
+    "Cue 2 | shaft": {
+      "transform": "bb7940f6bd697c6a9fe7d0a69e777af6aacf7fdc4b10ad7070f686ea79cf6816",
+      "geometry": "ecb92e93d04b629cf85d90f2f02e7ce2effa0000a1fcbff14024f884288b67cc"
+    },
+    "Cue 2 | tip": {
+      "transform": "b46fa41247bd6bba48e41783dceb9cd131a9e7f22f0cb1963cf0d2be04e7a2d8",
+      "geometry": "3425be4358ad2e0f9b662c00cc9b6af270a9b62f6488405acac6aadaf11ca4ef"
+    },
+    "Cushion": {
+      "transform": "3b93caa235871c6700416eb8e59fdb3fb171d7e197d3d87fa6d290ec9215236d",
+      "geometry": "f1a4dbf0031156157ae147ab54f72d15c4db793f57ab588448e675a27c387cc4"
+    },
+    "Cushion.001": {
+      "transform": "cb2a1cd1dece6a8bc8536a6965ee1a42b5cf79d3240211176c23523e999f0866",
+      "geometry": "f1a4dbf0031156157ae147ab54f72d15c4db793f57ab588448e675a27c387cc4"
+    },
+    "Cushion.002": {
+      "transform": "74d05824b37734063f7f6a1ff4e081f9d45c157b74d6f77343de9027cddbfe17",
+      "geometry": "f1a4dbf0031156157ae147ab54f72d15c4db793f57ab588448e675a27c387cc4"
+    },
+    "Cushion.003": {
+      "transform": "dcc63a54b32d51b1804ec82d3813f3022b3148830c0e8d08c5fa235ceb679765",
+      "geometry": "f1a4dbf0031156157ae147ab54f72d15c4db793f57ab588448e675a27c387cc4"
+    },
+    "Cushion.004": {
+      "transform": "4319a8d1f39066f16339e0890111ee10410afc5c1c5eed37179b7582f095c944",
+      "geometry": "d5af22dd14b6780df8a2404f0fd9f63d2f0b0dcf92f6971f37eaa205b87c5785"
+    },
+    "Cushion.005": {
+      "transform": "0848c0cb9aed1a6df88dbe0ef37ff9ab129f1cae720fe0c3dff27e255519df45",
+      "geometry": "d5af22dd14b6780df8a2404f0fd9f63d2f0b0dcf92f6971f37eaa205b87c5785"
+    },
+    "End rail": {
+      "transform": "6b2473905be7f9177c74fa731893fc79593d456f9c2ee6ac07825c3461b30e0a",
+      "geometry": "d029f628baa9709478b6a461f15274830b8a46eb8098acd57908517a34c5b5d7"
+    },
+    "End rail.001": {
+      "transform": "d44ceffc8d364e6fc285a9c0ee413d8a9a23bcc9b5f8801e322b177e51a2df57",
+      "geometry": "d029f628baa9709478b6a461f15274830b8a46eb8098acd57908517a34c5b5d7"
+    },
+    "Leg foot": {
+      "transform": "e55621a2c02b5b3bb8af3e289116c6f516c166a081c37bc1263fd3c9d257b537",
+      "geometry": "7f83ed8638df41b29fc86d07df7cfdc6d5fd059f1119eeb75317689b1b13f840"
+    },
+    "Leg foot.001": {
+      "transform": "29817661f331fe7ee5c5e811b9e3c038564ec80784549bf5f9d57edaca43996a",
+      "geometry": "7f83ed8638df41b29fc86d07df7cfdc6d5fd059f1119eeb75317689b1b13f840"
+    },
+    "Leg foot.002": {
+      "transform": "ca8f1458024eed864e606a6d6c10eb8981c28ca802ca0f733a553882787e0ec0",
+      "geometry": "7f83ed8638df41b29fc86d07df7cfdc6d5fd059f1119eeb75317689b1b13f840"
+    },
+    "Leg foot.003": {
+      "transform": "0aab643f990c6addb6d9d938985c8c9e801b7ee90c0a4d5915dfb1f895bdcb52",
+      "geometry": "7f83ed8638df41b29fc86d07df7cfdc6d5fd059f1119eeb75317689b1b13f840"
+    },
+    "Long rail": {
+      "transform": "ab056adf0150424123134a483056403eea64b026ef2fef81aec07a12793b64bc",
+      "geometry": "4af9b96af93622f16384644fd3e8d94d67b02c70d022209ff45a791b1dd0eade"
+    },
+    "Long rail.001": {
+      "transform": "a08a14a68d9b8c93c8f4b11cb8564716100254ec308676d0fc62e4373d6cfc4d",
+      "geometry": "4af9b96af93622f16384644fd3e8d94d67b02c70d022209ff45a791b1dd0eade"
+    },
+    "Long rail.002": {
+      "transform": "b2bc6e712455145a1cb693caf6f97fe54354ca241a539604cfee05ca8bc23447",
+      "geometry": "4af9b96af93622f16384644fd3e8d94d67b02c70d022209ff45a791b1dd0eade"
+    },
+    "Long rail.003": {
+      "transform": "b5448d84505ad543f0b3f892c4492eed7b55790ead86c09c8c0cf913d6d7c693",
+      "geometry": "4af9b96af93622f16384644fd3e8d94d67b02c70d022209ff45a791b1dd0eade"
+    },
+    "Pocket 1 | recessed liner": {
+      "transform": "3cfbdea88edc27ab7dc002086afc1606a01818dd7941d0d5e512cdaf754308a7",
+      "geometry": "4a573a62aca33f01e31be5929a12b866d9d049ad03b2b8eef4d8013054f9b227"
+    },
+    "Pocket 2 | recessed liner": {
+      "transform": "71782c0ac6bb8630040dbe06c726e0a13708408a742ba984d722855bae3696f0",
+      "geometry": "4a573a62aca33f01e31be5929a12b866d9d049ad03b2b8eef4d8013054f9b227"
+    },
+    "Pocket 3 | recessed liner": {
+      "transform": "b2f8271a7eadddeaf02f7becff134ebf88b64a320c0ba25399b7761253190d98",
+      "geometry": "4a573a62aca33f01e31be5929a12b866d9d049ad03b2b8eef4d8013054f9b227"
+    },
+    "Pocket 4 | recessed liner": {
+      "transform": "49bb03d08da4f708a0737c665f40c67ae7d12e6fb4f31e55c683ec23f0282803",
+      "geometry": "4a573a62aca33f01e31be5929a12b866d9d049ad03b2b8eef4d8013054f9b227"
+    },
+    "Pocket 5 | recessed liner": {
+      "transform": "5b73c8b03d3c16b961dec802a52e6b1645a62881c1db78a5244aa4110948b1ce",
+      "geometry": "4a573a62aca33f01e31be5929a12b866d9d049ad03b2b8eef4d8013054f9b227"
+    },
+    "Pocket 6 | recessed liner": {
+      "transform": "25b11bbd164713bed8a355c1fd8e4099217df4b164b6fe28f1aabfb6c2803df5",
+      "geometry": "4a573a62aca33f01e31be5929a12b866d9d049ad03b2b8eef4d8013054f9b227"
+    },
+    "Pocket jaw": {
+      "transform": "5dbead60905ff3a9b4044070c910333dede60b0cb9797d3a565f08940b3bf7e0",
+      "geometry": "d7620c428cc3f295a1074079cd04271cc524bff6294ecc44c44e0908c3816c2d"
+    },
+    "Pocket jaw.001": {
+      "transform": "9e875c6a67cdf196b3dd4bc01e8ec14697ea3727eee67653202401b19320af7c",
+      "geometry": "44b91084dd23b31a5ed62cd7587efa07f015bdee26c5c908e0b513b25fdf508e"
+    },
+    "Pocket jaw.002": {
+      "transform": "469a658e7d07d641754e8e4e6bbfdf54fcd02d7e0b026e611698d936c27ae1a6",
+      "geometry": "d26bee62a47cab7d654ade2fe68f63ebbef155ff07073aed7ffaa21d9ae539db"
+    },
+    "Pocket jaw.003": {
+      "transform": "8410e7abc52c50bf1c09dc15077d28668f70f27133a86bcd9db4301852f945fb",
+      "geometry": "d7620c428cc3f295a1074079cd04271cc524bff6294ecc44c44e0908c3816c2d"
+    },
+    "Pocket jaw.004": {
+      "transform": "f5449390fd35512c833cfeb0886ec02e4934380f8fd6b783eeaa63b5d4ff9ea6",
+      "geometry": "44b91084dd23b31a5ed62cd7587efa07f015bdee26c5c908e0b513b25fdf508e"
+    },
+    "Pocket jaw.005": {
+      "transform": "8ed9442505af5901b81ba2cda52a0899e5668839571823733be4bc1f5d415157",
+      "geometry": "d26bee62a47cab7d654ade2fe68f63ebbef155ff07073aed7ffaa21d9ae539db"
+    },
+    "Pocket jaw.006": {
+      "transform": "9496bbbd34689d9002deb454a537962e7791c273d2efc6e7674553d4a7d9f8c7",
+      "geometry": "d7620c428cc3f295a1074079cd04271cc524bff6294ecc44c44e0908c3816c2d"
+    },
+    "Pocket jaw.007": {
+      "transform": "e8523666f72e8150facab5788ea231b284e8c80d4633e9dbe976b996ef6c6aaa",
+      "geometry": "44b91084dd23b31a5ed62cd7587efa07f015bdee26c5c908e0b513b25fdf508e"
+    },
+    "Pocket jaw.008": {
+      "transform": "66a798c65b401f7ac593f399539fd96a22c572ff2a465b2bfb490c13682412b1",
+      "geometry": "d26bee62a47cab7d654ade2fe68f63ebbef155ff07073aed7ffaa21d9ae539db"
+    },
+    "Pocket jaw.009": {
+      "transform": "b4d109ec1639caf6cff0f34f268f9663f9d0d5aa5a792988c3393db17b169cb7",
+      "geometry": "d7620c428cc3f295a1074079cd04271cc524bff6294ecc44c44e0908c3816c2d"
+    },
+    "Pocket jaw.010": {
+      "transform": "ca234a6efd99fa58255244dcd5bc3a22543c106d932b0588348de7e898892473",
+      "geometry": "44b91084dd23b31a5ed62cd7587efa07f015bdee26c5c908e0b513b25fdf508e"
+    },
+    "Pocket jaw.011": {
+      "transform": "4a7e77f14b3841adbf57963fe198fd927ef239326724cde73be186f405ad540e",
+      "geometry": "d26bee62a47cab7d654ade2fe68f63ebbef155ff07073aed7ffaa21d9ae539db"
+    },
+    "Rack | wooden side": {
+      "transform": "fc13f8b5a4e0abbf1c01df42a0ad981bf3a1a13ecae632c6a72d6fc38eb46b64",
+      "geometry": "6d5607000309692d203c80ccfa16f70e5a312f6a15bedbd7dd7591ee46dd3b63"
+    },
+    "Rack | wooden side.001": {
+      "transform": "c85e788a0948273359e6ec6138101c857a59a8d3c8db92d229c5dd434a7c4024",
+      "geometry": "1b44d373c0385fb5261c0f69089ce405003fb55c6779b0eaf0a584d06171b54e"
+    },
+    "Rack | wooden side.002": {
+      "transform": "a33266b8ddff702e364d993f7b407785ab153338bcf7a5f7336c5f93b6d35ce2",
+      "geometry": "3b53ca3ed52dfd94e730d15456ca1d54794aeae0e3bbfc77ef3655a4d4f58d85"
+    },
+    "Rail sight": {
+      "transform": "4cd7673feffb01bc58dc7234ec1b9b536e7e7054a2dca8ef673f0ea2cf92634a",
+      "geometry": "0a12ccbe8ed8a584a29aeb602f5ea637e376da8428ba9316ba5994c07fe2c485"
+    },
+    "Rail sight.001": {
+      "transform": "07ba3756d62869fd1c1c1ab6b412391aa827a6a735813cac85fd06dbca3ff0b5",
+      "geometry": "0a12ccbe8ed8a584a29aeb602f5ea637e376da8428ba9316ba5994c07fe2c485"
+    },
+    "Rail sight.002": {
+      "transform": "78d42836a181944c2c858fd8d6f034a4633b7b72be69c337b8d7e3f0e5fbdd4e",
+      "geometry": "0a12ccbe8ed8a584a29aeb602f5ea637e376da8428ba9316ba5994c07fe2c485"
+    },
+    "Rail sight.003": {
+      "transform": "d2f6d6b2a35984dd1a30cbc3fb842b63f4991391e09852d0207973650c066736",
+      "geometry": "0a12ccbe8ed8a584a29aeb602f5ea637e376da8428ba9316ba5994c07fe2c485"
+    },
+    "Rail sight.004": {
+      "transform": "6cb54c1dd2dd5d69d17ccbe444186f2ec7dd697bbbad7baabaf4b6fc5cb4200f",
+      "geometry": "0a12ccbe8ed8a584a29aeb602f5ea637e376da8428ba9316ba5994c07fe2c485"
+    },
+    "Rail sight.005": {
+      "transform": "d6a7117393b7f59857d88ee5efb78702974de2bc96cca9b06c74007a8b78995d",
+      "geometry": "0a12ccbe8ed8a584a29aeb602f5ea637e376da8428ba9316ba5994c07fe2c485"
+    },
+    "Rail sight.006": {
+      "transform": "8467fadd868efeaa011971d2a01f1881c6de28399c3266fb432fa2f1d59f461d",
+      "geometry": "0a12ccbe8ed8a584a29aeb602f5ea637e376da8428ba9316ba5994c07fe2c485"
+    },
+    "Rail sight.007": {
+      "transform": "c24eefa2edfbcfd803a8de7115f451c56e1765249d361581127205c335efadfe",
+      "geometry": "0a12ccbe8ed8a584a29aeb602f5ea637e376da8428ba9316ba5994c07fe2c485"
+    },
+    "Rail sight.008": {
+      "transform": "8881b9c73e373e371e1bff77d4208eb3fbf5c23fb9976e4dd16bf7d5bb762eac",
+      "geometry": "0a12ccbe8ed8a584a29aeb602f5ea637e376da8428ba9316ba5994c07fe2c485"
+    },
+    "Rail sight.009": {
+      "transform": "8502dc64c1bc822c2222cb4a96c07002d5bc70b1044b3db843587ef97256d53e",
+      "geometry": "0a12ccbe8ed8a584a29aeb602f5ea637e376da8428ba9316ba5994c07fe2c485"
+    },
+    "Rail sight.010": {
+      "transform": "b48bc47cd37ed4f2e5a207e53ebff7f40a5357377773768dbf87afbdb9c5ca12",
+      "geometry": "0a12ccbe8ed8a584a29aeb602f5ea637e376da8428ba9316ba5994c07fe2c485"
+    },
+    "Rail sight.011": {
+      "transform": "4d111b073cb19e9b9cc331957feb4eb7c47ac1c76b649440e06520b14eb34110",
+      "geometry": "0a12ccbe8ed8a584a29aeb602f5ea637e376da8428ba9316ba5994c07fe2c485"
+    },
+    "Studio floor": {
+      "transform": "5dc95cb0d52be8462fa63a24657a9bd73cffec5a6fcae2ba003461f6a29f7ef5",
+      "geometry": "189afaba702e79dc4e5fe11636a36ed778598903484238ae1e933866dede367a"
+    },
+    "Studio | camera": {
+      "transform": "26113d52b17d2ce1886b1f2774a76a794b7d69dc31ed5a9f28d34bb3faf40d5b",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "Studio | fill": {
+      "transform": "3639f2805f39f3c125e928873103c9a88b9741e57c375bc714b3fc139225d645",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "Studio | key": {
+      "transform": "4d2d5a2e3fccca1c16008e4cdc57ee8877cfc0fb05503b1e71c3bbff9e2f9cee",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "STUDIO | not exported": {
+      "transform": "119b9519094a95eb2fd3a9fda2235079519f52705ce563dcac619cb9f1133a12",
+      "geometry": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    "Table leg": {
+      "transform": "80f18bfb69ad9fb6ce0a2865127ba3e736f2a2d26a2f376a6920eccaed350a7a",
+      "geometry": "70a2c843a2f682d56efcc3598cf3b643a03ef916a5b39842de3010242ff31190"
+    },
+    "Table leg.001": {
+      "transform": "4932198ffbf13a5ef9cdd65fe758cf9db441fd8ec7c945f4b9a1d179aa9d8de2",
+      "geometry": "70a2c843a2f682d56efcc3598cf3b643a03ef916a5b39842de3010242ff31190"
+    },
+    "Table leg.002": {
+      "transform": "a4cf00075a848d192b2d64be8acf84763108d11b50efa0068d6ca8ce1a1ce780",
+      "geometry": "70a2c843a2f682d56efcc3598cf3b643a03ef916a5b39842de3010242ff31190"
+    },
+    "Table leg.003": {
+      "transform": "981b32ef6884ed5373c9a2502f93345d5d785fd7b4c6a1fe3c04f2342c753462",
+      "geometry": "70a2c843a2f682d56efcc3598cf3b643a03ef916a5b39842de3010242ff31190"
+    },
+    "Table | slate and green cloth": {
+      "transform": "eb552cc03f086ee7ec6a2cf9500b9f8c21af96fff9846abbdfbee211a9d707bb",
+      "geometry": "090e9989892696b7001a46fc8a20a7c19b0754843dcf340f2f0f2815f719fe92"
+    },
+    "Table | solid walnut cabinet": {
+      "transform": "74f01dd570a137b9581bacec401c46a1eb2a824d1d5561d7d50ed5dca2c18ef9",
+      "geometry": "0a938e9b1429e7a08d4eb1f6e67cb2d47c92c4c9ec651ddfe6e83e1ec5653c81"
+    }
+  }
+}

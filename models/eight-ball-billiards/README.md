@@ -102,3 +102,20 @@ The initial published revision was not accepted after this extra defect was
 found; its own Actions run was cancelled before deployment. See the
 [functional-scale note](../../docs/model-qa/billiards-functional-scale.md) and
 current report for the final candidate and acceptance evidence.
+
+## Chalk support QA
+
+MODEL-0005 lowers only `ASSET_Chalk` by 1.6 mm to remove a 1.5 mm rail gap with
+0.1 mm overlap. Shape,25×25×27 mm scale, bevels, materials, UVs and normals are
+preserved. `scripts/repair-chalk-contact.py` is revision-guarded, fingerprints
+every source object, exports the affected scene and verifies the normalized
+standalone is semantically identical before retaining its original bytes.
+Historical generic Cube mesh labels are not asset identities. All 21 standalone
+GLBs remain byte-identical; the assembly changes only one root height.
+
+`tests/chalk.test.mjs` checks full-size core/sleeve contact in both files and
+casts five footprint rays against actual flat wooden-rail triangles. Use
+`scripts/model-qa-chalk-contact.py` for disposable source/assembly contact
+renders, and `scripts/render-chalk-previews.py` for previews without saving
+camera or display settings. See the [contact lesson](../../docs/model-qa/billiards-support-contacts.md)
+and per-model report for current release acceptance.
