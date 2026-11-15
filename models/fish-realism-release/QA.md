@@ -17,3 +17,9 @@ Replace only `fish-barramundi`, `fish-betta`, `fish-stingray`, `fish-red-snapper
 ## Publication boundary
 
 A push is not deployment evidence. After pushing, wait for a successful GitHub Pages deployment containing this commit, then run the same browser checks with `FISH_LIVE_URL=https://yapweijun1996.github.io/Blender-3D-Gallery/`. Commit the live receipts and screenshots after verification. Until those exist, online availability remains unverified. Mobile checks use emulation, not a physical handset.
+
+## Batch 02: silver pomfret, black pomfret, Indian mackerel
+
+This batch adds exactly three catalog replacements, bringing the manifest to nine. Rebuilt the full catalog, reimported and measured all nine delivery GLBs, checked all 79 protected hashes and confirmed registrar idempotence. Incremental browser receipts are named `local-all-batch-02-browser-verification.json`; prior six model binaries remain unchanged. These new fish retain per-item photo references, head/detail renders, animated GIFs and independent draft QA evidence. Live availability still requires the deployment and live verification described above.
+
+Batch 02 results: all 12 incremental Chromium/WebKit desktop/mobile scenarios passed; 686 existing unit tests passed, zero failures/skips. The previous six release GLB hashes are unchanged.

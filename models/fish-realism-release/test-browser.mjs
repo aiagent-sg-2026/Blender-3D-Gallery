@@ -9,7 +9,8 @@ const server=process.env.FISH_LIVE_URL?{url:process.env.FISH_LIVE_URL,close:asyn
 const results=[];
 for(const engine of (process.env.FISH_ENGINE?[process.env.FISH_ENGINE]:['chromium','webkit'])) {
  const browser=await ({chromium,webkit}[engine]).launch(engine==='chromium'?launchOptions:{headless:true});
- try { for(const slug of Object.keys(manifest.models)) {
+ try { for(const slug of (process.env.FISH_SLUGS?process.env.FISH_SLUGS.split(','):Object.keys(manifest.models))) {
+ assert.ok(manifest.models[slug],'Unknown release slug');
  const asset=path.resolve(`models/fish-realism-release/${slug}/model.glb`);
  const artifactHash=crypto.createHash('sha256').update(await fs.readFile(asset)).digest('hex');
 const directory=`output/playwright/fish-realism-release/${process.env.FISH_LIVE_URL?'live':'local'}/${engine}/${slug}`;await fs.mkdir(directory,{recursive:true});
@@ -40,5 +41,5 @@ const still=await capture(canvas);await page.waitForTimeout(150);assert.ok(still
  console.log('PASS release',engine,slug);
  } } finally {await browser.close();}
 }
-await fs.writeFile(`models/fish-realism-release/${process.env.FISH_LIVE_URL?'live':'local'}-${process.env.FISH_ENGINE||'all'}-browser-verification.json`,JSON.stringify({mode:'actual_catalog_no_substitution',mobile:'emulated viewport, not physical hardware',results},null,2)+'\n');
+await fs.writeFile(`models/fish-realism-release/${process.env.FISH_LIVE_URL?'live':'local'}-${process.env.FISH_ENGINE||'all'}${process.env.FISH_BATCH?'-'+process.env.FISH_BATCH:''}-browser-verification.json`,JSON.stringify({mode:'actual_catalog_no_substitution',mobile:'emulated viewport, not physical hardware',results},null,2)+'\n');
 await server.close();
