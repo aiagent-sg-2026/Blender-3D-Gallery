@@ -178,7 +178,7 @@ Acceptance coverage E001–E100 must be tracked against deterministic assertions
 
 # Singapore and Malaysia Festival Models — 2026-11-15
 
-**Status:** F01–F03 implemented and locally verified; later items remain planned.
+**Status:** F01–F04 implemented and locally verified; later items remain planned.
 Work through one model at a time. See the [festival model
 brief](docs/festival-models/README.md) for concept images, existing inventory,
 design ideas and per-model acceptance criteria. Recheck the catalog before
@@ -196,8 +196,10 @@ starting each item. Preserve the historical task records above.
   display, editable Blender source, GLB, preview and catalog entry created;
   local validation and browser checks passed. See
   [model notes](models/new-year-countdown-clock/README.md) for evidence and limits.
-- [ ] **F04 — Chinese New Year lion dance head:** research the visual details,
-  create an original model and complete the acceptance gate after F03.
+- [x] **F04 — Chinese New Year lion dance head:** original stylized editable
+  source, GLB, preview and catalog entry created; local validation and browser
+  checks passed. See [model notes](models/chinese-new-year-lion-dance-head/README.md)
+  for references, evidence and limits.
 - [ ] **F05 — Chinese New Year kumquat tree:** distinguish it from the existing
   mandarin-orange basket and complete the acceptance gate after F04.
 - [ ] **F06 — Mid-Autumn rabbit lantern:** distinguish it from the existing
