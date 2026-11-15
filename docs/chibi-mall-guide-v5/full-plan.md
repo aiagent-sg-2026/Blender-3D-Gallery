@@ -116,7 +116,7 @@ Resolved by the owner on 2026-11-15:
 1. Height: 1.00 m.
 2. Order: v5 first, `kit` grows from v5's needs.
 3. Sockets: plain nodes under bones.
-4. Step 3 prototype (blink and head topology) first; the blink method is decided by its result.
+4. Step 3 prototype (blink and head topology) first; the blink method is decided by its result. Result: eyes sink behind the skin (key on a separate `Eyes` mesh); see standard section 15 and `prototype/blink/README.md`.
 
 Still open:
 5. Blender version for the build (5.1.2 installed; GJH README names 5.2.3).

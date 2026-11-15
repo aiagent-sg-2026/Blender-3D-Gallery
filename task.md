@@ -234,6 +234,7 @@ evidence before marking it complete. No deployment, commit or push is implied by
 - [x] Concept turnaround B generated and locked as the v5 reference (AI concept image; rights not cleared, internal reference only).
 - [x] Owner decisions recorded: 40,000 triangle / 20 draw-call budget; mandatory rig (20 bones or fewer) with three shape keys driving brows and cheeks; fresh-agent review then owner check; animations idle+blink, two walk styles, wave, hold-and-point, put-sign-down; swappable sign icons; boy look kept.
 - [x] Decided: extra low-detail GLB for distant NPCs (about 8,000 triangles, proposed); dialog avatar as pre-rendered stills, one per expression; festive uniform variant; expression and pose reference images generated, with a corrected put-down pose (`docs/chibi-mall-guide-v5/mockup/`).
+- [x] Blink prototype done (`models/chibi-mall-guide-v5/prototype/blink/`): eyes-sink method adopted, key `blink` on a separate `Eyes` mesh; the eye opening still needs a designed shape.
 - [ ] Open: owner approval of the standard; which festivals the festive uniform covers.
 - [ ] S1 reference pack fixed and provenance note kept.
 - [ ] S2 proportion blockout (about 2.5 heads, eyes in the lower third).
