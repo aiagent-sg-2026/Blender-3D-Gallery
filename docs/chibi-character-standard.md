@@ -105,3 +105,41 @@ Test in `models/chibi-mall-guide-v5/qa/morph-smoke/` (Blender 5.1.2, Three.js 0.
 - A skinned mesh parented under the armature gives the validator warning NODE_SKINNED_MESH_NON_ROOT, which fails G1 (0 warnings). Keep skinned meshes as scene roots (unparented) when exporting.
 - The head mesh's shape keys must be the only source of expression morphs; add a `blink` key (the idle animation needs it).
 - Not tested: rendering, the gallery's `src/viewer.js` in a browser, and the mall runtime. The viewer shows models at rest, so a consumer must drive influences itself.
+
+## 13. Modular build and attachment sockets (proposal, 2026-11-15)
+
+Status: proposal; the owner chose to record it, not yet to adopt it as final. Nothing here is implemented or tested.
+
+### 13.1 Build scripts (layer 1)
+
+Each character splits its generator by responsibility instead of one monolith (v4's `generate.py` is 1,060 lines; the GJH Mall Visitor's is 207). Suggested files inside `models/<name>/`:
+
+| File | Responsibility |
+| --- | --- |
+| `config.py` | Single source of truth: proportions, colours, part sizes, budgets |
+| `head.py` | Head topology and face edge loops |
+| `hair.py` | 6 to 8 blunt locks fitted under headwear |
+| `garments.py` | Vest, shirt, shorts, cap, socks, shoes |
+| `limbs.py` | Arms, legs, gloves |
+| `rig.py` | Armature (20 bones or fewer), rigid single-bone binding, sockets |
+| `shapekeys.py` | smile, surprised, blink (brows and cheeks included) |
+| `anim.py` | Clips and foot-contact baking |
+| `export.py` | Full and low-detail GLB |
+| `qa/` | Gate scripts, as in v4 |
+
+Rules: numbers live only in `config.py`; modules read config and do not duplicate values; the build stays deterministic and headless (no interactive sculpt, which v4 could not rebuild headlessly). Do not extract a shared library until a second character shows which parts really repeat.
+
+### 13.2 Runtime modules (layer 2)
+
+- Body plus base uniform: one GLB.
+- Sign: a separate prop GLB attached to the right-hand socket (supports swappable icons and put-sign-down).
+- Festive accessories (hat, decorations): separate small GLBs attached to head or body sockets; the base body is not duplicated.
+- Low-detail variant: same scripts, different parameters.
+- Cost: the consumer code must attach props, and every prop needs its own gate run.
+
+### 13.3 Socket convention (to be validated)
+
+- Sockets are empty bones or nodes named `SOCKET_<Name>`, e.g. `SOCKET_Hand_R`, `SOCKET_Head_Top`, `SOCKET_Chest_L`.
+- Each socket has unit scale and an agreed local axis (proposal: +Y up, +Z forward in rest pose); a prop is modelled with its attachment point at its own origin and the same axis.
+- Props are scene roots (the skinned-mesh rule from section 12 applies to skinned props).
+- Open: whether sockets are bones inside the armature (counted against the 20-bone limit) or plain nodes parented to bones; whether the mall runtime and the gallery viewer attach props the same way. Both need a test before this section is accepted.

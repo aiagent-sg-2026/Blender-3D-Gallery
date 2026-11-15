@@ -35,6 +35,10 @@ Reference decision (2026-11-15): sheet B is locked as the v5 reference and copie
 
 Animations (idle+blink, walk, wave/point), swappable sign icon and brow/cheek expressions are recorded in standard section 9. Budgets, mandatory rig, reviewer and rights decisions are recorded in the [standard](../chibi-character-standard.md) section 8.
 
+## Build structure
+
+The generator is split by responsibility and the sign and festive accessories are separate prop GLBs attached to sockets; see standard sections 13.1 to 13.3 (proposal, untested).
+
 ## Build plan
 
 | Step | Work | Done when |
