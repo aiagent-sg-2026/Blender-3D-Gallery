@@ -1,0 +1,15 @@
+{
+  "status": "FAIL_NOT_ACCEPTED",
+  "observed_at": "2026-11-15T04:48:08.760055+00:00",
+  "failure": "page.screenshot timeout30000ms at full-page capture; fonts loaded",
+  "script": "scripts/test-model-qa-browser.mjs:127",
+  "evidence_directory": "output/playwright/model-qa/MODEL-0008-live-582a37a0-attempt1",
+  "result_records": [],
+  "host_load_averages": [
+    254.26,
+    224.5,
+    170.74
+  ],
+  "swap_used_mb": 10623.88,
+  "interpretation": "Severe host resource pressure is a supported contributing-cause inference, not proof of a product defect. Original script thresholds were not changed. A complete live acceptance is still required."
+}

@@ -1,6 +1,6 @@
 # MODEL-0008: Ball 02
 
-Status: READY_TO_PUSH. No confirmed product defect; source, generator, previews and all22 GLBs remain unchanged. Selected only after MODEL-0007 QA release ed66da5e passed Actions43669406927, Pages deployment and actual standalone/assembly production acceptance. Originals are preserved in original-manifest.json.
+Status: PUSHED / accepted. QA-only582a37a0 is verified as a main ancestor; Actions43673948892 and Pages deployment succeeded. Complete production acceptance passed in isolated Ubuntu with the original scripts, four fresh browser profiles and five downloaded-file tests. MODEL-0009 had not begun at acceptance. No confirmed product defect; source, generator, previews and all22 GLBs remain unchanged. Selected only after MODEL-0007 QA release ed66da5e passed Actions43669406927, Pages deployment and actual standalone/assembly production acceptance. Originals are preserved in original-manifest.json.
 
 ## Inspection and decision
 
@@ -18,11 +18,13 @@ Replay without saving or replacing original products:
 /Applications/Blender.app/Contents/MacOS/Blender --background --disable-autoexec --threads 2 models/eight-ball-billiards/scene.blend --python-exit-code 1 --python docs/model-qa/MODEL-0008/export-replay.py -- /tmp/ball02-replay
 ```
 
-## Current checks
+## QA candidate checks (582a37a0)
 
 - 661 unit tests and35 targeted billiards checks PASS. Shared assertNumberMarks in tests/helpers/ball-geometry-checks.mjs owns the same unchanged geometric criteria for Ball01 and Ball02. The existing Ball01 five checks remain active and passing; Ball02 adds five.
 - Desktop1440x900 and tablet768x1024 standalone/assembly Viewer loading and controls pass in four fresh profiles. The exact original standalone payload is215296bytes; sampled software WebGL shows5draws/5824triangles. No physical-device FPS claim.
 - Seven source and standalone-reimport views plus three marked-face/contact views each for source and assembly are rendered. Primary overview, both marked-face and grazing inspection finds no required repair. Independent review accepts the existing product at89/100; primary inspection agrees. All20 native views were inspected before packaging; eight native PNGs and four contact sheets retained, all originals archived with hashes. Ten matched native pairs show maximum mean RGB channel error0.002135/255 (descriptive only). Full current Game46/46 (including561 catalog resources) and experience31/31 PASS without filters or page errors.
 - Physical mobile testing is excluded by the owner.
 
-Scoped main publication, required Actions and actual production acceptance remain pending. No later model may start until those gates pass. Full campaign remains incomplete.
+Main publication and original GLB blob are verified. Required Actions and complete production acceptance passed; see release-evidence.json. Closure metadata will travel with the next validated campaign commit. No later model may start until those gates pass. Full campaign remains incomplete.
+
+Upstream main was safely fast-forwarded to 6982fb07; billiards source/exports and this test harness are unchanged. Eight new tracked 3D artifacts append five PENDING records across two reconciliations; no additional model was inspected. The first local live run failed at full-page screenshot capture under host load254/swap10.6GB and is retained in live-first-attempt.json/log.gz. That attempt is not accepted. The isolated Ubuntu recovery passed all original checks with unchanged timeouts; see remote-recovery.json, live-deployment.json and the retained screenshots/logs.

@@ -1,0 +1,43 @@
+{
+  "observed_at": "2026-11-15T05:01:26.113Z",
+  "qa_release_head": "582a37a0d11a9c019cf48ba8597a3fa8159fbbdc",
+  "actions_run_id": 43673948892,
+  "both_standalone_and_assembly_accepted": true,
+  "products_unchanged": true,
+  "execution_environment": {
+    "platform": "linux",
+    "arch": "arm64",
+    "node": "v24.21.0"
+  },
+  "script_sha256": {
+    "scripts/test-model-qa-browser.mjs": "d35cc5136efd54eef4745b2fdfa632bdb4e0af9d1de1da4113e8d8084a73f9d9",
+    "scripts/browser-test-utils.mjs": "2b2f69f9ff7bf633f703e995d7b0a0c5ad51fcfb24f31bcd947f7dfc66c999af",
+    "tests/ball-02.test.mjs": "1f7a65f92f3e47cb083da657721b5988ae69396c5203177066b4153387583417",
+    "tests/helpers/ball-geometry-checks.mjs": "ff7e52215768833d236a30a3280ccd457ed2b6fc69d2956679389d28575e5bc2"
+  },
+  "artifacts": [
+    {
+      "model_id": "ball-02",
+      "url": "https://yapweijun1996.github.io/Blender-3D-Gallery/assets/ball_02-DB1WWWFC.glb",
+      "status": 200,
+      "content_encoding": "gzip",
+      "content_length_header": "77270",
+      "decoded_bytes": 215296,
+      "sha256": "4c541de60d4d2641a316ca4e635d2329994a45de751e78d06d6cd01a27a7202a",
+      "matches_validated_candidate": true,
+      "browser_results": "output/live/results.json"
+    },
+    {
+      "model_id": "eight-ball-billiards",
+      "url": "https://yapweijun1996.github.io/Blender-3D-Gallery/assets/billiards-scene-MKVWDBcv.glb",
+      "status": 200,
+      "content_encoding": "gzip",
+      "content_length_header": "1083990",
+      "decoded_bytes": 3518732,
+      "sha256": "6e11310f233ca08c86cffa9b075500fd47d07396deb78b3e5ef06af611c3e7ff",
+      "matches_validated_candidate": true,
+      "browser_results": "output/live-assembly/results.json"
+    }
+  ],
+  "physical_mobile": "Excluded by explicit owner instruction"
+}

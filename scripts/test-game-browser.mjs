@@ -1076,6 +1076,7 @@ try {
       const ids = await page
         .locator("[data-asset-id]")
         .evaluateAll((els) => els.map((el) => el.dataset.assetId));
+      let checked = 0;
       for (const id of ids) {
         await page.click(`[data-asset-id="${id}"]`);
         await page.waitForSelector("#viewport canvas");
@@ -1096,6 +1097,10 @@ try {
         await page.click("#reset-view");
         await page.click("#close-viewer");
         assert.equal(await page.locator("#viewport canvas").count(), 0);
+        checked += 1;
+        if (checked % 25 === 0 || checked === ids.length) {
+          console.log("INFO gallery preview/download", checked + "/" + ids.length, id);
+        }
       }
       for (const id of ["ball-08", "eight-ball-billiards"]) {
         await page.goto(server.url + "?model=" + id);

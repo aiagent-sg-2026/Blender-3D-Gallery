@@ -502,7 +502,7 @@
       "name": "Ball 02",
       "collection": "billiards",
       "kind": "catalog-model",
-      "status": "READY_TO_PUSH",
+      "status": "PUSHED",
       "export_paths": [
         "models/eight-ball-billiards/exports/ball_02.glb"
       ],
@@ -533,18 +533,20 @@
         "performance": "PASS5draws/5824triangles,215296bytes in sampled software WebGL; no physical hardware FPS claim.",
         "regression": "PASS661unit/35targeted, full Game46 including561 catalog assets and experience31; no filters/page errors.",
         "mobile": "N/A explicit owner exclusion",
-        "github_main": "PENDING QA-only release",
-        "github_actions": "PENDING required workflow",
-        "live": "PENDING current deployed-release acceptance"
+        "github_main": "PASS QA-only582a37a0 published and verified; ancestor of synchronized6982fb07, original billiards files unchanged.",
+        "github_actions": "PASS Actions43673948892 on582a37a0; build/full release gates/deploy succeeded.",
+        "live": "PASS isolated Ubuntu recovery with original scripts: exact4c541de6 leaf/6e113 assembly, four desktop/tablet profiles and5 downloaded-file geometry/contact checks. First Mac screenshot timeout retained."
       },
-      "commit_sha": null,
-      "remote_verified": false,
+      "commit_sha": "582a37a0d11a9c019cf48ba8597a3fa8159fbbdc",
+      "remote_verified": true,
       "remaining_risks": [
-        "Main publication, required Actions and actual production acceptance pending.",
         "Physical mobile excluded by owner; no hardware FPS claim."
       ],
       "report": "docs/model-qa/MODEL-0008/README.md",
-      "repairs_required": false
+      "repairs_required": false,
+      "required_remote_checks_passed": true,
+      "actions_run_id": 43673948892,
+      "release_evidence": "docs/model-qa/MODEL-0008/release-evidence.json"
     },
     {
       "qa_id": "MODEL-0009",
@@ -552,14 +554,14 @@
       "name": "Ball 03",
       "collection": "billiards",
       "kind": "catalog-model",
-      "status": "PENDING",
+      "status": "READY_TO_PUSH",
       "export_paths": [
         "models/eight-ball-billiards/exports/ball_03.glb"
       ],
       "source_candidates": [
         "models/eight-ball-billiards/scene.blend"
       ],
-      "source_mapping": "candidate; inspect asset root in Blender before acceptance",
+      "source_mapping": "Verified ASSET_Ball_03:57.15mm resin body with two opposite medallion/numeral3 pairs;5meshes6400triangles.",
       "generator_candidates": [
         "models/eight-ball-billiards/generate.py"
       ],
@@ -572,12 +574,29 @@
       "export_sha256": "a78935075c2b991166b60fd9b4fba5248e5baf8c1fefa4ef2eec54a754701352",
       "defects": [],
       "repairs": [],
-      "qa_results": {},
+      "qa_results": {
+        "geometry": "PASS closed positive-volume resin sphere; outward open paint overlays with correct source/reimport boundaries; actual cloth support within1micron.",
+        "uv_textures": "PASS finite original UV; texture atlas/stretch N/A untextured materials.",
+        "pbr": "PASS opaque untextured red resin0.23/ivory0.24/black ink0.29 dielectric roughness.",
+        "visual": "PASS20 native views and independent89/100 accepts no repair;10 native matched pairs max mean RGB error0.0021371/255 descriptive only.",
+        "glb": "PASS original/assembly/scratch validators0errors0warnings; semantic index-order replay, no byte-exact claim.",
+        "animation": "N/A static unrigged model; Game interactions tested separately.",
+        "runtime": "PASS exact original a7893507 leaf and6e113 assembly plus controls across four latest desktop/tablet profiles; no page/HTTP errors.",
+        "performance": "PASS5draws/6400triangles,268828bytes in sampled software WebGL; no hardware FPS claim.",
+        "regression": "PASS670 latest units/40 targeted; unfiltered base Game46/experience31 with564 assets; pure append proof plus latest567-asset build,4 Viewer profiles and9 integration checks for3 additions. Full final-commit CI pending.",
+        "mobile": "N/A explicit owner exclusion",
+        "github_main": "PENDING QA-only release",
+        "github_actions": "PENDING required workflow",
+        "live": "PENDING final-release production acceptance"
+      },
       "commit_sha": null,
       "remote_verified": false,
       "remaining_risks": [
-        "Not yet inspected under this QA campaign."
-      ]
+        "Main publication, required final-commit Actions and production acceptance pending.",
+        "Physical mobile excluded by owner; no hardware FPS claim."
+      ],
+      "report": "docs/model-qa/MODEL-0009/README.md",
+      "repairs_required": false
     },
     {
       "qa_id": "MODEL-0010",
@@ -63658,16 +63677,251 @@
       "remaining_risks": [
         "Newly discovered upstream asset; not inspected under this campaign."
       ]
+    },
+    {
+      "model_id": "gjh-visitor-v3",
+      "name": "GJH Visitor v3",
+      "collection": "gjh-visitor-v3",
+      "kind": "catalog-model",
+      "export_paths": [
+        "models/gjh-visitor-v3/exports/gjh-visitor-v3.glb"
+      ],
+      "source_candidates": [
+        "models/gjh-visitor-v3/sources/gjh-visitor-v3.blend"
+      ],
+      "source_mapping": "Candidate; exact root mapping awaits individual QA.",
+      "generator_candidates": [
+        "models/gjh-visitor-v3/animations.py",
+        "models/gjh-visitor-v3/export.py",
+        "models/gjh-visitor-v3/generate.py",
+        "models/gjh-visitor-v3/materials.py",
+        "models/gjh-visitor-v3/validate.py"
+      ],
+      "metadata": "models/gjh-visitor-v3/metadata.json",
+      "thumbnail": "models/gjh-visitor-v3/previews/front.png",
+      "root": null,
+      "runtime_route": "?model=gjh-visitor-v3",
+      "export_sha256": "a0261a007b59a9e444be9aca236d9f2929b6cd84cc5cdb5ca98883f5d799b265",
+      "qa_id": "MODEL-1885",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/chibi-mall-visitor/chibi-mall-visitor.glb",
+      "name": "chibi-mall-visitor.glb",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [
+        "models/chibi-mall-visitor/chibi-mall-visitor.glb"
+      ],
+      "source_candidates": [],
+      "sha256": "399cf285a563c73080f6e8293323fc10fcc838c431d1d27d9ffe175bc38c9dc3",
+      "qa_id": "MODEL-1886",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "artifact:models/chibi-mall-visitor/scene.blend",
+      "name": "scene.blend",
+      "kind": "uncatalogued-artifact",
+      "export_paths": [],
+      "source_candidates": [
+        "models/chibi-mall-visitor/scene.blend"
+      ],
+      "sha256": "ab3c731d8db36a6e2993d4eb4c8b62c4299f1156549069fd2cb8f6a9ea527b1f",
+      "qa_id": "MODEL-1887",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "christmas-tree",
+      "name": "Christmas Tree",
+      "collection": "christmas-tree",
+      "kind": "catalog-model",
+      "export_paths": [
+        "models/christmas-tree/exports/christmas-tree.glb"
+      ],
+      "source_candidates": [
+        "models/christmas-tree/sources/christmas-tree.blend"
+      ],
+      "source_mapping": "Candidate; exact root mapping awaits individual QA.",
+      "generator_candidates": [
+        "models/christmas-tree/generate.py",
+        "models/christmas-tree/render.py"
+      ],
+      "metadata": "models/christmas-tree/metadata/christmas-tree.json",
+      "thumbnail": "models/christmas-tree/previews/hero.webp",
+      "root": "ASSET_ChristmasTree",
+      "runtime_route": "?model=christmas-tree",
+      "export_sha256": "b57c95f2d017f6dd0bed76782f0d66b6519d6b9b9f1ebc8d6c68346a276bf91c",
+      "qa_id": "MODEL-1888",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "christmas-gift-boxes",
+      "name": "Christmas Gift Boxes",
+      "collection": "christmas-gift-boxes",
+      "kind": "catalog-model",
+      "export_paths": [
+        "models/christmas-gift-boxes/exports/christmas-gift-boxes.glb"
+      ],
+      "source_candidates": [
+        "models/christmas-gift-boxes/sources/christmas-gift-boxes.blend"
+      ],
+      "source_mapping": "Candidate; exact root mapping awaits individual QA.",
+      "generator_candidates": [
+        "models/christmas-gift-boxes/generate.py",
+        "models/christmas-gift-boxes/render.py"
+      ],
+      "metadata": "models/christmas-gift-boxes/metadata/christmas-gift-boxes.json",
+      "thumbnail": "models/christmas-gift-boxes/previews/hero.webp",
+      "root": "ASSET_ChristmasGiftBoxes",
+      "runtime_route": "?model=christmas-gift-boxes",
+      "export_sha256": "f33433ec55ea672083607ce439073e25fd09c6712b048117e396e362f11e3ec4",
+      "qa_id": "MODEL-1889",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "new-year-countdown-clock",
+      "name": "New Year Countdown Clock",
+      "collection": "new-year-countdown-clock",
+      "kind": "catalog-model",
+      "export_paths": [
+        "models/new-year-countdown-clock/exports/new-year-countdown-clock.glb"
+      ],
+      "source_candidates": [
+        "models/new-year-countdown-clock/sources/new-year-countdown-clock.blend"
+      ],
+      "source_mapping": "Candidate; exact root mapping awaits individual QA.",
+      "generator_candidates": [
+        "models/new-year-countdown-clock/generate.py",
+        "models/new-year-countdown-clock/render.py"
+      ],
+      "metadata": "models/new-year-countdown-clock/metadata/new-year-countdown-clock.json",
+      "thumbnail": "models/new-year-countdown-clock/previews/hero.webp",
+      "root": "ASSET_NewYearCountdownClock",
+      "runtime_route": "?model=new-year-countdown-clock",
+      "export_sha256": "d39aa181dfc452c04916ce7e9ab299e961b01a7479afe7d46080d2e3669c8f00",
+      "qa_id": "MODEL-1890",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "chinese-new-year-lion-dance-head",
+      "name": "Chinese New Year Lion Dance Head",
+      "collection": "chinese-new-year-lion-dance-head",
+      "kind": "catalog-model",
+      "export_paths": [
+        "models/chinese-new-year-lion-dance-head/exports/chinese-new-year-lion-dance-head.glb"
+      ],
+      "source_candidates": [
+        "models/chinese-new-year-lion-dance-head/sources/chinese-new-year-lion-dance-head.blend"
+      ],
+      "source_mapping": "Candidate; exact root mapping awaits individual QA.",
+      "generator_candidates": [
+        "models/chinese-new-year-lion-dance-head/generate.py",
+        "models/chinese-new-year-lion-dance-head/render.py"
+      ],
+      "metadata": "models/chinese-new-year-lion-dance-head/metadata/chinese-new-year-lion-dance-head.json",
+      "thumbnail": "models/chinese-new-year-lion-dance-head/previews/hero.webp",
+      "root": "ASSET_ChineseNewYearLionDanceHead",
+      "runtime_route": "?model=chinese-new-year-lion-dance-head",
+      "export_sha256": "e8b3115ecb05a982e1d7b029c8f722c2c8a6d14c1ff7b563394bca584d851cb3",
+      "qa_id": "MODEL-1891",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
+    },
+    {
+      "model_id": "chinese-new-year-kumquat-tree",
+      "name": "Chinese New Year Kumquat Tree",
+      "collection": "chinese-new-year-kumquat-tree",
+      "kind": "catalog-model",
+      "export_paths": [
+        "models/chinese-new-year-kumquat-tree/exports/chinese-new-year-kumquat-tree.glb"
+      ],
+      "source_candidates": [
+        "models/chinese-new-year-kumquat-tree/sources/chinese-new-year-kumquat-tree.blend"
+      ],
+      "source_mapping": "Candidate; exact root mapping awaits individual QA.",
+      "generator_candidates": [
+        "models/chinese-new-year-kumquat-tree/generate.py",
+        "models/chinese-new-year-kumquat-tree/render.py"
+      ],
+      "metadata": "models/chinese-new-year-kumquat-tree/metadata/chinese-new-year-kumquat-tree.json",
+      "thumbnail": "models/chinese-new-year-kumquat-tree/previews/hero.webp",
+      "root": "ASSET_ChineseNewYearKumquatTree",
+      "runtime_route": "?model=chinese-new-year-kumquat-tree",
+      "export_sha256": "3091672ce2f56ceb9b86100ed29d8d2dcd415db6bd4a353bbea6ed66588b85ec",
+      "qa_id": "MODEL-1892",
+      "status": "PENDING",
+      "defects": [],
+      "repairs": [],
+      "qa_results": {},
+      "commit_sha": null,
+      "remote_verified": false,
+      "remaining_risks": [
+        "Newly discovered upstream asset; not inspected under this campaign."
+      ]
     }
   ],
   "reconciliation": {
-    "release_head": "85448e31b81bf8c565a167f7c25150c2205802ba",
-    "observed_at": "2026-11-14T22:09:50.426374+00:00",
-    "current_release_catalog_entries": 561,
-    "new_tracked_artifacts": 27,
-    "added_queue_records": 24,
-    "queue_records": 1884,
-    "evidence": "discovery-reconciliation-85448e31.json",
+    "release_head": "7f6291a711467925580c819d1d9e7693747a249e",
+    "observed_at": "2026-11-15T05:50:54.159469+00:00",
+    "current_release_catalog_entries": 567,
+    "new_tracked_artifacts": 6,
+    "added_queue_records": 3,
+    "queue_records": 1892,
+    "evidence": "discovery-reconciliation-7f6291a7.json",
     "initial_snapshot_counts_preserved": true
   },
   "reconciliation_history": [
@@ -63698,6 +63952,36 @@
       "added_queue_records": 8,
       "queue_records": 1860,
       "evidence": "discovery-reconciliation-f62f5809.json",
+      "initial_snapshot_counts_preserved": true
+    },
+    {
+      "release_head": "85448e31b81bf8c565a167f7c25150c2205802ba",
+      "observed_at": "2026-11-14T22:09:50.426374+00:00",
+      "current_release_catalog_entries": 561,
+      "new_tracked_artifacts": 27,
+      "added_queue_records": 24,
+      "queue_records": 1884,
+      "evidence": "discovery-reconciliation-85448e31.json",
+      "initial_snapshot_counts_preserved": true
+    },
+    {
+      "release_head": "c5967d472daa6796867981e3407b454525a41e40",
+      "observed_at": "2026-11-15T04:51:16.925748+00:00",
+      "current_release_catalog_entries": 562,
+      "new_tracked_artifacts": 4,
+      "added_queue_records": 3,
+      "queue_records": 1887,
+      "evidence": "discovery-reconciliation-c5967d47.json",
+      "initial_snapshot_counts_preserved": true
+    },
+    {
+      "release_head": "6982fb075fcb418d9713cdfe48696f34079073a5",
+      "observed_at": "2026-11-15T05:11:28.026543+00:00",
+      "current_release_catalog_entries": 564,
+      "new_tracked_artifacts": 4,
+      "added_queue_records": 2,
+      "queue_records": 1889,
+      "evidence": "discovery-reconciliation-6982fb07.json",
       "initial_snapshot_counts_preserved": true
     }
   ]

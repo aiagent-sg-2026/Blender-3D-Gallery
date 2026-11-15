@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "stage": "source",
+      "status": "PASS",
+      "body_closed_positive_volume": true,
+      "decorative_boundaries_match_source": true
+    },
+    {
+      "stage": "reimport",
+      "status": "PASS",
+      "body_closed_positive_volume": true,
+      "decorative_boundaries_match_source": true
+    }
+  ],
+  "topology_caveat": "glTF UV/normal seams split raw vertices; position-welded topology distinguishes them from holes. Resin body closed; each medallion has48 and numeral3 has204 intentional open boundary edges."
+}

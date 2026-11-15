@@ -1,0 +1,95 @@
+{
+  "status": "PASS",
+  "base_full_game_head": "6982fb07",
+  "base_catalog_count": 564,
+  "base_full_game_cases": 46,
+  "base_experience_cases": 31,
+  "latest_head": "7f6291a711467925580c819d1d9e7693747a249e",
+  "latest_catalog_count": 567,
+  "latest_unit_tests": 670,
+  "current_model_runtime_profiles": 4,
+  "new_asset_integration_cases": 9,
+  "all_old_catalog_entries_and_app_code_unchanged": true,
+  "individual_new_models_remain_pending": true,
+  "adaptations": "Use approved desktop/tablet viewports and isolated artifact paths; preserve original assertions/timeouts and add full card count, download status, GLB magic and exact SHA checks.",
+  "scripts": [
+    {
+      "asset_id": "new-year-countdown-clock",
+      "source_script": "scripts/test-new-year-countdown-clock-browser.mjs",
+      "original_sha256": "adbf66b3f405531abeaeda22a0a56a56736ace38b87150dbe912231cbc4d7d9c",
+      "adapted_sha256": "c43f75b86f26f34a134d7a4fb98af3fbf5610cc82da377dc6a1fe8e68484dc50",
+      "expected_glb_sha256": "d39aa181dfc452c04916ce7e9ab299e961b01a7479afe7d46080d2e3669c8f00",
+      "local_script": "output/model-qa/MODEL-0009/upstream-delta/new-year-countdown-clock.mjs",
+      "status": "PASS",
+      "normal_viewports": [
+        [
+          1440,
+          900
+        ],
+        [
+          768,
+          1024
+        ]
+      ],
+      "fallback_viewport": [
+        1024,
+        768
+      ],
+      "checks_passed": 3,
+      "all_original_assertions_and_timeouts_retained": true,
+      "additional_assertions": 4
+    },
+    {
+      "asset_id": "chinese-new-year-lion-dance-head",
+      "source_script": "scripts/test-chinese-new-year-lion-dance-head-browser.mjs",
+      "original_sha256": "372c16bc6860691bdd60994466bf24703d1a43b65776d22857943659e67aec3f",
+      "adapted_sha256": "7f3495de80aabdb092847deaeb7fd8bd53cfc1dd719ab01ce0e32ce2c4915c63",
+      "expected_glb_sha256": "e8b3115ecb05a982e1d7b029c8f722c2c8a6d14c1ff7b563394bca584d851cb3",
+      "local_script": "output/model-qa/MODEL-0009/upstream-delta/chinese-new-year-lion-dance-head.mjs",
+      "status": "PASS",
+      "normal_viewports": [
+        [
+          1440,
+          900
+        ],
+        [
+          768,
+          1024
+        ]
+      ],
+      "fallback_viewport": [
+        1024,
+        768
+      ],
+      "checks_passed": 3,
+      "all_original_assertions_and_timeouts_retained": true,
+      "additional_assertions": 4
+    },
+    {
+      "asset_id": "chinese-new-year-kumquat-tree",
+      "source_script": "scripts/test-chinese-new-year-kumquat-tree-browser.mjs",
+      "original_sha256": "c93528420d82585f6078f792450e1181054cc1ce9510bae64842334f938cafcf",
+      "adapted_sha256": "b1976081c0fa9f916fd50cbcb73075c5b079db89b125202d22840b2775dddca4",
+      "expected_glb_sha256": "3091672ce2f56ceb9b86100ed29d8d2dcd415db6bd4a353bbea6ed66588b85ec",
+      "local_script": "output/model-qa/MODEL-0009/upstream-delta/chinese-new-year-kumquat-tree.mjs",
+      "status": "PASS",
+      "normal_viewports": [
+        [
+          1440,
+          900
+        ],
+        [
+          768,
+          1024
+        ]
+      ],
+      "fallback_viewport": [
+        1024,
+        768
+      ],
+      "checks_passed": 3,
+      "all_original_assertions_and_timeouts_retained": true,
+      "additional_assertions": 4
+    }
+  ]
+}
