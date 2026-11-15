@@ -1,0 +1,41 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "pale facial stripe and flank blotches were too prominent"
+      ],
+      "changes": [
+        "shorten and curve the facial stripe and reduce blotch contrast"
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "pass",
+      "changes": [
+        "re-viewed current actual full-body and head images; source, GLB and desktop/mobile checks pass"
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "b10a6516c04bb0c468429790d14920cd92b2393ae12e3ad053e7c9359898fd13",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: deep silvery-grey body with an arched nape and head flatter above",
+    "surface": "pass: uneven photo-informed scale color and microstructure",
+    "head": "pass: subtle irregular flank blotches and pale stripe below the eye",
+    "fins": "pass: continuous thirteen-spine dorsal, three-spine anal and slightly notched caudal",
+    "surface_contact": "pass: five-phase source and GLB contact checks with existing tolerances",
+    "motion": "pass: actual exported cyclic body, caudal and fin deformation",
+    "browser": "pass: exact draft GLB swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed artwork, not a scanned or calibrated specimen."
+  ],
+  "alias_note": "Jade perch follows Scortum barcoo (Barcoo grunter). The supplied Chinese label is retained in catalog; photo-informed artwork, not a measured specimen."
+}

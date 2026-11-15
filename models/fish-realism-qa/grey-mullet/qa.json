@@ -1,0 +1,41 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "first dorsal was too rectangular and pectoral spot sat in front of the gill crease"
+      ],
+      "changes": [
+        "shape four-spine first dorsal into a tapering triangular fan and shift the spot onto the pectoral base"
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "pass",
+      "changes": [
+        "re-viewed current full-body and head renders; source, GLB and desktop/mobile checks pass"
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "e95162535c2d6a5aa7223f33c454b1b9ebd1ac9e9f27fdcb84312f269b04a697",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: long cylindrical silver-grey body, broad flat head and small mouth",
+    "surface": "pass: faint longitudinal flank stripes and dark pectoral-base patch",
+    "head": "pass: small closed mouth and embedded subdued iris",
+    "fins": "pass: four-spine first dorsal separated from the soft second dorsal",
+    "surface_contact": "pass: five-phase source and GLB contact without changed tolerances",
+    "motion": "pass: actual exported cyclic body, caudal and fin deformation",
+    "browser": "pass: exact draft GLB swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed artwork, not a scanned or calibrated specimen.",
+    "Mugil cephalus complex visual reference; cryptic-species identification is not claimed."
+  ]
+}

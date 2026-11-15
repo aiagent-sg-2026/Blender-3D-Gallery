@@ -77,6 +77,14 @@ def skin_maps():
    height+=scute*.00035
    if C['markings']=='trevally':color*=1-scute[...,None]*.11
    else:color+=scute[...,None]*.018
+ if C.get('markings')=='jade_perch':
+  blotches=np.maximum(np.exp(-((xs+.10)/.17)**2-((world_z-.17)/.14)**2),np.exp(-((xs-.62)/.14)**2-((world_z+.02)/.12)**2))*flank_mask;color*=1-blotches[...,None]*C.get('marking_gain',.10)
+  stripe=np.exp(-((world_z+.045-.018*np.sin((xs+1.5)*4))/.020)**2)*R.smoothstep(-1.57,-1.43,xs)*(1-R.smoothstep(-1.12,-.95,xs))*flank_mask;color+=stripe[...,None]*.055
+ if C.get('markings')=='grey_mullet':
+  lines=np.zeros_like(u)
+  for level in [-.22,-.13,-.04,.05,.14,.23]:lines=np.maximum(lines,np.exp(-((world_z-level)/.009)**2))
+  color*=1-lines[...,None]*flank_mask[...,None]*R.smoothstep(-1.03,-.80,xs)[...,None]*.11
+  spot=np.exp(-((xs+.84)/.043)**2-((world_z-.02)/.052)**2)*flank_mask;color*=1-spot[...,None]*.62
  if C.get('markings')=='three_spot_gourami':
   edge=(R.noise(u,v,93,73,996)-.5)*.14;d1=np.sqrt(((xs+.05)/.125)**2+((world_z-.01)/.12)**2);d2=np.sqrt(((xs-1.08)/.075)**2+(world_z/.075)**2);spots=np.maximum(1-R.smoothstep(.65,1.15,d1+edge),1-R.smoothstep(.65,1.15,d2+edge))*flank_mask
   color*=1-spots[...,None]*.84
