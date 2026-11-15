@@ -26,6 +26,8 @@ for directory in sorted(HERE.iterdir()):
  bpy.ops.wm.read_factory_settings(use_empty=True);bpy.ops.import_scene.gltf(filepath=str(file));s=bpy.context.scene
  actions=list(bpy.data.actions);assert actions,directory.name
  end=max(a.frame_range.y for a in actions);start=min(a.frame_range.x for a in actions);meshes=[o for o in s.objects if o.type=='MESH'];poses=[];sensory_poses=[]
+ if profile.get('body_only'):assert not any(o.name.startswith(('Caudal_','Dorsal_','Anal_','Pectoral_','Pelvic_')) for o in meshes),(directory.name,'Body-only anatomy')
+ if profile.get('pelvic') is False:assert not any(o.name.startswith('Pelvic_') and not o.name.startswith('Pelvic_Filament_') for o in meshes),(directory.name,'Invented pelvic fins')
  for frame in [start,start+(end-start)*.25,end]:
   s.frame_set(int(frame),subframe=frame-int(frame));dg=bpy.context.evaluated_depsgraph_get();positions=[];sensory={}
   for o in meshes:

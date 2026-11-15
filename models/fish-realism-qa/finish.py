@@ -14,7 +14,7 @@ else:s.frame_set(13)
 END_FRAME=int(s.frame_end);SPAN=END_FRAME-1
 
 def observe(label):
- meshes=[o for o in s.objects if o.type=='MESH'];anchors=0
+ meshes=[o for o in s.objects if o.type=='MESH'];anchors=0;config=json.loads((HERE/'profiles.json').read_text())[slug]
  if label=='source':
   for o in meshes:
    if o.get('deform_role') not in ['dorsal','anal','pectoral','pelvic_sensory']:continue
@@ -33,8 +33,15 @@ def observe(label):
   poses.append(frame)
  for name in poses[0]:
   movement=max((a-b).length for a,b in zip(poses[0][name],poses[1][name]));endpoint=max((a-b).length for a,b in zip(poses[0][name],poses[-1][name]));assert endpoint<.0001,(label,name,endpoint);roles[name]={'motion':movement,'loop_error':endpoint}
- for prefix in (['Dorsal_','Pectoral_'] if slug=='ribbonfish' else ['Caudal_','Dorsal_','Anal_','Pectoral_']):
+ for prefix in ([] if config.get('body_only') else ['Dorsal_','Pectoral_'] if slug=='ribbonfish' else ['Caudal_','Dorsal_','Anal_','Pectoral_']):
   found=[v['motion'] for k,v in roles.items() if k.startswith(prefix)];assert found and max(found)>.001,(label,prefix,found)
+ body_only_wave=None
+ if config.get('body_only'):
+  assert not any(o.name.startswith(('Caudal_','Dorsal_','Anal_','Pectoral_','Pelvic_')) for o in meshes),'Reduced-fin eel must not acquire ordinary fish fins'
+  body=next(o for o in meshes if o.name.startswith('Skin_AnatomicalProfile'));indices=[v.index for v in body.data.vertices if (body.matrix_world@v.co).x>1.6];assert indices
+  tail_motion=max((poses[0][body.name][i]-poses[1][body.name][i]).length for i in indices);assert tail_motion>.005,(label,'Eel tail must undulate')
+  body_only_wave={'tapered_tail_motion':tail_motion,'ordinary_fins_absent':True}
+ if config.get('pelvic') is False:assert not any(o.name.startswith('Pelvic_') and not o.name.startswith('Pelvic_Filament_') for o in meshes),'Do not invent broad pelvic fins'
  ribbon_wave=None
  if slug=='ribbonfish':
   assert not any(o.name.startswith(('Caudal_','Pelvic_','Anal_')) for o in meshes),'Hairtail has no caudal/pelvic fins or visible broad anal fin'
@@ -51,12 +58,11 @@ def observe(label):
   filaments=[v for name,v in roles.items() if name.startswith('Pectoral_Filament_')]
   assert len(filaments)==8,(label,'Four sensory rays per flank required',len(filaments))
   assert all(v['motion']>.001 for v in filaments),(label,'Sensory rays must move with their fins')
- config=json.loads((HERE/'profiles.json').read_text())[slug]
  pelvic_rays=[v for name,v in roles.items() if name.startswith('Pelvic_Filament_')];assert len(pelvic_rays)==(2 if config.get('pelvic_filaments') else 0),(label,'Pelvic sensory-ray count')
  assert all(v['motion']>.001 for v in pelvic_rays),(label,'Pelvic sensory rays must move')
  expected_barbels=2*len(config.get('barbels',[]));barbels=[o for o in meshes if o.name.startswith('Barbel_')];assert len(barbels)==expected_barbels,(label,'Mouth-barbel count',len(barbels),expected_barbels)
  assert any(o.type=='ARMATURE' for o in s.objects)
- return {'pelvic_sensory_rays':len(pelvic_rays),'barbel_meshes':len(barbels),'surface_contact':contacts,'ribbon_wave':ribbon_wave,'fin_roots_checked':anchors,'meshes':len(meshes),'vertices':sum(len(o.data.vertices) for o in meshes),'motion_by_mesh':roles,'frames':frames,'packed_images':all(i.packed_file for i in bpy.data.images if i.source=='FILE')}
+ return {'body_only_wave':body_only_wave,'pelvic_sensory_rays':len(pelvic_rays),'barbel_meshes':len(barbels),'surface_contact':contacts,'ribbon_wave':ribbon_wave,'fin_roots_checked':anchors,'meshes':len(meshes),'vertices':sum(len(o.data.vertices) for o in meshes),'motion_by_mesh':roles,'frames':frames,'packed_images':all(i.packed_file for i in bpy.data.images if i.source=='FILE')}
 source=observe('source');s.frame_set(13)
 # Flatten only temporary skinned mesh copies; keep editable source parenting intact.
 root=next(o for o in s.objects if o.name.startswith('ASSET_PhotoInformed_'));selected=[root]+list(root.children_recursive);saved=[]

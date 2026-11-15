@@ -32,6 +32,10 @@ for slug in args.slugs:
    adipose=[value for name,value in motion[label]['motion_by_mesh'].items() if name.startswith('Dorsal_AdiposeFin')];assert len(adipose)==1 and adipose[0]['motion']>.001,('Missing moving adipose fin',slug,label)
   pelvic=[value for name,value in motion[label]['motion_by_mesh'].items() if name.startswith('Pelvic_Filament_')]
   assert len(pelvic)==(2 if profile.get('pelvic_filaments') else 0) and all(value['motion']>.001 for value in pelvic),('Pelvic sensory-ray motion',slug,label)
+  names=motion[label]['motion_by_mesh']
+  if profile.get('body_only'):
+   assert motion[label]['body_only_wave']['tapered_tail_motion']>.005 and not any(name.startswith(('Caudal_','Dorsal_','Anal_','Pectoral_','Pelvic_')) for name in names),('Body-only anatomy and tail motion',slug,label)
+  if profile.get('pelvic') is False:assert not any(name.startswith('Pelvic_') and not name.startswith('Pelvic_Filament_') for name in names),('Invented pelvic fins',slug,label)
  prepared.append((slug,source,artifact,profile))
 
 manifest=read(HERE/'releases.json');queue=read(REPO/'models/fish-realism-qa/queue.json');profiles=read(REPO/'models/fish-realism-qa/profiles.json')

@@ -18,5 +18,11 @@
   "retained_unchanged_count": 32,
   "all_measurements_equal_full_baseline": true,
   "model_files_changed": false,
-  "signature": "a691097912bf86fad245fff24e0bdd8fbc63620a43c73ebe56cc879bbc391862"
+  "guard_experiment_verifier_signature": "a691097912bf86fad245fff24e0bdd8fbc63620a43c73ebe56cc879bbc391862",
+  "anatomy_gate_reseed": {
+    "models_remeasured": 43,
+    "models_reused": 0,
+    "verifier_signature": "71db98bd0c9880087f271533bd02bb9bbd4a2b6332658d93ca613f64230ca057",
+    "reason": "Adding body-only and explicit pelvic-absence checks invalidated previous verifier fingerprints; all delivery assets were remeasured."
+  }
 }

@@ -44,3 +44,7 @@ Gourami profiles replace broad pelvic membranes with two tapered free sensory ra
 ## Fleshy adipose fins
 
 The `adipose.py` module preserves the reviewed pangasius wedge and can build a longer, rounded volumetric fin for river catfish. A point-domain `fin_span` attribute keeps anatomical root weights independent of the UV seams needed on its closed caps. The fin uses opaque skin pigment, with no invented membrane-ray texture. Five-phase contact, source/GLB deformation, format validation and actual delivery/browser checks remain required.
+
+## Reduced-fin swamp eel
+
+Run Blender in background mode with `--python-exit-code 1 --python models/fish-realism-qa/generate_swamp_eel.py`, then the normal `finish.py -- swamp-eel` workflow. This separate generator builds a round scaleless body, blunt snout, tiny eyes, throat opening and tapered tail with a 25-bone axial loop. Its profile declares `body_only`, so QA requires actual tapered-tail movement and absence of invented ordinary fish fins rather than requiring nonexistent broad fins. Five poses still check finite geometry and loop endpoints in the source and real imported GLB. The reduced-fin appearance is an artistic approximation, not an exact anatomical specimen.
