@@ -1,0 +1,56 @@
+[
+  {
+    "id": "IR3-scales",
+    "severity": "P1",
+    "status": "open",
+    "note": "rear hair reads as overlapping plates with hard creases; sheet is long swept locks with a parting"
+  },
+  {
+    "id": "IR3-horns",
+    "severity": "P1",
+    "status": "open",
+    "note": "conical wing flicks and a crown-side cone read as horns"
+  },
+  {
+    "id": "IR3-ahoge",
+    "severity": "P1",
+    "status": "open",
+    "note": "ahoge is a thin curled stalk; more prominent than the sheet's tuft"
+  },
+  {
+    "id": "IR3-ear-wedge",
+    "severity": "P1",
+    "status": "open",
+    "note": "dark wedge in front of the ear and slits beside the cheeks (the known ear-front gap)"
+  },
+  {
+    "id": "head-ratio",
+    "severity": "P2",
+    "status": "disputed",
+    "note": "reviewers estimate head 40-44% of height by eye on different images; row data shows head rows within about 1 cm and jaw about 1 cm higher and 14 px narrower at z=0.597; deepening the jaw needs a re-sculpt (phase 3)"
+  },
+  {
+    "id": "hands",
+    "severity": "P1->P2",
+    "status": "improved",
+    "fix": "palm, fingers and thumb fused into one fist; thumbs still weak"
+  },
+  {
+    "id": "hair-contrast",
+    "severity": "P2",
+    "status": "improved",
+    "fix": "AO baked into hair vertex colours; sheet luminance std 0.077 vs model 0.062, mean 0.292 vs 0.293 (back)"
+  },
+  {
+    "id": "wing-flick-variants",
+    "severity": "n/a",
+    "status": "reverted",
+    "note": "end=0.5 profile and 0.7x width both failed the silhouette gate (front/back max 19 px); end=0.65 with thin 0.022 kept"
+  },
+  {
+    "id": "review-limits",
+    "severity": "n/a",
+    "status": "note",
+    "note": "third reviewer stated it did not view top, bottom, head-side, hand or three-js images; its proportion figures were by eye"
+  }
+]

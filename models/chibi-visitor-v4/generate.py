@@ -345,6 +345,31 @@ def fuse(geoms, voxel=0.003, smooth=6, ratio=0.2):
     return geom
 
 
+def bake_ao(part, centre, base, samples=14, reach=0.05, floor=0.20, power=1.5):
+    """Bake ambient occlusion into vertex colours: base colour times a crevice shade. The creases between locks
+    stay dark in any viewer, which flat even lighting would otherwise wash out."""
+    from mathutils.bvhtree import BVHTree
+    tris = []
+    for f in part.f:
+        tris += [(f[0], f[i], f[i + 1]) for i in range(1, len(f) - 1)]
+    bvh = BVHTree.FromPolygons([tuple(v) for v in part.v], tris)
+    golden = m.pi * (3 - m.sqrt(5))
+    local = [(m.sqrt(1 - ((i + 0.5) / samples) ** 2) * m.cos(golden * i), m.sqrt(1 - ((i + 0.5) / samples) ** 2) * m.sin(golden * i),
+              (i + 0.5) / samples) for i in range(samples)]               # cosine-ish hemisphere, +z is the normal
+    for i, v in enumerate(part.v):
+        n = (v - centre)
+        n = n.normalized() if n.length > 1e-6 else Vector((0, 0, 1))
+        t = n.cross(Vector((0, 0, 1)) if abs(n.z) < 0.9 else Vector((1, 0, 0))).normalized()
+        b = n.cross(t)
+        hits = 0
+        for x, y, z in local:
+            d = t * x + b * y + n * z
+            if bvh.ray_cast(v + n * 0.0015, d, reach)[0] is not None:
+                hits += 1
+        shade = floor + (1 - floor) * (1 - hits / samples) ** power
+        part.col[i] = (base[0] * shade, base[1] * shade, base[2] * shade, 1.0)
+
+
 # ------------------------------------------------------------ materials
 def lin(h):
     t = [int(h[i:i + 2], 16) / 255 for i in (0, 2, 4)]
@@ -376,13 +401,14 @@ def mat(name, h, rough=0.5, metal=0.0, vcol=False, image=None):
     return a
 
 
+HAIR_HEX = "46230F"
 SKIN, BLUSH = "FBD2B2", "F59C92"
 
 
 def materials():
     return dict(
         skin=mat("Skin", SKIN, 0.55),
-        hair=mat("Hair", "50342A", 0.38), hair2=mat("Hair light", "593A2F", 0.38),
+        hair=mat("Hair", HAIR_HEX, 0.45, vcol=True), hair2=mat("Hair light", "593A2F", 0.45),
         brow=mat("Brow", "4A2E22", 0.6), lash=mat("Lash", "38211A", 0.6), white=mat("Eye white", "FFFFFF", 0.35),
         iris=mat("Iris", "40251A", 0.3), iris2=mat("Iris glow", "6A3E27", 0.3), pupil=mat("Pupil", "1B0F0C", 0.25),
         mouth=mat("Mouth", "B23E39", 0.5), tongue=mat("Tongue", "F28E80", 0.45),
@@ -532,7 +558,7 @@ def hshell(az, el, radius):
         y = -h * m.cos(a)
         if y > 0:
             y *= 1 - 0.16 * sstep(0.4, 0.85, v) - 0.2 * sstep(0.85, 1.0, v)
-        side = 1 - 0.045 * sstep(0.1, 0.6, v)                # narrow the upper dome sideways to match the sheet's crown width
+        side = 1 - 0.052 * sstep(0.1, 0.6, v)                # narrow the upper dome sideways to match the sheet's crown width
         return HH + Vector((h * m.sin(a) * side, y, 0.82 * v)) * radius
     return HH + Vector((ce * m.sin(a), -ce * m.cos(a), se)) * radius
 
@@ -578,14 +604,14 @@ def g_cap(radius, nv=72, nr=16, solid=False):
     return v, f
 
 
-def g_leaf(pts, normals, width, thick=None, groove=0.12, tip=0.06, taper=2.2, root=0.6, belly=0.4):
+def g_leaf(pts, normals, width, thick=None, groove=0.12, tip=0.06, taper=2.2, root=0.6, belly=0.4, end=0.8):
     """Leaf-shaped hair lock: narrow root, wide belly, pointed tip, ridged dome."""
     seg = len(pts) - 1
     th = thick or min(0.038, 0.32 * width)
 
     def section(i):
         t = i / seg
-        w = width * max(tip, (root + (1 - root) * sstep(0.0, 0.3, t)) * (1 - t ** taper) ** 0.8)
+        w = width * max(tip, (root + (1 - root) * sstep(0.0, 0.3, t)) * (1 - t ** taper) ** end)
         h = th * (w / width) ** 0.6
         out = []
         for k in range(13):                                  # strand ridges across the top
@@ -611,23 +637,25 @@ def g_lock(ctrl, width, radius, seg=16, **kw):
 
 
 def hair_locks():
-    locks = []                                               # (ctrl, width, radius): broad shingled locks off a crown whorl
-    for k in range(-3, 4):                                   # nape: fewer, wider locks
-        az, sw = 180 + k * 29, 9 if k % 2 else -9
-        tip = {3: -30, 2: -44}.get(abs(k), -56)
-        locks.append(([(az - 0.3 * sw, 14, 0.98), (az, -12, 1.0), (az + 0.5 * sw, -36, 1.01), (az + sw, tip, 0.99)],
-                      0.135, 0.190))
-    for k in range(-3, 3):                                   # lower back
-        az, sw = 180 + (k + 0.5) * 30, -10 if k % 2 else 10
-        locks.append(([(az, 46, 0.98), (az, 24, 1.0), (az + 0.5 * sw, 2, 1.01), (az + sw, -20, 1.06)], 0.150, 0.197))
-    for k in range(-2, 3):                                   # upper back: a fan opening monotonically from the whorl
+    """Broad shingled locks off a crown whorl: (ctrl, width, radius). Fewer and wider than a scale pattern."""
+    locks = []
+    for k in range(-2, 3):                                   # nape row
+        az = 180 + k * 36
+        sw = 0.2 * (az - 180)
+        tip = {2: -32, 1: -48}.get(abs(k), -56)
+        locks.append(([(az - 0.3 * sw, 14, 0.98), (az, -12, 1.0), (az + 0.5 * sw, -36, 1.01), (az + sw, tip, 0.99)], 0.150, 0.190))
+    for k in range(-3, 3):                                   # lower back row
+        az = 180 + (k + 0.5) * 34
+        sw = 0.2 * (az - 180)
+        locks.append(([(az, 46, 0.98), (az, 24, 1.0), (az + 0.5 * sw, 2, 1.01), (az + sw, -20, 1.06)], 0.165, 0.197))
+    for k in range(-2, 3):                                   # upper back row: a fan opening from the whorl
         az = 180 + k * 40
         sw = 0.25 * (az - 180)
-        wide, tip = (0.170, 0) if k == 0 else (0.150, 8)
-        locks.append(([(180 + 0.6 * (az - 180), 78, 0.98), (az, 52, 1.0), (az + 0.5 * sw, 30, 1.01), (az + sw, tip, 1.06)], wide, 0.201))
-    for k in range(-2, 2):                                   # crown whorl: locks curl round a point behind the apex
-        az = 180 + (k + 0.5) * 72
-        locks.append(([(az - 40, 84, 0.97), (az - 12, 76, 1.0), (az + 18, 62, 1.01), (az + 40, 46, 1.05)], 0.130, 0.203))
+        locks.append(([(180 + 0.6 * (az - 180), 78, 0.98), (az, 52, 1.0), (az + 0.5 * sw, 30, 1.01), (az + sw, 8 if k else 0, 1.06)],
+                      0.175, 0.201))
+    for k in range(-1, 2):                                   # crown whorl locks curl round a point behind the apex
+        az = 180 + k * 72
+        locks.append(([(az - 40, 84, 0.97), (az - 12, 76, 1.0), (az + 18, 62, 1.01), (az + 40, 46, 1.05)], 0.150, 0.203))
     return locks
 
 
@@ -637,8 +665,8 @@ def build_hair(mt):
     locks = hair_locks()
     shell = []                                               # kept as separate shingles (not remeshed) so creases survive
     for ctrl, width, radius in locks:
-        ctrl = ctrl[:-1] + [(ctrl[-1][0], ctrl[-1][1], 1.10)]  # tips lift off the shell and shadow the row below
-        shell.append(g_lock(ctrl, width, radius, thick=0.030, groove=0.0))
+        ctrl = ctrl[:-1] + [(ctrl[-1][0], ctrl[-1][1], 1.06)]  # tips lift off the shell and shadow the row below
+        shell.append(g_lock(ctrl, width, radius, thick=0.030, groove=0.0, root=0.9, taper=3.0))
     front = [  # (ctrl, width, radius, taper): swept from the part above the left brow
         ([(25, 52, 0.97), (60, 74, 1.0), (120, 78, 1.0), (165, 62, 1.01)], 0.125, 0.198, 2.6),      # over the top
         ([(10, 56, 0.97), (-40, 76, 1.0), (-110, 78, 1.0), (-160, 62, 1.01)], 0.125, 0.198, 2.6),
@@ -657,19 +685,19 @@ def build_hair(mt):
         ([(33, 46, 0.98), (40, 32, 1.0), (42, 14, 1.0), (37, -8, 1.0)], 0.110, 0.202, 2.0),
     ]
     for i, (ctrl, width, radius, taper) in enumerate(front):
-        geoms.append(g_lock(ctrl, width, radius, taper=taper, root=0.72, tip=0.06, groove=0.0))
-    tufts = [
-        ([(0.052, -0.004, 0.905), (0.046, -0.008, 0.940), (0.026, -0.011, 0.968), (-0.004, -0.012, 0.986),
-          (-0.030, -0.012, 0.986)], (0, 0, 1), 0.052, 0.030),
-        ([(0.0, 0.03, 0.915), (-0.004, 0.050, 0.940), (-0.008, 0.068, 0.950), (-0.012, 0.086, 0.944)],
-         (0, 0, 1), 0.056, 0.030),
+        geoms.append(g_lock(ctrl, width, radius, thick=0.022 if taper == 1.6 else None, taper=taper, root=0.72, tip=0.06, groove=0.0,
+                             end=0.65 if taper == 1.6 else 0.8))
+    tufts = [                                                # one swept ahoge, as on the sheet
+        ([(0.052, -0.004, 0.905), (0.046, -0.008, 0.940), (0.030, -0.011, 0.966), (0.008, -0.012, 0.984),
+          (-0.020, -0.012, 0.986)], (0, 0, 1), 0.044, 0.024),
     ]
     for ctrl, hint, width, thick in tufts:
         pts = path3(ctrl, 14)
-        geoms.append(g_leaf(pts, [hint] * len(pts), width, thick, belly=0.85, root=0.85, taper=1.4, tip=0.07, groove=0.0))
+        geoms.append(g_leaf(pts, [hint] * len(pts), width, thick, belly=0.85, root=0.85, taper=1.4, tip=0.07, groove=0.0, end=0.7))
     part.add(fuse(geoms, 0.0026, 4, 0.2), mt["hair"])
     for g in shell:
         part.add(g, mt["hair"])
+    bake_ao(part, HH, lin(HAIR_HEX))
     return part
 
 
@@ -783,14 +811,14 @@ def build_limbs(mt, s):
     arm.add(g_tube(pts, [rad(i / 12)[0] for i in range(13)], 16, hint=Y), mt["skin"])
     tilt = Matrix.Rotation(m.radians(-s * 10), 3, "Y")
     hand = Vector((s * 0.1815, -0.004, 0.302))
-    arm.add(g_ellipsoid(hand, (0.030, 0.037, 0.040), tilt, 14, 20, 0.82, 0.82), mt["skin"])            # palm
+    fist = [g_ellipsoid(hand, (0.030, 0.037, 0.040), tilt, 14, 20, 0.82, 0.82)]                      # palm
     curl = tilt @ Matrix.Rotation(m.radians(s * 22), 3, "Y")
     for k in range(4):                                       # fingers curled towards the thigh
         base = hand + tilt @ Vector((s * 0.010, -0.0285 + 0.019 * k, -0.026))
-        arm.add(g_ellipsoid(base + curl @ Vector((0.0, 0.0, -0.008)), (0.0125, 0.0108, 0.0215), curl, 10, 12), mt["skin"])
+        fist.append(g_ellipsoid(base + curl @ Vector((0.0, 0.0, -0.008)), (0.0125, 0.0108, 0.0215), curl, 10, 12))
     thumb = tilt @ Matrix.Rotation(m.radians(-24), 3, "X")
-    arm.add(g_ellipsoid(hand + tilt @ Vector((-s * 0.006, -0.040, -0.008)), (0.0125, 0.0125, 0.026), thumb, 10, 12),
-            mt["skin"])
+    fist.append(g_ellipsoid(hand + tilt @ Vector((-s * 0.006, -0.040, -0.008)), (0.0125, 0.0125, 0.026), thumb, 10, 12))
+    arm.add(fuse(fist, 0.0016, 3, 0.35), mt["skin"])         # one smooth fist instead of loose finger blobs
     leg = Part("Leg." + side)
     cx, cy = s * 0.068, 0.006
     leg.add(g_loft([ring(z, r, r * 1.16, cx, cy, 24) for z, r in ((0.10, 0.040), (0.16, 0.042), (0.225, 0.043))]),

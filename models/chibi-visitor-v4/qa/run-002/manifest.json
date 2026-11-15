@@ -1,0 +1,90 @@
+{
+  "asset": "chibi-visitor-v4",
+  "run": "run-002",
+  "date": "2026-11-15",
+  "checks": {
+    "QA-21 GLB header": {
+      "status": "PASS",
+      "detail": "magic glTF, version 2, declared length 2865168 vs file 2865168"
+    },
+    "QA-22 Khronos validator": {
+      "status": "PASS",
+      "detail": "0 errors, 0 warnings, 0 infos, 0 hints"
+    },
+    "QA-06 finite transforms/bounds": {
+      "status": "PASS",
+      "detail": "bounds min -0.2531,0,-0.2567 max 0.2522,0.9985,0.1925"
+    },
+    "QA-07 normals": {
+      "status": "PASS",
+      "detail": "every primitive has NORMAL"
+    },
+    "QA-08 scale/bounds/origin": {
+      "status": "PASS",
+      "detail": "height 0.9985 m, feet at y=0.0000, +Y up"
+    },
+    "QA-09 UV mapping": {
+      "status": "PASS",
+      "detail": "textured primitives have TEXCOORD_0"
+    },
+    "QA-10 missing textures": {
+      "status": "PASS",
+      "detail": "1 image(s), all embedded in the GLB"
+    },
+    "QA-11 PBR/colour space": {
+      "status": "PASS",
+      "detail": "19 metallic-roughness materials; base-colour image is sRGB by glTF definition"
+    },
+    "QA-15 clip inventory": {
+      "status": "N_A",
+      "detail": "static asset: documented no armature and no animation"
+    },
+    "QA-13/14 rig and weights": {
+      "status": "N_A",
+      "detail": "static asset, no skin (documented in metadata.json)"
+    },
+    "QA-29 bytes/triangles": {
+      "status": "PASS",
+      "detail": "2865168 bytes (<=4,000,000), 127240 triangles (<=150,000); budgets are this project's own, not a device guarantee"
+    },
+    "QA-30 textures/draw calls": {
+      "status": "PASS",
+      "detail": "1 texture(s), 25 draw calls (<=30)"
+    },
+    "QA-19 silhouette (head, z>=0.60)": {
+      "status": "PASS",
+      "detail": "front 6.0/11, side 7.2/13, back 6.3/15 px (mean/max, tips excluded); rows re-rendered fresh. Earlier run-001 mid-session numbers taken from stale renders were discarded"
+    },
+    "whole-body silhouette (info)": {
+      "status": "INFO",
+      "detail": "silhouette-rows-whole-body.txt: body rows mostly within 15 px; hoodie ~1.5 cm wide, side torso depth +12..22 px, jaw ~1 cm narrower/higher; rows below z=0.04 contaminated by the sheet's ground shadow"
+    },
+    "QA-25/26 Three.js load and console": {
+      "status": "PASS",
+      "detail": "25 meshes, 127,240 triangles, 0.9985 m, no console errors (browser-console in this run: none)"
+    },
+    "QA-31 frame time": {
+      "status": "NOT_RUN",
+      "detail": "browser pane hidden, animation frames throttled; run-001 measured an earlier build only"
+    },
+    "QA-32 target-device profile": {
+      "status": "NOT_RUN",
+      "detail": "no phone or low-end GPU"
+    },
+    "G5 visual (independent, 3 reviews)": {
+      "status": "FAIL",
+      "detail": "hair rear reads as scale/pillow mosaic; conical flicks; thin ahoge; dark wedge/slits beside the ear and cheek"
+    },
+    "repo tests": {
+      "status": "PASS",
+      "detail": "npm test 678 pass and validate:assets exit 0 (run on the previous geometry; the model is not in the catalog so neither exercises it)"
+    },
+    "QA-33 golden / QA-40 release": {
+      "status": "NOT_RUN",
+      "detail": "release_authorized false"
+    }
+  },
+  "overall": "REWORK: tool gates pass; independent visual review still finds P1 hair defects",
+  "release_authorized": false,
+  "changes_since_run_001": "wider shingle locks (17 instead of 22) with tongue-shaped profile, shorter softer single ahoge, thinner wing flicks, baked hair AO vertex colours with a warmer darker colour, fused fists"
+}

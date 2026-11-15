@@ -14,16 +14,16 @@
   },
   "geometry": {
     "units": "metres",
-    "height": 1.0024,
+    "height": 0.9985,
     "bounds_gltf": {
       "min": [
-        -0.2555,
+        -0.2531,
         0.0,
-        -0.2614
+        -0.2567
       ],
       "max": [
-        0.2548,
-        1.0024,
+        0.2522,
+        0.9985,
         0.1925
       ]
     },
@@ -31,8 +31,8 @@
     "up": "+Y",
     "front": "+Z",
     "root": "ChibiVisitorV4",
-    "triangles": 113428,
-    "vertices": 57143,
+    "triangles": 127240,
+    "vertices": 64025,
     "materials": 19,
     "draw_calls": 25
   },
@@ -41,12 +41,12 @@
     "animations": []
   },
   "delivery": {
-    "glb_bytes": 2219344,
-    "glb_sha256": "55637c85a0af0317bcc5d2b1ae885c3c06fa5ffa5e0d6bfdc8b3eeb94de9b1ce",
+    "glb_bytes": 2865168,
+    "glb_sha256": "2a2c9791ef2c2102c484bead47d68ff6caf15392e41f4bd24cbe2b8a1d5c98b6",
     "reference_sha256": "6f639d9827bbce886aec778c1f97248af6ab739303970edf39802012171002c1",
     "verified": "2026-11-15",
-    "qa_run": "qa/run-001"
+    "qa_run": "qa/run-002"
   },
-  "accuracy_notes": "Stylised interpretation of the owner's v4.0 sheet. Head: shallow sculpted relief on the sheet-matched skull silhouette (mean 1.25 mm, p95 6.5 mm from the parametric skull), fused ears/nose/neck and a painted face texture; the facial character is mostly texture. Hair: fused cap and fringe plus 22 separate shingled back locks in a fan off the crown; more regular than the sheet. Body, hands and shoes are simplified procedural parts. Head silhouette rows (z >= 0.60 m) are within a mean of 5.8-7.0 px (about 1 cm) of the sheet, flick and tuft tips up to about 40 px. Quality gate run 001: glTF Validator 0/0/0/0, headless rebuild byte-identical, Three.js load clean, 673 repository tests pass. Known P2: dark gap at the front of each ear. Not rigged, not registered in the catalog; gallery viewer acceptance and physical-device performance are not verified. Independent visual review (run 001): REWORK, three open P1 hair-style defects (shingle look, conical temple flicks, long ahoge).",
+  "accuracy_notes": "Stylised interpretation of the owner's v4.0 sheet. Head: shallow sculpted relief (mean 1.25 mm from the parametric skull), fused ears/nose/neck, painted face texture. Hair: fused cap and fringe plus 17 broad shingled back locks with baked ambient-occlusion vertex colours (COLOR_0 on Hair), one thin ahoge, thin wing flicks. Hands are fused fists. Body and shoes are simplified procedural parts. Head silhouette rows (z >= 0.60 m) within a mean of 6-7 px (about 1 cm) of the sheet. Quality gate run 002: validator 0/0/0/0, headless rebuild byte-identical, Three.js load clean. Status REWORK: three independent visual reviews still rank the hair surface (scale-like rear, conical flicks, thin ahoge) and the dark ear-front wedge as P1. Not rigged, not in the catalog; frame time and device performance not measured for this build.",
   "rights": "Original asset; owner-project reuse is authorized. Public redistribution terms have not been specified."
 }
