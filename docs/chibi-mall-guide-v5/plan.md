@@ -27,11 +27,13 @@ Regenerated with the three fixes below (author's own reading, not an independent
 
 Reference decision (2026-11-15): sheet B is locked as the v5 reference and copied to `models/chibi-mall-guide-v5/reference/turnaround-b.png`. Modelling rules follow [the chibi standard](../chibi-character-standard.md).
 
-## Design decisions to make before modelling (owner)
+## Design decisions (resolved 2026-11-15)
 
-1. Pick sheet A as the reference, or request a second variation (e.g. girl, different hat).
-2. Fix the sign hand and badge position (suggest: sign in the right hand, badge on the left chest, visible from the front and three-quarter views).
-3. Hair: use a simplified cap-fit hair (a few thick, blunt locks) instead of many pointed shingles, as the v4 review recommended.
+1. Reference: sheet B.
+2. Sign in the right hand, badge on the left chest.
+3. Hair: a few thick, blunt locks fitted under the cap.
+
+Still open for the owner: the budgets and review questions in the [standard](../chibi-character-standard.md) section 8.
 
 ## Build plan
 
