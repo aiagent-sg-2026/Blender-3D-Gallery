@@ -97,3 +97,11 @@ Status words: PASS, FAIL, REWORK, NOT_RUN. Record evidence in `qa/run-NNN/`. Do 
 - Supplementary references (generated 2026-11-15, AI concept images, same rights status as sheet B): `docs/chibi-mall-guide-v5/mockup/expressions-b.png` (three expressions, front and three-quarter) and `poses-b.png` (wave, hold-and-point, put sign down).
 - Reference caveats: the brow difference between neutral and smile is subtle, so exaggerate it in the shape keys.
 - Put-down pose: `pose-put-down-b2.png` (front three-quarter and side) replaces the third pose of `poses-b.png`, where the hand still touched the sign. The right hand is open and clear of the handle and the sign stands against the right shin. In the model, place the sign by position, not physics; the hand only needs a relaxed pose.
+
+## 12. Morph-target smoke test (2026-11-15)
+
+Test in `models/chibi-mall-guide-v5/qa/morph-smoke/` (Blender 5.1.2, Three.js 0.187.0 in Node): shape keys export as named morph targets, a morph animation track plays through `AnimationMixer`, and a rigid single-bone skinned mesh loads. Findings that change the standard:
+
+- A skinned mesh parented under the armature gives the validator warning NODE_SKINNED_MESH_NON_ROOT, which fails G1 (0 warnings). Keep skinned meshes as scene roots (unparented) when exporting.
+- The head mesh's shape keys must be the only source of expression morphs; add a `blink` key (the idle animation needs it).
+- Not tested: rendering, the gallery's `src/viewer.js` in a browser, and the mall runtime. The viewer shows models at rest, so a consumer must drive influences itself.
