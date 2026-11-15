@@ -1,0 +1,14 @@
+node:internal/modules/run_main:104
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Shared index accessor requires identical retained indices for every use; explicit --split-shared-indices is required
+    at file:///private/tmp/blender-mall-degenerate-44yfvxbl/worktree/scripts/repair-glb-degenerates.mjs:105:30 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '=='
+}
+
+Node.js v23.10.0

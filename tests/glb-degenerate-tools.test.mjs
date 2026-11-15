@@ -130,6 +130,14 @@ test('shared indices with different per-mesh cleanup masks are rejected without 
   const repair=run('scripts/repair-glb-degenerates.mjs',[before,output,path.join(dir,'receipt.json'),comparison]);
   assert.notEqual(repair.status,0);assert.match(repair.stderr,/Shared index accessor requires identical retained indices/);
   await assert.rejects(fs.access(output),{code:'ENOENT'});
+  const split=path.join(dir,'split.glb'),splitReceipt=path.join(dir,'split.json');
+  const allowed=run('scripts/repair-glb-degenerates.mjs',[before,split,splitReceipt,comparison,'--split-shared-indices']);
+  assert.equal(allowed.status,0,allowed.stderr);
+  assert.equal(JSON.parse(await fs.readFile(splitReceipt)).splitIndexAccessors.length,1);
+  const verified=run('scripts/check-degenerate-repair.mjs',[before,split,path.join(dir,'split-comparison.json')]);
+  assert.equal(verified.status,0,verified.stderr);
+  const oldBytes=await fs.readFile(before),newBytes=await fs.readFile(split);
+  assert.deepEqual(newBytes.subarray(28+newBytes.readUInt32LE(12),28+newBytes.readUInt32LE(12)+144),oldBytes.subarray(28+oldBytes.readUInt32LE(12),28+oldBytes.readUInt32LE(12)+144));
 });
 
 test('reviewed radial-line calibration preserves defaults and rejects a real one-nanometre face', async context => {

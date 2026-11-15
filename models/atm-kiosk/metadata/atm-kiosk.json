@@ -55,7 +55,49 @@
     "browser": "PASS: desktop Chromium at 1440x900, 768x1024, 390x844",
     "visual": "PASS: four final studio views and all three final browser views inspected",
     "animation": "PASS: raw endpoint, open clearance and restoration",
-    "source_sha256": "8c39f556d1988626b87d5eacb9b4b9dfdc2ff0727872a39de8864154c0c5b56b",
-    "glb_sha256": "0348db21bde7c430940e76e37817ef86c2466ea549238adcbbcbce4f9619498a"
+    "source_sha256": "a99b2c833f75e07db855832a5e0c059c647267984f17be7847fbb840557bcc9f",
+    "glb_sha256": "ffa5ee98530439c60ea629852107e718cabbff48edf8fc9d7ae861ae8e12c044"
+  },
+  "source_sha256": "a99b2c833f75e07db855832a5e0c059c647267984f17be7847fbb840557bcc9f",
+  "metrics": {
+    "sha256": "ffa5ee98530439c60ea629852107e718cabbff48edf8fc9d7ae861ae8e12c044",
+    "glb_bytes": 138792,
+    "triangles": 2452,
+    "vertices": 4895,
+    "primitives": 15,
+    "materials": 5,
+    "textures": 0,
+    "animations": 1,
+    "dimensions": [
+      0.6600000262260437,
+      1.8800000231713057,
+      0.7624999778345227
+    ],
+    "bounds": {
+      "min": [
+        -0.33000001311302185,
+        0,
+        -0.342499983496964
+      ],
+      "max": [
+        0.33000001311302185,
+        1.8800000231713057,
+        0.41999999433755875
+      ]
+    },
+    "zero_area_triangles": 0
+  },
+  "validation": {
+    "errors": 0,
+    "warnings": 0,
+    "validator": "2.0.0-dev.3.10"
+  },
+  "topology_repair": {
+    "date": "2026-11-15",
+    "original_source_sha256": "8c39f556d1988626b87d5eacb9b4b9dfdc2ff0727872a39de8864154c0c5b56b",
+    "zero_area_triangles_removed": 4,
+    "reviewed_numeric_residues_removed": 48,
+    "shared_index_accessor_split": true,
+    "animation_payload_unchanged": true
   }
 }

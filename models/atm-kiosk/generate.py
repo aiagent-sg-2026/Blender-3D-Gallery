@@ -5,6 +5,22 @@ from mathutils import Vector
 HERE=Path(__file__).resolve().parent
 SLUG='atm-kiosk'
 ROOT='ASSET_ATMKiosk'
+if bpy.app.version != (4,0,2):
+ raise RuntimeError('Use matching Blender 4.0.2 for the repaired ATM source')
+sys.path.insert(0,str(HERE.parents[1]/'scripts'))
+from blender_degenerate_cleanup import add_cleanup
+CLEANUP_PARTS={SLUG:('EDITABLE_Screen','SCREEN_Bezel','SCREEN_Placeholder')}
+def prepare_asset_geometry(slug,objects):
+ for obj in objects:
+  if obj.name in CLEANUP_PARTS.get(slug,()):
+   ancestor=obj
+   while ancestor:
+    assert not ancestor.animation_data,'Cleanup targets and ancestors must be static'
+    ancestor=ancestor.parent
+   add_cleanup(obj)
+def export_asset(slug,root,objects,destination):
+ export(destination)
+
 def mat(name,rgb,metal=0,rough=.45):
  m=bpy.data.materials.new(name);m.use_nodes=True
  c=tuple(v/12.92 if v<=.04045 else ((v+.055)/1.055)**2.4 for v in rgb)+(1,)
@@ -23,8 +39,9 @@ def rod(name,a,b,r,m,parent):
 def aim(o,p):o.rotation_euler=(Vector(p)-o.location).to_track_quat('-Z','Y').to_euler()
 def export(path):
  bpy.ops.object.select_all(action='DESELECT');root=bpy.data.objects[ROOT];root.select_set(True)
+ prepare_asset_geometry(SLUG,list(root.children_recursive))
  for o in root.children_recursive:o.select_set(True)
- bpy.ops.export_scene.gltf(filepath=str(path),export_format='GLB',use_selection=True,export_apply=True,export_yup=True,export_animations=True,export_texcoords=False,export_extras=True,export_cameras=False,export_lights=False)
+ bpy.ops.export_scene.gltf(filepath=str(path),export_format='GLB',use_selection=True,use_active_scene=True,export_apply=True,export_yup=True,export_animations=True,export_texcoords=False,export_extras=True,export_cameras=False,export_lights=False)
 def studio():
  s=bpy.context.scene;s.world=bpy.data.worlds.new('Slate studio');s.world.use_nodes=True;s.world.node_tree.nodes['Background'].inputs['Color'].default_value=(.10,.14,.18,1);s.world.node_tree.nodes['Background'].inputs['Strength'].default_value=.5
  for name,loc,power in [('Key',(-4,-6,7),1300),('Fill',(5,-2,4),900),('Rim',(0,5,6),1500)]:
@@ -114,11 +131,11 @@ def build(root):
 
 def main():
  for d in ['sources','exports','previews','reports','metadata']:(HERE/d).mkdir(exist_ok=True)
- if '--export-source' in sys.argv:bpy.ops.wm.open_mainfile(filepath=str(HERE/'sources'/(SLUG+'.blend')))
+ if '--export-source' in sys.argv:bpy.ops.wm.open_mainfile(filepath=str(HERE/'sources'/(SLUG+'.blend')),use_scripts=False,load_ui=False)
  else:
   bpy.ops.wm.read_factory_settings(use_empty=True);bpy.context.preferences.filepaths.save_version=0;s=bpy.context.scene;s.unit_settings.system='METRIC';s.unit_settings.scale_length=1
   root=empty(ROOT);root['units']='metres';root['front_axis']='Blender -Y / glTF +Z';root['scope']='Illustrative modular prop, not engineering/safety certification'
-  build(root);studio();bpy.ops.wm.save_as_mainfile(filepath=str(HERE/'sources'/(SLUG+'.blend')),compress=True)
+  build(root);prepare_asset_geometry(SLUG,list(root.children_recursive));studio();bpy.ops.wm.save_as_mainfile(filepath=str(HERE/'sources'/(SLUG+'.blend')),compress=True)
  export(HERE/'exports/optimized.glb')
  if '--skip-render' not in sys.argv:render_views()
 if __name__=='__main__':main()

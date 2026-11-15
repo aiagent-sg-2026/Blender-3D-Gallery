@@ -17,7 +17,7 @@ Active campaign: repair and publish one asset at a time. A fresh raw GLB scan of
 | gjh-areca-planter | 100 | repaired |
 | gjh-m057-premium-wall-shelf-corner | 60 | repaired |
 | escalator | 11 | repaired |
-| atm-kiosk | 4 | pending |
+| atm-kiosk | 4 | repaired |
 | passenger-lift | 4 | pending |
 | mall-food-court-tray-station | 2 | pending |
 | mall-wayfinding-ceiling-sign | 2 | pending |
