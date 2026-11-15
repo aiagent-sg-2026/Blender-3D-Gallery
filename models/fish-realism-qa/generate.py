@@ -55,9 +55,21 @@ def skin_maps():
    for k in range(15):
     cx=.29+k*.039+.012*row;spots=np.maximum(spots,np.exp(-((u-cx)/.0045)**2-((z-level)/.022)**2))
   color*=1-spots[...,None]*.55;patch=np.exp(-((u-.34)/.024)**2-((z+.13)/.13)**2);color*=1-patch[...,None]*.64
+ if C.get('markings')=='spanish_mackerel':
+  wave=u*43+.27*np.sin(u*7)+.14*np.sin(v*19+u*8)+.10*np.sin(v*43+u*7);bars=np.exp(-(np.sin(PI*wave)/.32)**2)*R.smoothstep(.28,.32,u)*(1-R.smoothstep(.95,1,u))*R.smoothstep(-.76,-.55,z)
+  color*=1-bars[...,None]*.19
  # Mouth and operculum are shallow skin recesses, not detached dark tubes.
  xs=-1.65+2.90*u
  hi=np.interp(xs,C['profile_x'],C['top']);lo=np.interp(xs,C['profile_x'],C['bottom']);world_z=(hi+lo)/2+(hi-lo)/2*np.sin(v*2*PI);flank_mask=np.abs(np.cos(v*2*PI))**4
+ if C.get('markings') in ['yellow_scad','bigeye_scad']:
+  yellow=C['markings']=='yellow_scad';level=.14-.035*(xs+.8);band=np.exp(-((world_z-level)/(.040 if yellow else .022))**2)*R.smoothstep(-1.39,-1.24,xs)*(1-R.smoothstep(1.15,1.25,xs))*flank_mask
+  strength=.82 if yellow else .15;color=color*(1-band[...,None]*strength)+np.array([.83,.64,.085])*band[...,None]*strength
+  spot=np.exp(-((xs+.96)/.044)**2-((world_z-.27)/.042)**2)*flank_mask;color*=1-spot[...,None]*(.76 if yellow else .30)
+  line_z=.12*(1-R.smoothstep(-.15,.38,xs));lateral=np.exp(-((world_z-line_z)/.0035)**2)*R.smoothstep(-.83,-.67,xs)*flank_mask;color*=1-lateral[...,None]*.10
+  # Posterior scutes remain tiny skin relief, not detached polygon plates.
+  for k in range(17):
+   sx=.38+k*.047;dx=(xs-sx)/.022;dz=(world_z-.003)/.025;scute=np.exp(-((dx+.28*np.abs(dz))/.15)**2)*(1-R.smoothstep(.65,1.05,np.abs(dz)))*flank_mask
+   height+=scute*.00035;color+=scute[...,None]*.018
  endx,endz=C['mouth_end'];startz=C.get('mouth_start_z',-.10 if slug=='golden-pomfret' else -.16 if slug=='grouper' else -.145)
  target=startz+(endz-startz)*np.clip((xs+1.65)/(endx+1.65),0,1)
  mouth=np.exp(-((world_z-target)/.0025)**2)*R.smoothstep(-1.66,-1.61,xs)*(1-R.smoothstep(endx-.03,endx+.02,xs))*flank_mask
@@ -77,18 +89,21 @@ def pbr(name,images,metal=.04):
   else:nt.links.new(t.outputs['Color'],p.inputs[{'color':'Base Color','rough':'Roughness','alpha':'Alpha'}[key]])
  return mat
 
-def fin_mat():
- if '--reuse-textures' in sys.argv:return pbr('Fin_ThinBranchingMembrane',cached_maps(slug+'_fin',['color','normal','rough','alpha']),.0)
+def fin_mat(tail=False):
+ prefix=slug+('_tail' if tail else '_fin')
+ if '--reuse-textures' in sys.argv:return pbr('Fin_ThinBranchingMembrane',cached_maps(prefix,['color','normal','rough','alpha']),.0)
  n=1024;u,v=np.meshgrid(np.linspace(0,1,n),np.linspace(0,1,n));rng=np.random.default_rng(920);grain=R.noise(u,v,240,180,922);coarse=R.noise(u,v,15,12,923);rays=np.zeros_like(u);branches=np.zeros_like(u);positions=np.cumsum(rng.uniform(.75,1.25,23));positions=(positions-positions[0])/(positions[-1]-positions[0])
  for pos in positions:
   center=pos+rng.uniform(-.012,.012)*v*v;width=.0013+.0015*(1-v);rays=np.maximum(rays,np.exp(-((u-center)/width)**2));fork=rng.uniform(.3,.6)
   for sign in [-1,1]:
    child=center+sign*.014*np.maximum(0,(v-fork)/(1-fork));branches=np.maximum(branches,np.exp(-((u-child)/(width*.7))**2)*R.smoothstep(fork,fork+.04,v))
- lines=np.maximum(rays,branches*.70);color=np.zeros((n,n,3))+np.array(C['fin_color']);color+=(coarse-.5)[...,None]*.08; color+=lines[...,None]*np.array([.075,.045,.030]);alpha=np.clip(.74+coarse*.10+lines*.15-.15*R.smoothstep(.80,1,v),.20,.97)
+ lines=np.maximum(rays,branches*.70);color=np.zeros((n,n,3))+np.array(C['tail_color'] if tail else C['fin_color']);color+=(coarse-.5)[...,None]*.08; color+=lines[...,None]*np.array([.075,.045,.030]);alpha=np.clip(.74+coarse*.10+lines*.15-.15*R.smoothstep(.80,1,v),.20,.97)
+ if tail and C.get('tail_dark_margin'):
+  color*=1-C['tail_dark_margin']*R.smoothstep(.87,.99,v)[...,None]
  if C['pattern']=='grouper':
   for k in range(210):
    px,py=rng.random(2);radius=rng.uniform(.007,.018);d=np.sqrt((u-px)**2+(v-py)**2);a=(1-R.smoothstep(radius*.7,radius*1.1,d))*.55;color=color*(1-a[...,None])+np.array([.065,.045,.022])*a[...,None]
- height=lines*.00075+(grain-.5)*.0001;images={key:R.image_file(slug+'_fin_'+key,data,TEX,key!='color') for key,data in [('color',np.clip(color,0,1)),('normal',normal_map(height,1.2,.45)),('rough',.45+(grain-.5)*.09),('alpha',alpha)]}
+ height=lines*.00075+(grain-.5)*.0001;images={key:R.image_file(prefix+'_'+key,data,TEX,key!='color') for key,data in [('color',np.clip(color,0,1)),('normal',normal_map(height,1.2,.45)),('rough',.45+(grain-.5)*.09),('alpha',alpha)]}
  return pbr('Fin_ThinBranchingMembrane',images,.0)
 
 def profile(x):return [B.interp(list(zip(C['profile_x'],C[k])),x) for k in ['top','bottom','width']]
@@ -107,7 +122,7 @@ def body(mat):
 
 def eye_material():
  n=512;u,v=np.meshgrid(np.linspace(0,1,n),np.linspace(0,1,n));xx=2*u-1;zz=2*v-1;d=np.sqrt(xx*xx+zz*zz);angle=np.arctan2(zz,xx);grain=R.noise(u,v,210,220,942)
- radial=.5+.20*np.sin(angle*121+d*29)+.14*np.sin(angle*77-d*45);color=np.zeros((n,n,3))+np.array(C.get('eye_color',[.27,.025,.012]));color*=.70+radial[...,None]*.45;color+=(grain-.5)[...,None]*.018;rim=R.smoothstep(.81,1,d);color*=1-rim[...,None]*.60;pupil=1-R.smoothstep(.49,.54,d);color=color*(1-pupil[...,None])+np.array([.001,.002,.002])*pupil[...,None]
+ radial=.5+.20*np.sin(angle*121+d*29)+.14*np.sin(angle*77-d*45);color=np.zeros((n,n,3))+np.array(C.get('eye_color',[.27,.025,.012]));color*=.70+radial[...,None]*.45;color+=(grain-.5)[...,None]*.018;rim=R.smoothstep(.81,1,d);color*=1-rim[...,None]*.60;pupil=1-R.smoothstep(C.get('pupil_radius',.515)-.025,C.get('pupil_radius',.515)+.025,d);color=color*(1-pupil[...,None])+np.array([.001,.002,.002])*pupil[...,None]
  im=R.image_file(slug+'_iris',np.clip(color,0,1),TEX);mat=pbr('Eye_RadialIris',{'color':im},.0);p=mat.node_tree.nodes['Principled BSDF'];p.inputs['Roughness'].default_value=.26;p.inputs['Coat Weight'].default_value=.12;p.inputs['Coat Roughness'].default_value=.18;return mat
 
 def eyes():
@@ -140,7 +155,8 @@ def fin_height(u,anal=False):
  return C.get('anal_height',.25)*math.sin(PI*u)**.65 if anal else C['soft_height']*math.sin(PI*u)**.7
 
 def fins(mat):
- R.fan('Caudal_Membrane',lambda u:(1.18,0,(u-.5)*.15),lambda u:(2.03-C['tail_fork']*(1-abs(2*u-1)**C.get('tail_power',2)),0,C['tail_height']*(2*u-1)*(1+C.get('tail_lower_extra',0) if u<.5 else 1)),mat,n=120,m=32,flutter=.020,role='tail')
+ caudal_mat=fin_mat(True) if 'tail_color' in C else mat
+ R.fan('Caudal_Membrane',lambda u:(1.18,0,(u-.5)*.15),lambda u:(2.03-C['tail_fork']*(1-abs(2*u-1)**C.get('tail_power',2)),0,C['tail_height']*(2*u-1)*(1+C.get('tail_lower_extra',0) if u<.5 else 1)),caudal_mat,n=120,m=32,flutter=.020,role='tail')
  start,split,end=C['dorsal_start'],C['dorsal_split'],C['dorsal_end'];spines=C.get('dorsal_spines',6 if slug=='golden-pomfret' else 11)
  def edge(u):
   t=u*(spines-1);i=min(spines-2,int(t));f=t-i;xx=start+(split-start)*u;peak=(.01+C['spine_height']*(1-u)**.85) if C.get('spine_taper') else C['spine_height']*(.68+.32*math.sin(u*PI));return(xx,0,profile(xx)[0]+max(.002,peak-min(.035,.45*C['spine_height'])*math.sin(PI*f)))
@@ -150,17 +166,30 @@ def fins(mat):
  anal_start=C.get('anal_start',.20);anal_span=C.get('anal_end',1.07)-anal_start
  R.fan('Anal_SoftMembrane',lambda u:(anal_start+anal_span*u,0,profile(anal_start+anal_span*u)[1]),lambda u:(anal_start+anal_span*u+fin_sweep(u,True),0,profile(anal_start+anal_span*u)[1]-fin_height(u,True)),mat,n=100,m=28,flutter=.018,role='anal',phase=1.1)
  for k in range(C.get('finlets',0)):
-  x=.94+k*.055;height=.055*(1-k*.12)
+  x=C.get('finlet_start',.94)+k*C.get('finlet_spacing',.055);height=C.get('finlet_height',.055)*(1-k*C.get('finlet_taper',.12))
   for sign,role in [(1,'dorsal'),(-1,'anal')]:
    idx=0 if sign>0 else 1;vs=[(x,0,profile(x)[idx]),(x+.052,0,profile(x+.052)[idx]),(x+.035,.001,profile(x+.035)[idx]+sign*height),(x+.014,0,profile(x+.014)[idx]+sign*height*.35)]
    B.mesh('Finlet_%s_%d'%(role,k),vs,[(0,1,2),(0,2,3)],mat,[(0,0),(1,0),(.65,1),(.25,.35)],deform=role)
+ if C.get('caudal_keel'):
+  for side in [-1,1]:
+   vertices=[];uv=[]
+   for i,x in enumerate([.92,1.04,1.16,1.25]):
+    hi,lo,w=profile(x);mid=(hi+lo)/2;extent=.008*math.sin(PI*i/3)
+    vertices.extend([(x,side*w,mid-.006),(x,side*(w+extent),mid),(x,side*w,mid+.006)]);uv.extend([(i/3,0),(i/3,.5),(i/3,1)])
+   faces=[]
+   for i in range(3):
+    a=i*3;faces.extend([(a,a+3,a+4,a+1),(a+1,a+4,a+5,a+2)])
+   B.mesh('Caudal_PeduncleKeel_'+str(side),vertices,faces,mat,uv)
  for side in [-1,1]:
-  gx=C['gill_x'];rootx=gx+.10;h,l,w=profile(rootx)
-  R.fan('Pectoral_'+str(side),lambda u:(rootx,side*w*.92,-.05+(u-.5)*.07),lambda u:(rootx+C.get('pectoral_length',.46)+.05*math.sin(PI*u),side*(w+.13*math.sin(PI*u)),-.14+(u-.5)*.24),mat,n=82,m=24,flutter=.018,role='pectoral',phase=side)
+  gx=C['gill_x'];rootx=gx+.10;h,l,w=profile(rootx);root_z=C.get('pectoral_root_z',-.05)
+  R.fan('Pectoral_'+str(side),lambda u:(rootx,flank(rootx,root_z+(u-.5)*.07,side,.001) if C.get('pectoral_surface_anchor') else side*w*.92,root_z+(u-.5)*.07),lambda u:(rootx+C.get('pectoral_length',.46)+.05*math.sin(PI*u),side*(w+.13*math.sin(PI*u)),root_z-C.get('pectoral_droop',.09)+(u-.5)*C.get('pectoral_height',.24)),mat,n=82,m=24,flutter=.018,role='pectoral',phase=side)
   if C.get('pelvic',True):R.fan('Pelvic_'+str(side),lambda u:(-.44,side*.12,profile(-.44)[1]),lambda u:(-.21+.27*u,side*(.13+.07*math.sin(PI*u)),profile(-.44)[1]-C.get('pelvic_length',.19)*math.sin(PI*u)),mat,n=66,m=20,flutter=.012,role='anal',phase=side*.4)
 
 bpy.ops.wm.read_factory_settings(use_empty=True);B.ROOT=bpy.data.objects.new('ASSET_PhotoInformed_'+slug,None);bpy.context.scene.collection.objects.link(B.ROOT);B.SLUG=slug
 print('BUILD_MAPS',slug,flush=True);skin=pbr('Skin_IndividualScales',skin_maps(),C.get('metallic',.055 if C['pattern']=='fine_scales' else .025));fm=fin_mat();body(skin);details();fins(fm)
+sys.path.insert(0,str(HERE))
+from filaments import build_filaments
+build_filaments(B,C,profile,flank)
 print('BIND_SWIM',slug,flush=True);rig=B.add_rig('bass')
 sys.path.insert(0,str(HERE))
 from fin_weights import attach_fin_roots
@@ -174,4 +203,6 @@ for o in B.ROOT.children_recursive:
 spec=importlib.util.spec_from_file_location('studio',HERE.parent/'fish-realism-review'/'revision-03'/'create_review.py');P=importlib.util.module_from_spec(spec);spec.loader.exec_module(P);s=P.studio(OUT);s.camera.data.ortho_scale=4.6;s.camera.location=(-.15,-9,.85);P.aim(s.camera,(.14,0,.02));s.frame_set(13);s.frame_end=end_frame
 bpy.ops.wm.save_as_mainfile(filepath=str(OUT/(slug+'.blend')));bpy.ops.render.render(write_still=True)
 s.camera.location=(-1.15,-7,.55);P.aim(s.camera,(-1.03,0,.02));s.camera.data.ortho_scale=1.65;s.render.filepath=str(OUT/'head-detail.png');bpy.ops.render.render(write_still=True)
+if C.get('pectoral_filaments'):
+ s.camera.location=(-.2,-7,.25);P.aim(s.camera,(-.35,0,-.27));s.camera.data.ortho_scale=1.5;s.render.filepath=str(OUT/'filament-detail.png');bpy.ops.render.render(write_still=True)
 print('GENERATED',slug,flush=True)

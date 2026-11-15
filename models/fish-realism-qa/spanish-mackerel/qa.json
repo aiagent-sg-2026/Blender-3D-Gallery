@@ -1,0 +1,44 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "findings": [
+        "overly uniform dark bars extend too far onto head",
+        "pectoral membrane too broad for this narrow-bodied species",
+        "peduncle keel too raised and tube-like"
+      ],
+      "changes": [
+        "vary and soften bars behind operculum",
+        "narrow the pectoral membrane and pelvic fins",
+        "reduce keel relief to an integrated ridge"
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "pass",
+      "changes": [
+        "softened irregular bars behind gill",
+        "reduced pectoral breadth and keel relief"
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "ae2c31671dd5dbf51df396eaccf78191b5ab734c662e25c801fd2fc58457e092",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "visual_checks": {
+    "anatomy": "pass: elongate compressed body, extended closed jaws and narrow peduncle",
+    "surface": "pass: subdued irregular wavy bars begin behind the operculum over a silver-blue flank",
+    "fins": "pass: narrowed pectoral membrane, two near-separated dorsal sections, nine small finlets per side of the tail and a forked caudal fin",
+    "head": "pass: integrated gill and mouth recesses, restrained eye size and natural slender head",
+    "motion": "pass: cyclic tail propulsion and anchored distal fin stabilization survive GLB reimport",
+    "browser": "pass: actual draft GLB visibly swims and pauses at desktop/mobile sizes"
+  },
+  "limitations": [
+    "Original photo-informed artistic reconstruction, not scanned anatomy.",
+    "Closed mouth does not expose teeth.",
+    "Draft browser fixture uses baseline catalog captions."
+  ]
+}

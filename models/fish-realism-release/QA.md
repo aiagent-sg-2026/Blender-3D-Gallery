@@ -23,3 +23,7 @@ A push is not deployment evidence. After pushing, wait for a successful GitHub P
 This batch adds exactly three catalog replacements, bringing the manifest to nine. Rebuilt the full catalog, reimported and measured all nine delivery GLBs, checked all 79 protected hashes and confirmed registrar idempotence. Incremental browser receipts are named `local-all-batch-02-browser-verification.json`; prior six model binaries remain unchanged. These new fish retain per-item photo references, head/detail renders, animated GIFs and independent draft QA evidence. Live availability still requires the deployment and live verification described above.
 
 Batch 02 results: all 12 incremental Chromium/WebKit desktop/mobile scenarios passed; 686 existing unit tests passed, zero failures/skips. The previous six release GLB hashes are unchanged.
+
+## Batch 03: Spanish mackerel, yellowstripe scad, bigeye scad
+
+Three additional entries, twelve total; the remaining 48 are not declared complete. All twelve deployment GLBs pass reimported motion and artifact/source hash checks; 79 protected files remain unchanged. All 12 incremental Chromium/WebKit desktop/mobile scenarios passed, including final post-capture/disposal error checks. All 689 existing unit tests passed with zero failures/skips. The three new delivery GLBs are 3.80, 4.09 and 3.74 MiB respectively. Model QA revised overly broad Spanish mackerel pectorals/regular bars, separated yellow scad tail pigmentation, and removed bigeye scad eye/mouth overlap before sealing the artwork.

@@ -16,13 +16,13 @@ for(const engine of (process.env.FISH_ENGINE?[process.env.FISH_ENGINE]:['chromiu
 const directory=`output/playwright/fish-realism-release/${process.env.FISH_LIVE_URL?'live':'local'}/${engine}/${slug}`;await fs.mkdir(directory,{recursive:true});
 
 for(const width of [1440,390]) {
-  const errors=[],nativeSelectWarnings=[];let served=0;
+  const errors=[],knownCspMessages=[];let served=0;
   const context=await browser.newContext({viewport:{width,height:900},isMobile:width===390,hasTouch:width===390,reducedMotion:'reduce',serviceWorkers:'block'});
   context.on('response',async response=>{
     if(!new URL(response.url()).pathname.endsWith('.glb'))return;
     try { const body=await response.body(); if(crypto.createHash('sha256').update(body).digest('hex')===artifactHash)served++; } catch {}
   });
-  const page=await context.newPage();await page.addInitScript(()=>{window.fishCsp=[];document.addEventListener('securitypolicyviolation',e=>window.fishCsp.push({directive:e.effectiveDirective,target:e.target?.id,capture:window.fishCapture===true}));});page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error'){if(engine==='webkit'&&m.text()==="Refused to apply a stylesheet because its hash, its nonce, or 'unsafe-inline' does not appear in the style-src directive of the Content Security Policy.")nativeSelectWarnings.push(m.text());else errors.push(m.text());}});
+  const page=await context.newPage();await page.addInitScript(()=>{window.fishCsp=[];document.addEventListener('securitypolicyviolation',e=>window.fishCsp.push({directive:e.effectiveDirective,target:e.target?.id,capture:window.fishCapture===true}));});page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error'){if(engine==='webkit'&&m.text()==="Refused to apply a stylesheet because its hash, its nonce, or 'unsafe-inline' does not appear in the style-src directive of the Content Security Policy.")knownCspMessages.push(m.text());else errors.push(m.text());}});
   await page.goto(server.url+`?model=fish-${slug}`);
   const button=page.locator('[data-fish-playback]');await button.waitFor({timeout:60000});await page.waitForFunction(()=>document.querySelector('#viewport canvas')&&document.querySelector('#viewer-status')?.textContent==='',{timeout:60000});await page.waitForTimeout(150);assert.ok(served>0,'Expected released GLB bytes were not loaded');
   assert.equal(await button.getAttribute('aria-pressed'),'false');await page.waitForTimeout(250);
@@ -30,13 +30,14 @@ for(const width of [1440,390]) {
   // WebKit's Playwright screenshot preparation injects `body {}` to sync
   // animation. Production CSP correctly blocks it; scope this known harness
   // event to captures rather than weakening the site's policy.
-  const capture=async locator=>{await page.evaluate(()=>window.fishCapture=true);try{return await locator.screenshot({caret:'initial'});}finally{await page.waitForTimeout(50);await page.evaluate(()=>window.fishCapture=false);}};
+  const capture=async (locator,options={})=>{await page.evaluate(()=>window.fishCapture=true);try{return await locator.screenshot({...options,caret:'initial'});}finally{await page.waitForTimeout(50);await page.evaluate(()=>window.fishCapture=false);}};
 const still=await capture(canvas);await page.waitForTimeout(150);assert.ok(still.equals(await capture(canvas)),'Paused canvas drifted');
   await button.click();await page.waitForTimeout(500);await button.click();await page.waitForTimeout(100);const moved=await capture(canvas);assert.ok(!still.equals(moved),'Swimming did not visibly change the real canvas');await page.waitForTimeout(150);assert.ok(moved.equals(await capture(canvas)),'Pause failed');
-  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);assert.deepEqual(errors,[]);const csp=await page.evaluate(()=>window.fishCsp);assert.ok(csp.every(v=>engine==='webkit'&&((v.directive==='style-src-elem'&&v.capture&&!v.target)||(v.directive==='style-src-attr'&&['model-theme','model-category','model-collection','model-feature','demo-category'].includes(v.target)))),JSON.stringify(csp));
-  const screenshot=`${directory}/${width===1440?'desktop':'mobile'}.png`;await page.screenshot({path:screenshot,caret:'initial'});
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);assert.deepEqual(errors,[]);
+  const screenshot=`${directory}/${width===1440?'desktop':'mobile'}.png`;await capture(page,{path:screenshot});
   await page.keyboard.press('Escape');assert.equal(await page.locator('[data-fish-playback]').count(),0);
-  results.push({slug,engine,width,height:900,loaded_release_sha256:artifactHash,native_select_csp_warnings:nativeSelectWarnings.length,csp_events:csp,paused_stable:true,visible_swim_change:true,resumed_then_paused:true,no_horizontal_overflow:true,no_page_errors:true,viewer_disposed:true,screenshot});await context.close();
+  assert.deepEqual(errors,[]);const csp=await page.evaluate(()=>window.fishCsp);assert.ok(csp.every(v=>engine==='webkit'&&((v.directive==='style-src-elem'&&v.capture&&!v.target)||(v.directive==='style-src-attr'&&['model-theme','model-category','model-collection','model-feature','demo-category'].includes(v.target)))),JSON.stringify(csp));
+  results.push({slug,engine,width,height:900,loaded_release_sha256:artifactHash,known_csp_console_messages:knownCspMessages.length,native_select_csp_events:csp.filter(v=>v.directive==='style-src-attr').length,screenshot_csp_events:csp.filter(v=>v.directive==='style-src-elem').length,csp_events:csp,paused_stable:true,visible_swim_change:true,resumed_then_paused:true,no_horizontal_overflow:true,no_page_errors:true,viewer_disposed:true,screenshot});await context.close();
  }
  console.log('PASS release',engine,slug);
  } } finally {await browser.close();}

@@ -1,6 +1,6 @@
 # Approved fish deployment derivatives
 
-The owner authorized replacing the corresponding live gallery models and pushing each passing batch to main on 2026-11-15. The initial promotion contains the three owner-accepted models and the first three independently reviewed upgrades. Batch 02 adds silver pomfret, black pomfret and Indian mackerel. The manifest now contains nine promoted fish; the remaining 51 are not declared complete.
+The owner authorized replacing the corresponding live gallery models and pushing each passing batch to main on 2026-11-15. The initial promotion contains the three owner-accepted models and the first three independently reviewed upgrades. Batch 02 adds silver pomfret, black pomfret and Indian mackerel. Batch 03 adds Spanish mackerel, yellowstripe scad and bigeye scad. The manifest now contains twelve promoted fish; the remaining 48 are not declared complete.
 
 `releases.json` owns the promoted set, source paths, acceptance level, descriptions and license summaries. `register.py` overlays only these IDs onto the fish catalog; the baseline registrar calls the same overlay. Sources and previous production GLBs are preserved.
 
@@ -17,3 +17,7 @@ Reference photos are not embedded. The Betta source and CC BY 4.0 links appear i
 WebKit receipts separately retain existing native-select CSP events. Screenshot-time `style-src-elem` events are accepted only inside the capture interval: the installed Playwright screenshot preparation injects `body {}` for animation synchronization, which production CSP blocks. Neither the application CSP nor the validator was weakened. Other page/console errors or CSP events fail the browser check.
 
 Incremental browser runs can set `FISH_SLUGS=slug-a,slug-b` and `FISH_BATCH=batch-02`; full runs default to every manifest entry. New batches retain earlier artifact hashes and their existing browser receipts.
+
+To stage a future batch from the authoring checkout, run `uv run --with pillow python models/fish-realism-release/promote.py --from-root /path/to/authoring-checkout SLUG...` in the isolated release checkout. This copies only sealed, hash-verified original artwork and prepares metadata/posters; it still requires export, catalog registration, artifact/build/browser verification and a verified deployment before claiming online availability.
+
+Older first/batch-02 receipts use `native_select_csp_warnings` for the combined known CSP console-message count. Their event lists distinguish native-select and screenshot-preparation events. Batch 03 onward names those counts separately and checks errors again after capture and viewer disposal.

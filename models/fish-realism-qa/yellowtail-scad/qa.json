@@ -1,0 +1,43 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "all fins too yellow; reference has a brighter tail with pale other fins",
+        "iris band too broad for reference eye"
+      ],
+      "changes": [
+        "separate tail membrane pigmentation",
+        "increase pupil proportion while preserving iris fiber detail"
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "pass",
+      "changes": [
+        "separated tail pigmentation from pale fins",
+        "increased pupil proportion"
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "f9854aaa66ae0423467831072496832ac86fe6450bc926be3572d0d3a4648be6",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "visual_checks": {
+    "anatomy": "pass: compressed fusiform body, separate dorsal fins and deeply forked tail",
+    "surface": "pass: silver-green flank with yellow lateral band and upper opercular patch; fine posterior scute relief",
+    "head": "pass: larger black pupil and thinner textured iris ring, integrated mouth and operculum",
+    "fins": "pass: yellow tail is distinct from pale other membranes with anchored roots",
+    "motion": "pass: cyclic tail and restrained fin movement survive GLB import with stable endpoints",
+    "browser": "pass: actual draft GLB rendered, swims and pauses at desktop/mobile sizes"
+  },
+  "limitations": [
+    "Photo-informed original art, not a scan.",
+    "Supplied Yellowtail scad alias is represented by a documented Selaroides leptolepis visual study.",
+    "Draft browser fixture uses baseline captions."
+  ]
+}
