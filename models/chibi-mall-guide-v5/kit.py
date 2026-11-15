@@ -173,20 +173,29 @@ def super_side_x(c, r, y, z, p_top=2.0, p_bot=2.0, rz_bot=None):
     return c[0] + f * r[0] * math.sqrt(max(0.0, t))
 
 
-def add_lock(bm, pts, normals, widths, thicks, sides=14, mi=0):
+def add_lock(bm, pts, normals, widths, thicks, sides=14, mi=0, cap_rings=3):
     """Swept lock lying on a surface: an elliptical section (half width along the surface, half thickness along the normal)
-    follows the polyline pts; widths and thicks are per point and should taper smoothly to a rounded end."""
-    pts = [Vector(p) for p in pts]; n0 = len(bm.faces); rings = []
+    follows the polyline pts; widths and thicks are per point. Both ends are closed with a rounded cap (cap_rings extra rings that
+    shrink like a quarter ellipse), so even a lock with a thick end finishes in a dome, never a flat face."""
+    pts = [Vector(p) for p in pts]; n0 = len(bm.faces); frames = []
     for i, p in enumerate(pts):
         t = (pts[min(i + 1, len(pts) - 1)] - pts[max(i - 1, 0)]).normalized()
         n = Vector(normals[i]).normalized(); b = t.cross(n)
         if b.length < 1e-6: b = Vector((1.0, 0.0, 0.0))
         b.normalize(); n = b.cross(t).normalized()
-        ring = []
-        for k in range(sides):
-            a = 2 * math.pi * k / sides
-            ring.append(bm.verts.new(p + n * (math.cos(a) * thicks[i]) + b * (math.sin(a) * widths[i])))
-        rings.append(ring)
+        frames.append((p, t, n, b, widths[i], thicks[i]))
+    def ring(p, n, b, w, th):
+        return [bm.verts.new(p + n * (math.cos(2 * math.pi * k / sides) * th) + b * (math.sin(2 * math.pi * k / sides) * w)) for k in range(sides)]
+    rings = []
+    p, t, n, b, w, th = frames[0]; adv = (w + th) * 0.5 * 0.9
+    for j in range(cap_rings, 0, -1):    # start cap, outermost first
+        phi = (math.pi / 2) * j / (cap_rings + 1)
+        rings.append(ring(p - t * adv * math.sin(phi), n, b, w * math.cos(phi), th * math.cos(phi)))
+    for (p, t, n, b, w, th) in frames: rings.append(ring(p, n, b, w, th))
+    p, t, n, b, w, th = frames[-1]; adv = (w + th) * 0.5 * 0.9
+    for j in range(1, cap_rings + 1):    # end cap
+        phi = (math.pi / 2) * j / (cap_rings + 1)
+        rings.append(ring(p + t * adv * math.sin(phi), n, b, w * math.cos(phi), th * math.cos(phi)))
     for i in range(len(rings) - 1):
         for k in range(sides):
             bm.faces.new((rings[i][k], rings[i][(k + 1) % sides], rings[i + 1][(k + 1) % sides], rings[i + 1][k]))

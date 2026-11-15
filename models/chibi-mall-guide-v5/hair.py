@@ -14,14 +14,16 @@ def skull_point(az, el, off):
     n = Vector((d.x / rx, d.y / ry, d.z / rz)).normalized()
     return p + n * off, n
 
-def lock_geometry(spec, steps=14):
+def lock_geometry(spec, steps=None):
+    steps = steps or C.HAIR_STEPS
     az0, el0, az1, el1, swirl, W, T, off = spec[:8]; flare = spec[8] if len(spec) > 8 else 0.0; r = math.radians
+    opts = spec[9] if len(spec) > 9 else {}; taper = opts.get('taper', C.HAIR_TAPER); endmin = opts.get('endmin', C.HAIR_END_MIN)
     pts, nrm, ws, ts = [], [], [], []
     for i in range(steps + 1):
         t = i / steps
         az = az0 + (az1 - az0) * t + swirl * math.sin(math.pi * t)
         el = el0 + (el1 - el0) * t
-        s = max(math.sin(math.pi * t) ** C.HAIR_TAPER, C.HAIR_END_MIN)   # blunt ends: a floor keeps them from tapering to a point
+        s = max(math.sin(math.pi * t) ** taper, endmin)   # blunt ends: a floor keeps them from tapering to a point
         belly = 1.0 + 0.25 * math.sin(math.pi * min(1.0, t * 1.4))   # a little fuller toward the root
         p, n = skull_point(r(az), r(el), off + flare * t * t + T * 0.55 * s)   # flare pushes the lower end outward
         pts.append(p); nrm.append(n); ws.append(W * s * belly); ts.append(T * s)
@@ -31,5 +33,5 @@ def build_hair(bmesh, mats):
     bm = bmesh.new()
     for spec in C.HAIR_LOCKS:
         pts, nrm, ws, ts = lock_geometry(spec)
-        kit.add_lock(bm, pts, nrm, ws, ts, sides=C.HAIR_SIDES)
+        kit.add_lock(bm, pts, nrm, ws, ts, sides=C.HAIR_SIDES, cap_rings=C.HAIR_CAP_RINGS)
     return kit.finish('Hair', bm, [mats['hair']])
