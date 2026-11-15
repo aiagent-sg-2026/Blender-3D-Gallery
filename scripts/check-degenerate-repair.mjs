@@ -1,4 +1,6 @@
 import './node-glb-structure.mjs';
+import {RIGID_FLAG,rigidScope,animationPayload,compareNativeClips} from './rigid-container-qa.mjs';
+const rigidOptIn=process.argv.includes(RIGID_FLAG);
 import { materialDefinitions } from './node-glb-structure.mjs';
 // Independent comparison of static delivered GLBs, including numerical residue.
 import assert from 'node:assert/strict';
@@ -12,6 +14,9 @@ const [beforePath, afterPath, output] = process.argv.slice(2);
 const allowNormalDrift = process.argv.includes('--allow-normal-drift');
 const lineArgument = process.argv.find(value => value.startsWith('--precision-line-tolerance-m='));
 const precisionLineToleranceM = lineArgument ? Number(lineArgument.split('=')[1]) : 0;
+const lineNodesArgument=process.argv.find(v=>v.startsWith('--precision-line-nodes='));
+const precisionLineNodes=lineNodesArgument?lineNodesArgument.split('=')[1].split(',').sort():[];
+assert.ok(!precisionLineNodes.length||(precisionLineToleranceM>0&&precisionLineNodes.every(Boolean)&&new Set(precisionLineNodes).size===precisionLineNodes.length),'Line-node scope requires a tolerance and unique exact node names');
 assert.ok(Number.isFinite(precisionLineToleranceM) && precisionLineToleranceM >= 0 && precisionLineToleranceM <= 1e-7,
   'Explicit reviewed line tolerance must be finite and at most 0.1 micrometre');
 assert.ok(beforePath && afterPath && output, 'Pass original GLB, repaired GLB and receipt path');
@@ -20,10 +25,12 @@ const NUMERICAL_RESIDUE_ALTITUDE = 1e-7;
 async function inspect(file) {
   const bytes = await fs.readFile(file);
   const json = JSON.parse(bytes.toString('utf8', 20, 20 + bytes.readUInt32LE(12)));
+  assert.ok(precisionLineNodes.every(name=>json.nodes.some(n=>n.name===name)),'Line-node scope contains an unknown node');
   const resolvedMaterials = materialDefinitions(json, bytes.subarray(28 + bytes.readUInt32LE(12)));
   const validation = await validator.validateBytes(new Uint8Array(bytes));
   assert.equal(validation.issues.numErrors, 0); assert.equal(validation.issues.numWarnings, 0);
-  assert.equal(json.animations?.length ?? 0, 0, 'Animated assets require separate state/clip comparison');
+  if(rigidOptIn)rigidScope(json);
+  else assert.equal(json.animations?.length ?? 0, 0, 'Animated assets require separate state/clip comparison');
   const gltf = await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength), '');
   gltf.scene.updateMatrixWorld(true);
   const surfaces = new Map(), roots = {}, linePrecisionResidues = [];
@@ -56,11 +63,11 @@ async function inspect(file) {
       const orderedPoints = [0, 1, 2].map(k => points[(rotation.j + k) % 3].toArray());
       const record = { area, altitude: 2 * area / longestEdge, quantizedCollinear: quantizedArea === 0,
         material: object.material.name, points: orderedPoints, normals };
-      if (precisionLineToleranceM && record.altitude <= precisionLineToleranceM) {
+      if (precisionLineToleranceM && (!precisionLineNodes.length||precisionLineNodes.includes(object.name)) && record.altitude <= precisionLineToleranceM) {
         // Explicit calibration for reviewed analytic lines. Grid rounding can
         // make a radial line non-collinear, so use its actual perpendicular error.
-        linePrecisionResidues.push({ key, area, altitude: record.altitude,
-          quantizedCollinear: record.quantizedCollinear });
+        linePrecisionResidues.push({ key, node:object.name, area, altitude: record.altitude,
+          quantizedCollinear: record.quantizedCollinear, points:record.points });
         continue;
       }
       if (!surfaces.has(key)) surfaces.set(key, []);
@@ -71,9 +78,11 @@ async function inspect(file) {
   return { file, bytes: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex'), triangles, zero,
     invalidNormals, bounds: { min: bounds.min.toArray(), max: bounds.max.toArray() }, roots,
     materialDefinitions: json.materials, resolvedMaterialDefinitions: resolvedMaterials,
+    animationPayload: rigidOptIn?animationPayload(json,bytes.subarray(28+bytes.readUInt32LE(12))):undefined,
+    clipData: rigidOptIn?gltf.animations:undefined,
     issues: validation.issues, surfaces, linePrecisionResidues };
 }
-const summarize = value => ({ ...value, surfaces: undefined });
+const summarize = value => ({ ...value, surfaces: undefined, clipData: undefined });
 let receipt;
 try {
   const before = await inspect(beforePath), after = await inspect(afterPath);
@@ -128,6 +137,7 @@ try {
     changedNormalTriangles, maxNormalDelta };
   if (precisionLineToleranceM) {
     receipt.precisionLineToleranceM = precisionLineToleranceM;
+    if(precisionLineNodes.length)receipt.precisionLineNodes=precisionLineNodes;
     receipt.linePrecisionResidues = before.linePrecisionResidues;
     receipt.afterLinePrecisionResidues = after.linePrecisionResidues;
   }
@@ -142,9 +152,14 @@ try {
   for (const side of ['min', 'max']) after.bounds[side].forEach((v, i) => assert.ok(Math.abs(v - before.bounds[side][i]) < 1e-6));
   assert.deepEqual(after.resolvedMaterialDefinitions, before.resolvedMaterialDefinitions,
     'Material definitions or embedded texture payloads changed');
+  if(rigidOptIn){
+    receipt.rigidContainerStaticOnly=true;
+    if(allowNormalDrift)receipt.nativeClipComparison=compareNativeClips(before.clipData,after.clipData);
+    else assert.deepEqual(after.animationPayload,before.animationPayload,'Canonical animation descriptor/accessor payload changed');
+  }
   receipt.status = 'PASS';
   await fs.writeFile(output, JSON.stringify(receipt, null, 2) + '\n');
-  console.log('PASS: static GLB repair; zero degenerate triangles; bounds, roots, material surfaces preserved within stated numeric limits');
+  console.log('PASS: GLB geometry repair; zero degenerate triangles; bounds, roots, material surfaces preserved within stated numeric limits');
 } catch (error) {
   await fs.writeFile(output, JSON.stringify({ ...receipt, status: 'FAIL', error: error.message }, null, 2) + '\n');
   throw error;

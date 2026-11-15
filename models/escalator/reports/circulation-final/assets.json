@@ -1,8 +1,8 @@
 {
   "result": "PASS",
   "scope": "canonical illustrative structural/motion/equivalence gate; physical mechanism remains NEEDS REVIEW",
-  "triangles": 65408,
-  "glb_bytes": 4672692,
+  "triangles": 65394,
+  "glb_bytes": 4672668,
   "primitives": 138,
   "budget": {
     "triangles": 70000,
@@ -26,7 +26,7 @@
       5.461055774241686
     ]
   },
-  "sha256": "f8f8bda8b28a4faaf1fb2b03ee2a832fe23b90621eee9ab0a24a26c1b2b89ada",
+  "sha256": "b14375e54f366d3238fb32141bb9d25ca87add72664770e9a8541db9266bd501",
   "validation": {
     "errors": 0,
     "warnings": 0
@@ -286,6 +286,7 @@
     "exactAnimationTracks": true,
     "exactMeshAttributes": true,
     "exactNodeTransforms": true,
+    "reviewedStaticTriangleRemovals": 14,
     "additionalFixedAccessPanelOutsideMotionEnvelope": true,
     "files": [
       "candidates/curved-dual-track/reports/actual-mesh-clearance-06.json",

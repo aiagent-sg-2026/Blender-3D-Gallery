@@ -1,10 +1,27 @@
 """Original deterministic metric architectural prop. Blender 4.0.2. No external assets."""
 from pathlib import Path
-import bpy, math, sys, json
+import bpy, math, sys, json, subprocess, tempfile, shutil
 from mathutils import Vector
 HERE=Path(__file__).resolve().parent
 SLUG='escalator'
 ROOT='ASSET_EscalatorV1_ID004'
+if bpy.app.version != (4, 0, 2):
+ raise RuntimeError('Use matching Blender 4.0.2 for the escalator n-gon triangulation')
+sys.path.insert(0,str(HERE.parents[1]/'scripts'))
+from blender_degenerate_cleanup import add_cleanup
+from blender_animation_snapshot import action_curves
+CLEANUP_PARTS={SLUG:('GUARD_L','GUARD_R','SKIRT_L','SKIRT_R','TRUSS_L','TRUSS_R','TRUSS_Bottom')}
+def prepare_asset_geometry(slug,objects):
+ for o in objects:
+  if o.name in CLEANUP_PARTS.get(slug,()):
+   ancestor=o
+   while ancestor:
+    assert not ancestor.animation_data, 'Cleanup targets and ancestors must be static'
+    ancestor=ancestor.parent
+   add_cleanup(o,ngon_method='Clip')
+def export_asset(slug,root,objects,destination):
+ export(destination)
+
 def mat(name,rgb,metal=0,rough=.45):
  m=bpy.data.materials.new(name);m.use_nodes=True
  c=tuple(v/12.92 if v<=.04045 else ((v+.055)/1.055)**2.4 for v in rgb)+(1,)
@@ -21,10 +38,48 @@ def box(name,loc,dims,m,parent,bevel=.002):
 def rod(name,a,b,r,m,parent):
  a,b=Vector(a),Vector(b);d=b-a;bpy.ops.mesh.primitive_cylinder_add(vertices=16,radius=r,depth=d.length,location=(a+b)/2);o=bpy.context.object;o.rotation_euler=d.to_track_quat('Z','Y').to_euler();return finish(o,name,m,parent,.001)
 def aim(o,p):o.rotation_euler=(Vector(p)-o.location).to_track_quat('-Z','Y').to_euler()
+def verify_line_residues(rows):
+ # These panels sample a mathematical straight incline; Float32 vertices can
+ # leave sub-nanometre triangles that are not collinear on a 1 um integer grid.
+ top=[(p[0]-.36-CENTER,p[1]) for p in UPPER[::30]];top[0]=(-.36-CENTER,0);top.append((END-.36-CENTER,3))
+ envelope=[(-1.2-CENTER,0)]+top+[(END+1.2-CENTER,3)]
+ poly=[(y,z-2.3) for y,z in envelope]+[(y,z-.02) for y,z in reversed(envelope)]
+ reviews=[]
+ for row in rows:
+  assert row['node'] in {'TRUSS_L','TRUSS_R'}, 'Review each analytic residue part'
+  obj=bpy.data.objects[row['node']];x=-.76 if row['node']=='TRUSS_L' else .76
+  matrix=[list(r) for r in obj.matrix_world]
+  nominal=[]
+  for xx in [x-.035/2,x+.035/2]:
+   for y,z in poly:
+    point=(xx,y,z,1);world=[sum(matrix[i][j]*point[j] for j in range(4)) for i in range(3)]
+    nominal.append((world[0],world[2],-world[1]))
+  points=[];distances=[]
+  for point in row['points']:
+   nearest=min(nominal,key=lambda v:math.dist(point,v));points.append(nearest);distances.append(math.dist(point,nearest))
+  u=tuple(a-b for a,b in zip(points[1],points[0]));v=tuple(a-b for a,b in zip(points[2],points[0]))
+  cross=(u[1]*v[2]-u[2]*v[1],u[2]*v[0]-u[0]*v[2],u[0]*v[1]-u[1]*v[0])
+  length=max(math.dist(p,points[(i+1)%3]) for i,p in enumerate(points));assert length>0
+  altitude=math.hypot(*cross)/length
+  assert max(distances)<5e-8 and altitude<1e-14 and row['altitude']<=1.1e-9, 'Source edits invalidate analytic line calibration'
+  reviews.append({'node':row['node'],'nominal_points':points,'nominal_altitude_m':altitude,
+                  'float64_glb_altitude_m':row['altitude'],'max_float32_vertex_error_m':max(distances)})
+ return reviews
+
 def export(path):
  bpy.ops.object.select_all(action='DESELECT');root=bpy.data.objects[ROOT];root.select_set(True)
+ prepare_asset_geometry(SLUG,list(root.children_recursive))
  for o in root.children_recursive:o.select_set(True)
- bpy.ops.export_scene.gltf(filepath=str(path),export_format='GLB',use_selection=True,export_apply=True,export_yup=True,export_animations=True,export_texcoords=False,export_extras=True,export_cameras=False,export_lights=False)
+ repository=Path(__file__).resolve().parents[2]
+ flags=['--static-meshes-in-rigid-container','--precision-line-tolerance-m=1.1e-9','--precision-line-nodes=TRUSS_L,TRUSS_R']
+ with tempfile.TemporaryDirectory(prefix='escalator-export-cleanup-') as directory:
+  stage=Path(directory);raw=stage/'raw.glb';comparison=stage/'comparison.json';result=stage/'clean.glb'
+  bpy.ops.export_scene.gltf(filepath=str(raw),export_format='GLB',use_selection=True,use_active_scene=True,export_apply=True,export_yup=True,export_animations=True,export_texcoords=False,export_extras=True,export_cameras=False,export_lights=False)
+  subprocess.run(['node',str(repository/'scripts/check-degenerate-repair.mjs'),str(raw),str(raw),str(comparison),'--allow-normal-drift',*flags],check=True)
+  proof=json.loads(comparison.read_text());verify_line_residues(proof['linePrecisionResidues'])
+  subprocess.run(['node',str(repository/'scripts/repair-glb-degenerates.mjs'),str(raw),str(result),str(stage/'repair.json'),str(comparison),*flags],check=True)
+  subprocess.run(['node',str(repository/'scripts/check-degenerate-repair.mjs'),str(raw),str(result),str(stage/'final.json'),*flags],check=True)
+  shutil.copyfile(result,path)
 def studio():
  s=bpy.context.scene;s.world=bpy.data.worlds.new('Slate studio');s.world.use_nodes=True;s.world.node_tree.nodes['Background'].inputs['Color'].default_value=(.10,.14,.18,1);s.world.node_tree.nodes['Background'].inputs['Strength'].default_value=.5
  for name,loc,power in [('Key',(-4,-6,7),1300),('Fill',(5,-2,4),900),('Rim',(0,5,6),1500)]:
@@ -131,7 +186,7 @@ def key_motion(o,phase,duration,pathfn,kind):
  for f in range(frames+1):
   u=f/frames;point=pathfn(u,phase);o.location=point[:3];o.rotation_quaternion=Quaternion((1,0,0),point[3]);o.keyframe_insert(data_path='location',frame=f);o.keyframe_insert(data_path='rotation_quaternion',frame=f)
  o.animation_data.action.name=kind+'_'+o.name
- for fc in o.animation_data.action.fcurves:
+ for fc in action_curves(o.animation_data.action):
   for k in fc.keyframe_points:k.interpolation='LINEAR'
  o['period_seconds']=frames/24;o['intended_speed_m_s']=.5;o['phase_m']=phase
  return frames
@@ -220,11 +275,14 @@ def build(root):
  root['units']='metres';root['rise_m']=3.;root['chain_path_length_m']=L;root['step_count']=N;root['nominal_linear_speed_m_s']=.5;root['handrail_path_length_m']=railL
  root['scope']='Original kinematic visual mechanism; not engineering/safety certification, no operational UI. Uniform rubber belt transport indicated by a physical seam, no conveyor texture.'
  bpy.context.scene.frame_set(0)
+ prepare_asset_geometry(SLUG,list(root.children_recursive))
 
 def main():
  bpy.ops.wm.read_factory_settings(use_empty=True);bpy.context.preferences.filepaths.save_version=0;s=bpy.context.scene;s.unit_settings.system='METRIC';s.unit_settings.scale_length=1;s.render.fps=24
  root=empty(ROOT);build(root);s.frame_start=0;s.frame_end=round(PERIOD*24);studio();s.frame_set(0)
- bpy.ops.wm.save_as_mainfile(filepath=str(HERE/'sources'/(SLUG+'.blend')),compress=True);export(HERE/'exports/optimized.glb');render_views()
+ bpy.ops.wm.save_as_mainfile(filepath=str(HERE/'sources'/(SLUG+'.blend')),compress=True);export(HERE/'exports/optimized.glb')
+ if '--skip-render' in sys.argv:return
+ render_views()
  # Actual full-geometry intermediate poses; no removal of steps or risers.
  for f,label in [(round(PERIOD*24*.25),'quarter'),(round(PERIOD*24*.5),'half'),(round(PERIOD*24*.75),'three-quarter')]:
   s.frame_set(f);s.camera.location=Vector(TARGET)+Vector((1.3,-2,1))*SCALE;aim(s.camera,TARGET);s.render.filepath=str(HERE/'previews'/(label+'.png'));bpy.ops.render.render(write_still=True)

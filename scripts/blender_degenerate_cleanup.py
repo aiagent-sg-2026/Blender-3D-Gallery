@@ -9,6 +9,15 @@ GROUP_NAME = 'Triangle cleanup - 0.1 micrometre weld'
 FINGERPRINT_SCHEMA = 'authored-state-v2-packed-images'
 
 
+def configure_triangulate(node, quad_method, ngon_method='Beauty'):
+    if 'Quad Method' in node.inputs:
+        node.inputs['Quad Method'].default_value = quad_method
+        node.inputs['N-gon Method'].default_value = ngon_method
+    else:
+        node.quad_method = {'Fixed':'FIXED', 'Fixed Alternate':'FIXED_ALTERNATE'}[quad_method]
+        node.ngon_method = {'Beauty':'BEAUTY', 'Clip':'CLIP'}[ngon_method]
+
+
 def add_cleanup(obj, ngon_method='Beauty', preserve_loop_triangles=False):
     """Keep authoring data editable; remove collapsed evaluated triangles."""
     assert obj.type in {'MESH', 'FONT', 'CURVE'}, obj.name
@@ -55,7 +64,7 @@ def add_cleanup(obj, ngon_method='Beauty', preserve_loop_triangles=False):
         incoming = inp.outputs['Geometry']
         if preserve_loop_triangles:
             alternate = nodes.new('GeometryNodeTriangulate')
-            alternate.inputs['Quad Method'].default_value = 'Fixed Alternate'
+            configure_triangulate(alternate, 'Fixed Alternate')
             selection = nodes.new('GeometryNodeInputNamedAttribute')
             selection.data_type = 'BOOLEAN'
             selection.inputs['Name'].default_value = 'cleanup_alternate_quad'
@@ -64,10 +73,9 @@ def add_cleanup(obj, ngon_method='Beauty', preserve_loop_triangles=False):
             incoming = alternate.outputs['Mesh']
         tri = nodes.new('GeometryNodeTriangulate'); tri.location = (-400, 160)
         # Match Blender's loop-triangle quad diagonal before topology changes.
-        tri.inputs['Quad Method'].default_value = 'Fixed'
+        configure_triangulate(tri, 'Fixed', ngon_method)
         # Cylinder caps can require ear clipping to retain their original
         # loop-triangle diagonals; keep the default for previously reviewed parts.
-        tri.inputs['N-gon Method'].default_value = ngon_method
         if not preserve_loop_triangles:
             merge = nodes.new('GeometryNodeMergeByDistance'); merge.location = (-200, 160)
             merge.inputs['Distance'].default_value = 1e-7

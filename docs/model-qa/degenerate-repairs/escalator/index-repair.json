@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "zeroRemoved": 11,
+  "residueRemoved": 3,
+  "rigidContainer": {
+    "changedStaticNodes": [
+      "GUARD_R",
+      "SKIRT_L",
+      "TRUSS_Bottom",
+      "TRUSS_L",
+      "TRUSS_R"
+    ],
+    "animation": {
+      "clips": 60,
+      "accessors": 122,
+      "sha256": "4d586748764b011b4996483828ada6237ce03774dc6178072912aa3b1a58efe3"
+    }
+  },
+  "originalSha256": "f8f8bda8b28a4faaf1fb2b03ee2a832fe23b90621eee9ab0a24a26c1b2b89ada",
+  "sha256": "b14375e54f366d3238fb32141bb9d25ca87add72664770e9a8541db9266bd501",
+  "preservation": "Only triangle index streams and index accessor counts/min/max changed; all other binary payload bytes retained.",
+  "validation": {
+    "numErrors": 0,
+    "numWarnings": 0,
+    "numInfos": 0,
+    "numHints": 0,
+    "messages": [],
+    "truncated": false
+  }
+}

@@ -221,3 +221,74 @@ test('equivalent texture aliases compare semantically while pixel and material c
   const names = run('scripts/check-degenerate-repair.mjs', [ambiguous, control, path.join(dir, 'names.json')]);
   assert.notEqual(names.status, 0);assert.match(names.stderr, /Distinct same-name materials/);
 });
+
+test('rigid-container opt-in preserves clips and refuses animated meshes or ancestors', async context => {
+  const dir=await fs.mkdtemp(path.join(os.tmpdir(),'glb-rigid-static-'));
+  context.after(()=>fs.rm(dir,{recursive:true,force:true}));
+  const animated=(indices,mode='sibling',end=1)=>{
+    const bytes=fixture(indices),json=JSON.parse(bytes.subarray(20,20+bytes.readUInt32LE(12)));
+    const binary=bytes.subarray(28+bytes.readUInt32LE(12));
+    const time=Buffer.from(new Float32Array([0,1]).buffer),value=Buffer.from(new Float32Array([0,0,0,end,0,0]).buffer);
+    const input=json.accessors.length,output=input+1,view=json.bufferViews.length;
+    json.bufferViews.push({buffer:0,byteOffset:binary.length,byteLength:time.length},{buffer:0,byteOffset:binary.length+time.length,byteLength:value.length});
+    json.accessors.push({bufferView:view,componentType:5126,count:2,type:'SCALAR',min:[0],max:[1]},
+      {bufferView:view+1,componentType:5126,count:2,type:'VEC3'});
+    json.nodes.push({name:'MovingSibling'});json.scenes[0].nodes.push(1);
+    if(mode==='ancestor'){json.nodes[1].children=[0];json.scenes[0].nodes=[1];}
+    json.animations=[{name:'Move',channels:[{sampler:0,target:{node:mode==='self'?0:1,path:'translation'}}],samplers:[{input,output,interpolation:'LINEAR'}]}];
+    const bin=Buffer.concat([binary,time,value]);json.buffers[0].byteLength=bin.length;
+    return pack(json,bin);
+  };
+  const flag='--static-meshes-in-rigid-container';
+  for(const mode of ['sibling','self','ancestor']){
+    const before=path.join(dir,mode+'-before.glb'),clean=path.join(dir,mode+'-source.glb'),comparison=path.join(dir,mode+'-comparison.json'),output=path.join(dir,mode+'-output.glb');
+    await fs.writeFile(before,animated(Array.from({length:12},(_,i)=>i),mode));
+    await fs.writeFile(clean,animated([0,1,2,9,10,11],mode));
+    const rejectedDefault=run('scripts/check-degenerate-repair.mjs',[before,clean,comparison]);
+    assert.notEqual(rejectedDefault.status,0,'Animated assets remain rejected without explicit scope');
+    const source=run('scripts/check-degenerate-repair.mjs',[before,clean,comparison,flag,'--allow-normal-drift']);
+    assert.equal(source.status,0,source.stderr);
+    const repair=run('scripts/repair-glb-degenerates.mjs',[before,output,path.join(dir,mode+'-repair.json'),comparison,flag]);
+    if(mode!=='sibling'){
+      assert.notEqual(repair.status,0);assert.match(repair.stderr,/mesh or ancestor is animated/);
+      await assert.rejects(fs.stat(output));continue;
+    }
+    assert.equal(repair.status,0,repair.stderr);
+    const delivery=run('scripts/check-degenerate-repair.mjs',[before,output,path.join(dir,'delivery.json'),flag]);
+    assert.equal(delivery.status,0,delivery.stderr);
+    const changedClip=path.join(dir,'changed-clip.glb');await fs.writeFile(changedClip,animated([0,1,2,9,10,11],mode,1.001));
+    const drift=run('scripts/check-degenerate-repair.mjs',[before,changedClip,path.join(dir,'bad-clip.json'),flag,'--allow-normal-drift']);
+    assert.notEqual(drift.status,0);assert.match(drift.stderr,/animation drift/);
+  }
+  const {rigidScope}=await import('../scripts/rigid-container-qa.mjs');
+  const json=JSON.parse(animated([0,1,2]).subarray(20,20+animated([0,1,2]).readUInt32LE(12)));
+  assert.throws(()=>rigidScope({...json,skins:[{}]}),/Skinned/);
+  const morph=structuredClone(json);morph.meshes[0].primitives[0].targets=[{POSITION:0}];
+  assert.throws(()=>rigidScope(morph),/Morph/);
+});
+
+test('analytic line scope preserves an identical tiny face on an unreviewed node', async context => {
+ const dir=await fs.mkdtemp(path.join(os.tmpdir(),'glb-line-node-scope-'));
+ context.after(()=>fs.rm(dir,{recursive:true,force:true}));
+ const radial=[[4.888098718814468e-19,.054999999701976776,-3.2038291630744244e-20],[-.007931559346616268,.054999999701976776,.0010442095808684826],[.3093307912349701,.054999999701976776,-.040724173188209534]];
+ function twoNodes(clean){
+  const indices=clean?[0,1,2,6,7,8,9,10,11]:Array.from({length:12},(_,i)=>i);
+  const b=fixture(indices,false,0,radial),j=JSON.parse(b.subarray(20,20+b.readUInt32LE(12)));
+  const bin=b.subarray(28+b.readUInt32LE(12)),copy=Buffer.from(new Uint16Array(indices).buffer);
+  j.bufferViews.push({buffer:0,byteOffset:bin.length,byteLength:copy.length,target:34963});
+  j.accessors.push({...j.accessors[2],bufferView:3});
+  j.meshes.push({primitives:[{...j.meshes[0].primitives[0],indices:3}]});
+  j.nodes.push({name:'ProtectedTiny',mesh:1});j.scenes[0].nodes.push(1);
+  const binary=Buffer.concat([bin,copy,Buffer.alloc((4-copy.length%4)%4)]);j.buffers[0].byteLength=binary.length;
+  return pack(j,binary);
+ }
+ const before=path.join(dir,'before.glb'),native=path.join(dir,'native.glb'),comparison=path.join(dir,'comparison.json'),output=path.join(dir,'output.glb');
+ await fs.writeFile(before,twoNodes(false));await fs.writeFile(native,twoNodes(true));
+ const flags=['--precision-line-tolerance-m=2e-10','--precision-line-nodes=ASSET_Fixture'];
+ const check=run('scripts/check-degenerate-repair.mjs',[before,native,comparison,...flags]);assert.equal(check.status,0,check.stderr);
+ const missingScope=run('scripts/repair-glb-degenerates.mjs',[before,output,path.join(dir,'denied.json'),comparison,flags[0]]);assert.notEqual(missingScope.status,0);
+ const repair=run('scripts/repair-glb-degenerates.mjs',[before,output,path.join(dir,'repair.json'),comparison,...flags]);assert.equal(repair.status,0,repair.stderr);
+ const {readGlb}=await import('../scripts/node-glb-structure.mjs');const glb=await readGlb(output);
+ assert.equal(glb.scene.getObjectByName('ASSET_Fixture').geometry.index.count/3,2);
+ assert.equal(glb.scene.getObjectByName('ProtectedTiny').geometry.index.count/3,3,'The unreviewed identical tiny face must remain');
+});

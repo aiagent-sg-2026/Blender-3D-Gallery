@@ -1,4 +1,6 @@
 import './node-glb-structure.mjs';
+import {RIGID_FLAG,rigidScope,animationPayload} from './rigid-container-qa.mjs';
+const rigidOptIn=process.argv.includes(RIGID_FLAG);
 // Preserve authored vertex/shading/image/animation payloads; rewrite only indices.
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
@@ -14,14 +16,20 @@ assert.equal(new Set([input, output, evidence, sourceComparison].map(p => path.r
 const comparison = JSON.parse(await fs.readFile(sourceComparison, 'utf8'));
 assert.equal(comparison.status, 'PASS');
 const lineResidues = comparison.linePrecisionResidues ?? [];
+const precisionLineNodes=comparison.precisionLineNodes??[];
 if (lineResidues.length) {
   const flag = '--precision-line-tolerance-m=' + comparison.precisionLineToleranceM;
   assert.ok(process.argv.includes(flag), 'Analytic line residue removal requires the same explicit reviewed tolerance');
   assert.ok(Number.isFinite(comparison.precisionLineToleranceM) && comparison.precisionLineToleranceM > 0 && comparison.precisionLineToleranceM <= 1e-7);
   assert.ok(lineResidues.every(r => r.altitude <= comparison.precisionLineToleranceM));
+  if(precisionLineNodes.length){
+    assert.ok(process.argv.includes('--precision-line-nodes='+precisionLineNodes.join(',')),'Use the same exact reviewed line-node scope');
+    assert.ok(lineResidues.every(r=>precisionLineNodes.includes(r.node)));
+  }
 }
 const reviewedResidues = [...comparison.removedPositiveAreaResidues, ...lineResidues];
-const reviewed = new Set(reviewedResidues.map(r => r.key));
+const reviewed = new Set(comparison.removedPositiveAreaResidues.map(r => r.key));
+const reviewedLines=new Set(lineResidues.map(r=>(precisionLineNodes.length?r.node+':':'')+r.key));
 const bytes = await fs.readFile(input);
 assert.equal(bytes.readUInt32LE(0), 0x46546c67); assert.equal(bytes.readUInt32LE(4), 2);
 assert.equal(bytes.readUInt32LE(8), bytes.length);
@@ -30,7 +38,11 @@ const json = JSON.parse(bytes.toString('utf8', 20, 20 + bytes.readUInt32LE(12)))
 const binaryOffset = 20 + bytes.readUInt32LE(12) + 8;
 assert.equal(bytes.readUInt32LE(binaryOffset - 4), 0x004e4942);
 const binary = Buffer.from(bytes.subarray(binaryOffset));
-assert.equal(json.animations?.length ?? 0, 0, 'Animation verification must be added before using this on animated models');
+const scope=rigidOptIn?rigidScope(json):null;
+if(!scope)assert.equal(json.animations?.length ?? 0, 0, 'Animation verification must be added before using this on animated models');
+else assert.equal(comparison.rigidContainerStaticOnly,true,'Require a rigid-container source comparison');
+const beforeAnimation=scope?animationPayload(json,binary):undefined;
+const changedStaticNodes=new Set();
 assert.equal(json.scenes.length, 1);
 const gltf = await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength), '');
 gltf.scene.updateMatrixWorld(true);
@@ -54,10 +66,11 @@ gltf.scene.traverse(object => {
     if (area === 0) { zeroRemoved++; continue; }
     const keys = points.map(p => p.toArray().map(x => Math.round(x / 1e-6)).join(','));
     const key = object.material.name + ':' + keys.map((_, j) => [keys[j], keys[(j + 1) % 3], keys[(j + 2) % 3]].join('|')).sort((a, b) => a.localeCompare(b))[0];
-    if (reviewed.has(key)) { residueRemoved++; continue; }
+    if (reviewed.has(key)||reviewedLines.has((precisionLineNodes.length?object.name+':':'')+key)) { residueRemoved++; continue; }
     retained.push(...ids);
   }
   assert.ok(retained.length);
+  if(scope&&retained.length!==index.count)for(const name of scope.assertStaticMesh(association.meshes))changedStaticNodes.add(name);
   if (usedAccessors.has(primitive.indices)) {
     assert.deepEqual(retained, usedAccessors.get(primitive.indices), 'Shared index accessor requires identical retained indices for every use');
     return;
@@ -80,8 +93,11 @@ const binHeader = 20 + paddedJson.length;
 result.writeUInt32LE(binary.length, binHeader); result.writeUInt32LE(0x004e4942, binHeader + 4); binary.copy(result, binHeader + 8);
 const validation = await validator.validateBytes(new Uint8Array(result));
 assert.equal(validation.issues.numErrors, 0); assert.equal(validation.issues.numWarnings, 0);
+const afterAnimation=scope?animationPayload(json,binary):undefined;
+if(scope)assert.deepEqual(afterAnimation,beforeAnimation,'Animation binary/descriptor preservation failed');
 await fs.writeFile(output, result, { flag: 'wx' });
 await fs.writeFile(evidence, JSON.stringify({ status: 'PASS', zeroRemoved, residueRemoved,
+  rigidContainer:scope?{changedStaticNodes:[...changedStaticNodes].sort(),animation:afterAnimation}:undefined,
   originalSha256: comparison.before.sha256, sha256: createHash('sha256').update(result).digest('hex'),
   preservation: 'Only triangle index streams and index accessor counts/min/max changed; all other binary payload bytes retained.',
   validation: validation.issues }, null, 2) + '\n', { flag: 'wx' });

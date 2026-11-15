@@ -13,6 +13,7 @@ sys.dont_write_bytecode = True
 REPOSITORY = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPOSITORY / 'scripts'))
 from blender_degenerate_cleanup import source_fingerprint, geometry_counts, FINGERPRINT_SCHEMA
+from blender_animation_snapshot import animation_snapshot
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--id', required=True)
@@ -45,6 +46,7 @@ if collection_root:
     assert set(generator.GROUPS) == {child.name for child in root.children}
 objects = list(root.all_objects) if collection_root else list(root.children_recursive)
 original_fingerprint = source_fingerprint()
+animation_before = animation_snapshot() if bpy.data.actions else None
 if args.lod is not None:
     assert hasattr(generator, 'prepare_source_lod'), 'This generator has no reviewed saved-source LOD derivation'
     generator.prepare_source_lod(root, args.lod)
@@ -66,13 +68,16 @@ bpy.context.view_layer.objects.active = active
 bpy.context.scene.cursor.location = cursor
 bpy.context.view_layer.update()
 assert source_fingerprint() == before_hash, 'Authored data or unrelated source semantics changed'
+if animation_before: assert animation_snapshot() == animation_before, 'Source animation changed during cleanup/export'
 bpy.ops.wm.save_as_mainfile(filepath=str(args.output / (args.id + '.blend')), compress=True, relative_remap=False)
 bpy.ops.wm.open_mainfile(filepath=str(args.output / (args.id + '.blend')), load_ui=False, use_scripts=False)
 assert source_fingerprint() == before_hash, 'Reopened source semantics changed'
+if animation_before: assert animation_snapshot() == animation_before, 'Reopened source animation changed'
 reopened_root = bpy.data.collections[asset['root']] if collection_root else bpy.data.objects[asset['root']]
 reopened = geometry_counts(list(reopened_root.all_objects) if collection_root else list(reopened_root.children_recursive))
 assert sum(item['zero_area_triangles'] for item in reopened) == 0
 receipt = {'id': args.id, 'status': 'PASS', 'blender': bpy.app.version_string,
+           'animation_snapshot': animation_before,
            'original_sha256': args.expected_sha256, 'source_fingerprint': before_hash,
            'fingerprint_schema': FINGERPRINT_SCHEMA,
            'original_fingerprint': original_fingerprint, 'derived_lod': args.lod,
