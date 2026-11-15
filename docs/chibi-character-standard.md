@@ -88,3 +88,11 @@ Status words: PASS, FAIL, REWORK, NOT_RUN. Record evidence in `qa/run-NNN/`. Do 
 - Gestures: three clips, wave (left hand), hold-and-point (right hand, sign raised), put sign down. Because the sign can be put down, it must be a separate prop that can attach to and detach from the right-hand bone.
 - Use cases: NPC in the mall scene, display model on gallery cards, assistant avatar in dialogs.
 - Consequences (to verify during the build, not yet tested): many NPCs at once make the triangle and draw-call budget the critical limit, so a lower-detail variant for distant NPCs should be planned; the dialog avatar shows the upper body, so the face and expression quality gate applies to the head close-up views; the card model needs the face and hair to hold up close.
+
+## 11. Mall Guide v5 further decisions (2026-11-15)
+
+- Distant NPCs: export an extra low-detail GLB (target about 8,000 triangles, no shape keys; *proposed* figure, to be measured). The full model keeps the 40,000 triangle budget.
+- Dialog assistant avatar: pre-rendered still images, one per expression (neutral, smile, surprised), so a dialog does not need WebGL. Render them from the final GLB, not from the concept images.
+- Variants: one standard uniform plus a festive uniform (e.g. Christmas hat, Chinese New Year accessories). Festive items are separate swappable parts or material switches so the base body is shared. Which festivals are covered is still open; tie it to the festival model plan.
+- Supplementary references (generated 2026-11-15, AI concept images, same rights status as sheet B): `docs/chibi-mall-guide-v5/mockup/expressions-b.png` (three expressions, front and three-quarter) and `poses-b.png` (wave, hold-and-point, put sign down).
+- Reference caveats: the brow difference between neutral and smile is subtle, so exaggerate it in the shape keys; in the put-down pose the right hand still touches the sign, so the release is implied, not shown.
