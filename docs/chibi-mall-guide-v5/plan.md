@@ -33,7 +33,7 @@ Reference decision (2026-11-15): sheet B is locked as the v5 reference and copie
 2. Sign in the right hand, badge on the left chest.
 3. Hair: a few thick, blunt locks fitted under the cap.
 
-Still open for the owner: the budgets and review questions in the [standard](../chibi-character-standard.md) section 8.
+Budgets, mandatory rig, reviewer and rights decisions are recorded in the [standard](../chibi-character-standard.md) section 8.
 
 ## Build plan
 
@@ -44,7 +44,7 @@ Still open for the owner: the budgets and review questions in the [standard](../
 | 2 | Body, uniform, cap, sign as separate named parts (as in v4) | Parts listed in README; no intersections |
 | 3 | Head with face texture; thick-lock hair that fits under the cap | Passes the v4 silhouette gate, plus an independent visual review |
 | 4 | Materials: flat colours plus brass; keep one small face texture | Texture at most 1024 px; 25 or fewer draw calls |
-| 5 | Optional: simple armature and 3 shape keys (neutral, smile, surprised) | Rig loads in Three.js with no console errors |
+| 5 | Required by the standard: simple armature and 3 shape keys (neutral, smile, surprised) | Rig loads in Three.js with no console errors |
 | 6 | Export GLB; QA gate run 001 (validator, byte-identical headless rebuild, Three.js load, silhouette, review) | Gate table with evidence, same format as `models/chibi-visitor-v4/qa/` |
 | 7 | Register in `models/catalog.json` only after the gate passes | `npm run validate:assets` and `npm test` pass |
 

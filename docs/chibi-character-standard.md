@@ -1,6 +1,6 @@
 # Chibi Character Standard (draft v0.1)
 
-Status: **proposed**. It is derived from the Chibi Visitor v4 build and its QA run (`models/chibi-visitor-v4/`) plus the v5 Mall Guide concept ([plan](chibi-mall-guide-v5/plan.md)). The owner has not approved it. Numbers marked *proposed* are starting points to be tuned on the first v5 build; numbers marked *v4* are measured values from the v4 README.
+Status: **draft; owner answers recorded 2026-11-15 (section 8)**. It is derived from the Chibi Visitor v4 build and its QA run (`models/chibi-visitor-v4/`) plus the v5 Mall Guide concept ([plan](chibi-mall-guide-v5/plan.md)). The owner has not approved it. Numbers marked *proposed* are starting points to be tuned on the first v5 build; numbers marked *v4* are measured values from the v4 README.
 
 ## 1. Purpose
 
@@ -34,8 +34,8 @@ The reference is not embedded in the GLB.
 - One placement root named `<Name>` containing named parts: `Head`, `Hair`, body garments, `Arm.L/R`, `Leg.L/R`, `Shoe.L/R`, props (*v4* uses 13 parts).
 - Parts are separate meshes grouped so a rig can be added later.
 - Materials: flat colour; at most one face texture of 1024 px (*v4*); everything else solid.
-- Budgets (*proposed*, v4 measured 113,428 triangles and 25 draw calls, which is heavier than a gallery card wants): at most 40,000 triangles and 20 draw calls. Raise only with a written reason.
-- Optional layers, only if scoped: armature of 20 bones or fewer; shape keys neutral, smile, surprised.
+- Budgets (*owner-approved 2026-11-15*; v4 measured 113,428 triangles and 25 draw calls, which is heavier than a gallery card wants): at most 40,000 triangles and 20 draw calls. Raise only with a written reason.
+- Required rig layer (owner decision 2026-11-15): armature of 20 bones or fewer and three shape keys (neutral, smile, surprised). v4 had none, so v4 does not meet this standard.
 
 ## 5. Build pipeline
 
@@ -66,9 +66,9 @@ Status words: PASS, FAIL, REWORK, NOT_RUN. Record evidence in `qa/run-NNN/`. Do 
 
 `README.md` (parts, rebuild, gate table, known differences, rights), `generate.py`, `sources/*.blend`, `exports/*.glb`, `previews/`, `verification/`, `qa/`, `reference/`.
 
-## 8. Open questions for the owner
+## 8. Owner decisions (2026-11-15)
 
-- Approve or change the triangle and draw-call budgets.
-- Is rig and shape-key work mandatory for the standard, or optional per character?
-- Who counts as the independent reviewer for G5 (another agent, Codex, or the owner)?
-- Rights position for AI-generated references.
+- Budget: at most 40,000 triangles and 20 draw calls.
+- Rig and shape keys are mandatory: armature of 20 bones or fewer plus neutral, smile, surprised.
+- G5 review: a fresh agent reviews against the reference first, then the owner makes the final check.
+- Rights: AI-generated references are internal references only; the model is original modelling and the reference is not embedded in the GLB. State the source in the README and re-check before public release.
