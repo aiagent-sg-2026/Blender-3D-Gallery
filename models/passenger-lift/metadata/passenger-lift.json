@@ -86,8 +86,8 @@
     "result": "PASS",
     "id": "passenger-lift",
     "backlog_id": 5,
-    "glb_bytes": 422340,
-    "triangles": 7656,
+    "glb_bytes": 422336,
+    "triangles": 7652,
     "vertices": 14844,
     "meshes": 80,
     "materials": 8,
@@ -108,18 +108,27 @@
         2.0000000298023224
       ]
     },
-    "sha256": "86bae913acdf211d89cf8de8779bb6edfa70255f7508669e02f69017ab33cc4e",
+    "sha256": "9c115615f995d96816fed3936e31adee48671d7b37b93f930e3b08591ba95a28",
     "validation": {
       "errors": 0,
       "warnings": 0,
       "version": "2.0.0-dev.3.10"
     },
     "budget_bytes": 5000000,
-    "budget_triangles": 80000
+    "budget_triangles": 80000,
+    "zero_area_triangles": 0
   },
   "evidence": {
     "structural": "reports/assets.json",
     "source_edit": "reports/source.json",
     "visual": "reports/visual-review.json"
+  },
+  "source_sha256": "56f7b884245c98a6fa193e05872fa391db5962299e898927a92d4397a15d8912",
+  "topology_repair": {
+    "date": "2026-11-15",
+    "original_source_sha256": "2d10ce9eacce5764cf5f2a1e146211557cde73438685928bd1228ca3ae2ad75a",
+    "zero_area_triangles_removed": 4,
+    "only_changed_node": "Shaft_Label",
+    "five_clip_payloads_unchanged": true
   }
 }

@@ -1,0 +1,587 @@
+{
+  "status": "PASS",
+  "before": {
+    "file": "/tmp/blender-mall-degenerate-44yfvxbl/lift-original.glb",
+    "bytes": 422340,
+    "sha256": "86bae913acdf211d89cf8de8779bb6edfa70255f7508669e02f69017ab33cc4e",
+    "triangles": 7656,
+    "zero": 4,
+    "invalidNormals": 0,
+    "bounds": {
+      "min": [
+        -1.600000023841858,
+        0,
+        -1.2000000178813934
+      ],
+      "max": [
+        1.600000023841858,
+        6.49000009894371,
+        2.0000000298023224
+      ]
+    },
+    "roots": {
+      "ASSET_PassengerLift": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "materialDefinitions": [
+      {
+        "doubleSided": true,
+        "name": "Brushed steel",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.33716362714767456,
+            0.40724021196365356,
+            0.44520118832588196,
+            1
+          ],
+          "metallicFactor": 0.699999988079071,
+          "roughnessFactor": 0.36000001430511475
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Threshold accent",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.8468732237815857,
+            0.4910208582878113,
+            0.04817182570695877,
+            1
+          ],
+          "metallicFactor": 0.20000000298023224,
+          "roughnessFactor": 0.47999998927116394
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Cab trim",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.017641954123973846,
+            0.1384316086769104,
+            0.1946178376674652,
+            1
+          ],
+          "metallicFactor": 0.30000001192092896,
+          "roughnessFactor": 0.4000000059604645
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Dark display",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.009134058840572834,
+            0.016807375475764275,
+            0.024157632142305374,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Warm landing",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7454041838645935,
+            0.7230551242828369,
+            0.6239603757858276,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7200000286102295
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Ivory label",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.9130986332893372,
+            0.9046611785888672,
+            0.7681511640548706,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.5
+        }
+      },
+      {
+        "alphaMode": "BLEND",
+        "doubleSided": true,
+        "name": "Cab cutaway glazing",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.16513219475746155,
+            0.4677838087081909,
+            0.520995557308197,
+            0.23000000417232513
+          ],
+          "metallicFactor": 0.05000000074505806,
+          "roughnessFactor": 0.30000001192092896
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Graphite guide frame",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.024157632142305374,
+            0.04373503103852272,
+            0.05780543014407158,
+            1
+          ],
+          "metallicFactor": 0.550000011920929,
+          "roughnessFactor": 0.47999998927116394
+        }
+      }
+    ],
+    "resolvedMaterialDefinitions": [
+      {
+        "doubleSided": true,
+        "name": "Brushed steel",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.33716362714767456,
+            0.40724021196365356,
+            0.44520118832588196,
+            1
+          ],
+          "metallicFactor": 0.699999988079071,
+          "roughnessFactor": 0.36000001430511475
+        }
+      },
+      {
+        "alphaMode": "BLEND",
+        "doubleSided": true,
+        "name": "Cab cutaway glazing",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.16513219475746155,
+            0.4677838087081909,
+            0.520995557308197,
+            0.23000000417232513
+          ],
+          "metallicFactor": 0.05000000074505806,
+          "roughnessFactor": 0.30000001192092896
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Cab trim",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.017641954123973846,
+            0.1384316086769104,
+            0.1946178376674652,
+            1
+          ],
+          "metallicFactor": 0.30000001192092896,
+          "roughnessFactor": 0.4000000059604645
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Dark display",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.009134058840572834,
+            0.016807375475764275,
+            0.024157632142305374,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Graphite guide frame",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.024157632142305374,
+            0.04373503103852272,
+            0.05780543014407158,
+            1
+          ],
+          "metallicFactor": 0.550000011920929,
+          "roughnessFactor": 0.47999998927116394
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Ivory label",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.9130986332893372,
+            0.9046611785888672,
+            0.7681511640548706,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.5
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Threshold accent",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.8468732237815857,
+            0.4910208582878113,
+            0.04817182570695877,
+            1
+          ],
+          "metallicFactor": 0.20000000298023224,
+          "roughnessFactor": 0.47999998927116394
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Warm landing",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7454041838645935,
+            0.7230551242828369,
+            0.6239603757858276,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7200000286102295
+        }
+      }
+    ],
+    "animationPayload": {
+      "clips": 5,
+      "accessors": 6,
+      "sha256": "c9a5c37ff657989a6c35b82292c6073fbf919dc464fc68f82475d8f75155b410"
+    },
+    "issues": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 0,
+      "numHints": 0,
+      "messages": [],
+      "truncated": false
+    },
+    "linePrecisionResidues": []
+  },
+  "after": {
+    "file": "/tmp/blender-mall-degenerate-44yfvxbl/lift-stage/passenger-lift.glb",
+    "bytes": 422220,
+    "sha256": "39e014c9ea2a6cc90cddd92ff8aa3253645ecabe9c2a12ad6d2c53f5fda0b107",
+    "triangles": 7652,
+    "zero": 0,
+    "invalidNormals": 0,
+    "bounds": {
+      "min": [
+        -1.600000023841858,
+        0,
+        -1.2000000178813934
+      ],
+      "max": [
+        1.600000023841858,
+        6.49000009894371,
+        2.0000000298023224
+      ]
+    },
+    "roots": {
+      "ASSET_PassengerLift": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "materialDefinitions": [
+      {
+        "doubleSided": true,
+        "name": "Brushed steel",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.33716362714767456,
+            0.40724021196365356,
+            0.44520118832588196,
+            1
+          ],
+          "metallicFactor": 0.699999988079071,
+          "roughnessFactor": 0.36000001430511475
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Threshold accent",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.8468732237815857,
+            0.4910208582878113,
+            0.04817182570695877,
+            1
+          ],
+          "metallicFactor": 0.20000000298023224,
+          "roughnessFactor": 0.47999998927116394
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Cab trim",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.017641954123973846,
+            0.1384316086769104,
+            0.1946178376674652,
+            1
+          ],
+          "metallicFactor": 0.30000001192092896,
+          "roughnessFactor": 0.4000000059604645
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Dark display",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.009134058840572834,
+            0.016807375475764275,
+            0.024157632142305374,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Warm landing",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7454041838645935,
+            0.7230551242828369,
+            0.6239603757858276,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7200000286102295
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Ivory label",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.9130986332893372,
+            0.9046611785888672,
+            0.7681511640548706,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.5
+        }
+      },
+      {
+        "alphaMode": "BLEND",
+        "doubleSided": true,
+        "name": "Cab cutaway glazing",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.16513219475746155,
+            0.4677838087081909,
+            0.520995557308197,
+            0.23000000417232513
+          ],
+          "metallicFactor": 0.05000000074505806,
+          "roughnessFactor": 0.30000001192092896
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Graphite guide frame",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.024157632142305374,
+            0.04373503103852272,
+            0.05780543014407158,
+            1
+          ],
+          "metallicFactor": 0.550000011920929,
+          "roughnessFactor": 0.47999998927116394
+        }
+      }
+    ],
+    "resolvedMaterialDefinitions": [
+      {
+        "doubleSided": true,
+        "name": "Brushed steel",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.33716362714767456,
+            0.40724021196365356,
+            0.44520118832588196,
+            1
+          ],
+          "metallicFactor": 0.699999988079071,
+          "roughnessFactor": 0.36000001430511475
+        }
+      },
+      {
+        "alphaMode": "BLEND",
+        "doubleSided": true,
+        "name": "Cab cutaway glazing",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.16513219475746155,
+            0.4677838087081909,
+            0.520995557308197,
+            0.23000000417232513
+          ],
+          "metallicFactor": 0.05000000074505806,
+          "roughnessFactor": 0.30000001192092896
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Cab trim",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.017641954123973846,
+            0.1384316086769104,
+            0.1946178376674652,
+            1
+          ],
+          "metallicFactor": 0.30000001192092896,
+          "roughnessFactor": 0.4000000059604645
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Dark display",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.009134058840572834,
+            0.016807375475764275,
+            0.024157632142305374,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Graphite guide frame",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.024157632142305374,
+            0.04373503103852272,
+            0.05780543014407158,
+            1
+          ],
+          "metallicFactor": 0.550000011920929,
+          "roughnessFactor": 0.47999998927116394
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Ivory label",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.9130986332893372,
+            0.9046611785888672,
+            0.7681511640548706,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.5
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Threshold accent",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.8468732237815857,
+            0.4910208582878113,
+            0.04817182570695877,
+            1
+          ],
+          "metallicFactor": 0.20000000298023224,
+          "roughnessFactor": 0.47999998927116394
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Warm landing",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7454041838645935,
+            0.7230551242828369,
+            0.6239603757858276,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7200000286102295
+        }
+      }
+    ],
+    "animationPayload": {
+      "clips": 5,
+      "accessors": 6,
+      "sha256": "ddcdcc8e0aaaf27f06cf2cd39e72997610a314a3e8a1e30448b0bf8c918fd75d"
+    },
+    "issues": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 0,
+      "numHints": 0,
+      "messages": [],
+      "truncated": false
+    },
+    "linePrecisionResidues": []
+  },
+  "positionToleranceM": 0.000001,
+  "maxPositionDeltaM": 0,
+  "numericalResidueAltitudeLimitM": 1e-7,
+  "removedPositiveAreaResidues": [],
+  "addedSurfaceKeys": [],
+  "addedSurfaceDetails": [],
+  "changedNormalTriangles": 56,
+  "maxNormalDelta": 0.904534101486206,
+  "rigidContainerStaticOnly": true,
+  "nativeClipComparison": {
+    "clips": 5,
+    "tracks": 5,
+    "maxTimeDelta": 0,
+    "maxValueDelta": 0,
+    "tolerance": 0.000001
+  }
+}

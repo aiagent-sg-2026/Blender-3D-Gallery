@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "blender_version": "4.0.2",
+  "editable_parts": 90,
+  "idempotent_cleanup": true,
+  "animation_snapshot": {
+    "schema": "active-rigid-object-actions-v1",
+    "sha256": "8e2bab85eb4c791df92c26dd55236a40c91b96939f4ae9ce354e8d174b96af40",
+    "actions": 5,
+    "curves": 15,
+    "keyframes": 45,
+    "bindings": [
+      {
+        "object": "CAB_Carriage",
+        "action": "TRAVEL_Cab",
+        "slot": null,
+        "blend_type": "REPLACE",
+        "influence": 1.0,
+        "extrapolation": "HOLD",
+        "use_nla": true
+      },
+      {
+        "object": "DOOR_CabL",
+        "action": "DOOR_Cycle_CabL",
+        "slot": null,
+        "blend_type": "REPLACE",
+        "influence": 1.0,
+        "extrapolation": "HOLD",
+        "use_nla": true
+      },
+      {
+        "object": "DOOR_CabR",
+        "action": "DOOR_Cycle_CabR",
+        "slot": null,
+        "blend_type": "REPLACE",
+        "influence": 1.0,
+        "extrapolation": "HOLD",
+        "use_nla": true
+      },
+      {
+        "object": "DOOR_Landing0L",
+        "action": "DOOR_Cycle_Landing0L",
+        "slot": null,
+        "blend_type": "REPLACE",
+        "influence": 1.0,
+        "extrapolation": "HOLD",
+        "use_nla": true
+      },
+      {
+        "object": "DOOR_Landing0R",
+        "action": "DOOR_Cycle_Landing0R",
+        "slot": null,
+        "blend_type": "REPLACE",
+        "influence": 1.0,
+        "extrapolation": "HOLD",
+        "use_nla": true
+      }
+    ]
+  },
+  "keyframe_negative_control": true,
+  "canonical_sha256": "9c115615f995d96816fed3936e31adee48671d7b37b93f930e3b08591ba95a28",
+  "canonical_import_zero_area_triangles": 0,
+  "canonical_import_actions": 5,
+  "canonical_import_triangles": 7652
+}

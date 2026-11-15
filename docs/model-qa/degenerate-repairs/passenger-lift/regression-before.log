@@ -1,0 +1,39 @@
+✔ mall-trash-bin: repaired delivered geometry contains no zero-area triangles (16.8285ms)
+✔ mall-directory-kiosk: repaired delivered geometry contains no zero-area triangles (12.16525ms)
+✔ mall-advertising-lightbox: repaired delivered geometry contains no zero-area triangles (4.051958ms)
+✔ mall-waste-sorting-station: repaired delivered geometry contains no zero-area triangles (12.504458ms)
+✔ mall-service-desk: repaired delivered geometry contains no zero-area triangles (6.799917ms)
+✔ mall-display-shelf: repaired delivered geometry contains no zero-area triangles (8.316417ms)
+✔ mall-floor-direction-sign: repaired delivered geometry contains no zero-area triangles (8.839167ms)
+✔ mall-event-booth: repaired delivered geometry contains no zero-area triangles (5.715917ms)
+✔ gjh-areca-planter: repaired delivered geometry contains no zero-area triangles (4.926042ms)
+✔ gjh-m057-premium-wall-shelf-corner: repaired delivered geometry contains no zero-area triangles (50.747667ms)
+✔ escalator: repaired delivered geometry contains no zero-area triangles (50.039667ms)
+✔ atm-kiosk: repaired delivered geometry contains no zero-area triangles (3.398458ms)
+✖ passenger-lift: repaired delivered geometry contains no zero-area triangles (12.255416ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 12
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1195.507083
+
+✖ failing tests:
+
+test at tests/mall-degenerate-repairs.test.mjs:15:3
+✖ passenger-lift: repaired delivered geometry contains no zero-area triangles (12.255416ms)
+  AssertionError [ERR_ASSERTION]: passenger-lift: actual GLB must contain no zero-area triangles
+  
+  4 !== 0
+  
+      at TestContext.<anonymous> (file:///private/tmp/blender-mall-degenerate-44yfvxbl/worktree/tests/mall-degenerate-repairs.test.mjs:36:12)
+      at async Test.run (node:internal/test_runner/test:1054:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:744:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 4,
+    expected: 0,
+    operator: 'strictEqual'
+  }
