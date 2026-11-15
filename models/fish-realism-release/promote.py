@@ -35,7 +35,7 @@ for slug,source,artifact,profile in prepared:
  if profile.get('alias_note'):notes+=' '+profile['alias_note']
  item={'source':source_path,'preview':f'models/fish-realism-qa/{slug}/preview.png','acceptance':'agent_qa_pass','license':'Original project geometry and textures; reuse in the owner’s projects authorized. Public redistribution terms not specified.','description':profile['fish_id']+'. Photo-informed Blender fish with looping swimming animation.'};manifest['models'][slug]=item
  out=HERE/slug;out.mkdir(exist_ok=True)
- display={'previewRotationY':0,'previewCameraDirection':[.12,.28,1],'studioEnvironment':True,'environmentIntensity':.3,'textureAnisotropy':8,'previewLighting':{'hemisphereIntensity':.8,'directionalIntensity':1.4}}
+ display={'previewRotationY':0,'previewCameraDirection':profile.get('preview_camera_direction',[.12,.28,1]),'studioEnvironment':True,'environmentIntensity':.3,'textureAnisotropy':8,'previewLighting':{'hemisphereIntensity':.8,'directionalIntensity':1.4}}
  metadata={'id':'fish-'+slug,'source':source_path,'visual_species':profile['visual_species'],'accuracy_notes':notes,'display':display,'attribution':[{'credit':'Original Blender geometry and textures for this gallery. Reference photos guide appearance and are not embedded.'}]}
  (out/'metadata.json').write_text(json.dumps(metadata,indent=2)+'\n')
  image=Image.open(source/'preview.png');image.thumbnail((560,420));image.save(out/'thumbnail.webp',quality=88)

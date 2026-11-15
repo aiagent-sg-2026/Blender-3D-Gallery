@@ -33,14 +33,22 @@ for(const width of [1440,390]) {
   const capture=async (locator,options={})=>{await page.evaluate(()=>window.fishCapture=true);try{return await locator.screenshot({...options,caret:'initial'});}finally{await page.waitForTimeout(50);await page.evaluate(()=>window.fishCapture=false);}};
 const still=await capture(canvas);await page.waitForTimeout(150);assert.ok(still.equals(await capture(canvas)),'Paused canvas drifted');
   await button.click();await page.waitForTimeout(500);await button.click();await page.waitForTimeout(100);const moved=await capture(canvas);assert.ok(!still.equals(moved),'Swimming did not visibly change the real canvas');await page.waitForTimeout(150);assert.ok(moved.equals(await capture(canvas)),'Pause failed');
+  await page.emulateMedia({reducedMotion:'no-preference'});
+  await page.waitForFunction(()=>document.querySelector('[data-fish-playback]')?.getAttribute('aria-pressed')==='true');
+  await page.emulateMedia({reducedMotion:'reduce'});
+  await page.waitForFunction(()=>document.querySelector('[data-fish-playback]')?.getAttribute('aria-pressed')==='false');
+  if(slug==='betta'){
+    assert.ok((await page.locator('#viewer-description').textContent()).includes('BlueMesh'));
+    assert.equal(await page.locator('#viewer-description a[href="https://creativecommons.org/licenses/by/4.0/"]').count(),1);
+  }
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);assert.deepEqual(errors,[]);
   const screenshot=`${directory}/${width===1440?'desktop':'mobile'}.png`;await capture(page,{path:screenshot});
   await page.keyboard.press('Escape');assert.equal(await page.locator('[data-fish-playback]').count(),0);
   assert.deepEqual(errors,[]);const csp=await page.evaluate(()=>window.fishCsp);assert.ok(csp.every(v=>engine==='webkit'&&((v.directive==='style-src-elem'&&v.capture&&!v.target)||(v.directive==='style-src-attr'&&['model-theme','model-category','model-collection','model-feature','demo-category'].includes(v.target)))),JSON.stringify(csp));
-  results.push({slug,engine,width,height:900,loaded_release_sha256:artifactHash,known_csp_console_messages:knownCspMessages.length,native_select_csp_events:csp.filter(v=>v.directive==='style-src-attr').length,screenshot_csp_events:csp.filter(v=>v.directive==='style-src-elem').length,csp_events:csp,paused_stable:true,visible_swim_change:true,resumed_then_paused:true,no_horizontal_overflow:true,no_page_errors:true,viewer_disposed:true,screenshot});await context.close();
+  results.push({slug,engine,width,height:900,loaded_release_sha256:artifactHash,known_csp_console_messages:knownCspMessages.length,native_select_csp_events:csp.filter(v=>v.directive==='style-src-attr').length,screenshot_csp_events:csp.filter(v=>v.directive==='style-src-elem').length,csp_events:csp,media_preference_updates_playback:true,paused_stable:true,visible_swim_change:true,resumed_then_paused:true,no_horizontal_overflow:true,no_page_errors:true,viewer_disposed:true,screenshot});await context.close();
  }
  console.log('PASS release',engine,slug);
  } } finally {await browser.close();}
 }
-await fs.writeFile(`models/fish-realism-release/${process.env.FISH_LIVE_URL?'live':'local'}-${process.env.FISH_ENGINE||'all'}${process.env.FISH_BATCH?'-'+process.env.FISH_BATCH:''}-browser-verification.json`,JSON.stringify({mode:'actual_catalog_no_substitution',mobile:'emulated viewport, not physical hardware',results},null,2)+'\n');
+await fs.writeFile(`models/fish-realism-release/${process.env.FISH_LIVE_URL?'live':'local'}-${process.env.FISH_ENGINE||'all'}${process.env.FISH_BATCH?'-'+process.env.FISH_BATCH:''}-browser-verification.json`,JSON.stringify({deployment_commit:process.env.FISH_DEPLOY_SHA||null,mode:'actual_catalog_no_substitution',mobile:'emulated viewport, not physical hardware',results},null,2)+'\n');
 await server.close();

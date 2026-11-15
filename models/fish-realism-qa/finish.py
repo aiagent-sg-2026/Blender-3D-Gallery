@@ -34,6 +34,10 @@ def observe(label):
   movement=max((a-b).length for a,b in zip(poses[0][name],poses[1][name]));endpoint=max((a-b).length for a,b in zip(poses[0][name],poses[-1][name]));assert endpoint<.0001,(label,name,endpoint);roles[name]={'motion':movement,'loop_error':endpoint}
  for prefix in ['Caudal_','Dorsal_','Anal_','Pectoral_']:
   found=[v['motion'] for k,v in roles.items() if k.startswith(prefix)];assert found and max(found)>.001,(label,prefix,found)
+ if slug in ['threadfin','fourfinger-threadfin']:
+  filaments=[v for name,v in roles.items() if name.startswith('Pectoral_Filament_')]
+  assert len(filaments)==8,(label,'Four sensory rays per flank required',len(filaments))
+  assert all(v['motion']>.001 for v in filaments),(label,'Sensory rays must move with their fins')
  assert any(o.type=='ARMATURE' for o in s.objects)
  return {'fin_roots_checked':anchors,'meshes':len(meshes),'vertices':sum(len(o.data.vertices) for o in meshes),'motion_by_mesh':roles,'frames':frames,'packed_images':all(i.packed_file for i in bpy.data.images if i.source=='FILE')}
 source=observe('source');s.frame_set(13)

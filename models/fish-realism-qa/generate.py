@@ -150,6 +150,7 @@ def fin_sweep(u,anal=False):
  return 0
 
 def fin_height(u,anal=False):
+ if C.get('soft_forward_lobes'):return B.interp([(0,0),(.13,1),(.36,.48),(.72,.13),(1,0)],u)*(C.get('anal_height',.25) if anal else C['soft_height'])
  if slug=='golden-pomfret':return B.interp([(0,0),(.12,.44),(.27,.25),(.6,.10),(1,0)] if anal else [(0,0),(.10,.47),(.24,.28),(.55,.10),(1,0)],u)
  if C.get('fin_shape')=='pomfret':return B.interp([(0,0),(.12,.30),(.35,.16),(.70,.055),(1,0)],u)*C['soft_height']/.30
  return C.get('anal_height',.25)*math.sin(PI*u)**.65 if anal else C['soft_height']*math.sin(PI*u)**.7

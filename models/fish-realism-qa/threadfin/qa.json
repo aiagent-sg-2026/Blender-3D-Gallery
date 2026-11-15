@@ -1,0 +1,23 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": 1,
+  "reviewed_source_sha256": "39da33bbbfd5c02e7fbf2ee8805357b86f8424c0516a7eae00e70f85f82bf418",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png",
+    "filament-detail.png"
+  ],
+  "visual_checks": {
+    "anatomy": "pass: elongate silver body, short snout and low-set eye, subterminal mouth, separated dorsal fins and deeply forked caudal lobes",
+    "surface": "pass: irregular silver flank variation and subdued fine relief avoid repeated raised tiles",
+    "filaments": "pass: four separately tapered sensory rays on each flank; shorter anterior and longer posterior rays emerge below the pectoral membrane",
+    "fins": "pass: low surface-anchored pectoral base and forward soft-fin lobes match the chosen anatomy",
+    "motion": "pass: all eight sensory ray meshes move after GLB reimport; roots follow body and loop endpoints remain stable",
+    "browser": "pass: actual draft GLB visibly swims and pauses at desktop/mobile sizes"
+  },
+  "limitations": [
+    "Photo-informed original art, not a scanned specimen.",
+    "The supplied Threadfin/Kurau and Fourfinger entries overlap and are retained as separate variants of Eleutheronema tetradactylum.",
+    "Draft browser captions are baseline."
+  ]
+}

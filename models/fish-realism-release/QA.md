@@ -27,3 +27,11 @@ Batch 02 results: all 12 incremental Chromium/WebKit desktop/mobile scenarios pa
 ## Batch 03: Spanish mackerel, yellowstripe scad, bigeye scad
 
 Three additional entries, twelve total; the remaining 48 are not declared complete. All twelve deployment GLBs pass reimported motion and artifact/source hash checks; 79 protected files remain unchanged. All 12 incremental Chromium/WebKit desktop/mobile scenarios passed, including final post-capture/disposal error checks. All 689 existing unit tests passed with zero failures/skips. The three new delivery GLBs are 3.80, 4.09 and 3.74 MiB respectively. Model QA revised overly broad Spanish mackerel pectorals/regular bars, separated yellow scad tail pigmentation, and removed bigeye scad eye/mouth overlap before sealing the artwork.
+
+## Live verification: initial six
+
+GitHub Pages run [43698676117](https://github.com/yapweijun1996/Blender-3D-Gallery/actions/runs/43698676117) successfully deployed commit `9512937490183fc86c4aa61f7e7b8465e668a02e`. All 24 live Chromium/WebKit desktop/mobile scenarios passed against the public website, with exact release response hashes, visible motion, stable pause, reduced-motion preference changes, final disposal/error checks and the Betta creator/license links. See `live-all-release-01-browser-verification.json` and `output/playwright/fish-realism-release/live`. This establishes availability of those six only; subsequent models remain subject to later deployment verification.
+
+## Batch 04: Crimson snapper and two threadfin variants
+
+All twelve incremental Chromium/WebKit desktop/mobile scenarios pass, including playback preference updates and final capture/disposal error checks. Full catalog build, all fifteen GLB/source/motion bindings and 79 protected files pass. The previous twelve delivery binary hashes remain unchanged. Each threadfin source and reimported GLB has eight independently moving sensory-ray meshes, four per flank. The common-name overlap is explicit in the viewer metadata rather than presented as two certified distinct species. Delivery sizes are 4.08, 3.97 and 3.97 MiB. Initial-six live receipts and screenshots are included with this batch.

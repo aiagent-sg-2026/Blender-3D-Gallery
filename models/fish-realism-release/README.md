@@ -1,6 +1,6 @@
 # Approved fish deployment derivatives
 
-The owner authorized replacing the corresponding live gallery models and pushing each passing batch to main on 2026-11-15. The initial promotion contains the three owner-accepted models and the first three independently reviewed upgrades. Batch 02 adds silver pomfret, black pomfret and Indian mackerel. Batch 03 adds Spanish mackerel, yellowstripe scad and bigeye scad. The manifest now contains twelve promoted fish; the remaining 48 are not declared complete.
+The owner authorized replacing the corresponding live gallery models and pushing each passing batch to main on 2026-11-15. The initial promotion contains the three owner-accepted models and the first three independently reviewed upgrades. Batch 02 adds silver pomfret, black pomfret and Indian mackerel. Batch 03 adds Spanish mackerel, yellowstripe scad and bigeye scad. Batch 04 adds Crimson snapper and the two supplied threadfin entries as explicitly documented variants of the same visual species. The manifest now contains fifteen promoted models; the remaining 45 are not declared complete.
 
 `releases.json` owns the promoted set, source paths, acceptance level, descriptions and license summaries. `register.py` overlays only these IDs onto the fish catalog; the baseline registrar calls the same overlay. Sources and previous production GLBs are preserved.
 
