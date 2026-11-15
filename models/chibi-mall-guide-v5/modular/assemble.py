@@ -13,6 +13,13 @@ def load(name, obj_name):
     bpy.ops.object.select_all(action='DESELECT'); o.select_set(True); bpy.context.view_layer.objects.active = o; bpy.ops.object.parent_clear(type='CLEAR_KEEP_TRANSFORM')
     for x in new:
         if x is not o and x.name in bpy.data.objects: bpy.data.objects.remove(x)
+    if not o.data.materials:   # untextured shape-only mesh (Hunyuan3D): decimate and give one solid colour
+        n = len(o.data.polygons)
+        if n > 30000:
+            md = o.modifiers.new('d', 'DECIMATE'); md.ratio = 30000 / n; bpy.ops.object.modifier_apply(modifier=md.name)
+        bpy.ops.object.shade_smooth()
+        m = bpy.data.materials.new(obj_name + 'Mat'); m.use_nodes = True; o.data.materials.append(m)
+        t = S('HAIR_TARGET', '7A4A32'); m.node_tree.nodes['Principled BSDF'].inputs['Base Color'].default_value = (*[(int(t[i:i + 2], 16) / 255) ** 2.2 for i in (0, 2, 4)], 1)
     m = o.data.materials[0]; m.name = obj_name + 'Mat'; b = m.node_tree.nodes['Principled BSDF']; b.inputs['Metallic'].default_value = 0.0; b.inputs['Roughness'].default_value = 0.55
     return o
 def apply(o):
@@ -34,10 +41,12 @@ print('HEAD', rep['body'])
 
 hair = load(S('HAIR', 'hair_s1'), 'Hair')
 # recolour: remap every texel to the chestnut target, keeping the baked shading
-img = [n.image for n in hair.data.materials[0].node_tree.nodes if n.type == 'TEX_IMAGE'][0]; W, Hh = img.size; px = np.array(img.pixels[:], dtype=np.float32).reshape(Hh, W, 4)
-t = S('HAIR_TARGET', '4A2C22'); tgt = np.array([int(t[i:i + 2], 16) / 255 for i in (0, 2, 4)]) ** 2.2
-lum = px[:, :, :3].mean(axis=2); lo, hi = np.percentile(lum, [2, 98]); k = np.clip((lum - lo) / max(hi - lo, 1e-6), 0, 1)
-px[:, :, :3] = tgt[None, None, :] * (0.55 + 1.5 * k[:, :, None]); img.pixels = px.ravel().tolist(); img.update()
+imgs = [n.image for n in hair.data.materials[0].node_tree.nodes if n.type == 'TEX_IMAGE']
+if imgs:
+    img = imgs[0]; W, Hh = img.size; px = np.array(img.pixels[:], dtype=np.float32).reshape(Hh, W, 4)
+    t = S('HAIR_TARGET', '4A2C22'); tgt = np.array([int(t[i:i + 2], 16) / 255 for i in (0, 2, 4)]) ** 2.2
+    lum = px[:, :, :3].mean(axis=2); lo, hi = np.percentile(lum, [2, 98]); k = np.clip((lum - lo) / max(hi - lo, 1e-6), 0, 1)
+    px[:, :, :3] = tgt[None, None, :] * (0.55 + 1.5 * k[:, :, None]); img.pixels = px.ravel().tolist(); img.update()
 def drop_wide(o, frac, xmax=9, idx=()):
     import bmesh
     bm = bmesh.new(); bm.from_mesh(o.data); bm.verts.ensure_lookup_table(); total = np.ptp([v.co.x for v in bm.verts]); seen = set(); comps = []
@@ -56,10 +65,13 @@ def drop_wide(o, frac, xmax=9, idx=()):
     bmesh.ops.delete(bm, geom=kill, context='VERTS'); bm.to_mesh(o.data); bm.free(); return len(kill)
 DROP = [int(x) for x in S('HAIR_DROP_IDX', '').split(',') if x]
 if E('HAIR_DROP_WIDE', 0.7) > 0 or DROP or E('HAIR_DROP_THIN', 0) or E('HAIR_UP_X', 0.3): rep['hair_dropped_verts'] = drop_wide(hair, E('HAIR_DROP_WIDE', 0.7), E('HAIR_DROP_XMAX', 9), DROP)
-hair.rotation_euler = (0, 0, math.radians(E('HAIR_ROT', 0))); apply(hair)
+hair.rotation_mode = 'XYZ'; hair.rotation_euler = (math.radians(E('HAIR_ROTX', 0)), 0, math.radians(E('HAIR_ROT', 0))); apply(hair)
 Q = verts(hair); hair_w = np.ptp(Q[:, 0]); sh = E('HAIR_W', 1.3) * hw / hair_w
-Q = Q * sh; Q[:, 2] *= E('HAIR_SZ', 0.72); ztop = zt + E('HAIR_DZ', 0.03)
-hair.scale = (sh, sh, sh * E('HAIR_SZ', 0.72)); place(hair, None, (hc[0] - (Q[:, 0].min() + Q[:, 0].max()) / 2, hc[1] + E('HAIR_DY', 0.04) - (Q[:, 1].min() + Q[:, 1].max()) / 2, ztop - Q[:, 2].max()))
+sy_, sz_ = sh, sh * E('HAIR_SZ', 0.72)
+if E('HAIR_FIT', 0):   # non-uniform fit: hair depth and height as multiples of the head's
+    sy_ = E('HAIR_D', 1.2) * np.ptp(head[:, 1]) / np.ptp(Q[:, 1]); sz_ = E('HAIR_H', 1.0) * (zt - zneck) / np.ptp(Q[:, 2])
+Q = Q * np.array([sh, sy_, sz_]); ztop = zt + E('HAIR_DZ', 0.03)
+hair.scale = (sh, sy_, sz_); place(hair, None, (hc[0] - (Q[:, 0].min() + Q[:, 0].max()) / 2, hc[1] + E('HAIR_DY', 0.04) - (Q[:, 1].min() + Q[:, 1].max()) / 2, ztop - Q[:, 2].max()))
 Q = verts(hair); rep['hair'] = dict(scale=sh, bbox=[Q.min(0).tolist(), Q.max(0).tolist()])
 
 cap = load(S('CAP', 'cap_s2'), 'Cap'); C = verts(cap); sc_ = E('CAP_W', 0.73) * hw / np.ptp(C[:, 0]); C = C * sc_
