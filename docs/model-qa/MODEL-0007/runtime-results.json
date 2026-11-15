@@ -1,0 +1,88 @@
+[
+  {
+    "modelId": "ball-01",
+    "assetBytes": 120536,
+    "assetSha256": "3283df10e89d9d37ef384045d45885331b46917253a110175725f16f5bbd897a",
+    "viewport": [
+      1440,
+      900
+    ],
+    "status": "PASS",
+    "rotation": "PASS",
+    "zoom": "PASS",
+    "reset": "PASS exact pixel match; screenshot retained",
+    "metrics": {
+      "width": 1440,
+      "height": 900,
+      "canvasWidth": 1058,
+      "canvasHeight": 495,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:5179/assets/ball_01-CYdwOVaM.glb",
+          "durationMs": 2.300000011920929,
+          "encodedBytes": 120536,
+          "decodedBytes": 120536,
+          "transferBytes": 120836
+        }
+      ],
+      "observedDraws": 405,
+      "measuredFrames": 81,
+      "maxDrawCallsPerObservedFrame": 5,
+      "maxTrianglesPerObservedFrame": 4896,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+      "contextLost": false,
+      "overflow": false
+    },
+    "errors": [],
+    "warnings": [
+      "Service Worker registration blocked by Playwright",
+      "[.WebGL-0x12400443200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+      "[.WebGL-0x12400443200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+      "[.WebGL-0x12400443200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+      "[.WebGL-0x12400443200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+    ],
+    "networkErrors": [],
+    "physicalMobilePerformance": "NOT_TESTED; viewport emulation on desktop software WebGL is not physical-device FPS"
+  },
+  {
+    "modelId": "ball-01",
+    "assetBytes": 120536,
+    "assetSha256": "3283df10e89d9d37ef384045d45885331b46917253a110175725f16f5bbd897a",
+    "viewport": [
+      768,
+      1024
+    ],
+    "status": "PASS",
+    "rotation": "PASS",
+    "zoom": "PASS",
+    "reset": "PASS exact pixel match; screenshot retained",
+    "metrics": {
+      "width": 768,
+      "height": 1024,
+      "canvasWidth": 728,
+      "canvasHeight": 563,
+      "resources": [
+        {
+          "url": "http://127.0.0.1:5179/assets/ball_01-CYdwOVaM.glb",
+          "durationMs": 2.199999988079071,
+          "encodedBytes": 120536,
+          "decodedBytes": 120536,
+          "transferBytes": 120836
+        }
+      ],
+      "observedDraws": 385,
+      "measuredFrames": 77,
+      "maxDrawCallsPerObservedFrame": 5,
+      "maxTrianglesPerObservedFrame": 4896,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+      "contextLost": false,
+      "overflow": false
+    },
+    "errors": [],
+    "warnings": [
+      "Service Worker registration blocked by Playwright"
+    ],
+    "networkErrors": [],
+    "physicalMobilePerformance": "NOT_TESTED; viewport emulation on desktop software WebGL is not physical-device FPS"
+  }
+]

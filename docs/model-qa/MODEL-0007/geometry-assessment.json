@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "stage": "source",
+      "status": "PASS",
+      "body_closed": true,
+      "decorative_open_boundaries_intentional": true
+    },
+    {
+      "stage": "reimport",
+      "status": "PASS",
+      "body_closed": true,
+      "decorative_open_boundaries_intentional": true
+    }
+  ],
+  "index_topology_caveat": "An initial ad-hoc check incorrectly required raw reimport components=1. glTF splits glyph vertices for normals and sphere vertices for UV seams. After exact-position welding all five exported surfaces have one component; body has zero nonmanifold edges and intended paint boundaries match source. See welded-connectivity.json and source/reimport inspection.json."
+}

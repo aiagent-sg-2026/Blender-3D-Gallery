@@ -1,9 +1,10 @@
 # MODEL-0006: Cue Ball
 
-Status: READY_TO_PUSH. No product defect requiring repair has been found.
-Geometry/PBR, source/re-import, semantic export replay,651 unit/25 targeted,
-Viewer/independent review and full Game46/experience31 checks pass.
-No commit/main/Actions/production acceptance is claimed. MODEL-0007 has not begun.
+Status: PUSHED / accepted. QA-only `e23be21ca38289ffc6b7a56218779891a197592f` is
+verified on main. Required Actions43664847183 and Pages deployment succeeded.
+Actual cue-ball and assembly payloads, four fresh browser profiles and three
+checks on downloaded production files pass. No product repair was required.
+MODEL-0007 had not begun at this acceptance.
 
 Selected only after MODEL-0005 final8c61a369 passed required Actions43660711896,
 exact standalone and changed-assembly production payloads, four browser profiles
@@ -84,6 +85,13 @@ and locates every native original. Numerical comparisons used native files.
 `artifact-preservation.json` proves product preservation independently of
 `export-replay-results.json`, which proves semantic re-export equivalence.
 
-Current regression is complete. Scoped diff/main synchronization, a separate QA
-commit/push, required Actions and actual production payload/runtime acceptance
-must pass before MODEL-0007 starts. The full repository campaign remains incomplete.
+Current regression, scoped diff/main synchronization, the separate QA commit/push
+and exact main/blob verification are complete. Required Actions and actual
+production payload/runtime acceptance passed before selecting MODEL-0007. The full repository campaign remains incomplete.
+
+Publication evidence: `release-evidence.json`. Post-push closure metadata will
+travel with the next validated campaign commit rather than superseding this
+release with a metadata-only push.
+
+Production evidence includes the unchanged standalone and assembly hashes,
+current Viewer controls and direct sphere/cloth tests on downloaded GLBs.
