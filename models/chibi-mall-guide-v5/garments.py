@@ -84,7 +84,7 @@ def build_shorts(bm_mod, mats):
 
 def build_cap(bm_mod, mats):
     bm = bm_mod.new(); c = C.CAP
-    kit.add_super(bm, c['c'], c['r'], p_bot=6.0, seg=36, rings=18, mi=0)
+    kit.add_super(bm, c['c'], c['r'], p_top=1.8, p_bot=6.0, seg=36, rings=18, mi=0)
     kit.add_torus(bm, (0.0, c['c'][1], c['z_rim']), 0.127, 0.008, scale_xy=(1.0, 0.96), seg=40, tube=8, mi=1)
     kit.add_super(bm, (0.104, c['c'][1] - 0.078, 0.945), (0.012, 0.007, 0.012), seg=16, rings=10, mi=2)
     return kit.finish('Cap', bm, [mats['cap_jade'], mats['ivory'], mats['brass']])

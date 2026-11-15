@@ -171,3 +171,24 @@ def super_side_x(c, r, y, z, p_top=2.0, p_bot=2.0, rz_bot=None):
     f = math.sqrt(max(0.0, 1 - abs(zn) ** pp)) / math.sqrt(1 - zn * zn)
     t = (1 - zn * zn) - ((y - c[1]) / (f * r[1])) ** 2
     return c[0] + f * r[0] * math.sqrt(max(0.0, t))
+
+
+def add_lock(bm, pts, normals, widths, thicks, sides=14, mi=0):
+    """Swept lock lying on a surface: an elliptical section (half width along the surface, half thickness along the normal)
+    follows the polyline pts; widths and thicks are per point and should taper smoothly to a rounded end."""
+    pts = [Vector(p) for p in pts]; n0 = len(bm.faces); rings = []
+    for i, p in enumerate(pts):
+        t = (pts[min(i + 1, len(pts) - 1)] - pts[max(i - 1, 0)]).normalized()
+        n = Vector(normals[i]).normalized(); b = t.cross(n)
+        if b.length < 1e-6: b = Vector((1.0, 0.0, 0.0))
+        b.normalize(); n = b.cross(t).normalized()
+        ring = []
+        for k in range(sides):
+            a = 2 * math.pi * k / sides
+            ring.append(bm.verts.new(p + n * (math.cos(a) * thicks[i]) + b * (math.sin(a) * widths[i])))
+        rings.append(ring)
+    for i in range(len(rings) - 1):
+        for k in range(sides):
+            bm.faces.new((rings[i][k], rings[i][(k + 1) % sides], rings[i + 1][(k + 1) % sides], rings[i + 1][k]))
+    bm.faces.new(rings[0][::-1]); bm.faces.new(rings[-1])
+    bm.faces.ensure_lookup_table(); _tag(bm.faces[n0:], mi)

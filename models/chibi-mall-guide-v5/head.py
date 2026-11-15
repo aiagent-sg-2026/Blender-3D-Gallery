@@ -14,7 +14,7 @@ def build_head(bpy, bmesh, mats):
     bm = bmesh.new()
     kit.add_super(bm, h['c'], h['r'], p_bot=h['p_bot'], rz_bot=h['rz_bot'], seg=56, rings=40, mi=0)
     e = C.EAR
-    ex = kit.super_side_x(h['c'], h['r'], e['y'], e['z'], p_bot=h['p_bot'], rz_bot=h['rz_bot']) + e['r'][0] * 0.2   # ears sit on the skull side
+    ex = kit.super_side_x(h['c'], h['r'], e['y'], e['z'], p_bot=h['p_bot'], rz_bot=h['rz_bot']) + e['r'][0] * 0.9   # ears stand proud of the skull side by most of their half width
     for sx in (1, -1): kit.add_super(bm, (sx * ex, e['y'], e['z']), e['r'], seg=14, rings=10, mi=0)
     n = C.NOSE; kit.add_super(bm, (0.0, surf(0.0, n['z']) - n['r'][1] * 0.6, n['z']), n['r'], seg=12, rings=8, mi=0)
     # brows (two arched bands), material 1
