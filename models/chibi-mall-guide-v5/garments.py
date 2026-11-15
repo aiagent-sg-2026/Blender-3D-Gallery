@@ -41,12 +41,13 @@ def build_vest(bm_mod, mats):
     kit.delete_faces(bm, cut)
     import bmesh
     bmesh.ops.solidify(bm, geom=list(bm.faces), thickness=v['thick'])
-    # brass details: three buttons and the name badge (front, character's left = +X); jade pockets
-    for z in (0.425, 0.380, 0.335):
-        kit.add_super(bm, (0.0, torso_front_y(0, z, v) - 0.001, z), (0.0075, 0.0045, 0.0075), seg=14, rings=8, mi=1)
-    kit.add_super(bm, (0.062, torso_front_y(0.062, 0.428, v) - 0.002, 0.428), (0.021, 0.006, 0.021), seg=20, rings=10, mi=1)
+    # brass details sit flush: centre = surface - own depth radius + 1 mm, so they never reach the shirt behind the vest
+    def flush(x, z, ry): return torso_front_y(x, z, v) - ry + 0.001
+    for z in (0.395, 0.350):
+        kit.add_super(bm, (0.0, flush(0.0, z, 0.0045), z), (0.0075, 0.0045, 0.0075), seg=14, rings=8, mi=1)
+    kit.add_super(bm, (0.058, flush(0.058, 0.405, 0.006), 0.405), (0.018, 0.006, 0.018), seg=20, rings=10, mi=1)
     for sx in (1, -1):
-        kit.add_super(bm, (sx * 0.056, torso_front_y(sx * 0.056, 0.335, v) - 0.001, 0.335), (0.028, 0.005, 0.012), seg=16, rings=8, mi=0)
+        kit.add_super(bm, (sx * 0.056, flush(sx * 0.056, 0.318, 0.005), 0.318), (0.022, 0.005, 0.012), seg=16, rings=8, mi=0)
     return kit.finish('Vest', bm, [mats['jade'], mats['brass']])
 
 def build_shirt(bm_mod, mats):
