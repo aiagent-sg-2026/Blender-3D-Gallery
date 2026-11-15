@@ -7545,5 +7545,279 @@
     ],
     "shark_pectoral_drop": 0.28,
     "shark_pelvic_drop": 0.115
+  },
+  "whale-shark": {
+    "fish_id": "FISH-052",
+    "visual_species": "Rhincodon typus visual study",
+    "references": [
+      "https://fishesofaustralia.net.au/home/species/1980"
+    ],
+    "profile_x": [
+      -1.65,
+      -1.5,
+      -1.25,
+      -0.9,
+      -0.4,
+      0.15,
+      0.65,
+      1.03,
+      1.25
+    ],
+    "top": [
+      0.07,
+      0.14,
+      0.2,
+      0.25,
+      0.26,
+      0.24,
+      0.17,
+      0.1,
+      0.06
+    ],
+    "bottom": [
+      -0.1,
+      -0.13,
+      -0.18,
+      -0.23,
+      -0.25,
+      -0.23,
+      -0.17,
+      -0.1,
+      -0.06
+    ],
+    "width": [
+      0.28,
+      0.33,
+      0.37,
+      0.39,
+      0.36,
+      0.28,
+      0.17,
+      0.085,
+      0.04
+    ],
+    "back_color": [
+      0.15,
+      0.23,
+      0.29
+    ],
+    "side_color": [
+      0.2,
+      0.28,
+      0.33
+    ],
+    "belly_color": [
+      0.72,
+      0.75,
+      0.73
+    ],
+    "fin_color": [
+      0.19,
+      0.27,
+      0.32
+    ],
+    "pattern": "scaleless",
+    "eye": [
+      -1.5,
+      0.025,
+      0.025
+    ],
+    "dorsal_start": 0.5,
+    "dorsal_split": 0.5,
+    "dorsal_end": 1.06,
+    "spine_height": 0.21,
+    "soft_height": 0.15,
+    "tail_height": 0.19,
+    "tail_fork": -0.06,
+    "mouth_end": [
+      -1.14,
+      -0.15
+    ],
+    "gill_x": -0.55,
+    "qa_targets": [
+      "Broad flattened snout with a closed anterior mouth and tiny lateral eyes",
+      "Five gill slits, subtle longitudinal body ridges and original irregular spot/grid pigment",
+      "Opaque thick swept fins, two dorsals and unequal caudal lobes",
+      "Restrained cyclic body and tail movement with stable fin roots"
+    ],
+    "alias_note": "Original Rhincodon typus visual study based on the inspected Erik Schlogl photograph. The broad mouth is closed; filter-feeding mechanics, fine denticles and teeth are simplified. Gill slits use shallow original relief, and movement is artist-tuned rather than measured.",
+    "eye_color": [
+      0.11,
+      0.15,
+      0.16
+    ],
+    "pupil_radius": 0.83,
+    "mouth_start_z": -0.12,
+    "dorsal_spines": 0,
+    "tail_end": 1.73,
+    "anal_start": 0.6,
+    "anal_split": 0.47,
+    "anal_end": 1.05,
+    "anal_spines": 0,
+    "anal_spine_height": 0.17,
+    "anal_height": 0.12,
+    "pelvic_length": 0.12,
+    "pectoral_length": 0.25,
+    "pectoral_height": 0.22,
+    "pectoral_droop": 0.01,
+    "pectoral_shape": "rounded",
+    "pectoral_root_z": -0.1,
+    "pectoral_surface_anchor": true,
+    "markings": "whale_shark",
+    "surface_roughness": 0.55,
+    "swim_seconds": 3.5,
+    "tail_color": [
+      0.19,
+      0.27,
+      0.32
+    ],
+    "tail_dark_margin": 0.12,
+    "scale_density": [
+      60,
+      38
+    ],
+    "scale_pigment_gain": 0.016,
+    "scale_rim_gain": 0.022,
+    "metallic": 0,
+    "fin_markings": "none",
+    "soft_start_height": 0,
+    "round_snout": 0.05,
+    "anal_soft_start_height": 0,
+    "pelvic_root_x": -0.67,
+    "pelvic_start_x": -0.48,
+    "pelvic_end_x": -0.2,
+    "gill_bounds": [
+      -0.13,
+      0.13
+    ],
+    "dorsal_second_start": 0.5,
+    "soft_height_curve": [
+      [
+        0,
+        0
+      ],
+      [
+        0.25,
+        0.14
+      ],
+      [
+        0.6,
+        0.12
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "pelvic": true,
+    "body_wave_gain": 0.55,
+    "fanning_cycles": 1,
+    "fanning_gain": 0.33,
+    "stabilizer_tip_blend": 0.9,
+    "lip_bulge": 1e-05,
+    "fin_edge_noise_gain": 0.18,
+    "fanning_local_hinges": true,
+    "cartilaginous_fins": true,
+    "shark_kind": "whale",
+    "shark_gill_x": [
+      -0.88,
+      -0.78,
+      -0.68,
+      -0.58,
+      -0.48
+    ],
+    "shark_gill_half_height": 0.2,
+    "shark_dorsal_span": [
+      -0.02,
+      0.71
+    ],
+    "shark_dorsal_height": [
+      [
+        0,
+        0.003
+      ],
+      [
+        0.23,
+        0.18
+      ],
+      [
+        0.4,
+        0.3
+      ],
+      [
+        0.5,
+        0.32
+      ],
+      [
+        0.64,
+        0.21
+      ],
+      [
+        1,
+        0.003
+      ]
+    ],
+    "shark_tail_outline": [
+      [
+        0,
+        1.92,
+        -0.46
+      ],
+      [
+        0.42,
+        1.58,
+        -0.015
+      ],
+      [
+        0.64,
+        1.98,
+        0.2
+      ],
+      [
+        0.86,
+        2.18,
+        0.42
+      ],
+      [
+        1,
+        2.36,
+        0.74
+      ]
+    ],
+    "shark_pectoral_span": 0.76,
+    "shark_pelvic_x": 0.51,
+    "fanning_bones": [
+      "Dorsal",
+      "Anal",
+      "Pectoral_L",
+      "Pectoral_R"
+    ],
+    "required_mesh_counts": {
+      "Dorsal_Main": 1,
+      "Dorsal_Second": 1,
+      "Caudal_Heterocercal": 1,
+      "Pectoral_Swept_": 2,
+      "Mouth_ClosedAnterior": 1
+    },
+    "required_moving_prefixes": [
+      "Dorsal_Main",
+      "Dorsal_Second",
+      "Caudal_Heterocercal",
+      "Pectoral_Swept_"
+    ],
+    "shark_pectoral_drop": 0.26,
+    "shark_pelvic_drop": 0.1,
+    "shark_second_dorsal_span": [
+      0.85,
+      1.13
+    ],
+    "shark_second_dorsal_height": 0.11,
+    "preview_camera_location": [
+      -0.15,
+      -9,
+      2.2
+    ],
+    "preview_scale": 4.9,
+    "preview_z": 0.07
   }
 }

@@ -9841,7 +9841,7 @@
   {
     "verifier_signature": "b320c01b441ae1eb959ec454326e4a3eaf47af55d8d8532e77fedd3fab7a5da5",
     "profile_signature": "8d912d7eedcd0e6cd3588b2a563aeb130839661c3286da2da33a7240ad840f58",
-    "verification_reused": false,
+    "verification_reused": true,
     "required_mesh_motion": {
       "Dorsal_Main": 0.014487376294677643,
       "Dorsal_Second": 0.0390467686508547,
@@ -14477,6 +14477,259 @@
     "start": 1.0,
     "end": 69.0,
     "motion": 0.07472250285424067,
+    "loop_error": 0.0
+  },
+  {
+    "verifier_signature": "b320c01b441ae1eb959ec454326e4a3eaf47af55d8d8532e77fedd3fab7a5da5",
+    "profile_signature": "2c680e5ea5e359490ebce0dbddc26282c4d0b336a13abdbfdcf72feacd35cd24",
+    "verification_reused": false,
+    "required_mesh_motion": {
+      "Dorsal_Main": 0.015276940468895368,
+      "Dorsal_Second": 0.024256943053495024,
+      "Pectoral_Swept_-1": 0.012204546507882977,
+      "Pectoral_Swept_1": 0.006629684560880922,
+      "Caudal_Heterocercal": 0.02649707081289986,
+      "Mouth_ClosedAnterior": 0.00042754893235058593
+    },
+    "pelvic_sensory_motion": {},
+    "barbel_meshes": 0,
+    "adipose_fins": 0,
+    "surface_contact": [
+      {
+        "frame": 1.0,
+        "fins": {
+          "Dorsal_Main": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.000692048394938638,
+            "max_signed_distance": -0.0006641357581429475
+          },
+          "Dorsal_Second": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0006661584070570825,
+            "max_signed_distance": -0.0006250564638321521
+          },
+          "Anal_Small": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.000667138858261751,
+            "max_signed_distance": -0.0006251053910091287
+          },
+          "Pectoral_Swept_-1": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0009230968864812894,
+            "max_signed_distance": -0.00046952198260896694
+          },
+          "Pelvic_Small_-1": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0009642110071581556,
+            "max_signed_distance": -0.00042605229918990517
+          },
+          "Pectoral_Swept_1": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0009107424448302481,
+            "max_signed_distance": -0.00045386630097254965
+          },
+          "Pelvic_Small_1": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0009438733250135556,
+            "max_signed_distance": -0.00042052821027027676
+          },
+          "Caudal_Heterocercal": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0006071677089494187,
+            "max_signed_distance": -0.00035456525566246455
+          }
+        }
+      },
+      {
+        "frame": 22.0,
+        "fins": {
+          "Dorsal_Main": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.000692143325750294,
+            "max_signed_distance": -0.0006641721952291846
+          },
+          "Dorsal_Second": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0006759778971172636,
+            "max_signed_distance": -0.0006255811404116685
+          },
+          "Anal_Small": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0006721262675455364,
+            "max_signed_distance": -0.0006245001877687173
+          },
+          "Pectoral_Swept_-1": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0009225480021086696,
+            "max_signed_distance": -0.0004688044573413208
+          },
+          "Pelvic_Small_-1": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0009644921556173358,
+            "max_signed_distance": -0.00042579184537316905
+          },
+          "Pectoral_Swept_1": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0009112836064559815,
+            "max_signed_distance": -0.000454558425644791
+          },
+          "Pelvic_Small_1": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0009446294316148851,
+            "max_signed_distance": -0.0004200361772745964
+          },
+          "Caudal_Heterocercal": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.000608544823990087,
+            "max_signed_distance": -0.00035502375642693096
+          }
+        }
+      },
+      {
+        "frame": 43.0,
+        "fins": {
+          "Dorsal_Main": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0006923053713308036,
+            "max_signed_distance": -0.0006639616790380387
+          },
+          "Dorsal_Second": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0006667691113761975,
+            "max_signed_distance": -0.00062515729223378
+          },
+          "Anal_Small": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0006664835673291236,
+            "max_signed_distance": -0.0006249760554055683
+          },
+          "Pectoral_Swept_-1": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0009222176622643019,
+            "max_signed_distance": -0.0004683832412410993
+          },
+          "Pelvic_Small_-1": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0009632826222514268,
+            "max_signed_distance": -0.0004265725510776974
+          },
+          "Pectoral_Swept_1": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0009116058799918392,
+            "max_signed_distance": -0.0004549576474346395
+          },
+          "Pelvic_Small_1": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0009415314634679817,
+            "max_signed_distance": -0.0004219213597025373
+          },
+          "Caudal_Heterocercal": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0006071668758522719,
+            "max_signed_distance": -0.0003546142245482997
+          }
+        }
+      },
+      {
+        "frame": 64.0,
+        "fins": {
+          "Dorsal_Main": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0006922401504425579,
+            "max_signed_distance": -0.0006638965264755825
+          },
+          "Dorsal_Second": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0006732336341883638,
+            "max_signed_distance": -0.0006245449148991611
+          },
+          "Anal_Small": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.000674910912039195,
+            "max_signed_distance": -0.0006255736116145272
+          },
+          "Pectoral_Swept_-1": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0009227979596744262,
+            "max_signed_distance": -0.0004691175631705846
+          },
+          "Pelvic_Small_-1": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0009629372489143861,
+            "max_signed_distance": -0.0004266027508492698
+          },
+          "Pectoral_Swept_1": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0009110490482271416,
+            "max_signed_distance": -0.000454255112458668
+          },
+          "Pelvic_Small_1": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0009407074903720059,
+            "max_signed_distance": -0.00042234531701978995
+          },
+          "Caudal_Heterocercal": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.000608544512942899,
+            "max_signed_distance": -0.0003540479878694214
+          }
+        }
+      },
+      {
+        "frame": 85.0,
+        "fins": {
+          "Dorsal_Main": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.000692048394938638,
+            "max_signed_distance": -0.0006641357581429475
+          },
+          "Dorsal_Second": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0006661584070570825,
+            "max_signed_distance": -0.0006250564638321521
+          },
+          "Anal_Small": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.000667138858261751,
+            "max_signed_distance": -0.0006251053910091287
+          },
+          "Pectoral_Swept_-1": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0009230968864812894,
+            "max_signed_distance": -0.00046952198260896694
+          },
+          "Pelvic_Small_-1": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0009642110071581556,
+            "max_signed_distance": -0.00042605229918990517
+          },
+          "Pectoral_Swept_1": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0009107424448302481,
+            "max_signed_distance": -0.00045386630097254965
+          },
+          "Pelvic_Small_1": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0009438733250135556,
+            "max_signed_distance": -0.00042052821027027676
+          },
+          "Caudal_Heterocercal": {
+            "root_vertices": 114,
+            "min_signed_distance": -0.0006071677089494187,
+            "max_signed_distance": -0.00035456525566246455
+          }
+        }
+      }
+    ],
+    "slug": "whale-shark",
+    "sha256": "0037bdd1d1cbc369b2419640e8387d16b1d2d6cbc47354d0f82393062129da50",
+    "vertices": 37675,
+    "actions": [
+      "Swim_Loop"
+    ],
+    "start": 1.0,
+    "end": 85.0,
+    "motion": 0.02649707081289986,
     "loop_error": 0.0
   },
   {
