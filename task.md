@@ -244,3 +244,5 @@ evidence before marking it complete. No deployment, commit or push is implied by
 - [ ] S7 catalog registration only after the gate passes.
 
 Chibi Visitor v4 predates the standard (no rig, 113,428 triangles) and is in REWORK status; see its README.
+
+Framework proposal (no code yet): [docs/chibi-framework-design.md](docs/chibi-framework-design.md). Open: location and name, Python-only or Node validation too, how many older characters to migrate, owner of versioning and reviews.

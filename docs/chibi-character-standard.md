@@ -143,3 +143,7 @@ Rules: numbers live only in `config.py`; modules read config and do not duplicat
 - Each socket has unit scale and an agreed local axis (proposal: +Y up, +Z forward in rest pose); a prop is modelled with its attachment point at its own origin and the same axis.
 - Props are scene roots (the skinned-mesh rule from section 12 applies to skinned props).
 - Open: whether sockets are bones inside the armature (counted against the 20-bone limit) or plain nodes parented to bones; whether the mall runtime and the gallery viewer attach props the same way. Both need a test before this section is accepted.
+
+## 14. Framework
+
+The plan to extract a general build framework is in [chibi-framework-design.md](chibi-framework-design.md) (proposal; nothing implemented).
