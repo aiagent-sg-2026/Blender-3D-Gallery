@@ -80,7 +80,7 @@ def skin_maps():
    if C['markings']=='trevally':color*=1-scute[...,None]*.11
    else:color+=scute[...,None]*.018
  if C.get('markings')=='asian_arowana':
-  face=(1-R.smoothstep(-1.02,-.86,xs))*R.smoothstep(.43,.65,R.noise(u,v,48,33,1071))*.28;color=color*(1-face[...,None])+np.array([.64,.54,.27])*face[...,None]
+  field=.65*R.noise(u,v,43,29,1071)+.35*R.noise(u,v,93,61,1072);face=(1-R.smoothstep(-1.02,-.86,xs))*np.exp(-((field-.51)/.038)**2)*.42;color=color*(1-face[...,None])+np.array([.64,.54,.27])*face[...,None]
  if C.get('markings')=='moon_wrasse':
   pink=np.zeros_like(xs);edge=(R.noise(u,v,150,110,1060)-.5)*.004
   for k,level in enumerate([-.23,-.08,.09,.25]):
