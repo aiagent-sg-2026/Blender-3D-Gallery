@@ -32,9 +32,10 @@ def skin_maps():
  for cx,cy,rx,ry,ang,pigment in sorted(tiles,key=lambda t:-t[0]):
   x0=max(0,int((cx-1.15/nx)*w));x1=min(w,int((cx+1.15/nx)*w)+1);y0=max(0,int((cy-1/ny)*h));y1=min(h,int((cy+1/ny)*h)+1)
   if x1<=x0 or y1<=y0:continue
-  px=(u[y0:y1,x0:x1]-cx)*nx;py=(v[y0:y1,x0:x1]-cy)*ny;xx=px*math.cos(ang)+py*math.sin(ang);yy=-px*math.sin(ang)+py*math.cos(ang);d=np.sqrt((xx/rx)**2+(yy/ry)**2)
+  px=(u[y0:y1,x0:x1]-cx)*nx;py=(v[y0:y1,x0:x1]-cy)*ny;xx=px*math.cos(ang)+py*math.sin(ang);yy=-px*math.sin(ang)+py*math.cos(ang);power=C.get('scale_shape_power',2);d=(np.abs(xx/rx)**power+np.abs(yy/ry)**power)**(1/power)
   mask=(1-R.smoothstep(.91,1,d))*R.smoothstep(.16,.27,u[y0:y1,x0:x1]);rim=np.exp(-((d-.94)/.045)**2)*R.smoothstep(-.45,.40,xx/rx);local=base[y0:y1,x0:x1]+pigment*C.get('scale_pigment_gain',.007 if C['pattern']=='fine_scales' else .027)+rim[...,None]*C.get('scale_rim_gain',.012 if C['pattern']=='fine_scales' else .015 if C['pattern']=='grouper' else .052)+(micro[y0:y1,x0:x1]-.5)[...,None]*.022+(fine[y0:y1,x0:x1]-.5)[...,None]*.012
   dark_rim=np.exp(-((d-.94)/C.get('scale_dark_rim_width',.045))**2)*R.smoothstep(-.45,.40,xx/rx)
+  local-=(1-R.smoothstep(.35,.76,d))[...,None]*C.get('scale_center_darkening',0)*(.82+.18*pigment)
   if C.get('scale_rim_tint'):local+=dark_rim[...,None]*np.array(C['scale_rim_tint'])*(.65+.35*pigment)
   local-=dark_rim[...,None]*C.get('scale_dark_rim_gain',0)*(.8+.2*pigment)
   color[y0:y1,x0:x1]=color[y0:y1,x0:x1]*(1-mask[...,None])+local*mask[...,None];raised=(.00012 if C['pattern']=='fine_scales' else .00045)*rim+.00015*np.maximum(0,1-d*d)
@@ -94,6 +95,11 @@ def skin_maps():
  if C.get('markings')=='clownfish':
   from clown_pattern import paint_bands
   color=paint_bands(color,xs,world_z,R.smoothstep)
+ if C.get('markings')=='titan_triggerfish':
+  face=(1-R.smoothstep(-1.16,-.91,xs))*(1-R.smoothstep(-.06,.12,world_z))*flank_mask;color=color*(1-face[...,None]*.92)+np.array([.73,.73,.63])*face[...,None]*.92
+  mask=(1-R.smoothstep(.85,1.02,np.sqrt(((xs+1.0)/.38)**2+((world_z-.30)/.24)**2)))*flank_mask;color=color*(1-mask[...,None]*.79)+np.array([.065,.10,.12])*mask[...,None]*.79
+  groove=np.exp(-((world_z-(.43+.40*(xs+.90)))/.008)**2)*R.smoothstep(-1.46,-1.36,xs)*(1-R.smoothstep(-.97,-.88,xs))*flank_mask;color*=1-groove[...,None]*.50;height-=groove*.0008
+  lip=np.exp(-((world_z+.035)/.027)**2)*(1-R.smoothstep(-1.51,-1.36,xs))*flank_mask;color*=1-lip[...,None]*.65
  if C.get('markings')=='stars_stripes_puffer':
   rng=np.random.default_rng(1041);centers=[]
   for k in range(2200):
@@ -385,6 +391,9 @@ if C.get('dental_plates'):
 if C.get('lion_radial_fins'):
  from lion_fins import build_lion_fins
  build_lion_fins(B,R.fan,C,profile,flank,fm,fin_mat(spiny=True))
+if C.get('peduncle_thorns'):
+ from peduncle_spines import build_peduncle_spines
+ build_peduncle_spines(B,C,profile,flank)
 print('BIND_SWIM',slug,flush=True);rig=B.add_rig('bass')
 bind_pelvic_filaments(rig)
 from fanning import retarget_fanning
