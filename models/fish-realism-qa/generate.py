@@ -79,6 +79,9 @@ def skin_maps():
    height+=scute*.00035
    if C['markings']=='trevally':color*=1-scute[...,None]*.11
    else:color+=scute[...,None]*.018
+ if C.get('markings')=='koi':
+  upper=R.smoothstep(-.65,-.30,z);field=R.noise(u,v,8,7,1080)*.70+R.noise(u,v,23,17,1081)*.30;red=R.smoothstep(.49,.515,field+(R.noise(u,v,85,61,1085)-.5)*.018)*upper*.94;color=color*(1-red[...,None])+np.array([.80,.145,.055])*red[...,None]
+  field=R.noise(u,v,15,11,1083)*.70+R.noise(u,v,37,29,1084)*.30;black=R.smoothstep(.63,.66,field)*upper*R.smoothstep(-1.05,-.86,xs)*.97;color=color*(1-black[...,None])+np.array([.025,.030,.026])*black[...,None]
  if C.get('markings')=='asian_arowana':
   field=.65*R.noise(u,v,43,29,1071)+.35*R.noise(u,v,93,61,1072);face=(1-R.smoothstep(-1.02,-.86,xs))*np.exp(-((field-.51)/.038)**2)*.42;color=color*(1-face[...,None])+np.array([.64,.54,.27])*face[...,None]
  if C.get('markings')=='moon_wrasse':
