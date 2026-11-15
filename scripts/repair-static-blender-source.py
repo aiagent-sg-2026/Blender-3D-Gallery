@@ -36,7 +36,13 @@ assert args.id in generator.CLEANUP_PARTS
 catalog = json.loads((REPOSITORY / 'models/catalog.json').read_text())
 asset = next(a for c in catalog['collections'] for a in c['assets'] if a['id'] == args.id)
 bpy.ops.wm.open_mainfile(filepath=str(args.input), load_ui=False, use_scripts=False)
-root = bpy.data.objects[asset['root']]; objects = list(root.children_recursive)
+root = bpy.data.objects.get(asset['root']) or bpy.data.collections.get(asset['root'])
+assert root is not None
+collection_root = isinstance(root, bpy.types.Collection)
+if collection_root:
+    assert generator.ROOT == root.name
+    assert set(generator.GROUPS) == {child.name for child in root.children}
+objects = list(root.all_objects) if collection_root else list(root.children_recursive)
 before_hash = source_fingerprint(); before = geometry_counts(objects)
 selection = list(bpy.context.selected_objects); active = bpy.context.view_layer.objects.active
 cursor = bpy.context.scene.cursor.location.copy()
@@ -44,7 +50,10 @@ generator.prepare_asset_geometry(args.id, objects)
 bpy.context.view_layer.update()
 after = geometry_counts(objects)
 assert sum(item['zero_area_triangles'] for item in after) == 0, after
-generator.export_asset(args.id, root, objects, args.output / (args.id + '.glb'))
+if collection_root:
+    generator.export_asset(args.output / (args.id + '.glb'))
+else:
+    generator.export_asset(args.id, root, objects, args.output / (args.id + '.glb'))
 bpy.ops.object.select_all(action='DESELECT')
 for obj in selection: obj.select_set(True)
 bpy.context.view_layer.objects.active = active
@@ -54,11 +63,13 @@ assert source_fingerprint() == before_hash, 'Authored data or unrelated source s
 bpy.ops.wm.save_as_mainfile(filepath=str(args.output / (args.id + '.blend')), compress=True)
 bpy.ops.wm.open_mainfile(filepath=str(args.output / (args.id + '.blend')), load_ui=False, use_scripts=False)
 assert source_fingerprint() == before_hash, 'Reopened source semantics changed'
-reopened = geometry_counts(list(bpy.data.objects[asset['root']].children_recursive))
+reopened_root = bpy.data.collections[asset['root']] if collection_root else bpy.data.objects[asset['root']]
+reopened = geometry_counts(list(reopened_root.all_objects) if collection_root else list(reopened_root.children_recursive))
 assert sum(item['zero_area_triangles'] for item in reopened) == 0
 receipt = {'id': args.id, 'status': 'PASS', 'blender': bpy.app.version_string,
            'original_sha256': args.expected_sha256, 'source_fingerprint': before_hash,
            'authored_data_preserved': True, 'source_reopened': True, 'editable_parts': len(objects),
+           'root_type': reopened_root.bl_rna.identifier,
            'before': before, 'after': after, 'reopened': reopened}
 (args.output / 'source-repair.json').write_text(json.dumps(receipt, indent=2) + '\n')
 print('PASS:', args.id, 'source and reopened evaluated geometry clean; authored data preserved')

@@ -8,17 +8,19 @@ MODIFIER_NAME = 'Degenerate face cleanup'
 GROUP_NAME = 'Triangle cleanup - 0.1 micrometre weld'
 
 
-def add_cleanup(obj):
+def add_cleanup(obj, ngon_method='Beauty'):
     """Keep authoring data editable; remove collapsed evaluated triangles."""
     assert obj.type in {'MESH', 'FONT', 'CURVE'}, obj.name
     assert all(abs(value - 1) < 1e-6 for value in obj.matrix_world.to_scale()), obj.name
+    assert ngon_method in {'Beauty', 'Clip'}
+    group_name = GROUP_NAME if ngon_method == 'Beauty' else GROUP_NAME + ' / ear clip'
     existing = obj.modifiers.get(MODIFIER_NAME)
     if existing:
-        assert existing.type == 'NODES' and existing.node_group.name == GROUP_NAME
+        assert existing.type == 'NODES' and existing.node_group.name == group_name
         return
-    group = bpy.data.node_groups.get(GROUP_NAME)
+    group = bpy.data.node_groups.get(group_name)
     if group is None:
-        group = bpy.data.node_groups.new(GROUP_NAME, 'GeometryNodeTree')
+        group = bpy.data.node_groups.new(group_name, 'GeometryNodeTree')
         group.interface.new_socket(name='Geometry', in_out='INPUT', socket_type='NodeSocketGeometry')
         group.interface.new_socket(name='Geometry', in_out='OUTPUT', socket_type='NodeSocketGeometry')
         nodes, links = group.nodes, group.links
@@ -27,6 +29,9 @@ def add_cleanup(obj):
         tri = nodes.new('GeometryNodeTriangulate'); tri.location = (-400, 160)
         # Match Blender's loop-triangle quad diagonal before topology changes.
         tri.inputs['Quad Method'].default_value = 'Fixed'
+        # Cylinder caps can require ear clipping to retain their original
+        # loop-triangle diagonals; keep the default for previously reviewed parts.
+        tri.inputs['N-gon Method'].default_value = ngon_method
         merge = nodes.new('GeometryNodeMergeByDistance'); merge.location = (-200, 160)
         merge.inputs['Distance'].default_value = 1e-7
         area = nodes.new('GeometryNodeInputMeshFaceArea'); area.location = (-400, -160)

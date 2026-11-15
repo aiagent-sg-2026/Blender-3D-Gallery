@@ -1,0 +1,755 @@
+{
+  "id": "mall-floor-direction-sign",
+  "status": "PASS",
+  "blender": "5.1.2",
+  "original_sha256": "02d9898aa5a08f99e007029aa4a0605a4acf87a25a4139b7b9ce034e0e52c790",
+  "source_fingerprint": "f3c3f42d50914e1f3f485b682a07b00b9edc2e4029af94cde561a0ccd99e00bf",
+  "authored_data_preserved": true,
+  "source_reopened": true,
+  "editable_parts": 41,
+  "root_type": "Collection",
+  "before": [
+    {
+      "name": "Recessed ground gasket",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Weighted chamfered base",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Base inset cap",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Recessed base fixing",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 24
+    },
+    {
+      "name": "Recessed base fixing.001",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 24
+    },
+    {
+      "name": "Recessed base fixing.002",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 24
+    },
+    {
+      "name": "Recessed base fixing.003",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 24
+    },
+    {
+      "name": "Left continuous spine",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Right continuous spine",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Inset rear service cover",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Lower crossrail",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Crown cap",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Orange vertical locator",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Base support foot.001",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Base support foot",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Floor header cartridge",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Floor number orange badge",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 32
+    },
+    {
+      "name": "Editable floor number",
+      "source_type": "FONT",
+      "triangles": 196,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Editable level title",
+      "source_type": "FONT",
+      "triangles": 152,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Editable zone name",
+      "source_type": "FONT",
+      "triangles": 328,
+      "zero_area_triangles": 1
+    },
+    {
+      "name": "Editable zone subline",
+      "source_type": "FONT",
+      "triangles": 152,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionDining removable cartridge",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionDining edge tab",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionDining editable destination",
+      "source_type": "FONT",
+      "triangles": 616,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionDining editable detail",
+      "source_type": "FONT",
+      "triangles": 968,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionDining left arrow",
+      "source_type": "MESH",
+      "triangles": 332,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionShops removable cartridge",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionShops edge tab",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionShops editable destination",
+      "source_type": "FONT",
+      "triangles": 532,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionShops editable detail",
+      "source_type": "FONT",
+      "triangles": 1156,
+      "zero_area_triangles": 7
+    },
+    {
+      "name": "DirectionShops up arrow",
+      "source_type": "MESH",
+      "triangles": 332,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionCinema removable cartridge",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionCinema edge tab",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionCinema editable destination",
+      "source_type": "FONT",
+      "triangles": 672,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionCinema editable detail",
+      "source_type": "FONT",
+      "triangles": 812,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionCinema right arrow",
+      "source_type": "MESH",
+      "triangles": 332,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionFacilities removable cartridge",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionFacilities edge tab",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionFacilities editable destination",
+      "source_type": "FONT",
+      "triangles": 988,
+      "zero_area_triangles": 4
+    },
+    {
+      "name": "DirectionFacilities editable detail",
+      "source_type": "FONT",
+      "triangles": 804,
+      "zero_area_triangles": 2
+    },
+    {
+      "name": "DirectionFacilities right arrow",
+      "source_type": "MESH",
+      "triangles": 332,
+      "zero_area_triangles": 0
+    }
+  ],
+  "after": [
+    {
+      "name": "Recessed ground gasket",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Weighted chamfered base",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Base inset cap",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Recessed base fixing",
+      "source_type": "MESH",
+      "triangles": 164,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Recessed base fixing.001",
+      "source_type": "MESH",
+      "triangles": 164,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Recessed base fixing.002",
+      "source_type": "MESH",
+      "triangles": 164,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Recessed base fixing.003",
+      "source_type": "MESH",
+      "triangles": 164,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Left continuous spine",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Right continuous spine",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Inset rear service cover",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Lower crossrail",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Crown cap",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Orange vertical locator",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Base support foot.001",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Base support foot",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Floor header cartridge",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Floor number orange badge",
+      "source_type": "MESH",
+      "triangles": 156,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Editable floor number",
+      "source_type": "FONT",
+      "triangles": 196,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Editable level title",
+      "source_type": "FONT",
+      "triangles": 152,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Editable zone name",
+      "source_type": "FONT",
+      "triangles": 324,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Editable zone subline",
+      "source_type": "FONT",
+      "triangles": 152,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionDining removable cartridge",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionDining edge tab",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionDining editable destination",
+      "source_type": "FONT",
+      "triangles": 616,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionDining editable detail",
+      "source_type": "FONT",
+      "triangles": 968,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionDining left arrow",
+      "source_type": "MESH",
+      "triangles": 332,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionShops removable cartridge",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionShops edge tab",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionShops editable destination",
+      "source_type": "FONT",
+      "triangles": 532,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionShops editable detail",
+      "source_type": "FONT",
+      "triangles": 1148,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionShops up arrow",
+      "source_type": "MESH",
+      "triangles": 332,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionCinema removable cartridge",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionCinema edge tab",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionCinema editable destination",
+      "source_type": "FONT",
+      "triangles": 672,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionCinema editable detail",
+      "source_type": "FONT",
+      "triangles": 812,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionCinema right arrow",
+      "source_type": "MESH",
+      "triangles": 332,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionFacilities removable cartridge",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionFacilities edge tab",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionFacilities editable destination",
+      "source_type": "FONT",
+      "triangles": 984,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionFacilities editable detail",
+      "source_type": "FONT",
+      "triangles": 800,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionFacilities right arrow",
+      "source_type": "MESH",
+      "triangles": 332,
+      "zero_area_triangles": 0
+    }
+  ],
+  "reopened": [
+    {
+      "name": "Recessed ground gasket",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Weighted chamfered base",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Base inset cap",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Recessed base fixing",
+      "source_type": "MESH",
+      "triangles": 164,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Recessed base fixing.001",
+      "source_type": "MESH",
+      "triangles": 164,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Recessed base fixing.002",
+      "source_type": "MESH",
+      "triangles": 164,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Recessed base fixing.003",
+      "source_type": "MESH",
+      "triangles": 164,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Left continuous spine",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Right continuous spine",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Inset rear service cover",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Lower crossrail",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Crown cap",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Orange vertical locator",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Base support foot.001",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Base support foot",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Floor header cartridge",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Floor number orange badge",
+      "source_type": "MESH",
+      "triangles": 156,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Editable floor number",
+      "source_type": "FONT",
+      "triangles": 196,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Editable level title",
+      "source_type": "FONT",
+      "triangles": 152,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Editable zone name",
+      "source_type": "FONT",
+      "triangles": 324,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Editable zone subline",
+      "source_type": "FONT",
+      "triangles": 152,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionDining removable cartridge",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionDining edge tab",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionDining editable destination",
+      "source_type": "FONT",
+      "triangles": 616,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionDining editable detail",
+      "source_type": "FONT",
+      "triangles": 968,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionDining left arrow",
+      "source_type": "MESH",
+      "triangles": 332,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionShops removable cartridge",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionShops edge tab",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionShops editable destination",
+      "source_type": "FONT",
+      "triangles": 532,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionShops editable detail",
+      "source_type": "FONT",
+      "triangles": 1148,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionShops up arrow",
+      "source_type": "MESH",
+      "triangles": 332,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionCinema removable cartridge",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionCinema edge tab",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionCinema editable destination",
+      "source_type": "FONT",
+      "triangles": 672,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionCinema editable detail",
+      "source_type": "FONT",
+      "triangles": 812,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionCinema right arrow",
+      "source_type": "MESH",
+      "triangles": 332,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionFacilities removable cartridge",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionFacilities edge tab",
+      "source_type": "MESH",
+      "triangles": 188,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionFacilities editable destination",
+      "source_type": "FONT",
+      "triangles": 984,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionFacilities editable detail",
+      "source_type": "FONT",
+      "triangles": 800,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "DirectionFacilities right arrow",
+      "source_type": "MESH",
+      "triangles": 332,
+      "zero_area_triangles": 0
+    }
+  ]
+}

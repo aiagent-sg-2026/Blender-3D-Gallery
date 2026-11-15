@@ -47,8 +47,16 @@ Use Blender 4.0.2, Python with Pillow, and Node 22 with the pinned project depen
 
 ## Budgets and provenance
 
-The measured export is 561,892 bytes, 13,404 triangles and 19 primitives. Nineteen primitives are an intentional exception to the preferred eight-primitive target: all six modules retain independent material slots. The 700 KB / 20,000-triangle limits remain satisfied. No textures, animations or external buffers are required.
+The measured export is 561,892 bytes, 13,256 triangles and 19 primitives. Nineteen primitives are an intentional exception to the preferred eight-primitive target: all six modules retain independent material slots. The 700 KB / 20,000-triangle limits remain satisfied. No textures, animations or external buffers are required.
 
 All geometry, materials and labels are original to this project, using Blender's bundled Bfont. No external models, branded artwork or downloads are embedded. Reuse in the owner's projects is authorized; public redistribution terms have not been specified, so the gallery download control remains disabled. This is a decorative concept, not an official mall route plan, fabrication design, structural calculation or accessibility specification.
 
 See [verification](verification.md) and the measured reports for exact evidence and limitations.
+
+## Topology follow-up (2026-11-15)
+
+The current source was reopened in Blender 5.1.2 and preserves 41 editable parts and all six collection modules. Five reviewed meshes and all twelve labels have non-destructive cleanup. The four recessed base fixings use explicit ear-clip triangulation to retain cap diagonals. The canonical GLB removes 139 exact-zero triangles and nine reviewed precision residues; positions, normals and material bytes are unchanged. Existing previews remain applicable. See [the repair report](../../docs/model-qa/degenerate-repairs/mall-floor-direction-sign/README.md).
+
+`generate.py -- --export-source --no-render` exports a saved source without rebuilding it or rendering a preview. The standard command still renders. Run the real generator regression with `blender --background --python-exit-code 1 --python models/mall-floor-direction-sign/test_degenerate_cleanup.py`. Saved-source edit verification uses `test_source_edit.py -- <new-output-directory>`, then `node models/mall-floor-direction-sign/verify_source_edit.mjs <same-output-directory>`. It compares the edited Dining → Gourmet label against a real unchanged control from the same toolchain; the other five groups must remain hash-identical.
+
+Saved source staging uses `scripts/repair-static-blender-source.py --id mall-floor-direction-sign --generator models/mall-floor-direction-sign/generate.py --input <source.blend> --expected-sha256 <sha256> --output <distinct-directory>`. The shared driver validates both Object-root and collection-root contracts and preserves authoring data, memberships and scene state.
