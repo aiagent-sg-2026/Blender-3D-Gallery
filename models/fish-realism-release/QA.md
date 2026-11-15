@@ -35,3 +35,11 @@ GitHub Pages run [43698676117](https://github.com/yapweijun1996/Blender-3D-Galle
 ## Batch 04: Crimson snapper and two threadfin variants
 
 All twelve incremental Chromium/WebKit desktop/mobile scenarios pass, including playback preference updates and final capture/disposal error checks. Full catalog build, all fifteen GLB/source/motion bindings and 79 protected files pass. The previous twelve delivery binary hashes remain unchanged. Each threadfin source and reimported GLB has eight independently moving sensory-ray meshes, four per flank. The common-name overlap is explicit in the viewer metadata rather than presented as two certified distinct species. Delivery sizes are 4.08, 3.97 and 3.97 MiB. Initial-six live receipts and screenshots are included with this batch.
+
+## Fin-contact follow-up 01 and ribbonfish
+
+A geometric audit found the prior fixed pelvic-root coordinates outside the curved body despite correct bone weights. Red snapper, grouper and golden pomfret now use embedded ventrolateral root curves; ventral detail renders were inspected. Other mesh-motion measurements remain within 0.00001 of the prior source receipt. Source, reimported draft and actual delivery geometry pass contact checks at five phases. All 16 incremental Chromium/WebKit desktop/mobile scenarios pass. The other twelve release binaries, including the three owner-accepted fish, are unchanged. Seven other affected upgrades are explicitly marked for the same revision.
+
+Ribbonfish is a distinct scaleless reconstruction with a welded open-jaw/body shell, small fang geometry, a tapered body tail, and independent dorsal-wave controls. Three actual reimported dorsal probes show different moving phases. Its modeled anatomy avoids a separate caudal/pelvic fin or broad anal membrane. Dedicated source, GLB, browser, dorsal-detail and head-detail evidence is included.
+
+Earlier live receipts prove their recorded deployment/artifact versions and playback scope; they do not retroactively establish the later geometric contact criterion. A fresh deployment and hash-bound live check are still required for the corrected delivery files.

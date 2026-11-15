@@ -4,6 +4,8 @@ import numpy as np
 from pathlib import Path
 from mathutils import Vector
 HERE=Path(__file__).resolve().parent;ROOT_REPO=HERE.parents[1]
+sys.path.insert(0,str(HERE))
+from fin_attachment import pelvic_base
 spec=importlib.util.spec_from_file_location('review_utils',HERE.parent/'fish-realism-review'/'revision-02'/'create_review.py');R=importlib.util.module_from_spec(spec);spec.loader.exec_module(R);B=R.B
 PI=math.pi
 slug=sys.argv[sys.argv.index('--')+1];C=json.loads((HERE/'profiles.json').read_text())[slug];OUT=HERE/slug;OUT.mkdir(exist_ok=True);TEX=OUT/'textures';TEX.mkdir(exist_ok=True)
@@ -70,6 +72,9 @@ def skin_maps():
   for k in range(17):
    sx=.38+k*.047;dx=(xs-sx)/.022;dz=(world_z-.003)/.025;scute=np.exp(-((dx+.28*np.abs(dz))/.15)**2)*(1-R.smoothstep(.65,1.05,np.abs(dz)))*flank_mask
    height+=scute*.00035;color+=scute[...,None]*.018
+ if C.get('markings') in ['sardine','anchovy']:
+  anchovy=C['markings']=='anchovy';level=.025 if anchovy else .105;stripe=np.exp(-((world_z-level)/(.042 if anchovy else .018))**2)*R.smoothstep(-1.10,-.89,xs)*(1-R.smoothstep(1.12,1.25,xs))*flank_mask;strength=.76 if anchovy else .19
+  target=np.array([.86,.89,.88]) if anchovy else np.array([.66,.62,.35]);color=color*(1-stripe[...,None]*strength)+target*stripe[...,None]*strength;rough-=stripe*(.10 if anchovy else .025)
  endx,endz=C['mouth_end'];startz=C.get('mouth_start_z',-.10 if slug=='golden-pomfret' else -.16 if slug=='grouper' else -.145)
  target=startz+(endz-startz)*np.clip((xs+1.65)/(endx+1.65),0,1)
  mouth=np.exp(-((world_z-target)/.0025)**2)*R.smoothstep(-1.66,-1.61,xs)*(1-R.smoothstep(endx-.03,endx+.02,xs))*flank_mask
@@ -157,7 +162,7 @@ def fin_height(u,anal=False):
 
 def fins(mat):
  caudal_mat=fin_mat(True) if 'tail_color' in C else mat
- R.fan('Caudal_Membrane',lambda u:(1.18,0,(u-.5)*.15),lambda u:(2.03-C['tail_fork']*(1-abs(2*u-1)**C.get('tail_power',2)),0,C['tail_height']*(2*u-1)*(1+C.get('tail_lower_extra',0) if u<.5 else 1)),caudal_mat,n=120,m=32,flutter=.020,role='tail')
+ R.fan('Caudal_Membrane',lambda u:(1.18,0,(u-.5)*.15),lambda u:(C.get('tail_end',2.03)-C['tail_fork']*(1-abs(2*u-1)**C.get('tail_power',2)),0,C['tail_height']*(2*u-1)*(1+C.get('tail_lower_extra',0) if u<.5 else 1)),caudal_mat,n=120,m=32,flutter=.020,role='tail')
  start,split,end=C['dorsal_start'],C['dorsal_split'],C['dorsal_end'];spines=C.get('dorsal_spines',6 if slug=='golden-pomfret' else 11)
  def edge(u):
   t=u*(spines-1);i=min(spines-2,int(t));f=t-i;xx=start+(split-start)*u;peak=(.01+C['spine_height']*(1-u)**.85) if C.get('spine_taper') else C['spine_height']*(.68+.32*math.sin(u*PI));return(xx,0,profile(xx)[0]+max(.002,peak-min(.035,.45*C['spine_height'])*math.sin(PI*f)))
@@ -184,7 +189,9 @@ def fins(mat):
  for side in [-1,1]:
   gx=C['gill_x'];rootx=gx+.10;h,l,w=profile(rootx);root_z=C.get('pectoral_root_z',-.05)
   R.fan('Pectoral_'+str(side),lambda u:(rootx,flank(rootx,root_z+(u-.5)*.07,side,.001) if C.get('pectoral_surface_anchor') else side*w*.92,root_z+(u-.5)*.07),lambda u:(rootx+C.get('pectoral_length',.46)+.05*math.sin(PI*u),side*(w+.13*math.sin(PI*u)),root_z-C.get('pectoral_droop',.09)+(u-.5)*C.get('pectoral_height',.24)),mat,n=82,m=24,flutter=.018,role='pectoral',phase=side)
-  if C.get('pelvic',True):R.fan('Pelvic_'+str(side),lambda u:(-.44,side*.12,profile(-.44)[1]),lambda u:(-.21+.27*u,side*(.13+.07*math.sin(PI*u)),profile(-.44)[1]-C.get('pelvic_length',.19)*math.sin(PI*u)),mat,n=66,m=20,flutter=.012,role='anal',phase=side*.4)
+  if C.get('pelvic',True):
+   pelvic=R.fan('Pelvic_'+str(side),lambda u:pelvic_base(profile,side,u,C.get('pelvic_root_x',-.44)),lambda u:(C.get('pelvic_start_x',-.21)+(C.get('pelvic_end_x',.06)-C.get('pelvic_start_x',-.21))*u,side*(.13+.07*math.sin(PI*u)),profile(C.get('pelvic_root_x',-.44))[1]-C.get('pelvic_length',.19)*math.sin(PI*u)),mat,n=66,m=20,flutter=.012,role='anal',phase=side*.4)
+   pelvic['pelvic_surface_anchor']='Ventrolateral body surface with a small embedded root curve'
 
 bpy.ops.wm.read_factory_settings(use_empty=True);B.ROOT=bpy.data.objects.new('ASSET_PhotoInformed_'+slug,None);bpy.context.scene.collection.objects.link(B.ROOT);B.SLUG=slug
 print('BUILD_MAPS',slug,flush=True);skin=pbr('Skin_IndividualScales',skin_maps(),C.get('metallic',.055 if C['pattern']=='fine_scales' else .025));fm=fin_mat();body(skin);details();fins(fm)

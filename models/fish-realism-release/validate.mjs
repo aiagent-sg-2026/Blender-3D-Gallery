@@ -11,6 +11,7 @@ for(const [slug,item] of Object.entries(manifest.models)){
  const bytes=await fs.readFile(`${root}/${slug}/model.glb`);
  assert.equal(hash(bytes),item.glb_sha256);assert.equal(hash(await fs.readFile(item.source)),item.source_sha256);
  assert.equal(motion.find(r=>r.slug===slug)?.sha256,item.glb_sha256);
+ if(item.surface_contact_qa)assert.equal(motion.find(r=>r.slug===slug)?.surface_contact?.length,5,'Delivery fin contact at five phases required');
  const report=await validator.validateBytes(new Uint8Array(bytes),{uri:`${slug}/model.glb`});
  assert.equal(report.issues.numErrors,0);assert.equal(report.issues.numWarnings,0);
  results.push({slug,sha256:item.glb_sha256,bytes:bytes.length,issues:report.issues});

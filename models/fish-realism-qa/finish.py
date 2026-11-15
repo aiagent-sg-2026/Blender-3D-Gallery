@@ -22,24 +22,37 @@ def observe(label):
    assert indices
    for i in indices:
     for group in o.data.vertices[i].groups:
-     if o.vertex_groups[group.group].name in ['Dorsal','Anal','Pectoral_L','Pectoral_R']:assert group.weight<1e-6,(o.name,i,group.weight)
+     if o.vertex_groups[group.group].name in ['Dorsal','Anal','Pectoral_L','Pectoral_R'] or o.vertex_groups[group.group].name.startswith('DorsalWave_'):assert group.weight<1e-6,(o.name,i,group.weight)
    anchors+=1
- frames=[1,1+SPAN//4,1+SPAN//2,1+SPAN*3//4,END_FRAME];poses=[];roles={}
+ frames=[1,1+SPAN//4,1+SPAN//2,1+SPAN*3//4,END_FRAME];poses=[];roles={};contacts=[]
+ from fin_attachment import check_surface_contact
  for f in frames:
-  s.frame_set(f);dg=bpy.context.evaluated_depsgraph_get();frame={}
+  s.frame_set(f);contacts.append({'frame':f,'fins':check_surface_contact(s)});dg=bpy.context.evaluated_depsgraph_get();frame={}
   for o in meshes:
    ev=o.evaluated_get(dg);p=[ev.matrix_world@v.co for v in ev.data.vertices];assert p and all(math.isfinite(c) for v in p for c in v),(label,o.name,f);frame[o.name]=p
   poses.append(frame)
  for name in poses[0]:
   movement=max((a-b).length for a,b in zip(poses[0][name],poses[1][name]));endpoint=max((a-b).length for a,b in zip(poses[0][name],poses[-1][name]));assert endpoint<.0001,(label,name,endpoint);roles[name]={'motion':movement,'loop_error':endpoint}
- for prefix in ['Caudal_','Dorsal_','Anal_','Pectoral_']:
+ for prefix in (['Dorsal_','Pectoral_'] if slug=='ribbonfish' else ['Caudal_','Dorsal_','Anal_','Pectoral_']):
   found=[v['motion'] for k,v in roles.items() if k.startswith(prefix)];assert found and max(found)>.001,(label,prefix,found)
+ ribbon_wave=None
+ if slug=='ribbonfish':
+  assert not any(o.name.startswith(('Caudal_','Pelvic_','Anal_')) for o in meshes),'Hairtail has no caudal/pelvic fins or visible broad anal fin'
+  dorsal=next(o for o in meshes if o.name.startswith('Dorsal_ContinuousWave'))
+  span=[0.0]*len(dorsal.data.vertices)
+  for loop in dorsal.data.loops:span[loop.vertex_index]=dorsal.data.uv_layers.active.data[loop.index].uv.y
+  tips=[v.index for v in dorsal.data.vertices if span[v.index]>.98];samples=[]
+  for x in [-.9,.2,1.3]:
+   index=min(tips,key=lambda i:abs((dorsal.matrix_world@dorsal.data.vertices[i].co).x-x));ys=[pose[dorsal.name][index].y for pose in poses];assert max(ys)-min(ys)>.005,(label,'Dorsal wave is static',x,ys);samples.append({'x':x,'y_samples':ys,'range':max(ys)-min(ys)})
+  assert max(abs(a-b) for a,b in zip(samples[0]['y_samples'],samples[1]['y_samples']))>.005,'Dorsal probes must have distinct wave phases'
+  body=next(o for o in meshes if o.name.startswith('Ribbon_ContinuousBody'));indices=[v.index for v in body.data.vertices if (body.matrix_world@v.co).x>1.80];tail_motion=max((poses[0][body.name][i]-poses[1][body.name][i]).length for i in indices);assert tail_motion>.005
+  ribbon_wave={'dorsal_probes':samples,'tapered_tail_motion':tail_motion,'separate_caudal_fin':False}
  if slug in ['threadfin','fourfinger-threadfin']:
   filaments=[v for name,v in roles.items() if name.startswith('Pectoral_Filament_')]
   assert len(filaments)==8,(label,'Four sensory rays per flank required',len(filaments))
   assert all(v['motion']>.001 for v in filaments),(label,'Sensory rays must move with their fins')
  assert any(o.type=='ARMATURE' for o in s.objects)
- return {'fin_roots_checked':anchors,'meshes':len(meshes),'vertices':sum(len(o.data.vertices) for o in meshes),'motion_by_mesh':roles,'frames':frames,'packed_images':all(i.packed_file for i in bpy.data.images if i.source=='FILE')}
+ return {'surface_contact':contacts,'ribbon_wave':ribbon_wave,'fin_roots_checked':anchors,'meshes':len(meshes),'vertices':sum(len(o.data.vertices) for o in meshes),'motion_by_mesh':roles,'frames':frames,'packed_images':all(i.packed_file for i in bpy.data.images if i.source=='FILE')}
 source=observe('source');s.frame_set(13)
 # Flatten only temporary skinned mesh copies; keep editable source parenting intact.
 root=next(o for o in s.objects if o.name.startswith('ASSET_PhotoInformed_'));selected=[root]+list(root.children_recursive);saved=[]

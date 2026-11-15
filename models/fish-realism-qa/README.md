@@ -25,6 +25,8 @@ Sources and GLBs contain packed textures. Optional PNG authoring caches need not
 
 `complete_item.py` seals a visually inspected source only when its current artifact hash, zero-error/zero-warning glTF validation, real animation tests, desktop/mobile browser receipts and the 79-file preservation guard agree. Render previews and head details are reviewed separately from these deterministic checks.
 
-## Live promotion
+## Posed fin-surface contact
 
-On 2026-11-15 the owner additionally authorized replacing the corresponding live catalog entries and pushing each passing batch to main. `models/fish-realism-release/releases.json` owns the promoted set. Draft browser receipts remain historical isolated checks; release browser receipts test actual catalog paths and response hashes without substitution. Only a verified deployment and live receipt establish online availability.
+A later oblique/rest-geometry audit found that the earlier fixed paired-pelvic root coordinate lay outside the curved body even though its bone weights followed the spine. `fin_attachment.py` now owns a small embedded ventrolateral root curve. Verification measures signed distance from actual evaluated fin roots to the actual posed body surface at five phases, in both source and reimported GLB. Tubular sensory-ray bases must straddle the skin; a caudal leading edge must intersect the peduncle. This complements weight continuity rather than treating correct weights as sufficient contact evidence. Earlier playback receipts remain historical and do not establish this later criterion.
+
+The routed architecture instruction module was absent in this checkout; scoped repository contracts and observable source/export/browser evidence were used.

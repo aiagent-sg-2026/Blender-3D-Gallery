@@ -17,6 +17,7 @@ for slug in args.slugs:
   assert Path(name).name==name and sha(source/name)==expected,('Artifact hash mismatch',slug,name)
  assert qa['reviewed_source_sha256']==sha(source/(slug+'.blend'))==motion['source_sha256']
  assert motion['glb_sha256']==sha(source/'model.glb')
+ for label in ['source','export']:assert len(motion[label].get('surface_contact',[]))==5,('Posed fin contact QA required',slug,label)
  assert validation['issues']['numErrors']==validation['issues']['numWarnings']==0
  assert [r['width'] for r in browser['results']]==[1440,390]
  assert all(r['loaded_draft_sha256']==motion['glb_sha256'] and r['visible_swim_change'] and r['paused_stable'] and r['viewer_disposed'] and r['no_page_errors'] for r in browser['results'])
@@ -33,7 +34,7 @@ for slug,source,artifact,profile in prepared:
  queue['items']=[approved[slug] if item['slug']==slug else item for item in queue['items']]
  source_path=f'models/fish-realism-qa/{slug}/{slug}.blend';notes=f"Photo-informed original artwork: {profile['visual_species']}. Animated tail and fins; not a scanned specimen or taxonomic identification model."
  if profile.get('alias_note'):notes+=' '+profile['alias_note']
- item={'source':source_path,'preview':f'models/fish-realism-qa/{slug}/preview.png','acceptance':'agent_qa_pass','license':'Original project geometry and textures; reuse in the owner’s projects authorized. Public redistribution terms not specified.','description':profile['fish_id']+'. Photo-informed Blender fish with looping swimming animation.'};manifest['models'][slug]=item
+ item={'source':source_path,'preview':f'models/fish-realism-qa/{slug}/preview.png','acceptance':'agent_qa_pass','surface_contact_qa':'posed_source_glb_and_delivery_v1','license':'Original project geometry and textures; reuse in the owner’s projects authorized. Public redistribution terms not specified.','description':profile['fish_id']+'. Photo-informed Blender fish with looping swimming animation.'};manifest['models'][slug]=item
  out=HERE/slug;out.mkdir(exist_ok=True)
  display={'previewRotationY':0,'previewCameraDirection':profile.get('preview_camera_direction',[.12,.28,1]),'studioEnvironment':True,'environmentIntensity':.3,'textureAnisotropy':8,'previewLighting':{'hemisphereIntensity':.8,'directionalIntensity':1.4}}
  metadata={'id':'fish-'+slug,'source':source_path,'visual_species':profile['visual_species'],'accuracy_notes':notes,'display':display,'attribution':[{'credit':'Original Blender geometry and textures for this gallery. Reference photos guide appearance and are not embedded.'}]}
