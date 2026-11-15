@@ -121,6 +121,7 @@
         <p class="collection-description">
           Individually modeled objects, made to explore and download.
         </p>
+        <nav id="category-navigation" class="category-navigation" aria-label="Model categories"></nav>
         <form
           id="model-filters"
           class="browse-controls"
@@ -146,8 +147,16 @@
             >Collection<select id="model-collection" name="collection">
               <option value="">All collections</option>
             </select></label
+          ><label for="model-feature"
+            >Feature<select id="model-feature" name="feature">
+              <option value="">All features</option>
+              <option value="animated">Animated</option>
+              <option value="interactive">Interactive</option>
+            </select></label
           ><button type="reset" class="outline-button">Clear filters</button>
         </form>
+        <h3 id="results-title" class="results-title">All models</h3>
+        <h3 id="search-results-title" class="results-title" hidden>Explore models</h3>
         <p
           id="model-count"
           class="result-count"

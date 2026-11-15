@@ -55,7 +55,6 @@ function refreshDemoOfflineStatus() {
 
 const hasInteractiveControls = (asset) =>
   asset.id === "interactive-shopping-cart" || asset.id === "gjh-mall-visitor-v2" || asset.id === "gjh-visitor-v3" || asset.collectionId === "singapore-fish";
-const featuredIds = ["demo-food-tin", "proton-saga-1985", "mall-corridor", "interactive-shopping-cart"];
 const isSearchMode = () => {
   const params = new URL(location.href).searchParams;
   return params.get("page") === "models" || ["q", "theme", "category", "collection", "feature"].some((key) => params.has(key));
@@ -122,10 +121,28 @@ function renderModels() {
   $("#model-count").textContent = searchMode
     ? `${filtered.length} ${filtered.length === 1 ? "result" : "results"} / ${assets.length} models in library`
     : `${assets.length} models in the library`;
-  const grid = element("div", "asset-grid");
-  const shown = searchMode ? filtered : featuredIds.map((id) => assetById.get(id)).filter(Boolean);
-  for (const asset of shown) grid.append(createCard(asset));
-  $("#catalog").replaceChildren(shown.length ? grid : emptyState("No models found.", "Try another keyword or clear your filters."));
+  const fragment = document.createDocumentFragment();
+  const groups = new Map();
+  for (const asset of filtered) {
+    if (!groups.has(asset.browseCategory)) groups.set(asset.browseCategory, []);
+    groups.get(asset.browseCategory).push(asset);
+  }
+  for (const [category, items] of [...groups].sort(([a], [b]) => a.localeCompare(b))) {
+    const section = element("section", "asset-collection");
+    section.setAttribute("aria-label", category);
+    const heading = element("div", "collection-title");
+    heading.append(
+      element("h3", "", category),
+      element("p", "", `${items.length} ${items.length === 1 ? "model" : "models"}`),
+    );
+    const grid = element("div", "asset-grid");
+    for (const asset of items) grid.append(createCard(asset));
+    section.append(heading, grid);
+    fragment.append(section);
+  }
+  if (!filtered.length)
+    fragment.append(emptyState("No models found.", "Try another keyword or clear your filters."));
+  $("#catalog").replaceChildren(fragment);
 }
 const categoryLinks = [
   ["All models", "", ""], ["Products", "theme", "Product Packaging"],
@@ -142,7 +159,7 @@ for (const [label, key, value] of categoryLinks) {
   $("#category-navigation").append(link);
 }
 const heroAsset = assetById.get("proton-saga-1985");
-if (heroAsset) $("#hero-poster").src = heroAsset.thumbnail;
+if (heroAsset && $("#hero-poster")) $("#hero-poster").src = heroAsset.thumbnail;
 function renderDemos() {
   const filtered = demos.filter((d) =>
     matches(d, $("#demo-search").value, $("#demo-category").value),
