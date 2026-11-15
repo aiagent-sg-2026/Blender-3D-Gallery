@@ -10,7 +10,7 @@ Active campaign: repair and publish one asset at a time. A fresh raw GLB scan of
 | mall-directory-kiosk | 394 | repaired |
 | mall-advertising-lightbox | 200 | repaired |
 | mall-waste-sorting-station | 199 | repaired |
-| mall-service-desk | 172 | pending |
+| mall-service-desk | 172 | repaired |
 | mall-display-shelf | 164 | pending |
 | mall-floor-direction-sign | 139 | pending |
 | mall-event-booth | 118 | pending |

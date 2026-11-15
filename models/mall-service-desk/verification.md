@@ -36,3 +36,7 @@ Post-reconciliation: 97 unit tests passed; production build passed and validated
 The latest service-desk matrix passed four of six cases; tablet/mobile failed the unchanged no-network-errors assertion with net::ERR_ABORTED. Essentials passed seven of fifteen, with eight equivalent network assertion failures. All three desk and all twelve essentials viewer flows completed their consumed-GLB hash and interaction checks. The existing mascot suite passed desktop and tablet, then aborted on mobile with Playwright Network.getResponseBody: No data found for resource with given identifier. This is not a green browser result, nor evidence the earlier intermittent failure was fixed. No retry or test weakening was performed.
 
 Evidence: reports/integration-*.log and integration-desk-results.json / integration-mall-results.json. These results supersede the earlier passing service-desk run as the current integration status. The unrelated existing Game UX failure was not rerun or modified. No PR-to-main merge or deployment was performed by this worker.
+
+## 2026-11-15 topology repair
+
+The original creation/integration results above are historical. Current topology, provenance, native and browser evidence is in [the repair report](../../docs/model-qa/degenerate-repairs/mall-service-desk/README.md). The current source retains 37 editable parts and evaluates without zero-area triangles. The shipped GLB contains 7,832 triangles and no degenerate triangles. No physical-device or deployment result is inferred.
