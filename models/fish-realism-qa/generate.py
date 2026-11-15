@@ -79,6 +79,18 @@ def skin_maps():
    height+=scute*.00035
    if C['markings']=='trevally':color*=1-scute[...,None]*.11
    else:color+=scute[...,None]*.018
+ if C.get('markings')=='asian_arowana':
+  face=(1-R.smoothstep(-1.02,-.86,xs))*R.smoothstep(.43,.65,R.noise(u,v,48,33,1071))*.28;color=color*(1-face[...,None])+np.array([.64,.54,.27])*face[...,None]
+ if C.get('markings')=='moon_wrasse':
+  pink=np.zeros_like(xs);edge=(R.noise(u,v,150,110,1060)-.5)*.004
+  for k,level in enumerate([-.23,-.08,.09,.25]):
+   center=level+.06*np.sin((xs+1.65)*[7,10,5,9][k]+k*1.7)+.025*np.sin((xs+1.65)*17+k);pink=np.maximum(pink,1-R.smoothstep(.023,.033,np.abs(world_z-center+edge)))
+  for cx,cz in [(-1.40,-.08),(-1.10,.18)]:pink=np.maximum(pink,(1-R.smoothstep(.014,.025,np.abs(xs-cx-.06*np.sin(world_z*11))))*(1-R.smoothstep(.065,.095,np.abs(world_z-cz))))
+  pink*=1-R.smoothstep(-1.00,-.81,xs);color=color*(1-pink[...,None]*.86)+np.array([.76,.30,.50])*pink[...,None]*.86
+ if C.get('markings')=='blue_tang':
+  high=np.interp(xs,C['profile_x'],C['top'])-.055;low=.10+.21*(1-R.smoothstep(-1.25,-.80,xs));large=R.smoothstep(-1.15,-.95,xs)*R.smoothstep(low-.02,low+.015,world_z)*(1-R.smoothstep(high-.012,high+.01,world_z));d=np.sqrt(((xs+.04)/.48)**2+((world_z-.28)/.145)**2)+.020*np.sin(xs*25+world_z*13)+.010*np.sin(xs*60-world_z*31);hole=1-R.smoothstep(.92,1.03,d);large*=1-hole
+  connector=np.exp(-((world_z-(.28+.26*(xs+1.25)))/.050)**4)*R.smoothstep(-1.34,-1.22,xs)*(1-R.smoothstep(-.94,-.82,xs));bound=-.025-.16*R.smoothstep(.45,1.15,xs);rear=R.smoothstep(.45,.90,xs)*R.smoothstep(bound,bound+.025,world_z);patch=np.maximum(np.maximum(large,connector),rear);color=color*(1-patch[...,None]*.98)+np.array([.012,.018,.026])*patch[...,None]*.98
+  half=np.maximum(0,xs-.83)*.25;yellow=R.smoothstep(.83,1.05,xs)*(1-R.smoothstep(half,half+.018,np.abs(world_z)));color=color*(1-yellow[...,None])+np.array([.93,.77,.045])*yellow[...,None]
  if C.get('markings')=='emperor_angelfish':
   from angel_pattern import paint_stripes
   color=paint_stripes(color,xs,world_z,R.smoothstep,face=True)
@@ -218,6 +230,12 @@ def fin_mat(tail=False,spiny=False,region=None,mapping=None):
    color=paint_stripes(color,xs,world_z,R.smoothstep)
   else:color=paint_bands(color,xs,world_z,R.smoothstep)
   border=np.exp(-((v-.955)/.011)**2);color*=1-border[...,None]*.82
+ if C.get('markings')=='moon_wrasse' and tail:
+  rim=np.maximum(R.smoothstep(.71,.91,np.abs(2*u-1)),R.smoothstep(.87,.98,v));color=color*(1-rim[...,None]*.92)+np.array([.47,.23,.40])*rim[...,None]*.92
+ if C.get('markings')=='blue_tang':
+  if tail:color*=1-R.smoothstep(.75,.94,np.abs(2*u-1))[...,None]*.91
+  elif region is None:
+   yellow=R.smoothstep(.58,.88,v);color=color*(1-yellow[...,None])+np.array([.91,.77,.07])*yellow[...,None]
  if C.get('fin_markings')=='lionfish':
   dots=np.exp(-(np.sin(PI*(u*14+.12*np.sin(v*8)))/.28)**2-(np.sin(PI*(v*7+.15*np.sin(u*15)))/.33)**2);color=color*(1-dots[...,None]*.83);alpha=np.maximum(.40+lines*.32,dots*.9)
  if spiny and C.get('lion_radial_fins'):
@@ -338,11 +356,11 @@ def fins(mat):
  caudal_mat=fin_mat(True) if 'tail_color' in C else mat
  spiny_mat=fin_mat(spiny=True) if C.get('spiny_dorsal_dark_top') or C.get('dorsal_black_tip') or C.get('markings')=='clownfish' else mat
  R.fan('Caudal_Membrane',lambda u:(1.18,0,(u-.5)*.15),lambda u:(C.get('tail_end',2.03)-C['tail_fork']*(1-abs(2*u-1)**C.get('tail_power',2)),0,C['tail_height']*(2*u-1)*(1+C.get('tail_lower_extra',0) if u<.5 else 1)),caudal_mat,n=120,m=32,flutter=.020,role='tail')
- dorsal_mat=fin_mat(region='dorsal') if C.get('markings') in ['butterflyfish','emperor_angelfish'] else mat
- anal_mat=fin_mat(region='anal') if C.get('markings') in ['butterflyfish','emperor_angelfish'] else mat
- anal_spiny_mat=fin_mat(spiny=True,region='anal') if C.get('markings') in ['butterflyfish','emperor_angelfish'] else mat
- pelvic_mat=fin_mat(region='pelvic') if C.get('markings') in ['butterflyfish','emperor_angelfish'] else mat
- if C.get('markings') in ['butterflyfish','emperor_angelfish']:spiny_mat=fin_mat(spiny=True,region='dorsal')
+ dorsal_mat=fin_mat(region='dorsal') if (C.get('markings') in ['butterflyfish','emperor_angelfish'] or C.get('separate_fin_colors')) else mat
+ anal_mat=fin_mat(region='anal') if (C.get('markings') in ['butterflyfish','emperor_angelfish'] or C.get('separate_fin_colors')) else mat
+ anal_spiny_mat=fin_mat(spiny=True,region='anal') if (C.get('markings') in ['butterflyfish','emperor_angelfish'] or C.get('separate_fin_colors')) else mat
+ pelvic_mat=fin_mat(region='pelvic') if (C.get('markings') in ['butterflyfish','emperor_angelfish'] or C.get('separate_fin_colors')) else mat
+ if C.get('markings') in ['butterflyfish','emperor_angelfish'] or C.get('separate_fin_colors'):spiny_mat=fin_mat(spiny=True,region='dorsal')
  start,split,end=C['dorsal_start'],C['dorsal_split'],C['dorsal_end'];spines=C.get('dorsal_spines',6 if slug=='golden-pomfret' else 11)
  def edge(u):
   t=u*(spines-1);i=min(spines-2,int(t));f=t-i;xx=start+(split-start)*u;peak=(.01+C['spine_height']*(1-u)**.85) if C.get('spine_taper') else C['spine_height']*(.68+.32*math.sin(u*PI));peak=B.interp(C['spine_height_curve'],u) if C.get('spine_height_curve') else peak;return(xx,0,profile(xx)[0]+max(.002,peak-(C.get('spine_notch_factor',0)*peak if C.get('spine_notch_factor') else min(.035,.45*C['spine_height']))*math.sin(PI*f)))
@@ -425,6 +443,9 @@ if C.get('lion_radial_fins'):
 if C.get('peduncle_thorns'):
  from peduncle_spines import build_peduncle_spines
  build_peduncle_spines(B,C,profile,flank)
+if C.get('peduncle_scalpels'):
+ from surgeon_scalpels import build_scalpels
+ build_scalpels(B,C,profile,flank)
 print('BIND_SWIM',slug,flush=True);rig=B.add_rig('bass')
 bind_pelvic_filaments(rig)
 from fanning import retarget_fanning
