@@ -1,0 +1,1473 @@
+{
+  "id": "mall-structural-column",
+  "blender": "5.1.2",
+  "modules": {
+    "bl_ext.user_default.texel_density_checker": "2026.1.1",
+    "bl_ext.user_default.print3d_toolbox": "1.5.0"
+  },
+  "phases": {
+    "source": {
+      "status": "SCANNED",
+      "mapping": {
+        "method": "exact catalog root",
+        "root": "ASSET_MallStructuralColumn"
+      },
+      "file_version": [
+        4,
+        0,
+        36
+      ],
+      "declared_scene_scale": 1.0,
+      "source_geometry_count": 13,
+      "meshes": [
+        {
+          "name": "BASE_Plinth",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 56,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 426.66661930581586,
+            "max": 1089.9661840248086,
+            "uv_weighted_mean": 638.7874683851306,
+            "positive_uv_area": 0.3756146212235536,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "CAP_Square",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 56,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 426.66661930581586,
+            "max": 1218.6347974397825,
+            "uv_weighted_mean": 697.8891586827722,
+            "positive_uv_area": 0.37561313544824104,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "CLADDING_Back_Lower",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 56,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 318.0185199720256,
+            "max": 3353.2255866278842,
+            "uv_weighted_mean": 1510.5063990081921,
+            "positive_uv_area": 0.37524261263847314,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "CLADDING_Back_Upper",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 56,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 318.0185052645247,
+            "max": 3353.2126287335986,
+            "uv_weighted_mean": 1510.5086940023866,
+            "positive_uv_area": 0.37524261263847314,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "CLADDING_Front_Lower",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 56,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 318.0185199720256,
+            "max": 3353.1944188633342,
+            "uv_weighted_mean": 1510.5063990175158,
+            "positive_uv_area": 0.37524261263847314,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "CLADDING_Front_Upper",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 56,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 318.0185052645247,
+            "max": 3353.1858149672003,
+            "uv_weighted_mean": 1510.5086940116107,
+            "positive_uv_area": 0.37524261263847314,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "CLADDING_Left_Lower",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 56,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 331.5572182075472,
+            "max": 10627.61727540808,
+            "uv_weighted_mean": 1658.919379162052,
+            "positive_uv_area": 0.3809301849382793,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "CLADDING_Left_Upper",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 56,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 331.55720153473754,
+            "max": 10627.60347645025,
+            "uv_weighted_mean": 1658.9245612977552,
+            "positive_uv_area": 0.3809301849382793,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "CLADDING_Right_Lower",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 56,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 331.5572182075472,
+            "max": 10627.644544935192,
+            "uv_weighted_mean": 1658.9193756987274,
+            "positive_uv_area": 0.3809301849382793,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "CLADDING_Right_Upper",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 56,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 331.55720153473754,
+            "max": 10627.60347645025,
+            "uv_weighted_mean": 1658.9245432577989,
+            "positive_uv_area": 0.3809301849382793,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "CORE_SquareShaft",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 56,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 239.3464431177946,
+            "max": 865.7373971356203,
+            "uv_weighted_mean": 354.212248197178,
+            "positive_uv_area": 0.3752830767670895,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "REVEAL_Base",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 56,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 533.3333154032787,
+            "max": 3853.6394827916024,
+            "uv_weighted_mean": 1946.3649853225324,
+            "positive_uv_area": 0.3752513820387197,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "REVEAL_Cap",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 56,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 533.3333154032787,
+            "max": 3853.986664851524,
+            "uv_weighted_mean": 1946.3549425501685,
+            "positive_uv_area": 0.3752513820387197,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        }
+      ]
+    },
+    "glb": {
+      "status": "SCANNED",
+      "mapping": {
+        "method": "exact catalog root",
+        "root": "ASSET_MallStructuralColumn"
+      },
+      "file_version": [
+        5,
+        1,
+        16
+      ],
+      "declared_scene_scale": 1.0,
+      "source_geometry_count": 13,
+      "meshes": [
+        {
+          "name": "BASE_Plinth",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 216,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 216,
+            "boundary_edges": 216,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "weld_tolerance_m": 1e-07,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "216",
+              "indices_count": 216
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [],
+          "reference_1024_uv_statistics": null,
+          "modifiers_evaluated": [],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "CAP_Square",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 216,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 216,
+            "boundary_edges": 216,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "weld_tolerance_m": 1e-07,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "216",
+              "indices_count": 216
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [],
+          "reference_1024_uv_statistics": null,
+          "modifiers_evaluated": [],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "CLADDING_Back_Lower",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 216,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 216,
+            "boundary_edges": 216,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "weld_tolerance_m": 1e-07,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "216",
+              "indices_count": 216
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [],
+          "reference_1024_uv_statistics": null,
+          "modifiers_evaluated": [],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "CLADDING_Back_Upper",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 216,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 216,
+            "boundary_edges": 216,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "weld_tolerance_m": 1e-07,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "216",
+              "indices_count": 216
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [],
+          "reference_1024_uv_statistics": null,
+          "modifiers_evaluated": [],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "CLADDING_Front_Lower",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 216,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 216,
+            "boundary_edges": 216,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "weld_tolerance_m": 1e-07,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "216",
+              "indices_count": 216
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [],
+          "reference_1024_uv_statistics": null,
+          "modifiers_evaluated": [],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "CLADDING_Front_Upper",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 216,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 216,
+            "boundary_edges": 216,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "weld_tolerance_m": 1e-07,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "216",
+              "indices_count": 216
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [],
+          "reference_1024_uv_statistics": null,
+          "modifiers_evaluated": [],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "CLADDING_Left_Lower",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 216,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 216,
+            "boundary_edges": 216,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "weld_tolerance_m": 1e-07,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "216",
+              "indices_count": 216
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [],
+          "reference_1024_uv_statistics": null,
+          "modifiers_evaluated": [],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "CLADDING_Left_Upper",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 216,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 216,
+            "boundary_edges": 216,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "weld_tolerance_m": 1e-07,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "216",
+              "indices_count": 216
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [],
+          "reference_1024_uv_statistics": null,
+          "modifiers_evaluated": [],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "CLADDING_Right_Lower",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 216,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 216,
+            "boundary_edges": 216,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "weld_tolerance_m": 1e-07,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "216",
+              "indices_count": 216
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [],
+          "reference_1024_uv_statistics": null,
+          "modifiers_evaluated": [],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "CLADDING_Right_Upper",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 216,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 216,
+            "boundary_edges": 216,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "weld_tolerance_m": 1e-07,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "216",
+              "indices_count": 216
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [],
+          "reference_1024_uv_statistics": null,
+          "modifiers_evaluated": [],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "CORE_SquareShaft",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 216,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 216,
+            "boundary_edges": 216,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "weld_tolerance_m": 1e-07,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "216",
+              "indices_count": 216
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [],
+          "reference_1024_uv_statistics": null,
+          "modifiers_evaluated": [],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "REVEAL_Base",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 216,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 216,
+            "boundary_edges": 216,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "weld_tolerance_m": 1e-07,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "216",
+              "indices_count": 216
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [],
+          "reference_1024_uv_statistics": null,
+          "modifiers_evaluated": [],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "REVEAL_Cap",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 216,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 216,
+            "boundary_edges": 216,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "weld_tolerance_m": 1e-07,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "216",
+              "indices_count": 216
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [],
+          "reference_1024_uv_statistics": null,
+          "modifiers_evaluated": [],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        }
+      ]
+    }
+  },
+  "status": "SCANNED"
+}

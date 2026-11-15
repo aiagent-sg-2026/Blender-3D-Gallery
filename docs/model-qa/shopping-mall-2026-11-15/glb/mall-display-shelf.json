@@ -1,0 +1,202 @@
+{
+  "id": "mall-display-shelf",
+  "sha256": "9538cc7b954a1510397e4f1dffc47bbed6c99f7460edfb1e55ef4dc28561966d",
+  "status": "SCANNED",
+  "validation": {
+    "numErrors": 0,
+    "numWarnings": 0,
+    "numInfos": 0,
+    "numHints": 0,
+    "messages": [],
+    "truncated": false
+  },
+  "externalResources": [],
+  "metrics": {
+    "bytes": 172420,
+    "scenes": 1,
+    "defaultScene": 0,
+    "defaultSceneHasMesh": true,
+    "inspectedScene": 0,
+    "meshOccurrences": 1,
+    "primitives": 5,
+    "triangles": 5712,
+    "images": 0,
+    "materials": 5,
+    "dimensions": [
+      1.5200000405311584,
+      1.9600000381469727,
+      0.5799999535083771
+    ],
+    "bounds": {
+      "min": [
+        -0.7599999904632568,
+        0,
+        -0.29499995708465576
+      ],
+      "max": [
+        0.7600000500679016,
+        1.9600000381469727,
+        0.2849999964237213
+      ]
+    },
+    "exactZeroAreaTriangles": 164,
+    "nearZeroAreaTriangles": 164
+  },
+  "primitives": [
+    {
+      "node": "mall-display-shelf",
+      "nodeIndex": 0,
+      "meshIndex": 0,
+      "primitive": 0,
+      "material": 0,
+      "vertices": 594,
+      "triangles": 752,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "mall-display-shelf",
+      "nodeIndex": 0,
+      "meshIndex": 0,
+      "primitive": 1,
+      "material": 1,
+      "vertices": 2184,
+      "triangles": 2444,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 32,
+      "nearZeroAreaTriangles": 32,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "mall-display-shelf",
+      "nodeIndex": 0,
+      "meshIndex": 0,
+      "primitive": 2,
+      "material": 2,
+      "vertices": 763,
+      "triangles": 940,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "mall-display-shelf",
+      "nodeIndex": 0,
+      "meshIndex": 0,
+      "primitive": 3,
+      "material": 3,
+      "vertices": 1564,
+      "triangles": 1152,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 128,
+      "nearZeroAreaTriangles": 128,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "mall-display-shelf",
+      "nodeIndex": 0,
+      "meshIndex": 0,
+      "primitive": 4,
+      "material": 4,
+      "vertices": 464,
+      "triangles": 424,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 4,
+      "nearZeroAreaTriangles": 4,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    }
+  ],
+  "images": [],
+  "materials": [
+    {
+      "name": "Charcoal recess",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.01032982300966978,
+          0.01599629409611225,
+          0.015208514407277107,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.699999988079071
+      }
+    },
+    {
+      "name": "Deep jade powder coat",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.017641954123973846,
+          0.07227185368537903,
+          0.05448027700185776,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.47999998927116394
+      }
+    },
+    {
+      "name": "Warm walnut",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.15896083414554596,
+          0.07036009430885315,
+          0.03071344457566738,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.46000000834465027
+      }
+    },
+    {
+      "name": "Brushed champagne brass",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.46207699179649353,
+          0.3277781009674072,
+          0.12213877588510513,
+          1
+        ],
+        "metallicFactor": 0.699999988079071,
+        "roughnessFactor": 0.3199999928474426
+      }
+    },
+    {
+      "name": "Warm ivory",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.8069522380828857,
+          0.7454041838645935,
+          0.6038273572921753,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.6499999761581421
+      }
+    }
+  ],
+  "extensionsRequired": [],
+  "interpretation": "Bind/default-pose structural measurements; no rendered appearance or browser/device performance acceptance."
+}

@@ -1,0 +1,300 @@
+{
+  "kbid": "blender",
+  "kb_id": "297a8d22-c6cd-4487-a8c3-cab43e583687",
+  "edition": "1.1.0",
+  "reviewed_on": "2026-11-15",
+  "instructions": "Read fresh metadata before each PATCH and preserve unrelated fields and user visibility. Do not replay an already confirmed ingest. Verify stored bodies and retrieval; no Git release is performed here.",
+  "updates": [
+    {
+      "kb_id": "297a8d22-c6cd-4487-a8c3-cab43e583687",
+      "item_id": "9b434d45-3a45-415d-8297-2c37649721df",
+      "kbcid": "blender.overview",
+      "content": "The canonical cross-project knowledge domain is kbid `blender`. It owns reusable bpy automation, geometry, architecture interfaces, UV/PBR, rigging, extensions, glTF export and verification knowledge. Project dimensions, brand content, tickets, release status and device-specific budgets belong to their project records. Registry Skills remain in their own registry; candidate Skill names are not installed capabilities. Distinguish official-source statements, version-specific experiments, engineering recommendations and untested behavior. A platform listing establishes a declared compatibility range, not a successful install or background workflow. A valid GLB establishes format conformance, not visual quality, interaction, rights or performance. Record source URLs, review date, tool versions and artifact hashes; recheck changing version information before use.\n\nReviewed 2026-11-15; edition 1.1.0. Full chapter: docs/blender/README.md.\nPrimary references:\nhttps://docs.blender.org/api/current/bpy.ops.html",
+      "source": "workspace-document:docs/blender/README.md#sha256=87db32ed08ae9d1e524ff15fd8f285d2d119cd3af515a6e69f5dfdaac6fd50f0",
+      "research": {
+        "edition": "1.1.0",
+        "reviewed_on": "2026-11-15",
+        "timezone": "Asia/Singapore",
+        "scope": "cross-project Blender knowledge; project dimensions and status excluded",
+        "chapter": "docs/blender/README.md",
+        "chapter_sha256": "87db32ed08ae9d1e524ff15fd8f285d2d119cd3af515a6e69f5dfdaac6fd50f0",
+        "content_sha256": "88ce993d442707a8cd1a091c1e74b1c5b7798ef6de2ca9a8395847491f1fe0f6",
+        "official_sources": [
+          "https://docs.blender.org/api/current/bpy.ops.html"
+        ],
+        "evidence": "source-backed reference and engineering guidance; bounded native experiments identified separately",
+        "native_calibration_version": "5.1.2",
+        "calibration_receipt": "docs/blender/verification/probe-results.json",
+        "source_register": "docs/blender/sources.md",
+        "limits": "No extension installation/operation, humanoid deformation, textured browser appearance, physical-phone or FPS acceptance established by this research."
+      }
+    },
+    {
+      "kb_id": "297a8d22-c6cd-4487-a8c3-cab43e583687",
+      "item_id": "a829ec15-cef5-4a99-80ef-5f319b33c9fa",
+      "kbcid": "blender.python",
+      "content": "Use bpy's data API for explicit object/mesh ownership and operators for supported tool actions. An operator depends on mode, active object, selection and sometimes a real editor/region; check `poll()` and the returned status. `Context.temp_override` supplies valid existing context, not a synthetic viewport in background mode. `Object.copy()` shares mesh data until `copy.data = original.data.copy()`; material copies need their own ownership decision. Read world geometry through updated matrices/evaluated data. In Edit Mode use BMesh and flush it. Do not run concurrent bpy access from worker threads; use an external process and bounded main-thread dispatch. For unattended jobs use a separate Blender process, explicit inputs/outputs, `--disable-autoexec` and `--python-exit-code`. These flags are not an OS sandbox. Inspect the installed RNA/API instead of assuming old examples or unversioned MCP documentation match the running version.\n\nReviewed 2026-11-15; edition 1.1.0. Full chapter: docs/blender/python-mcp.md.\nPrimary references:\nhttps://docs.blender.org/api/current/bpy.ops.html\nhttps://docs.blender.org/manual/en/5.1/advanced/command_line/arguments.html",
+      "source": "workspace-document:docs/blender/python-mcp.md#sha256=4b4f36f34a183749ec80c9c374ff7d6384c5ede8a137a26a0f557014f9a20622",
+      "research": {
+        "edition": "1.1.0",
+        "reviewed_on": "2026-11-15",
+        "timezone": "Asia/Singapore",
+        "scope": "cross-project Blender knowledge; project dimensions and status excluded",
+        "chapter": "docs/blender/python-mcp.md",
+        "chapter_sha256": "4b4f36f34a183749ec80c9c374ff7d6384c5ede8a137a26a0f557014f9a20622",
+        "content_sha256": "7ab1cdb66727aab46a135f496a7e00990885a944ea9459776bb440a11b789c44",
+        "official_sources": [
+          "https://docs.blender.org/api/current/bpy.ops.html",
+          "https://docs.blender.org/manual/en/5.1/advanced/command_line/arguments.html"
+        ],
+        "evidence": "source-backed reference and engineering guidance; bounded native experiments identified separately",
+        "native_calibration_version": "5.1.2",
+        "calibration_receipt": "docs/blender/verification/probe-results.json",
+        "source_register": "docs/blender/sources.md",
+        "limits": "No extension installation/operation, humanoid deformation, textured browser appearance, physical-phone or FPS acceptance established by this research."
+      }
+    },
+    {
+      "kb_id": "297a8d22-c6cd-4487-a8c3-cab43e583687",
+      "item_id": "d057765b-4b9f-4679-a1e0-7d7bcfec78f3",
+      "kbcid": "blender.architecture",
+      "content": "Define a metre-based geometry contract with dimensions, local origin, facing, registration planes, repeat pitch and tolerances. A module's outer width, connector pitch and usable opening can differ. Align connectors and retain each shared post once; close a measured interface with an explicit adapter rather than hiding a mismatch by scaling. Inspect actual exported world geometry, including handles and moving leaves, for clearances. Use manifoldness requirements appropriate to the asset role. Keep source modifiers editable and inspect evaluated/exported topology; solver names and capabilities are version-specific. Test door motion, floor coverage, camera space and runtime colliders separately. Discrete sweep samples, component bounds and ray probes provide bounded evidence, not continuous collision or construction certification. Keep scene-specific dimensions and navigation budgets in project records.\n\nReviewed 2026-11-15; edition 1.1.0. Full chapter: docs/blender/architecture.md.\nPrimary references:\nhttps://docs.blender.org/manual/en/5.1/modeling/modifiers/generate/booleans.html",
+      "source": "workspace-document:docs/blender/architecture.md#sha256=9fd874c7f4b175ff1acc4b8cc0b2d7eb6956aafe1dfac57c1db61fa581436c7b",
+      "research": {
+        "edition": "1.1.0",
+        "reviewed_on": "2026-11-15",
+        "timezone": "Asia/Singapore",
+        "scope": "cross-project Blender knowledge; project dimensions and status excluded",
+        "chapter": "docs/blender/architecture.md",
+        "chapter_sha256": "9fd874c7f4b175ff1acc4b8cc0b2d7eb6956aafe1dfac57c1db61fa581436c7b",
+        "content_sha256": "93b056f88432b80fd9fde03984d79a74ba0433e67de335fe1e331c5e80d2e0ae",
+        "official_sources": [
+          "https://docs.blender.org/manual/en/5.1/modeling/modifiers/generate/booleans.html"
+        ],
+        "evidence": "source-backed reference and engineering guidance; bounded native experiments identified separately",
+        "native_calibration_version": "5.1.2",
+        "calibration_receipt": "docs/blender/verification/probe-results.json",
+        "source_register": "docs/blender/sources.md",
+        "limits": "No extension installation/operation, humanoid deformation, textured browser appearance, physical-phone or FPS acceptance established by this research."
+      }
+    },
+    {
+      "kb_id": "297a8d22-c6cd-4487-a8c3-cab43e583687",
+      "item_id": "dfa13110-b887-48f1-9f37-7a296569e6a9",
+      "kbcid": "blender.materials",
+      "content": "Separate color textures from numerical data. Base-color/emissive textures use their intended color encoding; metallic, roughness and normal data require non-color interpretation. The glTF metallic-roughness convention places roughness in G and metallic in B. Use exporter-recognized Principled BSDF connections, then inspect the emitted material; an arbitrary Blender node graph is not a portable shader. Tangent normal maps need the correct convention and matching UV map. Assess UV distortion, orientation, margins and density at the intended viewing distance. Intentional mirrored/stacked UVs require a stated use case. Bake unsupported procedural appearance when appropriate and preserve image sources/licenses. Texel density is not a guarantee of readable packaging. In the 5.1.2 calibration, scalar roughness/metalness survive export and UV seams increase the smooth cube's exported vertices from 8 to 14.\n\nReviewed 2026-11-15; edition 1.1.0. Full chapter: docs/blender/materials-uv.md.\nPrimary references:\nhttps://docs.blender.org/manual/en/5.1/addons/import_export/scene_gltf2.html",
+      "source": "workspace-document:docs/blender/materials-uv.md#sha256=02d72eadfaa8fb9c22d1e3470efc30e8a555d24fc083f7a7a3502bd09929f316",
+      "research": {
+        "edition": "1.1.0",
+        "reviewed_on": "2026-11-15",
+        "timezone": "Asia/Singapore",
+        "scope": "cross-project Blender knowledge; project dimensions and status excluded",
+        "chapter": "docs/blender/materials-uv.md",
+        "chapter_sha256": "02d72eadfaa8fb9c22d1e3470efc30e8a555d24fc083f7a7a3502bd09929f316",
+        "content_sha256": "84ce2295b8b2a0f611c339ddd19b224070a775aa80a93a124f8a2181c03b9b9a",
+        "official_sources": [
+          "https://docs.blender.org/manual/en/5.1/addons/import_export/scene_gltf2.html"
+        ],
+        "evidence": "source-backed reference and engineering guidance; bounded native experiments identified separately",
+        "native_calibration_version": "5.1.2",
+        "calibration_receipt": "docs/blender/verification/probe-results.json",
+        "source_register": "docs/blender/sources.md",
+        "limits": "No extension installation/operation, humanoid deformation, textured browser appearance, physical-phone or FPS acceptance established by this research."
+      }
+    },
+    {
+      "kb_id": "297a8d22-c6cd-4487-a8c3-cab43e583687",
+      "item_id": "d19c2cf3-7827-4849-a7f1-e0542cc85012",
+      "kbcid": "blender.character",
+      "content": "Separate character mesh, clothing, armature, skin weights and animation clips. Document rest pose, hierarchy, units, facing and root-motion ownership. Weighted vertex groups must match intended deform bones and meet the consumer's influence/normalization rules. Inspect joint bends, clothing intersections and extremes after export; a valid skin is not proof of good deformation. Blender 5.1 Actions use slots; avoid assuming legacy direct F-Curve access works unchanged. Keyframe insertion is a useful version-aware entry point, followed by inspection of the created Action/slot. glTF transports supported transforms, skinning and morph animation; runtime input, collision and business states remain application responsibilities. Bake constraints where the selected export path requires it. Read actual sampler times instead of assuming every clip starts at zero. The calibration verifies one translated object clip, not a humanoid rig.\n\nReviewed 2026-11-15; edition 1.1.0. Full chapter: docs/blender/characters-animation.md.\nPrimary references:\nhttps://docs.blender.org/manual/en/5.1/animation/actions.html",
+      "source": "workspace-document:docs/blender/characters-animation.md#sha256=b570449827544ca06eb0af1db3da839923ca519dc27088eece4ae481f491e52e",
+      "research": {
+        "edition": "1.1.0",
+        "reviewed_on": "2026-11-15",
+        "timezone": "Asia/Singapore",
+        "scope": "cross-project Blender knowledge; project dimensions and status excluded",
+        "chapter": "docs/blender/characters-animation.md",
+        "chapter_sha256": "b570449827544ca06eb0af1db3da839923ca519dc27088eece4ae481f491e52e",
+        "content_sha256": "8219927589147d68cd29676dd01eb4f284e859841ef3f66d6fd666d262fdd9c7",
+        "official_sources": [
+          "https://docs.blender.org/manual/en/5.1/animation/actions.html"
+        ],
+        "evidence": "source-backed reference and engineering guidance; bounded native experiments identified separately",
+        "native_calibration_version": "5.1.2",
+        "calibration_receipt": "docs/blender/verification/probe-results.json",
+        "source_register": "docs/blender/sources.md",
+        "limits": "No extension installation/operation, humanoid deformation, textured browser appearance, physical-phone or FPS acceptance established by this research."
+      }
+    },
+    {
+      "kb_id": "297a8d22-c6cd-4487-a8c3-cab43e583687",
+      "item_id": "e3cbf7d3-30a6-4029-bc90-a7a021fb8911",
+      "kbcid": "blender.glb",
+      "content": "glTF linear distances are metres. With the tested Blender 5.1.2 +Y-up export, Blender (x,y,z) maps to glTF (x,z,-y); verify a known asymmetric object instead of guessing facing. In this fixture, changing scene scale_length to 0.01 alone leaves exported geometry unchanged, so enforce the intended physical size explicitly. Select export roots/descendants and exclude studio objects. Verify external resources and required extensions even for a GLB. Compare exported triangles, vertices, materials, textures and clips, not only Blender counts. Mesh sharing can reduce storage without reducing draw calls; runtime instancing/batching needs its own implementation. Transparent ordering and moving hierarchies constrain merging. Measure frame time, bytes and memory separately from draw calls. Pin the consumer, decoder dependencies and graphics backend. A desktop viewport is not physical-phone acceptance.\n\nReviewed 2026-11-15; edition 1.1.0. Full chapter: docs/blender/gltf-runtime.md.\nPrimary references:\nhttps://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html",
+      "source": "workspace-document:docs/blender/gltf-runtime.md#sha256=c2baad8044ebe49adf8e9852d44cb80eea7224a6aea2964a090b889e1fdbf7aa",
+      "research": {
+        "edition": "1.1.0",
+        "reviewed_on": "2026-11-15",
+        "timezone": "Asia/Singapore",
+        "scope": "cross-project Blender knowledge; project dimensions and status excluded",
+        "chapter": "docs/blender/gltf-runtime.md",
+        "chapter_sha256": "c2baad8044ebe49adf8e9852d44cb80eea7224a6aea2964a090b889e1fdbf7aa",
+        "content_sha256": "1922c0bb1626c632564027cb752bbfb927767755d3ed25daa266a83de495c444",
+        "official_sources": [
+          "https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html"
+        ],
+        "evidence": "source-backed reference and engineering guidance; bounded native experiments identified separately",
+        "native_calibration_version": "5.1.2",
+        "calibration_receipt": "docs/blender/verification/probe-results.json",
+        "source_register": "docs/blender/sources.md",
+        "limits": "No extension installation/operation, humanoid deformation, textured browser appearance, physical-phone or FPS acceptance established by this research."
+      }
+    },
+    {
+      "kb_id": "297a8d22-c6cd-4487-a8c3-cab43e583687",
+      "item_id": "07d791a3-15d6-47bd-a5ca-d6f33ff23db6",
+      "kbcid": "blender.qa",
+      "content": "Use layered acceptance: source editability, exported structure, measured geometry/materials, target-runtime behavior and observed performance. Khronos validation checks format rules; it does not certify design, readable labels, physical clearance or a usable interaction. Check finite coordinates, degeneracy, normals, bounds, role-appropriate topology, UVs, actual images, skin/clip content and resource references. Reopen a source, edit a controlled copy, re-export and independently load it when editability matters. Compare the actual tested GLB hash with the loaded artifact. Distinguish metadata-only image stubs from decoded/rendered pixels. A CLI success is not an artifact check; propagate Python exceptions to a nonzero exit. Keep failed attempts and apply justified harness corrections uniformly. Samples, desktop emulation and a single graphics backend establish only their recorded coverage. Reuse an applicable existing QA Skill after reading its current definition.\n\nReviewed 2026-11-15; edition 1.1.0. Full chapter: docs/blender/quality-delivery.md.\nPrimary references:\nhttps://github.com/KhronosGroup/glTF-Validator",
+      "source": "workspace-document:docs/blender/quality-delivery.md#sha256=ef99afe52486b26d0cc2e556db435934b54b086758333ba66a16d717ba12e416",
+      "research": {
+        "edition": "1.1.0",
+        "reviewed_on": "2026-11-15",
+        "timezone": "Asia/Singapore",
+        "scope": "cross-project Blender knowledge; project dimensions and status excluded",
+        "chapter": "docs/blender/quality-delivery.md",
+        "chapter_sha256": "ef99afe52486b26d0cc2e556db435934b54b086758333ba66a16d717ba12e416",
+        "content_sha256": "2e660ede111eae1ff8d6b6cabe51ca36ef49ef75cd25e6f1fefd89d7cc0dd01c",
+        "official_sources": [
+          "https://github.com/KhronosGroup/glTF-Validator"
+        ],
+        "evidence": "source-backed reference and engineering guidance; bounded native experiments identified separately",
+        "native_calibration_version": "5.1.2",
+        "calibration_receipt": "docs/blender/verification/probe-results.json",
+        "source_register": "docs/blender/sources.md",
+        "limits": "No extension installation/operation, humanoid deformation, textured browser appearance, physical-phone or FPS acceptance established by this research."
+      }
+    },
+    {
+      "kb_id": "297a8d22-c6cd-4487-a8c3-cab43e583687",
+      "item_id": "5e6c4c27-5722-415d-9ba2-d3f4d7cf6c65",
+      "kbcid": "blender.extensions",
+      "content": "Prefer the official Blender Extensions listing and author-linked source. Match the exact extension version, Blender range, platform, manifest/module identity, dependencies and license to the intended workflow. A Python implementation or available toolbar is not proof of background/MCP compatibility. Inspect operator RNA and poll requirements after an isolated registration test; modal workspace tools may require a real editor and events. Separate listing-verified, source-reviewed, registered, background-tested and target-export-tested states. Test a disposable scene/profile before changing a working setup, record package hashes and preserve source files. Retain existing candidate names such as Rigify, Moveset and PropHandoff as unreviewed unless independently evaluated. The five-extension catalog dated 2026-11-15 verifies published versions/ranges only; none was installed or execution-tested by this research. Recommendations depend on authoring needs, not popularity alone.\n\nReviewed 2026-11-15; edition 1.1.0. Full chapter: docs/blender/extensions.md.\nPrimary references:\nhttps://docs.blender.org/manual/zh-hans/5.1/advanced/extensions/getting_started.html",
+      "source": "workspace-document:docs/blender/extensions.md#sha256=d426ae680c6166545fee16886413d8bd718989682d239d7c09fcefd6e3843f48",
+      "research": {
+        "edition": "1.1.0",
+        "reviewed_on": "2026-11-15",
+        "timezone": "Asia/Singapore",
+        "scope": "cross-project Blender knowledge; project dimensions and status excluded",
+        "chapter": "docs/blender/extensions.md",
+        "chapter_sha256": "d426ae680c6166545fee16886413d8bd718989682d239d7c09fcefd6e3843f48",
+        "content_sha256": "83465b49d85be99fd4e5d96f7273d66ad4e94d3b922364844bf4abc4f84e6fab",
+        "official_sources": [
+          "https://docs.blender.org/manual/zh-hans/5.1/advanced/extensions/getting_started.html"
+        ],
+        "evidence": "source-backed reference and engineering guidance; bounded native experiments identified separately",
+        "native_calibration_version": "5.1.2",
+        "calibration_receipt": "docs/blender/verification/probe-results.json",
+        "source_register": "docs/blender/sources.md",
+        "limits": "No extension installation/operation, humanoid deformation, textured browser appearance, physical-phone or FPS acceptance established by this research."
+      }
+    },
+    {
+      "kb_id": "297a8d22-c6cd-4487-a8c3-cab43e583687",
+      "item_id": "9bf52af8-73e9-4021-b94a-4b7ce7f00278",
+      "kbcid": "blender.assets",
+      "content": "A reusable asset needs a stable ID, category/tags, dimensions and units, local origin/facing, pivots/connectors, editable source, export, materials/images, rights and measured evidence. Specify required topology and target budgets by asset role; do not promote one project's limits to every model. Record generator inputs/seeds and distinguish procedural rebuild from exporting a manually edited source. State repeat pitch/shared components, moving hierarchy, clip names and runtime responsibilities where relevant. Keep visual geometry, colliders, business interaction and gallery metadata as separate interfaces. Preserve a tested export's identity and record any simplification or decoder requirement. Source/editability proof, GLB validation and runtime acceptance are separate deliverables. Installation or a thumbnail alone does not establish that a model is interactive, optimized or ready for publication.\n\nReviewed 2026-11-15; edition 1.1.0. Full chapter: docs/blender/asset-contract.md.\nPrimary references:\nhttps://docs.blender.org/manual/en/5.1/addons/import_export/scene_gltf2.html",
+      "source": "workspace-document:docs/blender/asset-contract.md#sha256=b0b2db8f3047857322648a76a9ab5b7ec9a5bdc426e11128d9f9a1b3f3ca386d",
+      "research": {
+        "edition": "1.1.0",
+        "reviewed_on": "2026-11-15",
+        "timezone": "Asia/Singapore",
+        "scope": "cross-project Blender knowledge; project dimensions and status excluded",
+        "chapter": "docs/blender/asset-contract.md",
+        "chapter_sha256": "b0b2db8f3047857322648a76a9ab5b7ec9a5bdc426e11128d9f9a1b3f3ca386d",
+        "content_sha256": "d1c3db6aa627aa3407e312ce54ed206acc870b97c95dfdd69d32fb0d72912827",
+        "official_sources": [
+          "https://docs.blender.org/manual/en/5.1/addons/import_export/scene_gltf2.html"
+        ],
+        "evidence": "source-backed reference and engineering guidance; bounded native experiments identified separately",
+        "native_calibration_version": "5.1.2",
+        "calibration_receipt": "docs/blender/verification/probe-results.json",
+        "source_register": "docs/blender/sources.md",
+        "limits": "No extension installation/operation, humanoid deformation, textured browser appearance, physical-phone or FPS acceptance established by this research."
+      }
+    },
+    {
+      "kb_id": "297a8d22-c6cd-4487-a8c3-cab43e583687",
+      "item_id": "0330b65c-c5c8-4053-9e10-63d27ffc8c9b",
+      "kbcid": "blender.roadmap",
+      "content": "Learn by producing and independently checking small artifacts: coordinate/mesh ownership -> topology/modifiers -> UV/PBR -> reproducible bpy -> modular architecture -> skinning/animation -> glTF/runtime -> evidence-based delivery. Each stage needs an observable exercise, not only a tutorial or extension install. Revisit prior stages when a probe exposes an incorrect assumption. Candidate Skill IDs remain proposals: blender:python-modeling, blender:architecture-generator, blender:character-rig-animation, blender:glb-export, blender:asset-pipeline and blender:extension-audit. They are not registered or enabled by a knowledge update. Reuse an existing applicable Skill before creating another. The current native calibration covers a small static/animated object workflow; character deformation, five extension operations and physical-device behavior remain outside its coverage. Keep dated tool-version knowledge separate from durable procedures.\n\nReviewed 2026-11-15; edition 1.1.0. Full chapter: docs/blender/roadmap.md.\nPrimary references:\nhttps://docs.blender.org/manual/id/5.1/advanced/scripting/introduction.html",
+      "source": "workspace-document:docs/blender/roadmap.md#sha256=c41a3c9e236889e52ec026294cd4801b094ecb069cbe46ac637759d0f83ae093",
+      "research": {
+        "edition": "1.1.0",
+        "reviewed_on": "2026-11-15",
+        "timezone": "Asia/Singapore",
+        "scope": "cross-project Blender knowledge; project dimensions and status excluded",
+        "chapter": "docs/blender/roadmap.md",
+        "chapter_sha256": "c41a3c9e236889e52ec026294cd4801b094ecb069cbe46ac637759d0f83ae093",
+        "content_sha256": "40f38c386890147124a8264bfe0fdb28dc019b8ee7a77904a42cb39d76a41131",
+        "official_sources": [
+          "https://docs.blender.org/manual/id/5.1/advanced/scripting/introduction.html"
+        ],
+        "evidence": "source-backed reference and engineering guidance; bounded native experiments identified separately",
+        "native_calibration_version": "5.1.2",
+        "calibration_receipt": "docs/blender/verification/probe-results.json",
+        "source_register": "docs/blender/sources.md",
+        "limits": "No extension installation/operation, humanoid deformation, textured browser appearance, physical-phone or FPS acceptance established by this research."
+      }
+    }
+  ],
+  "documents": [
+    {
+      "kb_id": "297a8d22-c6cd-4487-a8c3-cab43e583687",
+      "title": "Blender extension catalog — 2026-11-15",
+      "kbcid": "blender.extension-catalog",
+      "content": "## Dated catalog\n\nReviewed 2026-11-15. All five official listings declare GPL-3.0-or-later. Their declared minimum versions are below Blender 5.1.2; that alone does not establish compatibility with 5.1.2. This is listing evidence, not a successful registration/background test.\n\n### HiFi Architecture Builder 4.6.7\n\n[Official version history](https://extensions.blender.org/add-ons/hifi-builder/versions/): published 2026-11-12; Blender 4.2+. Architecture generators and game-engine preparation. Some advertised workflows target GTA V/FiveM/Sollumz; verify the selected generator's actual GLB output and runtime interfaces separately. Listing verified; source audit, installed operators, background operation and target export have not been tested here.\n\n### Place Helper 2.0.0\n\n[Official version history](https://extensions.blender.org/add-ons/placehelper/versions/): published 2026-06-29; Blender 4.2+. Place, Transform Pro, Scatter and Dynamic Place are viewport-oriented tools. Useful for manual scene dressing; linked/object duplication modes need ownership checks. Listing verified; background/MCP execution has not been tested here. The official listing links [AIGODLIKE/PlaceHelper](https://github.com/AIGODLIKE/PlaceHelper).\n\n### Bool Tool 2.1.0\n\n[Official listing](https://extensions.blender.org/add-ons/bool-tool/): published 2026-07-14; Blender 4.5+. Convenience operators and cutter management around Blender Boolean modifiers. It does not introduce a replacement Boolean solver or itself establish faster Boolean evaluation. Listing verified; installed operators and background behavior have not been tested here.\n\n### Texel Density Checker 2026.1.1\n\n[Official listing](https://extensions.blender.org/add-ons/texel-density-checker/): published 2026-07-06; Blender 4.2+. Calculates/adjusts density and visualizes UV distribution. The Extensions version states it has no C++ backend. Listing verified; operator context, registration and background execution have not been tested here.\n\n### 3D Print Toolbox 1.5.0\n\n[Official version history](https://extensions.blender.org/add-ons/print3d-toolbox/versions/): published 2026-10-19; Blender 4.2+. Geometry/printing analysis and file-export tools; the listing declares file permission for STL/PLY/OBJ export. Use suitable mesh checks as a supplement to GLB validation. Listing verified; current Python report/operator APIs and background execution have not been tested here.\n\n## Verification scope\n\nThis catalog does not establish installation, security review, animation quality, generated-model quality, phone compatibility or headless support. Other candidates in the earlier KB policy are retained as unreviewed; this research does not silently approve them.",
+      "auto_chunk": true,
+      "max_chars": 1300,
+      "overlap": 150,
+      "idempotency_key": "blender-research-20261115:blender.extension-catalog:d427bf4d250923374ca89ffaf0121546136e994d7bacb824b0648dab7a9d943f",
+      "share_level": "user",
+      "source": "workspace-document:docs/blender/extensions.md#sha256=d426ae680c6166545fee16886413d8bd718989682d239d7c09fcefd6e3843f48",
+      "metadata": {
+        "kind": "reference",
+        "domain": "blender",
+        "version": "1.1.0",
+        "reviewed_on": "2026-11-15",
+        "canonical_topic_ref": "297a8d22-c6cd-4487-a8c3-cab43e583687:5e6c4c27-5722-415d-9ba2-d3f4d7cf6c65",
+        "chapter": "docs/blender/extensions.md",
+        "chapter_sha256": "d426ae680c6166545fee16886413d8bd718989682d239d7c09fcefd6e3843f48",
+        "content_sha256": "d427bf4d250923374ca89ffaf0121546136e994d7bacb824b0648dab7a9d943f",
+        "scope": "cross-project; dated catalog or bounded experiment detail",
+        "evidence": "official listing excerpts; not installation or source audit"
+      }
+    },
+    {
+      "kb_id": "297a8d22-c6cd-4487-a8c3-cab43e583687",
+      "title": "Blender 5.1.2 calibration — bounded native and GLB observations",
+      "kbcid": "blender.calibration",
+      "content": "# Blender 5.1.2 calibration: observed behavior\n\nThis is a generic experiment, not a production asset or a certification of all Blender versions. Its source and output assertions are in [knowledge-probe.py](verification/knowledge-probe.py) and [check-probe.mjs](verification/check-probe.mjs). The [result receipt](verification/probe-results.json) records versions, hashes and measured values.\n\n## Experiment boundaries\n\nRun a separate factory-startup background process with automatic script execution disabled. Only temporary fixture files are created; the connected interactive scene, installed extension preferences and project models are not modified. An independent Node loader and Khronos validator inspect the emitted GLBs.\n\n## Observations\n\n- Background `view3d.view_selected.poll()` is false, while adding a mesh primitive can poll true. A valid object/selection is not a replacement for a real viewport context.\n- `Object.copy()` shares the original mesh. An edit through the shared copy changes the original; assigning a separate `Mesh.copy()` isolates subsequent edits.\n- A smooth cube with eight authoring vertices and six faces exports 14 vertices with the fixture's UV seams and eight after those UVs are removed. Both exports have 12 triangles. This is an example, not a fixed expansion multiplier.\n- Blender centre `(4,-5,6)` and dimensions `(1,2,3)` export with +Y up to glTF centre `(4,6,5)` and dimensions `(1,3,2)`.\n- Changing only `scene.unit_settings.scale_length` to 0.01 leaves the exported geometry size unchanged in this 5.1.2 fixture. Author to an explicit metre contract and measure output; do not infer conversion from display settings alone.\n- Unconnected Principled roughness 0.42 and metallic 0.15 survive as glTF material factors, within floating-point tolerance. Texture/image appearance is not part of this experiment.\n- Keyframes at frames 1 and 11 with 10 FPS export one object-translation clip with an Action slot. The sampled time range is approximately 0.1–1.1 seconds, and sampling its midpoint gives X≈4.5.\n- A deliberately raised command-line Python exception returns the requested process exit code 23.\n\n## Corrected harness assumption\n\nThe first harness assumed that 0.5 seconds was the midpoint of this clip. The actual exported samples start at 0.1 seconds; the observed X at 0.5 is about 4.352. The [diagnostic failed attempt](verification/animation-time-assumption.json) is retained with its original FAIL status.\n\nThe corrected check reads the actual first/last sample timestamps and samples their midpoint uniformly. It still requires X≈4.5. This changes the timing instrument, not the source animation or the expected midpoint position. Do not reinterpret the earlier failure as a Blender exporter defect or a successful original test.\n\n## Reproduce and limitations\n\n```sh\nnode docs/blender/verification/check-probe.mjs\n```\n\nSet `BLENDER_BIN` to select another executable. Reassess version-specific expectations when changing it. The fixture tests structural/numeric behavior and one translated object, not textured browser appearance, humanoid skinning, add-on registration, physics, real phones, frame rate or all export settings. Temporary exports are removed after inspection; their hashes and observations remain in the receipt.\n",
+      "auto_chunk": true,
+      "max_chars": 1300,
+      "overlap": 150,
+      "idempotency_key": "blender-research-20261115:blender.calibration:a3002b2f9330eef925072f56587d674999d0fed54031dc0f4c7295b14065ce68",
+      "share_level": "user",
+      "source": "workspace-document:docs/blender/calibration.md#sha256=a3002b2f9330eef925072f56587d674999d0fed54031dc0f4c7295b14065ce68",
+      "metadata": {
+        "kind": "reference",
+        "domain": "blender",
+        "version": "1.1.0",
+        "reviewed_on": "2026-11-15",
+        "canonical_topic_ref": "297a8d22-c6cd-4487-a8c3-cab43e583687:07d791a3-15d6-47bd-a5ca-d6f33ff23db6",
+        "chapter": "docs/blender/calibration.md",
+        "chapter_sha256": "a3002b2f9330eef925072f56587d674999d0fed54031dc0f4c7295b14065ce68",
+        "content_sha256": "a3002b2f9330eef925072f56587d674999d0fed54031dc0f4c7295b14065ce68",
+        "scope": "cross-project; dated catalog or bounded experiment detail",
+        "evidence": "bounded native experiment"
+      }
+    }
+  ]
+}

@@ -1,10 +1,12 @@
 # 3D Model QA Progress
 
-Sequential QA campaign. MODEL-0001 through MODEL-0008 completed verified main, required Actions and actual production acceptance. Active model: MODEL-0009 (ball-03). Remaining models await sequential QA. Historical evidence is reference material, not current acceptance.
+Sequential QA campaign. MODEL-0001 through MODEL-0009 completed verified main, required Actions and actual production acceptance. Active model: MODEL-0010 (ball-04). Remaining models await sequential QA. Historical evidence is reference material, not current acceptance.
 
 Physical mobile testing is excluded for the entire campaign by the owner ("no need test by mobile"). Desktop/tablet viewport checks and existing CI browser suites remain applicable; they do not establish physical-device FPS.
 
 Initial discovery snapshot: 554 catalog entries, 2338 physical 3D artifacts, 1825 queue records. Main-head reconciliations append 13 catalog models and 80 tracked artifacts, producing 1892 queue records; all additions remain PENDING. See [reconciliation 43836162](model-qa/discovery-reconciliation-43836162.json) and [reconciliation 44aaed6a](model-qa/discovery-reconciliation-44aaed6a.json) and [reconciliation f62f5809](model-qa/discovery-reconciliation-f62f5809.json) and [reconciliation 85448e31](model-qa/discovery-reconciliation-85448e31.json) and [reconciliation c5967d47](model-qa/discovery-reconciliation-c5967d47.json) and [reconciliation 6982fb07](model-qa/discovery-reconciliation-6982fb07.json) and [reconciliation 7f6291a7](model-qa/discovery-reconciliation-7f6291a7.json).
+
+Upstream repair1e942079 updates six existing queue-stanchion source/export artifacts without adding models; MODEL-0080–0082 remain PENDING. See [reconciliation1e942079](model-qa/discovery-reconciliation-1e942079.json).
 
 Full source/export mappings, hashes, generators, validation tools, defects, repairs, gate results, commit and remote evidence: [inventory](model-qa/inventory.json).
 
@@ -20,8 +22,8 @@ All other initial records are PENDING. Uncatalogued/historical artifacts remain 
 | MODEL-0006 | cue-ball | models/eight-ball-billiards/exports/ball_00.glb, models/eight-ball-billiards/scene.blend | PUSHED | No repair required; local/full remote gates and actual production payload/runtime/geometry PASS | e23be21ca38289ffc6b7a56218779891a197592f / QA-only main and blob verified; Actions43664847183 success | Physical mobile excluded |
 | MODEL-0007 | ball-01 | models/eight-ball-billiards/exports/ball_01.glb, models/eight-ball-billiards/scene.blend | PUSHED | No repair needed; local/full remote gates and exact production payload/runtime/geometry PASS | ed66da5e exact main/blob verified; Actions43669406927 success | Physical mobile excluded |
 | MODEL-0008 | ball-02 | models/eight-ball-billiards/exports/ball_02.glb, models/eight-ball-billiards/scene.blend | PUSHED | No repair needed; local/full remote gates and isolated production payload/runtime/geometry PASS; first host timeout retained | 582a37a0 main ancestor/blob verified; Actions43673948892 success | Physical mobile excluded |
-| MODEL-0009 | ball-03 | models/eight-ball-billiards/exports/ball_03.glb, models/eight-ball-billiards/scene.blend | READY_TO_PUSH | No repair needed; local gates PASS,670unit/40targeted, base Game46/experience31 plus3 upstream-addition integration checks (9cases) | — / unverified | QA main/Actions/production pending |
-| MODEL-0010 | ball-04 | models/eight-ball-billiards/exports/ball_04.glb, models/eight-ball-billiards/scene.blend | PENDING | Not inspected | — / unverified | QA pending |
+| MODEL-0009 | ball-03 | models/eight-ball-billiards/exports/ball_03.glb, models/eight-ball-billiards/scene.blend | PUSHED | No repair needed; local/full remote gates and exact production payload/runtime/geometry PASS | 2b8d7e10 main ancestor/blob verified; Actions43683566612 success | Physical mobile excluded |
+| MODEL-0010 | ball-04 | models/eight-ball-billiards/exports/ball_04.glb, models/eight-ball-billiards/scene.blend | TESTING | No repair indicated;678unit/45targeted,20native views and4 runtime profiles PASS; full Game screenshot timeout preserved, recovery running | — / not yet published | Full regression, remote checks and production acceptance pending |
 | MODEL-0011 | ball-05 | models/eight-ball-billiards/exports/ball_05.glb, models/eight-ball-billiards/scene.blend | PENDING | Not inspected | — / unverified | QA pending |
 | MODEL-0012 | ball-06 | models/eight-ball-billiards/exports/ball_06.glb, models/eight-ball-billiards/scene.blend | PENDING | Not inspected | — / unverified | QA pending |
 | MODEL-0013 | ball-07 | models/eight-ball-billiards/exports/ball_07.glb, models/eight-ball-billiards/scene.blend | PENDING | Not inspected | — / unverified | QA pending |

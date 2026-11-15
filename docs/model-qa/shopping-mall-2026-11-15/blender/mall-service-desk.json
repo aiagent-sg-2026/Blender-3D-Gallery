@@ -1,0 +1,2269 @@
+{
+  "id": "mall-service-desk",
+  "blender": "5.1.2",
+  "modules": {
+    "bl_ext.user_default.texel_density_checker": "2026.1.1",
+    "bl_ext.user_default.print3d_toolbox": "1.5.0"
+  },
+  "phases": {
+    "source": {
+      "status": "SCANNED",
+      "mapping": {
+        "method": "exact catalog root",
+        "root": "ASSET_MallServiceDesk"
+      },
+      "file_version": [
+        4,
+        0,
+        36
+      ],
+      "declared_scene_scale": 1.0,
+      "source_geometry_count": 37,
+      "meshes": [
+        {
+          "name": "Brass lower reveal",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 168.14361747073147,
+            "max": 2637.9350975310267,
+            "uv_weighted_mean": 913.8800303418773,
+            "positive_uv_area": 0.37548116844071217,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Front information plaque",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 32,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "16",
+              "indices_count": 16
+            },
+            {
+              "name": "Zero Edges",
+              "value": "16",
+              "indices_count": 16
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 566.3412018649243,
+            "max": 4233.059312056517,
+            "uv_weighted_mean": 1769.6817397926782,
+            "positive_uv_area": 0.37720340541160846,
+            "zero_uv_faces": 4,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Front walnut fluting",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 1605.8878725170039,
+            "max": 14304.821135711734,
+            "uv_weighted_mean": 5049.362272844997,
+            "positive_uv_area": 0.39347444455048264,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Front walnut fluting.001",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 1605.8907674014933,
+            "max": 14304.851685196283,
+            "uv_weighted_mean": 5049.362584549813,
+            "positive_uv_area": 0.39347444455048264,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Front walnut fluting.002",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 1605.8911092520573,
+            "max": 14304.851685196283,
+            "uv_weighted_mean": 5049.362491531061,
+            "positive_uv_area": 0.39347444455048264,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Front walnut fluting.003",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 1605.8907574320815,
+            "max": 14304.851685196283,
+            "uv_weighted_mean": 5049.362605942381,
+            "positive_uv_area": 0.39347444455048264,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Front walnut fluting.004",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 1605.891461072264,
+            "max": 14304.851685196283,
+            "uv_weighted_mean": 5049.362436116408,
+            "positive_uv_area": 0.39347444455048264,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Front walnut fluting.005",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 1605.8921043159444,
+            "max": 14304.851685196283,
+            "uv_weighted_mean": 5049.3622977448285,
+            "positive_uv_area": 0.39347444455048264,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Front walnut fluting.006",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 1605.888435426042,
+            "max": 14304.821135711734,
+            "uv_weighted_mean": 5049.36272302188,
+            "positive_uv_area": 0.39347444455048264,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Front walnut fluting.007",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 1605.888927971936,
+            "max": 14304.821135711734,
+            "uv_weighted_mean": 5049.362370045693,
+            "positive_uv_area": 0.39347444455048264,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Front walnut fluting.008",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 1605.8896415813874,
+            "max": 14304.88223487656,
+            "uv_weighted_mean": 5049.363864023697,
+            "positive_uv_area": 0.39347444455048264,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Front walnut fluting.009",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 1605.8851383246417,
+            "max": 14304.88223487656,
+            "uv_weighted_mean": 5049.365074212104,
+            "positive_uv_area": 0.39347444455048264,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Front walnut fluting.010",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 1605.8849876174738,
+            "max": 14304.88223487656,
+            "uv_weighted_mean": 5049.365624940928,
+            "positive_uv_area": 0.39347444455048264,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Front walnut fluting.011",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 1605.889209426936,
+            "max": 14304.88223487656,
+            "uv_weighted_mean": 5049.365478317448,
+            "positive_uv_area": 0.39347444455048264,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Front walnut fluting.012",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 1605.8715584203967,
+            "max": 14304.88223487656,
+            "uv_weighted_mean": 5049.3620913209725,
+            "positive_uv_area": 0.39347444455048264,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Front walnut fluting.013",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 1605.882454547779,
+            "max": 14304.88223487656,
+            "uv_weighted_mean": 5049.361129124732,
+            "positive_uv_area": 0.39347444455048264,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Front walnut fluting.014",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 1605.8783031539215,
+            "max": 14304.88223487656,
+            "uv_weighted_mean": 5049.361060567045,
+            "positive_uv_area": 0.39347444455048264,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "High counter brass edge",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 32,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "16",
+              "indices_count": 16
+            },
+            {
+              "name": "Zero Edges",
+              "value": "16",
+              "indices_count": 16
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 1114.1334963745987,
+            "max": 22774.479612656567,
+            "uv_weighted_mean": 6511.6989849354795,
+            "positive_uv_area": 0.3738015910914947,
+            "zero_uv_faces": 8,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "High walnut guest counter",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 20,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "16",
+              "indices_count": 16
+            },
+            {
+              "name": "Zero Edges",
+              "value": "16",
+              "indices_count": 16
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 1.4142135623730951,
+            "max": 1854.482161680871,
+            "uv_weighted_mean": 709.6175169288063,
+            "positive_uv_area": 0.37687962544131404,
+            "zero_uv_faces": 6,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Information roundel",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 384,
+          "triangles": 764,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 2776.1952224825422,
+            "max": 12440.289012962603,
+            "uv_weighted_mean": 7054.498580685722,
+            "positive_uv_area": 0.8608637183018133,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Label - HOW CAN WE HELP?",
+          "source_type": "FONT",
+          "status": "SCANNED",
+          "vertices": 688,
+          "triangles": 644,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 688,
+            "boundary_edges": 688,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "688",
+              "indices_count": 688
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 71963.39151478255,
+            "max": 449627.7781097603,
+            "uv_weighted_mean": 186797.5271027931,
+            "positive_uv_area": 17.0,
+            "zero_uv_faces": 300,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Label - i",
+          "source_type": "FONT",
+          "status": "SCANNED",
+          "vertices": 48,
+          "triangles": 40,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 48,
+            "boundary_edges": 48,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "48",
+              "indices_count": 48
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 81920.80201373079,
+            "max": 192852.64229421763,
+            "uv_weighted_mean": 162907.3185264076,
+            "positive_uv_area": 2.0,
+            "zero_uv_faces": 16,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Label - SERVICE",
+          "source_type": "FONT",
+          "status": "SCANNED",
+          "vertices": 396,
+          "triangles": 372,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 396,
+            "boundary_edges": 396,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "396",
+              "indices_count": 396
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 38255.134587090506,
+            "max": 348126.65230750135,
+            "uv_weighted_mean": 106640.46660884077,
+            "positive_uv_area": 8.0,
+            "zero_uv_faces": 174,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Low counter brass edge",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 32,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "16",
+              "indices_count": 16
+            },
+            {
+              "name": "Zero Edges",
+              "value": "16",
+              "indices_count": 16
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 1617.4700837097087,
+            "max": 22853.99252409463,
+            "uv_weighted_mean": 7035.167561908198,
+            "positive_uv_area": 0.37411671296532756,
+            "zero_uv_faces": 6,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Low jade front",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 315.8873776906444,
+            "max": 1480.0053386393938,
+            "uv_weighted_mean": 642.0570327323524,
+            "positive_uv_area": 0.3790387163987545,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Lower walnut guest counter",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 24,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "16",
+              "indices_count": 16
+            },
+            {
+              "name": "Zero Edges",
+              "value": "16",
+              "indices_count": 16
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 0.6813502071537485,
+            "max": 2145.0714264790845,
+            "uv_weighted_mean": 865.0454109801148,
+            "positive_uv_area": 0.37887282822961144,
+            "zero_uv_faces": 10,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Main jade front",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 195.26842139229916,
+            "max": 1158.0409848393836,
+            "uv_weighted_mean": 479.3605129245155,
+            "positive_uv_area": 0.3773012303110028,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Recessed toe plinth",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 173.8009774887874,
+            "max": 1541.9861766668425,
+            "uv_weighted_mean": 544.2107872064026,
+            "positive_uv_area": 0.3760499781445837,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Sign brass frame",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 419.63509359877173,
+            "max": 2407.3665939207463,
+            "uv_weighted_mean": 1032.9522357899407,
+            "positive_uv_area": 0.3780225707837819,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Sign jade front",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 32,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "16",
+              "indices_count": 16
+            },
+            {
+              "name": "Zero Edges",
+              "value": "16",
+              "indices_count": 16
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 476.64472540175666,
+            "max": 5066.834830788419,
+            "uv_weighted_mean": 1973.1022878625292,
+            "positive_uv_area": 0.37587047549109553,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Sign mounting foot",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 818.292987439102,
+            "max": 5731.042595303474,
+            "uv_weighted_mean": 2339.1984541025076,
+            "positive_uv_area": 0.379066007809488,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Sign upright",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 1766.0044830211764,
+            "max": 17420.73784136421,
+            "uv_weighted_mean": 5632.915660587833,
+            "positive_uv_area": 0.39748662013556213,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Sign upright.001",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 1766.0079619613305,
+            "max": 17421.02508608565,
+            "uv_weighted_mean": 5632.90859041666,
+            "positive_uv_area": 0.39748662013556213,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Staff work shelf",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 274.0035486654434,
+            "max": 3013.4924458910314,
+            "uv_weighted_mean": 1083.9623279776058,
+            "positive_uv_area": 0.37612520102561975,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Walnut side return",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 386.8818009372165,
+            "max": 4049.042361867742,
+            "uv_weighted_mean": 1112.994530645021,
+            "positive_uv_area": 0.3973605415032826,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Walnut side return.001",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 386.88239424418236,
+            "max": 4049.068303198307,
+            "uv_weighted_mean": 1112.9939511898144,
+            "positive_uv_area": 0.3973605415032826,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "Walnut side return.002",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 96,
+          "triangles": 188,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 319.45340554353345,
+            "max": 3961.6182640132292,
+            "uv_weighted_mean": 1008.809372730135,
+            "positive_uv_area": 0.39740004713790583,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL",
+            "WEIGHTED_NORMAL"
+          ],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        }
+      ]
+    },
+    "glb": {
+      "status": "SCANNED",
+      "mapping": {
+        "method": "exact catalog root",
+        "root": "ASSET_MallServiceDesk"
+      },
+      "file_version": [
+        5,
+        1,
+        16
+      ],
+      "declared_scene_scale": 1.0,
+      "source_geometry_count": 1,
+      "meshes": [
+        {
+          "name": "mall-service-desk",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 8046,
+          "triangles": 8024,
+          "exact_zero_area_triangles": 172,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 9276,
+            "boundary_edges": 9276,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "weld_tolerance_m": 1e-07,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "9276",
+              "indices_count": 9276
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "192",
+              "indices_count": 192
+            },
+            {
+              "name": "Zero Edges",
+              "value": "192",
+              "indices_count": 192
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [],
+          "reference_1024_uv_statistics": null,
+          "modifiers_evaluated": [],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        }
+      ]
+    }
+  },
+  "status": "SCANNED"
+}

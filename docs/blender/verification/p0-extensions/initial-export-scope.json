@@ -1,0 +1,21 @@
+{
+  "status": "FAIL",
+  "stage": "all-scene export-scope check",
+  "sha256": "429f59f8da6b3e6105bfa1cb90619e883268525d4457d7d3345f06d1c8e24e38",
+  "expected": {
+    "scenes": 1,
+    "meshes": 1
+  },
+  "actual": {
+    "scenes": [
+      "P0_ExtensionProbe",
+      "Scene"
+    ],
+    "meshes": [
+      "P0_ClosedCube",
+      "Cube"
+    ]
+  },
+  "initialDefaultSceneLoaderCheck": "PASS; default-scene-only inspection did not cover other encoded scenes",
+  "correction": "Set use_active_scene=True, preserving the one-scene/one-mesh delivery contract."
+}

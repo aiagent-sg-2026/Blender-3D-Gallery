@@ -19,6 +19,9 @@ The gallery is not an online model editor, model-generation service, marketplace
 - [Architecture](docs/architecture.md): proposed stack, content flow and deployment boundaries.
 - [Design and accessibility](docs/design.md): responsive layout and interaction requirements.
 - [3D asset standard](docs/assets.md): model metadata, provenance and validation.
+- [Blender engineering knowledge](docs/blender/README.md): source-backed authoring guidance, extension research, native calibration and the `blender` KB mirror.
+- [P0 Blender extensions](docs/blender/p0-extensions.md): installed versions, verified Python calls, context requirements and reproducible evidence.
+- [Shopping Mall geometry and texel-density QA](docs/model-qa/shopping-mall-2026-11-15/README.md): read-only source/export measurements, review findings and per-object CSV evidence.
 - [Quality and release](docs/quality.md): test matrix, candidate budgets and release evidence.
 - [Roadmap and decisions](docs/roadmap.md): milestones, open decisions and status.
 - [Game implementation and delivery](docs/game-implementation-plan.md): game rules, architecture, controls, saved turns and offline/update contract.

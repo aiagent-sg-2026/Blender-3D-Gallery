@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "blender": "5.1.2",
+  "background": true,
+  "method": "Fresh process loads saved user preferences; no addon enable or registration call is made by this checker",
+  "modules": [
+    {
+      "module": "bl_ext.user_default.texel_density_checker",
+      "version": "2026.1.1",
+      "persistedEnabled": true,
+      "loaded": true,
+      "packageFilesMatch": true
+    },
+    {
+      "module": "bl_ext.user_default.print3d_toolbox",
+      "version": "1.5.0",
+      "persistedEnabled": true,
+      "loaded": true,
+      "packageFilesMatch": true
+    }
+  ],
+  "operators": [
+    {
+      "idname": "object.texel_density_check",
+      "rna": "OBJECT_OT_texel_density_check",
+      "poll": true
+    },
+    {
+      "idname": "object.texel_density_set",
+      "rna": "OBJECT_OT_texel_density_set",
+      "poll": true
+    },
+    {
+      "idname": "mesh.print3d_check_all",
+      "rna": "MESH_OT_print3d_check_all",
+      "poll": true
+    },
+    {
+      "idname": "mesh.print3d_check_solid",
+      "rna": "MESH_OT_print3d_check_solid",
+      "poll": true
+    },
+    {
+      "idname": "mesh.print3d_check_degenerate",
+      "rna": "MESH_OT_print3d_check_degenerate",
+      "poll": true
+    },
+    {
+      "idname": "mesh.print3d_info_volume",
+      "rna": "MESH_OT_print3d_info_volume",
+      "poll": true
+    },
+    {
+      "idname": "mesh.print3d_info_area",
+      "rna": "MESH_OT_print3d_info_area",
+      "poll": true
+    }
+  ]
+}

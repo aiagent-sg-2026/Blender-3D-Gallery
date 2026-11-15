@@ -1,0 +1,232 @@
+{
+  "status": "PASS",
+  "before": {
+    "geometrySelectionLayoutSha256": "dcc6c51fb62f6eb609a3573d1f101d73a9b13c124257a382dc62cbfc9e0568cf",
+    "file": "",
+    "objects": 3,
+    "scenes": 1,
+    "dirtyFlag": false
+  },
+  "after": {
+    "geometrySelectionLayoutSha256": "dcc6c51fb62f6eb609a3573d1f101d73a9b13c124257a382dc62cbfc9e0568cf",
+    "file": "",
+    "objects": 3,
+    "scenes": 1,
+    "dirtyFlag": false
+  },
+  "observations": {
+    "blender": "5.1.2",
+    "background": false,
+    "area": "VIEW_3D",
+    "modules": [
+      {
+        "name": "bl_ext.user_default.texel_density_checker",
+        "file": "/Users/yapweijun/Library/Application Support/Blender/5.1/extensions/user_default/texel_density_checker/__init__.py"
+      },
+      {
+        "name": "bl_ext.user_default.print3d_toolbox",
+        "file": "/Users/yapweijun/Library/Application Support/Blender/5.1/extensions/user_default/print3d_toolbox/__init__.py"
+      }
+    ],
+    "texel": {
+      "initial_px_per_m": 1024.0,
+      "object_scale_2_px_per_m": 512.0,
+      "texture_1024x2048_px_per_m": 1448.155,
+      "scene_scale_001_px_per_m": 102400.0,
+      "set_status": [
+        "FINISHED"
+      ],
+      "set_px_per_m": 512.0,
+      "uv_after_set": [
+        [
+          0.25,
+          0.25
+        ],
+        [
+          0.75,
+          0.25
+        ],
+        [
+          0.75,
+          0.75
+        ],
+        [
+          0.25,
+          0.75
+        ]
+      ],
+      "no_active_result": [
+        "CANCELLED"
+      ]
+    },
+    "print3d": {
+      "closed_all": [
+        {
+          "name": "Non-manifold Edges",
+          "value": "0",
+          "indices": [],
+          "select_mode": "EDGE",
+          "bm_attribute": "edges",
+          "icon": "EDGESEL"
+        },
+        {
+          "name": "Bad Contiguous Edges",
+          "value": "0",
+          "indices": [],
+          "select_mode": "EDGE",
+          "bm_attribute": "edges",
+          "icon": "EDGESEL"
+        },
+        {
+          "name": "Intersect Faces",
+          "value": "0",
+          "indices": [],
+          "select_mode": "FACE",
+          "bm_attribute": "faces",
+          "icon": "FACESEL"
+        },
+        {
+          "name": "Shells",
+          "value": "1",
+          "indices": null,
+          "select_mode": null,
+          "bm_attribute": null,
+          "icon": null
+        },
+        {
+          "name": "Zero Faces",
+          "value": "0",
+          "indices": [],
+          "select_mode": "FACE",
+          "bm_attribute": "faces",
+          "icon": "FACESEL"
+        },
+        {
+          "name": "Zero Edges",
+          "value": "0",
+          "indices": [],
+          "select_mode": "EDGE",
+          "bm_attribute": "edges",
+          "icon": "EDGESEL"
+        },
+        {
+          "name": "Non-flat Faces",
+          "value": "0",
+          "indices": [],
+          "select_mode": "FACE",
+          "bm_attribute": "faces",
+          "icon": "FACESEL"
+        },
+        {
+          "name": "Thin Faces",
+          "value": "0",
+          "indices": [],
+          "select_mode": "FACE",
+          "bm_attribute": "faces",
+          "icon": "FACESEL"
+        },
+        {
+          "name": "Sharp Edges",
+          "value": "0",
+          "indices": [],
+          "select_mode": "EDGE",
+          "bm_attribute": "edges",
+          "icon": "EDGESEL"
+        },
+        {
+          "name": "Overhang Faces",
+          "value": "1",
+          "indices": [
+            0
+          ],
+          "select_mode": "FACE",
+          "bm_attribute": "faces",
+          "icon": "FACESEL"
+        }
+      ],
+      "volume": [
+        {
+          "name": "Volume",
+          "value": "1.0 m\u00b3",
+          "indices": null,
+          "select_mode": null,
+          "bm_attribute": null,
+          "icon": null
+        }
+      ],
+      "area": [
+        {
+          "name": "Area",
+          "value": "6.0 m\u00b2",
+          "indices": null,
+          "select_mode": null,
+          "bm_attribute": null,
+          "icon": null
+        }
+      ],
+      "open_cube_active_with_multiple_selected": [
+        {
+          "name": "Non-manifold Edges",
+          "value": "4",
+          "indices": [
+            6,
+            8,
+            10,
+            11
+          ],
+          "select_mode": "EDGE",
+          "bm_attribute": "edges",
+          "icon": "EDGESEL"
+        },
+        {
+          "name": "Bad Contiguous Edges",
+          "value": "0",
+          "indices": [],
+          "select_mode": "EDGE",
+          "bm_attribute": "edges",
+          "icon": "EDGESEL"
+        }
+      ],
+      "closed_cube_active_with_multiple_selected": [
+        {
+          "name": "Non-manifold Edges",
+          "value": "0",
+          "indices": [],
+          "select_mode": "EDGE",
+          "bm_attribute": "edges",
+          "icon": "EDGESEL"
+        },
+        {
+          "name": "Bad Contiguous Edges",
+          "value": "0",
+          "indices": [],
+          "select_mode": "EDGE",
+          "bm_attribute": "edges",
+          "icon": "EDGESEL"
+        }
+      ],
+      "degenerate": [
+        {
+          "name": "Zero Faces",
+          "value": "1",
+          "indices": [
+            0
+          ],
+          "select_mode": "FACE",
+          "bm_attribute": "faces",
+          "icon": "FACESEL"
+        },
+        {
+          "name": "Zero Edges",
+          "value": "0",
+          "indices": [],
+          "select_mode": "EDGE",
+          "bm_attribute": "edges",
+          "icon": "EDGESEL"
+        }
+      ]
+    },
+    "status": "PASS"
+  },
+  "scope": "Real window/editor Python calls on a temporary scene, removed afterwards. Original geometry, selection and editor types match the recorded hash; no source scene is saved."
+}

@@ -1,0 +1,194 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-11-14T17:20:42.015Z",
+  "observations": {
+    "blender": "5.1.2",
+    "python": "3.13.9",
+    "background": true,
+    "view3d_poll": false,
+    "primitive_poll": true,
+    "object_copy_shares_mesh": true,
+    "linked_edit_changes_original": true,
+    "data_copy_isolates_edit": true,
+    "source_vertices": 8,
+    "source_faces": 6,
+    "source_manifold": true,
+    "source_volume_m3": 6,
+    "principled_inputs": [
+      "Base Color",
+      "Metallic",
+      "Roughness",
+      "Coat Weight"
+    ],
+    "export_properties": {
+      "export_yup": {
+        "type": "BOOLEAN",
+        "default": true,
+        "enum": null
+      },
+      "export_apply": {
+        "type": "BOOLEAN",
+        "default": false,
+        "enum": null
+      },
+      "export_gpu_instances": {
+        "type": "BOOLEAN",
+        "default": false,
+        "enum": null
+      },
+      "export_animation_mode": {
+        "type": "ENUM",
+        "default": "ACTIONS",
+        "enum": [
+          "ACTIONS",
+          "ACTIVE_ACTIONS",
+          "BROADCAST",
+          "NLA_TRACKS",
+          "SCENE"
+        ]
+      }
+    },
+    "action_slots": 1
+  },
+  "exports": [
+    {
+      "file": "cube-uv.glb",
+      "sha256": "b08493dcae216bf4ba660c3b66a448de4ccf5ea9201c075240739042fa92d2f5",
+      "bytes": 1700,
+      "vertices": 14,
+      "triangles": 12,
+      "center": [
+        4,
+        6,
+        5
+      ],
+      "size": [
+        1,
+        3,
+        2
+      ],
+      "roughness": 0.41999998688697815,
+      "metalness": 0.15000000596046448,
+      "animations": [],
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 1,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_0"
+          }
+        ],
+        "truncated": false
+      }
+    },
+    {
+      "file": "cube-no-uv.glb",
+      "sha256": "fb1cf8b2fbcb359af994ce57c6ff47b66d47d3af7c5b25e2c26a702729b090b4",
+      "bytes": 1300,
+      "vertices": 8,
+      "triangles": 12,
+      "center": [
+        4,
+        6,
+        5
+      ],
+      "size": [
+        1,
+        3,
+        2
+      ],
+      "roughness": 0.41999998688697815,
+      "metalness": 0.15000000596046448,
+      "animations": [],
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      }
+    },
+    {
+      "file": "cube-unit-scale-001.glb",
+      "sha256": "fb1cf8b2fbcb359af994ce57c6ff47b66d47d3af7c5b25e2c26a702729b090b4",
+      "bytes": 1300,
+      "vertices": 8,
+      "triangles": 12,
+      "center": [
+        4,
+        6,
+        5
+      ],
+      "size": [
+        1,
+        3,
+        2
+      ],
+      "roughness": 0.41999998688697815,
+      "metalness": 0.15000000596046448,
+      "animations": [],
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      }
+    },
+    {
+      "file": "cube-animated.glb",
+      "sha256": "f3f66284fca8bf1a1e89b03a6d01838ea8e88fd8b2c6b2c55f591f4a58c9b939",
+      "bytes": 1888,
+      "vertices": 8,
+      "triangles": 12,
+      "center": [
+        4,
+        6,
+        5
+      ],
+      "size": [
+        1,
+        3,
+        2
+      ],
+      "roughness": 0.41999998688697815,
+      "metalness": 0.15000000596046448,
+      "animations": [
+        {
+          "name": "probe_move",
+          "duration": 1.100000023841858,
+          "tracks": [
+            "KnowledgeProbe.position"
+          ]
+        }
+      ],
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "sampleStart": 0.10000000149011612,
+      "sampleEnd": 1.100000023841858,
+      "sampleMidpoint": 0.600000012665987,
+      "midpoint": [
+        4.499999983459741,
+        6,
+        5
+      ]
+    }
+  ],
+  "sceneUnitScale001GeometryRatio": 1,
+  "expectedExceptionExitCode": 23,
+  "scriptSha256": "2feb6369bffb0ef4221d45146b13893cae4e7026c8faad023000da6926d0bf21",
+  "scope": "Generic isolated Blender experiments and Node GLB load; no installed extension, production model, active scene, browser visual or phone compatibility claim."
+}

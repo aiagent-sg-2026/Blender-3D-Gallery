@@ -1,0 +1,582 @@
+{
+  "kbid": "blender",
+  "verified_at": "2026-11-14T17:42:30Z",
+  "status": "PASS_WITH_AUTOMATION_LIMITS",
+  "traffic_kind": "synthetic",
+  "coverage": {
+    "supported_questions": 8,
+    "supported_questions_with_full_source_evidence": 8,
+    "expected_negative_questions": 1,
+    "expected_negative_fact_absent_from_cited_sources": true,
+    "explicit_no_answer_classifier_verified": false
+  },
+  "initial_verdicts": [
+    {
+      "id": "automation",
+      "expected": "supported",
+      "answerable": false,
+      "confident": false,
+      "no_answer": false,
+      "decision": "verify",
+      "decision_reason": "A reported error, partial result, or unavailable component requires verification.",
+      "search_event_id": 175380,
+      "content_incomplete": true,
+      "citations": [
+        {
+          "ref": "297a8d22-c6cd-4487-a8c3-cab43e583687:a829ec15-cef5-4a99-80ef-5f319b33c9fa",
+          "title": "Blender Python / bpy Automation Standards",
+          "chars": 1170,
+          "score": 0.5885240612457221
+        },
+        {
+          "ref": "297a8d22-c6cd-4487-a8c3-cab43e583687:e97452a3-591b-4112-b4fc-cd36f6c9acff",
+          "title": "Blender 5.1.2 calibration — bounded native and GLB observations",
+          "chars": 2000,
+          "score": 0.5775951159943946
+        },
+        {
+          "ref": "297a8d22-c6cd-4487-a8c3-cab43e583687:0330b65c-c5c8-4053-9e10-63d27ffc8c9b",
+          "title": "Blender Learning Roadmap and Skill Candidates",
+          "chars": 1124,
+          "score": 0.5500835508158184
+        }
+      ]
+    },
+    {
+      "id": "units-zh",
+      "expected": "supported",
+      "answerable": false,
+      "confident": false,
+      "no_answer": false,
+      "decision": "verify",
+      "decision_reason": "A reported error, partial result, or unavailable component requires verification.",
+      "search_event_id": 175374,
+      "content_incomplete": true,
+      "citations": [
+        {
+          "ref": "297a8d22-c6cd-4487-a8c3-cab43e583687:e97452a3-591b-4112-b4fc-cd36f6c9acff",
+          "title": "Blender 5.1.2 calibration — bounded native and GLB observations",
+          "chars": 2000,
+          "score": 0.5999742031128207
+        }
+      ]
+    },
+    {
+      "id": "pbr",
+      "expected": "supported",
+      "answerable": false,
+      "confident": false,
+      "no_answer": false,
+      "decision": "verify",
+      "decision_reason": "A reported error, partial result, or unavailable component requires verification.",
+      "search_event_id": 175378,
+      "content_incomplete": true,
+      "citations": [
+        {
+          "ref": "297a8d22-c6cd-4487-a8c3-cab43e583687:dfa13110-b887-48f1-9f37-7a296569e6a9",
+          "title": "UV Mapping and PBR Materials",
+          "chars": 1089,
+          "score": 0.6696744178173911
+        }
+      ]
+    },
+    {
+      "id": "animation",
+      "expected": "supported",
+      "answerable": false,
+      "confident": false,
+      "no_answer": false,
+      "decision": "verify",
+      "decision_reason": "A reported error, partial result, or unavailable component requires verification.",
+      "search_event_id": 175375,
+      "content_incomplete": true,
+      "citations": [
+        {
+          "ref": "297a8d22-c6cd-4487-a8c3-cab43e583687:e97452a3-591b-4112-b4fc-cd36f6c9acff",
+          "title": "Blender 5.1.2 calibration — bounded native and GLB observations",
+          "chars": 2000,
+          "score": 0.6562074637104536
+        }
+      ]
+    },
+    {
+      "id": "hifi",
+      "expected": "supported",
+      "answerable": false,
+      "confident": true,
+      "no_answer": false,
+      "decision": "verify",
+      "decision_reason": "A reported error, partial result, or unavailable component requires verification.",
+      "search_event_id": 175373,
+      "content_incomplete": true,
+      "citations": [
+        {
+          "ref": "297a8d22-c6cd-4487-a8c3-cab43e583687:c8062ce1-b194-4cc8-9f89-f190c20e6247",
+          "title": "Blender extension catalog — 2026-11-15",
+          "chars": 2000,
+          "score": 0.7050833281825102
+        }
+      ]
+    },
+    {
+      "id": "texel",
+      "expected": "supported",
+      "answerable": false,
+      "confident": true,
+      "no_answer": false,
+      "decision": "verify",
+      "decision_reason": "A reported error, partial result, or unavailable component requires verification.",
+      "search_event_id": 175376,
+      "content_incomplete": true,
+      "citations": [
+        {
+          "ref": "297a8d22-c6cd-4487-a8c3-cab43e583687:c8062ce1-b194-4cc8-9f89-f190c20e6247",
+          "title": "Blender extension catalog — 2026-11-15",
+          "chars": 2000,
+          "score": 0.7280732283461294
+        }
+      ]
+    },
+    {
+      "id": "qa-zh",
+      "expected": "supported",
+      "answerable": false,
+      "confident": false,
+      "no_answer": false,
+      "decision": "verify",
+      "decision_reason": "A reported error, partial result, or unavailable component requires verification.",
+      "search_event_id": 175381,
+      "content_incomplete": true,
+      "citations": [
+        {
+          "ref": "297a8d22-c6cd-4487-a8c3-cab43e583687:07d791a3-15d6-47bd-a5ca-d6f33ff23db6",
+          "title": "Blender 3D Model Quality Assurance",
+          "chars": 1132,
+          "score": 0.6526312489260004
+        },
+        {
+          "ref": "297a8d22-c6cd-4487-a8c3-cab43e583687:e3cbf7d3-30a6-4029-bc90-a7a021fb8911",
+          "title": "GLB Export and Browser Compatibility",
+          "chars": 1062,
+          "score": 0.5555921064395809
+        },
+        {
+          "ref": "297a8d22-c6cd-4487-a8c3-cab43e583687:e97452a3-591b-4112-b4fc-cd36f6c9acff",
+          "title": "Blender 5.1.2 calibration — bounded native and GLB observations",
+          "chars": 2000,
+          "score": 0.5210564241589802
+        }
+      ]
+    },
+    {
+      "id": "skill-candidates",
+      "expected": "supported",
+      "answerable": false,
+      "confident": false,
+      "no_answer": false,
+      "decision": "verify",
+      "decision_reason": "A reported error, partial result, or unavailable component requires verification.",
+      "search_event_id": 175377,
+      "content_incomplete": true,
+      "citations": [
+        {
+          "ref": "297a8d22-c6cd-4487-a8c3-cab43e583687:9b434d45-3a45-415d-8297-2c37649721df",
+          "title": "Blender 3D Knowledge Domain — Ownership and Retrieval",
+          "chars": 1015,
+          "score": 0.6116157602482853
+        },
+        {
+          "ref": "297a8d22-c6cd-4487-a8c3-cab43e583687:0330b65c-c5c8-4053-9e10-63d27ffc8c9b",
+          "title": "Blender Learning Roadmap and Skill Candidates",
+          "chars": 1124,
+          "score": 0.6110303600918002
+        },
+        {
+          "ref": "297a8d22-c6cd-4487-a8c3-cab43e583687:5e6c4c27-5722-415d-9ba2-d3f4d7cf6c65",
+          "title": "Blender Extensions Selection Policy",
+          "chars": 1170,
+          "score": 0.5559198921061023
+        }
+      ]
+    },
+    {
+      "id": "unsupported-certification",
+      "expected": "unsupported",
+      "answerable": false,
+      "confident": false,
+      "no_answer": false,
+      "decision": "verify",
+      "decision_reason": "A reported error, partial result, or unavailable component requires verification.",
+      "search_event_id": 175379,
+      "content_incomplete": true,
+      "citations": [
+        {
+          "ref": "297a8d22-c6cd-4487-a8c3-cab43e583687:c8062ce1-b194-4cc8-9f89-f190c20e6247",
+          "title": "Blender extension catalog — 2026-11-15",
+          "chars": 2000,
+          "score": 0.5104012793541799
+        }
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "id": "automation",
+      "query": "In background Blender, why can a view3d operator fail despite valid selection, and how should a copied object receive an independent mesh?",
+      "expected": "supported",
+      "status": "PASS",
+      "search_event_id": 175380,
+      "checks": [
+        {
+          "topic": "blender.python",
+          "ref": "297a8d22-c6cd-4487-a8c3-cab43e583687:a829ec15-cef5-4a99-80ef-5f319b33c9fa",
+          "full_readback_verified": true,
+          "claims_found": [
+            {
+              "text": "poll()",
+              "found": true
+            },
+            {
+              "text": "original.data.copy()",
+              "found": true
+            },
+            {
+              "text": "not a synthetic viewport",
+              "found": true
+            }
+          ]
+        }
+      ],
+      "automatic_decision": "verify",
+      "automatic_answerable": false,
+      "manual_review": "Matched exact full source content; retrieval score is not the acceptance check."
+    },
+    {
+      "id": "units-zh",
+      "query": "在 Blender 5.1.2 中，只把 scene.unit_settings.scale_length 改成 0.01，会把导出 GLB 尺寸缩小到百分之一吗？",
+      "expected": "supported",
+      "status": "PASS",
+      "search_event_id": 175374,
+      "checks": [
+        {
+          "topic": "blender.calibration",
+          "ref": "297a8d22-c6cd-4487-a8c3-cab43e583687:e97452a3-591b-4112-b4fc-cd36f6c9acff",
+          "full_readback_verified": true,
+          "claims_found": [
+            {
+              "text": "scale_length",
+              "found": true
+            },
+            {
+              "text": "0.01",
+              "found": true
+            },
+            {
+              "text": "size unchanged",
+              "found": true
+            }
+          ]
+        }
+      ],
+      "automatic_decision": "verify",
+      "automatic_answerable": false,
+      "manual_review": "Matched exact full source content; retrieval score is not the acceptance check."
+    },
+    {
+      "id": "pbr",
+      "query": "Which glTF texture channels contain roughness and metallic data, and should those maps use non-color interpretation?",
+      "expected": "supported",
+      "status": "PASS",
+      "search_event_id": 175378,
+      "checks": [
+        {
+          "topic": "blender.materials",
+          "ref": "297a8d22-c6cd-4487-a8c3-cab43e583687:dfa13110-b887-48f1-9f37-7a296569e6a9",
+          "full_readback_verified": true,
+          "claims_found": [
+            {
+              "text": "roughness in G",
+              "found": true
+            },
+            {
+              "text": "metallic in B",
+              "found": true
+            },
+            {
+              "text": "non-color",
+              "found": true
+            }
+          ]
+        }
+      ],
+      "automatic_decision": "verify",
+      "automatic_answerable": false,
+      "manual_review": "Matched exact full source content; retrieval score is not the acceptance check."
+    },
+    {
+      "id": "animation",
+      "query": "In the Blender 5.1.2 calibration at 10 FPS, where do frame 1 and frame 11 samples start and end, and what time is their midpoint?",
+      "expected": "supported",
+      "status": "PASS",
+      "search_event_id": 175375,
+      "checks": [
+        {
+          "topic": "blender.calibration",
+          "ref": "297a8d22-c6cd-4487-a8c3-cab43e583687:e97452a3-591b-4112-b4fc-cd36f6c9acff",
+          "full_readback_verified": true,
+          "claims_found": [
+            {
+              "text": "0.1–1.1",
+              "found": true
+            },
+            {
+              "text": "X≈4.5",
+              "found": true
+            },
+            {
+              "text": "10 FPS",
+              "found": true
+            }
+          ]
+        }
+      ],
+      "automatic_decision": "verify",
+      "automatic_answerable": false,
+      "manual_review": "Matched exact full source content; retrieval score is not the acceptance check.",
+      "inference": "The time midpoint 0.6 seconds is arithmetic from the documented 0.1 and 1.1 second endpoints."
+    },
+    {
+      "id": "hifi",
+      "query": "Which HiFi Architecture Builder release was listed on 2026-11-15, when was it published, and was Blender 5.1.2 background execution tested?",
+      "expected": "supported",
+      "status": "PASS",
+      "search_event_id": 175373,
+      "checks": [
+        {
+          "topic": "blender.extension-catalog",
+          "ref": "297a8d22-c6cd-4487-a8c3-cab43e583687:c8062ce1-b194-4cc8-9f89-f190c20e6247",
+          "full_readback_verified": true,
+          "claims_found": [
+            {
+              "text": "4.6.7",
+              "found": true
+            },
+            {
+              "text": "2026-11-12",
+              "found": true
+            },
+            {
+              "text": "background operation and target export have not been tested",
+              "found": true
+            }
+          ]
+        }
+      ],
+      "automatic_decision": "verify",
+      "automatic_answerable": false,
+      "manual_review": "Matched exact full source content; retrieval score is not the acceptance check."
+    },
+    {
+      "id": "texel",
+      "query": "Does the official Blender Extensions build of Texel Density Checker 2026.1.1 include a C++ backend?",
+      "expected": "supported",
+      "status": "PASS",
+      "search_event_id": 175376,
+      "checks": [
+        {
+          "topic": "blender.extension-catalog",
+          "ref": "297a8d22-c6cd-4487-a8c3-cab43e583687:c8062ce1-b194-4cc8-9f89-f190c20e6247",
+          "full_readback_verified": true,
+          "claims_found": [
+            {
+              "text": "2026.1.1",
+              "found": true
+            },
+            {
+              "text": "no C++ backend",
+              "found": true
+            }
+          ]
+        }
+      ],
+      "automatic_decision": "verify",
+      "automatic_answerable": false,
+      "manual_review": "Matched exact full source content; retrieval score is not the acceptance check."
+    },
+    {
+      "id": "qa-zh",
+      "query": "GLB 通过 Khronos validator，就能证明模型外观正确、互动可用，而且手机帧率达标吗？",
+      "expected": "supported",
+      "status": "PASS",
+      "search_event_id": 175381,
+      "checks": [
+        {
+          "topic": "blender.qa",
+          "ref": "297a8d22-c6cd-4487-a8c3-cab43e583687:07d791a3-15d6-47bd-a5ca-d6f33ff23db6",
+          "full_readback_verified": true,
+          "claims_found": [
+            {
+              "text": "does not certify design",
+              "found": true
+            },
+            {
+              "text": "usable interaction",
+              "found": true
+            },
+            {
+              "text": "observed performance",
+              "found": true
+            }
+          ]
+        }
+      ],
+      "automatic_decision": "verify",
+      "automatic_answerable": false,
+      "manual_review": "Matched exact full source content; retrieval score is not the acceptance check."
+    },
+    {
+      "id": "skill-candidates",
+      "query": "Are blender:python-modeling and blender:extension-audit registered and enabled Skills after this Blender knowledge update?",
+      "expected": "supported",
+      "status": "PASS",
+      "search_event_id": 175377,
+      "checks": [
+        {
+          "topic": "blender.roadmap",
+          "ref": "297a8d22-c6cd-4487-a8c3-cab43e583687:0330b65c-c5c8-4053-9e10-63d27ffc8c9b",
+          "full_readback_verified": true,
+          "claims_found": [
+            {
+              "text": "blender:python-modeling",
+              "found": true
+            },
+            {
+              "text": "blender:extension-audit",
+              "found": true
+            },
+            {
+              "text": "not registered or enabled",
+              "found": true
+            }
+          ]
+        }
+      ],
+      "automatic_decision": "verify",
+      "automatic_answerable": false,
+      "manual_review": "Matched exact full source content; retrieval score is not the acceptance check."
+    },
+    {
+      "id": "unsupported-certification",
+      "query": "What is the official Blender 9.9 quantum mall safety certificate number, and which authority issued it?",
+      "expected": "unsupported",
+      "status": "NO_SUPPORT_CONFIRMED",
+      "search_event_id": 175379,
+      "requested_fact_found": false,
+      "automatic_decision": "verify",
+      "automatic_answerable": false,
+      "automatic_no_answer": false,
+      "limitation": "The server returned a topical citation with no_answer=false and decision=verify. This does not establish a reliable explicit no-answer classifier; reject the unsupported claim after source inspection."
+    }
+  ],
+  "optional_reranking_disabled_retests": [
+    {
+      "id": "pbr",
+      "search_event_id": 175392,
+      "decision": "verify",
+      "no_answer": false,
+      "answerable": false,
+      "confident": false,
+      "degraded": [],
+      "citation_refs": [
+        "297a8d22-c6cd-4487-a8c3-cab43e583687:dfa13110-b887-48f1-9f37-7a296569e6a9"
+      ]
+    },
+    {
+      "id": "animation",
+      "search_event_id": 175393,
+      "decision": "verify",
+      "no_answer": false,
+      "answerable": false,
+      "confident": false,
+      "degraded": [],
+      "citation_refs": [
+        "297a8d22-c6cd-4487-a8c3-cab43e583687:e97452a3-591b-4112-b4fc-cd36f6c9acff"
+      ]
+    },
+    {
+      "id": "unsupported-certification",
+      "search_event_id": 175391,
+      "decision": "verify",
+      "no_answer": false,
+      "answerable": false,
+      "confident": false,
+      "degraded": [],
+      "citation_refs": [
+        "297a8d22-c6cd-4487-a8c3-cab43e583687:c8062ce1-b194-4cc8-9f89-f190c20e6247"
+      ]
+    }
+  ],
+  "feedback": [
+    {
+      "test_id": "automation",
+      "search_event_id": 175380,
+      "helpful": true,
+      "ok": true
+    },
+    {
+      "test_id": "units-zh",
+      "search_event_id": 175374,
+      "helpful": true,
+      "ok": true
+    },
+    {
+      "test_id": "pbr",
+      "search_event_id": 175392,
+      "helpful": true,
+      "ok": true
+    },
+    {
+      "test_id": "animation",
+      "search_event_id": 175393,
+      "helpful": true,
+      "ok": true
+    },
+    {
+      "test_id": "hifi",
+      "search_event_id": 175373,
+      "helpful": true,
+      "ok": true
+    },
+    {
+      "test_id": "texel",
+      "search_event_id": 175376,
+      "helpful": true,
+      "ok": true
+    },
+    {
+      "test_id": "qa-zh",
+      "search_event_id": 175381,
+      "helpful": true,
+      "ok": true
+    },
+    {
+      "test_id": "skill-candidates",
+      "search_event_id": 175377,
+      "helpful": true,
+      "ok": true
+    },
+    {
+      "test_id": "unsupported-certification",
+      "search_event_id": 175391,
+      "helpful": false,
+      "ok": true
+    }
+  ],
+  "limits": [
+    "Initial compact responses marked content incomplete; optional rerank advisory reported busy/timeouts. Full exact source reads supplied the actual grounding checks.",
+    "Retests used full output, one citation and optional reranking disabled; no relevance/confidence thresholds were lowered.",
+    "All tested server decisions required verification. Positive source coverage is not an automatic-answer acceptance claim.",
+    "The unsupported certificate question had no supporting fact in its citations, but no_answer was false. Inspect sources; do not treat a related document or score as proof.",
+    "Child UUID reads resolve to canonical parents. Creation receipts and parent metadata establish six chunks; their bodies were not independently exposed by the exact-read API."
+  ]
+}

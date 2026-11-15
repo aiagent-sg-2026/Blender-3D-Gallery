@@ -1,0 +1,31 @@
+{
+  "kbid": "blender",
+  "kb_id": "297a8d22-c6cd-4487-a8c3-cab43e583687",
+  "kbcid": "blender.extensions.p0-python",
+  "item_id": "3e4b02ee-26c1-4567-9b0e-17863b4a583a",
+  "action": "created",
+  "write_committed": true,
+  "visibility": "user",
+  "readback_matches": true,
+  "source": "workspace-document:docs/blender/p0-extensions.md#sha256=19b60c0176a1a833172f797a0b244ec62c467e7ccbbf772a06e34996435e98a6",
+  "document_hashes": {
+    "docs/blender/p0-extensions.md": "19b60c0176a1a833172f797a0b244ec62c467e7ccbbf772a06e34996435e98a6",
+    "docs/blender/verification/p0-extensions/background.json": "39e577f8747ebb2e0ef45b1b2a23694c7da56a34c3f4bb8dad2bf8f6ddc11c96",
+    "docs/blender/verification/p0-extensions/ui.json": "1f42d2f3b7f11e5a73e24310fcf8e01b28eb38fdfe88fd151c08d3a158cd4f3d",
+    "docs/blender/verification/p0-extensions/persistence.json": "f50d65513d5408a8b5afa367634139a4736fa70a82c96d798131fd2e7b5eb343"
+  },
+  "checked_at_utc": "2026-11-15 04:13:07 UTC",
+  "retrieval": {
+    "search_event_id": 175411,
+    "new_record_retrieved": true,
+    "exact_source_manually_verified": true,
+    "score_is_not_proof": true,
+    "feedback_ok": true
+  },
+  "scope": "Version-specific tested Python workflows and limitations; does not replace the initial historical catalog or assert universal installation state.",
+  "workflow": {
+    "hub": "kb-mcp:coding-skills 0.2.1",
+    "procedure": "engineering:search-experiment-verify-apply 1.1.0",
+    "phases": "source review, isolated registration/fixtures, current-instance calls, fresh-process readback, independent GLB validation"
+  }
+}

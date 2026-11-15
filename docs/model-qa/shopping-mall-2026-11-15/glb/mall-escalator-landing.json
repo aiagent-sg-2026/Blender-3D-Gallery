@@ -1,0 +1,314 @@
+{
+  "id": "mall-escalator-landing",
+  "sha256": "aa2632a479f3e474b38413667f01c308d0a542325e451660f0e67be5384bc63d",
+  "status": "SCANNED",
+  "validation": {
+    "numErrors": 0,
+    "numWarnings": 0,
+    "numInfos": 10,
+    "numHints": 0,
+    "messages": [
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/3/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/4/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/5/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/6/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/7/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "NODE_EMPTY",
+        "message": "Empty node encountered.",
+        "severity": 2,
+        "pointer": "/nodes/0"
+      },
+      {
+        "code": "NODE_EMPTY",
+        "message": "Empty node encountered.",
+        "severity": 2,
+        "pointer": "/nodes/1"
+      },
+      {
+        "code": "NODE_EMPTY",
+        "message": "Empty node encountered.",
+        "severity": 2,
+        "pointer": "/nodes/2"
+      },
+      {
+        "code": "NODE_EMPTY",
+        "message": "Empty node encountered.",
+        "severity": 2,
+        "pointer": "/nodes/3"
+      },
+      {
+        "code": "NODE_EMPTY",
+        "message": "Empty node encountered.",
+        "severity": 2,
+        "pointer": "/nodes/4"
+      }
+    ],
+    "truncated": false
+  },
+  "externalResources": [],
+  "metrics": {
+    "bytes": 83352,
+    "scenes": 1,
+    "defaultScene": 0,
+    "defaultSceneHasMesh": true,
+    "inspectedScene": 0,
+    "meshOccurrences": 8,
+    "primitives": 8,
+    "triangles": 1616,
+    "images": 0,
+    "materials": 5,
+    "dimensions": [
+      1.1999999843537807,
+      0.03000000020256266,
+      1.2000000476837158
+    ],
+    "bounds": {
+      "min": [
+        -0.5999999921768904,
+        0,
+        -0.6000000238418579
+      ],
+      "max": [
+        0.5999999921768904,
+        0.03000000020256266,
+        0.6000000238418579
+      ]
+    },
+    "exactZeroAreaTriangles": 0,
+    "nearZeroAreaTriangles": 0
+  },
+  "primitives": [
+    {
+      "node": "MODULE_AccessPlate_Front",
+      "nodeIndex": 5,
+      "meshIndex": 0,
+      "primitive": 0,
+      "material": 0,
+      "vertices": 624,
+      "triangles": 412,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "MODULE_AccessPlate_Rear",
+      "nodeIndex": 6,
+      "meshIndex": 1,
+      "primitive": 0,
+      "material": 0,
+      "vertices": 624,
+      "triangles": 412,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "MODULE_CombTransition",
+      "nodeIndex": 7,
+      "meshIndex": 2,
+      "primitive": 0,
+      "material": 1,
+      "vertices": 672,
+      "triangles": 444,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "MODULE_FloorThreshold",
+      "nodeIndex": 8,
+      "meshIndex": 3,
+      "primitive": 0,
+      "material": 2,
+      "vertices": 216,
+      "triangles": 108,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "MODULE_SideTrim_Left",
+      "nodeIndex": 9,
+      "meshIndex": 4,
+      "primitive": 0,
+      "material": 2,
+      "vertices": 216,
+      "triangles": 108,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "MODULE_SideTrim_Right",
+      "nodeIndex": 10,
+      "meshIndex": 5,
+      "primitive": 0,
+      "material": 2,
+      "vertices": 216,
+      "triangles": 108,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "MODULE_SupportTray",
+      "nodeIndex": 11,
+      "meshIndex": 6,
+      "primitive": 0,
+      "material": 3,
+      "vertices": 24,
+      "triangles": 12,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "MODULE_YellowMarker",
+      "nodeIndex": 12,
+      "meshIndex": 7,
+      "primitive": 0,
+      "material": 4,
+      "vertices": 24,
+      "triangles": 12,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    }
+  ],
+  "images": [],
+  "materials": [
+    {
+      "name": "Satin aluminium access plates",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.38132601976394653,
+          0.4507857859134674,
+          0.4677838087081909,
+          1
+        ],
+        "metallicFactor": 0.6800000071525574,
+        "roughnessFactor": 0.3400000035762787
+      }
+    },
+    {
+      "name": "Cast aluminium comb transition",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.2581828534603119,
+          0.30946892499923706,
+          0.3277781009674072,
+          1
+        ],
+        "metallicFactor": 0.550000011920929,
+        "roughnessFactor": 0.4000000059604645
+      }
+    },
+    {
+      "name": "Brushed stainless side trims",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.13563333451747894,
+          0.18447498977184296,
+          0.2015562504529953,
+          1
+        ],
+        "metallicFactor": 0.7200000286102295,
+        "roughnessFactor": 0.30000001192092896
+      }
+    },
+    {
+      "name": "Charcoal recessed support tray",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.013702083379030228,
+          0.020288562402129173,
+          0.023153366521000862,
+          1
+        ],
+        "metallicFactor": 0.15000000596046448,
+        "roughnessFactor": 0.6499999761581421
+      }
+    },
+    {
+      "name": "Safety yellow visual marker",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.8307698965072632,
+          0.44520118832588196,
+          0.020288562402129173,
+          1
+        ],
+        "metallicFactor": 0.10000000149011612,
+        "roughnessFactor": 0.44999998807907104
+      }
+    }
+  ],
+  "extensionsRequired": [],
+  "interpretation": "Bind/default-pose structural measurements; no rendered appearance or browser/device performance acceptance."
+}

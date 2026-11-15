@@ -1,0 +1,810 @@
+{
+  "id": "mall-floor-tile-module",
+  "blender": "5.1.2",
+  "modules": {
+    "bl_ext.user_default.texel_density_checker": "2026.1.1",
+    "bl_ext.user_default.print3d_toolbox": "1.5.0"
+  },
+  "phases": {
+    "source": {
+      "status": "SCANNED",
+      "mapping": {
+        "method": "exact catalog root",
+        "root": "ASSET_MallFloorTile"
+      },
+      "file_version": [
+        4,
+        0,
+        36
+      ],
+      "declared_scene_scale": 1.0,
+      "source_geometry_count": 5,
+      "meshes": [
+        {
+          "name": "MODULE_GroutBed",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 88,
+          "triangles": 172,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [],
+          "reference_1024_uv_statistics": null,
+          "modifiers_evaluated": [],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "MODULE_Tile_1",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 56,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 429.5302142656174,
+            "max": 3645.557470251321,
+            "uv_weighted_mean": 1805.7073482115684,
+            "positive_uv_area": 1.3125584537423765,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL"
+          ],
+          "density": [
+            {
+              "material": "Honed ivory terrazzo original seed 421",
+              "image": "terrazzo-original.png",
+              "width": 512,
+              "height": 512,
+              "packed": true,
+              "image_source": "FILE",
+              "pixels_accessible": true,
+              "path": "//../textures/terrazzo-original.png",
+              "uv_layer": "UVMap",
+              "mapping": "implicit active render UV",
+              "status": "MEASURED",
+              "density_px_per_m": 859.555,
+              "oracle": {
+                "min": 859.060396263758,
+                "max": 1125.2900072859884,
+                "uv_weighted_mean": 859.5551629101105,
+                "positive_uv_area": 0.9999991695966715,
+                "zero_uv_faces": 0,
+                "nonfinite_uv_loops": 0
+              },
+              "method": "Texel Density operator on assigned material faces; 1 world unit = 1 exported metre"
+            }
+          ],
+          "density_status": "IMAGE_TEXTURE_OBSERVED"
+        },
+        {
+          "name": "MODULE_Tile_2",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 56,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 429.5302142656174,
+            "max": 3645.4195595097426,
+            "uv_weighted_mean": 1805.7073481723999,
+            "positive_uv_area": 1.3125584537423765,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL"
+          ],
+          "density": [
+            {
+              "material": "Honed ivory terrazzo original seed 421",
+              "image": "terrazzo-original.png",
+              "width": 512,
+              "height": 512,
+              "packed": true,
+              "image_source": "FILE",
+              "pixels_accessible": true,
+              "path": "//../textures/terrazzo-original.png",
+              "uv_layer": "UVMap",
+              "mapping": "implicit active render UV",
+              "status": "MEASURED",
+              "density_px_per_m": 859.555,
+              "oracle": {
+                "min": 859.060396263758,
+                "max": 1125.2880789430283,
+                "uv_weighted_mean": 859.5551629101104,
+                "positive_uv_area": 0.9999991695966715,
+                "zero_uv_faces": 0,
+                "nonfinite_uv_loops": 0
+              },
+              "method": "Texel Density operator on assigned material faces; 1 world unit = 1 exported metre"
+            }
+          ],
+          "density_status": "IMAGE_TEXTURE_OBSERVED"
+        },
+        {
+          "name": "MODULE_Tile_3",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 56,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 429.5302142656174,
+            "max": 3645.4159720862917,
+            "uv_weighted_mean": 1805.7073482057149,
+            "positive_uv_area": 1.3125584537423765,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL"
+          ],
+          "density": [
+            {
+              "material": "Honed ivory terrazzo original seed 421",
+              "image": "terrazzo-original.png",
+              "width": 512,
+              "height": 512,
+              "packed": true,
+              "image_source": "FILE",
+              "pixels_accessible": true,
+              "path": "//../textures/terrazzo-original.png",
+              "uv_layer": "UVMap",
+              "mapping": "implicit active render UV",
+              "status": "MEASURED",
+              "density_px_per_m": 859.555,
+              "oracle": {
+                "min": 859.060396263758,
+                "max": 1125.2859486188577,
+                "uv_weighted_mean": 859.5551629101104,
+                "positive_uv_area": 0.9999991695966715,
+                "zero_uv_faces": 0,
+                "nonfinite_uv_loops": 0
+              },
+              "method": "Texel Density operator on assigned material faces; 1 world unit = 1 exported metre"
+            }
+          ],
+          "density_status": "IMAGE_TEXTURE_OBSERVED"
+        },
+        {
+          "name": "MODULE_Tile_4",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 56,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": null,
+          "weld_tolerance_m": null,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 429.5302142656174,
+            "max": 3645.4802534281666,
+            "uv_weighted_mean": 1805.7073481627656,
+            "positive_uv_area": 1.3125584537423765,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [
+            "BEVEL"
+          ],
+          "density": [
+            {
+              "material": "Honed ivory terrazzo original seed 421",
+              "image": "terrazzo-original.png",
+              "width": 512,
+              "height": 512,
+              "packed": true,
+              "image_source": "FILE",
+              "pixels_accessible": true,
+              "path": "//../textures/terrazzo-original.png",
+              "uv_layer": "UVMap",
+              "mapping": "implicit active render UV",
+              "status": "MEASURED",
+              "density_px_per_m": 859.555,
+              "oracle": {
+                "min": 859.060396263758,
+                "max": 1125.2921376178426,
+                "uv_weighted_mean": 859.5551629101105,
+                "positive_uv_area": 0.9999991695966715,
+                "zero_uv_faces": 0,
+                "nonfinite_uv_loops": 0
+              },
+              "method": "Texel Density operator on assigned material faces; 1 world unit = 1 exported metre"
+            }
+          ],
+          "density_status": "IMAGE_TEXTURE_OBSERVED"
+        }
+      ]
+    },
+    "glb": {
+      "status": "SCANNED",
+      "mapping": {
+        "method": "exact catalog root",
+        "root": "ASSET_MallFloorTile"
+      },
+      "file_version": [
+        5,
+        1,
+        16
+      ],
+      "declared_scene_scale": 1.0,
+      "source_geometry_count": 5,
+      "meshes": [
+        {
+          "name": "MODULE_GroutBed",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 200,
+          "triangles": 172,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 184,
+            "boundary_edges": 184,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "weld_tolerance_m": 1e-07,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "184",
+              "indices_count": 184
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [],
+          "reference_1024_uv_statistics": null,
+          "modifiers_evaluated": [],
+          "density": [],
+          "density_status": "N_A_NO_IMAGE_TEXTURE"
+        },
+        {
+          "name": "MODULE_Tile_1",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 216,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 216,
+            "boundary_edges": 216,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "weld_tolerance_m": 1e-07,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "216",
+              "indices_count": 216
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 429.53020785220593,
+            "max": 3889.959341018117,
+            "uv_weighted_mean": 1805.6706676443093,
+            "positive_uv_area": 1.312493515508266,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [],
+          "density": [
+            {
+              "material": "Honed ivory terrazzo original seed 421",
+              "image": "terrazzo-original",
+              "width": 512,
+              "height": 512,
+              "packed": true,
+              "image_source": "FILE",
+              "pixels_accessible": true,
+              "path": "",
+              "uv_layer": "UVMap",
+              "mapping": "implicit active render UV",
+              "status": "MEASURED",
+              "density_px_per_m": 859.555,
+              "oracle": {
+                "min": 859.0603931572616,
+                "max": 1265.8888214162052,
+                "uv_weighted_mean": 859.5552201364005,
+                "positive_uv_area": 0.9999991563948931,
+                "zero_uv_faces": 0,
+                "nonfinite_uv_loops": 0
+              },
+              "method": "Texel Density operator on assigned material faces; 1 world unit = 1 exported metre"
+            }
+          ],
+          "density_status": "IMAGE_TEXTURE_OBSERVED"
+        },
+        {
+          "name": "MODULE_Tile_2",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 216,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 216,
+            "boundary_edges": 216,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "weld_tolerance_m": 1e-07,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "216",
+              "indices_count": 216
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 429.53020785220593,
+            "max": 3889.959341018117,
+            "uv_weighted_mean": 1805.6706676244355,
+            "positive_uv_area": 1.312493515508266,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [],
+          "density": [
+            {
+              "material": "Honed ivory terrazzo original seed 421",
+              "image": "terrazzo-original",
+              "width": 512,
+              "height": 512,
+              "packed": true,
+              "image_source": "FILE",
+              "pixels_accessible": true,
+              "path": "",
+              "uv_layer": "UVMap",
+              "mapping": "implicit active render UV",
+              "status": "MEASURED",
+              "density_px_per_m": 859.555,
+              "oracle": {
+                "min": 859.0603931572616,
+                "max": 1265.8888214162052,
+                "uv_weighted_mean": 859.5552201364005,
+                "positive_uv_area": 0.9999991563948931,
+                "zero_uv_faces": 0,
+                "nonfinite_uv_loops": 0
+              },
+              "method": "Texel Density operator on assigned material faces; 1 world unit = 1 exported metre"
+            }
+          ],
+          "density_status": "IMAGE_TEXTURE_OBSERVED"
+        },
+        {
+          "name": "MODULE_Tile_3",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 216,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 216,
+            "boundary_edges": 216,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "weld_tolerance_m": 1e-07,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "216",
+              "indices_count": 216
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 429.53020785220593,
+            "max": 3889.9073300764358,
+            "uv_weighted_mean": 1805.6706676361393,
+            "positive_uv_area": 1.312493515508266,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [],
+          "density": [
+            {
+              "material": "Honed ivory terrazzo original seed 421",
+              "image": "terrazzo-original",
+              "width": 512,
+              "height": 512,
+              "packed": true,
+              "image_source": "FILE",
+              "pixels_accessible": true,
+              "path": "",
+              "uv_layer": "UVMap",
+              "mapping": "implicit active render UV",
+              "status": "MEASURED",
+              "density_px_per_m": 859.555,
+              "oracle": {
+                "min": 859.0603931572616,
+                "max": 1265.8888214162052,
+                "uv_weighted_mean": 859.5552201364005,
+                "positive_uv_area": 0.9999991563948931,
+                "zero_uv_faces": 0,
+                "nonfinite_uv_loops": 0
+              },
+              "method": "Texel Density operator on assigned material faces; 1 world unit = 1 exported metre"
+            }
+          ],
+          "density_status": "IMAGE_TEXTURE_OBSERVED"
+        },
+        {
+          "name": "MODULE_Tile_4",
+          "source_type": "MESH",
+          "status": "SCANNED",
+          "vertices": 216,
+          "triangles": 108,
+          "exact_zero_area_triangles": 0,
+          "nonfinite_vertices": 0,
+          "raw_topology": {
+            "non_manifold_edges": 216,
+            "boundary_edges": 216,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "position_weld_diagnostic": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "inconsistent_winding_edges": 0
+          },
+          "weld_tolerance_m": 1e-07,
+          "print3d_solid": [
+            {
+              "name": "Non-manifold Edges",
+              "value": "216",
+              "indices_count": 216
+            },
+            {
+              "name": "Bad Contiguous Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "print3d_small_or_zero": [
+            {
+              "name": "Zero Faces",
+              "value": "0",
+              "indices_count": 0
+            },
+            {
+              "name": "Zero Edges",
+              "value": "0",
+              "indices_count": 0
+            }
+          ],
+          "small_length_threshold_m": 0.0001,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "reference_1024_uv_statistics": {
+            "min": 429.53020785220593,
+            "max": 3889.9073300764358,
+            "uv_weighted_mean": 1805.6706676162655,
+            "positive_uv_area": 1.312493515508266,
+            "zero_uv_faces": 0,
+            "nonfinite_uv_loops": 0
+          },
+          "modifiers_evaluated": [],
+          "density": [
+            {
+              "material": "Honed ivory terrazzo original seed 421",
+              "image": "terrazzo-original",
+              "width": 512,
+              "height": 512,
+              "packed": true,
+              "image_source": "FILE",
+              "pixels_accessible": true,
+              "path": "",
+              "uv_layer": "UVMap",
+              "mapping": "implicit active render UV",
+              "status": "MEASURED",
+              "density_px_per_m": 859.555,
+              "oracle": {
+                "min": 859.0603931572616,
+                "max": 1265.8888214162052,
+                "uv_weighted_mean": 859.5552201364005,
+                "positive_uv_area": 0.9999991563948931,
+                "zero_uv_faces": 0,
+                "nonfinite_uv_loops": 0
+              },
+              "method": "Texel Density operator on assigned material faces; 1 world unit = 1 exported metre"
+            }
+          ],
+          "density_status": "IMAGE_TEXTURE_OBSERVED"
+        }
+      ]
+    }
+  },
+  "status": "SCANNED"
+}

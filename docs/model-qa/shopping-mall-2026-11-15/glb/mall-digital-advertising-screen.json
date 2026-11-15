@@ -1,0 +1,521 @@
+{
+  "id": "mall-digital-advertising-screen",
+  "sha256": "b7240c3464221e18caa9897dcc6a67270a7c6cafee04e81030f462ca9f14a757",
+  "status": "SCANNED",
+  "validation": {
+    "numErrors": 0,
+    "numWarnings": 0,
+    "numInfos": 18,
+    "numHints": 0,
+    "messages": [
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/1/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/2/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/3/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/4/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/5/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/6/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/7/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/8/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/9/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/10/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/11/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/13/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/14/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/15/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/16/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "NODE_EMPTY",
+        "message": "Empty node encountered.",
+        "severity": 2,
+        "pointer": "/nodes/0"
+      },
+      {
+        "code": "IMAGE_NPOT_DIMENSIONS",
+        "message": "Image has non-power-of-two dimensions: 1024x576.",
+        "severity": 2,
+        "pointer": "/images/0"
+      }
+    ],
+    "truncated": false
+  },
+  "externalResources": [],
+  "metrics": {
+    "bytes": 665728,
+    "scenes": 2,
+    "defaultScene": 1,
+    "defaultSceneHasMesh": true,
+    "inspectedScene": 1,
+    "meshOccurrences": 17,
+    "primitives": 17,
+    "triangles": 5116,
+    "images": 1,
+    "materials": 5,
+    "dimensions": [
+      1.2800000086426735,
+      0.7549999728798866,
+      0.08500000395250869
+    ],
+    "bounds": {
+      "min": [
+        -0.6400000043213367,
+        -0.3774999864399433,
+        -1.195793871691317e-9
+      ],
+      "max": [
+        0.6400000043213367,
+        0.3774999864399433,
+        0.08500000275671482
+      ]
+    },
+    "exactZeroAreaTriangles": 0,
+    "nearZeroAreaTriangles": 0
+  },
+  "primitives": [
+    {
+      "node": "MODULE_BezelBottom",
+      "nodeIndex": 1,
+      "meshIndex": 0,
+      "primitive": 0,
+      "material": 0,
+      "vertices": 384,
+      "triangles": 188,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "MODULE_BezelLeft",
+      "nodeIndex": 2,
+      "meshIndex": 1,
+      "primitive": 0,
+      "material": 0,
+      "vertices": 384,
+      "triangles": 188,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "MODULE_BezelRight",
+      "nodeIndex": 3,
+      "meshIndex": 2,
+      "primitive": 0,
+      "material": 0,
+      "vertices": 384,
+      "triangles": 188,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "MODULE_BezelTop",
+      "nodeIndex": 4,
+      "meshIndex": 3,
+      "primitive": 0,
+      "material": 0,
+      "vertices": 384,
+      "triangles": 188,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "MODULE_MountFastenerLeftBottom",
+      "nodeIndex": 5,
+      "meshIndex": 4,
+      "primitive": 0,
+      "material": 1,
+      "vertices": 130,
+      "triangles": 124,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "MODULE_MountFastenerLeftTop",
+      "nodeIndex": 6,
+      "meshIndex": 5,
+      "primitive": 0,
+      "material": 1,
+      "vertices": 130,
+      "triangles": 124,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "MODULE_MountFastenerRightBottom",
+      "nodeIndex": 7,
+      "meshIndex": 6,
+      "primitive": 0,
+      "material": 1,
+      "vertices": 130,
+      "triangles": 124,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "MODULE_MountFastenerRightTop",
+      "nodeIndex": 8,
+      "meshIndex": 7,
+      "primitive": 0,
+      "material": 1,
+      "vertices": 130,
+      "triangles": 124,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "MODULE_MountRailLeft",
+      "nodeIndex": 9,
+      "meshIndex": 8,
+      "primitive": 0,
+      "material": 2,
+      "vertices": 384,
+      "triangles": 188,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "MODULE_MountRailRight",
+      "nodeIndex": 10,
+      "meshIndex": 9,
+      "primitive": 0,
+      "material": 2,
+      "vertices": 384,
+      "triangles": 188,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "MODULE_RearHousing",
+      "nodeIndex": 11,
+      "meshIndex": 10,
+      "primitive": 0,
+      "material": 3,
+      "vertices": 384,
+      "triangles": 188,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "MODULE_RearServicePanel",
+      "nodeIndex": 12,
+      "meshIndex": 11,
+      "primitive": 0,
+      "material": 0,
+      "vertices": 384,
+      "triangles": 188,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "MODULE_ScreenContent",
+      "nodeIndex": 13,
+      "meshIndex": 12,
+      "primitive": 0,
+      "material": 4,
+      "vertices": 384,
+      "triangles": 188,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "MODULE_VentGrilleLower",
+      "nodeIndex": 14,
+      "meshIndex": 13,
+      "primitive": 0,
+      "material": 3,
+      "vertices": 2784,
+      "triangles": 1276,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "MODULE_VentGrilleUpper",
+      "nodeIndex": 15,
+      "meshIndex": 14,
+      "primitive": 0,
+      "material": 3,
+      "vertices": 2784,
+      "triangles": 1276,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "MODULE_VentRecessLower",
+      "nodeIndex": 16,
+      "meshIndex": 15,
+      "primitive": 0,
+      "material": 1,
+      "vertices": 384,
+      "triangles": 188,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "MODULE_VentRecessUpper",
+      "nodeIndex": 17,
+      "meshIndex": 16,
+      "primitive": 0,
+      "material": 1,
+      "vertices": 384,
+      "triangles": 188,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    }
+  ],
+  "images": [
+    {
+      "bufferView": 43,
+      "mimeType": "image/png",
+      "name": "screen-artwork"
+    }
+  ],
+  "materials": [
+    {
+      "name": "Charcoal anodized bezel",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.012983032502233982,
+          0.016807375475764275,
+          0.020288562402129173,
+          1
+        ],
+        "metallicFactor": 0.44999998807907104,
+        "roughnessFactor": 0.36000001430511475
+      }
+    },
+    {
+      "name": "Vent recess and screen edge",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.0030352699104696512,
+          0.0043914420530200005,
+          0.005605391692370176,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.6499999761581421
+      }
+    },
+    {
+      "name": "Mounting rail satin metal",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.15292614698410034,
+          0.17464740574359894,
+          0.19120168685913086,
+          1
+        ],
+        "metallicFactor": 0.699999988079071,
+        "roughnessFactor": 0.36000001430511475
+      }
+    },
+    {
+      "name": "Satin graphite housing",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.0382043719291687,
+          0.04817182570695877,
+          0.05612849071621895,
+          1
+        ],
+        "metallicFactor": 0.25,
+        "roughnessFactor": 0.5199999809265137
+      }
+    },
+    {
+      "name": "Screen original replaceable artwork",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0.800000011920929
+      },
+      "emissiveTexture": {
+        "index": 0
+      }
+    }
+  ],
+  "extensionsRequired": [],
+  "interpretation": "Bind/default-pose structural measurements; no rendered appearance or browser/device performance acceptance."
+}

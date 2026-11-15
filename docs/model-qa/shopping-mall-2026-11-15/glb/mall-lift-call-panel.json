@@ -1,0 +1,415 @@
+{
+  "id": "mall-lift-call-panel",
+  "sha256": "b78f11cc2da1c3bffc4ca226a46a95b345120b7f955e3a71e7a4e632f52f2f7b",
+  "status": "SCANNED",
+  "validation": {
+    "numErrors": 0,
+    "numWarnings": 0,
+    "numInfos": 2,
+    "numHints": 0,
+    "messages": [
+      {
+        "code": "NODE_EMPTY",
+        "message": "Empty node encountered.",
+        "severity": 2,
+        "pointer": "/nodes/0"
+      },
+      {
+        "code": "NODE_EMPTY",
+        "message": "Empty node encountered.",
+        "severity": 2,
+        "pointer": "/nodes/1"
+      }
+    ],
+    "truncated": false
+  },
+  "externalResources": [],
+  "metrics": {
+    "bytes": 99924,
+    "scenes": 1,
+    "defaultScene": 0,
+    "defaultSceneHasMesh": true,
+    "inspectedScene": 0,
+    "meshOccurrences": 16,
+    "primitives": 16,
+    "triangles": 2608,
+    "images": 0,
+    "materials": 6,
+    "dimensions": [
+      0.14000000059604645,
+      0.3400000035762787,
+      0.034399998374283314
+    ],
+    "bounds": {
+      "min": [
+        -0.07000000029802322,
+        0,
+        0
+      ],
+      "max": [
+        0.07000000029802322,
+        0.3400000035762787,
+        0.034399998374283314
+      ]
+    },
+    "exactZeroAreaTriangles": 0,
+    "nearZeroAreaTriangles": 0
+  },
+  "primitives": [
+    {
+      "node": "MODULE_Bezel_Down",
+      "nodeIndex": 2,
+      "meshIndex": 0,
+      "primitive": 0,
+      "material": 0,
+      "vertices": 576,
+      "triangles": 384,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "MODULE_Bezel_Up",
+      "nodeIndex": 3,
+      "meshIndex": 1,
+      "primitive": 0,
+      "material": 0,
+      "vertices": 576,
+      "triangles": 384,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "MODULE_Fastener_00",
+      "nodeIndex": 4,
+      "meshIndex": 2,
+      "primitive": 0,
+      "material": 0,
+      "vertices": 192,
+      "triangles": 188,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "MODULE_Fastener_01",
+      "nodeIndex": 5,
+      "meshIndex": 3,
+      "primitive": 0,
+      "material": 0,
+      "vertices": 192,
+      "triangles": 188,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "MODULE_Fastener_10",
+      "nodeIndex": 6,
+      "meshIndex": 4,
+      "primitive": 0,
+      "material": 0,
+      "vertices": 192,
+      "triangles": 188,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "MODULE_Fastener_11",
+      "nodeIndex": 7,
+      "meshIndex": 5,
+      "primitive": 0,
+      "material": 0,
+      "vertices": 192,
+      "triangles": 188,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "MODULE_FastenerSlot_00",
+      "nodeIndex": 8,
+      "meshIndex": 6,
+      "primitive": 0,
+      "material": 1,
+      "vertices": 24,
+      "triangles": 12,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "MODULE_FastenerSlot_01",
+      "nodeIndex": 9,
+      "meshIndex": 7,
+      "primitive": 0,
+      "material": 1,
+      "vertices": 24,
+      "triangles": 12,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "MODULE_FastenerSlot_10",
+      "nodeIndex": 10,
+      "meshIndex": 8,
+      "primitive": 0,
+      "material": 1,
+      "vertices": 24,
+      "triangles": 12,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "MODULE_FastenerSlot_11",
+      "nodeIndex": 11,
+      "meshIndex": 9,
+      "primitive": 0,
+      "material": 1,
+      "vertices": 24,
+      "triangles": 12,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "MODULE_Housing",
+      "nodeIndex": 12,
+      "meshIndex": 10,
+      "primitive": 0,
+      "material": 2,
+      "vertices": 48,
+      "triangles": 28,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "MODULE_MetalFaceplate",
+      "nodeIndex": 13,
+      "meshIndex": 11,
+      "primitive": 0,
+      "material": 3,
+      "vertices": 776,
+      "triangles": 588,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "MODULE_Arrow_Down",
+      "nodeIndex": 14,
+      "meshIndex": 12,
+      "primitive": 0,
+      "material": 4,
+      "vertices": 42,
+      "triangles": 24,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "MODULE_Button_Down",
+      "nodeIndex": 15,
+      "meshIndex": 13,
+      "primitive": 0,
+      "material": 5,
+      "vertices": 192,
+      "triangles": 188,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "MODULE_Arrow_Up",
+      "nodeIndex": 17,
+      "meshIndex": 14,
+      "primitive": 0,
+      "material": 4,
+      "vertices": 42,
+      "triangles": 24,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "MODULE_Button_Up",
+      "nodeIndex": 18,
+      "meshIndex": 15,
+      "primitive": 0,
+      "material": 5,
+      "vertices": 192,
+      "triangles": 188,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    }
+  ],
+  "images": [],
+  "materials": [
+    {
+      "name": "Polished stainless rims",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.423267662525177,
+          0.48514994978904724,
+          0.533276379108429,
+          1
+        ],
+        "metallicFactor": 0.8199999928474426,
+        "roughnessFactor": 0.20000000298023224
+      }
+    },
+    {
+      "name": "Fastener slot recess",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.006995410192757845,
+          0.009134058840572834,
+          0.010960093699395657,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.699999988079071
+      }
+    },
+    {
+      "name": "Charcoal housing",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.024157632142305374,
+          0.03071344457566738,
+          0.03688944876194,
+          1
+        ],
+        "metallicFactor": 0.3499999940395355,
+        "roughnessFactor": 0.44999998807907104
+      }
+    },
+    {
+      "name": "Satin stainless faceplate",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.4507857859134674,
+          0.5088813304901123,
+          0.5457244515419006,
+          1
+        ],
+        "metallicFactor": 0.7200000286102295,
+        "roughnessFactor": 0.33000001311302185
+      }
+    },
+    {
+      "name": "Amber static arrow indicators",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          0.4507857859134674,
+          0.05612849071621895,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.3499999940395355
+      }
+    },
+    {
+      "name": "Dark button faces",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.01850022003054619,
+          0.026241222396492958,
+          0.03310476616024971,
+          1
+        ],
+        "metallicFactor": 0.15000000596046448,
+        "roughnessFactor": 0.3499999940395355
+      }
+    }
+  ],
+  "extensionsRequired": [],
+  "interpretation": "Bind/default-pose structural measurements; no rendered appearance or browser/device performance acceptance."
+}

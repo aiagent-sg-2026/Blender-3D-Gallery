@@ -1,0 +1,35 @@
+{
+  "kb_id": "297a8d22-c6cd-4487-a8c3-cab43e583687",
+  "kbcid": "blender.extensions.p0-python",
+  "entity_type": "solution",
+  "title": "Blender 5.1.2 P0 extensions — tested Python calls and context boundaries",
+  "content": "Verified 2026-11-15 on macOS Blender 5.1.2 / Python 3.13.9: Texel Density Checker 2026.1.1 and 3D Print Toolbox 1.5.0 registered and ran as bl_ext.user_default.texel_density_checker and bl_ext.user_default.print3d_toolbox. Official package hashes and installed source files match; vendor code was not patched. A fresh process confirmed saved enablement.\n\nobject.texel_density_check works in background on an active UV mesh. Set scene.td.units='1' for px/m and an explicit texture size. A 1 m square with full UVs and a 1024 texture measured 1024 px/m; object scale 2 measured 512. The native object.texel_density_set fails without context.area. Through MCP, use a real existing window/VIEW_3D/WINDOW region with temp_override; the tested setter changed 1024 to 512 px/m and UV width to 0.5. This is not headless setter support.\n\nmesh.print3d_check_all/check_solid/check_degenerate analyze the active object. scene.print3d_toolbox.get_report() returns structured rows. A closed 1 m cube reported 0 non-manifold edges, volume 1 m3, area 6 m2; an open cube reported 4 boundary edges; a collinear triangle reported 1 zero-area face. Volume/area operators aggregate selection, unlike analysis checks.\n\nTemporary-fixture UI tests restored original geometry, selection, editor types and dirty flag. An independent one-scene/one-mesh GLB passed Khronos validation and Three.js loading. These supplement existing GLB QA; other extension features, full-library appearance/performance and devices were not validated.",
+  "share_level": "user",
+  "source": "workspace-document:docs/blender/p0-extensions.md#sha256=19b60c0176a1a833172f797a0b244ec62c467e7ccbbf772a06e34996435e98a6",
+  "idempotency_key": "blender-p0-python-20261115:19b60c0176a1a833172f797a0b244ec62c467e7ccbbf772a06e34996435e98a6",
+  "labels": {
+    "subject": "external",
+    "assertion": "reference",
+    "confidence": "verified"
+  },
+  "metadata": {
+    "kind": "reference",
+    "domain": "blender",
+    "version": "1.0.0",
+    "status": "confirmed",
+    "reviewed_on": "2026-11-15",
+    "scope": "Version-specific reusable operator and context evidence, not universal compatibility or live installation state on other machines",
+    "canonical_topic_ref": "297a8d22-c6cd-4487-a8c3-cab43e583687:5e6c4c27-5722-415d-9ba2-d3f4d7cf6c65",
+    "evidence": "Official package provenance, bounded source inspection, numeric positive/negative fixtures, native UI MCP calls, fresh-process readback and independent GLB validation",
+    "document_hashes": {
+      "docs/blender/p0-extensions.md": "19b60c0176a1a833172f797a0b244ec62c467e7ccbbf772a06e34996435e98a6",
+      "docs/blender/verification/p0-extensions/background.json": "39e577f8747ebb2e0ef45b1b2a23694c7da56a34c3f4bb8dad2bf8f6ddc11c96",
+      "docs/blender/verification/p0-extensions/ui.json": "1f42d2f3b7f11e5a73e24310fcf8e01b28eb38fdfe88fd151c08d3a158cd4f3d",
+      "docs/blender/verification/p0-extensions/persistence.json": "f50d65513d5408a8b5afa367634139a4736fa70a82c96d798131fd2e7b5eb343"
+    },
+    "official_sources": [
+      "https://extensions.blender.org/add-ons/texel-density-checker/",
+      "https://extensions.blender.org/add-ons/print3d-toolbox/versions/"
+    ]
+  }
+}

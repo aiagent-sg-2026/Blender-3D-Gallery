@@ -1,0 +1,76 @@
+{
+  "reviewedOn": "2026-11-15",
+  "scope": "Bounded source review of manifests, registration, I/O, and exercised operator paths; not a complete security audit",
+  "packages": [
+    {
+      "version": "2026.1.1",
+      "officialArchiveUrl": "https://extensions.blender.org/download/sha256:ca5554ec5c08a830c344ddc08a4c4f8f2e619178ac05ef582ea0293ab540308d/add-on-texel-density-checker-v2026.1.1.zip?repository=%2Fapi%2Fv1%2Fextensions%2F&blender_version_min=4.2.0",
+      "archiveSha256": "ca5554ec5c08a830c344ddc08a4c4f8f2e619178ac05ef582ea0293ab540308d",
+      "archiveBytes": 26191,
+      "sourceFiles": {
+        "ui.py": "d9724906d9feabe99ecd14d073723b84c3bce2308b4ddfef44ab65f23ff09d76",
+        "constants.py": "7a0861ba2cc1f2a2297d469487be8ad4f85d14fb80364102c51545448dfe0441",
+        "preferences.py": "f50ebc2018f7d5aea8bffb35cca1711ce7b853bb1595277560abbef3c70ea0fc",
+        "__init__.py": "6d86970d32073eb322437f0aa950cd7bfde2b552b8eec1051f069abc8069e766",
+        "config_json.py": "fbd0d04d6fa65a92fcbb4aa0640313fa88fe8bc5fa8e81bdebdf31471f00a432",
+        "core_td_operators.py": "62b7a5be5677ab056a557c16e21efa77f4c006a9bf90199aee5d1aa87406eece",
+        "add_td_operators.py": "1e9e2bd281a5460ab00863c0340a48788754106632d048e282d34b56df5f95ec",
+        "utils.py": "63ade198ef33995616078f241db9b30c403ea79d4e5e1b0b6ea3a69f5f16e7c4",
+        "default_prefs.json": "c48294702cd1a066831fb20231c7ae8c13ed4b306ad4858e06c8f97cc141ae4b",
+        "viz_operators.py": "419569bda0152c807b3080a0add92ddb50b558c1c7411e2abab39d489c2fa046",
+        "props.py": "3ac4a46a7459b93aa58195ad47fa81ae867857a8574fef334f8d27f7004260ef",
+        "blender_manifest.toml": "dfafd75d159ac6820a7f1f3952d5549f0de13eab0807918f58dbbe9b10ad57c7"
+      },
+      "reviewedPaths": [
+        "__init__.py",
+        "config_json.py",
+        "core_td_operators.py",
+        "utils.py",
+        "props.py",
+        "preferences.py"
+      ],
+      "ioFindings": [
+        "Local JSON preferences; explicit URL-opening operator; no C++ backend in this package"
+      ]
+    },
+    {
+      "version": "1.5.0",
+      "officialArchiveUrl": "https://extensions.blender.org/download/sha256:3e3121a8052d52ce1fe8fd13bc6431679018f0cf1cb51ac0224fc47073a8e12a/add-on-print3d-toolbox-v1.5.0.zip?repository=%2Fapi%2Fv1%2Fextensions%2F&blender_version_min=4.2.0",
+      "archiveSha256": "3e3121a8052d52ce1fe8fd13bc6431679018f0cf1cb51ac0224fc47073a8e12a",
+      "archiveBytes": 149071,
+      "sourceFiles": {
+        "essentials.py": "6b9325f014cf7023b10be2ee0cc400f9a35fceb7562103441fb47f0876c008c7",
+        "lib.py": "0f0a8e7a5dcc61ff4cf9aeff3e16a45577bd5fdf93b2b79e692e8113e367ddf4",
+        "ui.py": "9f8ec22c31567a0f8908f5428e36515167fb79c6b03ff1ca77206cf47de65085",
+        "preferences.py": "0035da5b1083faf43c2334848eeaa23bc55943c6b0ab3bd7e66b68eb7d959899",
+        "__init__.py": "00e3d90d4aec993e4e73d6200fd9303bada116f0c396fd5f195e96e1cd8959bf",
+        "var.py": "7aedd5abe7db9d669b0fd719a8841c008cc3e34823f40a5fd797c6cd3b11071c",
+        "blender_manifest.toml": "1e4572b0cf55b7f0ea4fdbf176558d9b21d382220909a5b52a5325e37a33a1ab",
+        "report.py": "72d6305e02dc51d25dfd9148a8a96c101130e2e905e4e9c198cc2acb1a599b6e",
+        "operators/__init__.py": "1e383cf18e634d1bc4ac7fd5a80cee3011b19e779c68d561ef9e0717f7cf7c32",
+        "operators/edit.py": "075bc9315c159dfd844e721e588e46b225cb95662a1de80e88b278a7e5e77de8",
+        "operators/export.py": "e17045844b95fc124998f8f51dd99ef93f61ca624146ee347804ff452739b848",
+        "operators/cleanup.py": "3dc04a0a95f38413e54c35969c7ea836423ddb2b1f9ba20d982de648b1eb307d",
+        "operators/analyze.py": "717e3fbc4a44cf000a1365d92e9a68cdb50170e1a89ba8e00f042155fa5a0e86",
+        "assets/nodegroups_5_0.blend": "9789925342a52bfc1af36ef43d23133ea5e55dd8dfba2e59876f0dc0f633d60b",
+        "localization/fr_FR.po": "7277dc762e416bfd2f505aabad3902be1d11547e5c848f181ff098592ad805c8",
+        "localization/pt_BR.po": "15352240d0071c42630f4d05c4983adafe605e2a3f4844133680beb6c42be98c",
+        "localization/es.po": "3341a1df360d6c74a59a10eecaa9a04439038a3be2f090dc610971a300b8bb24",
+        "localization/zh_HANS.po": "3f202730b0d0180b6a0d156fe49e31a1c42ef2bb309788ed4598cbff675b835f",
+        "localization/__init__.py": "a21ca6effababda13b3fba789f38ad8dc8229b074c72c4e1bc8b6c09a7cc522f",
+        "localization/ru_RU.po": "e188114231d6e98bf9b97112b0ee14044303d8f26dd57ebcba20448074175531",
+        "localization/ja_JP.po": "6ef7202680a821e185190886d1f07b99f274f20a39d7c0b5719d5ccaf0e303f9"
+      },
+      "reviewedPaths": [
+        "__init__.py",
+        "localization/__init__.py",
+        "operators/analyze.py",
+        "report.py",
+        "preferences.py"
+      ],
+      "ioFindings": [
+        "Local translation cache generated from bundled PO files; export writes are explicit operators; bundled geometry-node asset is outside this test"
+      ]
+    }
+  ]
+}

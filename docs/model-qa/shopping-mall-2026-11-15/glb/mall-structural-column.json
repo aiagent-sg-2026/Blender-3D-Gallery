@@ -1,0 +1,325 @@
+{
+  "id": "mall-structural-column",
+  "sha256": "5a856c9a4e30b7cbde2e99cb50e4e43e9f45a86dd3e504f4dea4708cbe8874aa",
+  "status": "SCANNED",
+  "validation": {
+    "numErrors": 0,
+    "numWarnings": 0,
+    "numInfos": 2,
+    "numHints": 0,
+    "messages": [
+      {
+        "code": "NODE_EMPTY",
+        "message": "Empty node encountered.",
+        "severity": 2,
+        "pointer": "/nodes/11"
+      },
+      {
+        "code": "NODE_EMPTY",
+        "message": "Empty node encountered.",
+        "severity": 2,
+        "pointer": "/nodes/12"
+      }
+    ],
+    "truncated": false
+  },
+  "externalResources": [],
+  "metrics": {
+    "bytes": 78744,
+    "scenes": 1,
+    "defaultScene": 0,
+    "defaultSceneHasMesh": true,
+    "inspectedScene": 0,
+    "meshOccurrences": 13,
+    "primitives": 13,
+    "triangles": 1404,
+    "images": 0,
+    "materials": 3,
+    "dimensions": [
+      0.6000000238418579,
+      3.000000074505806,
+      0.6000000238418579
+    ],
+    "bounds": {
+      "min": [
+        -0.30000001192092896,
+        0,
+        -0.30000001192092896
+      ],
+      "max": [
+        0.30000001192092896,
+        3.000000074505806,
+        0.30000001192092896
+      ]
+    },
+    "exactZeroAreaTriangles": 0,
+    "nearZeroAreaTriangles": 0
+  },
+  "primitives": [
+    {
+      "node": "BASE_Plinth",
+      "nodeIndex": 0,
+      "meshIndex": 0,
+      "primitive": 0,
+      "material": 0,
+      "vertices": 216,
+      "triangles": 108,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "CAP_Square",
+      "nodeIndex": 1,
+      "meshIndex": 1,
+      "primitive": 0,
+      "material": 1,
+      "vertices": 216,
+      "triangles": 108,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "CLADDING_Back_Lower",
+      "nodeIndex": 2,
+      "meshIndex": 2,
+      "primitive": 0,
+      "material": 1,
+      "vertices": 216,
+      "triangles": 108,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "CLADDING_Back_Upper",
+      "nodeIndex": 3,
+      "meshIndex": 3,
+      "primitive": 0,
+      "material": 1,
+      "vertices": 216,
+      "triangles": 108,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "CLADDING_Front_Lower",
+      "nodeIndex": 4,
+      "meshIndex": 4,
+      "primitive": 0,
+      "material": 1,
+      "vertices": 216,
+      "triangles": 108,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "CLADDING_Front_Upper",
+      "nodeIndex": 5,
+      "meshIndex": 5,
+      "primitive": 0,
+      "material": 1,
+      "vertices": 216,
+      "triangles": 108,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "CLADDING_Left_Lower",
+      "nodeIndex": 6,
+      "meshIndex": 6,
+      "primitive": 0,
+      "material": 1,
+      "vertices": 216,
+      "triangles": 108,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "CLADDING_Left_Upper",
+      "nodeIndex": 7,
+      "meshIndex": 7,
+      "primitive": 0,
+      "material": 1,
+      "vertices": 216,
+      "triangles": 108,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "CLADDING_Right_Lower",
+      "nodeIndex": 8,
+      "meshIndex": 8,
+      "primitive": 0,
+      "material": 1,
+      "vertices": 216,
+      "triangles": 108,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "CLADDING_Right_Upper",
+      "nodeIndex": 9,
+      "meshIndex": 9,
+      "primitive": 0,
+      "material": 1,
+      "vertices": 216,
+      "triangles": 108,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "CORE_SquareShaft",
+      "nodeIndex": 13,
+      "meshIndex": 10,
+      "primitive": 0,
+      "material": 2,
+      "vertices": 216,
+      "triangles": 108,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "REVEAL_Base",
+      "nodeIndex": 14,
+      "meshIndex": 11,
+      "primitive": 0,
+      "material": 0,
+      "vertices": 216,
+      "triangles": 108,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "REVEAL_Cap",
+      "nodeIndex": 15,
+      "meshIndex": 12,
+      "primitive": 0,
+      "material": 0,
+      "vertices": 216,
+      "triangles": 108,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    }
+  ],
+  "images": [],
+  "materials": [
+    {
+      "name": "Satin charcoal base and reveals",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.052860647439956665,
+          0.07421357184648514,
+          0.07818742096424103,
+          1
+        ],
+        "metallicFactor": 0.550000011920929,
+        "roughnessFactor": 0.3199999928474426
+      }
+    },
+    {
+      "name": "Honed warm ivory cladding",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.672443151473999,
+          0.6444796919822693,
+          0.5394794940948486,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5799999833106995
+      }
+    },
+    {
+      "name": "Neutral column core",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.33716362714767456,
+          0.34670406579971313,
+          0.3049873113632202,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.8199999928474426
+      }
+    }
+  ],
+  "extensionsRequired": [],
+  "interpretation": "Bind/default-pose structural measurements; no rendered appearance or browser/device performance acceptance."
+}

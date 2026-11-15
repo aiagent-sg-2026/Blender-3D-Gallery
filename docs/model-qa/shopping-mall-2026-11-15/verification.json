@@ -1,0 +1,100 @@
+{
+  "status": "PASS_WITH_DISCLOSED_SOURCE_MEASUREMENT_LIMITATION",
+  "assets": 67,
+  "primary_assets": 62,
+  "supporting_assets": 5,
+  "unique_native_sources": 66,
+  "source_and_delivery_phases": 134,
+  "independent_triangle_count_matches": 67,
+  "validator_error_assets": 0,
+  "validator_warning_assets": 0,
+  "mesh_evaluation_errors": 0,
+  "original_density_operator_states": {
+    "MEASURED": 126,
+    "DEGENERATE_OR_ORACLE_MISMATCH": 5
+  },
+  "original_source_density_disagreements": [
+    {
+      "id": "gjh-m057-premium-wall-shelf-corner",
+      "object": "brand_header_light_canopy"
+    },
+    {
+      "id": "gjh-m057-premium-wall-shelf-corner",
+      "object": "cabinet_stone_base"
+    },
+    {
+      "id": "gjh-m057-premium-wall-shelf-corner",
+      "object": "shelf_1"
+    },
+    {
+      "id": "gjh-m057-premium-wall-shelf-corner",
+      "object": "shelf_2"
+    },
+    {
+      "id": "gjh-m057-premium-wall-shelf-corner",
+      "object": "shelf_3"
+    }
+  ],
+  "triangulated_copy_followup_observations": 5,
+  "triangulated_source_agrees_with_delivery": true,
+  "density_target_compliance": "NOT_GRADED: no approved target",
+  "primary_models_with_raw_zero_triangles": 18,
+  "protected_input_files_unchanged": 509,
+  "source_collection_supplements": 6,
+  "actor_bone_helper_rechecks": 2,
+  "known_value_calibration": "PASS: 64/128 px/m, untextured N_A, Collection source / Empty delivery",
+  "raw_vs_blender_zero_count_differences": [
+    {
+      "id": "gjh-areca-planter",
+      "raw_zero_triangles": 100,
+      "blender_evaluated_zero_triangles": 172
+    },
+    {
+      "id": "mall-event-booth",
+      "raw_zero_triangles": 118,
+      "blender_evaluated_zero_triangles": 120
+    },
+    {
+      "id": "mall-floor-direction-sign",
+      "raw_zero_triangles": 139,
+      "blender_evaluated_zero_triangles": 141
+    },
+    {
+      "id": "mall-emergency-exit-door",
+      "raw_zero_triangles": 0,
+      "blender_evaluated_zero_triangles": 340
+    },
+    {
+      "id": "mall-wayfinding-ceiling-sign",
+      "raw_zero_triangles": 2,
+      "blender_evaluated_zero_triangles": 3
+    },
+    {
+      "id": "shopping-cart",
+      "raw_zero_triangles": 0,
+      "blender_evaluated_zero_triangles": 24
+    },
+    {
+      "id": "atm-kiosk",
+      "raw_zero_triangles": 4,
+      "blender_evaluated_zero_triangles": 46
+    },
+    {
+      "id": "escalator",
+      "raw_zero_triangles": 11,
+      "blender_evaluated_zero_triangles": 13
+    },
+    {
+      "id": "gjh-m056-premium-wall-shelf-straight",
+      "raw_zero_triangles": 0,
+      "blender_evaluated_zero_triangles": 120
+    },
+    {
+      "id": "chibi-mall-visitor-local",
+      "raw_zero_triangles": 0,
+      "blender_evaluated_zero_triangles": 92
+    }
+  ],
+  "interpretation": "Different arithmetic/evaluation paths are retained separately; no automatic single-cause attribution or summing. Original five source probe failures remain evidence, not silently relabeled passes.",
+  "scope": "Structural/numeric audit only; visual, animation, collision, device/FPS and release acceptance NOT_RUN."
+}

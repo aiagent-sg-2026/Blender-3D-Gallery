@@ -1,0 +1,284 @@
+{
+  "id": "mall-escalator-handrail",
+  "sha256": "27cd23cc1d3bf33f11c114adb0be17f256e4a96e161396a541cca25734b56443",
+  "status": "SCANNED",
+  "validation": {
+    "numErrors": 0,
+    "numWarnings": 0,
+    "numInfos": 5,
+    "numHints": 0,
+    "messages": [
+      {
+        "code": "NODE_EMPTY",
+        "message": "Empty node encountered.",
+        "severity": 2,
+        "pointer": "/nodes/0"
+      },
+      {
+        "code": "NODE_EMPTY",
+        "message": "Empty node encountered.",
+        "severity": 2,
+        "pointer": "/nodes/1"
+      },
+      {
+        "code": "NODE_EMPTY",
+        "message": "Empty node encountered.",
+        "severity": 2,
+        "pointer": "/nodes/2"
+      },
+      {
+        "code": "NODE_EMPTY",
+        "message": "Empty node encountered.",
+        "severity": 2,
+        "pointer": "/nodes/3"
+      },
+      {
+        "code": "NODE_EMPTY",
+        "message": "Empty node encountered.",
+        "severity": 2,
+        "pointer": "/nodes/4"
+      }
+    ],
+    "truncated": false
+  },
+  "externalResources": [],
+  "metrics": {
+    "bytes": 117180,
+    "scenes": 1,
+    "defaultScene": 0,
+    "defaultSceneHasMesh": true,
+    "inspectedScene": 0,
+    "meshOccurrences": 8,
+    "primitives": 8,
+    "triangles": 5100,
+    "images": 0,
+    "materials": 5,
+    "dimensions": [
+      7.041640758514404,
+      3.427999973297119,
+      0.14000000059604645
+    ],
+    "bounds": {
+      "min": [
+        -3.520820379257202,
+        0,
+        -0.07000000029802322
+      ],
+      "max": [
+        3.520820379257202,
+        3.427999973297119,
+        0.07000000029802322
+      ]
+    },
+    "exactZeroAreaTriangles": 0,
+    "nearZeroAreaTriangles": 0
+  },
+  "primitives": [
+    {
+      "node": "MODULE_Casing_Far",
+      "nodeIndex": 5,
+      "meshIndex": 0,
+      "primitive": 0,
+      "material": 0,
+      "vertices": 336,
+      "triangles": 220,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "MODULE_Casing_Near",
+      "nodeIndex": 6,
+      "meshIndex": 1,
+      "primitive": 0,
+      "material": 0,
+      "vertices": 336,
+      "triangles": 220,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "MODULE_ChannelEnd_Lower",
+      "nodeIndex": 7,
+      "meshIndex": 2,
+      "primitive": 0,
+      "material": 1,
+      "vertices": 24,
+      "triangles": 12,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "MODULE_ChannelEnd_Upper",
+      "nodeIndex": 8,
+      "meshIndex": 3,
+      "primitive": 0,
+      "material": 1,
+      "vertices": 24,
+      "triangles": 12,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "MODULE_ContinuousRubberBelt",
+      "nodeIndex": 9,
+      "meshIndex": 4,
+      "primitive": 0,
+      "material": 2,
+      "vertices": 1416,
+      "triangles": 2832,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "MODULE_CurvedGlazing",
+      "nodeIndex": 10,
+      "meshIndex": 5,
+      "primitive": 0,
+      "material": 3,
+      "vertices": 708,
+      "triangles": 468,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "MODULE_LowerGlazingRail",
+      "nodeIndex": 11,
+      "meshIndex": 6,
+      "primitive": 0,
+      "material": 4,
+      "vertices": 336,
+      "triangles": 668,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "MODULE_UpperGuideRail",
+      "nodeIndex": 12,
+      "meshIndex": 7,
+      "primitive": 0,
+      "material": 4,
+      "vertices": 336,
+      "triangles": 668,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    }
+  ],
+  "images": [],
+  "materials": [
+    {
+      "name": "Satin aluminium lower casing",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.2581828534603119,
+          0.31398871541023254,
+          0.35640013217926025,
+          1
+        ],
+        "metallicFactor": 0.6499999761581421,
+        "roughnessFactor": 0.4000000059604645
+      }
+    },
+    {
+      "name": "Charcoal return channel end caps",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.027320891618728638,
+          0.039546236395835876,
+          0.04970656707882881,
+          1
+        ],
+        "metallicFactor": 0.15000000596046448,
+        "roughnessFactor": 0.550000011920929
+      }
+    },
+    {
+      "name": "Black elastomer handrail belt",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.009721217676997185,
+          0.012286487966775894,
+          0.014443843625485897,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.47999998927116394
+      }
+    },
+    {
+      "name": "Cool laminated glazing visual proxy",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.2581828534603119,
+          0.5028864741325378,
+          0.5647115111351013,
+          0.30000001192092896
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.18000000715255737
+      }
+    },
+    {
+      "name": "Brushed stainless guide rails",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.2788942754268646,
+          0.35153260827064514,
+          0.3915724754333496,
+          1
+        ],
+        "metallicFactor": 0.7200000286102295,
+        "roughnessFactor": 0.30000001192092896
+      }
+    }
+  ],
+  "extensionsRequired": [],
+  "interpretation": "Bind/default-pose structural measurements; no rendered appearance or browser/device performance acceptance."
+}

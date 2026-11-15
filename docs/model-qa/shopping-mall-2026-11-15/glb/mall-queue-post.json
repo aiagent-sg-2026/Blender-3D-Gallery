@@ -1,0 +1,142 @@
+{
+  "id": "mall-queue-post",
+  "sha256": "9025b3a6fbb96e010511aa03df7457a09c019448902260427bdbbb9b646fab60",
+  "status": "SCANNED",
+  "validation": {
+    "numErrors": 0,
+    "numWarnings": 0,
+    "numInfos": 0,
+    "numHints": 0,
+    "messages": [],
+    "truncated": false
+  },
+  "externalResources": [],
+  "metrics": {
+    "bytes": 97912,
+    "scenes": 1,
+    "defaultScene": 0,
+    "defaultSceneHasMesh": true,
+    "inspectedScene": 0,
+    "meshOccurrences": 1,
+    "primitives": 3,
+    "triangles": 3344,
+    "images": 0,
+    "materials": 3,
+    "dimensions": [
+      0.3700000047683716,
+      0.9760000109672546,
+      0.3700000047683716
+    ],
+    "bounds": {
+      "min": [
+        -0.1850000023841858,
+        0,
+        -0.1850000023841858
+      ],
+      "max": [
+        0.1850000023841858,
+        0.9760000109672546,
+        0.1850000023841858
+      ]
+    },
+    "exactZeroAreaTriangles": 480,
+    "nearZeroAreaTriangles": 480
+  },
+  "primitives": [
+    {
+      "node": "MODULE_Post",
+      "nodeIndex": 0,
+      "meshIndex": 0,
+      "primitive": 0,
+      "material": 0,
+      "vertices": 1776,
+      "triangles": 1136,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 96,
+      "nearZeroAreaTriangles": 96,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "MODULE_Post",
+      "nodeIndex": 0,
+      "meshIndex": 0,
+      "primitive": 1,
+      "material": 1,
+      "vertices": 624,
+      "triangles": 1056,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 192,
+      "nearZeroAreaTriangles": 192,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "MODULE_Post",
+      "nodeIndex": 0,
+      "meshIndex": 0,
+      "primitive": 2,
+      "material": 2,
+      "vertices": 720,
+      "triangles": 1152,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 192,
+      "nearZeroAreaTriangles": 192,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    }
+  ],
+  "images": [],
+  "materials": [
+    {
+      "name": "Charcoal recess",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.01032982300966978,
+          0.01599629409611225,
+          0.015208514407277107,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.699999988079071
+      }
+    },
+    {
+      "name": "Deep jade powder coat",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.017641954123973846,
+          0.07227185368537903,
+          0.05448027700185776,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.47999998927116394
+      }
+    },
+    {
+      "name": "Brushed champagne brass",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.46207699179649353,
+          0.3277781009674072,
+          0.12213877588510513,
+          1
+        ],
+        "metallicFactor": 0.699999988079071,
+        "roughnessFactor": 0.3199999928474426
+      }
+    }
+  ],
+  "extensionsRequired": [],
+  "interpretation": "Bind/default-pose structural measurements; no rendered appearance or browser/device performance acceptance."
+}

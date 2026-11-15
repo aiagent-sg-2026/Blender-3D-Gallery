@@ -1,0 +1,62 @@
+{
+  "release_head": "1e94207991e702451ce931d3f76d30925a903453",
+  "base_head": "2b8d7e10a2bfd83fd665c08ef3568e020f300e1e",
+  "observed_at": "2026-11-15T07:23:34.381914+00:00",
+  "current_catalog_entries": 567,
+  "queue_records": 1892,
+  "new_catalog_assets": [],
+  "new_tracked_artifacts": [],
+  "added_queue_records": 0,
+  "modified_physical_artifacts": [
+    {
+      "path": "models/mall-queue-stanchions/exports/mall-queue-long.glb",
+      "old_bytes": 192444,
+      "old_sha256": "d25b26ba5ee9e39bfa50dc699fb5fa08985c6d7f3bc0594ccf5bf71d63a19609",
+      "bytes": 149808,
+      "sha256": "f538960c64cb23e71b9142259cef86743e6fa344d5e250ea2b8fd426aa9b8474"
+    },
+    {
+      "path": "models/mall-queue-stanchions/exports/mall-queue-post.glb",
+      "old_bytes": 97912,
+      "old_sha256": "9025b3a6fbb96e010511aa03df7457a09c019448902260427bdbbb9b646fab60",
+      "bytes": 71736,
+      "sha256": "49a27e18135a47ee09e4bc540b34f1ac0a4935292128f4c4b7d4ffe5f61aa376"
+    },
+    {
+      "path": "models/mall-queue-stanchions/exports/mall-queue-short.glb",
+      "old_bytes": 191180,
+      "old_sha256": "c87362e085c8fd92f82a12bd7340ccf572a007a05189bde9b3e820304790470e",
+      "bytes": 154488,
+      "sha256": "86a857dfc025e78148f5d284fa412b053ceae02a8b59116c255e443f2860f8ef"
+    },
+    {
+      "path": "models/mall-queue-stanchions/sources/mall-queue-long.blend",
+      "old_bytes": 112718,
+      "old_sha256": "478d0d8a08dca623bb1835f607aabf0161576d088b90e15c759062a6ed9e25ee",
+      "bytes": 117854,
+      "sha256": "4f3c576ef575ac892e13aaf02756fbfde725fd94b0f7db6056cae15c711e7f16"
+    },
+    {
+      "path": "models/mall-queue-stanchions/sources/mall-queue-post.blend",
+      "old_bytes": 108294,
+      "old_sha256": "c71652349fba2f9b22a9b446705ce7aef712c3e603dc8da9c94d9b666ff00d72",
+      "bytes": 111583,
+      "sha256": "31ba03a14ddc8a34c9248e1b76a95efd63a85d248c0d0bcd81c8b35ffc1261bd"
+    },
+    {
+      "path": "models/mall-queue-stanchions/sources/mall-queue-short.blend",
+      "old_bytes": 112727,
+      "old_sha256": "761d5881e6de07694699869e9428993d6793193efaf3f853b12a64f939771acd",
+      "bytes": 117837,
+      "sha256": "d129f5197fbb2c96ae6242ff4a33f6fcde96a6cf82519a3d78fc306cb048f630"
+    }
+  ],
+  "affected_pending_qa_ids": [
+    "MODEL-0080",
+    "MODEL-0081",
+    "MODEL-0082"
+  ],
+  "catalog_application_and_billiards_unchanged": true,
+  "acceptance": "Upstream repairs reconciled as current pending inputs only; upstream reports do not substitute for this campaign deep QA.",
+  "file_index": "Initial discovery snapshot preserved; this report records changed physical bytes and hashes."
+}

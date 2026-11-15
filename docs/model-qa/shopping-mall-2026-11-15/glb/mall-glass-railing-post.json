@@ -1,0 +1,142 @@
+{
+  "id": "mall-glass-railing-post",
+  "sha256": "4104d29b95e1e8b82c1e4db8a4e00437aaf60e01c7e8e0b503fcd7c17586dd69",
+  "status": "SCANNED",
+  "validation": {
+    "numErrors": 0,
+    "numWarnings": 0,
+    "numInfos": 0,
+    "numHints": 0,
+    "messages": [],
+    "truncated": false
+  },
+  "externalResources": [],
+  "metrics": {
+    "bytes": 57548,
+    "scenes": 1,
+    "defaultScene": 0,
+    "defaultSceneHasMesh": true,
+    "inspectedScene": 0,
+    "meshOccurrences": 1,
+    "primitives": 3,
+    "triangles": 1024,
+    "images": 0,
+    "materials": 3,
+    "dimensions": [
+      0.1599999964237213,
+      1.1200000047683716,
+      0.1599999964237213
+    ],
+    "bounds": {
+      "min": [
+        -0.07999999821186066,
+        0,
+        -0.07999999821186066
+      ],
+      "max": [
+        0.07999999821186066,
+        1.1200000047683716,
+        0.07999999821186066
+      ]
+    },
+    "exactZeroAreaTriangles": 0,
+    "nearZeroAreaTriangles": 0
+  },
+  "primitives": [
+    {
+      "node": "MODULE_Post",
+      "nodeIndex": 0,
+      "meshIndex": 0,
+      "primitive": 0,
+      "material": 0,
+      "vertices": 576,
+      "triangles": 284,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "MODULE_Post",
+      "nodeIndex": 0,
+      "meshIndex": 0,
+      "primitive": 1,
+      "material": 1,
+      "vertices": 672,
+      "triangles": 364,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "MODULE_Post",
+      "nodeIndex": 0,
+      "meshIndex": 0,
+      "primitive": 2,
+      "material": 2,
+      "vertices": 768,
+      "triangles": 376,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    }
+  ],
+  "images": [],
+  "materials": [
+    {
+      "name": "Recessed gasket",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.011612244881689548,
+          0.024157632142305374,
+          0.024157632142305374,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.699999988079071
+      }
+    },
+    {
+      "name": "Warm champagne end caps",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.47353148460388184,
+          0.35640013217926025,
+          0.16202937066555023,
+          1
+        ],
+        "metallicFactor": 0.6499999761581421,
+        "roughnessFactor": 0.30000001192092896
+      }
+    },
+    {
+      "name": "Satin graphite aluminium",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.05448027700185776,
+          0.08650045841932297,
+          0.09084171056747437,
+          1
+        ],
+        "metallicFactor": 0.6499999761581421,
+        "roughnessFactor": 0.3199999928474426
+      }
+    }
+  ],
+  "extensionsRequired": [],
+  "interpretation": "Bind/default-pose structural measurements; no rendered appearance or browser/device performance acceptance."
+}

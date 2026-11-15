@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "checks": {
+    "source": {
+      "expected_px_per_m": [
+        64,
+        128
+      ],
+      "observed_px_per_m": [
+        64.0,
+        128.0
+      ],
+      "untextured_patch_N_A": true,
+      "boundary_edges": 8
+    },
+    "glb": {
+      "expected_px_per_m": [
+        64,
+        128
+      ],
+      "observed_px_per_m": [
+        64.0,
+        128.0
+      ],
+      "untextured_patch_N_A": true,
+      "boundary_edges": 8
+    }
+  },
+  "triangles": 6,
+  "scope": "Known-value material filtering, UV scaling, actual image resolutions, image-free applicability and topology checks"
+}

@@ -1,0 +1,17 @@
+{
+  "blender": "5.1.2",
+  "source": "/Applications/Blender.app/Contents/Resources/5.1/scripts/addons_core/io_scene_gltf2/blender/imp/node.py",
+  "sha256": "285d19305f586703fd2fad2a88d13fae95a200710ca78ab89e3a6afc96cf0835",
+  "observed_code_ranges": [
+    {
+      "lines": "156-170",
+      "behavior": "Creates a hidden special collection and an Icosphere for bone display"
+    },
+    {
+      "lines": "257-258",
+      "behavior": "Assigns the generated object as pose-bone custom_shape when disable_bone_shape is false"
+    }
+  ],
+  "verified_operator_argument": "disable_bone_shape=True",
+  "scope": "Suppresses importer UI shapes while retaining delivered skin geometry; not an asset simplification."
+}

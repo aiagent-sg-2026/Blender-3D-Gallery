@@ -554,7 +554,7 @@
       "name": "Ball 03",
       "collection": "billiards",
       "kind": "catalog-model",
-      "status": "READY_TO_PUSH",
+      "status": "PUSHED",
       "export_paths": [
         "models/eight-ball-billiards/exports/ball_03.glb"
       ],
@@ -583,20 +583,22 @@
         "animation": "N/A static unrigged model; Game interactions tested separately.",
         "runtime": "PASS exact original a7893507 leaf and6e113 assembly plus controls across four latest desktop/tablet profiles; no page/HTTP errors.",
         "performance": "PASS5draws/6400triangles,268828bytes in sampled software WebGL; no hardware FPS claim.",
-        "regression": "PASS670 latest units/40 targeted; unfiltered base Game46/experience31 with564 assets; pure append proof plus latest567-asset build,4 Viewer profiles and9 integration checks for3 additions. Full final-commit CI pending.",
+        "regression": "PASS670 latest units/40 targeted; unfiltered base Game46/experience31 with564 assets; pure append proof plus latest567-asset build,4 Viewer profiles and9 integration checks for3 additions. Full final-commit CI PASS:670 units and complete unfiltered browser suite at567 catalog entries;1134 DOM preview/download iterations.",
         "mobile": "N/A explicit owner exclusion",
-        "github_main": "PENDING QA-only release",
-        "github_actions": "PENDING required workflow",
-        "live": "PENDING final-release production acceptance"
+        "github_main": "PASS QA-only2b8d7e10 exact main and original a31204ae/268828-byte GLB blob verified.",
+        "github_actions": "PASS required Actions43683566612: exact commit build, complete unfiltered release gates and deployment succeeded.",
+        "live": "PASS exact a7893507 standalone/6e11310f assembly payloads, four production profiles and five actual downloaded-file geometry/contact tests."
       },
-      "commit_sha": null,
-      "remote_verified": false,
+      "commit_sha": "2b8d7e10a2bfd83fd665c08ef3568e020f300e1e",
+      "remote_verified": true,
       "remaining_risks": [
-        "Main publication, required final-commit Actions and production acceptance pending.",
-        "Physical mobile excluded by owner; no hardware FPS claim."
+        "Physical mobile excluded by owner; software WebGL checks do not establish hardware FPS."
       ],
       "report": "docs/model-qa/MODEL-0009/README.md",
-      "repairs_required": false
+      "repairs_required": false,
+      "required_remote_checks_passed": true,
+      "actions_run_id": 43683566612,
+      "release_evidence": "docs/model-qa/MODEL-0009/release-evidence.json"
     },
     {
       "qa_id": "MODEL-0010",
@@ -604,14 +606,14 @@
       "name": "Ball 04",
       "collection": "billiards",
       "kind": "catalog-model",
-      "status": "PENDING",
+      "status": "TESTING",
       "export_paths": [
         "models/eight-ball-billiards/exports/ball_04.glb"
       ],
       "source_candidates": [
         "models/eight-ball-billiards/scene.blend"
       ],
-      "source_mapping": "candidate; inspect asset root in Blender before acceptance",
+      "source_mapping": "Verified ASSET_Ball_04:57.15mm purple resin body with opposite numeral4 and medallion pairs;5meshes5312triangles.",
       "generator_candidates": [
         "models/eight-ball-billiards/generate.py"
       ],
@@ -624,12 +626,28 @@
       "export_sha256": "f3551b4d3ebd39f8eeb0ac78dc3a83e8742b4e3e5515eaa6db4d456c0bbc8e85",
       "defects": [],
       "repairs": [],
-      "qa_results": {},
+      "qa_results": {
+        "geometry": "PASS closed body, outward original layers and source/reimport welded topology agree; actual cloth contact within1micron.",
+        "uv_textures": "PASS finite original UV; atlas/stretch N/A without image textures.",
+        "pbr": "PASS original purple resin0.23/ivory0.24/black ink0.29 opaque dielectrics.",
+        "glb": "PASS original/assembly/scratch validators0errors0warnings; semantic index-order replay only, not byte-exact.",
+        "visual": "PASS20 native views plus independent89/100; no confirmed repair;10 matched comparisons max mean RGB channel error0.00216417/255 descriptive only.",
+        "runtime": "PASS four original standalone/assembly desktop1440/tablet768 profiles and exact payload hashes, rotation/zoom/exact reset, no page/HTTP errors.",
+        "performance": "PASS157064bytes,5draws/5312triangles in sampled software WebGL; physical-device FPS not established.",
+        "animation": "N/A static/unrigged; Game interactions require separate regression acceptance.",
+        "regression": "PASS678unit/45targeted and567-asset build. Full Game first attempt FAILED at screenshot timeout; experience NOT_RUN. Isolated recovery remains IN_PROGRESS.",
+        "mobile": "N/A explicit owner exclusion"
+      },
       "commit_sha": null,
       "remote_verified": false,
       "remaining_risks": [
-        "Not yet inspected under this QA campaign."
-      ]
+        "Full unfiltered Game/experience recovery pending.",
+        "No model commit, required Actions or production acceptance yet.",
+        "Physical mobile excluded by owner; no hardware FPS claim."
+      ],
+      "report": "docs/model-qa/MODEL-0010/README.md",
+      "started_at": "2026-11-15T07:24:45.211130+00:00",
+      "repairs_required": false
     },
     {
       "qa_id": "MODEL-0011",
@@ -17829,7 +17847,7 @@
       "thumbnail": "models/mall-queue-stanchions/previews/mall-queue-post.webp",
       "root": "ASSET_MallQueuePost",
       "runtime_route": "?model=mall-queue-post",
-      "export_sha256": "9025b3a6fbb96e010511aa03df7457a09c019448902260427bdbbb9b646fab60",
+      "export_sha256": "49a27e18135a47ee09e4bc540b34f1ac0a4935292128f4c4b7d4ffe5f61aa376",
       "defects": [],
       "repairs": [],
       "qa_results": {},
@@ -17837,7 +17855,12 @@
       "remote_verified": false,
       "remaining_risks": [
         "Not yet inspected under this QA campaign."
-      ]
+      ],
+      "upstream_observation": {
+        "revision": "1e94207991e702451ce931d3f76d30925a903453",
+        "evidence": "docs/model-qa/discovery-reconciliation-1e942079.json",
+        "deep_qa_accepted": false
+      }
     },
     {
       "qa_id": "MODEL-0081",
@@ -17869,7 +17892,7 @@
       "thumbnail": "models/mall-queue-stanchions/previews/mall-queue-short.webp",
       "root": "ASSET_MallQueueShort",
       "runtime_route": "?model=mall-queue-short",
-      "export_sha256": "c87362e085c8fd92f82a12bd7340ccf572a007a05189bde9b3e820304790470e",
+      "export_sha256": "86a857dfc025e78148f5d284fa412b053ceae02a8b59116c255e443f2860f8ef",
       "defects": [],
       "repairs": [],
       "qa_results": {},
@@ -17877,7 +17900,12 @@
       "remote_verified": false,
       "remaining_risks": [
         "Not yet inspected under this QA campaign."
-      ]
+      ],
+      "upstream_observation": {
+        "revision": "1e94207991e702451ce931d3f76d30925a903453",
+        "evidence": "docs/model-qa/discovery-reconciliation-1e942079.json",
+        "deep_qa_accepted": false
+      }
     },
     {
       "qa_id": "MODEL-0082",
@@ -17909,7 +17937,7 @@
       "thumbnail": "models/mall-queue-stanchions/previews/mall-queue-long.webp",
       "root": "ASSET_MallQueueLong",
       "runtime_route": "?model=mall-queue-long",
-      "export_sha256": "d25b26ba5ee9e39bfa50dc699fb5fa08985c6d7f3bc0594ccf5bf71d63a19609",
+      "export_sha256": "f538960c64cb23e71b9142259cef86743e6fa344d5e250ea2b8fd426aa9b8474",
       "defects": [],
       "repairs": [],
       "qa_results": {},
@@ -17917,7 +17945,12 @@
       "remote_verified": false,
       "remaining_risks": [
         "Not yet inspected under this QA campaign."
-      ]
+      ],
+      "upstream_observation": {
+        "revision": "1e94207991e702451ce931d3f76d30925a903453",
+        "evidence": "docs/model-qa/discovery-reconciliation-1e942079.json",
+        "deep_qa_accepted": false
+      }
     },
     {
       "qa_id": "MODEL-0083",
@@ -63915,13 +63948,14 @@
     }
   ],
   "reconciliation": {
-    "release_head": "7f6291a711467925580c819d1d9e7693747a249e",
-    "observed_at": "2026-11-15T05:50:54.159469+00:00",
+    "release_head": "1e94207991e702451ce931d3f76d30925a903453",
+    "observed_at": "2026-11-15T07:23:34.381914+00:00",
     "current_release_catalog_entries": 567,
-    "new_tracked_artifacts": 6,
-    "added_queue_records": 3,
+    "new_tracked_artifacts": 0,
+    "modified_tracked_artifacts": 6,
+    "added_queue_records": 0,
     "queue_records": 1892,
-    "evidence": "discovery-reconciliation-7f6291a7.json",
+    "evidence": "discovery-reconciliation-1e942079.json",
     "initial_snapshot_counts_preserved": true
   },
   "reconciliation_history": [
@@ -63982,6 +64016,16 @@
       "added_queue_records": 2,
       "queue_records": 1889,
       "evidence": "discovery-reconciliation-6982fb07.json",
+      "initial_snapshot_counts_preserved": true
+    },
+    {
+      "release_head": "7f6291a711467925580c819d1d9e7693747a249e",
+      "observed_at": "2026-11-15T05:50:54.159469+00:00",
+      "current_release_catalog_entries": 567,
+      "new_tracked_artifacts": 6,
+      "added_queue_records": 3,
+      "queue_records": 1892,
+      "evidence": "discovery-reconciliation-7f6291a7.json",
       "initial_snapshot_counts_preserved": true
     }
   ]

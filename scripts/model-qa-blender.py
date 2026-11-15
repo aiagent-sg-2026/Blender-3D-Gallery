@@ -32,12 +32,8 @@ objects = [o for o in [root, *root.children_recursive] if o.type == 'MESH']
 if not objects:
     raise RuntimeError('No meshes in selected model')
 bpy.context.view_layer.update()
-rows = []
-for ob in objects:
-    mesh = ob.data
-    mesh.calc_loop_triangles()
-    bm = bmesh.new()
-    bm.from_mesh(mesh)
+
+def connected_components(bm):
     components = 0
     remaining = set(bm.verts)
     while remaining:
@@ -49,6 +45,14 @@ for ob in objects:
                     if v in remaining:
                         remaining.remove(v)
                         pending.append(v)
+    return components
+
+rows = []
+for ob in objects:
+    mesh = ob.data
+    mesh.calc_loop_triangles()
+    bm = bmesh.new()
+    bm.from_mesh(mesh)
     coords = [ob.matrix_world @ Vector(c) for c in ob.bound_box]
     row = {
         'name': ob.name, 'vertices': len(mesh.vertices), 'triangles': len(mesh.loop_triangles),
@@ -57,7 +61,7 @@ for ob in objects:
         'boundary_edges': sum(e.is_boundary for e in bm.edges),
         'loose_vertices': sum(not v.link_faces for v in bm.verts),
         'inconsistent_winding_edges': sum(e.is_manifold and not e.is_contiguous for e in bm.edges),
-        'signed_volume': bm.calc_volume(signed=True), 'connected_components': components,
+        'signed_volume': bm.calc_volume(signed=True), 'connected_components': connected_components(bm),
         'bounds_min': [min(v[i] for v in coords) for i in range(3)],
         'bounds_max': [max(v[i] for v in coords) for i in range(3)],
         'world_scale': list(ob.matrix_world.to_scale()),
@@ -70,6 +74,7 @@ for ob in objects:
     # disposable BMesh so topology QA distinguishes seams from actual holes.
     bmesh.ops.remove_doubles(bm, verts=list(bm.verts), dist=1e-7)
     row['position_weld_tolerance_m'] = 1e-7
+    row['welded_connected_components'] = connected_components(bm)
     row['welded_non_manifold_edges'] = sum(not e.is_manifold for e in bm.edges)
     row['welded_inconsistent_winding_edges'] = sum(e.is_manifold and not e.is_contiguous for e in bm.edges)
     rows.append(row)

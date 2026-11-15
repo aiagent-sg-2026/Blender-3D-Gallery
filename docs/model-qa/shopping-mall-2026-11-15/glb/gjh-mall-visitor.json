@@ -1,0 +1,684 @@
+{
+  "id": "gjh-mall-visitor",
+  "sha256": "43d08b67f4450b6aac478cfca4ca664044662cd79021ed15d55ef5612e312be2",
+  "status": "SCANNED",
+  "validation": {
+    "numErrors": 0,
+    "numWarnings": 0,
+    "numInfos": 17,
+    "numHints": 0,
+    "messages": [
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/0/primitives/1/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/0/primitives/2/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/1/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/1/primitives/1/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/1/primitives/2/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/1/primitives/3/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/1/primitives/4/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/3/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/4/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/4/primitives/1/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/5/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/8/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/9/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/9/primitives/1/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/10/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/10/primitives/1/attributes/TEXCOORD_0"
+      }
+    ],
+    "truncated": false
+  },
+  "externalResources": [],
+  "metrics": {
+    "bytes": 369976,
+    "scenes": 1,
+    "defaultScene": 0,
+    "defaultSceneHasMesh": true,
+    "inspectedScene": 0,
+    "meshOccurrences": 12,
+    "primitives": 25,
+    "triangles": 10356,
+    "images": 0,
+    "materials": 8,
+    "dimensions": [
+      0.6786835169630223,
+      1.719999952978403,
+      0.43689485464122235
+    ],
+    "bounds": {
+      "min": [
+        -0.33934176004285516,
+        -4.508476703080078e-9,
+        -0.22389347782191038
+      ],
+      "max": [
+        0.33934175692016716,
+        1.7199999484699262,
+        0.21300137681931197
+      ]
+    },
+    "exactZeroAreaTriangles": 0,
+    "nearZeroAreaTriangles": 0
+  },
+  "primitives": [
+    {
+      "node": "Body geometry",
+      "nodeIndex": 0,
+      "meshIndex": 0,
+      "primitive": 0,
+      "material": 0,
+      "vertices": 206,
+      "triangles": 272,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "Body geometry",
+      "nodeIndex": 0,
+      "meshIndex": 0,
+      "primitive": 1,
+      "material": 1,
+      "vertices": 64,
+      "triangles": 60,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "Body geometry",
+      "nodeIndex": 0,
+      "meshIndex": 0,
+      "primitive": 2,
+      "material": 2,
+      "vertices": 720,
+      "triangles": 708,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "Head geometry",
+      "nodeIndex": 1,
+      "meshIndex": 1,
+      "primitive": 0,
+      "material": 1,
+      "vertices": 639,
+      "triangles": 964,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "Head geometry",
+      "nodeIndex": 1,
+      "meshIndex": 1,
+      "primitive": 1,
+      "material": 3,
+      "vertices": 1223,
+      "triangles": 2064,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "Head geometry",
+      "nodeIndex": 1,
+      "meshIndex": 1,
+      "primitive": 2,
+      "material": 2,
+      "vertices": 236,
+      "triangles": 296,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "Head geometry",
+      "nodeIndex": 1,
+      "meshIndex": 1,
+      "primitive": 3,
+      "material": 4,
+      "vertices": 1409,
+      "triangles": 2172,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "Head geometry",
+      "nodeIndex": 1,
+      "meshIndex": 1,
+      "primitive": 4,
+      "material": 5,
+      "vertices": 89,
+      "triangles": 120,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "LeftHip geometry",
+      "nodeIndex": 3,
+      "meshIndex": 2,
+      "primitive": 0,
+      "material": 6,
+      "vertices": 80,
+      "triangles": 92,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "LeftFoot geometry",
+      "nodeIndex": 4,
+      "meshIndex": 3,
+      "primitive": 0,
+      "material": 2,
+      "vertices": 451,
+      "triangles": 616,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "LeftKnee geometry",
+      "nodeIndex": 6,
+      "meshIndex": 4,
+      "primitive": 0,
+      "material": 6,
+      "vertices": 195,
+      "triangles": 260,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "LeftKnee geometry",
+      "nodeIndex": 6,
+      "meshIndex": 4,
+      "primitive": 1,
+      "material": 7,
+      "vertices": 64,
+      "triangles": 60,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "LeftElbow geometry",
+      "nodeIndex": 9,
+      "meshIndex": 5,
+      "primitive": 0,
+      "material": 1,
+      "vertices": 353,
+      "triangles": 480,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "LeftShoulder geometry",
+      "nodeIndex": 11,
+      "meshIndex": 6,
+      "primitive": 0,
+      "material": 0,
+      "vertices": 112,
+      "triangles": 156,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "LeftShoulder geometry",
+      "nodeIndex": 11,
+      "meshIndex": 6,
+      "primitive": 1,
+      "material": 2,
+      "vertices": 64,
+      "triangles": 60,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "LeftShoulder geometry",
+      "nodeIndex": 11,
+      "meshIndex": 6,
+      "primitive": 2,
+      "material": 1,
+      "vertices": 48,
+      "triangles": 44,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "RightHip geometry",
+      "nodeIndex": 13,
+      "meshIndex": 7,
+      "primitive": 0,
+      "material": 6,
+      "vertices": 80,
+      "triangles": 92,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "RightFoot geometry",
+      "nodeIndex": 14,
+      "meshIndex": 8,
+      "primitive": 0,
+      "material": 2,
+      "vertices": 451,
+      "triangles": 616,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "RightKnee geometry",
+      "nodeIndex": 16,
+      "meshIndex": 9,
+      "primitive": 0,
+      "material": 6,
+      "vertices": 195,
+      "triangles": 260,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "RightKnee geometry",
+      "nodeIndex": 16,
+      "meshIndex": 9,
+      "primitive": 1,
+      "material": 7,
+      "vertices": 64,
+      "triangles": 60,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "RightElbow geometry",
+      "nodeIndex": 19,
+      "meshIndex": 10,
+      "primitive": 0,
+      "material": 1,
+      "vertices": 353,
+      "triangles": 480,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "RightElbow geometry",
+      "nodeIndex": 19,
+      "meshIndex": 10,
+      "primitive": 1,
+      "material": 3,
+      "vertices": 137,
+      "triangles": 164,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": true
+    },
+    {
+      "node": "RightShoulder geometry",
+      "nodeIndex": 21,
+      "meshIndex": 11,
+      "primitive": 0,
+      "material": 0,
+      "vertices": 112,
+      "triangles": 156,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "RightShoulder geometry",
+      "nodeIndex": 21,
+      "meshIndex": 11,
+      "primitive": 1,
+      "material": 2,
+      "vertices": 64,
+      "triangles": 60,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    },
+    {
+      "node": "RightShoulder geometry",
+      "nodeIndex": 21,
+      "meshIndex": 11,
+      "primitive": 2,
+      "material": 1,
+      "vertices": 48,
+      "triangles": 44,
+      "mode": 4,
+      "nonfinitePositions": 0,
+      "exactZeroAreaTriangles": 0,
+      "nearZeroAreaTriangles": 0,
+      "nearZeroAreaThresholdM2": 1e-12,
+      "nonfiniteNormals": 0,
+      "nonunitNormals": 0,
+      "hasUv0": false
+    }
+  ],
+  "images": [],
+  "materials": [
+    {
+      "name": "GJH emerald polo",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.0030352699104696512,
+          0.18116424977779388,
+          0.07036009430885315,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.6499999761581421
+      }
+    },
+    {
+      "name": "Warm peach skin",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.8631572127342224,
+          0.4507857859134674,
+          0.20863686501979828,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.6499999761581421
+      }
+    },
+    {
+      "name": "Cream white",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.8631572127342224,
+          0.8468732237815857,
+          0.6938717365264893,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.6499999761581421
+      }
+    },
+    {
+      "name": "Glasses and eyes",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.010960093699395657,
+          0.012286487966775894,
+          0.009721217676997185,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.44999998807907104
+      }
+    },
+    {
+      "name": "Swept chestnut hair",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.052860647439956665,
+          0.024157632142305374,
+          0.011612244881689548,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.6499999761581421
+      }
+    },
+    {
+      "name": "Warm smile",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.37123769521713257,
+          0.0382043719291687,
+          0.016807375475764275,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.6499999761581421
+      }
+    },
+    {
+      "name": "Navy denim",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.014443843625485897,
+          0.0423114113509655,
+          0.07618538290262222,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.6499999761581421
+      }
+    },
+    {
+      "name": "Denim cuff",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.09530746936798096,
+          0.16202937066555023,
+          0.20863686501979828,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.6499999761581421
+      }
+    }
+  ],
+  "extensionsRequired": [],
+  "interpretation": "Bind/default-pose structural measurements; no rendered appearance or browser/device performance acceptance."
+}

@@ -1,0 +1,227 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-11-15T04:03:43.853Z",
+  "packageSha256": [
+    "ca5554ec5c08a830c344ddc08a4c4f8f2e619178ac05ef582ea0293ab540308d",
+    "3e3121a8052d52ce1fe8fd13bc6431679018f0cf1cb51ac0224fc47073a8e12a"
+  ],
+  "probeSha256": "56fa93e16c6081e24bef255195738dde71914ca633abf710a18d4c6a51ce601d",
+  "observations": {
+    "blender": "5.1.2",
+    "background": true,
+    "area": null,
+    "modules": [
+      {
+        "name": "bl_ext.user_default.texel_density_checker",
+        "file": "/var/folders/tx/dx_7t0r56svcjld4fx5j_pwr0000gn/T/blender-p0-check-wgaueK/extensions/user_default/texel_density_checker/__init__.py"
+      },
+      {
+        "name": "bl_ext.user_default.print3d_toolbox",
+        "file": "/var/folders/tx/dx_7t0r56svcjld4fx5j_pwr0000gn/T/blender-p0-check-wgaueK/extensions/user_default/print3d_toolbox/__init__.py"
+      }
+    ],
+    "texel": {
+      "initial_px_per_m": 1024,
+      "object_scale_2_px_per_m": 512,
+      "texture_1024x2048_px_per_m": 1448.155,
+      "scene_scale_001_px_per_m": 102400,
+      "background_set": {
+        "status": "EXPECTED_CONTEXT_FAILURE",
+        "error": "Error: Python: Traceback (most recent call last):\n  File \"/var/folders/tx/dx_7t0r56svcjld4fx5j_pwr0000gn/T/blender-p0-check-wgaueK/extensions/user_default/texel_density_checker/core_td_operators.py\", line 172, in execute\n    if context.area.spaces.active.type == \"IMAGE_EDITOR\" and not context.scene.tool_settings.use_uv_select_sync:\n       ^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'spaces'\nLocation: /Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/docs/blender/verification/p0-extensions/probe.py:123\n"
+      },
+      "no_active_result": [
+        "CANCELLED"
+      ]
+    },
+    "print3d": {
+      "closed_all": [
+        {
+          "name": "Non-manifold Edges",
+          "value": "0",
+          "indices": [],
+          "select_mode": "EDGE",
+          "bm_attribute": "edges",
+          "icon": "EDGESEL"
+        },
+        {
+          "name": "Bad Contiguous Edges",
+          "value": "0",
+          "indices": [],
+          "select_mode": "EDGE",
+          "bm_attribute": "edges",
+          "icon": "EDGESEL"
+        },
+        {
+          "name": "Intersect Faces",
+          "value": "0",
+          "indices": [],
+          "select_mode": "FACE",
+          "bm_attribute": "faces",
+          "icon": "FACESEL"
+        },
+        {
+          "name": "Shells",
+          "value": "1",
+          "indices": null,
+          "select_mode": null,
+          "bm_attribute": null,
+          "icon": null
+        },
+        {
+          "name": "Zero Faces",
+          "value": "0",
+          "indices": [],
+          "select_mode": "FACE",
+          "bm_attribute": "faces",
+          "icon": "FACESEL"
+        },
+        {
+          "name": "Zero Edges",
+          "value": "0",
+          "indices": [],
+          "select_mode": "EDGE",
+          "bm_attribute": "edges",
+          "icon": "EDGESEL"
+        },
+        {
+          "name": "Non-flat Faces",
+          "value": "0",
+          "indices": [],
+          "select_mode": "FACE",
+          "bm_attribute": "faces",
+          "icon": "FACESEL"
+        },
+        {
+          "name": "Thin Faces",
+          "value": "0",
+          "indices": [],
+          "select_mode": "FACE",
+          "bm_attribute": "faces",
+          "icon": "FACESEL"
+        },
+        {
+          "name": "Sharp Edges",
+          "value": "0",
+          "indices": [],
+          "select_mode": "EDGE",
+          "bm_attribute": "edges",
+          "icon": "EDGESEL"
+        },
+        {
+          "name": "Overhang Faces",
+          "value": "1",
+          "indices": [
+            0
+          ],
+          "select_mode": "FACE",
+          "bm_attribute": "faces",
+          "icon": "FACESEL"
+        }
+      ],
+      "volume": [
+        {
+          "name": "Volume",
+          "value": "1.0 m³",
+          "indices": null,
+          "select_mode": null,
+          "bm_attribute": null,
+          "icon": null
+        }
+      ],
+      "area": [
+        {
+          "name": "Area",
+          "value": "6.0 m²",
+          "indices": null,
+          "select_mode": null,
+          "bm_attribute": null,
+          "icon": null
+        }
+      ],
+      "open_cube_active_with_multiple_selected": [
+        {
+          "name": "Non-manifold Edges",
+          "value": "4",
+          "indices": [
+            6,
+            8,
+            10,
+            11
+          ],
+          "select_mode": "EDGE",
+          "bm_attribute": "edges",
+          "icon": "EDGESEL"
+        },
+        {
+          "name": "Bad Contiguous Edges",
+          "value": "0",
+          "indices": [],
+          "select_mode": "EDGE",
+          "bm_attribute": "edges",
+          "icon": "EDGESEL"
+        }
+      ],
+      "closed_cube_active_with_multiple_selected": [
+        {
+          "name": "Non-manifold Edges",
+          "value": "0",
+          "indices": [],
+          "select_mode": "EDGE",
+          "bm_attribute": "edges",
+          "icon": "EDGESEL"
+        },
+        {
+          "name": "Bad Contiguous Edges",
+          "value": "0",
+          "indices": [],
+          "select_mode": "EDGE",
+          "bm_attribute": "edges",
+          "icon": "EDGESEL"
+        }
+      ],
+      "degenerate": [
+        {
+          "name": "Zero Faces",
+          "value": "1",
+          "indices": [
+            0
+          ],
+          "select_mode": "FACE",
+          "bm_attribute": "faces",
+          "icon": "FACESEL"
+        },
+        {
+          "name": "Zero Edges",
+          "value": "0",
+          "indices": [],
+          "select_mode": "EDGE",
+          "bm_attribute": "edges",
+          "icon": "EDGESEL"
+        }
+      ]
+    },
+    "glb": "/var/folders/tx/dx_7t0r56svcjld4fx5j_pwr0000gn/T/blender-p0-check-wgaueK/closed-cube.glb",
+    "status": "PASS"
+  },
+  "glb": {
+    "bytes": 1440,
+    "sha256": "9bc4ce564a0270ca5dfe75e92a59eef6d79342362c0a478c9f297195ed8a5020",
+    "scenes": 1,
+    "meshes": 1,
+    "triangles": 12,
+    "size": [
+      1,
+      1,
+      1
+    ],
+    "issues": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 0,
+      "numHints": 0,
+      "messages": [],
+      "truncated": false
+    }
+  },
+  "scope": "Fresh isolated registration and background calls on owned fixtures. The native TD setter context failure is expected and is not headless setter support."
+}
