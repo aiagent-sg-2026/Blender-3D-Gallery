@@ -11,6 +11,7 @@ if any(o.type=='MESH' and o.get('deform_role') in ['dorsal','anal','pectoral'] a
  s.render.filepath=str(OUT/'preview.png');bpy.ops.render.render(write_still=True);camera=s.camera;original_matrix=camera.matrix_world.copy();original_scale=camera.data.ortho_scale
  camera.location=(-1.15,-7,.55);camera.rotation_euler=(Vector((-1.03,0,.02))-camera.location).to_track_quat('-Z','Y').to_euler();camera.data.ortho_scale=1.65;s.render.filepath=str(OUT/'head-detail.png');bpy.ops.render.render(write_still=True);camera.matrix_world=original_matrix;camera.data.ortho_scale=original_scale;s.render.filepath=str(OUT/'preview.png')
 else:s.frame_set(13)
+END_FRAME=int(s.frame_end);SPAN=END_FRAME-1
 
 def observe(label):
  meshes=[o for o in s.objects if o.type=='MESH'];anchors=0
@@ -23,7 +24,7 @@ def observe(label):
     for group in o.data.vertices[i].groups:
      if o.vertex_groups[group.group].name in ['Dorsal','Anal','Pectoral_L','Pectoral_R']:assert group.weight<1e-6,(o.name,i,group.weight)
    anchors+=1
- frames=[1,19,37,55,73];poses=[];roles={}
+ frames=[1,1+SPAN//4,1+SPAN//2,1+SPAN*3//4,END_FRAME];poses=[];roles={}
  for f in frames:
   s.frame_set(f);dg=bpy.context.evaluated_depsgraph_get();frame={}
   for o in meshes:
@@ -58,6 +59,6 @@ bpy.ops.wm.read_factory_settings(use_empty=True);bpy.ops.import_scene.gltf(filep
 report={'slug':slug,'source':source,'export':export,'source_sha256':hashlib.sha256((OUT/(slug+'.blend')).read_bytes()).hexdigest(),'glb_sha256':hashlib.sha256(glb.read_bytes()).hexdigest(),'actions':[a.name for a in bpy.data.actions],'visual_acceptance':'separate_manual_gate'};(OUT/'motion-verification.json').write_text(json.dumps(report,indent=2)+'\n')
 if '--export-only' in sys.argv:sys.exit(0)
 bpy.ops.wm.open_mainfile(filepath=str(OUT/(slug+'.blend')));s=bpy.context.scene;s.render.engine='BLENDER_EEVEE';s.render.resolution_x=720;s.render.resolution_y=480;s.render.resolution_percentage=100;frames=OUT/'frames';frames.mkdir(exist_ok=True)
-for i,f in enumerate(range(1,73,2)):
+for i,f in enumerate(range(1,END_FRAME,2)):
  s.frame_set(f);s.render.filepath=str(frames/('%03d.png'%i));bpy.ops.render.render(write_still=True)
 print('FINISHED',slug,flush=True)

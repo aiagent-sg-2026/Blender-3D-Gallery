@@ -24,3 +24,7 @@ The browser check uses the existing built gallery and identifies the original mo
 Sources and GLBs contain packed textures. Optional PNG authoring caches need not be distributed separately; run `generate.py` without `--reuse-textures` to regenerate them. `fin_weights.py` anchors fin roots to the same spine deformation as the body, feathering independent motion toward distal membranes. `finish.py` validates this anchor rule, temporarily flattens skinned meshes and repairs closed-cap UVs/triangulation for portable tangent export.
 
 `complete_item.py` seals a visually inspected source only when its current artifact hash, zero-error/zero-warning glTF validation, real animation tests, desktop/mobile browser receipts and the 79-file preservation guard agree. Render previews and head details are reviewed separately from these deterministic checks.
+
+## Live promotion
+
+On 2026-11-15 the owner additionally authorized replacing the corresponding live catalog entries and pushing each passing batch to main. `models/fish-realism-release/releases.json` owns the promoted set. Draft browser receipts remain historical isolated checks; release browser receipts test actual catalog paths and response hashes without substitution. Only a verified deployment and live receipt establish online availability.

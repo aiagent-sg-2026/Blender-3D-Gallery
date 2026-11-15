@@ -17,6 +17,11 @@ for i,(slug,cn,en,priority,kind,color,pattern,length) in enumerate(specs,1):
 sheet.save(HERE/'contact-sheet.jpg',quality=90)
 catpath=repo/'models/catalog.json';catalog=json.loads(catpath.read_text());cid='singapore-fish'
 collection={'id':cid,'name':'Singapore & Malaysia Fish Collection','description':'60 stylized fish studies: seafood market, freshwater, reef and ornamental fish. Common names are supplied aliases; not a taxonomic identification guide.','assets':assets}
+# Keep approved deployment derivatives authoritative when rebuilding baseline posters.
+import importlib.util
+spec=importlib.util.spec_from_file_location('fish_release_register',repo/'models/fish-realism-release/register.py')
+release=importlib.util.module_from_spec(spec);spec.loader.exec_module(release)
+release.apply(collection)
 old=next((c for c in catalog['collections'] if c['id']==cid),None)
 if old:catalog['collections'][catalog['collections'].index(old)]=collection
 else:catalog['collections'].append(collection)

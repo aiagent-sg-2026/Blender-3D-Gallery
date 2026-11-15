@@ -325,6 +325,16 @@ async function openViewer(asset, trigger, updateUrl = true) {
     ...(asset.details?.attribution ?? []).map((a) => a.credit),
   ].filter(Boolean);
   $("#viewer-description").textContent = [...new Set(notes)].join(" ");
+  for (const attribution of asset.details?.attribution ?? []) {
+    for (const [label, value] of [["Source", attribution.url], ["License", attribution.license_url]]) {
+      if (typeof value !== "string" || !value.startsWith("https://")) continue;
+      const link = element("a", "", label);
+      link.href = value;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      $("#viewer-description").append(" ", link);
+    }
+  }
   metadata(asset);
   $("#viewer-download").href = asset.file;
   $("#viewer-download").download = `${asset.id}.glb`;

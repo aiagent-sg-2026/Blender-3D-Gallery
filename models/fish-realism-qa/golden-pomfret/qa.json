@@ -1,0 +1,22 @@
+{
+  "status": "agent_qa_pass",
+  "iterations": 2,
+  "reviewed_source_sha256": "75d95ea63035ca7a8b97d5ceb4087567c9ba031468a0a858839afe339775d6d1",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "visual_checks": {
+    "anatomy": "pass: deep compressed body and rounded short snout with a small closed mouth",
+    "surface": "pass: very fine scales, silver-grey flank with golden underside and orange-gold fins",
+    "fins": "pass: restrained swept soft lobes and broader deeply forked caudal lobes; no needle-thin tail outlines",
+    "head": "pass: conforming iris and shallow integrated gill recess",
+    "motion": "pass: body-anchored fin roots, distal stabilization and cyclic tail propulsion",
+    "browser": "pass: desktop/mobile draft GLB rendering, playback, pause and disposal"
+  },
+  "limitations": [
+    "Photo-informed original art study, not a scan or measured anatomical specimen.",
+    "The browser fixture retains baseline catalog captions while substituting the actual draft GLB.",
+    "No production gallery replacement in this QA artifact."
+  ]
+}
