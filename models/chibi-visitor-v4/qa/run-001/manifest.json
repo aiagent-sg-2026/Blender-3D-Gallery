@@ -68,7 +68,7 @@
       "detail": "silhouette-rows.txt, gate: front 5.8/11, side 7.0/13, back 6.9/15 px (mean/max, tips excluded)"
     },
     "QA-20 clipping": {
-      "status": "PASS",
+      "status": "PASS (self-review)",
       "detail": "no hair-through-face or hand-through-body clipping seen in the 13 renders; P2 ear-front gap noted"
     },
     "QA-25 Three.js load": {
@@ -80,7 +80,7 @@
       "detail": "browser-console.txt: only Vite debug lines"
     },
     "QA-28 material fidelity": {
-      "status": "PASS",
+      "status": "PASS (self-review)",
       "detail": "three-js-*.jpg: face texture, hair, hoodie, bag and shoes render as in Blender"
     },
     "QA-31 frame time": {
@@ -102,9 +102,77 @@
     "QA-40 release approval": {
       "status": "NOT_RUN",
       "detail": "release_authorized is false; nothing pushed or published"
+    },
+    "G4 side-row exclusion": {
+      "status": "PASS",
+      "detail": "qa/run-001/screenshots/side-gate-crop-ref.png: the 43 px side row at z=0.74-0.78 m is the neighbouring back view's hair-wing tip (x 757-760) inside the side sample window, not the model; the exclusion is in silhouette-gate.py"
+    },
+    "G5 visual (independent)": {
+      "status": "FAIL",
+      "detail": "IR-2 and IR-3 accepted as P1 style gaps against the sheet; IR-1 contested"
     }
   },
-  "overall": "QA_ACCEPTED for the stated gates G1-G6; P2 items open",
+  "overall": "REWORK: tool gates G1-G4 and G6 pass; the independent visual review found 3 P1 style defects in the hair (IR-1..3), so G5 is not accepted. Not QA_ACCEPTED.",
   "release_authorized": false,
-  "repair_rounds": "6 causal fixes tried (5 kept, 1 reverted); default limit of 3 was exceeded on the owner's instruction to keep looping until the gates pass"
+  "repair_rounds": "5 causal fixes kept and 6 attempts reverted for no effect or regression (lock thickness, tip lift 1.07, lock radius shrink, root burial, tip-width floor, rounder tip profile). The default limit of 3 rounds was exceeded on the owner's instruction to keep looping until the gates pass.",
+  "independent_review": {
+    "reviewer": "fresh subagent given only the sheet and the renders, no verdict or issue list",
+    "date": "2026-11-15",
+    "findings": [
+      {
+        "id": "IR-1",
+        "severity": "P1",
+        "status": "open (contested)",
+        "note": "tall thin ahoge reads as a horn from the side; the sheet's front view also has a curled ahoge, so owner decision on its length/shape"
+      },
+      {
+        "id": "IR-2",
+        "severity": "P1",
+        "status": "open",
+        "note": "back and sides read as feather/pinecone shingles with dark seams; the sheet has broader smoother swirled locks. Two tip-bluntings tried and reverted"
+      },
+      {
+        "id": "IR-3",
+        "severity": "P1",
+        "status": "open",
+        "note": "conical flick tips at both temples read as cat ears from the back; the sheet's are softer curled wisps"
+      },
+      {
+        "id": "IR-4",
+        "severity": "P2",
+        "status": "open",
+        "note": "dark hair curl across the character's right ear (front view); related to the known ear-front gap"
+      },
+      {
+        "id": "IR-5",
+        "severity": "P2",
+        "status": "open",
+        "note": "hair looks glossier/redder than the sheet and darkens in Three.js back view; lighting dependent"
+      },
+      {
+        "id": "IR-6",
+        "severity": "P2",
+        "status": "disputed",
+        "note": "reviewer says the head is 39% of height vs 46% on the sheet; head rows (z>=0.60 m) and torso rows were measured within about 1-2 cm of the sheet, so not accepted without a whole-figure measurement"
+      },
+      {
+        "id": "IR-7",
+        "severity": "P2",
+        "status": "open",
+        "note": "face profile is flat: small nose and no open-mouth relief in side view"
+      },
+      {
+        "id": "IR-8",
+        "severity": "P2",
+        "status": "open",
+        "note": "eyes read as decals (thick white ring, outer lash flicks); hands are simplified mittens; shoe soles are slab-like"
+      },
+      {
+        "id": "IR-9",
+        "severity": "P3",
+        "status": "open",
+        "note": "blue-purple tint on some nape lock tips (possible hood show-through); hood bulbous; ears small and plain"
+      }
+    ]
+  }
 }

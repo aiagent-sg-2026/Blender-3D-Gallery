@@ -37,16 +37,16 @@ This rewrites the blend, GLB and four previews in this directory. Set `CV4_OUT` 
 
 Gates (this project's own thresholds, set before the final fixes; the owner may tighten them):
 
-| Gate | Criterion | Result |
-| --- | --- | --- |
-| G1 | glTF Validator 0 errors, 0 warnings; at most 150,000 triangles and 30 draw calls | PASS: 0/0/0/0, 113,428 triangles, 25 draw calls |
-| G2 | headless rebuild is byte-identical to the MCP build | PASS: both `55637c85a0af0317bcc5d2b1ae885c3c06fa5ffa5e0d6bfdc8b3eeb94de9b1ce` |
-| G3 | Three.js loads the exact GLB with no console errors; front, three-quarter and back checked by eye | PASS: 25 meshes, no errors or warnings |
-| G4 | head rows (z >= 0.60 m) against the sheet: mean offset <= 8 px and no row beyond 15 px, excluding rows above z = 0.94 m (flick and tuft tips) | PASS: front 5.8 / 11, side 7.0 / 13, back 6.9 / 15 (mean / max px; 645 px = 1 m) |
-| G5 | by eye, from six orthographic views, a three-quarter and head close-ups: layered locks with visible creases, no stray knob or horn, facial features complete | PASS with one P2 note (ear-front gap, below) |
-| G6 | `npm run validate:assets` and `npm test` pass | PASS: 673 tests; the model is not in the catalog, so these do not exercise it directly |
+| Gate | Skill gate | Criterion | Result |
+| --- | --- | --- | --- |
+| G1 | G1/G5/G7 | glTF Validator 0 errors, 0 warnings; at most 150,000 triangles and 30 draw calls | PASS: 0/0/0/0, 113,428 triangles, 25 draw calls |
+| G2 | G8 | headless rebuild is byte-identical to the MCP build | PASS: both `55637c85a0af0317bcc5d2b1ae885c3c06fa5ffa5e0d6bfdc8b3eeb94de9b1ce` |
+| G3 | G6 | Three.js loads the exact GLB with no console errors; front, three-quarter and back checked by eye | PASS: 25 meshes, no errors or warnings |
+| G4 | G4 | head rows (z >= 0.60 m) against the sheet: mean offset <= 8 px and no row beyond 15 px, excluding rows above z = 0.94 m (flick and tuft tips) | PASS: front 5.8 / 11, side 7.0 / 13, back 6.9 / 15 (mean / max px; 645 px = 1 m) |
+| G5 | G4 | by eye, from six orthographic views, a three-quarter and head close-ups: layered locks with visible creases, no stray knob or horn, facial features complete | FAIL on independent review: the author's own check passed, but a fresh reviewer ranked three hair-style defects P1 (below) |
+| G6 | G8 | `npm run validate:assets` and `npm test` pass | PASS: 673 tests; the model is not in the catalog, so these do not exercise it directly |
 
-Evidence: `qa/run-001/` has the validator JSON, per-check results (`manifest.json`), hashes, the silhouette rows, the Three.js console log, frame timing and the screenshots. One crop artefact is excluded from G4: in the side view the sheet crop at z = 0.74-0.78 m also catches the hair wing of the neighbouring back view.
+Evidence: `qa/run-001/` has the validator JSON, per-check results (`manifest.json`), hashes, the silhouette rows, the Three.js console log, frame timing and the screenshots. One crop artefact is excluded from G4: in the side view the sheet crop at z = 0.74-0.78 m also catches the tip of the neighbouring back view's hair wing (x 757-760; `qa/run-001/screenshots/side-gate-crop-ref.png`). Overall status of run 001: REWORK. The tool-checked gates pass; the independent visual review (`independent_review` in `qa/run-001/manifest.json`) found three P1 hair-style defects that two bluntings (both reverted) did not fix.
 
 Other measurements:
 
@@ -54,6 +54,8 @@ Other measurements:
 - Khronos glTF Validator 2.0.0-dev.3.10 on 2,219,344 bytes, 57,143 vertices, 19 materials, one 1024 px texture.
 
 ## Known differences from the sheet
+
+- Open P1 from the independent review: the back and sides read as pointed feather shingles rather than the sheet's broad swirled locks; the temple flicks are conical (cat-ear-like from behind); the tall ahoge reads as a horn from the side (the sheet has an ahoge too, so its length is an owner decision). Making the tips blunter, by a width floor or a rounder profile, made the hair fuller and failed the silhouette gate, so a real fix needs a different lock model (fewer, thicker, curled locks), not tip tuning.
 
 - Hair now reads as layered shingles with creases and lifted tips, and the back is a fan of locks off the crown. It is still more regular than the sheet's, whose locks vary more in length and curl; the tips of the wing flicks and the top tuft deviate from the sheet by up to about 40 px in the silhouette rows.
 - P2: a small dark gap remains at the front of each ear where the sideburn, skull and ear meet; lengthening the sideburns did not remove it, so that change was reverted.

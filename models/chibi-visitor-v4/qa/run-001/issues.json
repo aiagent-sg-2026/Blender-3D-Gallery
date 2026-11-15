@@ -40,5 +40,89 @@
     "severity": "n/a",
     "status": "reverted",
     "note": "burying lock roots changed nothing; reverted"
+  },
+  {
+    "id": "hair-thickness-tuning",
+    "severity": "n/a",
+    "status": "reverted",
+    "note": "lock thickness 0.024 and 0.033 (before the split build) made no meaningful change; set to 0.030 with the split build"
+  },
+  {
+    "id": "tip-lift-1.07",
+    "severity": "n/a",
+    "status": "reverted",
+    "note": "lowering tip lift from 1.10 to 1.07 left every silhouette row unchanged"
+  },
+  {
+    "id": "lock-radius-shrink",
+    "severity": "n/a",
+    "status": "reverted",
+    "note": "upper-back/crown/lower-back lock radii 0.201/0.203/0.197 -> 0.194/0.196/0.192 left the rows unchanged (width came from the fringe/side locks); replaced by the sideways narrowing in hshell()"
+  },
+  {
+    "id": "blunt-tips-floor",
+    "severity": "n/a",
+    "status": "reverted",
+    "note": "raising the minimum tip width (0.20 shells, 0.16 flicks, 0.18 tuft) left flat-cut stubs and pushed G4 over (front/back max 19 px)"
+  },
+  {
+    "id": "blunt-tips-round-profile",
+    "severity": "n/a",
+    "status": "reverted",
+    "note": "width profile exponent 0.8 -> 0.5 made the hair fuller: G4 back mean 9.2 px, front/back max 19 px"
+  },
+  {
+    "id": "IR-1",
+    "severity": "P1",
+    "status": "open (contested)",
+    "note": "tall thin ahoge reads as a horn from the side; the sheet's front view also has a curled ahoge, so owner decision on its length/shape"
+  },
+  {
+    "id": "IR-2",
+    "severity": "P1",
+    "status": "open",
+    "note": "back and sides read as feather/pinecone shingles with dark seams; the sheet has broader smoother swirled locks. Two tip-bluntings tried and reverted"
+  },
+  {
+    "id": "IR-3",
+    "severity": "P1",
+    "status": "open",
+    "note": "conical flick tips at both temples read as cat ears from the back; the sheet's are softer curled wisps"
+  },
+  {
+    "id": "IR-4",
+    "severity": "P2",
+    "status": "open",
+    "note": "dark hair curl across the character's right ear (front view); related to the known ear-front gap"
+  },
+  {
+    "id": "IR-5",
+    "severity": "P2",
+    "status": "open",
+    "note": "hair looks glossier/redder than the sheet and darkens in Three.js back view; lighting dependent"
+  },
+  {
+    "id": "IR-6",
+    "severity": "P2",
+    "status": "disputed",
+    "note": "reviewer says the head is 39% of height vs 46% on the sheet; head rows (z>=0.60 m) and torso rows were measured within about 1-2 cm of the sheet, so not accepted without a whole-figure measurement"
+  },
+  {
+    "id": "IR-7",
+    "severity": "P2",
+    "status": "open",
+    "note": "face profile is flat: small nose and no open-mouth relief in side view"
+  },
+  {
+    "id": "IR-8",
+    "severity": "P2",
+    "status": "open",
+    "note": "eyes read as decals (thick white ring, outer lash flicks); hands are simplified mittens; shoe soles are slab-like"
+  },
+  {
+    "id": "IR-9",
+    "severity": "P3",
+    "status": "open",
+    "note": "blue-purple tint on some nape lock tips (possible hood show-through); hood bulbous; ears small and plain"
   }
 ]
