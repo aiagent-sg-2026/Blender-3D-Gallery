@@ -1,7 +1,8 @@
 # Singapore and Malaysia Festival Models
 
-Status: F01–F04 (Christmas tree, gift boxes, New Year clock and lion dance
-head) are implemented and locally verified; the remaining backlog is proposed.
+Status: F01–F05 (Christmas tree, gift boxes, New Year clock, lion dance head
+and kumquat tree) are implemented and locally verified; the remaining backlog
+is proposed.
 A local result alone does not establish publication. The execution checklist
 and order live in
 [task.md](../../task.md#singapore-and-malaysia-festival-models--2026-11-15).
@@ -36,7 +37,7 @@ on 2026-11-15. Catalog presence is not a fresh visual or quality assessment.
 | --- | --- |
 | Christmas | `christmas-tree` (F01), `christmas-gift-boxes` (F02) |
 | Gregorian New Year | `new-year-countdown-clock` (F03) |
-| Chinese New Year | `chinese-new-year-lion-dance-head` (F04), `chinese-new-year-lantern-arch`, `chinese-new-year-mandarin-orange-basket`, `chinese-new-year-red-packet-display` |
+| Chinese New Year | `chinese-new-year-kumquat-tree` (F05), `chinese-new-year-lion-dance-head` (F04), `chinese-new-year-lantern-arch`, `chinese-new-year-mandarin-orange-basket`, `chinese-new-year-red-packet-display` |
 | Hari Raya | `hari-raya-ketupat-decoration`, `hari-raya-pelita-lamp`, `hari-raya-bazaar-stall` |
 | Deepavali | `deepavali-oil-lamp`, `deepavali-kolam-floor-pattern`, `deepavali-festive-arch` |
 | Mid-Autumn | `mid-autumn-lantern-display`, `mooncake-gift-box` |
@@ -49,9 +50,9 @@ duplicates; the inventory may change.
 
 ## Proposed model backlog
 
-Except for the implemented Christmas tree, gift boxes, countdown clock and
-lion dance head, the rows below are ideas. Work sequentially from the task
-tracker; later items and exact designs may be reprioritized.
+Except for the implemented Christmas tree, gift boxes, countdown clock, lion
+dance head and kumquat tree, the rows below are ideas. Work sequentially from
+the task tracker; later items and exact designs may be reprioritized.
 
 | Theme | Proposed models | Design notes |
 | --- | --- | --- |
@@ -87,5 +88,5 @@ Complete and verify one model before starting the next:
 
 Use existing gallery behavior: lightweight static cards and lazy 3D loading. Do
 not claim an asset is interactive or production-ready until its actual export
-and browser behavior have been verified. F01–F04 are locally verified;
+and browser behavior have been verified. F01–F05 are locally verified;
 publication requires separate confirmation.
