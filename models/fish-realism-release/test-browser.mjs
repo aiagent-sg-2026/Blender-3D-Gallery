@@ -3,12 +3,13 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import {chromium,webkit} from 'playwright';
-import {serveBuild, launchOptions} from '../../scripts/browser-test-utils.mjs';
+import {serveBuild} from '../../scripts/browser-test-utils.mjs';
+import {fishLaunchOptions,fishBrowserRuntime} from '../fish-realism-qa/browser-runtime.mjs';
 const manifest=JSON.parse(await fs.readFile('models/fish-realism-release/releases.json'));
 const server=process.env.FISH_LIVE_URL?{url:process.env.FISH_LIVE_URL,close:async()=>{}}:await serveBuild();
 const results=[];
 for(const engine of (process.env.FISH_ENGINE?[process.env.FISH_ENGINE]:['chromium','webkit'])) {
- const browser=await ({chromium,webkit}[engine]).launch(engine==='chromium'?launchOptions:{headless:true});
+ const browser=await ({chromium,webkit}[engine]).launch(engine==='chromium'?fishLaunchOptions:{headless:true});
  try { for(const slug of (process.env.FISH_SLUGS?process.env.FISH_SLUGS.split(','):Object.keys(manifest.models))) {
  assert.ok(manifest.models[slug],'Unknown release slug');
  const asset=path.resolve(`models/fish-realism-release/${slug}/model.glb`);
@@ -50,5 +51,5 @@ const still=await capture(canvas);await page.waitForTimeout(150);assert.ok(still
  console.log('PASS release',engine,slug);
  } } finally {await browser.close();}
 }
-await fs.writeFile(`models/fish-realism-release/${process.env.FISH_LIVE_URL?'live':'local'}-${process.env.FISH_ENGINE||'all'}${process.env.FISH_BATCH?'-'+process.env.FISH_BATCH:''}-browser-verification.json`,JSON.stringify({deployment_commit:process.env.FISH_DEPLOY_SHA||null,mode:'actual_catalog_no_substitution',mobile:'emulated viewport, not physical hardware',results},null,2)+'\n');
+await fs.writeFile(`models/fish-realism-release/${process.env.FISH_LIVE_URL?'live':'local'}-${process.env.FISH_ENGINE||'all'}${process.env.FISH_BATCH?'-'+process.env.FISH_BATCH:''}-browser-verification.json`,JSON.stringify({deployment_commit:process.env.FISH_DEPLOY_SHA||null,mode:'actual_catalog_no_substitution',chromium_runtime:fishBrowserRuntime,mobile:'emulated viewport, not physical hardware',results},null,2)+'\n');
 await server.close();

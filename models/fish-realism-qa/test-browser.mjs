@@ -3,7 +3,8 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import {chromium} from 'playwright';
-import {serveBuild, launchOptions} from '../../scripts/browser-test-utils.mjs';
+import {serveBuild} from '../../scripts/browser-test-utils.mjs';
+import {fishLaunchOptions,fishBrowserRuntime} from './browser-runtime.mjs';
 const slug=process.argv[2];assert.match(slug,/^[a-z0-9-]+$/);
 const asset=path.resolve(`models/fish-realism-qa/${slug}/model.glb`);
 const artifactHash=crypto.createHash('sha256').update(await fs.readFile(asset)).digest('hex');
@@ -14,7 +15,7 @@ for(const name of await fs.readdir('dist/assets')) {
 }
 assert.equal(matches.length,1,'Cannot identify the built gallery asset by its exact original bytes');const compiledName=matches[0];
 const directory=`output/playwright/fish-realism-qa/${slug}`;await fs.mkdir(directory,{recursive:true});
-const server=await serveBuild();const browser=await chromium.launch(launchOptions);const results=[];
+const server=await serveBuild();const browser=await chromium.launch(fishLaunchOptions);const results=[];
 try {
  for(const width of [1440,390]) {
   const errors=[];let served=0;
@@ -32,5 +33,5 @@ try {
   await page.keyboard.press('Escape');assert.equal(await page.locator('[data-fish-playback]').count(),0);
   results.push({width,height:900,loaded_draft_sha256:artifactHash,paused_stable:true,visible_swim_change:true,resumed_then_paused:true,no_horizontal_overflow:true,no_page_errors:true,viewer_disposed:true,screenshot});await context.close();
  }
- await fs.writeFile(`models/fish-realism-qa/${slug}/browser-verification.json`,JSON.stringify({slug,mode:'existing_built_gallery_with_draft_glb_request_substitution',engine:'chromium',production_files_changed:false,results},null,2)+'\n');console.log('PASS browser',slug,results.map(r=>r.width).join(','));
+ await fs.writeFile(`models/fish-realism-qa/${slug}/browser-verification.json`,JSON.stringify({slug,mode:'existing_built_gallery_with_draft_glb_request_substitution',engine:'chromium',runtime:fishBrowserRuntime,production_files_changed:false,results},null,2)+'\n');console.log('PASS browser',slug,results.map(r=>r.width).join(','));
 } finally {await browser.close();await server.close();}

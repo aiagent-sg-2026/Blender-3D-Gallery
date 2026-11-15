@@ -21,10 +21,11 @@
       ]
     }
   ],
-  "reviewed_source_sha256": "dd2018b28cfceb46f296500c274ca3669e1c2b6b030ac6d85d290400a6df331d",
+  "reviewed_source_sha256": "5a0324e8e2fb96c7142d65b9eed006618a29d97b7181a550d4138eaa7cb6715a",
   "reviewed_images": [
     "preview.png",
-    "head-detail.png"
+    "head-detail.png",
+    "pelvic-detail.png"
   ],
   "visual_checks": {
     "anatomy": "pass: slender compressed silver body, clearly separated dorsal sections and deep fork tail",
@@ -32,11 +33,24 @@
     "head": "pass: large eye is separated from the mouth crease after the second iteration",
     "fins": "pass: low soft dorsal/anal membranes and pale caudal pigmentation differ from yellowstripe scad",
     "motion": "pass: cyclic tail and body-anchored stabilizing fins survive actual GLB reimport",
-    "browser": "pass: real draft GLB visibly swims and pauses at desktop/mobile sizes"
+    "browser": "pass: real draft GLB visibly swims and pauses at desktop/mobile sizes",
+    "surface_contact": "pass: actual evaluated source and imported GLB roots contact the posed skin at five phases; paired pelvic roots embedded where present"
   },
   "limitations": [
     "Artistic photo-informed visual study, not a scanned specimen.",
     "Supplied Scad/Selar alias is represented by Selar crumenophthalmus; no unique common-name certification.",
     "Draft browser captions remain baseline."
+  ],
+  "attachment_revisions": [
+    {
+      "prior_source_sha256": "dd2018b28cfceb46f296500c274ca3669e1c2b6b030ac6d85d290400a6df331d",
+      "finding": "Fixed paired pelvic-base coordinate lay outside the curved skin despite correct dynamic weights",
+      "repair": "Only pelvic mesh bases reprojected onto an embedded ventrolateral root curve; body, materials and actions retained",
+      "repaired_meshes": [
+        "Pelvic_-1",
+        "Pelvic_1"
+      ],
+      "result": "pass: ventral detail inspected, five-phase source/GLB contact and desktop/mobile playback checked; other mesh-motion measurements retained within 0.00001"
+    }
   ]
 }

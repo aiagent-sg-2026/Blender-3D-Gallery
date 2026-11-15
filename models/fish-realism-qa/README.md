@@ -30,3 +30,7 @@ Sources and GLBs contain packed textures. Optional PNG authoring caches need not
 A later oblique/rest-geometry audit found that the earlier fixed paired-pelvic root coordinate lay outside the curved body even though its bone weights followed the spine. `fin_attachment.py` now owns a small embedded ventrolateral root curve. Verification measures signed distance from actual evaluated fin roots to the actual posed body surface at five phases, in both source and reimported GLB. Tubular sensory-ray bases must straddle the skin; a caudal leading edge must intersect the peduncle. This complements weight continuity rather than treating correct weights as sufficient contact evidence. Earlier playback receipts remain historical and do not establish this later criterion.
 
 The routed architecture instruction module was absent in this checkout; scoped repository contracts and observable source/export/browser evidence were used.
+
+On macOS hosts where bundled Chromium/SwiftShader screenshot preparation stalls, set `FISH_CHROME_PATH` to an installed Chrome executable and `FISH_WEBGL_BACKEND=metal`. The optional runtime is recorded in browser receipts; all existing assertions still apply. This is a QA environment choice, not a physical-device performance claim.
+
+Invoke Blender with `--python-exit-code 1` before `--python SCRIPT` so failed Python assertions stop shell automation. Newly written receipts and source/artifact hashes remain mandatory.
