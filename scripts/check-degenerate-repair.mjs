@@ -1,3 +1,5 @@
+import './node-glb-structure.mjs';
+import { materialDefinitions } from './node-glb-structure.mjs';
 // Independent comparison of static delivered GLBs, including numerical residue.
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
@@ -18,6 +20,7 @@ const NUMERICAL_RESIDUE_ALTITUDE = 1e-7;
 async function inspect(file) {
   const bytes = await fs.readFile(file);
   const json = JSON.parse(bytes.toString('utf8', 20, 20 + bytes.readUInt32LE(12)));
+  const resolvedMaterials = materialDefinitions(json, bytes.subarray(28 + bytes.readUInt32LE(12)));
   const validation = await validator.validateBytes(new Uint8Array(bytes));
   assert.equal(validation.issues.numErrors, 0); assert.equal(validation.issues.numWarnings, 0);
   assert.equal(json.animations?.length ?? 0, 0, 'Animated assets require separate state/clip comparison');
@@ -67,7 +70,8 @@ async function inspect(file) {
   const bounds = new Box3().setFromObject(gltf.scene);
   return { file, bytes: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex'), triangles, zero,
     invalidNormals, bounds: { min: bounds.min.toArray(), max: bounds.max.toArray() }, roots,
-    materialDefinitions: json.materials, issues: validation.issues, surfaces, linePrecisionResidues };
+    materialDefinitions: json.materials, resolvedMaterialDefinitions: resolvedMaterials,
+    issues: validation.issues, surfaces, linePrecisionResidues };
 }
 const summarize = value => ({ ...value, surfaces: undefined });
 let receipt;
@@ -136,11 +140,8 @@ try {
     before.linePrecisionResidues.length - after.linePrecisionResidues.length);
   assert.deepEqual(after.roots, before.roots, 'Asset root transforms preserved');
   for (const side of ['min', 'max']) after.bounds[side].forEach((v, i) => assert.ok(Math.abs(v - before.bounds[side][i]) < 1e-6));
-  const materials = values => {
-    assert.equal(new Set(values.map(m => m.name)).size, values.length);
-    return values.slice().sort((a, b) => a.name.localeCompare(b.name));
-  };
-  assert.deepEqual(materials(after.materialDefinitions), materials(before.materialDefinitions));
+  assert.deepEqual(after.resolvedMaterialDefinitions, before.resolvedMaterialDefinitions,
+    'Material definitions or embedded texture payloads changed');
   receipt.status = 'PASS';
   await fs.writeFile(output, JSON.stringify(receipt, null, 2) + '\n');
   console.log('PASS: static GLB repair; zero degenerate triangles; bounds, roots, material surfaces preserved within stated numeric limits');

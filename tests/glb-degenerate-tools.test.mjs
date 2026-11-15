@@ -172,3 +172,52 @@ test('reviewed radial-line calibration preserves defaults and rejects a real one
   assert.notEqual(reject.status, 0, 'A real 1 nm face exceeds the calibrated 0.2 nm line error and must not disappear');
   assert.match(reject.stderr, /Meaningful original surfaces removed/);
 });
+
+test('equivalent texture aliases compare semantically while pixel and material changes are rejected', async context => {
+  const dir = await fs.mkdtemp(path.join(os.tmpdir(), 'glb-material-alias-test-'));
+  context.after(() => fs.rm(dir, { recursive: true, force: true }));
+  const white = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVR4nGP4DwQACfsD/fteaysAAAAASUVORK5CYII=', 'base64');
+  const black = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR4nGNgYGD4DwABBAEAX+XDSwAAAABJRU5ErkJggg==', 'base64');
+  const textured = (clean, changedPixels = false, distinctNames = false) => {
+    const b = fixture(clean ? [0,1,2,9,10,11] : Array.from({ length: 12 }, (_, i) => i));
+    const j = JSON.parse(b.toString('utf8', 20, 20 + b.readUInt32LE(12)));
+    let bin = Buffer.from(b.subarray(28 + b.readUInt32LE(12)));
+    const image = changedPixels ? black : white, imageView = j.bufferViews.length;
+    j.bufferViews.push({ buffer: 0, byteOffset: bin.length, byteLength: image.length });
+    bin = Buffer.concat([bin, image, Buffer.alloc((4 - image.length % 4) % 4)]);
+    const uv = Buffer.alloc(12 * 2 * 4), uvView = j.bufferViews.length;
+    j.bufferViews.push({ buffer: 0, byteOffset: bin.length, byteLength: uv.length, target: 34962 });
+    const uvAccessor = j.accessors.length;
+    j.accessors.push({ bufferView: uvView, componentType: 5126, count: 12, type: 'VEC2' });
+    bin = Buffer.concat([bin, uv]);j.buffers[0].byteLength = bin.length;
+    j.images = [{ bufferView: imageView, mimeType: 'image/png', name: 'FixturePixel' }];
+    j.samplers = [{ magFilter: 9729, minFilter: 9987 }];
+    j.textures = [{ source: 0, sampler: 0 }];
+    j.materials = [{ name: 'Fixture', pbrMetallicRoughness: { baseColorTexture: { index: 0 }, roughnessFactor: .5 } }];
+    j.meshes[0].primitives[0].attributes.TEXCOORD_0 = uvAccessor;
+    j.meshes.push(structuredClone(j.meshes[0]));
+    j.nodes.push({ name: 'TextureAliasInstance', mesh: 1, translation: [2,0,0] });j.scenes[0].nodes.push(1);
+    if (!clean) {
+      j.textures.push({ source: 0, sampler: 0 });
+      j.materials.push({ name: 'Fixture', pbrMetallicRoughness: { baseColorTexture: { index: 1 }, roughnessFactor: distinctNames ? .7 : .5 } });
+      j.meshes[1].primitives[0].material = 1;
+    }
+    return pack(j, bin);
+  };
+  const before = path.join(dir, 'before.glb'), control = path.join(dir, 'control.glb');
+  const comparison = path.join(dir, 'comparison.json');
+  await fs.writeFile(before, textured(false));await fs.writeFile(control, textured(true));
+  const good = run('scripts/check-degenerate-repair.mjs', [before, control, comparison]);
+  assert.equal(good.status, 0, good.stderr);
+  const repaired = path.join(dir, 'repaired.glb');
+  const repair = run('scripts/repair-glb-degenerates.mjs', [before, repaired, path.join(dir, 'index.json'), comparison]);
+  assert.equal(repair.status, 0, repair.stderr);
+  const actual = run('scripts/check-degenerate-repair.mjs', [before, repaired, path.join(dir, 'actual.json')]);
+  assert.equal(actual.status, 0, actual.stderr);
+  const changed = path.join(dir, 'changed-pixels.glb');await fs.writeFile(changed, textured(true, true));
+  const pixels = run('scripts/check-degenerate-repair.mjs', [before, changed, path.join(dir, 'pixels.json')]);
+  assert.notEqual(pixels.status, 0);assert.match(pixels.stderr, /embedded texture payloads changed/);
+  const ambiguous = path.join(dir, 'distinct-same-name.glb');await fs.writeFile(ambiguous, textured(false, false, true));
+  const names = run('scripts/check-degenerate-repair.mjs', [ambiguous, control, path.join(dir, 'names.json')]);
+  assert.notEqual(names.status, 0);assert.match(names.stderr, /Distinct same-name materials/);
+});

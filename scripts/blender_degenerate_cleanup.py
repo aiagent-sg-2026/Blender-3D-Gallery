@@ -6,6 +6,7 @@ import bpy
 
 MODIFIER_NAME = 'Degenerate face cleanup'
 GROUP_NAME = 'Triangle cleanup - 0.1 micrometre weld'
+FINGERPRINT_SCHEMA = 'authored-state-v2-packed-images'
 
 
 def add_cleanup(obj, ngon_method='Beauty', preserve_loop_triangles=False):
@@ -102,12 +103,21 @@ def source_fingerprint():
             return value.name
         return [serial(item) for item in value]
 
+    def modifier_state(modifier):
+        # Writable scalar settings include bevel width/segments and visibility;
+        # exclude active/expanded UI state and read-only evaluation statistics.
+        settings = {p.identifier: serial(getattr(modifier, p.identifier))
+                    for p in modifier.bl_rna.properties
+                    if p.type in {'BOOLEAN', 'INT', 'FLOAT', 'STRING', 'ENUM'} and not p.is_readonly
+                    and p.identifier not in {'is_active', 'show_expanded'}}
+        return modifier.name, modifier.type, settings
+
     objects = []
     for obj in sorted(bpy.data.objects, key=lambda value: value.name):
         record = {'name': obj.name, 'type': obj.type, 'matrix': [list(row) for row in obj.matrix_world],
                   'parent': obj.parent.name if obj.parent else None, 'selected': obj.select_get(),
                   'properties': {k: serial(v) for k, v in obj.items()},
-                  'modifiers': [(m.name, m.type) for m in obj.modifiers if m.name != MODIFIER_NAME]}
+                  'modifiers': [modifier_state(m) for m in obj.modifiers if m.name != MODIFIER_NAME]}
         if obj.type in {'MESH', 'FONT', 'CURVE'}:
             record['materials'] = [m.name if m else None for m in obj.data.materials]
         if obj.type == 'MESH':
@@ -133,7 +143,8 @@ def source_fingerprint():
         nodes, links = [], []
         if material.use_nodes:
             for node in material.node_tree.nodes:
-                nodes.append((node.name, node.type, [(s.identifier, serial(s.default_value))
+                nodes.append((node.name, node.type, node.image.name if getattr(node, 'image', None) else None,
+                              [(s.identifier, serial(s.default_value))
                               for s in node.inputs if hasattr(s, 'default_value')]))
             links = [(l.from_node.name, l.from_socket.identifier, l.to_node.name, l.to_socket.identifier)
                      for l in material.node_tree.links]
@@ -143,7 +154,12 @@ def source_fingerprint():
                     'children': sorted(child.name for child in c.children),
                     'properties': {k: serial(v) for k, v in c.items()}}
                    for c in sorted(bpy.data.collections, key=lambda value: value.name)]
-    data = {'objects': objects, 'materials': materials, 'collections': collections, 'cursor': list(scene.cursor.location),
+    images = [{'name': im.name, 'source': im.source, 'filepath': im.filepath,
+               'colorspace': im.colorspace_settings.name,
+               'packed_sha256': hashlib.sha256(bytes(im.packed_file.data)).hexdigest() if im.packed_file else None}
+              for im in sorted(bpy.data.images, key=lambda value: value.name)]
+    data = {'schema': FINGERPRINT_SCHEMA, 'objects': objects, 'materials': materials, 'images': images,
+            'collections': collections, 'cursor': list(scene.cursor.location),
             'active': bpy.context.view_layer.objects.active.name if bpy.context.view_layer.objects.active else None,
             'units': [scene.unit_settings.system, scene.unit_settings.scale_length],
             'camera': scene.camera.name if scene.camera else None, 'frame': scene.frame_current}

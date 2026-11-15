@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "basis": "f58402b3 plus this focused M057 repair",
+  "javascript_tests": {
+    "passed": 695,
+    "failed": 0,
+    "log": "tests.log.gz"
+  },
+  "build": {
+    "passed": true,
+    "log": "build.log.gz",
+    "advisory": "Existing Vite large-chunk advisory"
+  },
+  "native": "native-regression.json",
+  "source_edit": "source-edit-verification.json",
+  "browser": {
+    "gallery_cases": 3,
+    "inspector_cases": 2,
+    "backend": "Local Google Chrome, ANGLE Metal",
+    "gallery": "browser-gallery.json",
+    "desktop": "browser-inspector-desktop.json",
+    "touch": "browser-inspector-touch.json",
+    "earlier_attempt": "Bundled Chromium/SwiftShader parallel attempts timed out/hung; stopped owned Gallery process tree. Inspector failure log preserved; no PASS claimed for those attempts."
+  },
+  "visual_review": "Actual Gallery 1440/390 and Inspector desktop screenshot inspected; unchanged cabinet panels, L shelves, gold trim, wood/stone textures and visible dual headers",
+  "limits": [
+    "No physical devices",
+    "No deployment",
+    "No certification"
+  ],
+  "integration": {
+    "upstream_main": "deafc76c",
+    "rebase": "No conflicts; only upstream fish/billiards evidence and tests. No changes to the Viewer/Inspector modules, M057 catalog entry or target exports.",
+    "targeted_tests": 23,
+    "build": "PASS",
+    "browser_reuse": "Earlier 3+2 cases cover unchanged target assets/runtime; consumed exact delivered SHA, before unrelated upstream integration."
+  },
+  "whitespace_exception": "Raw failing regression-before.log is preserved unchanged, including two whitespace-only lines. All other changed files pass git diff --check.",
+  "final_integration": {
+    "upstream_main": "bafd6e3c4c8f895719fe078cf751078fc1781239",
+    "scope": "Only fish/catalog artifacts; exact M057 catalog registration and every runtime/test module compared unchanged against previous integration base.",
+    "targeted_tests": 13,
+    "failed": 0,
+    "reuse": "23 integration tests/build and 3+2 browser cases retained for unchanged relevant inputs. Fish additions are outside M057 acceptance scope."
+  }
+}

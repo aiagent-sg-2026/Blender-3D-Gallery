@@ -22,9 +22,9 @@ Blender uses metre units, +Z up and -Y front; glTF uses +Y up and +Z front. Orig
 
 | LOD | Triangles | Bytes |
 | --- | ---: | ---: |
-| 0 | 13,680 | 1,056,536 |
-| 1 | 4,944 | 469,480 |
-| 2 | 2,032 | 285,952 |
+| 0 | 13,620 | 1,056,536 |
+| 1 | 4,908 | 469,480 |
+| 2 | 2,008 | 285,952 |
 | 3 | 576 | 180,092 |
 
 - PASS `reports/assets.json`: all four LODs plus collider have zero Khronos errors/warnings; 42 semantic meshes, two embedded original PNG textures, bounded scale, stable 24 anchors, positive L-footprint checks, empty notch, supported LEDs and rear-panel spine contact.
@@ -44,6 +44,14 @@ The original rear-positioned 1 m runtime labels were visually occluded despite i
 
 ## Reproduce
 
-Run the existing Blender 4.x environment with `-b -P generate.py` (from this asset directory or using its repository-relative path). `--skip-render` skips all previews, useful only when image evidence is already valid. Then run `node models/gjh-m057-premium-wall-shelf-corner/validate.mjs`, the Blender `inspect_sources.py` script and `verify_source_edit.mjs`. Focused checks are `node --test tests/gjh-m057.test.mjs` and, after the normal repository build, `node scripts/test-gjh-m057-browser.mjs`. Use the repository's Shelf Inspector browser script for runtime evidence. Do not overwrite prior failed evidence when rerunning.
+Run Blender 5.1+ with `-b -P generate.py` (from this asset directory or using its repository-relative path). `--skip-render` skips all previews, useful only when image evidence is already valid. Then run `node models/gjh-m057-premium-wall-shelf-corner/validate.mjs`, the Blender `inspect_sources.py` script and `verify_source_edit.mjs`. Focused checks are `node --test tests/gjh-m057.test.mjs` and, after the normal repository build, `node scripts/test-gjh-m057-browser.mjs`. Use the repository's Shelf Inspector browser script for runtime evidence. Do not overwrite prior failed evidence when rerunning.
 
 See `LICENSE.md` for rights limits. No structural load, safety, accessibility, photometric or official-brand certification is made.
+
+## Topology repair (2026-11-15)
+
+Removed 60/36/24 exact-zero triangles from LOD0/1/2 on `trim_crown_lip`; LOD3 and collider are byte-identical. Canonical positions, normals, UVs and both embedded PNG payloads remain unchanged. The editable source retains all 78 child objects, 42 semantic meshes and 24 anchors. Cleanup is an additive modifier; fresh generation and all four delivered native imports are checked by `test_degenerate_cleanup.py` (pass a new owned output directory after `--`).
+
+The saved-source edit compares an unchanged control and edited copy from the same Blender version. Exactly one LED geometry changes, 41 sibling position/normal/index payloads match; four sibling UV coordinates vary by at most 1.863e-9 during native evaluation (guard 1e-7). Only the intended shared LED roughness changes. The source and canonical assets stay unchanged by the edit probe. Old reports/source-edit artifacts are historical; reports/source-edit-current and source-edit-verification.json describe the current source.
+
+[Repair evidence](../../docs/model-qa/degenerate-repairs/gjh-m057-premium-wall-shelf-corner/README.md).

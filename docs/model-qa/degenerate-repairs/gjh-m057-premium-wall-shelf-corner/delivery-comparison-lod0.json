@@ -1,0 +1,881 @@
+{
+  "status": "PASS",
+  "before": {
+    "file": "/tmp/blender-mall-degenerate-44yfvxbl/m057-original-lod0.glb",
+    "bytes": 1056536,
+    "sha256": "f62f5e8a2ea43b253edf1a96af0a59ea3ae52fa794de9a37151007f7637c6e4f",
+    "triangles": 13680,
+    "zero": 60,
+    "invalidNormals": 0,
+    "bounds": {
+      "min": [
+        -0.6000000238418579,
+        0,
+        -0.6000000238418579
+      ],
+      "max": [
+        0.6000000238418579,
+        2.4000000953674316,
+        0.6000000238418579
+      ]
+    },
+    "roots": {
+      "ASSET_GJHM057": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "materialDefinitions": [
+      {
+        "doubleSided": true,
+        "name": "Emerald lacquer",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.0027089782524853945,
+            0.03310476616024971,
+            0.01960664801299572,
+            1
+          ],
+          "metallicFactor": 0.15000000596046448,
+          "roughnessFactor": 0.25999999046325684
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Warm wood baked grain",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 0
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.5
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Champagne gold",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.4338795244693756,
+            0.2846466898918152,
+            0.09462962299585342,
+            1
+          ],
+          "metallicFactor": 0.800000011920929,
+          "roughnessFactor": 0.27000001072883606
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Warm wood baked grain",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 1
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.5
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Dark stone baked veins",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 2
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.41999998688697815
+        }
+      },
+      {
+        "doubleSided": true,
+        "emissiveFactor": [
+          1,
+          0.5600000023841858,
+          0.2199999988079071
+        ],
+        "extensions": {
+          "KHR_materials_emissive_strength": {
+            "emissiveStrength": 2.5
+          }
+        },
+        "name": "Warm LED diffuser",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.9551045894622803,
+            0.5382355451583862,
+            0.15487249195575714,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.3499999940395355
+        }
+      }
+    ],
+    "resolvedMaterialDefinitions": [
+      {
+        "doubleSided": true,
+        "name": "Champagne gold",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.4338795244693756,
+            0.2846466898918152,
+            0.09462962299585342,
+            1
+          ],
+          "metallicFactor": 0.800000011920929,
+          "roughnessFactor": 0.27000001072883606
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Dark stone baked veins",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": {
+              "sampler": {
+                "magFilter": 9729,
+                "minFilter": 9987
+              },
+              "source": {
+                "mimeType": "image/png",
+                "sha256": "cec2170377ad2ae9d502e5fb978514edc62cf973bd489facdb3fda193bf5f964"
+              }
+            }
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.41999998688697815
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Emerald lacquer",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.0027089782524853945,
+            0.03310476616024971,
+            0.01960664801299572,
+            1
+          ],
+          "metallicFactor": 0.15000000596046448,
+          "roughnessFactor": 0.25999999046325684
+        }
+      },
+      {
+        "doubleSided": true,
+        "emissiveFactor": [
+          1,
+          0.5600000023841858,
+          0.2199999988079071
+        ],
+        "extensions": {
+          "KHR_materials_emissive_strength": {
+            "emissiveStrength": 2.5
+          }
+        },
+        "name": "Warm LED diffuser",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.9551045894622803,
+            0.5382355451583862,
+            0.15487249195575714,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.3499999940395355
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Warm wood baked grain",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": {
+              "sampler": {
+                "magFilter": 9729,
+                "minFilter": 9987
+              },
+              "source": {
+                "mimeType": "image/png",
+                "sha256": "9552a27f5dba50b05d4598e0d9a32fb2ad52b836c1db793149a16755bd188d26"
+              }
+            }
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.5
+        }
+      }
+    ],
+    "issues": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 34,
+      "numHints": 0,
+      "messages": [
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/2/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/3/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/4/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/5/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/6/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/7/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/8/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/9/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/10/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/14/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/15/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/16/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/18/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/19/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/20/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/21/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/22/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/23/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/24/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/25/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/26/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/27/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/28/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/29/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/30/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/31/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/32/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/33/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/37/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/38/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/39/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/40/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/41/primitives/0/attributes/TEXCOORD_0"
+        }
+      ],
+      "truncated": false
+    },
+    "linePrecisionResidues": []
+  },
+  "after": {
+    "file": "/tmp/blender-mall-degenerate-44yfvxbl/m057-delivery-lod0.glb",
+    "bytes": 1056536,
+    "sha256": "f987e8c550548c886fb78c12863fca11f18b614cf8057609ca08fa97cfe069f9",
+    "triangles": 13620,
+    "zero": 0,
+    "invalidNormals": 0,
+    "bounds": {
+      "min": [
+        -0.6000000238418579,
+        0,
+        -0.6000000238418579
+      ],
+      "max": [
+        0.6000000238418579,
+        2.4000000953674316,
+        0.6000000238418579
+      ]
+    },
+    "roots": {
+      "ASSET_GJHM057": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "materialDefinitions": [
+      {
+        "doubleSided": true,
+        "name": "Emerald lacquer",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.0027089782524853945,
+            0.03310476616024971,
+            0.01960664801299572,
+            1
+          ],
+          "metallicFactor": 0.15000000596046448,
+          "roughnessFactor": 0.25999999046325684
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Warm wood baked grain",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 0
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.5
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Champagne gold",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.4338795244693756,
+            0.2846466898918152,
+            0.09462962299585342,
+            1
+          ],
+          "metallicFactor": 0.800000011920929,
+          "roughnessFactor": 0.27000001072883606
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Warm wood baked grain",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 1
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.5
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Dark stone baked veins",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 2
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.41999998688697815
+        }
+      },
+      {
+        "doubleSided": true,
+        "emissiveFactor": [
+          1,
+          0.5600000023841858,
+          0.2199999988079071
+        ],
+        "extensions": {
+          "KHR_materials_emissive_strength": {
+            "emissiveStrength": 2.5
+          }
+        },
+        "name": "Warm LED diffuser",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.9551045894622803,
+            0.5382355451583862,
+            0.15487249195575714,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.3499999940395355
+        }
+      }
+    ],
+    "resolvedMaterialDefinitions": [
+      {
+        "doubleSided": true,
+        "name": "Champagne gold",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.4338795244693756,
+            0.2846466898918152,
+            0.09462962299585342,
+            1
+          ],
+          "metallicFactor": 0.800000011920929,
+          "roughnessFactor": 0.27000001072883606
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Dark stone baked veins",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": {
+              "sampler": {
+                "magFilter": 9729,
+                "minFilter": 9987
+              },
+              "source": {
+                "mimeType": "image/png",
+                "sha256": "cec2170377ad2ae9d502e5fb978514edc62cf973bd489facdb3fda193bf5f964"
+              }
+            }
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.41999998688697815
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Emerald lacquer",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.0027089782524853945,
+            0.03310476616024971,
+            0.01960664801299572,
+            1
+          ],
+          "metallicFactor": 0.15000000596046448,
+          "roughnessFactor": 0.25999999046325684
+        }
+      },
+      {
+        "doubleSided": true,
+        "emissiveFactor": [
+          1,
+          0.5600000023841858,
+          0.2199999988079071
+        ],
+        "extensions": {
+          "KHR_materials_emissive_strength": {
+            "emissiveStrength": 2.5
+          }
+        },
+        "name": "Warm LED diffuser",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.9551045894622803,
+            0.5382355451583862,
+            0.15487249195575714,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.3499999940395355
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Warm wood baked grain",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": {
+              "sampler": {
+                "magFilter": 9729,
+                "minFilter": 9987
+              },
+              "source": {
+                "mimeType": "image/png",
+                "sha256": "9552a27f5dba50b05d4598e0d9a32fb2ad52b836c1db793149a16755bd188d26"
+              }
+            }
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.5
+        }
+      }
+    ],
+    "issues": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 34,
+      "numHints": 0,
+      "messages": [
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/2/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/3/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/4/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/5/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/6/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/7/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/8/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/9/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/10/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/14/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/15/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/16/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/18/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/19/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/20/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/21/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/22/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/23/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/24/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/25/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/26/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/27/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/28/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/29/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/30/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/31/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/32/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/33/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/37/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/38/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/39/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/40/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/41/primitives/0/attributes/TEXCOORD_0"
+        }
+      ],
+      "truncated": false
+    },
+    "linePrecisionResidues": []
+  },
+  "positionToleranceM": 0.000001,
+  "maxPositionDeltaM": 0,
+  "numericalResidueAltitudeLimitM": 1e-7,
+  "removedPositiveAreaResidues": [],
+  "addedSurfaceKeys": [],
+  "addedSurfaceDetails": [],
+  "changedNormalTriangles": 0,
+  "maxNormalDelta": 0
+}

@@ -1,0 +1,27 @@
+✖ gjh-m057-premium-wall-shelf-corner: repaired delivered geometry contains no zero-area triangles (46.849458ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 801.623417
+
+✖ failing tests:
+
+test at tests/mall-degenerate-repairs.test.mjs:15:3
+✖ gjh-m057-premium-wall-shelf-corner: repaired delivered geometry contains no zero-area triangles (46.849458ms)
+  AssertionError [ERR_ASSERTION]: gjh-m057-premium-wall-shelf-corner: actual GLB must contain no zero-area triangles
+  
+  60 !== 0
+  
+      at TestContext.<anonymous> (file:///private/tmp/blender-mall-degenerate-44yfvxbl/worktree/tests/mall-degenerate-repairs.test.mjs:36:12)
+      at async Test.run (node:internal/test_runner/test:1054:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:297:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 60,
+    expected: 0,
+    operator: 'strictEqual'
+  }

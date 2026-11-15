@@ -1,3 +1,4 @@
+import './node-glb-structure.mjs';
 // Preserve authored vertex/shading/image/animation payloads; rewrite only indices.
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';

@@ -15,7 +15,7 @@ Active campaign: repair and publish one asset at a time. A fresh raw GLB scan of
 | mall-floor-direction-sign | 139 | repaired |
 | mall-event-booth | 118 | repaired |
 | gjh-areca-planter | 100 | repaired |
-| gjh-m057-premium-wall-shelf-corner | 60 | pending |
+| gjh-m057-premium-wall-shelf-corner | 60 | repaired |
 | escalator | 11 | pending |
 | atm-kiosk | 4 | pending |
 | passenger-lift | 4 | pending |
