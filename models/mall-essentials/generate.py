@@ -15,6 +15,9 @@ sys.path.insert(0, str(HERE.parents[1] / "scripts"))
 from blender_degenerate_cleanup import add_cleanup
 
 CLEANUP_PARTS = {
+    "mall-advertising-lightbox": ("Abstract jade landscape", "Abstract sage column",
+        "Campaign gold underline", "Fine brass front surround", "Illuminated poster face",
+        "Label - SOMETHING NEW", "Label - THE MALL", "Rear removable service panel"),
     "mall-directory-kiosk": ("Illustrative shop block", "Illustrative shop block.001",
         "Illustrative shop block.002", "Illustrative shop block.003", "Label - DIRECTORY",
         "Map surface", "Rear service cover", "Rear ventilation strip", "Rear ventilation strip.001",

@@ -13,7 +13,8 @@ generator = importlib.util.module_from_spec(spec); spec.loader.exec_module(gener
 from blender_degenerate_cleanup import geometry_counts, source_fingerprint
 
 for identity, factory, parts in [('mall-trash-bin', generator.waste_bin, 32),
-                                  ('mall-directory-kiosk', generator.directory, 23)]:
+                                  ('mall-directory-kiosk', generator.directory, 23),
+                                  ('mall-advertising-lightbox', generator.lightbox, 18)]:
     bpy.ops.wm.read_factory_settings(use_empty=True)
     factory()
     objects = list(bpy.context.scene.objects)
