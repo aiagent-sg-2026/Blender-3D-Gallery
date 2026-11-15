@@ -178,7 +178,7 @@ Acceptance coverage E001–E100 must be tracked against deterministic assertions
 
 # Singapore and Malaysia Festival Models — 2026-11-15
 
-**Status:** F01 implemented and locally verified; later items remain planned.
+**Status:** F01 and F02 implemented and locally verified; later items remain planned.
 Work through one model at a time. See the [festival model
 brief](docs/festival-models/README.md) for concept images, existing inventory,
 design ideas and per-model acceptance criteria. Recheck the catalog before
@@ -189,8 +189,9 @@ starting each item. Preserve the historical task records above.
 - [x] **F01 — Christmas tree:** editable Blender source, standalone GLB,
   preview and catalog entry created; local validation and browser checks passed.
   See [model notes](models/christmas-tree/README.md) for evidence and limits.
-- [ ] **F02 — Christmas gift boxes:** original reusable boxes and ribbons;
-  complete the same acceptance gate after F01.
+- [x] **F02 — Christmas gift boxes:** four editable presents, standalone GLB,
+  preview and catalog entry created; local validation and browser checks passed.
+  See [model notes](models/christmas-gift-boxes/README.md) for evidence and limits.
 - [ ] **F03 — Gregorian New Year countdown clock:** year-independent festive
   display; complete the same acceptance gate after F02.
 - [ ] **F04 — Chinese New Year lion dance head:** research the visual details,

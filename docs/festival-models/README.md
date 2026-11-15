@@ -1,8 +1,8 @@
 # Singapore and Malaysia Festival Models
 
-Status: F01 Christmas Tree is implemented and locally verified; the remaining
-backlog is proposed. A local result alone does not establish publication. The
-execution checklist and order live in
+Status: F01 Christmas Tree and F02 Christmas Gift Boxes are implemented and
+locally verified; the remaining backlog is proposed. A local result alone does
+not establish publication. The execution checklist and order live in
 [task.md](../../task.md#singapore-and-malaysia-festival-models--2026-11-15).
 
 ## Design direction
@@ -33,7 +33,7 @@ on 2026-11-15. Catalog presence is not a fresh visual or quality assessment.
 
 | Festival or theme | Existing model IDs |
 | --- | --- |
-| Christmas | `christmas-tree` (F01) |
+| Christmas | `christmas-tree` (F01), `christmas-gift-boxes` (F02) |
 | Chinese New Year | `chinese-new-year-lantern-arch`, `chinese-new-year-mandarin-orange-basket`, `chinese-new-year-red-packet-display` |
 | Hari Raya | `hari-raya-ketupat-decoration`, `hari-raya-pelita-lamp`, `hari-raya-bazaar-stall` |
 | Deepavali | `deepavali-oil-lamp`, `deepavali-kolam-floor-pattern`, `deepavali-festive-arch` |
@@ -41,13 +41,15 @@ on 2026-11-15. Catalog presence is not a fresh visual or quality assessment.
 | National Day | `national-day-flag-pole`, `singapore-flag-banner`, `malaysia-flag-banner` |
 
 At the initial catalog inspection, no Christmas or Gregorian New Year model was
-identified by name. F01 adds the Christmas tree. Recheck the current catalog before creating each model to avoid
-duplicates; the inventory may change.
+identified by name. F01 and F02 add the Christmas tree and gift boxes. Recheck
+the current catalog before creating each model to avoid duplicates; the
+inventory may change.
 
 ## Proposed model backlog
 
-Except for the implemented Christmas tree, the rows below are ideas. Work sequentially from
-the task tracker; later items and exact designs may be reprioritized.
+Except for the implemented Christmas tree and gift boxes, the rows below are
+ideas. Work sequentially from the task tracker; later items and exact designs
+may be reprioritized.
 
 | Theme | Proposed models | Design notes |
 | --- | --- | --- |
@@ -83,5 +85,5 @@ Complete and verify one model before starting the next:
 
 Use existing gallery behavior: lightweight static cards and lazy 3D loading. Do
 not claim an asset is interactive or production-ready until its actual export
-and browser behavior have been verified. F01 is locally verified; publication
-requires separate confirmation.
+and browser behavior have been verified. F01 and F02 are locally verified;
+publication requires separate confirmation.
