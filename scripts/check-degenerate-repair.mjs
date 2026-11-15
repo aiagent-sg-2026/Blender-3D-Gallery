@@ -8,6 +8,10 @@ import validator from 'gltf-validator';
 
 const [beforePath, afterPath, output] = process.argv.slice(2);
 const allowNormalDrift = process.argv.includes('--allow-normal-drift');
+const lineArgument = process.argv.find(value => value.startsWith('--precision-line-tolerance-m='));
+const precisionLineToleranceM = lineArgument ? Number(lineArgument.split('=')[1]) : 0;
+assert.ok(Number.isFinite(precisionLineToleranceM) && precisionLineToleranceM >= 0 && precisionLineToleranceM <= 1e-7,
+  'Explicit reviewed line tolerance must be finite and at most 0.1 micrometre');
 assert.ok(beforePath && afterPath && output, 'Pass original GLB, repaired GLB and receipt path');
 const POSITION_QUANTIZATION = 1e-6;
 const NUMERICAL_RESIDUE_ALTITUDE = 1e-7;
@@ -19,7 +23,7 @@ async function inspect(file) {
   assert.equal(json.animations?.length ?? 0, 0, 'Animated assets require separate state/clip comparison');
   const gltf = await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength), '');
   gltf.scene.updateMatrixWorld(true);
-  const surfaces = new Map(), roots = {};
+  const surfaces = new Map(), roots = {}, linePrecisionResidues = [];
   let triangles = 0, zero = 0, invalidNormals = 0;
   gltf.scene.traverse(object => {
     if (object.name.startsWith('ASSET_')) roots[object.name] = object.matrixWorld.toArray();
@@ -49,6 +53,13 @@ async function inspect(file) {
       const orderedPoints = [0, 1, 2].map(k => points[(rotation.j + k) % 3].toArray());
       const record = { area, altitude: 2 * area / longestEdge, quantizedCollinear: quantizedArea === 0,
         material: object.material.name, points: orderedPoints, normals };
+      if (precisionLineToleranceM && record.altitude <= precisionLineToleranceM) {
+        // Explicit calibration for reviewed analytic lines. Grid rounding can
+        // make a radial line non-collinear, so use its actual perpendicular error.
+        linePrecisionResidues.push({ key, area, altitude: record.altitude,
+          quantizedCollinear: record.quantizedCollinear });
+        continue;
+      }
       if (!surfaces.has(key)) surfaces.set(key, []);
       surfaces.get(key).push(record);
     }
@@ -56,7 +67,7 @@ async function inspect(file) {
   const bounds = new Box3().setFromObject(gltf.scene);
   return { file, bytes: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex'), triangles, zero,
     invalidNormals, bounds: { min: bounds.min.toArray(), max: bounds.max.toArray() }, roots,
-    materialDefinitions: json.materials, issues: validation.issues, surfaces };
+    materialDefinitions: json.materials, issues: validation.issues, surfaces, linePrecisionResidues };
 }
 const summarize = value => ({ ...value, surfaces: undefined });
 let receipt;
@@ -108,13 +119,21 @@ try {
   }
   receipt = { status: 'PENDING', before: summarize(before), after: summarize(after),
     positionToleranceM: POSITION_QUANTIZATION, maxPositionDeltaM, numericalResidueAltitudeLimitM: NUMERICAL_RESIDUE_ALTITUDE,
-    removedPositiveAreaResidues: removed, addedSurfaceKeys: added, changedNormalTriangles, maxNormalDelta };
+    removedPositiveAreaResidues: removed, addedSurfaceKeys: added,
+    addedSurfaceDetails: unmatchedNew.filter(r => !r.used).map(r => ({ key: r.key, ...r.record })),
+    changedNormalTriangles, maxNormalDelta };
+  if (precisionLineToleranceM) {
+    receipt.precisionLineToleranceM = precisionLineToleranceM;
+    receipt.linePrecisionResidues = before.linePrecisionResidues;
+    receipt.afterLinePrecisionResidues = after.linePrecisionResidues;
+  }
   assert.equal(after.zero, 0); assert.equal(after.invalidNormals, 0);
   assert.ok(maxPositionDeltaM <= POSITION_QUANTIZATION, 'Matched surface vertex displacement exceeds tolerance');
   assert.equal(added.length, 0, 'Unintended oriented/material surfaces added');
   assert.ok(removed.every(r => r.altitude <= NUMERICAL_RESIDUE_ALTITUDE && r.quantizedCollinear), 'Meaningful original surfaces removed');
   if (!allowNormalDrift) assert.equal(changedNormalTriangles, 0, 'Delivered shading normals must be preserved');
-  assert.equal(before.triangles - after.triangles, before.zero + removed.length);
+  assert.equal(before.triangles - after.triangles, before.zero + removed.length +
+    before.linePrecisionResidues.length - after.linePrecisionResidues.length);
   assert.deepEqual(after.roots, before.roots, 'Asset root transforms preserved');
   for (const side of ['min', 'max']) after.bounds[side].forEach((v, i) => assert.ok(Math.abs(v - before.bounds[side][i]) < 1e-6));
   const materials = values => {

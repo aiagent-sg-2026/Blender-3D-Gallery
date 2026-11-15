@@ -1,0 +1,1784 @@
+{
+  "status": "PASS",
+  "before": {
+    "file": "/tmp/blender-mall-degenerate-44yfvxbl/areca-original.glb",
+    "bytes": 119760,
+    "sha256": "0d1caad269b9838b695924b2b2242277597d304443959394cebeb84a9a675267",
+    "triangles": 5160,
+    "zero": 100,
+    "invalidNormals": 0,
+    "bounds": {
+      "min": [
+        -0.5834455490112305,
+        0,
+        -0.5218117237091064
+      ],
+      "max": [
+        0.6466456055641174,
+        2.347566843032837,
+        0.6697390675544739
+      ]
+    },
+    "roots": {
+      "ASSET_GJHArecaPlanter": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "materialDefinitions": [
+      {
+        "doubleSided": true,
+        "name": "Fluted jade ceramic",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.023153366521000862,
+            0.08650045841932297,
+            0.05612849071621895,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.36000001430511475
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Brushed champagne brass",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.46207699179649353,
+            0.3277781009674072,
+            0.12213877588510513,
+            1
+          ],
+          "metallicFactor": 0.699999988079071,
+          "roughnessFactor": 0.3199999928474426
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Dark planting soil",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.03071344457566738,
+            0.020288562402129173,
+            0.010960093699395657,
+            1
+          ],
+          "metallicFactor": 0
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Palm stems",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.17464740574359894,
+            0.21223075687885284,
+            0.05448027700185776,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8600000143051147
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Deep palm green",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.023153366521000862,
+            0.1119324266910553,
+            0.03688944876194,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7699999809265137
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Young palm green",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.0802198201417923,
+            0.20863686501979828,
+            0.052860647439956665,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.800000011920929
+        }
+      }
+    ],
+    "issues": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 0,
+      "numHints": 0,
+      "messages": [],
+      "truncated": false
+    },
+    "linePrecisionResidues": [
+      {
+        "key": "Fluted jade ceramic:-7932,55000,1044|309331,55000,-40724|0,55000,0",
+        "area": 1.030948937330578e-11,
+        "altitude": 6.443430955983878e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-7932,55000,1044|0,55000,0|309331,55000,-40724",
+        "area": 1.030948937330578e-11,
+        "altitude": 6.443430955983878e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:0,55000,0|7727,55000,-2071|316824,55000,-84893",
+        "area": 1.3717565278126287e-11,
+        "altitude": 8.364369319530237e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-7391,55000,3061|288250,55000,-119397|0,55000,0",
+        "area": 4.648059660685572e-12,
+        "altitude": 2.9050372673634155e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-7391,55000,3061|0,55000,0|288250,55000,-119397",
+        "area": 4.64805971489568e-12,
+        "altitude": 2.905037301244733e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:0,55000,0|6928,55000,-4000|284056,55000,-164000",
+        "area": 2.339887994733808e-11,
+        "altitude": 1.4267609503169686e-10,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-6347,55000,4870|247526,55000,-189934|0,55000,0",
+        "area": 5.874370434533205e-12,
+        "altitude": 3.671481491747088e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-6347,55000,4870|0,55000,0|247526,55000,-189934",
+        "area": 5.874370651373639e-12,
+        "altitude": 3.6714816272723584e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:0,55000,0|5657,55000,-5657|231931,55000,-231931",
+        "area": 1.0842021724855044e-19,
+        "altitude": 6.610988670741111e-19,
+        "quantizedCollinear": true
+      },
+      {
+        "key": "Fluted jade ceramic:-4870,55000,6347|0,55000,0|189934,55000,-247526",
+        "area": 5.87437021769277e-12,
+        "altitude": 3.671481356221817e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-3061,55000,7391|119397,55000,-288250|0,55000,0",
+        "area": 4.648059660685572e-12,
+        "altitude": 2.9050372673634155e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-3061,55000,7391|0,55000,0|119397,55000,-288250",
+        "area": 4.6480599859462235e-12,
+        "altitude": 2.9050374706513213e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:0,55000,0|2071,55000,-7727|84893,55000,-316824",
+        "area": 1.3717565440756613e-11,
+        "altitude": 8.364369418695072e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-1044,55000,7932|40724,55000,-309331|0,55000,0",
+        "area": 1.0309489427515889e-11,
+        "altitude": 6.443430989865195e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-1044,55000,7932|0,55000,0|40724,55000,-309331",
+        "area": 1.0309489102255237e-11,
+        "altitude": 6.443430786577286e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-40724,55000,-309331|0,55000,0|1044,55000,7932",
+        "area": 1.030948937330578e-11,
+        "altitude": 6.443430955983878e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-40724,55000,-309331|1044,55000,7932|0,55000,0",
+        "area": 1.0309489671461378e-11,
+        "altitude": 6.443431142331129e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-2071,55000,-7727|-84893,55000,-316824|0,55000,0",
+        "area": 1.3717564952865635e-11,
+        "altitude": 8.364369121200565e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-119397,55000,-288250|0,55000,0|3061,55000,7391",
+        "area": 4.64805971489568e-12,
+        "altitude": 2.905037301244733e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-119397,55000,-288250|3061,55000,7391|0,55000,0",
+        "area": 4.648059389635029e-12,
+        "altitude": 2.905037097956827e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-164000,55000,-284056|0,55000,0|-4000,55000,-6928",
+        "area": 2.3398879730497646e-11,
+        "altitude": 1.426760937094991e-10,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-189934,55000,-247526|0,55000,0|4870,55000,6347",
+        "area": 5.874369784011901e-12,
+        "altitude": 3.6714810851712766e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-189934,55000,-247526|4870,55000,6347|0,55000,0",
+        "area": 5.8743707597938566e-12,
+        "altitude": 3.6714816950349935e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-231931,55000,-231931|0,55000,0|-5657,55000,-5657",
+        "area": 3.2526065174565133e-19,
+        "altitude": 1.983296601222333e-18,
+        "quantizedCollinear": true
+      },
+      {
+        "key": "Fluted jade ceramic:-247526,55000,-189934|6347,55000,4870|0,55000,0",
+        "area": 5.874369567171467e-12,
+        "altitude": 3.6714809496460064e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-288250,55000,-119397|0,55000,0|7391,55000,3061",
+        "area": 4.648060365416984e-12,
+        "altitude": 2.905037707820545e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-288250,55000,-119397|7391,55000,3061|0,55000,0",
+        "area": 4.648060094366441e-12,
+        "altitude": 2.9050375384139567e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-316824,55000,-84893|0,55000,0|-7727,55000,-2071",
+        "area": 1.3717565657597047e-11,
+        "altitude": 8.364369550914853e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-309331,55000,-40724|0,55000,0|7932,55000,1044",
+        "area": 1.0309489264885563e-11,
+        "altitude": 6.44343088822124e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-309331,55000,-40724|7932,55000,1044|0,55000,0",
+        "area": 1.030948956304116e-11,
+        "altitude": 6.443431074568491e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-328000,55000,0|0,55000,0|-8000,55000,0",
+        "area": 2.0520054048370244e-19,
+        "altitude": 1.251222773266598e-18,
+        "quantizedCollinear": true
+      },
+      {
+        "key": "Fluted jade ceramic:-309331,55000,40724|0,55000,0|7932,55000,-1044",
+        "area": 1.0309490050932138e-11,
+        "altitude": 6.443431379500358e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-309331,55000,40724|7932,55000,-1044|0,55000,0",
+        "area": 1.0309489779881595e-11,
+        "altitude": 6.443431210093766e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-316824,55000,84893|0,55000,0|-7727,55000,2071",
+        "area": 1.3717564898655527e-11,
+        "altitude": 8.364369088145619e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-288250,55000,119397|0,55000,0|7391,55000,-3061",
+        "area": 4.648059606475463e-12,
+        "altitude": 2.9050372334820977e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-288250,55000,119397|7391,55000,-3061|0,55000,0",
+        "area": 4.648059877526006e-12,
+        "altitude": 2.905037402888686e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-284056,55000,164000|0,55000,0|-6928,55000,4000",
+        "area": 2.3398880164178515e-11,
+        "altitude": 1.426760963538946e-10,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-247526,55000,189934|0,55000,0|6347,55000,-4870",
+        "area": 5.874371301894943e-12,
+        "altitude": 3.67148203384817e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-247526,55000,189934|6347,55000,-4870|0,55000,0",
+        "area": 5.874370976634291e-12,
+        "altitude": 3.671481830560264e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-231931,55000,231931|0,55000,0|-5657,55000,5657",
+        "area": 4.336808689942018e-19,
+        "altitude": 2.644395468296444e-18,
+        "quantizedCollinear": true
+      },
+      {
+        "key": "Fluted jade ceramic:-189934,55000,247526|4870,55000,-6347|0,55000,0",
+        "area": 5.874370542953422e-12,
+        "altitude": 3.671481559509723e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-119397,55000,288250|0,55000,0|3061,55000,-7391",
+        "area": 4.648060473837201e-12,
+        "altitude": 2.90503777558318e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-119397,55000,288250|3061,55000,-7391|0,55000,0",
+        "area": 4.648060202786658e-12,
+        "altitude": 2.905037606176592e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-2071,55000,7727|-84893,55000,316824|0,55000,0",
+        "area": 1.3717565766017265e-11,
+        "altitude": 8.364369617024743e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-40724,55000,309331|0,55000,0|1044,55000,-7932",
+        "area": 1.0309489129360291e-11,
+        "altitude": 6.443430803517944e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-40724,55000,309331|1044,55000,-7932|0,55000,0",
+        "area": 1.0309490647243333e-11,
+        "altitude": 6.44343175219486e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:0,55000,0|0,55000,8000|0,55000,328000",
+        "area": 1.2718495349760111e-18,
+        "altitude": 7.755179877106166e-18,
+        "quantizedCollinear": true
+      },
+      {
+        "key": "Fluted jade ceramic:-1044,55000,-7932|40724,55000,309331|0,55000,0",
+        "area": 1.030949132486969e-11,
+        "altitude": 6.44343217571134e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-1044,55000,-7932|0,55000,0|40724,55000,309331",
+        "area": 1.0309489888301812e-11,
+        "altitude": 6.443431277856403e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:0,55000,0|2071,55000,7727|84893,55000,316824",
+        "area": 1.37175647360252e-11,
+        "altitude": 8.364368988980783e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-3061,55000,-7391|119397,55000,288250|0,55000,0",
+        "area": 4.648059498055246e-12,
+        "altitude": 2.9050371657194625e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-3061,55000,-7391|0,55000,0|119397,55000,288250",
+        "area": 4.648059769105789e-12,
+        "altitude": 2.9050373351260507e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:0,55000,0|4000,55000,6928|164000,55000,284056",
+        "area": 2.3398880164178515e-11,
+        "altitude": 1.426760963538946e-10,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-4870,55000,-6347|189934,55000,247526|0,55000,0",
+        "area": 5.8743711934747256e-12,
+        "altitude": 3.6714819660855347e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-4870,55000,-6347|0,55000,0|189934,55000,247526",
+        "area": 5.874369784011901e-12,
+        "altitude": 3.6714810851712766e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:0,55000,0|5657,55000,5657|231931,55000,231931",
+        "area": 5.421010862427522e-19,
+        "altitude": 3.305494335370556e-18,
+        "quantizedCollinear": true
+      },
+      {
+        "key": "Fluted jade ceramic:-6347,55000,-4870|0,55000,0|247526,55000,189934",
+        "area": 5.874369241910815e-12,
+        "altitude": 3.6714807463581e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-7391,55000,-3061|288250,55000,119397|0,55000,0",
+        "area": 4.648059389635029e-12,
+        "altitude": 2.905037097956827e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-7391,55000,-3061|0,55000,0|288250,55000,119397",
+        "area": 4.648060311206875e-12,
+        "altitude": 2.9050376739392273e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:0,55000,0|7727,55000,2071|316824,55000,84893",
+        "area": 1.3717565982857699e-11,
+        "altitude": 8.364369749244524e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-7932,55000,-1044|309331,55000,40724|0,55000,0",
+        "area": 1.0309487882527793e-11,
+        "altitude": 6.443430024247621e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-7932,55000,-1044|0,55000,0|309331,55000,40724",
+        "area": 1.0309489319095672e-11,
+        "altitude": 6.44343092210256e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:0,540000,0|8000,540000,0|373000,540000,0",
+        "area": 5.846988151596422e-21,
+        "altitude": 3.1351143244672007e-20,
+        "quantizedCollinear": true
+      },
+      {
+        "key": "Fluted jade ceramic:-7932,540000,1044|0,540000,0|353946,540000,-46598",
+        "area": 4.296714026241766e-12,
+        "altitude": 2.354363809469851e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-7932,540000,1044|353946,540000,-46598|0,540000,0",
+        "area": 4.296714026241766e-12,
+        "altitude": 2.354363809469851e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:0,540000,0|7727,540000,-2071|360290,540000,-96540",
+        "area": 2.3709194330034933e-12,
+        "altitude": 1.2712705202398043e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-7391,540000,3061|0,540000,0|329825,540000,-136618",
+        "area": 2.5638761946833455e-11,
+        "altitude": 1.404863695087486e-10,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-7391,540000,3061|329825,540000,-136618|0,540000,0",
+        "area": 2.5638761946833455e-11,
+        "altitude": 1.404863695087486e-10,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:0,540000,0|6928,540000,-4000|323027,540000,-186500",
+        "area": 1.640216087950286e-11,
+        "altitude": 8.794724638759576e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-6347,540000,4870|0,540000,0|283227,540000,-217328",
+        "area": 3.0953850593817833e-12,
+        "altitude": 1.6961013810491868e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-6347,540000,4870|283227,540000,-217328|0,540000,0",
+        "area": 3.0953850593817833e-12,
+        "altitude": 1.6961013810491868e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-4870,540000,6347|0,540000,0|217328,540000,-283227",
+        "area": 3.0953850593817833e-12,
+        "altitude": 1.6961013810491868e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-4870,540000,6347|217328,540000,-283227|0,540000,0",
+        "area": 3.0953850593817833e-12,
+        "altitude": 1.6961013810491868e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-3061,540000,7391|0,540000,0|136618,540000,-329825",
+        "area": 2.5638761946833455e-11,
+        "altitude": 1.404863695087486e-10,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-3061,540000,7391|136618,540000,-329825|0,540000,0",
+        "area": 2.5638761946833455e-11,
+        "altitude": 1.404863695087486e-10,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:0,540000,0|2071,540000,-7727|96540,540000,-360290",
+        "area": 2.3709194330034933e-12,
+        "altitude": 1.2712705202398043e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-1044,540000,7932|0,540000,0|46598,540000,-353946",
+        "area": 4.296714026241766e-12,
+        "altitude": 2.354363809469851e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-1044,540000,7932|46598,540000,-353946|0,540000,0",
+        "area": 4.296714026241766e-12,
+        "altitude": 2.354363809469851e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-46598,540000,-353946|1044,540000,7932|0,540000,0",
+        "area": 4.296714026241766e-12,
+        "altitude": 2.354363809469851e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-46598,540000,-353946|0,540000,0|1044,540000,7932",
+        "area": 4.29671229151829e-12,
+        "altitude": 2.3543628589364555e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-2071,540000,-7727|-96540,540000,-360290|0,540000,0",
+        "area": 2.3709194330034933e-12,
+        "altitude": 1.2712705202398043e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-136618,540000,-329825|3061,540000,7391|0,540000,0",
+        "area": 2.5638761946833455e-11,
+        "altitude": 1.404863695087486e-10,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-136618,540000,-329825|0,540000,0|3061,540000,7391",
+        "area": 2.5638761946833455e-11,
+        "altitude": 1.404863695087486e-10,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-186500,540000,-323027|0,540000,0|-4000,540000,-6928",
+        "area": 1.640216087950286e-11,
+        "altitude": 8.794724638759575e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-217328,540000,-283227|4870,540000,6347|0,540000,0",
+        "area": 3.0953850593817833e-12,
+        "altitude": 1.6961013810491868e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-217328,540000,-283227|0,540000,0|4870,540000,6347",
+        "area": 3.0953919982756872e-12,
+        "altitude": 1.696105183182785e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-283227,540000,-217328|6347,540000,4870|0,540000,0",
+        "area": 3.0953850593817833e-12,
+        "altitude": 1.6961013810491868e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-283227,540000,-217328|0,540000,0|6347,540000,4870",
+        "area": 3.0953850593817833e-12,
+        "altitude": 1.6961013810491868e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-329825,540000,-136618|7391,540000,3061|0,540000,0",
+        "area": 2.5638761946833455e-11,
+        "altitude": 1.404863695087486e-10,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-329825,540000,-136618|0,540000,0|7391,540000,3061",
+        "area": 2.5638758477386503e-11,
+        "altitude": 1.4048635049808003e-10,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-360290,540000,-96540|0,540000,0|-7727,540000,-2071",
+        "area": 2.3709194330034933e-12,
+        "altitude": 1.2712705202398043e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-353946,540000,-46598|7932,540000,1044|0,540000,0",
+        "area": 4.296714026241766e-12,
+        "altitude": 2.354363809469851e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-353946,540000,-46598|0,540000,0|7932,540000,1044",
+        "area": 4.296714026241766e-12,
+        "altitude": 2.354363809469851e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-373000,540000,0|0,540000,0|-8000,540000,0",
+        "area": 7.953677115284843e-19,
+        "altitude": 4.264706274376186e-18,
+        "quantizedCollinear": true
+      },
+      {
+        "key": "Fluted jade ceramic:-353946,540000,46598|7932,540000,-1044|0,540000,0",
+        "area": 4.296714026241766e-12,
+        "altitude": 2.354363809469851e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-353946,540000,46598|0,540000,0|7932,540000,-1044",
+        "area": 4.296714026241766e-12,
+        "altitude": 2.354363809469851e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-360290,540000,96540|0,540000,0|-7727,540000,2071",
+        "area": 2.3709194330034933e-12,
+        "altitude": 1.2712705202398043e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-329825,540000,136618|7391,540000,-3061|0,540000,0",
+        "area": 2.5638761946833455e-11,
+        "altitude": 1.404863695087486e-10,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-329825,540000,136618|0,540000,0|7391,540000,-3061",
+        "area": 2.5638761946833455e-11,
+        "altitude": 1.404863695087486e-10,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-323027,540000,186500|0,540000,0|-6928,540000,4000",
+        "area": 1.640216087950286e-11,
+        "altitude": 8.794724638759578e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-283227,540000,217328|6347,540000,-4870|0,540000,0",
+        "area": 3.0953850593817833e-12,
+        "altitude": 1.6961013810491868e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-283227,540000,217328|0,540000,0|6347,540000,-4870",
+        "area": 3.0953850593817833e-12,
+        "altitude": 1.6961013810491868e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-217328,540000,283227|4870,540000,-6347|0,540000,0",
+        "area": 3.0953850593817833e-12,
+        "altitude": 1.6961013810491868e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-217328,540000,283227|0,540000,0|4870,540000,-6347",
+        "area": 3.0953850593817833e-12,
+        "altitude": 1.6961013810491868e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-136618,540000,329825|3061,540000,-7391|0,540000,0",
+        "area": 2.5638761946833455e-11,
+        "altitude": 1.404863695087486e-10,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-136618,540000,329825|0,540000,0|3061,540000,-7391",
+        "area": 2.5638761946833455e-11,
+        "altitude": 1.404863695087486e-10,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-2071,540000,7727|-96540,540000,360290|0,540000,0",
+        "area": 2.3709194330034933e-12,
+        "altitude": 1.2712705202398043e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-46598,540000,353946|1044,540000,-7932|0,540000,0",
+        "area": 4.296715760965242e-12,
+        "altitude": 2.354364760003246e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-46598,540000,353946|0,540000,0|1044,540000,-7932",
+        "area": 4.29671229151829e-12,
+        "altitude": 2.3543628589364555e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:0,540000,0|0,540000,8000|0,540000,373000",
+        "area": 2.292669534208684e-18,
+        "altitude": 1.229313436526238e-17,
+        "quantizedCollinear": true
+      },
+      {
+        "key": "Fluted jade ceramic:-1044,540000,-7932|0,540000,0|46598,540000,353946",
+        "area": 4.29671229151829e-12,
+        "altitude": 2.3543628589364555e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-1044,540000,-7932|46598,540000,353946|0,540000,0",
+        "area": 4.296714026241766e-12,
+        "altitude": 2.354363809469851e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:0,540000,0|2071,540000,7727|96540,540000,360290",
+        "area": 2.3709194330034933e-12,
+        "altitude": 1.2712705202398043e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-3061,540000,-7391|0,540000,0|136618,540000,329825",
+        "area": 2.5638761946833455e-11,
+        "altitude": 1.404863695087486e-10,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-3061,540000,-7391|136618,540000,329825|0,540000,0",
+        "area": 2.5638761946833455e-11,
+        "altitude": 1.404863695087486e-10,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:0,540000,0|4000,540000,6928|186500,540000,323027",
+        "area": 1.6402153940608954e-11,
+        "altitude": 8.794720918172905e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-4870,540000,-6347|0,540000,0|217328,540000,283227",
+        "area": 3.0953850593817833e-12,
+        "altitude": 1.6961013810491868e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-4870,540000,-6347|217328,540000,283227|0,540000,0",
+        "area": 3.0953850593817833e-12,
+        "altitude": 1.6961013810491868e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-6347,540000,-4870|0,540000,0|283227,540000,217328",
+        "area": 3.0953781204878794e-12,
+        "altitude": 1.6960975789155888e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-6347,540000,-4870|283227,540000,217328|0,540000,0",
+        "area": 3.0953781204878794e-12,
+        "altitude": 1.6960975789155888e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-7391,540000,-3061|0,540000,0|329825,540000,136618",
+        "area": 2.5638761946833455e-11,
+        "altitude": 1.404863695087486e-10,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-7391,540000,-3061|329825,540000,136618|0,540000,0",
+        "area": 2.5638761946833455e-11,
+        "altitude": 1.404863695087486e-10,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:0,540000,0|7727,540000,2071|360290,540000,96540",
+        "area": 2.3709229024504452e-12,
+        "altitude": 1.2712723805331453e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-7932,540000,-1044|0,540000,0|353946,540000,46598",
+        "area": 4.296715760965242e-12,
+        "altitude": 2.354364760003246e-11,
+        "quantizedCollinear": false
+      },
+      {
+        "key": "Fluted jade ceramic:-7932,540000,-1044|353946,540000,46598|0,540000,0",
+        "area": 4.296714026241766e-12,
+        "altitude": 2.354363809469851e-11,
+        "quantizedCollinear": false
+      }
+    ]
+  },
+  "after": {
+    "file": "/tmp/blender-mall-degenerate-44yfvxbl/areca-delivery.glb",
+    "bytes": 119760,
+    "sha256": "17023aadc4c378032dafe88d1626132dc2bb89e4207cd6772c19bfa2b0048e43",
+    "triangles": 4935,
+    "zero": 0,
+    "invalidNormals": 0,
+    "bounds": {
+      "min": [
+        -0.5834455490112305,
+        0,
+        -0.5218117237091064
+      ],
+      "max": [
+        0.6466456055641174,
+        2.347566843032837,
+        0.6697390675544739
+      ]
+    },
+    "roots": {
+      "ASSET_GJHArecaPlanter": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "materialDefinitions": [
+      {
+        "doubleSided": true,
+        "name": "Fluted jade ceramic",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.023153366521000862,
+            0.08650045841932297,
+            0.05612849071621895,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.36000001430511475
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Brushed champagne brass",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.46207699179649353,
+            0.3277781009674072,
+            0.12213877588510513,
+            1
+          ],
+          "metallicFactor": 0.699999988079071,
+          "roughnessFactor": 0.3199999928474426
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Dark planting soil",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.03071344457566738,
+            0.020288562402129173,
+            0.010960093699395657,
+            1
+          ],
+          "metallicFactor": 0
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Palm stems",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.17464740574359894,
+            0.21223075687885284,
+            0.05448027700185776,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8600000143051147
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Deep palm green",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.023153366521000862,
+            0.1119324266910553,
+            0.03688944876194,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7699999809265137
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Young palm green",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.0802198201417923,
+            0.20863686501979828,
+            0.052860647439956665,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.800000011920929
+        }
+      }
+    ],
+    "issues": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 0,
+      "numHints": 0,
+      "messages": [],
+      "truncated": false
+    },
+    "linePrecisionResidues": []
+  },
+  "positionToleranceM": 0.000001,
+  "maxPositionDeltaM": 0,
+  "numericalResidueAltitudeLimitM": 1e-7,
+  "removedPositiveAreaResidues": [],
+  "addedSurfaceKeys": [],
+  "addedSurfaceDetails": [],
+  "changedNormalTriangles": 0,
+  "maxNormalDelta": 0,
+  "precisionLineToleranceM": 2e-10,
+  "linePrecisionResidues": [
+    {
+      "key": "Fluted jade ceramic:-7932,55000,1044|309331,55000,-40724|0,55000,0",
+      "area": 1.030948937330578e-11,
+      "altitude": 6.443430955983878e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-7932,55000,1044|0,55000,0|309331,55000,-40724",
+      "area": 1.030948937330578e-11,
+      "altitude": 6.443430955983878e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:0,55000,0|7727,55000,-2071|316824,55000,-84893",
+      "area": 1.3717565278126287e-11,
+      "altitude": 8.364369319530237e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-7391,55000,3061|288250,55000,-119397|0,55000,0",
+      "area": 4.648059660685572e-12,
+      "altitude": 2.9050372673634155e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-7391,55000,3061|0,55000,0|288250,55000,-119397",
+      "area": 4.64805971489568e-12,
+      "altitude": 2.905037301244733e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:0,55000,0|6928,55000,-4000|284056,55000,-164000",
+      "area": 2.339887994733808e-11,
+      "altitude": 1.4267609503169686e-10,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-6347,55000,4870|247526,55000,-189934|0,55000,0",
+      "area": 5.874370434533205e-12,
+      "altitude": 3.671481491747088e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-6347,55000,4870|0,55000,0|247526,55000,-189934",
+      "area": 5.874370651373639e-12,
+      "altitude": 3.6714816272723584e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:0,55000,0|5657,55000,-5657|231931,55000,-231931",
+      "area": 1.0842021724855044e-19,
+      "altitude": 6.610988670741111e-19,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Fluted jade ceramic:-4870,55000,6347|0,55000,0|189934,55000,-247526",
+      "area": 5.87437021769277e-12,
+      "altitude": 3.671481356221817e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-3061,55000,7391|119397,55000,-288250|0,55000,0",
+      "area": 4.648059660685572e-12,
+      "altitude": 2.9050372673634155e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-3061,55000,7391|0,55000,0|119397,55000,-288250",
+      "area": 4.6480599859462235e-12,
+      "altitude": 2.9050374706513213e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:0,55000,0|2071,55000,-7727|84893,55000,-316824",
+      "area": 1.3717565440756613e-11,
+      "altitude": 8.364369418695072e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-1044,55000,7932|40724,55000,-309331|0,55000,0",
+      "area": 1.0309489427515889e-11,
+      "altitude": 6.443430989865195e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-1044,55000,7932|0,55000,0|40724,55000,-309331",
+      "area": 1.0309489102255237e-11,
+      "altitude": 6.443430786577286e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-40724,55000,-309331|0,55000,0|1044,55000,7932",
+      "area": 1.030948937330578e-11,
+      "altitude": 6.443430955983878e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-40724,55000,-309331|1044,55000,7932|0,55000,0",
+      "area": 1.0309489671461378e-11,
+      "altitude": 6.443431142331129e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-2071,55000,-7727|-84893,55000,-316824|0,55000,0",
+      "area": 1.3717564952865635e-11,
+      "altitude": 8.364369121200565e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-119397,55000,-288250|0,55000,0|3061,55000,7391",
+      "area": 4.64805971489568e-12,
+      "altitude": 2.905037301244733e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-119397,55000,-288250|3061,55000,7391|0,55000,0",
+      "area": 4.648059389635029e-12,
+      "altitude": 2.905037097956827e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-164000,55000,-284056|0,55000,0|-4000,55000,-6928",
+      "area": 2.3398879730497646e-11,
+      "altitude": 1.426760937094991e-10,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-189934,55000,-247526|0,55000,0|4870,55000,6347",
+      "area": 5.874369784011901e-12,
+      "altitude": 3.6714810851712766e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-189934,55000,-247526|4870,55000,6347|0,55000,0",
+      "area": 5.8743707597938566e-12,
+      "altitude": 3.6714816950349935e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-231931,55000,-231931|0,55000,0|-5657,55000,-5657",
+      "area": 3.2526065174565133e-19,
+      "altitude": 1.983296601222333e-18,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Fluted jade ceramic:-247526,55000,-189934|6347,55000,4870|0,55000,0",
+      "area": 5.874369567171467e-12,
+      "altitude": 3.6714809496460064e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-288250,55000,-119397|0,55000,0|7391,55000,3061",
+      "area": 4.648060365416984e-12,
+      "altitude": 2.905037707820545e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-288250,55000,-119397|7391,55000,3061|0,55000,0",
+      "area": 4.648060094366441e-12,
+      "altitude": 2.9050375384139567e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-316824,55000,-84893|0,55000,0|-7727,55000,-2071",
+      "area": 1.3717565657597047e-11,
+      "altitude": 8.364369550914853e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-309331,55000,-40724|0,55000,0|7932,55000,1044",
+      "area": 1.0309489264885563e-11,
+      "altitude": 6.44343088822124e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-309331,55000,-40724|7932,55000,1044|0,55000,0",
+      "area": 1.030948956304116e-11,
+      "altitude": 6.443431074568491e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-328000,55000,0|0,55000,0|-8000,55000,0",
+      "area": 2.0520054048370244e-19,
+      "altitude": 1.251222773266598e-18,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Fluted jade ceramic:-309331,55000,40724|0,55000,0|7932,55000,-1044",
+      "area": 1.0309490050932138e-11,
+      "altitude": 6.443431379500358e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-309331,55000,40724|7932,55000,-1044|0,55000,0",
+      "area": 1.0309489779881595e-11,
+      "altitude": 6.443431210093766e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-316824,55000,84893|0,55000,0|-7727,55000,2071",
+      "area": 1.3717564898655527e-11,
+      "altitude": 8.364369088145619e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-288250,55000,119397|0,55000,0|7391,55000,-3061",
+      "area": 4.648059606475463e-12,
+      "altitude": 2.9050372334820977e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-288250,55000,119397|7391,55000,-3061|0,55000,0",
+      "area": 4.648059877526006e-12,
+      "altitude": 2.905037402888686e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-284056,55000,164000|0,55000,0|-6928,55000,4000",
+      "area": 2.3398880164178515e-11,
+      "altitude": 1.426760963538946e-10,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-247526,55000,189934|0,55000,0|6347,55000,-4870",
+      "area": 5.874371301894943e-12,
+      "altitude": 3.67148203384817e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-247526,55000,189934|6347,55000,-4870|0,55000,0",
+      "area": 5.874370976634291e-12,
+      "altitude": 3.671481830560264e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-231931,55000,231931|0,55000,0|-5657,55000,5657",
+      "area": 4.336808689942018e-19,
+      "altitude": 2.644395468296444e-18,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Fluted jade ceramic:-189934,55000,247526|4870,55000,-6347|0,55000,0",
+      "area": 5.874370542953422e-12,
+      "altitude": 3.671481559509723e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-119397,55000,288250|0,55000,0|3061,55000,-7391",
+      "area": 4.648060473837201e-12,
+      "altitude": 2.90503777558318e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-119397,55000,288250|3061,55000,-7391|0,55000,0",
+      "area": 4.648060202786658e-12,
+      "altitude": 2.905037606176592e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-2071,55000,7727|-84893,55000,316824|0,55000,0",
+      "area": 1.3717565766017265e-11,
+      "altitude": 8.364369617024743e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-40724,55000,309331|0,55000,0|1044,55000,-7932",
+      "area": 1.0309489129360291e-11,
+      "altitude": 6.443430803517944e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-40724,55000,309331|1044,55000,-7932|0,55000,0",
+      "area": 1.0309490647243333e-11,
+      "altitude": 6.44343175219486e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:0,55000,0|0,55000,8000|0,55000,328000",
+      "area": 1.2718495349760111e-18,
+      "altitude": 7.755179877106166e-18,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Fluted jade ceramic:-1044,55000,-7932|40724,55000,309331|0,55000,0",
+      "area": 1.030949132486969e-11,
+      "altitude": 6.44343217571134e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-1044,55000,-7932|0,55000,0|40724,55000,309331",
+      "area": 1.0309489888301812e-11,
+      "altitude": 6.443431277856403e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:0,55000,0|2071,55000,7727|84893,55000,316824",
+      "area": 1.37175647360252e-11,
+      "altitude": 8.364368988980783e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-3061,55000,-7391|119397,55000,288250|0,55000,0",
+      "area": 4.648059498055246e-12,
+      "altitude": 2.9050371657194625e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-3061,55000,-7391|0,55000,0|119397,55000,288250",
+      "area": 4.648059769105789e-12,
+      "altitude": 2.9050373351260507e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:0,55000,0|4000,55000,6928|164000,55000,284056",
+      "area": 2.3398880164178515e-11,
+      "altitude": 1.426760963538946e-10,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-4870,55000,-6347|189934,55000,247526|0,55000,0",
+      "area": 5.8743711934747256e-12,
+      "altitude": 3.6714819660855347e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-4870,55000,-6347|0,55000,0|189934,55000,247526",
+      "area": 5.874369784011901e-12,
+      "altitude": 3.6714810851712766e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:0,55000,0|5657,55000,5657|231931,55000,231931",
+      "area": 5.421010862427522e-19,
+      "altitude": 3.305494335370556e-18,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Fluted jade ceramic:-6347,55000,-4870|0,55000,0|247526,55000,189934",
+      "area": 5.874369241910815e-12,
+      "altitude": 3.6714807463581e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-7391,55000,-3061|288250,55000,119397|0,55000,0",
+      "area": 4.648059389635029e-12,
+      "altitude": 2.905037097956827e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-7391,55000,-3061|0,55000,0|288250,55000,119397",
+      "area": 4.648060311206875e-12,
+      "altitude": 2.9050376739392273e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:0,55000,0|7727,55000,2071|316824,55000,84893",
+      "area": 1.3717565982857699e-11,
+      "altitude": 8.364369749244524e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-7932,55000,-1044|309331,55000,40724|0,55000,0",
+      "area": 1.0309487882527793e-11,
+      "altitude": 6.443430024247621e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-7932,55000,-1044|0,55000,0|309331,55000,40724",
+      "area": 1.0309489319095672e-11,
+      "altitude": 6.44343092210256e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:0,540000,0|8000,540000,0|373000,540000,0",
+      "area": 5.846988151596422e-21,
+      "altitude": 3.1351143244672007e-20,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Fluted jade ceramic:-7932,540000,1044|0,540000,0|353946,540000,-46598",
+      "area": 4.296714026241766e-12,
+      "altitude": 2.354363809469851e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-7932,540000,1044|353946,540000,-46598|0,540000,0",
+      "area": 4.296714026241766e-12,
+      "altitude": 2.354363809469851e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:0,540000,0|7727,540000,-2071|360290,540000,-96540",
+      "area": 2.3709194330034933e-12,
+      "altitude": 1.2712705202398043e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-7391,540000,3061|0,540000,0|329825,540000,-136618",
+      "area": 2.5638761946833455e-11,
+      "altitude": 1.404863695087486e-10,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-7391,540000,3061|329825,540000,-136618|0,540000,0",
+      "area": 2.5638761946833455e-11,
+      "altitude": 1.404863695087486e-10,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:0,540000,0|6928,540000,-4000|323027,540000,-186500",
+      "area": 1.640216087950286e-11,
+      "altitude": 8.794724638759576e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-6347,540000,4870|0,540000,0|283227,540000,-217328",
+      "area": 3.0953850593817833e-12,
+      "altitude": 1.6961013810491868e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-6347,540000,4870|283227,540000,-217328|0,540000,0",
+      "area": 3.0953850593817833e-12,
+      "altitude": 1.6961013810491868e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-4870,540000,6347|0,540000,0|217328,540000,-283227",
+      "area": 3.0953850593817833e-12,
+      "altitude": 1.6961013810491868e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-4870,540000,6347|217328,540000,-283227|0,540000,0",
+      "area": 3.0953850593817833e-12,
+      "altitude": 1.6961013810491868e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-3061,540000,7391|0,540000,0|136618,540000,-329825",
+      "area": 2.5638761946833455e-11,
+      "altitude": 1.404863695087486e-10,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-3061,540000,7391|136618,540000,-329825|0,540000,0",
+      "area": 2.5638761946833455e-11,
+      "altitude": 1.404863695087486e-10,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:0,540000,0|2071,540000,-7727|96540,540000,-360290",
+      "area": 2.3709194330034933e-12,
+      "altitude": 1.2712705202398043e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-1044,540000,7932|0,540000,0|46598,540000,-353946",
+      "area": 4.296714026241766e-12,
+      "altitude": 2.354363809469851e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-1044,540000,7932|46598,540000,-353946|0,540000,0",
+      "area": 4.296714026241766e-12,
+      "altitude": 2.354363809469851e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-46598,540000,-353946|1044,540000,7932|0,540000,0",
+      "area": 4.296714026241766e-12,
+      "altitude": 2.354363809469851e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-46598,540000,-353946|0,540000,0|1044,540000,7932",
+      "area": 4.29671229151829e-12,
+      "altitude": 2.3543628589364555e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-2071,540000,-7727|-96540,540000,-360290|0,540000,0",
+      "area": 2.3709194330034933e-12,
+      "altitude": 1.2712705202398043e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-136618,540000,-329825|3061,540000,7391|0,540000,0",
+      "area": 2.5638761946833455e-11,
+      "altitude": 1.404863695087486e-10,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-136618,540000,-329825|0,540000,0|3061,540000,7391",
+      "area": 2.5638761946833455e-11,
+      "altitude": 1.404863695087486e-10,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-186500,540000,-323027|0,540000,0|-4000,540000,-6928",
+      "area": 1.640216087950286e-11,
+      "altitude": 8.794724638759575e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-217328,540000,-283227|4870,540000,6347|0,540000,0",
+      "area": 3.0953850593817833e-12,
+      "altitude": 1.6961013810491868e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-217328,540000,-283227|0,540000,0|4870,540000,6347",
+      "area": 3.0953919982756872e-12,
+      "altitude": 1.696105183182785e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-283227,540000,-217328|6347,540000,4870|0,540000,0",
+      "area": 3.0953850593817833e-12,
+      "altitude": 1.6961013810491868e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-283227,540000,-217328|0,540000,0|6347,540000,4870",
+      "area": 3.0953850593817833e-12,
+      "altitude": 1.6961013810491868e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-329825,540000,-136618|7391,540000,3061|0,540000,0",
+      "area": 2.5638761946833455e-11,
+      "altitude": 1.404863695087486e-10,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-329825,540000,-136618|0,540000,0|7391,540000,3061",
+      "area": 2.5638758477386503e-11,
+      "altitude": 1.4048635049808003e-10,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-360290,540000,-96540|0,540000,0|-7727,540000,-2071",
+      "area": 2.3709194330034933e-12,
+      "altitude": 1.2712705202398043e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-353946,540000,-46598|7932,540000,1044|0,540000,0",
+      "area": 4.296714026241766e-12,
+      "altitude": 2.354363809469851e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-353946,540000,-46598|0,540000,0|7932,540000,1044",
+      "area": 4.296714026241766e-12,
+      "altitude": 2.354363809469851e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-373000,540000,0|0,540000,0|-8000,540000,0",
+      "area": 7.953677115284843e-19,
+      "altitude": 4.264706274376186e-18,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Fluted jade ceramic:-353946,540000,46598|7932,540000,-1044|0,540000,0",
+      "area": 4.296714026241766e-12,
+      "altitude": 2.354363809469851e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-353946,540000,46598|0,540000,0|7932,540000,-1044",
+      "area": 4.296714026241766e-12,
+      "altitude": 2.354363809469851e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-360290,540000,96540|0,540000,0|-7727,540000,2071",
+      "area": 2.3709194330034933e-12,
+      "altitude": 1.2712705202398043e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-329825,540000,136618|7391,540000,-3061|0,540000,0",
+      "area": 2.5638761946833455e-11,
+      "altitude": 1.404863695087486e-10,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-329825,540000,136618|0,540000,0|7391,540000,-3061",
+      "area": 2.5638761946833455e-11,
+      "altitude": 1.404863695087486e-10,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-323027,540000,186500|0,540000,0|-6928,540000,4000",
+      "area": 1.640216087950286e-11,
+      "altitude": 8.794724638759578e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-283227,540000,217328|6347,540000,-4870|0,540000,0",
+      "area": 3.0953850593817833e-12,
+      "altitude": 1.6961013810491868e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-283227,540000,217328|0,540000,0|6347,540000,-4870",
+      "area": 3.0953850593817833e-12,
+      "altitude": 1.6961013810491868e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-217328,540000,283227|4870,540000,-6347|0,540000,0",
+      "area": 3.0953850593817833e-12,
+      "altitude": 1.6961013810491868e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-217328,540000,283227|0,540000,0|4870,540000,-6347",
+      "area": 3.0953850593817833e-12,
+      "altitude": 1.6961013810491868e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-136618,540000,329825|3061,540000,-7391|0,540000,0",
+      "area": 2.5638761946833455e-11,
+      "altitude": 1.404863695087486e-10,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-136618,540000,329825|0,540000,0|3061,540000,-7391",
+      "area": 2.5638761946833455e-11,
+      "altitude": 1.404863695087486e-10,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-2071,540000,7727|-96540,540000,360290|0,540000,0",
+      "area": 2.3709194330034933e-12,
+      "altitude": 1.2712705202398043e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-46598,540000,353946|1044,540000,-7932|0,540000,0",
+      "area": 4.296715760965242e-12,
+      "altitude": 2.354364760003246e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-46598,540000,353946|0,540000,0|1044,540000,-7932",
+      "area": 4.29671229151829e-12,
+      "altitude": 2.3543628589364555e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:0,540000,0|0,540000,8000|0,540000,373000",
+      "area": 2.292669534208684e-18,
+      "altitude": 1.229313436526238e-17,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Fluted jade ceramic:-1044,540000,-7932|0,540000,0|46598,540000,353946",
+      "area": 4.29671229151829e-12,
+      "altitude": 2.3543628589364555e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-1044,540000,-7932|46598,540000,353946|0,540000,0",
+      "area": 4.296714026241766e-12,
+      "altitude": 2.354363809469851e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:0,540000,0|2071,540000,7727|96540,540000,360290",
+      "area": 2.3709194330034933e-12,
+      "altitude": 1.2712705202398043e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-3061,540000,-7391|0,540000,0|136618,540000,329825",
+      "area": 2.5638761946833455e-11,
+      "altitude": 1.404863695087486e-10,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-3061,540000,-7391|136618,540000,329825|0,540000,0",
+      "area": 2.5638761946833455e-11,
+      "altitude": 1.404863695087486e-10,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:0,540000,0|4000,540000,6928|186500,540000,323027",
+      "area": 1.6402153940608954e-11,
+      "altitude": 8.794720918172905e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-4870,540000,-6347|0,540000,0|217328,540000,283227",
+      "area": 3.0953850593817833e-12,
+      "altitude": 1.6961013810491868e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-4870,540000,-6347|217328,540000,283227|0,540000,0",
+      "area": 3.0953850593817833e-12,
+      "altitude": 1.6961013810491868e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-6347,540000,-4870|0,540000,0|283227,540000,217328",
+      "area": 3.0953781204878794e-12,
+      "altitude": 1.6960975789155888e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-6347,540000,-4870|283227,540000,217328|0,540000,0",
+      "area": 3.0953781204878794e-12,
+      "altitude": 1.6960975789155888e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-7391,540000,-3061|0,540000,0|329825,540000,136618",
+      "area": 2.5638761946833455e-11,
+      "altitude": 1.404863695087486e-10,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-7391,540000,-3061|329825,540000,136618|0,540000,0",
+      "area": 2.5638761946833455e-11,
+      "altitude": 1.404863695087486e-10,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:0,540000,0|7727,540000,2071|360290,540000,96540",
+      "area": 2.3709229024504452e-12,
+      "altitude": 1.2712723805331453e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-7932,540000,-1044|0,540000,0|353946,540000,46598",
+      "area": 4.296715760965242e-12,
+      "altitude": 2.354364760003246e-11,
+      "quantizedCollinear": false
+    },
+    {
+      "key": "Fluted jade ceramic:-7932,540000,-1044|353946,540000,46598|0,540000,0",
+      "area": 4.296714026241766e-12,
+      "altitude": 2.354363809469851e-11,
+      "quantizedCollinear": false
+    }
+  ],
+  "afterLinePrecisionResidues": []
+}

@@ -12,7 +12,15 @@ assert.ok(input && output && evidence && sourceComparison, 'Pass input, distinct
 assert.equal(new Set([input, output, evidence, sourceComparison].map(p => path.resolve(p))).size, 4, 'Use distinct input, output and evidence files');
 const comparison = JSON.parse(await fs.readFile(sourceComparison, 'utf8'));
 assert.equal(comparison.status, 'PASS');
-const reviewed = new Set(comparison.removedPositiveAreaResidues.map(r => r.key));
+const lineResidues = comparison.linePrecisionResidues ?? [];
+if (lineResidues.length) {
+  const flag = '--precision-line-tolerance-m=' + comparison.precisionLineToleranceM;
+  assert.ok(process.argv.includes(flag), 'Analytic line residue removal requires the same explicit reviewed tolerance');
+  assert.ok(Number.isFinite(comparison.precisionLineToleranceM) && comparison.precisionLineToleranceM > 0 && comparison.precisionLineToleranceM <= 1e-7);
+  assert.ok(lineResidues.every(r => r.altitude <= comparison.precisionLineToleranceM));
+}
+const reviewedResidues = [...comparison.removedPositiveAreaResidues, ...lineResidues];
+const reviewed = new Set(reviewedResidues.map(r => r.key));
 const bytes = await fs.readFile(input);
 assert.equal(bytes.readUInt32LE(0), 0x46546c67); assert.equal(bytes.readUInt32LE(4), 2);
 assert.equal(bytes.readUInt32LE(8), bytes.length);
@@ -61,7 +69,7 @@ gltf.scene.traverse(object => {
   if (accessor.max) accessor.max = [retained.reduce((a, b) => Math.max(a, b), -Infinity)];
 });
 assert.equal(zeroRemoved, comparison.before.zero);
-assert.equal(residueRemoved, comparison.removedPositiveAreaResidues.length);
+assert.equal(residueRemoved, reviewedResidues.length);
 const jsonData = Buffer.from(JSON.stringify(json));
 const paddedJson = Buffer.alloc(Math.ceil(jsonData.length / 4) * 4, 0x20); jsonData.copy(paddedJson);
 const result = Buffer.alloc(12 + 8 + paddedJson.length + 8 + binary.length);

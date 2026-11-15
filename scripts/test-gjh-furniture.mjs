@@ -19,7 +19,7 @@ for (const asset of collection.assets) {
   sourceAssets.set(asset.id, { ...asset, sha256: hash(bytes), bytes: bytes.length });
 }
 
-const artifacts = '/tmp/blender-gjh-furniture-qa';
+const artifacts = process.env.MALL_QA_DIR || '/tmp/blender-gjh-furniture-qa';
 await fs.mkdir(artifacts, { recursive: true });
 const results = [];
 const server = await serveBuild();

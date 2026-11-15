@@ -13,9 +13,10 @@ function pack(json, bin) {
   output.writeUInt32LE(bin.length,20+padded.length);output.writeUInt32LE(0x004e4942,24+padded.length);bin.copy(output,28+padded.length);
   return output;
 }
-function fixture(indices, reverseNormals = false, xShift = 0) {
+function fixture(indices, reverseNormals = false, xShift = 0, residuePoints = null) {
   const points = [0,0,0, 1,0,0, 0,1,0, 0,0,0, 0,0,0, 1,0,0,
     .1,.1,0, .11,.1,0, .105,.10000001,0, .2,.2,0, .20001,.2,0, .2,.20001,0];
+  if (residuePoints) points.splice(18, 9, ...residuePoints.flat());
   const shift = Array.isArray(xShift) ? xShift : [xShift,0,0];
   const positions = Buffer.from(new Float32Array(points.map((v, i) => v + shift[i % 3])).buffer);
   const values = new Float32Array(positions.buffer,positions.byteOffset,points.length);
@@ -129,4 +130,45 @@ test('shared indices with different per-mesh cleanup masks are rejected without 
   const repair=run('scripts/repair-glb-degenerates.mjs',[before,output,path.join(dir,'receipt.json'),comparison]);
   assert.notEqual(repair.status,0);assert.match(repair.stderr,/Shared index accessor requires identical retained indices/);
   await assert.rejects(fs.access(output),{code:'ENOENT'});
+});
+
+test('reviewed radial-line calibration preserves defaults and rejects a real one-nanometre face', async context => {
+  const dir = await fs.mkdtemp(path.join(os.tmpdir(), 'glb-line-precision-test-'));
+  context.after(() => fs.rm(dir, { recursive: true, force: true }));
+  // Frozen real Blender 5.2.3 radial-pole residue: grid rounding makes this
+  // mathematically radial triplet non-collinear at 1 um; actual error is 0.064 nm.
+  const radial = [[4.888098718814468e-19, .054999999701976776, -3.2038291630744244e-20],
+    [-.007931559346616268, .054999999701976776, .0010442095808684826],
+    [.3093307912349701, .054999999701976776, -.040724173188209534]];
+  const before = path.join(dir, 'before.glb'), control = path.join(dir, 'control.glb');
+  const removed = path.join(dir, 'removed.glb'), evidence = path.join(dir, 'control.json');
+  await fs.writeFile(before, fixture(Array.from({ length: 12 }, (_, i) => i), false, 0, radial));
+  await fs.writeFile(control, fixture([0,1,2,6,7,8,9,10,11], false, 0, radial));
+  await fs.writeFile(removed, fixture([0,1,2,9,10,11], false, 0, radial));
+  const strict = run('scripts/check-degenerate-repair.mjs', [before, removed, path.join(dir, 'strict.json')]);
+  assert.notEqual(strict.status, 0, 'Default checks must still reject non-grid-collinear deletion');
+  const flag = '--precision-line-tolerance-m=2e-10';
+  const check = run('scripts/check-degenerate-repair.mjs', [before, control, evidence, flag]);
+  assert.equal(check.status, 0, check.stderr);
+  const report = JSON.parse(await fs.readFile(evidence));
+  assert.equal(report.linePrecisionResidues.length, 1);
+  assert.equal(report.linePrecisionResidues[0].quantizedCollinear, false);
+  const output = path.join(dir, 'repaired.glb');
+  const denied = run('scripts/repair-glb-degenerates.mjs', [before, output, path.join(dir, 'denied.json'), evidence]);
+  assert.notEqual(denied.status, 0);
+  await assert.rejects(fs.access(output), { code: 'ENOENT' });
+  const repair = run('scripts/repair-glb-degenerates.mjs', [before, output, path.join(dir, 'repair.json'), evidence, flag]);
+  assert.equal(repair.status, 0, repair.stderr);
+  const actual = run('scripts/check-degenerate-repair.mjs', [before, output, path.join(dir, 'actual.json'), flag]);
+  assert.equal(actual.status, 0, actual.stderr);
+  assert.equal(JSON.parse(await fs.readFile(path.join(dir, 'actual.json'))).after.triangles, 2,
+    'The ordinary face and genuine 10 um face must remain');
+  const real = radial.map(p => [p[0], p[2], 0]);
+  real[1][2] = 1e-9;
+  const tinyBefore = path.join(dir, 'real-tiny-before.glb'), tinyRemoved = path.join(dir, 'real-tiny-removed.glb');
+  await fs.writeFile(tinyBefore, fixture(Array.from({ length: 12 }, (_, i) => i), false, 0, real));
+  await fs.writeFile(tinyRemoved, fixture([0,1,2,9,10,11], false, 0, real));
+  const reject = run('scripts/check-degenerate-repair.mjs', [tinyBefore, tinyRemoved, path.join(dir, 'tiny-fail.json'), flag]);
+  assert.notEqual(reject.status, 0, 'A real 1 nm face exceeds the calibrated 0.2 nm line error and must not disappear');
+  assert.match(reject.stderr, /Meaningful original surfaces removed/);
 });

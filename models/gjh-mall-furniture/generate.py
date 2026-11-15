@@ -5,11 +5,30 @@ Only this collection's source, exports and previews are written.
 """
 from pathlib import Path
 import math
+import sys
+import subprocess
+import tempfile
+import shutil
+import json
 
 import bpy
 from mathutils import Vector
 
+if bpy.app.version < (5, 2, 0):
+    raise RuntimeError('GJH furniture sources require Blender 5.2+; do not downgrade the saved sources')
+
 HERE = Path(__file__).resolve().parent
+REPOSITORY = HERE.parents[1]
+sys.path.insert(0, str(REPOSITORY / 'scripts'))
+from blender_degenerate_cleanup import add_cleanup
+CLEANUP_PARTS = {'gjh-areca-planter': ('Fluted ceramic vessel', 'Visible soil')}
+
+
+def prepare_asset_geometry(slug, objects):
+    for obj in objects:
+        if obj.name in CLEANUP_PARTS.get(slug, ()):
+            add_cleanup(obj, preserve_loop_triangles=obj.name == 'Fluted ceramic vessel')
+
 
 
 def material(name, color, roughness=.6, metallic=0):
@@ -158,20 +177,8 @@ def point_at(obj, xyz):
     obj.rotation_euler = (Vector(xyz) - obj.location).to_track_quat('-Z', 'Y').to_euler()
 
 
-def build(slug, root_name, factory, camera, target, ortho):
-    bpy.ops.wm.read_factory_settings(use_empty=True)
+def _export_native(slug, root, objects, destination=None):
     scene = bpy.context.scene
-    scene.unit_settings.system = 'METRIC'
-    scene.unit_settings.scale_length = 1
-    factory()
-    objects = list(scene.objects)
-    root = bpy.data.objects.new(root_name, None)
-    scene.collection.objects.link(root)
-    for obj in objects:
-        obj.parent = root
-    root['units'] = 'metres'
-    root['origin'] = 'floor centre'
-    root['source'] = 'Blender-3D-Gallery / original GJH mall furniture'
     # Export a merged evaluated copy: editable authored objects remain in the blend.
     bpy.ops.object.select_all(action='DESELECT')
     copies = []
@@ -189,11 +196,52 @@ def build(slug, root_name, factory, camera, target, ortho):
     scene.cursor.location = (0, 0, 0)
     bpy.ops.object.origin_set(type='ORIGIN_CURSOR')
     root.select_set(True)
-    bpy.ops.export_scene.gltf(filepath=str(HERE / 'exports' / f'{slug}.glb'),
-        export_format='GLB', use_selection=True, export_apply=True,
+    bpy.ops.export_scene.gltf(filepath=str(destination or HERE / 'exports' / f'{slug}.glb'),
+        export_format='GLB', use_selection=True, use_active_scene=True, export_apply=True,
         export_yup=True, export_animations=False, export_texcoords=False,
         export_extras=True, export_cameras=False, export_lights=False)
     bpy.data.objects.remove(merged, do_unlink=True)
+
+
+def export_asset(slug, root, objects, destination=None):
+    if slug != 'gjh-areca-planter':
+        return _export_native(slug, root, objects, destination)
+    target = Path(destination or HERE / 'exports' / f'{slug}.glb')
+    # The fluted radial poles are analytic lines. Their Float32 roundoff is
+    # bounded by a reviewed 0.2 nm perpendicular error, far below real features.
+    flag = '--precision-line-tolerance-m=2e-10'
+    with tempfile.TemporaryDirectory(prefix='areca-export-cleanup-') as directory:
+        stage = Path(directory)
+        raw, clean, comparison = stage / 'raw.glb', stage / 'clean.glb', stage / 'control.json'
+        _export_native(slug, root, objects, raw)
+        subprocess.run(['node', str(REPOSITORY / 'scripts/check-degenerate-repair.mjs'),
+                        str(raw), str(raw), str(comparison), flag], check=True)
+        reviewed = json.loads(comparison.read_text())['linePrecisionResidues']
+        assert all(row['key'].startswith('Fluted jade ceramic:') for row in reviewed), \
+            'Review new sub-nanometre features separately; only ceramic radial poles are calibrated'
+        subprocess.run(['node', str(REPOSITORY / 'scripts/repair-glb-degenerates.mjs'),
+                        str(raw), str(clean), str(stage / 'index-repair.json'), str(comparison), flag], check=True)
+        subprocess.run(['node', str(REPOSITORY / 'scripts/check-degenerate-repair.mjs'),
+                        str(raw), str(clean), str(stage / 'delivery-check.json'), flag], check=True)
+        shutil.copy2(clean, target)
+
+
+def build(slug, root_name, factory, camera, target, ortho, render=True):
+    bpy.ops.wm.read_factory_settings(use_empty=True)
+    scene = bpy.context.scene
+    scene.unit_settings.system = 'METRIC'
+    scene.unit_settings.scale_length = 1
+    factory()
+    objects = list(scene.objects)
+    root = bpy.data.objects.new(root_name, None)
+    scene.collection.objects.link(root)
+    for obj in objects:
+        obj.parent = root
+    root['units'] = 'metres'
+    root['origin'] = 'floor centre'
+    root['source'] = 'Blender-3D-Gallery / original GJH mall furniture'
+    prepare_asset_geometry(slug, objects)
+    export_asset(slug, root, objects)
     bpy.ops.object.select_all(action='DESELECT')
     for obj in objects:
         obj.select_set(True)
@@ -229,7 +277,8 @@ def build(slug, root_name, factory, camera, target, ortho):
     scene.render.filepath = str(HERE / 'previews' / f'{slug}.png')
     scene.view_settings.view_transform = 'AgX'
     bpy.ops.wm.save_as_mainfile(filepath=str(HERE / 'sources' / f'{slug}.blend'), compress=True)
-    bpy.ops.render.render(write_still=True)
+    if render:
+        bpy.ops.render.render(write_still=True)
 
 
 if __name__ == '__main__':

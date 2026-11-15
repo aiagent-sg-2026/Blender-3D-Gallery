@@ -70,6 +70,10 @@ receipt = {'id': args.id, 'status': 'PASS', 'blender': bpy.app.version_string,
            'original_sha256': args.expected_sha256, 'source_fingerprint': before_hash,
            'authored_data_preserved': True, 'source_reopened': True, 'editable_parts': len(objects),
            'root_type': reopened_root.bl_rna.identifier,
+           'derived_face_attributes': [{'object': obj.name, 'attribute': 'cleanup_alternate_quad',
+               'faces': len(obj.data.polygons),
+               'alternate_diagonals': sum(value.value for value in obj.data.attributes['cleanup_alternate_quad'].data)}
+               for obj in bpy.data.objects if obj.type == 'MESH' and obj.data.attributes.get('cleanup_alternate_quad')],
            'before': before, 'after': after, 'reopened': reopened}
 (args.output / 'source-repair.json').write_text(json.dumps(receipt, indent=2) + '\n')
 print('PASS:', args.id, 'source and reopened evaluated geometry clean; authored data preserved')

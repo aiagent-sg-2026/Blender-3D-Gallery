@@ -8,12 +8,37 @@ MODIFIER_NAME = 'Degenerate face cleanup'
 GROUP_NAME = 'Triangle cleanup - 0.1 micrometre weld'
 
 
-def add_cleanup(obj, ngon_method='Beauty'):
+def add_cleanup(obj, ngon_method='Beauty', preserve_loop_triangles=False):
     """Keep authoring data editable; remove collapsed evaluated triangles."""
     assert obj.type in {'MESH', 'FONT', 'CURVE'}, obj.name
     assert all(abs(value - 1) < 1e-6 for value in obj.matrix_world.to_scale()), obj.name
     assert ngon_method in {'Beauty', 'Clip'}
     group_name = GROUP_NAME if ngon_method == 'Beauty' else GROUP_NAME + ' / ear clip'
+    if preserve_loop_triangles:
+        assert obj.type == 'MESH'
+        assert all(m.name == MODIFIER_NAME for m in obj.modifiers), 'Loop-face mapping requires unmodified source topology'
+        mesh = obj.data
+        mesh.calc_loop_triangles()
+        triangles = {}
+        for triangle in mesh.loop_triangles:
+            triangles.setdefault(triangle.polygon_index, []).append(set(triangle.vertices))
+        attribute = mesh.attributes.get('cleanup_alternate_quad')
+        if attribute is None:
+            attribute = mesh.attributes.new('cleanup_alternate_quad', 'BOOLEAN', 'FACE')
+        assert attribute.data_type == 'BOOLEAN' and attribute.domain == 'FACE'
+        for polygon in mesh.polygons:
+            assert len(polygon.vertices) in {3, 4}, 'Review N-gon topology separately'
+            alternate = False
+            if len(polygon.vertices) == 4:
+                pair = triangles[polygon.index]
+                assert len(pair) == 2
+                diagonal = pair[0] & pair[1]
+                a, b, c, d = polygon.vertices
+                assert diagonal in ({a, c}, {b, d})
+                alternate = diagonal == {b, d}
+            attribute.data[polygon.index].value = alternate
+        mesh.update()
+        group_name = 'Triangle cleanup - source loop diagonals / no weld'
     existing = obj.modifiers.get(MODIFIER_NAME)
     if existing:
         assert existing.type == 'NODES' and existing.node_group.name == group_name
@@ -26,14 +51,25 @@ def add_cleanup(obj, ngon_method='Beauty'):
         nodes, links = group.nodes, group.links
         inp = nodes.new('NodeGroupInput'); inp.location = (-600, 160)
         out = nodes.new('NodeGroupOutput'); out.location = (400, 160)
+        incoming = inp.outputs['Geometry']
+        if preserve_loop_triangles:
+            alternate = nodes.new('GeometryNodeTriangulate')
+            alternate.inputs['Quad Method'].default_value = 'Fixed Alternate'
+            selection = nodes.new('GeometryNodeInputNamedAttribute')
+            selection.data_type = 'BOOLEAN'
+            selection.inputs['Name'].default_value = 'cleanup_alternate_quad'
+            links.new(incoming, alternate.inputs['Mesh'])
+            links.new(selection.outputs['Attribute'], alternate.inputs['Selection'])
+            incoming = alternate.outputs['Mesh']
         tri = nodes.new('GeometryNodeTriangulate'); tri.location = (-400, 160)
         # Match Blender's loop-triangle quad diagonal before topology changes.
         tri.inputs['Quad Method'].default_value = 'Fixed'
         # Cylinder caps can require ear clipping to retain their original
         # loop-triangle diagonals; keep the default for previously reviewed parts.
         tri.inputs['N-gon Method'].default_value = ngon_method
-        merge = nodes.new('GeometryNodeMergeByDistance'); merge.location = (-200, 160)
-        merge.inputs['Distance'].default_value = 1e-7
+        if not preserve_loop_triangles:
+            merge = nodes.new('GeometryNodeMergeByDistance'); merge.location = (-200, 160)
+            merge.inputs['Distance'].default_value = 1e-7
         area = nodes.new('GeometryNodeInputMeshFaceArea'); area.location = (-400, -160)
         positive = nodes.new('ShaderNodeMath'); positive.location = (-200, -160)
         positive.operation = 'GREATER_THAN'; positive.inputs[1].default_value = 0
@@ -41,9 +77,14 @@ def add_cleanup(obj, ngon_method='Beauty'):
         inverse.operation = 'NOT'
         delete = nodes.new('GeometryNodeDeleteGeometry'); delete.location = (200, 160)
         delete.domain = 'FACE'
-        links.new(inp.outputs['Geometry'], tri.inputs['Mesh'])
-        links.new(tri.outputs['Mesh'], merge.inputs['Geometry'])
-        links.new(merge.outputs['Geometry'], delete.inputs['Geometry'])
+        links.new(incoming, tri.inputs['Mesh'])
+        if preserve_loop_triangles:
+            # Coincident radial poles need no weld. Averaging their Float32
+            # heights can create slivers, so retain original vertex positions.
+            links.new(tri.outputs['Mesh'], delete.inputs['Geometry'])
+        else:
+            links.new(tri.outputs['Mesh'], merge.inputs['Geometry'])
+            links.new(merge.outputs['Geometry'], delete.inputs['Geometry'])
         links.new(area.outputs['Area'], positive.inputs[0])
         links.new(positive.outputs[0], inverse.inputs[0])
         links.new(inverse.outputs[0], delete.inputs['Selection'])
