@@ -1,0 +1,20 @@
+{
+  "before": {
+    "status": "FAIL",
+    "exit_code": 23,
+    "vertices": 192,
+    "triangles": 288,
+    "zero_area_triangles": 96,
+    "boundary_edges": 96
+  },
+  "after": {
+    "status": "PASS",
+    "vertices": 98,
+    "triangles": 192,
+    "zero_area_triangles": 0,
+    "boundary_edges": 0,
+    "non_manifold_edges": 0
+  },
+  "expected": "Two circles and two shared axis vertices; closed outward cylinder with 192 nondegenerate triangles",
+  "scope": "Blender 5.1.2 native mesh regression; original failure retained"
+}

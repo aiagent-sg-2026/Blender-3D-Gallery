@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "date": "2026-11-15",
+  "blender": "5.1.2",
+  "assets": [
+    {
+      "id": "mall-queue-post",
+      "before_zero_triangles": 480,
+      "after_zero_triangles": 0,
+      "triangles": 2864,
+      "bytes": 71736,
+      "sha256": "49a27e18135a47ee09e4bc540b34f1ac0a4935292128f4c4b7d4ffe5f61aa376",
+      "source_sha256": "31ba03a14ddc8a34c9248e1b76a95efd63a85d248c0d0bcd81c8b35ffc1261bd",
+      "nondegenerate_surface_difference_count": {
+        "removed": 0,
+        "added": 0
+      },
+      "source_and_delivery_zero_check": "PASS"
+    },
+    {
+      "id": "mall-queue-short",
+      "before_zero_triangles": 960,
+      "after_zero_triangles": 0,
+      "triangles": 6292,
+      "bytes": 154488,
+      "sha256": "86a857dfc025e78148f5d284fa412b053ceae02a8b59116c255e443f2860f8ef",
+      "source_sha256": "d129f5197fbb2c96ae6242ff4a33f6fcde96a6cf82519a3d78fc306cb048f630",
+      "nondegenerate_surface_difference_count": {
+        "removed": 0,
+        "added": 0
+      },
+      "source_and_delivery_zero_check": "PASS"
+    },
+    {
+      "id": "mall-queue-long",
+      "before_zero_triangles": 960,
+      "after_zero_triangles": 0,
+      "triangles": 6292,
+      "bytes": 149808,
+      "sha256": "f538960c64cb23e71b9142259cef86743e6fa344d5e250ea2b8fd426aa9b8474",
+      "source_sha256": "4f3c576ef575ac892e13aaf02756fbfde725fd94b0f7db6056cae15c711e7f16",
+      "nondegenerate_surface_difference_count": {
+        "removed": 0,
+        "added": 0
+      },
+      "source_and_delivery_zero_check": "PASS"
+    }
+  ],
+  "degenerate_triangles_removed": 2400,
+  "source_meshes_repaired": 25,
+  "editable_source_parts": [
+    10,
+    23,
+    23
+  ],
+  "source_semantics_preserved_and_reopened": true,
+  "manual_topology_edit_guard": "PASS: changed saved face connectivity refused, input unchanged",
+  "nondegenerate_oriented_material_surfaces": "unchanged at 1e-6 m positional quantization",
+  "focused_tests": {
+    "before": "3 actual-export regression cases fail on old bytes",
+    "after_passed": 12
+  },
+  "browser": {
+    "passed": true,
+    "cases": 12,
+    "version": "156.0.8078.4",
+    "environment": "Built deployment subpath, Chromium/SwiftShader, localhost, reduced motion, service workers blocked"
+  },
+  "build": "PASS; isolated output; existing chunk advisory",
+  "protected_unrelated_model_files_unchanged": 2109,
+  "unrelated_worktree_drift_observed": [
+    "models/chibi-visitor-v4/metadata.json",
+    "models/chibi-visitor-v4/sources/chibi-visitor-v4.blend"
+  ],
+  "drift_handling": "Outside this task write scope; retained without overwrite or restore. No claim that a shared worktree stayed frozen.",
+  "previews_and_layouts_unchanged": true,
+  "scope_limits": [
+    "No commit, push or deployment",
+    "No physical-phone/FPS or certification claim",
+    "Other mall audit findings not repaired; historical snapshots retained"
+  ]
+}

@@ -15,7 +15,7 @@
   "status": "validated",
   "created": "2026-11-12",
   "author": "Yap Wei Jun project / agent-assisted procedural modeling",
-  "blender_version": "4.0.2",
+  "blender_version": "5.1.2",
   "creation_method": "Original deterministic Blender lathed and beveled mesh geometry and PBR materials, with independent post/belt modules. No external assets or textures.",
   "generator": "generate.py",
   "paths": {
@@ -38,9 +38,9 @@
   ],
   "rights": "Original asset; reuse in the owner's projects is authorized. Public redistribution terms have not been specified.",
   "metrics": {
-    "glb_bytes": 97912,
-    "triangles": 3344,
-    "vertices": 3120,
+    "glb_bytes": 71736,
+    "triangles": 2864,
+    "vertices": 2149,
     "primitives": 3,
     "materials": 3,
     "animations": 0,
@@ -61,7 +61,8 @@
         0.1850000023841858
       ]
     },
-    "sha256": "9025b3a6fbb96e010511aa03df7457a09c019448902260427bdbbb9b646fab60"
+    "sha256": "49a27e18135a47ee09e4bc540b34f1ac0a4935292128f4c4b7d4ffe5f61aa376",
+    "zero_area_triangles": 0
   },
   "validation": {
     "errors": 0,
@@ -91,5 +92,13 @@
         ]
       }
     }
+  },
+  "source_sha256": "31ba03a14ddc8a34c9248e1b76a95efd63a85d248c0d0bcd81c8b35ffc1261bd",
+  "topology_repair": {
+    "date": "2026-11-15",
+    "id": "shared-axis-cap-vertices",
+    "previous_source_blender_version": "4.0.2",
+    "repaired_cap_meshes": 5,
+    "evidence": "docs/model-qa/queue-stanchions-degenerate-fix-2026-11-15/README.md"
   }
 }

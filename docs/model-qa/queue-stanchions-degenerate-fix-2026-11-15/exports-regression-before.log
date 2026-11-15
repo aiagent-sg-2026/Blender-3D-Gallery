@@ -1,0 +1,66 @@
+✔ queue kit registers independent post and short/long bays (1.033459ms)
+✖ mall-queue-post has no degenerate triangles in the actual GLB (9.568209ms)
+✔ mall-queue-post preserves provenance, measured export, source and thumbnail (2.354541ms)
+✖ mall-queue-short has no degenerate triangles in the actual GLB (3.900375ms)
+✔ mall-queue-short preserves provenance, measured export, source and thumbnail (0.774833ms)
+✖ mall-queue-long has no degenerate triangles in the actual GLB (3.293417ms)
+✔ mall-queue-long preserves provenance, measured export, source and thumbnail (0.739958ms)
+✔ short, long and turned layouts align measured belt endpoints with post sockets (0.654791ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 5
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 717.319125
+
+✖ failing tests:
+
+test at tests/mall-queue-stanchions.test.mjs:17:3
+✖ mall-queue-post has no degenerate triangles in the actual GLB (9.568209ms)
+  AssertionError [ERR_ASSERTION]: mall-queue-post: actual exported triangles must have positive area
+
+  480 !== 0
+
+      at TestContext.<anonymous> (file:///Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/tests/mall-queue-stanchions.test.mjs:31:12)
+      at async Test.run (node:internal/test_runner/test:1054:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:744:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 480,
+    expected: 0,
+    operator: 'strictEqual'
+  }
+
+test at tests/mall-queue-stanchions.test.mjs:17:3
+✖ mall-queue-short has no degenerate triangles in the actual GLB (3.900375ms)
+  AssertionError [ERR_ASSERTION]: mall-queue-short: actual exported triangles must have positive area
+
+  960 !== 0
+
+      at TestContext.<anonymous> (file:///Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/tests/mall-queue-stanchions.test.mjs:31:12)
+      at async Test.run (node:internal/test_runner/test:1054:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:744:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 960,
+    expected: 0,
+    operator: 'strictEqual'
+  }
+
+test at tests/mall-queue-stanchions.test.mjs:17:3
+✖ mall-queue-long has no degenerate triangles in the actual GLB (3.293417ms)
+  AssertionError [ERR_ASSERTION]: mall-queue-long: actual exported triangles must have positive area
+
+  960 !== 0
+
+      at TestContext.<anonymous> (file:///Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/tests/mall-queue-stanchions.test.mjs:31:12)
+      at async Test.run (node:internal/test_runner/test:1054:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:744:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 960,
+    expected: 0,
+    operator: 'strictEqual'
+  }

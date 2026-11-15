@@ -1,0 +1,176 @@
+{
+  "status": "FAIL",
+  "error": "mall-queue-post: material definitions preserved\n+ actual - expected\n... Skipped lines\n\n  [\n    {\n      doubleSided: true,\n+     name: 'Brushed champagne brass',\n-     name: 'Charcoal recess',\n      pbrMetallicRoughness: {\n        baseColorFactor: [\n+         0.46207699179649353,\n+         0.3277781009674072,\n+         0.12213877588510513,\n-         0.01032982300966978,\n-         0.01599629409611225,\n-         0.015208514407277107,\n          1\n        ],\n+       metallicFactor: 0.699999988079071,\n+       roughnessFactor: 0.3199999928474426\n-       metallicFactor: 0,\n-       roughnessFactor: 0.699999988079071\n      }\n    },\n    {\n      doubleSided: true,\n      name: 'Deep jade powder coat',\n...\n      doubleSided: true,\n+     name: 'Charcoal recess',\n-     name: 'Brushed champagne brass',\n      pbrMetallicRoughness: {\n        baseColorFactor: [\n+         0.01032982300966978,\n+         0.01599629409611225,\n+         0.015208514407277107,\n-         0.46207699179649353,\n-         0.3277781009674072,\n-         0.12213877588510513,\n          1\n        ],\n+       metallicFactor: 0,\n+       roughnessFactor: 0.699999988079071\n-       metallicFactor: 0.699999988079071,\n-       roughnessFactor: 0.3199999928474426\n      }\n    }\n  ]\n",
+  "results": [
+    {
+      "id": "mall-queue-post",
+      "before": {
+        "bytes": 97912,
+        "sha256": "9025b3a6fbb96e010511aa03df7457a09c019448902260427bdbbb9b646fab60",
+        "count": 3344,
+        "zero": 480,
+        "invalidNormals": 0,
+        "dimensions": [
+          0.3700000047683716,
+          0.9760000109672546,
+          0.3700000047683716
+        ],
+        "min": [
+          -0.1850000023841858,
+          0,
+          -0.1850000023841858
+        ],
+        "max": [
+          0.1850000023841858,
+          0.9760000109672546,
+          0.1850000023841858
+        ],
+        "modules": {
+          "MODULE_Post": [
+            0,
+            0,
+            0
+          ]
+        },
+        "materialDefinitions": [
+          {
+            "doubleSided": true,
+            "name": "Charcoal recess",
+            "pbrMetallicRoughness": {
+              "baseColorFactor": [
+                0.01032982300966978,
+                0.01599629409611225,
+                0.015208514407277107,
+                1
+              ],
+              "metallicFactor": 0,
+              "roughnessFactor": 0.699999988079071
+            }
+          },
+          {
+            "doubleSided": true,
+            "name": "Deep jade powder coat",
+            "pbrMetallicRoughness": {
+              "baseColorFactor": [
+                0.017641954123973846,
+                0.07227185368537903,
+                0.05448027700185776,
+                1
+              ],
+              "metallicFactor": 0,
+              "roughnessFactor": 0.47999998927116394
+            }
+          },
+          {
+            "doubleSided": true,
+            "name": "Brushed champagne brass",
+            "pbrMetallicRoughness": {
+              "baseColorFactor": [
+                0.46207699179649353,
+                0.3277781009674072,
+                0.12213877588510513,
+                1
+              ],
+              "metallicFactor": 0.699999988079071,
+              "roughnessFactor": 0.3199999928474426
+            }
+          }
+        ],
+        "issues": {
+          "numErrors": 0,
+          "numWarnings": 0,
+          "numInfos": 0,
+          "numHints": 0,
+          "messages": [],
+          "truncated": false
+        }
+      },
+      "after": {
+        "bytes": 71736,
+        "sha256": "49a27e18135a47ee09e4bc540b34f1ac0a4935292128f4c4b7d4ffe5f61aa376",
+        "count": 2864,
+        "zero": 0,
+        "invalidNormals": 0,
+        "dimensions": [
+          0.3700000047683716,
+          0.9760000109672546,
+          0.3700000047683716
+        ],
+        "min": [
+          -0.1850000023841858,
+          0,
+          -0.1850000023841858
+        ],
+        "max": [
+          0.1850000023841858,
+          0.9760000109672546,
+          0.1850000023841858
+        ],
+        "modules": {
+          "MODULE_Post": [
+            0,
+            0,
+            0
+          ]
+        },
+        "materialDefinitions": [
+          {
+            "doubleSided": true,
+            "name": "Brushed champagne brass",
+            "pbrMetallicRoughness": {
+              "baseColorFactor": [
+                0.46207699179649353,
+                0.3277781009674072,
+                0.12213877588510513,
+                1
+              ],
+              "metallicFactor": 0.699999988079071,
+              "roughnessFactor": 0.3199999928474426
+            }
+          },
+          {
+            "doubleSided": true,
+            "name": "Deep jade powder coat",
+            "pbrMetallicRoughness": {
+              "baseColorFactor": [
+                0.017641954123973846,
+                0.07227185368537903,
+                0.05448027700185776,
+                1
+              ],
+              "metallicFactor": 0,
+              "roughnessFactor": 0.47999998927116394
+            }
+          },
+          {
+            "doubleSided": true,
+            "name": "Charcoal recess",
+            "pbrMetallicRoughness": {
+              "baseColorFactor": [
+                0.01032982300966978,
+                0.01599629409611225,
+                0.015208514407277107,
+                1
+              ],
+              "metallicFactor": 0,
+              "roughnessFactor": 0.699999988079071
+            }
+          }
+        ],
+        "issues": {
+          "numErrors": 0,
+          "numWarnings": 0,
+          "numInfos": 0,
+          "numHints": 0,
+          "messages": [],
+          "truncated": false
+        }
+      },
+      "nondegenerateSurfaceDifferences": {
+        "removed": 0,
+        "added": 0
+      },
+      "surfaceToleranceM": 0.000001
+    }
+  ]
+}

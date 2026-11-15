@@ -3,6 +3,8 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { createHash } from 'node:crypto';
 import { loadCatalog } from '../scripts/catalog.mjs';
+import { Triangle, Vector3 } from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 const folder = 'models/mall-queue-stanchions';
 const expected = ['mall-queue-post', 'mall-queue-short', 'mall-queue-long'];
 const catalog = loadCatalog();
@@ -12,6 +14,22 @@ test('queue kit registers independent post and short/long bays', () => {
   assert.deepEqual(collection.assets.map(asset => asset.id), expected);
 });
 for (const id of expected) {
+  test(id + ' has no degenerate triangles in the actual GLB', async () => {
+    const bytes = fs.readFileSync(folder + '/exports/' + id + '.glb');
+    const gltf = await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength), '');
+    gltf.scene.updateMatrixWorld(true);
+    let zeroArea = 0;
+    gltf.scene.traverse(object => {
+      if (!object.isMesh) return;
+      const { index, attributes: { position } } = object.geometry;
+      for (let i = 0; i < (index?.count ?? position.count); i += 3) {
+        const points = [0, 1, 2].map(offset => new Vector3().fromBufferAttribute(position,
+          index ? index.getX(i + offset) : i + offset).applyMatrix4(object.matrixWorld));
+        if (new Triangle(...points).getArea() === 0) zeroArea++;
+      }
+    });
+    assert.equal(zeroArea, 0, id + ': actual exported triangles must have positive area');
+  });
   test(id + ' preserves provenance, measured export, source and thumbnail', () => {
     const asset = collection.assets.find(asset => asset.id === id);
     const metadata = JSON.parse(fs.readFileSync(folder + '/metadata/' + id + '.json'));

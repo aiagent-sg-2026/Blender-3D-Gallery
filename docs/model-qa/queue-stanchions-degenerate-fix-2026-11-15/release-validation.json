@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "verified_at": "2026-11-15T06:49:57.784680+00:00",
+  "base_main_commit": "2b8d7e10a2bfd83fd665c08ef3568e020f300e1e",
+  "scope": "Only queue post, short/long queue bays, shared geometry repair/export, regression checks and repair evidence.",
+  "validation": {
+    "npm_test": {
+      "passed": 673,
+      "failed": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    "build": "PASS; existing large-chunk advisory",
+    "native_blender_regression": "PASS; zero degenerate/non-manifold/boundary geometry in capped-cylinder regression",
+    "actual_glb_comparison": "PASS; 2400 degenerate triangles removed, existing oriented/material surfaces, bounds and pivots preserved",
+    "khronos": "All three repaired GLBs: 0 errors, 0 warnings",
+    "browser_evidence": "The prior 12/12 repair browser checks are retained in browser-results.json; not rerun for publication.",
+    "built_asset_hash_check": "PASS"
+  },
+  "assets": [
+    {
+      "id": "mall-queue-post",
+      "zero_area_triangles": 0,
+      "source_sha256": "31ba03a14ddc8a34c9248e1b76a95efd63a85d248c0d0bcd81c8b35ffc1261bd",
+      "glb_sha256": "49a27e18135a47ee09e4bc540b34f1ac0a4935292128f4c4b7d4ffe5f61aa376",
+      "built_glb_sha256_matches": true
+    },
+    {
+      "id": "mall-queue-short",
+      "zero_area_triangles": 0,
+      "source_sha256": "d129f5197fbb2c96ae6242ff4a33f6fcde96a6cf82519a3d78fc306cb048f630",
+      "glb_sha256": "86a857dfc025e78148f5d284fa412b053ceae02a8b59116c255e443f2860f8ef",
+      "built_glb_sha256_matches": true
+    },
+    {
+      "id": "mall-queue-long",
+      "zero_area_triangles": 0,
+      "source_sha256": "4f3c576ef575ac892e13aaf02756fbfde725fd94b0f7db6056cae15c711e7f16",
+      "glb_sha256": "f538960c64cb23e71b9142259cef86743e6fa344d5e250ea2b8fd426aa9b8474",
+      "built_glb_sha256_matches": true
+    }
+  ],
+  "git_method": "Focused commit based on latest fetched origin/main in an isolated worktree; original divergent main and unrelated work preserved.",
+  "limits": [
+    "No deployment verification",
+    "No physical-phone or FPS acceptance"
+  ],
+  "log_preparation": {
+    "operation": "Trailing whitespace normalized for publication; all non-whitespace output retained.",
+    "logs": [
+      {
+        "file": "build.log",
+        "original_sha256": "d94cbc53dfb685bd6e752840f1769410b72aed302ba040da0372b96ca0416421",
+        "published_sha256": "cf2d312cf2aac37e6e39d5ab512b5768078a6ae18b994798a1a5e8f9b7a48cb6"
+      },
+      {
+        "file": "exports-regression-before.log",
+        "original_sha256": "96d661a05ae42d4eae6ec6b84af9985f1536c7230b34dadd6e0b632f3e7ac284",
+        "published_sha256": "b716a36fe3f82a2f19c5c7c76a01e9be3c4a78f6bb2d4eb111ef27d41f9a752c"
+      }
+    ]
+  }
+}

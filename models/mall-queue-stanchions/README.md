@@ -1,6 +1,6 @@
 # Modular queue stanchions
 
-Original jade-and-champagne-brass mall queue kit, authored in Blender 4.0.2. Includes a standalone post, 1.2 m bay and 2.0 m bay. Measurements are in metres; Blender uses +Z up, exported glTF uses +Y up. All origins are at floor level. No third-party models or textures.
+Original jade-and-champagne-brass mall queue kit, originally authored in Blender 4.0.2. Axis-cap topology was repaired and re-exported with Blender 5.1.2 on 2026-11-15. Includes a standalone post, 1.2 m bay and 2.0 m bay. Measurements are in metres; Blender uses +Z up, exported glTF uses +Y up. All origins are at floor level. No third-party models or textures.
 
 ## Contents
 
@@ -8,9 +8,11 @@ Each of `mall-queue-post`, `mall-queue-short`, `mall-queue-long` has an editable
 
 | Asset | GLB bytes | Triangles | Primitives | Dimensions (x/y/z, glTF metres) |
 | --- | ---: | ---: | ---: | --- |
-| Post | 97,912 | 3,344 | 3 | 0.370 / 0.976 / 0.370 |
-| Short bay | 191,180 | 7,252 | 8 | 1.570 / 0.976 / 0.370 |
-| Long bay | 192,444 | 7,252 | 8 | 2.370 / 0.976 / 0.370 |
+| Post | 71,736 | 2,864 | 3 | 0.370 / 0.976 / 0.370 |
+| Short bay | 154,488 | 6,292 | 8 | 1.570 / 0.976 / 0.370 |
+| Long bay | 149,808 | 6,292 | 8 | 2.370 / 0.976 / 0.370 |
+
+All three exports have zero zero-area triangles. Each radius-zero profile endpoint now uses one shared axis vertex and a triangle fan; other profile bands remain quads. The repair changed 5/10/10 saved cap meshes without rebuilding the other authored parts. Nondegenerate oriented/material surfaces, dimensions, module pivots and existing previews are preserved. See the [repair evidence](../../docs/model-qa/queue-stanchions-degenerate-fix-2026-11-15/README.md).
 
 ## Compose queues
 
@@ -22,10 +24,11 @@ This is a static decorative asset kit. There is no runtime queue editor, retract
 
 ## Reproduce
 
-From the repository root, with Blender 4.0.2, Python Pillow and the project's installed Node dependencies:
+From the repository root, with Blender 5.1.2, Python Pillow and the project's installed Node dependencies:
 
 ```sh
 blender --background --python models/mall-queue-stanchions/generate.py
+blender --background --factory-startup --disable-autoexec --python-exit-code 23 --python models/mall-queue-stanchions/test_lathe.py
 python3 models/mall-queue-stanchions/prepare_previews.py
 blender --background --python models/mall-queue-stanchions/inspect_sources.py
 node models/mall-queue-stanchions/validate.mjs
@@ -37,8 +40,10 @@ npm run test:library
 
 Generator geometry and parameters are deterministic. Blender save/export implementation and preview rendering may vary with toolchain versions; committed SHA-256 values identify the verified files. Raw PNG render intermediates are ignored; WebP thumbnails are committed.
 
+The generator rebuilds and renders all three variants. `repair_caps.py` is a separate, staged migration for legacy saved sources: it verifies known profile coordinates and face connectivity, and rejects incompatible/manual shape changes before replacing only cap topology. It requires distinct input/output directories. `check_repair.mjs` independently compares old/new GLB geometry, materials, module pivots and bounds; `validate.mjs` rejects exported zero-area triangles. Existing previews were retained during the repair because the nondegenerate surface geometry is unchanged.
+
 ## Rights
 
 Original assets; reuse in the owner's projects is authorized. Public redistribution terms have not been specified. Existing catalog license text and disabled public download behavior are preserved.
 
-See [verification.md](verification.md) for measured checks and the unresolved browser diagnostic.
+See [verification.md](verification.md) for dated checks, including historical browser diagnostics and the current repair follow-up.

@@ -1,5 +1,7 @@
 # Verification — 2026-11-12
 
+Current follow-up: [2026-11-15 axis-cap repair](../../docs/model-qa/queue-stanchions-degenerate-fix-2026-11-15/README.md). All three current GLBs have zero degenerate triangles; sources and measured metadata are updated. The current focused browser run passed 12/12. Historical results below remain unchanged and are not attributed to this geometry fix.
+
 Base: main `27321715cda338f22595076bbe7c516c3a10c863`. Work is isolated to this kit, catalog registration and focused tests. No game/UI/workflow changes, remote publication, merge or deployment performed by this worker.
 
 - Blender 4.0.2 generated all three exports and studio thumbnails. All three `.blend` files reopened successfully with original editable parts and named module assignments (`reports/sources.json`).

@@ -64,19 +64,38 @@ def tube(name, points, radius, mat):
     return obj
 
 
-def lathe(name, profile, mat, flutes=0):
+def lathe_geometry(profile, flutes=0):
     count = 96 if flutes else 48
-    vertices, faces = [], []
+    vertices, rings, faces = [], [], []
     for radius, height in profile:
+        if radius == 0:
+            rings.append([len(vertices)])
+            vertices.append((0, 0, height))
+            continue
+        ring = []
         for i in range(count):
             a = i * math.tau / count
             r = radius + (math.cos(a * 24) * .008 if flutes else 0)
+            ring.append(len(vertices))
             vertices.append((r * math.cos(a), r * math.sin(a), height))
-    for row in range(len(profile) - 1):
+        rings.append(ring)
+    for lower, upper in zip(rings, rings[1:]):
+        if len(lower) == len(upper) == 1:
+            continue
         for i in range(count):
             j = (i + 1) % count
-            faces.append((row * count + i, row * count + j,
-                          (row + 1) * count + j, (row + 1) * count + i))
+            if len(lower) == 1:
+                faces.append((lower[0], upper[j], upper[i]))
+            elif len(upper) == 1:
+                faces.append((lower[i], lower[j], upper[0]))
+            else:
+                faces.append((lower[i], lower[j], upper[j], upper[i]))
+    return vertices, faces
+
+
+def lathe(name, profile, mat, flutes=0):
+    # An axis endpoint is one shared vertex, not a collapsed ring of quads.
+    vertices, faces = lathe_geometry(profile, flutes)
     mesh = bpy.data.meshes.new(name)
     mesh.from_pydata(vertices, [], faces)
     obj = bpy.data.objects.new(name, mesh)
@@ -128,20 +147,8 @@ def point_at(obj, xyz):
     obj.rotation_euler = (Vector(xyz) - obj.location).to_track_quat('-Z', 'Y').to_euler()
 
 
-def build(slug, root_name, factory, camera, target, ortho):
-    bpy.ops.wm.read_factory_settings(use_empty=True)
+def export_asset(slug, root, objects):
     scene = bpy.context.scene
-    scene.unit_settings.system = 'METRIC'
-    scene.unit_settings.scale_length = 1
-    factory()
-    objects = list(scene.objects)
-    root = bpy.data.objects.new(root_name, None)
-    scene.collection.objects.link(root)
-    for obj in objects:
-        obj.parent = root
-    root['units'] = 'metres'
-    root['origin'] = 'floor centre'
-    root['source'] = 'Blender-3D-Gallery / original modular mall queue stanchions'
     # Export a merged evaluated copy: editable authored objects remain in the blend.
     bpy.ops.object.select_all(action='DESELECT')
     exports = []
@@ -170,11 +177,28 @@ def build(slug, root_name, factory, camera, target, ortho):
         obj.select_set(True)
     root.select_set(True)
     bpy.ops.export_scene.gltf(filepath=str(HERE / 'exports' / f'{slug}.glb'),
-        export_format='GLB', use_selection=True, export_apply=True,
+        export_format='GLB', use_selection=True, use_active_scene=True, export_apply=True,
         export_yup=True, export_animations=False, export_texcoords=False,
         export_extras=True, export_cameras=False, export_lights=False)
     for merged in exports:
         bpy.data.objects.remove(merged, do_unlink=True)
+
+
+def build(slug, root_name, factory, camera, target, ortho):
+    bpy.ops.wm.read_factory_settings(use_empty=True)
+    scene = bpy.context.scene
+    scene.unit_settings.system = 'METRIC'
+    scene.unit_settings.scale_length = 1
+    factory()
+    objects = list(scene.objects)
+    root = bpy.data.objects.new(root_name, None)
+    scene.collection.objects.link(root)
+    for obj in objects:
+        obj.parent = root
+    root['units'] = 'metres'
+    root['origin'] = 'floor centre'
+    root['source'] = 'Blender-3D-Gallery / original modular mall queue stanchions'
+    export_asset(slug, root, objects)
     bpy.ops.object.select_all(action='DESELECT')
     for obj in objects:
         obj.select_set(True)
@@ -215,15 +239,21 @@ def build(slug, root_name, factory, camera, target, ortho):
 
 
 
+POST_LATHE_PARTS = (
+    ('Rubber sole', [(0,0),(.165,0),(.18,.012),(.18,.025),(0,.025)], 'dark'),
+    ('Jade weighted base', [(0,.018),(.18,.018),(.185,.035),(.17,.052),(.11,.068),(.045,.075),(0,.075)], 'jade'),
+    ('Base brass reveal', [(.175,.027),(.183,.027),(.183,.038),(.175,.038),(.175,.027)], 'brass'),
+    ('Brass upright', [(0,.06),(.031,.06),(.031,.845),(.025,.865),(0,.865)], 'brass'),
+    ('Jade belt cartridge', [(0,.83),(.055,.83),(.065,.85),(.065,.94),(.056,.96),(0,.96)], 'jade'),
+    ('Cartridge top brass cap', [(0,.955),(.057,.955),(.06,.966),(.052,.976),(0,.976)], 'brass'),
+)
+
+
 def post(x, p, name):
     start = set(bpy.context.scene.objects)
     # Low domed weighted foot and recessed rubber contact ring.
-    lathe('Rubber sole', [(0,0),(.165,0),(.18,.012),(.18,.025),(0,.025)],p['dark'])
-    lathe('Jade weighted base',[(0,.018),(.18,.018),(.185,.035),(.17,.052),(.11,.068),(.045,.075),(0,.075)],p['jade'])
-    lathe('Base brass reveal',[(.175,.027),(.183,.027),(.183,.038),(.175,.038),(.175,.027)],p['brass'])
-    lathe('Brass upright',[(0,.06),(.031,.06),(.031,.845),(.025,.865),(0,.865)],p['brass'])
-    lathe('Jade belt cartridge',[(0,.83),(.055,.83),(.065,.85),(.065,.94),(.056,.96),(0,.96)],p['jade'])
-    lathe('Cartridge top brass cap',[(0,.955),(.057,.955),(.06,.966),(.052,.976),(0,.976)],p['brass'])
+    for part, profile, color in POST_LATHE_PARTS:
+        lathe(part, profile, p[color])
     for angle in (0,math.pi/2,math.pi,3*math.pi/2):
         ob=box('Receiver socket',(.066*math.cos(angle),.066*math.sin(angle),.905),(.014,.030,.058),p['dark'],.003)
         ob.rotation_euler.z=angle
