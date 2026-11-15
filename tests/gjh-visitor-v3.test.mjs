@@ -16,6 +16,7 @@ test('v3 exports a bounded, valid skinned visitor and the intended clips', async
   const bytes = await fs.readFile(path);
   const report = await validator.validateBytes(new Uint8Array(bytes));
   assert.equal(report.issues.numErrors, 0);
+  assert.equal(report.issues.numWarnings, 0);
   assert.ok(bytes.length < 2 * 1024 * 1024);
   const gltf = await load();
   const meshes = [];

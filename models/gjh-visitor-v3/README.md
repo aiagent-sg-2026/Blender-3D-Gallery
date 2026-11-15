@@ -26,7 +26,7 @@ Call `createVisitorCustomization(scene)` from `customization.js` before display 
 
 ## Measured
 
-21 meshes (draw calls), 21,714 triangles, about 1.1 MB, 12 actions, 17 materials; glTF validator, Blender re-import and Three.js playback pass.
+21 meshes (draw calls), 21,714 triangles, about 1.1 MB, 12 actions, 17 materials; glTF validator reports zero errors and zero warnings. Blender re-import and Three.js playback have been checked. The exporter places skinned meshes at the scene root while preserving the armature binding.
 
 ## Known gaps
 

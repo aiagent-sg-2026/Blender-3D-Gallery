@@ -128,6 +128,12 @@ def render_and_export(scene, rig, root, material):
         for layer in list(parts[0].data.uv_layers):
             parts[0].data.uv_layers.remove(layer)
         exports.append(parts[0])
+    # glTF requires skinned meshes at the scene root. The armature modifier
+    # retains the skin binding when the temporary copies are unparented.
+    for obj in exports:
+        world_matrix = obj.matrix_world.copy()
+        obj.parent = None
+        obj.matrix_world = world_matrix
     bpy.ops.object.select_all(action='DESELECT')
     rig.select_set(True)
     for obj in exports:

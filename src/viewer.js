@@ -5,8 +5,6 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import createFishMotion from "./fish-motion.js";
 import { acquireModelViewerRenderer } from "./model-viewer-renderer.js";
 
-import createFishMotion from "./fish-motion.js";
-
 export default async function createViewer(
   container,
   url,
