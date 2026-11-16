@@ -1,0 +1,106 @@
+{
+  "result": "PASS",
+  "status": "draft / NEEDS REVIEW",
+  "id": "battery-display-rack",
+  "category": "Retail",
+  "store": "S16",
+  "priority": "P1",
+  "glb_sha256": "fbdaf7bb26b1594074706f927f58881696cb0354970dbcb175ec3556e899e22f",
+  "source_sha256": "2b8d1e64c4cb2aa2bd9be70c3985fdc363ee8b5abb46547f1c5554f314eee4cf",
+  "checks": [
+    {
+      "command": "Blender 5.2.3 --background --python generate.py",
+      "result": "PASS",
+      "exit_code": 0,
+      "views": [
+        "hero",
+        "front",
+        "side",
+        "3q"
+      ]
+    },
+    {
+      "command": "node models/battery-display-rack/validate.mjs",
+      "result": "PASS",
+      "exit_code": 0,
+      "khronos_errors": 0,
+      "khronos_warnings": 0,
+      "zero_area_triangles": 0
+    },
+    {
+      "command": "Blender inspect_sources.py; node verify_source_edit.mjs",
+      "result": "PASS",
+      "exit_code": 0,
+      "editable_source_parts": 296,
+      "closed_manifold_meshes": 296
+    },
+    {
+      "command": "Independent clean-directory generation; GLB byte comparison",
+      "result": "PASS",
+      "exit_code": 0,
+      "sha256": "fbdaf7bb26b1594074706f927f58881696cb0354970dbcb175ec3556e899e22f"
+    },
+    {
+      "command": "npm run validate:assets",
+      "result": "PASS",
+      "exit_code": 0
+    },
+    {
+      "command": "npm test",
+      "result": "PASS",
+      "exit_code": 0,
+      "tests": 728,
+      "passed": 728,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "command": "npm run build",
+      "result": "PASS",
+      "exit_code": 0,
+      "build_id": "8df00169d7882768",
+      "warnings": "Existing application chunk-size and plugin timing notices; build succeeded."
+    },
+    {
+      "command": "node models/battery-display-rack/verify_page.mjs",
+      "result": "PASS",
+      "exit_code": 0,
+      "viewport": [
+        1440,
+        900
+      ],
+      "console_errors": 0,
+      "glb_requests": 1,
+      "loaded_glb_sha256": "fbdaf7bb26b1594074706f927f58881696cb0354970dbcb175ec3556e899e22f"
+    }
+  ],
+  "visual_review": "PASS: viewed final hero/front/side/3q PNGs and the actual Chromium page screenshot. Reviewed silhouette, generic cell/card geometry, blank header/labels, perforations, hooks, two open bins and base proportions.",
+  "browser_screenshot": "/Users/admin/Documents/MallQueue/reports/battery-display-rack-page.png",
+  "log_directory": "/Users/admin/Documents/MallQueue/reports/battery-display-rack-checks",
+  "initial_failures": [
+    {
+      "check": "Template source-edit verifier",
+      "cause": "It assumed equal exported position counts after a bevelled mesh edit. Vertex deduplication changed; the verifier now independently checks changed dimensions and roughness plus unchanged other batches."
+    },
+    {
+      "check": "First npm test",
+      "result": "727/728 passed",
+      "cause": "Existing Pomelo test requires its collection last. Registered the new collection immediately before it, preserving existing entry order. Full final rerun passed 728/728; no test changes."
+    }
+  ],
+  "not_found": [
+    "Close existing battery, cell blister-pack or pegboard hook-rack asset after catalog and recursive metadata identity search"
+  ],
+  "skipped_required_checks": [],
+  "generated_test_artifacts_restored": [
+    "models/demo-beverage-can/reports/structure-motion.json"
+  ],
+  "not_verified": [
+    "Physical Android/iOS",
+    "WebKit",
+    "Complete 17-shop 70 x 60 m mall integration and its 200 draw-call budget",
+    "Electrical operation, load/stability or engineering certification",
+    "Manager art approval",
+    "Remote publication: no push or deployment"
+  ]
+}
