@@ -1,0 +1,580 @@
+{
+  "purpose": "Supplemental native-GPU evidence; does not replace prior software controls or primary independent acceptance",
+  "referenceSha256": "0915b9e7b41d35177cb890580935b9c1db355539a1183861b2387c936f110f6f",
+  "commonRuntimeEngineSha256": "dd9da7605552e1299f061741803e256b2478e3b6556217018ebeac12d61cac22",
+  "browserVersion": "156.0.8078.4",
+  "contactSheetScriptSha256": "12b36281d82433e1e04e600b1498e81738167178d820ecf8276fe6aaa7271fea",
+  "captureScriptSha256": "b31259158533169027e28cfb3d88164d84d727de4c2222baf6f3dbfc3823c2a4",
+  "rendererSourceSha256": "2dc4c739c871941dfcf46ddfd269b98fc9e1e60dc51e19cc764107dff23b1d68",
+  "standardHeadCamera": {
+    "angles": [
+      0,
+      -35,
+      90,
+      180,
+      -90,
+      -135,
+      135,
+      35
+    ],
+    "span": 0.61,
+    "height": 1.055,
+    "pitch": 0,
+    "viewport": [
+      292,
+      280
+    ]
+  },
+  "models": {
+    "before": {
+      "originalInput": "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/hair-rebuild/package-119",
+      "artifactSha256": "88ee2069c389ef8aa9d4308f11ecb0fad9805e9d6b5eba0cd913f045b83b5cbd",
+      "originalPreviewSha256": "fb86fa3ad2697f800d1abc6e37bf3010074980138b340ef610bf718343500027",
+      "evaluationPreviewSha256": "fb86fa3ad2697f800d1abc6e37bf3010074980138b340ef610bf718343500027",
+      "commonRuntimeEngineSha256": "dd9da7605552e1299f061741803e256b2478e3b6556217018ebeac12d61cac22",
+      "previewExplanation": "Frozen original GLB, unchanged. Evaluation preview replaces only the current candidate payload so paired lighting/runtime are identical. Original preview is retained separately.",
+      "renderer": {
+        "adapter": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+        "vendor": "Google Inc. (Apple)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+        "shaderVersion": "WebGL GLSL ES 3.00 (OpenGL ES GLSL ES 3.0 Chromium)",
+        "threeRevision": "187",
+        "toneMapping": 7,
+        "exposure": 0.99,
+        "outputColorSpace": "srgb",
+        "environmentIntensity": 0.32,
+        "lights": [
+          {
+            "type": "HemisphereLight",
+            "color": 16775412,
+            "intensity": 0.81,
+            "position": [
+              0,
+              1,
+              0
+            ],
+            "castShadow": false
+          },
+          {
+            "type": "DirectionalLight",
+            "color": 16772056,
+            "intensity": 2.15,
+            "position": [
+              -2.6,
+              4,
+              3.7
+            ],
+            "castShadow": true
+          },
+          {
+            "type": "DirectionalLight",
+            "color": 13491455,
+            "intensity": 0.54,
+            "position": [
+              2.4,
+              1.8,
+              2.3
+            ],
+            "castShadow": false
+          },
+          {
+            "type": "DirectionalLight",
+            "color": 16768978,
+            "intensity": 1.1,
+            "position": [
+              1.9,
+              3,
+              -2.6
+            ],
+            "castShadow": false
+          }
+        ],
+        "defaultExpression": {}
+      },
+      "records": [
+        {
+          "file": "head-p000.png",
+          "angle": 0,
+          "span": 0.61,
+          "height": 1.055,
+          "pitch": 0,
+          "viewport": [
+            292,
+            280
+          ]
+        },
+        {
+          "file": "head-m035.png",
+          "angle": -35,
+          "span": 0.61,
+          "height": 1.055,
+          "pitch": 0,
+          "viewport": [
+            292,
+            280
+          ]
+        },
+        {
+          "file": "head-p090.png",
+          "angle": 90,
+          "span": 0.61,
+          "height": 1.055,
+          "pitch": 0,
+          "viewport": [
+            292,
+            280
+          ]
+        },
+        {
+          "file": "head-p180.png",
+          "angle": 180,
+          "span": 0.61,
+          "height": 1.055,
+          "pitch": 0,
+          "viewport": [
+            292,
+            280
+          ]
+        },
+        {
+          "file": "head-m090.png",
+          "angle": -90,
+          "span": 0.61,
+          "height": 1.055,
+          "pitch": 0,
+          "viewport": [
+            292,
+            280
+          ]
+        },
+        {
+          "file": "head-m135.png",
+          "angle": -135,
+          "span": 0.61,
+          "height": 1.055,
+          "pitch": 0,
+          "viewport": [
+            292,
+            280
+          ]
+        },
+        {
+          "file": "head-p135.png",
+          "angle": 135,
+          "span": 0.61,
+          "height": 1.055,
+          "pitch": 0,
+          "viewport": [
+            292,
+            280
+          ]
+        },
+        {
+          "file": "head-p035.png",
+          "angle": 35,
+          "span": 0.61,
+          "height": 1.055,
+          "pitch": 0,
+          "viewport": [
+            292,
+            280
+          ]
+        },
+        {
+          "file": "forehead.png",
+          "angle": 0,
+          "span": 0.42,
+          "height": 1.16,
+          "pitch": 0,
+          "viewport": [
+            480,
+            416
+          ]
+        },
+        {
+          "file": "side-right.png",
+          "angle": 90,
+          "span": 0.61,
+          "height": 1.055,
+          "pitch": 0,
+          "viewport": [
+            480,
+            416
+          ]
+        },
+        {
+          "file": "side-left.png",
+          "angle": -90,
+          "span": 0.61,
+          "height": 1.055,
+          "pitch": 0,
+          "viewport": [
+            480,
+            416
+          ]
+        },
+        {
+          "file": "back.png",
+          "angle": 180,
+          "span": 0.61,
+          "height": 1.055,
+          "pitch": 0,
+          "viewport": [
+            480,
+            416
+          ]
+        },
+        {
+          "file": "registered-front.png",
+          "angle": 0,
+          "span": 0.5995565410199557,
+          "height": 1.0146341463414634,
+          "pitch": 0,
+          "viewport": [
+            480,
+            416
+          ]
+        },
+        {
+          "file": "registered-quarter.png",
+          "angle": -28,
+          "span": 0.5995565410199557,
+          "height": 1.0146341463414634,
+          "pitch": 0,
+          "viewport": [
+            480,
+            416
+          ]
+        },
+        {
+          "file": "registered-profile.png",
+          "angle": 90,
+          "span": 0.5995565410199557,
+          "height": 1.0146341463414634,
+          "pitch": 0,
+          "viewport": [
+            480,
+            416
+          ]
+        },
+        {
+          "file": "registered-opposite.png",
+          "angle": -90,
+          "span": 0.5995565410199557,
+          "height": 1.0146341463414634,
+          "pitch": 0,
+          "viewport": [
+            480,
+            416
+          ]
+        },
+        {
+          "file": "registered-back.png",
+          "angle": 180,
+          "span": 0.5995565410199557,
+          "height": 1.0146341463414634,
+          "pitch": 0,
+          "viewport": [
+            480,
+            416
+          ]
+        }
+      ],
+      "files": {
+        "head-p000.png": "767b0d20adea7705299cc2e853fb0cf352c35f3b4550ec7c4c2670ff395296a2",
+        "head-m035.png": "0bf8744de27b6d55679dd7a34dc643660435a63299779b92d29e2ea1b527138a",
+        "head-p090.png": "93de915d85f73e850790b8ee4efcacd71f4e6efc91717e8d816aef6584e4ce37",
+        "head-p180.png": "0ebffe1e847d7633fdc7ca224eddd5c66ab836cde575edbe7c0380660deb3f6a",
+        "head-m090.png": "b574df2142bbaceb0f3f0e0f206b019647d201a4bd142eb305719454232688b5",
+        "head-m135.png": "3b03e4e89166b05793e4ced3c2c6c3c5229ddd9df56a2439450c34231580fed0",
+        "head-p135.png": "c36eafc4eab06e63624bf1aad258baac57636ae929721d6377bf6ed38d69aeca",
+        "head-p035.png": "8d0bfeb887c4d0f6091d21ac25ad193682222fbd53322f41cfd2be12a6174db3",
+        "forehead.png": "35786a99b5d81076e39c63f1c84e3021f854826c4362bb161c0eba66de0ea55d",
+        "side-right.png": "ecddd051e7e0add419f0ad8c7dbd68ed1c63c41e61bb4d5105adb0ab090fee1d",
+        "side-left.png": "e163697b49508811f51526b98326d0c0e299b381c6ed3acc9e527dfcbafa0de4",
+        "back.png": "c18db8d149af2e00e46b842c581e2a1e244dc7e324ae5a799894cda82cfb9fc2",
+        "registered-front.png": "2fc8ff00a751b68ffc3433d2e312230435a5d3c32f214d0b611b4d536fe16e7b",
+        "registered-quarter.png": "73e3fd95ba291aa639ba2c7bf0b13a0bbdba4d9bedebe0585f52040d4b32e54e",
+        "registered-profile.png": "c74e675be5b40632d029b8c7b6ce88a1a21b9def073e065fda2da6b2f5da7f87",
+        "registered-opposite.png": "039440875fdfd53525dd5163b76ab9f626706cc31f29057ada81cf83a9e4c2f1",
+        "registered-back.png": "2e5b38d1002581814775858e2f38680a9605bc927d5b96a3ad22af7820a34e78",
+        "head-eight.png": "3a8e567fd68108286234109dab271de9d375d7c4dc6db6695168231b25157067"
+      }
+    },
+    "after": {
+      "originalInput": "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/r20",
+      "artifactSha256": "60650f47aac716cb5a11fa69bee58c06546aa2199a25c2bde6dcc37ce566ab6f",
+      "originalPreviewSha256": "9190012cc9b84c0ad226af9a9f7b2c913d9b060a7402e7c92fa5b0c13ca86133",
+      "evaluationPreviewSha256": "9190012cc9b84c0ad226af9a9f7b2c913d9b060a7402e7c92fa5b0c13ca86133",
+      "commonRuntimeEngineSha256": "dd9da7605552e1299f061741803e256b2478e3b6556217018ebeac12d61cac22",
+      "previewExplanation": "Actual candidate preview and GLB are byte-identical copies.",
+      "renderer": {
+        "adapter": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+        "vendor": "Google Inc. (Apple)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+        "shaderVersion": "WebGL GLSL ES 3.00 (OpenGL ES GLSL ES 3.0 Chromium)",
+        "threeRevision": "187",
+        "toneMapping": 7,
+        "exposure": 0.99,
+        "outputColorSpace": "srgb",
+        "environmentIntensity": 0.32,
+        "lights": [
+          {
+            "type": "HemisphereLight",
+            "color": 16775412,
+            "intensity": 0.81,
+            "position": [
+              0,
+              1,
+              0
+            ],
+            "castShadow": false
+          },
+          {
+            "type": "DirectionalLight",
+            "color": 16772056,
+            "intensity": 2.15,
+            "position": [
+              -2.6,
+              4,
+              3.7
+            ],
+            "castShadow": true
+          },
+          {
+            "type": "DirectionalLight",
+            "color": 13491455,
+            "intensity": 0.54,
+            "position": [
+              2.4,
+              1.8,
+              2.3
+            ],
+            "castShadow": false
+          },
+          {
+            "type": "DirectionalLight",
+            "color": 16768978,
+            "intensity": 1.1,
+            "position": [
+              1.9,
+              3,
+              -2.6
+            ],
+            "castShadow": false
+          }
+        ],
+        "defaultExpression": {}
+      },
+      "records": [
+        {
+          "file": "head-p000.png",
+          "angle": 0,
+          "span": 0.61,
+          "height": 1.055,
+          "pitch": 0,
+          "viewport": [
+            292,
+            280
+          ]
+        },
+        {
+          "file": "head-m035.png",
+          "angle": -35,
+          "span": 0.61,
+          "height": 1.055,
+          "pitch": 0,
+          "viewport": [
+            292,
+            280
+          ]
+        },
+        {
+          "file": "head-p090.png",
+          "angle": 90,
+          "span": 0.61,
+          "height": 1.055,
+          "pitch": 0,
+          "viewport": [
+            292,
+            280
+          ]
+        },
+        {
+          "file": "head-p180.png",
+          "angle": 180,
+          "span": 0.61,
+          "height": 1.055,
+          "pitch": 0,
+          "viewport": [
+            292,
+            280
+          ]
+        },
+        {
+          "file": "head-m090.png",
+          "angle": -90,
+          "span": 0.61,
+          "height": 1.055,
+          "pitch": 0,
+          "viewport": [
+            292,
+            280
+          ]
+        },
+        {
+          "file": "head-m135.png",
+          "angle": -135,
+          "span": 0.61,
+          "height": 1.055,
+          "pitch": 0,
+          "viewport": [
+            292,
+            280
+          ]
+        },
+        {
+          "file": "head-p135.png",
+          "angle": 135,
+          "span": 0.61,
+          "height": 1.055,
+          "pitch": 0,
+          "viewport": [
+            292,
+            280
+          ]
+        },
+        {
+          "file": "head-p035.png",
+          "angle": 35,
+          "span": 0.61,
+          "height": 1.055,
+          "pitch": 0,
+          "viewport": [
+            292,
+            280
+          ]
+        },
+        {
+          "file": "forehead.png",
+          "angle": 0,
+          "span": 0.42,
+          "height": 1.16,
+          "pitch": 0,
+          "viewport": [
+            480,
+            416
+          ]
+        },
+        {
+          "file": "side-right.png",
+          "angle": 90,
+          "span": 0.61,
+          "height": 1.055,
+          "pitch": 0,
+          "viewport": [
+            480,
+            416
+          ]
+        },
+        {
+          "file": "side-left.png",
+          "angle": -90,
+          "span": 0.61,
+          "height": 1.055,
+          "pitch": 0,
+          "viewport": [
+            480,
+            416
+          ]
+        },
+        {
+          "file": "back.png",
+          "angle": 180,
+          "span": 0.61,
+          "height": 1.055,
+          "pitch": 0,
+          "viewport": [
+            480,
+            416
+          ]
+        },
+        {
+          "file": "registered-front.png",
+          "angle": 0,
+          "span": 0.5995565410199557,
+          "height": 1.0146341463414634,
+          "pitch": 0,
+          "viewport": [
+            480,
+            416
+          ]
+        },
+        {
+          "file": "registered-quarter.png",
+          "angle": -28,
+          "span": 0.5995565410199557,
+          "height": 1.0146341463414634,
+          "pitch": 0,
+          "viewport": [
+            480,
+            416
+          ]
+        },
+        {
+          "file": "registered-profile.png",
+          "angle": 90,
+          "span": 0.5995565410199557,
+          "height": 1.0146341463414634,
+          "pitch": 0,
+          "viewport": [
+            480,
+            416
+          ]
+        },
+        {
+          "file": "registered-opposite.png",
+          "angle": -90,
+          "span": 0.5995565410199557,
+          "height": 1.0146341463414634,
+          "pitch": 0,
+          "viewport": [
+            480,
+            416
+          ]
+        },
+        {
+          "file": "registered-back.png",
+          "angle": 180,
+          "span": 0.5995565410199557,
+          "height": 1.0146341463414634,
+          "pitch": 0,
+          "viewport": [
+            480,
+            416
+          ]
+        }
+      ],
+      "files": {
+        "head-p000.png": "93451f16ee5824109ebfbd598ef20283aa2837fead9b9052330e926e50c09cf8",
+        "head-m035.png": "076c02b78452482790b06eb18d3c16ccd7524d1e895abefff848a57f3652bc24",
+        "head-p090.png": "b2cc05ab5d79a0bb95f9514141fb4736f67c145e2cebc62c8272dfc5755e3487",
+        "head-p180.png": "298b7beddc9de1a5c5528c779a314f3af7e01c984cf4a018dccdcd729314549a",
+        "head-m090.png": "ca0dc7f891d7aef8d1dc70faa4e3d14bd1985b806213c1cf1b9ffc70f14a9b1d",
+        "head-m135.png": "10a22626b093b74bf08c6e43ac5fb53eaa7efc1a4e1d2d5a00b616a397a68a85",
+        "head-p135.png": "752cde7bc9090f7237c3b227d33e815714ba8a3ec65fc100b2b9406ff907585c",
+        "head-p035.png": "d670777268a4b2eff2a882d6ebbde058d65b36263ba63f430dcf8d6c73994e46",
+        "forehead.png": "932340072ae255a7dbf3903ae0bcec332472833c30d57036d5534174057311c3",
+        "side-right.png": "ddcef431fca5697b94888725994235cb4aac12717a474ab8d952810cecac9a9e",
+        "side-left.png": "2d78d859fa408f6e2a47dc442d53cc6ec885a4ca88e70999a067b39ab219d226",
+        "back.png": "8d3600c8d9decb31f489f8f5a429b09c43ab810b96ad499c0f3b370df7708c9b",
+        "registered-front.png": "6ee86e260b6c3759536c253918e166201291896fd2281dd9e0b38b508cba93b5",
+        "registered-quarter.png": "25d4782e87497a26c8c0300031f08400a6b8c3df65ae6e5bbe58d7ee79bfbe17",
+        "registered-profile.png": "6edceefd14f1009063b8834d3eb16fba1f2ac45ad1d4e872fad2c69c96ac1aec",
+        "registered-opposite.png": "2d302526f6639fce3328dbc5707792de6b46776be2f07925a7a7c81ab710c053",
+        "registered-back.png": "26f1a9315c23cb6be46da1d62d349bddb2b306f04f98a0ada0fb11508a15db1f",
+        "head-eight.png": "134ed6170fdd46875553e7b3509644e86343d11656e654a75413b873cbb8308c"
+      }
+    }
+  }
+}

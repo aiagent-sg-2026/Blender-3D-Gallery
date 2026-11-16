@@ -1,0 +1,67 @@
+{
+  "state": "REVIEW_PENDING",
+  "independentVisual": "PASS",
+  "independentTechnical": "PASS",
+  "formalBuild": "PASS",
+  "ownerReview": "PENDING",
+  "scope": "Reopened swept-lock and fringe criteria on the existing chibi visitor. Final four views use the supplied reference and the immediately preceding delivered GLB.",
+  "referenceSha256": "0915b9e7b41d35177cb890580935b9c1db355539a1183861b2387c936f110f6f",
+  "beforeGlbSha256": "88ee2069c389ef8aa9d4308f11ecb0fad9805e9d6b5eba0cd913f045b83b5cbd",
+  "masterSha256": "44d9f04a5c46918fcd81b845e432973bd559e0181756fb81d8a49dde94e4cbdd",
+  "glbSha256": "60650f47aac716cb5a11fa69bee58c06546aa2199a25c2bde6dcc37ce566ab6f",
+  "previewSha256": "9190012cc9b84c0ad226af9a9f7b2c913d9b060a7402e7c92fa5b0c13ca86133",
+  "formalBuildMasterSha256": "d493986cdc8c1c319fcebbe111dd491c373cd71542e62132121697461fa17e18",
+  "sourceBankSha256": "1e4b7f7a91b551226d5644e0872134c9e852832382e0b09b72e4282e8fe7fe00",
+  "visualReportSha256": "59c324fef8fbb8bed14dcde13d86e3719522bec032b963d4b94aed98899b0b32",
+  "technicalReportSha256": "3bb8b22f5c9e785497106bd638596ecded0f187d5ec992b7422781c4c853c7ab",
+  "triangles": 7994,
+  "hairTriangles": 2802,
+  "geometryShells": 16,
+  "closedHairShells": 16,
+  "heightM": 1.2999999907202027,
+  "soleM": 2.9314698045026906e-09,
+  "validator": {
+    "version": "2.0.0-dev.3.10",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  "criteria": {
+    "S1": "PASS",
+    "S2": "PASS",
+    "S3": "PASS",
+    "Q1": "PASS",
+    "B1": "PASS"
+  },
+  "cameras": {
+    "front": 0,
+    "threeQuarter": -28,
+    "profile": 90,
+    "back": 180
+  },
+  "projectionNote": "The three principal panels constrain scale and direction. The original quarter camera is estimated.",
+  "captures": {
+    "material": "before-after-hair.png",
+    "neutral": "independent/technical/review-sheets/four-angle-comparison.png",
+    "oldFailedWitnesses": "independent/technical/review-sheets/source-old119-witnesses.png"
+  },
+  "checks": {
+    "native": true,
+    "geometry": true,
+    "runtime": true,
+    "face-closure": true
+  },
+  "nativeGuides": 66,
+  "registeredBeforeAndAfter": {
+    "previousGlb": "88ee2069c389ef8aa9d4308f11ecb0fad9805e9d6b5eba0cd913f045b83b5cbd",
+    "revisedGlb": "60650f47aac716cb5a11fa69bee58c06546aa2199a25c2bde6dcc37ce566ab6f",
+    "referenceSha256": "0915b9e7b41d35177cb890580935b9c1db355539a1183861b2387c936f110f6f",
+    "beforeRegistration": "1b9d211117873e1182b3af6b6b834088217e02cb355d94bf03253bb4ec3198b6",
+    "afterRegistration": "c6f70cd51c17e27cb6b2e48d88e1fea3d9276e117aa259503cd48c843a16b6aa",
+    "outputSha256": "87aa92ae1e2dcdd51fbcbcc37c4e9d897f7b0df375f8b0fb9e8018bcf551de5b",
+    "operations": "Labels, crops and uniform scale. Fixed real-time material and lighting.",
+    "referenceProjection": "The three principal panels constrain scale and direction. The original quarter camera is estimated."
+  },
+  "guideAndExportModuleBinding": "independent/release-source"
+}

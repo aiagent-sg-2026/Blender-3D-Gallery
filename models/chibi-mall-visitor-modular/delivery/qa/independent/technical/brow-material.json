@@ -1,0 +1,174 @@
+{
+  "baselineSha256": "88ee2069c389ef8aa9d4308f11ecb0fad9805e9d6b5eba0cd913f045b83b5cbd",
+  "artifactSha256": "60650f47aac716cb5a11fa69bee58c06546aa2199a25c2bde6dcc37ce566ab6f",
+  "baselinePreviewSha256": "fb86fa3ad2697f800d1abc6e37bf3010074980138b340ef610bf718343500027",
+  "previewSha256": "9190012cc9b84c0ad226af9a9f7b2c913d9b060a7402e7c92fa5b0c13ca86133",
+  "diagnosticSha256": "a03a03bede8e3347117e1d4bcfa96fd1e1dddb81efcb101d106179f846aa8214",
+  "meshName": "Eyelids_and_brows",
+  "checks": {
+    "browUvAndIndicesSame": true,
+    "runtimeBrowMaterialPropertiesSame": true,
+    "mapSamplingAndCoveredTexelsSame": true,
+    "normalMapSamplingAndCoveredTexelsSame": true
+  },
+  "pass": true,
+  "baselineMaterial": {
+    "name": "Hair",
+    "type": "MeshPhysicalMaterial",
+    "color": [
+      1,
+      1,
+      1
+    ],
+    "roughness": 0.5099999904632568,
+    "metalness": 0,
+    "normalScale": [
+      0.3199999928474426,
+      0.3199999928474426
+    ],
+    "specularIntensity": 0.5199999809265137,
+    "specularColor": [
+      1,
+      1,
+      1
+    ],
+    "side": 2,
+    "opacity": 1,
+    "alphaTest": 0
+  },
+  "candidateMaterial": {
+    "name": "Hair",
+    "type": "MeshPhysicalMaterial",
+    "color": [
+      1,
+      1,
+      1
+    ],
+    "roughness": 0.5099999904632568,
+    "metalness": 0,
+    "normalScale": [
+      0.3199999928474426,
+      0.3199999928474426
+    ],
+    "specularIntensity": 0.5199999809265137,
+    "specularColor": [
+      1,
+      1,
+      1
+    ],
+    "side": 2,
+    "opacity": 1,
+    "alphaTest": 0
+  },
+  "textures": {
+    "map": {
+      "baseline": {
+        "width": 1024,
+        "height": 1024,
+        "box": [
+          654,
+          1000,
+          690,
+          1004
+        ],
+        "uvBounds": [
+          0.640625,
+          0.978515625,
+          0.671875,
+          0.978515625
+        ],
+        "flipY": false,
+        "colorSpace": "srgb",
+        "wrapS": 1000,
+        "wrapT": 1000,
+        "magFilter": 1006,
+        "minFilter": 1008,
+        "channel": 0,
+        "coveredRgbaSha256": "e056c403b56ce7f67af6fc3308fee0ff5e5b17dbbb9c647c6e14812b670935de"
+      },
+      "candidate": {
+        "width": 1024,
+        "height": 1024,
+        "box": [
+          654,
+          1000,
+          690,
+          1004
+        ],
+        "uvBounds": [
+          0.640625,
+          0.978515625,
+          0.671875,
+          0.978515625
+        ],
+        "flipY": false,
+        "colorSpace": "srgb",
+        "wrapS": 1000,
+        "wrapT": 1000,
+        "magFilter": 1006,
+        "minFilter": 1008,
+        "channel": 0,
+        "coveredRgbaSha256": "e056c403b56ce7f67af6fc3308fee0ff5e5b17dbbb9c647c6e14812b670935de"
+      },
+      "changedRgbaBytes": 0,
+      "coveredPixelCount": 185
+    },
+    "normalMap": {
+      "baseline": {
+        "width": 1024,
+        "height": 1024,
+        "box": [
+          654,
+          1000,
+          690,
+          1004
+        ],
+        "uvBounds": [
+          0.640625,
+          0.978515625,
+          0.671875,
+          0.978515625
+        ],
+        "flipY": false,
+        "colorSpace": "",
+        "wrapS": 1000,
+        "wrapT": 1000,
+        "magFilter": 1006,
+        "minFilter": 1008,
+        "channel": 0,
+        "coveredRgbaSha256": "3de1afa2f4f3c052f6f031d67b0fa1973d6bafbac3c49fbe7a381fa918a787ee"
+      },
+      "candidate": {
+        "width": 1024,
+        "height": 1024,
+        "box": [
+          654,
+          1000,
+          690,
+          1004
+        ],
+        "uvBounds": [
+          0.640625,
+          0.978515625,
+          0.671875,
+          0.978515625
+        ],
+        "flipY": false,
+        "colorSpace": "",
+        "wrapS": 1000,
+        "wrapT": 1000,
+        "magFilter": 1006,
+        "minFilter": 1008,
+        "channel": 0,
+        "coveredRgbaSha256": "3de1afa2f4f3c052f6f031d67b0fa1973d6bafbac3c49fbe7a381fa918a787ee"
+      },
+      "changedRgbaBytes": 0,
+      "coveredPixelCount": 185
+    }
+  },
+  "method": "Fresh actual previews. Compare runtime Hair material applied to Eyelids_and_brows, exact UV/index arrays and every decoded base-color/normal RGBA texel in the conservative UV bounding rectangle with a two-pixel margin.",
+  "limits": [
+    "Atlas pixels elsewhere may differ; identical brow sampling does not certify hair pigment or reference likeness.",
+    "This checks full-resolution texture coverage and sampling settings, not every generated mipmap footprint or a new visual acceptance."
+  ]
+}
