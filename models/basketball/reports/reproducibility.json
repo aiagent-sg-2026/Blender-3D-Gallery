@@ -1,0 +1,24 @@
+{
+  "result": "PASS (geometric); byte identity NOT achieved",
+  "method": "Independent factory-reset procedural builds in Blender 5.3.0 (also tried with -t 1). Compared per-primitive vertex counts, triangle counts and the full set of vertex positions rounded to 10 micrometres.",
+  "first_glb_sha256": "d751ad839dbf396a5ede5098ef6f1b46ea0ed8c97c9bc0a76dba73d8d9f16f34",
+  "second_glb_sha256": "9dc815f0850ca1cd2977d8e2b4d9544d971c89e1130c9cf2cc8e9c60e72cafd7",
+  "byte_identical": false,
+  "geometry_identical": true,
+  "primitives": [
+    {
+      "material": "Pebbled orange rubber",
+      "vertices": 11031,
+      "triangles": 17480,
+      "missing_positions": 0
+    },
+    {
+      "material": "Black channel rubber",
+      "vertices": 16564,
+      "triangles": 12648,
+      "missing_positions": 0
+    }
+  ],
+  "embedded_normal_map_identical": true,
+  "note": "The exact Boolean solver emits vertices/triangles in a run-dependent order, so GLB bytes differ between builds while the shape is the same. The baked normal-map PNG matched for this compared pair, but across four runs it came out with one of two hashes (sub-pixel bake noise), so texture byte identity is not guaranteed either."
+}
