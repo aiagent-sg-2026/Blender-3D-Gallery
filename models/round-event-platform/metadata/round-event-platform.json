@@ -1,0 +1,144 @@
+{
+  "id": "round-event-platform",
+  "name": "Round Event Platform",
+  "summary": "A plain low circular event platform with three themeable neutral material roles.",
+  "description": "Original 8 m diameter event platform with a 0.3 m rise, plain edge, subtle chamfers and inset base trim. No stairs, rim ornament, lights, logos, text or external assets.",
+  "category": "Mall Fixtures",
+  "tags": [
+    "mall",
+    "atrium",
+    "event",
+    "platform",
+    "round",
+    "circular",
+    "low",
+    "neutral",
+    "themeable",
+    "unbranded",
+    "original",
+    "procedural",
+    "metres"
+  ],
+  "status": "draft",
+  "created": "2026-11-16",
+  "author": "Yap Wei Jun project / agent-assisted procedural modeling",
+  "blender_version": "5.2.3 LTS",
+  "creation_method": "Original deterministic analytic Blender Python geometry and scalar PBR materials. No external models, images, textures, fonts or brands.",
+  "generator": "generate.py",
+  "paths": {
+    "glb": "exports/optimized.glb",
+    "source": "sources/round-event-platform.blend",
+    "preview": "previews/hero.webp",
+    "render": "previews/hero.png",
+    "additional_previews": [
+      "previews/front.png",
+      "previews/side.png",
+      "previews/3q.png"
+    ]
+  },
+  "display": {
+    "previewRotationY": 0,
+    "previewCameraDirection": [
+      1,
+      0.72,
+      1.25
+    ],
+    "units": "metres",
+    "up_axis": "Blender +Z / glTF +Y",
+    "front_axis": "Blender -Y / glTF +Z",
+    "origin": "floor centre"
+  },
+  "material_notes": "Three shared opaque nonmetallic PBR roles: Platform_Top, Platform_Edge and Platform_BaseTrim. Change baseColorFactor/roughnessFactor to theme. No textures or emission. Studio floor/lights/camera excluded from GLB.",
+  "uv_notes": "UVMap exported on every primitive. Planar top/bottom discs and two half-circumference side strips, separate padded islands within [0,1], approximately 0.0575 UV units per metre throughout. No mirrored or stacked UVs, no intended overlap. No bitmap density claim; no images are used.",
+  "accuracy_notes": "Original static visual event platform. No stairs, collision mesh, animations or physical/structural certification. Full 17-shop mall integration, sustained performance, physical Android/iOS and WebKit are not tested.",
+  "attribution": [
+    {
+      "credit": "Original procedural geometry and materials; self-checkout-machine repository delivery template. No external assets."
+    }
+  ],
+  "rights": "Original asset; reuse in the owner's projects is authorized. Public redistribution terms have not been specified.",
+  "quality_gate": {
+    "overall": "NEEDS REVIEW",
+    "asset": "PASS: measured GLB dimensions, normals, UVs, finite nondegenerate triangles and fixed budgets",
+    "khronos": "PASS: zero errors and warnings",
+    "source": "PASS: closed manifold, consistent UV scale, byte-identical saved-source replay and saved/reopened disposable mesh/material edit verified by GLB import",
+    "visual": "PASS: final hero/front/side/3q PNGs and actual Chromium page screenshot inspected",
+    "browser": "PASS: Chromium 1440x900; consumed GLB hash matches; 3 draw calls/frame; keyboard orbit/zoom; no errors or failed responses",
+    "repository_checks": "PASS: npm run validate:assets; npm test (728/728); npm run build",
+    "deployment": "NOT DEPLOYED",
+    "physical_android": "NOT TESTED",
+    "physical_ios": "NOT TESTED",
+    "webkit": "NOT TESTED",
+    "reproducibility": "PASS: independent rebuild and saved-source replay produce byte-identical GLB"
+  },
+  "metrics": {
+    "result": "PASS",
+    "id": "round-event-platform",
+    "triangles": 2304,
+    "vertices": 1938,
+    "stored_meshes": 1,
+    "runtime_meshes": 3,
+    "mesh_primitives": 3,
+    "opaque_draw_calls_per_pass": 3,
+    "materials": 3,
+    "glb_bytes": 79116,
+    "dimensions": [
+      8,
+      0.30000001192092896,
+      8
+    ],
+    "bounds": {
+      "min": [
+        -4,
+        0,
+        -4
+      ],
+      "max": [
+        4,
+        0.30000001192092896,
+        4
+      ]
+    },
+    "minimum_triangle_area_m2": 0.0006010691556671126,
+    "minimum_uv_triangle_area": 1.9950399341439606e-06,
+    "animations": 0,
+    "sha256": "3576a8fe97009cb32abfc97a5c8538cf9d7964c1840ac4bdd670763cddd858e7",
+    "validation": {
+      "errors": 0,
+      "warnings": 0,
+      "version": "2.0.0-dev.3.10"
+    },
+    "budget": {
+      "triangles_exclusive": 8000,
+      "bytes_exclusive": 1572864,
+      "materials": 3,
+      "mesh_primitives": 3
+    },
+    "parts": [
+      {
+        "name": "Platform_ClosedRadialSurface",
+        "material": "Platform_Top",
+        "triangles": 576
+      },
+      {
+        "name": "Platform_ClosedRadialSurface_1",
+        "material": "Platform_Edge",
+        "triangles": 768
+      },
+      {
+        "name": "Platform_ClosedRadialSurface_2",
+        "material": "Platform_BaseTrim",
+        "triangles": 960
+      }
+    ]
+  },
+  "evidence": {
+    "assets": "reports/assets.json",
+    "source": "reports/sources.json",
+    "khronos": "reports/khronos.json",
+    "browser": "reports/browser.json",
+    "visual": "reports/visual.json",
+    "reproducibility": "reports/reproducibility.json",
+    "initial_findings": "reports/qa-notes.md"
+  }
+}
