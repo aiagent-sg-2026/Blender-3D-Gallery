@@ -1,0 +1,104 @@
+{
+  "result": "PASS",
+  "status": "draft / NEEDS REVIEW",
+  "id": "tv-demo-table",
+  "glb_sha256": "af96aaa8cd60dcbc61557b27ea67c468084749a049a580ed960ce3cc3e05dfaf",
+  "source_sha256": "57ee9b244b8c6642b9544d8f3bc0e0c18f68fc309cd4b3cdd8d5301cbb8b3d02",
+  "checks": [
+    {
+      "command": "Blender 5.2.3 --background --python generate.py; final saved-source renders",
+      "result": "PASS",
+      "exit_code": 0,
+      "views": [
+        "hero",
+        "front",
+        "side",
+        "3q",
+        "rear"
+      ]
+    },
+    {
+      "command": "node models/tv-demo-table/validate.mjs",
+      "result": "PASS",
+      "exit_code": 0,
+      "khronos_errors": 0,
+      "khronos_warnings": 0
+    },
+    {
+      "command": "Blender inspect_sources.py; node verify_source_edit.mjs",
+      "result": "PASS",
+      "exit_code": 0
+    },
+    {
+      "command": "Independent generation in a directory containing only generate.py",
+      "result": "PASS",
+      "exit_code": 0,
+      "sha256": "af96aaa8cd60dcbc61557b27ea67c468084749a049a580ed960ce3cc3e05dfaf"
+    },
+    {
+      "command": "npm run validate:assets",
+      "result": "PASS",
+      "exit_code": 0
+    },
+    {
+      "command": "npm test",
+      "result": "PASS",
+      "exit_code": 0,
+      "tests": 728,
+      "passed": 728,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "command": "npm run build",
+      "result": "PASS",
+      "exit_code": 0,
+      "build_id": "705df43dded93c3f",
+      "warnings": "Existing application chunk-size warning; build succeeded."
+    },
+    {
+      "command": "node models/tv-demo-table/verify_page.mjs",
+      "result": "PASS",
+      "exit_code": 0,
+      "viewport": [
+        1440,
+        900
+      ],
+      "console_errors": 0,
+      "catalog_membership": "PASS"
+    }
+  ],
+  "visual_review": "PASS: final hero, front, side, 3q and rear PNGs and actual final model-page screenshot viewed",
+  "browser_screenshot": "/Users/admin/Documents/MallQueue/reports/tv-demo-table-page.png",
+  "log_directory": "/Users/admin/Documents/MallQueue/reports/tv-demo-table-checks",
+  "initial_failures": [
+    {
+      "check": "Single-sided material assertion",
+      "cause": "Blender default exported double-sided materials. Enabled backface culling on original materials and regenerated; final geometry and Khronos passed."
+    },
+    {
+      "check": "Initial npm test: 727 pass / 1 fail",
+      "cause": "Existing Pomelo test requires its collection last. Inserted the new collection before Pomelo, preserving all existing collection order. Final full 728 tests passed."
+    },
+    {
+      "check": "Browser catalog instrumentation",
+      "cause": "IDs reside on child links, and the UI groups categories. Corrected the new harness to check asset membership through child links; final browser passed. No application code changed."
+    }
+  ],
+  "test_artifacts_restored": [
+    "models/demo-beverage-can/reports/structure-motion.json"
+  ],
+  "not_found": [
+    "Existing close TV demo / experience table assembly"
+  ],
+  "skipped_required_checks": [],
+  "not_verified": [
+    "Physical Android/iOS",
+    "WebKit",
+    "Complete 17-shop 70 x 60 m assembly and 200 draw-call scene performance",
+    "Electrical/video operation",
+    "Physical load and stability",
+    "Manager art approval",
+    "Remote publication (not requested; no push)"
+  ]
+}
