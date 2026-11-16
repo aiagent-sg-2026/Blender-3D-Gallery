@@ -1,0 +1,42 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "mouth barbels appeared too pale in the actual head render"
+      ],
+      "changes": [
+        "darken original barbel pigment to match the head skin"
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "pass",
+      "changes": [
+        "re-viewed current actual full-body and head images; source, GLB and desktop/mobile checks pass"
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "6d30c941896d74772e60a137fb502a8ab2cfba860bdda1c821e7234621c540fb",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: robust gold-brown scaled body with arched back and paler belly",
+    "surface": "pass: uneven photo-informed scale color and microstructure",
+    "head": "pass: blunt subterminal mouth with two pairs of tapered barbels",
+    "fins": "pass: long dorsal, small posterior anal and deeply emarginate caudal",
+    "surface_contact": "pass: five-phase source and GLB contact checks with existing tolerances",
+    "motion": "pass: actual exported cyclic body, caudal and fin deformation",
+    "browser": "pass: exact draft GLB swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed artwork, not a scanned or calibrated specimen.",
+    "Mouth-barbel motion follows body skinning; independent active whisker behavior is not claimed."
+  ],
+  "alias_note": "Scaled gold-brown common carp, not mirror or leather carp. USGS overview simplifies visible barbels; the FAO diagnostic specifies two pairs, including the short upper-lip pair, used here."
+}

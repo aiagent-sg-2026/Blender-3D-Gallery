@@ -1,0 +1,51 @@
+{
+  "id": "mall-floor-mitred-trim",
+  "name": "Mall Mitred Floor Trim",
+  "summary": "Two 60 mm floor-edge profiles meeting at a 45-degree outside mitre.",
+  "description": "Two 60 mm floor-edge profiles meeting at a 45-degree outside mitre.",
+  "category": "Shopping Mall",
+  "tags": [
+    "mall",
+    "floor",
+    "corner",
+    "modular",
+    "original",
+    "metres"
+  ],
+  "status": "draft",
+  "created": "2026-11-15",
+  "author": "Yap Wei Jun project / agent-assisted procedural modeling",
+  "blender_version": "5.1.2",
+  "creation_method": "Original Blender geometry; corner tile reuses the existing project terrazzo texture.",
+  "generator": "../mall-floor-corner-tile/generate.py",
+  "paths": {
+    "source": "sources/mall-floor-mitred-trim.blend",
+    "glb": "exports/mall-floor-mitred-trim.glb",
+    "preview": "previews/mall-floor-mitred-trim.jpg",
+    "render": "previews/mall-floor-mitred-trim.png"
+  },
+  "display": {
+    "previewRotationY": 0,
+    "previewCameraDirection": [
+      0.8,
+      0.6,
+      1
+    ]
+  },
+  "rights": "Original geometry and project-owned materials; public redistribution terms unspecified.",
+  "accuracy_notes": "A decorative 90-degree outside corner on the 1.2 m grid, not an installation or safety specification.",
+  "attribution": [
+    {
+      "credit": "Original geometry and materials created for Blender-3D-Gallery."
+    }
+  ],
+  "quality_gate": {
+    "overall": "NEEDS REVIEW",
+    "scope": "One local 90-degree sample; full assembly fit and physical devices remain unverified."
+  },
+  "sha256": {
+    "source": "ed4cadd887a305e0b0e355f4a567f919f4beba94f0339d8780c208855cb82056",
+    "glb": "27e9cf16c0693f50e5090e81f1f7f54d0f1a5b22ea0f1b6b9926ae198f4b3203",
+    "preview": "62408c93dfefab277bab7ea9a7581c4411fb77e81700735bbffc7aafc2087b16"
+  }
+}

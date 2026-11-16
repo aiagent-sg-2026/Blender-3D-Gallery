@@ -1,0 +1,44 @@
+✖ shared index accessors are repaired once when every instance has the same cleanup mask (790.37975ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 990.019833
+
+✖ failing tests:
+
+test at tests/glb-degenerate-tools.test.mjs:80:1
+✖ shared index accessors are repaired once when every instance has the same cleanup mask (790.37975ms)
+  AssertionError [ERR_ASSERTION]: node:internal/modules/run_main:104
+      triggerUncaughtException(
+      ^
+
+  AssertionError [ERR_ASSERTION]: Shared index accessors need a separate review
+      at file:///private/tmp/blender-mall-degenerate-44yfvxbl/worktree/scripts/repair-glb-degenerates.mjs:36:10
+      at Mesh.traverse (file:///Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/node_modules/three/build/three.core.js:12978:3)
+      at Group.traverse (file:///Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/node_modules/three/build/three.core.js:12984:18)
+      at file:///private/tmp/blender-mall-degenerate-44yfvxbl/worktree/scripts/repair-glb-degenerates.mjs:30:12 {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '=='
+  }
+
+  Node.js v23.10.0
+
+
+  1 !== 0
+
+      at TestContext.<anonymous> (file:///private/tmp/blender-mall-degenerate-44yfvxbl/worktree/tests/glb-degenerate-tools.test.mjs:94:10)
+      at async Test.run (node:internal/test_runner/test:1054:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:297:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual'
+  }

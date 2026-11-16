@@ -1,0 +1,1515 @@
+{
+  "id": "passenger-lift",
+  "status": "PASS",
+  "blender": "4.0.2",
+  "animation_snapshot": {
+    "schema": "active-rigid-object-actions-v1",
+    "sha256": "8e2bab85eb4c791df92c26dd55236a40c91b96939f4ae9ce354e8d174b96af40",
+    "actions": 5,
+    "curves": 15,
+    "keyframes": 45,
+    "bindings": [
+      {
+        "object": "CAB_Carriage",
+        "action": "TRAVEL_Cab",
+        "slot": null,
+        "blend_type": "REPLACE",
+        "influence": 1.0,
+        "extrapolation": "HOLD",
+        "use_nla": true
+      },
+      {
+        "object": "DOOR_CabL",
+        "action": "DOOR_Cycle_CabL",
+        "slot": null,
+        "blend_type": "REPLACE",
+        "influence": 1.0,
+        "extrapolation": "HOLD",
+        "use_nla": true
+      },
+      {
+        "object": "DOOR_CabR",
+        "action": "DOOR_Cycle_CabR",
+        "slot": null,
+        "blend_type": "REPLACE",
+        "influence": 1.0,
+        "extrapolation": "HOLD",
+        "use_nla": true
+      },
+      {
+        "object": "DOOR_Landing0L",
+        "action": "DOOR_Cycle_Landing0L",
+        "slot": null,
+        "blend_type": "REPLACE",
+        "influence": 1.0,
+        "extrapolation": "HOLD",
+        "use_nla": true
+      },
+      {
+        "object": "DOOR_Landing0R",
+        "action": "DOOR_Cycle_Landing0R",
+        "slot": null,
+        "blend_type": "REPLACE",
+        "influence": 1.0,
+        "extrapolation": "HOLD",
+        "use_nla": true
+      }
+    ]
+  },
+  "original_sha256": "2d10ce9eacce5764cf5f2a1e146211557cde73438685928bd1228ca3ae2ad75a",
+  "source_fingerprint": "66fa321a51e44335dedbf7d971782c3356b6523275331c93f9c825efe0426aea",
+  "fingerprint_schema": "authored-state-v2-packed-images",
+  "original_fingerprint": "66fa321a51e44335dedbf7d971782c3356b6523275331c93f9c825efe0426aea",
+  "derived_lod": null,
+  "authored_data_preserved": true,
+  "source_reopened": true,
+  "editable_parts": 90,
+  "root_type": "Object",
+  "derived_face_attributes": [],
+  "before": [
+    {
+      "name": "Cab_BackWall",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_Button.001",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_Ceiling",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_ControlPanel",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_CornerPost_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_CornerPost_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_Floor",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_FloorFinish",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_GuideShoe_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_GuideShoe_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_Handrail",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_HandrailMount.001",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_Header",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_Light.001",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_PocketBack_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_PocketBack_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_PocketFront_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_PocketFront_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_SideWall_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_SideWall_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_Sill",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_Light",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_HandrailMount",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_Button",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Inlay_CabL",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Leaf_CabL",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Inlay_CabR",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Leaf_CabR",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Guide_Rail",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Guide_Rail.001",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Inlay_Landing0L",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Leaf_Landing0L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Inlay_Landing0R",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Leaf_Landing0R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_CallButton",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_CallPanel",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_Display",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_Floor",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_FloorLabel",
+      "source_type": "FONT",
+      "triangles": 384,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_Header",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_OuterJamb_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_OuterJamb_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_PocketBack_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_PocketBack_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_PocketFront_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_PocketFront_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_Threshold",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Inlay_Landing1L",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Leaf_Landing1L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Inlay_Landing1R",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Leaf_Landing1R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_CallButton",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_CallPanel",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_Display",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_Floor",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_FloorLabel",
+      "source_type": "FONT",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_Header",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_OuterJamb_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_OuterJamb_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_PocketBack_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_PocketBack_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_PocketFront_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_PocketFront_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_Threshold",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_Base",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_Label",
+      "source_type": "FONT",
+      "triangles": 96,
+      "zero_area_triangles": 4
+    },
+    {
+      "name": "Shaft_Post",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_Post.001",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_Post.002",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_Post.003",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_RearBeam",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_RearBeam.001",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_RearBeam.002",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_SideBeam",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_SideBeam.001",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_SideBeam.002",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_SideBeam.003",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_SideBeam.004",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_SideBeam.005",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_TopBeam",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    }
+  ],
+  "after": [
+    {
+      "name": "Cab_BackWall",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_Button.001",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_Ceiling",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_ControlPanel",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_CornerPost_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_CornerPost_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_Floor",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_FloorFinish",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_GuideShoe_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_GuideShoe_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_Handrail",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_HandrailMount.001",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_Header",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_Light.001",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_PocketBack_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_PocketBack_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_PocketFront_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_PocketFront_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_SideWall_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_SideWall_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_Sill",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_Light",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_HandrailMount",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_Button",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Inlay_CabL",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Leaf_CabL",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Inlay_CabR",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Leaf_CabR",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Guide_Rail",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Guide_Rail.001",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Inlay_Landing0L",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Leaf_Landing0L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Inlay_Landing0R",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Leaf_Landing0R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_CallButton",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_CallPanel",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_Display",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_Floor",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_FloorLabel",
+      "source_type": "FONT",
+      "triangles": 384,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_Header",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_OuterJamb_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_OuterJamb_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_PocketBack_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_PocketBack_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_PocketFront_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_PocketFront_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_Threshold",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Inlay_Landing1L",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Leaf_Landing1L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Inlay_Landing1R",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Leaf_Landing1R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_CallButton",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_CallPanel",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_Display",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_Floor",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_FloorLabel",
+      "source_type": "FONT",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_Header",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_OuterJamb_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_OuterJamb_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_PocketBack_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_PocketBack_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_PocketFront_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_PocketFront_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_Threshold",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_Base",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_Label",
+      "source_type": "FONT",
+      "triangles": 92,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_Post",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_Post.001",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_Post.002",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_Post.003",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_RearBeam",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_RearBeam.001",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_RearBeam.002",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_SideBeam",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_SideBeam.001",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_SideBeam.002",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_SideBeam.003",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_SideBeam.004",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_SideBeam.005",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_TopBeam",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    }
+  ],
+  "reopened": [
+    {
+      "name": "Cab_BackWall",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_Button.001",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_Ceiling",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_ControlPanel",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_CornerPost_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_CornerPost_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_Floor",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_FloorFinish",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_GuideShoe_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_GuideShoe_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_Handrail",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_HandrailMount.001",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_Header",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_Light.001",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_PocketBack_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_PocketBack_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_PocketFront_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_PocketFront_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_SideWall_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_SideWall_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_Sill",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_Light",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_HandrailMount",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Cab_Button",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Inlay_CabL",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Leaf_CabL",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Inlay_CabR",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Leaf_CabR",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Guide_Rail",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Guide_Rail.001",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Inlay_Landing0L",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Leaf_Landing0L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Inlay_Landing0R",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Leaf_Landing0R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_CallButton",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_CallPanel",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_Display",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_Floor",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_FloorLabel",
+      "source_type": "FONT",
+      "triangles": 384,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_Header",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_OuterJamb_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_OuterJamb_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_PocketBack_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_PocketBack_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_PocketFront_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_PocketFront_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_0_Threshold",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Inlay_Landing1L",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Leaf_Landing1L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Inlay_Landing1R",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Leaf_Landing1R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_CallButton",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_CallPanel",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_Display",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_Floor",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_FloorLabel",
+      "source_type": "FONT",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_Header",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_OuterJamb_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_OuterJamb_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_PocketBack_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_PocketBack_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_PocketFront_L",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_PocketFront_R",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Landing_1_Threshold",
+      "source_type": "MESH",
+      "triangles": 12,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_Base",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_Label",
+      "source_type": "FONT",
+      "triangles": 92,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_Post",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_Post.001",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_Post.002",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_Post.003",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_RearBeam",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_RearBeam.001",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_RearBeam.002",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_SideBeam",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_SideBeam.001",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_SideBeam.002",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_SideBeam.003",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_SideBeam.004",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_SideBeam.005",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    },
+    {
+      "name": "Shaft_TopBeam",
+      "source_type": "MESH",
+      "triangles": 108,
+      "zero_area_triangles": 0
+    }
+  ]
+}

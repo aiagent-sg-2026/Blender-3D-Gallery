@@ -103,7 +103,7 @@ Status words: PASS, FAIL, REWORK, NOT_RUN. Record evidence in `qa/run-NNN/`. Do 
 Test in `models/chibi-mall-guide-v5/qa/morph-smoke/` (Blender 5.1.2, Three.js 0.187.0 in Node): shape keys export as named morph targets, a morph animation track plays through `AnimationMixer`, and a rigid single-bone skinned mesh loads. Findings that change the standard:
 
 - A skinned mesh parented under the armature gives the validator warning NODE_SKINNED_MESH_NON_ROOT, which fails G1 (0 warnings). Keep skinned meshes as scene roots (unparented) when exporting.
-- The head mesh's shape keys must be the only source of expression morphs; add a `blink` key (the idle animation needs it).
+- Expression morphs are shape keys; add a `blink` key (the idle animation needs it). Where the keys live is refined in section 15.
 - Not tested: rendering, the gallery's `src/viewer.js` in a browser, and the mall runtime. The viewer shows models at rest, so a consumer must drive influences itself.
 
 ## 13. Modular build and attachment sockets (proposal, 2026-11-15)
@@ -122,7 +122,7 @@ Each character splits its generator by responsibility instead of one monolith (v
 | `garments.py` | Vest, shirt, shorts, cap, socks, shoes |
 | `limbs.py` | Arms, legs, gloves |
 | `rig.py` | Armature (20 bones or fewer), rigid single-bone binding, sockets |
-| `shapekeys.py` | smile, surprised, blink (brows and cheeks included) |
+| `shapekeys.py` | smile, surprised (on `Head`, brows and cheeks included) and blink (on `Eyes`, see section 15) |
 | `anim.py` | Clips and foot-contact baking |
 | `export.py` | Full and low-detail GLB |
 | `qa/` | Gate scripts, as in v4 |
@@ -143,3 +143,21 @@ Rules: numbers live only in `config.py`; modules read config and do not duplicat
 - Each socket has unit scale and an agreed local axis (proposal: +Y up, +Z forward in rest pose); a prop is modelled with its attachment point at its own origin and the same axis.
 - Props are scene roots (the skinned-mesh rule from section 12 applies to skinned props).
 - Open: whether sockets are bones inside the armature (counted against the 20-bone limit) or plain nodes parented to bones; whether the mall runtime and the gallery viewer attach props the same way. Both need a test before this section is accepted.
+
+## 14. Framework
+
+The plan to extract a general build framework is in [chibi-framework-design.md](chibi-framework-design.md) (proposal; nothing implemented).
+
+## 15. Blink prototype finding (2026-11-15)
+
+Prototype in `models/chibi-mall-guide-v5/prototype/blink/` (ellipsoid head, no body, no texture; Blender 5.1.2, Three.js 0.187.0 in headless Chromium). Two blink methods were compared:
+
+- Skin covers the eye (key on `Head`): 13 and 15 forward-facing eye vertices stayed visible at blink = 1 and the skin bulged. Not adopted.
+- Eyes sink behind the skin (key on a separate `Eyes` mesh): 0 visible at blink = 1, clean result. **Adopted as the working method**, with the lash line coming from the face texture.
+
+Consequences:
+- The three expression keys sit on two meshes: `Head` carries `smile` and `surprised`, `Eyes` carries `blink`. The runtime drives each mesh by key name. Both loaded with names intact in Three.js.
+- Untested alternative: one merged head-and-eyes mesh carrying all three keys with two material primitives; test it before adopting.
+- The eye opening must be designed (a modelled socket or a texture), not left to a flat eye ellipsoid intersecting the curved head, which produced slanted crescents; check the eyes against the head silhouette at 35 degrees (the near-edge eye poked out).
+- The smile key must not lift the cheek hard over the eye (too strong in the prototype).
+- Not covered: textured eyes, mouth interior, body, rig, performance, the gallery viewer and the mall runtime.

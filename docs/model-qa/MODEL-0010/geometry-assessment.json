@@ -1,0 +1,28 @@
+{
+  "source_and_reimport_agree": true,
+  "meshes": 5,
+  "triangles": 5312,
+  "physical_resin_body_diameter_m": 0.05715,
+  "expected_topology": {
+    "body": {
+      "source_vertices": 1986,
+      "triangles": 3968,
+      "welded_boundaries": 0
+    },
+    "medallion_each": {
+      "vertices": 241,
+      "triangles": 432,
+      "boundary_edges": 48
+    },
+    "numeral4_each": {
+      "source_vertices": 150,
+      "triangles": 240,
+      "boundary_edges": 60
+    }
+  },
+  "raw_reimport_glyph_components_each": 194,
+  "position_welded_components_each": 1,
+  "weld_tolerance_m": 1e-07,
+  "explanation": "Raw imported connectivity includes normal/UV vertex splits. Disposable position welding restores the source topology, without changing source or GLB. Decorative paint surfaces are intentionally open.",
+  "confirmed_product_defects": []
+}

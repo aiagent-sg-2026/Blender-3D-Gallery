@@ -1,0 +1,501 @@
+{
+  "slug": "ribbonfish",
+  "source": {
+    "surface_contact": [
+      {
+        "frame": 1,
+        "fins": {
+          "Dorsal_ContinuousWaveMembrane": {
+            "root_vertices": 301,
+            "min_signed_distance": -2.3775231643430317e-06,
+            "max_signed_distance": 9.376130140736905e-06
+          },
+          "Pectoral_-1": {
+            "root_vertices": 53,
+            "min_signed_distance": -0.0017085747627660908,
+            "max_signed_distance": -0.001349439501161953
+          },
+          "Pectoral_1": {
+            "root_vertices": 53,
+            "min_signed_distance": -0.0017081977210935406,
+            "max_signed_distance": -0.0013496892688493745
+          }
+        }
+      },
+      {
+        "frame": 19,
+        "fins": {
+          "Dorsal_ContinuousWaveMembrane": {
+            "root_vertices": 301,
+            "min_signed_distance": -2.3982737360483952e-06,
+            "max_signed_distance": 2.959344277186915e-06
+          },
+          "Pectoral_-1": {
+            "root_vertices": 53,
+            "min_signed_distance": -0.0017082449408576394,
+            "max_signed_distance": -0.001349107402170091
+          },
+          "Pectoral_1": {
+            "root_vertices": 53,
+            "min_signed_distance": -0.0017085275886827844,
+            "max_signed_distance": -0.00135001943200308
+          }
+        }
+      },
+      {
+        "frame": 37,
+        "fins": {
+          "Dorsal_ContinuousWaveMembrane": {
+            "root_vertices": 301,
+            "min_signed_distance": -2.3753815980853688e-06,
+            "max_signed_distance": 9.333852506898666e-06
+          },
+          "Pectoral_-1": {
+            "root_vertices": 53,
+            "min_signed_distance": -0.001708040041229708,
+            "max_signed_distance": -0.0013489003432525237
+          },
+          "Pectoral_1": {
+            "root_vertices": 53,
+            "min_signed_distance": -0.0017087324349844835,
+            "max_signed_distance": -0.0013502284273343435
+          }
+        }
+      },
+      {
+        "frame": 55,
+        "fins": {
+          "Dorsal_ContinuousWaveMembrane": {
+            "root_vertices": 301,
+            "min_signed_distance": -2.391247960531473e-06,
+            "max_signed_distance": 2.9559139447243865e-06
+          },
+          "Pectoral_-1": {
+            "root_vertices": 53,
+            "min_signed_distance": -0.0017083671414965806,
+            "max_signed_distance": -0.0013492315024663526
+          },
+          "Pectoral_1": {
+            "root_vertices": 53,
+            "min_signed_distance": -0.0017084052949698503,
+            "max_signed_distance": -0.0013498963281151077
+          }
+        }
+      },
+      {
+        "frame": 73,
+        "fins": {
+          "Dorsal_ContinuousWaveMembrane": {
+            "root_vertices": 301,
+            "min_signed_distance": -2.3775231643430317e-06,
+            "max_signed_distance": 9.376130140736905e-06
+          },
+          "Pectoral_-1": {
+            "root_vertices": 53,
+            "min_signed_distance": -0.0017085747627660908,
+            "max_signed_distance": -0.001349439501161953
+          },
+          "Pectoral_1": {
+            "root_vertices": 53,
+            "min_signed_distance": -0.0017081977210935406,
+            "max_signed_distance": -0.0013496892688493745
+          }
+        }
+      }
+    ],
+    "ribbon_wave": {
+      "dorsal_probes": [
+        {
+          "x": -0.9,
+          "y_samples": [
+            0.02265617996454239,
+            -0.02005675807595253,
+            -0.019399523735046387,
+            0.011775007471442223,
+            0.02265617996454239
+          ],
+          "range": 0.04271293804049492
+        },
+        {
+          "x": 0.2,
+          "y_samples": [
+            -0.024049295112490654,
+            -0.002074137795716524,
+            0.025090770795941353,
+            -0.0032714589033275843,
+            -0.024049295112490654
+          ],
+          "range": 0.04914006590843201
+        },
+        {
+          "x": 1.3,
+          "y_samples": [
+            0.0457020029425621,
+            -0.050284240394830704,
+            -0.045557521283626556,
+            0.05024760589003563,
+            0.0457020029425621
+          ],
+          "range": 0.10053184628486633
+        }
+      ],
+      "tapered_tail_motion": 0.06629058156071692,
+      "separate_caudal_fin": false
+    },
+    "fin_roots_checked": 3,
+    "meshes": 22,
+    "vertices": 26121,
+    "motion_by_mesh": {
+      "Ribbon_ContinuousBody": {
+        "motion": 0.08069079195253778,
+        "loop_error": 0.0
+      },
+      "Ribbon_RecessedMouth_-1": {
+        "motion": 0.00010071924461551619,
+        "loop_error": 0.0
+      },
+      "Ribbon_Fang_-1_True_0": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Ribbon_Fang_-1_True_1": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Ribbon_Fang_-1_True_2": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Ribbon_Fang_-1_True_3": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Ribbon_Fang_-1_False_0": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Ribbon_Fang_-1_False_1": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Ribbon_Fang_-1_False_2": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Ribbon_RecessedMouth_1": {
+        "motion": 0.00010071339787404486,
+        "loop_error": 0.0
+      },
+      "Ribbon_Fang_1_True_0": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Ribbon_Fang_1_True_1": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Ribbon_Fang_1_True_2": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Ribbon_Fang_1_True_3": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Ribbon_Fang_1_False_0": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Ribbon_Fang_1_False_1": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Ribbon_Fang_1_False_2": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Eye_EmbeddedIris_-1": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Eye_EmbeddedIris_1": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Dorsal_ContinuousWaveMembrane": {
+        "motion": 0.099440281870495,
+        "loop_error": 1.187222312777598e-17
+      },
+      "Pectoral_-1": {
+        "motion": 0.022785267420313372,
+        "loop_error": 0.0
+      },
+      "Pectoral_1": {
+        "motion": 0.0003114250001486311,
+        "loop_error": 0.0
+      }
+    },
+    "frames": [
+      1,
+      19,
+      37,
+      55,
+      73
+    ],
+    "packed_images": true
+  },
+  "export": {
+    "surface_contact": [
+      {
+        "frame": 1,
+        "fins": {
+          "Dorsal_ContinuousWaveMembrane": {
+            "root_vertices": 301,
+            "min_signed_distance": -2.375439322577222e-06,
+            "max_signed_distance": 9.325716191277422e-06
+          },
+          "Pectoral_-1": {
+            "root_vertices": 53,
+            "min_signed_distance": -0.0017087324030740092,
+            "max_signed_distance": -0.0013502282817512423
+          },
+          "Pectoral_1": {
+            "root_vertices": 53,
+            "min_signed_distance": -0.0017080382953125195,
+            "max_signed_distance": -0.0013488956962177667
+          }
+        }
+      },
+      {
+        "frame": 19,
+        "fins": {
+          "Dorsal_ContinuousWaveMembrane": {
+            "root_vertices": 301,
+            "min_signed_distance": -2.3912410540560813e-06,
+            "max_signed_distance": 2.9630640181466106e-06
+          },
+          "Pectoral_-1": {
+            "root_vertices": 53,
+            "min_signed_distance": -0.0017084072596631472,
+            "max_signed_distance": -0.0013498982155653039
+          },
+          "Pectoral_1": {
+            "root_vertices": 53,
+            "min_signed_distance": -0.0017083672178088705,
+            "max_signed_distance": -0.0013492324001092015
+          }
+        }
+      },
+      {
+        "frame": 37,
+        "fins": {
+          "Dorsal_ContinuousWaveMembrane": {
+            "root_vertices": 301,
+            "min_signed_distance": -2.377535612607673e-06,
+            "max_signed_distance": 9.366340004035578e-06
+          },
+          "Pectoral_-1": {
+            "root_vertices": 53,
+            "min_signed_distance": -0.0017081941096108721,
+            "max_signed_distance": -0.0013496866842714894
+          },
+          "Pectoral_1": {
+            "root_vertices": 53,
+            "min_signed_distance": -0.0017085747195366707,
+            "max_signed_distance": -0.001349437713038526
+          }
+        }
+      },
+      {
+        "frame": 55,
+        "fins": {
+          "Dorsal_ContinuousWaveMembrane": {
+            "root_vertices": 301,
+            "min_signed_distance": -2.391076264984804e-06,
+            "max_signed_distance": 2.9642160757070712e-06
+          },
+          "Pectoral_-1": {
+            "root_vertices": 53,
+            "min_signed_distance": -0.0017085257047568803,
+            "max_signed_distance": -0.0013500214086121787
+          },
+          "Pectoral_1": {
+            "root_vertices": 53,
+            "min_signed_distance": -0.0017082477436360932,
+            "max_signed_distance": -0.001349109500374368
+          }
+        }
+      },
+      {
+        "frame": 73,
+        "fins": {
+          "Dorsal_ContinuousWaveMembrane": {
+            "root_vertices": 301,
+            "min_signed_distance": -2.375439322577222e-06,
+            "max_signed_distance": 9.325716191277422e-06
+          },
+          "Pectoral_-1": {
+            "root_vertices": 53,
+            "min_signed_distance": -0.0017087324030740092,
+            "max_signed_distance": -0.0013502282817512423
+          },
+          "Pectoral_1": {
+            "root_vertices": 53,
+            "min_signed_distance": -0.0017080382953125195,
+            "max_signed_distance": -0.0013488956962177667
+          }
+        }
+      }
+    ],
+    "ribbon_wave": {
+      "dorsal_probes": [
+        {
+          "x": -0.9,
+          "y_samples": [
+            0.02265617623925209,
+            -0.020056752488017082,
+            -0.019399520009756088,
+            0.011775009334087372,
+            0.02265617623925209
+          ],
+          "range": 0.04271292872726917
+        },
+        {
+          "x": 0.2,
+          "y_samples": [
+            -0.024049291387200356,
+            -0.002074149437248707,
+            0.025090772658586502,
+            -0.003271453781053424,
+            -0.024049291387200356
+          ],
+          "range": 0.04914006404578686
+        },
+        {
+          "x": 1.3,
+          "y_samples": [
+            0.045702014118433,
+            -0.050284214317798615,
+            -0.045557521283626556,
+            0.05024758353829384,
+            0.045702014118433
+          ],
+          "range": 0.10053179785609245
+        }
+      ],
+      "tapered_tail_motion": 0.0662905287137798,
+      "separate_caudal_fin": false
+    },
+    "fin_roots_checked": 0,
+    "meshes": 23,
+    "vertices": 26850,
+    "motion_by_mesh": {
+      "Ribbon_ContinuousBody": {
+        "motion": 0.08069078459480711,
+        "loop_error": 0.0
+      },
+      "Ribbon_RecessedMouth_-1": {
+        "motion": 0.00010071740156170012,
+        "loop_error": 0.0
+      },
+      "Ribbon_Fang_-1_True_0": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Ribbon_Fang_-1_True_1": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Ribbon_Fang_-1_True_2": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Ribbon_Fang_-1_True_3": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Ribbon_Fang_-1_False_0": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Ribbon_Fang_-1_False_1": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Ribbon_Fang_-1_False_2": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Ribbon_RecessedMouth_1": {
+        "motion": 0.00010071524541048153,
+        "loop_error": 0.0
+      },
+      "Ribbon_Fang_1_True_0": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Ribbon_Fang_1_True_1": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Ribbon_Fang_1_True_2": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Ribbon_Fang_1_True_3": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Ribbon_Fang_1_False_0": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Ribbon_Fang_1_False_1": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Ribbon_Fang_1_False_2": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Eye_EmbeddedIris_-1": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Eye_EmbeddedIris_1": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      },
+      "Dorsal_ContinuousWaveMembrane": {
+        "motion": 0.09944027877681323,
+        "loop_error": 0.0
+      },
+      "Pectoral_-1": {
+        "motion": 0.022785204926879833,
+        "loop_error": 0.0
+      },
+      "Pectoral_1": {
+        "motion": 0.00031138813039791985,
+        "loop_error": 0.0
+      },
+      "Icosphere": {
+        "motion": 0.0,
+        "loop_error": 0.0
+      }
+    },
+    "frames": [
+      1,
+      19,
+      37,
+      55,
+      73
+    ],
+    "packed_images": true
+  },
+  "source_sha256": "b93da71125a75861d9e37a103b5872ac70f6219133ba61dd58eca46d4af99841",
+  "glb_sha256": "c5a7811e929e8a2c653ecc8e065d63752090a8044a96de1d96b264c22f54fd6d",
+  "actions": [
+    "Swim_Loop"
+  ],
+  "visual_acceptance": "separate_manual_gate"
+}

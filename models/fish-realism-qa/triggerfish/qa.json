@@ -1,0 +1,38 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "Coarse oval dark scale centres made the skin look too rounded and repetitive."
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "pass",
+      "changes": [
+        "Use smaller, more varied angular scales with restrained centre darkening, re-view final body/head renders, and pass current source/GLB/browser gates."
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "e2b0abe1d17446d5c04504bd748c84ac5bc3774025382c375605075d413ab089",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: deep angular body, separate raised trigger and posterior dorsal, no invented broad pelvic fins",
+    "surface": "pass: varied angular olive scales with restrained dark centres and thirty small forward-curving peduncle thorns in five rows per flank",
+    "head": "pass: pale bare muzzle, thick lips, dark cheek/eye area and shallow eye-to-snout relief",
+    "fins": "pass: dark-edged broad rear dorsal/anal, rounded pectorals and caudal fork",
+    "surface_contact": "pass: source and actual imported GLB retain five-phase fin-root contact",
+    "motion": "pass: locally hinged median/pectoral strokes and body/tail cycle survive GLB import with matching endpoints",
+    "browser": "pass: exact draft GLB swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed Balistoides viridescens artwork, not a scanned specimen.",
+    "The trigger is posed raised; locking mechanics and fine teeth are simplified. Swimming is artist-tuned."
+  ]
+}

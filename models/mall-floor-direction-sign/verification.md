@@ -33,3 +33,7 @@ The Blender generator, source inspection and Khronos checks passed on their firs
 ## Scope
 
 Labels and arrows are editable in Blender, not through the gallery UI. Browser verification is automated desktop Chromium with software WebGL, not physical-device touch or a GPU performance benchmark. No architecture/UI changes, deployment, merge, remote push or PR creation were performed during this implementation.
+
+## 2026-11-15 topology follow-up
+
+Earlier creation counts and hashes above are historical. The [current repair report](../../docs/model-qa/degenerate-repairs/mall-floor-direction-sign/README.md) records zero degenerate triangles, 13,256 total triangles, retained legacy shading and source-edit validation. No physical-device or deployment evidence is inferred.

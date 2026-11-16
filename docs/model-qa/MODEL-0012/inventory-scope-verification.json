@@ -1,0 +1,55 @@
+{
+  "verified_at": "2026-11-15T12:52:29.504248+00:00",
+  "head": "2f0867ec85c43ddfa04a71a308b31926acdce217",
+  "scope": "Discovery/path ownership and one untracked-backup preservation audit only;no future model deep QA performed.",
+  "initial_physical_3d_files": 2338,
+  "reconciled_new_tracked_artifacts": 169,
+  "current_tracked_3d_files": 2506,
+  "current_initial_untracked_paths_still_present": 1,
+  "current_authoring_scope_3d_files": 2507,
+  "queue_records": 1959,
+  "statuses": {
+    "PUSHED": 11,
+    "TESTING": 1,
+    "PENDING": 1947
+  },
+  "unclaimed_tracked_artifacts": [],
+  "path_coverage_status": "PASS",
+  "initial_backup_content_integrity": "UNVERIFIED;current hash differs from initial snapshot;initial bytes not found in bounded project-directory/canonical Git-history search",
+  "untracked_backup": {
+    "qa_id": "MODEL-1114",
+    "path": "models/gjh-mall-visitor-v2/sources/gjh-mall-visitor-v2.blend1",
+    "observed_at": "2026-11-15T12:51:19.292449+00:00",
+    "initial_expected_sha256": "7cb690ffb25da76a02ef5c1b32b2019d3b8d01c9031c629b200758e07d5ca801",
+    "current_sha256": "578ac9280880d33d4ece38dc89a4358654e2748a067ca6df2e53aa350b0abf34",
+    "current_bytes": 293838,
+    "current_preserved_copy": "output/model-qa/inventory-originals/MODEL-1114/578ac9280880d33d4ece38dc89a4358654e2748a067ca6df2e53aa350b0abf34.blend1",
+    "initial_matches": [],
+    "local_variant_files_examined": [
+      {
+        "location": "original_workspace",
+        "path": "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/gjh-mall-visitor-v2/sources/gjh-mall-visitor-v2.blend",
+        "bytes": 296286,
+        "sha256": "20021bf54f8c9b9d97122e0a99a363bfc1fd61ff990854dab2011b88a9cb50d9"
+      },
+      {
+        "location": "original_workspace",
+        "path": "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/gjh-mall-visitor-v2/sources/gjh-mall-visitor-v2.blend1",
+        "bytes": 293838,
+        "sha256": "578ac9280880d33d4ece38dc89a4358654e2748a067ca6df2e53aa350b0abf34"
+      },
+      {
+        "location": "release_worktree",
+        "path": "models/gjh-mall-visitor-v2/sources/gjh-mall-visitor-v2.blend",
+        "bytes": 296286,
+        "sha256": "20021bf54f8c9b9d97122e0a99a363bfc1fd61ff990854dab2011b88a9cb50d9"
+      }
+    ],
+    "git_history_unique_blobs_examined": 1,
+    "source_files_modified": false
+  },
+  "root_source_files_modified": false,
+  "backup_source_geometry_loaded_or_repaired": false,
+  "new_preservation_copy_published": false,
+  "next_model_started": false
+}

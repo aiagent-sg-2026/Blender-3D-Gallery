@@ -31,6 +31,7 @@ assert max(p.z for p in allpoints)<1e-7 and abs(min(p.z for p in allpoints)+.94)
 report={'source_reopened':'PASS','source_sha256':originalSha,'blender_version':bpy.app.version_string,'source_units':'metres','source_scales':'UNIT','independentModules':api['GROUPS'],'editableTextObjects':len(textfit),'textFit':{'status':'PASS','labels':textfit},'topology':{'status':'PASS','nonmanifoldEdges':0,'degenerateFaces':0,'parts':topology},'orientation':'PASS: front -Y, rear +Y; rotation determinants +1; no mirrored scales','mount':'PASS: ceiling plane Z=0, all geometry below; no floor stand','sourceBounds':{'min':[min(p[i] for p in allpoints) for i in range(3)],'max':[max(p[i] for p in allpoints) for i in range(3)]}}
 (HERE/'reports/sources.json').write_text(json.dumps(report,indent=2)+'\n')
 fixture=Path(tempfile.mkdtemp(prefix='mall-ceiling-sign-438-edit-'));blend=fixture/'edited.blend';glb=fixture/'edited.glb'
+control=fixture/'control.glb';api['export_asset'](control)
 bpy.data.objects['Front_Shops_Label'].data.body='STORES'
 o=bpy.data.objects['Front_Food_Arrow'];pivot=Vector((.257,0,-.75));rot=Matrix.Rotation(math.pi,4,'Y')
 for v in o.data.vertices:
@@ -39,5 +40,5 @@ o['direction']='right'
 bpy.context.preferences.filepaths.save_version=0;bpy.ops.wm.save_as_mainfile(filepath=str(blend),compress=True);bpy.ops.wm.open_mainfile(filepath=str(blend))
 assert bpy.data.objects['Front_Shops_Label'].data.body=='STORES' and bpy.data.objects['Front_Food_Arrow']['direction']=='right'
 api['export_asset'](glb);assert sha(source)==originalSha
-(HERE/'reports/source-edit-fixture.json').write_text(json.dumps({'fixtureGlb':str(glb),'fixtureBlend':str(blend),'originalSourceSha256':originalSha,'shippedSourceHashUnchanged':True,'edits':['Front_Shops_Label: SHOPS to STORES','Front_Food_Arrow: left to right']},indent=2)+'\n')
+(HERE/'reports/source-edit-fixture.json').write_text(json.dumps({'fixtureGlb':str(glb),'controlGlb':str(control),'controlGlbSha256':sha(control),'fixtureBlend':str(blend),'originalSourceSha256':originalSha,'shippedSourceHashUnchanged':True,'edits':['Front_Shops_Label: SHOPS to STORES','Front_Food_Arrow: left to right']},indent=2)+'\n')
 print(json.dumps({k:v for k,v in report.items() if k not in ('topology','textFit')}))

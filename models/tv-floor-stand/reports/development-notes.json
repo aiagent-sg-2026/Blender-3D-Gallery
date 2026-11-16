@@ -1,0 +1,14 @@
+{
+  "initial_geometry_check": "FAIL: 128 collapsed or near-zero triangles from bevel overlap on thin parts. Initial preview run intentionally stopped after inspection.",
+  "geometry_fix": "Cap box bevel width at 24 percent of the smallest dimension. Final geometry and fresh deterministic rebuild pass; see assets.json and reproducibility.json.",
+  "initial_source_edit_harness": "FAIL: assumed exported vertex counts are stable after save/reopen. Exporter deduplication changed counts.",
+  "source_edit_harness_fix": "Compare transformed coordinate sets in both directions and unchanged triangle-index count; verify material roughness and zero Khronos issues. Final saved edit proof passes.",
+  "initial_full_test_run": {
+    "tests": 728,
+    "pass": 727,
+    "fail": 1,
+    "failure": "Existing Pomelo test requires its collection last."
+  },
+  "catalog_fix": "Insert the new collection before Pomelo; preserve all original collections, asset content and relative order. Focused Pomelo regression passed 3/3. Full suite rerun is recorded in acceptance.json.",
+  "initial_front_side_previews": "Studio floor slab produced a dark band at grazing camera angles. Replaced studio floor by a plane and slightly raised front/side cameras; model GLB unchanged."
+}

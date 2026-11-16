@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "basis": "4f03501a plus the focused lift repair",
+  "javascript_tests": {
+    "passed": 717,
+    "failed": 0,
+    "log": "tests.log.gz"
+  },
+  "handoff_checks": {
+    "passed": 9,
+    "failed": 0,
+    "log": "handoff-tests-final.log.gz"
+  },
+  "build": "PASS",
+  "native": {
+    "version": "4.0.2",
+    "source_parts": 90,
+    "meshes": 77,
+    "fonts": 3,
+    "source_actions": 5,
+    "curves": 15,
+    "keys": 45,
+    "fresh_generation": true,
+    "source_reopen": true,
+    "canonical_import_zero_area_triangles": 0,
+    "keyframe_negative_control": true
+  },
+  "source_edit": {
+    "changed_node_transform": "Cab_BackWall",
+    "delta_x": 0.123,
+    "roughness": 0.73,
+    "unchanged_mesh_payloads": 80,
+    "unchanged_clip_payloads": 5,
+    "canonical_files_unchanged": true,
+    "legacy_report_fields_restored": true
+  },
+  "browser": {
+    "gallery_cases": 3,
+    "widths": [
+      1440,
+      768,
+      390
+    ],
+    "motion_modes": 2,
+    "motion_samples": 242,
+    "exact_reset": true,
+    "actual_consumed_sha": true,
+    "backend": "Local Chrome / ANGLE Metal"
+  },
+  "visual_review": "Actual Gallery 1440/390 and both motion midposes inspected; historical review retained separately",
+  "source_render": "Reopened/exported source; original studio previews reused without fresh Cycles rendering",
+  "contract_regression": "Existing registry-driven gap/extraction test retained unchanged; native producer restores values from actual exported data",
+  "limits": [
+    "No new Gallery component UI",
+    "No physical devices/FPS",
+    "No deployment or elevator certification"
+  ],
+  "whitespace_exception": "Raw pre-fix regression log is preserved unchanged",
+  "launch_logging": "Only platform, headless flag, executable path and args are recorded; no arbitrary launch configuration",
+  "integration": {
+    "upstream_main": "60c5b0a2c3faa8a385573e538a6b16a26e558e65",
+    "targeted_tests": 22,
+    "failed": 0,
+    "build": "PASS",
+    "scope": "Upstream fish/Mall Guide/shell catalog additions; lift registration and existing runtime modules unchanged. Target Gallery and motion evidence reused for unchanged inputs."
+  }
+}

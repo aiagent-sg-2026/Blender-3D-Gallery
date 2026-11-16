@@ -1,0 +1,9 @@
+{
+  "job_id": "fd795512-da6b-4915-b9f4-b5eeb6b77619",
+  "status": "FAILED",
+  "phase": "browser installer invocation",
+  "tests": "NOT_RUN",
+  "observed_error": "npm EUSAGE before browser install",
+  "cause": "Nested npx inherited npm exec call configuration from the outer -c invocation.",
+  "correction": "Resolve Node24 executable once and invoke local CLIs with it."
+}

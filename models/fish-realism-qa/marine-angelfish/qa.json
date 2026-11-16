@@ -1,0 +1,38 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "The first dorsal extension formed an overly sharp notch and the yellow tail had an unwanted blue rim."
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "pass",
+      "changes": [
+        "Viewed final full-body/head renders after the specific corrections; current source, imported GLB and desktop/mobile checks pass."
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "68d87862d8e3e66a0d4828c70ca096e32d9199e2794f12c619425c81ca4b287e",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: adult compressed blue-green body with yellow horizontal stripes and rounded yellow caudal",
+    "surface": "pass: fine original scales, thin varied yellow bands shared with median fins and blue fin margins",
+    "head": "pass: dark eye/opercular patches edged in blue, embedded eye and thick closed lips",
+    "fins": "pass: revised smooth trailing dorsal contour, yellow tail without an invented blue rim",
+    "surface_contact": "pass: source and actual imported GLB retain five-phase skin contact",
+    "motion": "pass: fin and tail motion survive actual GLB import with matching loop endpoints",
+    "browser": "pass: exact draft GLB swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed artwork, not a scanned or calibrated specimen.",
+    "Adult appearance only; juveniles have a different pattern. Fine dentition and tiny opercular details are simplified."
+  ]
+}

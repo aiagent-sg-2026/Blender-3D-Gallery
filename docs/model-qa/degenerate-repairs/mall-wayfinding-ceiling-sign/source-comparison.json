@@ -1,0 +1,422 @@
+{
+  "status": "PASS",
+  "before": {
+    "file": "/tmp/blender-mall-degenerate-44yfvxbl/ceiling-original.glb",
+    "bytes": 676028,
+    "sha256": "dd0db4a794d01dfb25b6cc6f494e7285e9fe42de7a70673a596e848563dc0c14",
+    "triangles": 11524,
+    "zero": 2,
+    "invalidNormals": 0,
+    "bounds": {
+      "min": [
+        -1.0499999523162842,
+        -0.9400000125169754,
+        -0.08100013835425733
+      ],
+      "max": [
+        1.0499999523162842,
+        0,
+        0.08100000373087823
+      ]
+    },
+    "roots": {
+      "ASSET_MallWayfindingCeilingSign": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "materialDefinitions": [
+      {
+        "doubleSided": true,
+        "name": "Porcelain wayfinding white",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.8468732237815857,
+            0.7991027235984802,
+            0.6583748459815979,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.5
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Midnight blue powder coat",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.009134058840572834,
+            0.02518685907125473,
+            0.04666508734226227,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.5
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Burnt orange accent",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.6653872728347778,
+            0.13013647496700287,
+            0.028426039963960648,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.5
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Satin aluminium",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.3324515223503113,
+            0.4125426113605499,
+            0.46207699179649353,
+            1
+          ],
+          "metallicFactor": 0.7200000286102295,
+          "roughnessFactor": 0.3199999928474426
+        }
+      }
+    ],
+    "resolvedMaterialDefinitions": [
+      {
+        "doubleSided": true,
+        "name": "Burnt orange accent",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.6653872728347778,
+            0.13013647496700287,
+            0.028426039963960648,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.5
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Midnight blue powder coat",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.009134058840572834,
+            0.02518685907125473,
+            0.04666508734226227,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.5
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Porcelain wayfinding white",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.8468732237815857,
+            0.7991027235984802,
+            0.6583748459815979,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.5
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Satin aluminium",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.3324515223503113,
+            0.4125426113605499,
+            0.46207699179649353,
+            1
+          ],
+          "metallicFactor": 0.7200000286102295,
+          "roughnessFactor": 0.3199999928474426
+        }
+      }
+    ],
+    "issues": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 2,
+      "numHints": 0,
+      "messages": [
+        {
+          "code": "NODE_EMPTY",
+          "message": "Empty node encountered.",
+          "severity": 2,
+          "pointer": "/nodes/0"
+        },
+        {
+          "code": "NODE_EMPTY",
+          "message": "Empty node encountered.",
+          "severity": 2,
+          "pointer": "/nodes/1"
+        }
+      ],
+      "truncated": false
+    },
+    "linePrecisionResidues": []
+  },
+  "after": {
+    "file": "/tmp/blender-mall-degenerate-44yfvxbl/ceiling-stage/mall-wayfinding-ceiling-sign.glb",
+    "bytes": 676360,
+    "sha256": "f340afb1c55b84237cc57ae813de3ec58e981b71b16369699c00e5c228774c92",
+    "triangles": 11520,
+    "zero": 0,
+    "invalidNormals": 0,
+    "bounds": {
+      "min": [
+        -1.0499999523162842,
+        -0.9400000125169754,
+        -0.08100013835425733
+      ],
+      "max": [
+        1.0499999523162842,
+        0,
+        0.08100000373087823
+      ]
+    },
+    "roots": {
+      "ASSET_MallWayfindingCeilingSign": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "materialDefinitions": [
+      {
+        "doubleSided": true,
+        "name": "Porcelain wayfinding white",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.8468732237815857,
+            0.7991027235984802,
+            0.6583748459815979,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.5
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Midnight blue powder coat",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.009134058840572834,
+            0.02518685907125473,
+            0.04666508734226227,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.5
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Burnt orange accent",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.6653872728347778,
+            0.13013647496700287,
+            0.028426039963960648,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.5
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Satin aluminium",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.3324515223503113,
+            0.4125426113605499,
+            0.46207699179649353,
+            1
+          ],
+          "metallicFactor": 0.7200000286102295,
+          "roughnessFactor": 0.3199999928474426
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Porcelain wayfinding white",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.8468732237815857,
+            0.7991027235984802,
+            0.6583748459815979,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.5
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Satin aluminium",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.3324515223503113,
+            0.4125426113605499,
+            0.46207699179649353,
+            1
+          ],
+          "metallicFactor": 0.7200000286102295,
+          "roughnessFactor": 0.3199999928474426
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Midnight blue powder coat",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.009134058840572834,
+            0.02518685907125473,
+            0.04666508734226227,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.5
+        }
+      }
+    ],
+    "resolvedMaterialDefinitions": [
+      {
+        "doubleSided": true,
+        "name": "Burnt orange accent",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.6653872728347778,
+            0.13013647496700287,
+            0.028426039963960648,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.5
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Midnight blue powder coat",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.009134058840572834,
+            0.02518685907125473,
+            0.04666508734226227,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.5
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Porcelain wayfinding white",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.8468732237815857,
+            0.7991027235984802,
+            0.6583748459815979,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.5
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Satin aluminium",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.3324515223503113,
+            0.4125426113605499,
+            0.46207699179649353,
+            1
+          ],
+          "metallicFactor": 0.7200000286102295,
+          "roughnessFactor": 0.3199999928474426
+        }
+      }
+    ],
+    "issues": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 2,
+      "numHints": 0,
+      "messages": [
+        {
+          "code": "NODE_EMPTY",
+          "message": "Empty node encountered.",
+          "severity": 2,
+          "pointer": "/nodes/0"
+        },
+        {
+          "code": "NODE_EMPTY",
+          "message": "Empty node encountered.",
+          "severity": 2,
+          "pointer": "/nodes/1"
+        }
+      ],
+      "truncated": false
+    },
+    "linePrecisionResidues": []
+  },
+  "positionToleranceM": 0.000001,
+  "maxPositionDeltaM": 7.450581707146932e-9,
+  "numericalResidueAltitudeLimitM": 1e-7,
+  "removedPositiveAreaResidues": [
+    {
+      "key": "Porcelain wayfinding white:-685352,-724976,-77600|-694760,-724976,-77600|-717416,-724976,-77600",
+      "area": 1.3062079610867662e-19,
+      "altitude": 8.147512460497949e-18,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Porcelain wayfinding white:-685352,-724976,-76400|-717416,-724976,-76400|-694760,-724976,-76400",
+      "area": 1.176051513412766e-18,
+      "altitude": 7.33565760213698e-17,
+      "quantizedCollinear": true
+    }
+  ],
+  "addedSurfaceKeys": [],
+  "addedSurfaceDetails": [],
+  "changedNormalTriangles": 8,
+  "maxNormalDelta": 1.154700517654419
+}

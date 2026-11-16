@@ -1,0 +1,109 @@
+{
+  "id": "basketball",
+  "name": "Basketball (Size 7)",
+  "summary": "Original size-7 basketball with pebbled orange rubber and recessed black eight-panel seams.",
+  "description": "Brand-neutral 29.5 in (74.9 cm) basketball. Two perpendicular great-circle seams cross at the poles and two curved C seams loop around the sides, giving the standard eight-panel layout. Channels are real recessed geometry; the pebbled grain is a baked tangent-space normal map. Static visual asset; no physics.",
+  "category": "Sports",
+  "tags": [
+    "basketball",
+    "size 7",
+    "sports",
+    "ball",
+    "PBR",
+    "normal map",
+    "recessed seams",
+    "editable",
+    "metres"
+  ],
+  "status": "draft",
+  "store": null,
+  "priority": "P2",
+  "created": "2026-11-16",
+  "author": "Yap Wei Jun project / agent-assisted procedural modeling",
+  "blender_version": "5.3.0",
+  "creation_method": "Original deterministic Blender Python geometry (UV sphere minus exact-Boolean round seam tubes) and a Cycles-baked 3D Voronoi pebble normal map; no external assets, logos or text.",
+  "generator": "generate.py",
+  "paths": {
+    "glb": "exports/optimized.glb",
+    "source": "sources/basketball.blend",
+    "source_textures": [
+      "sources/textures/basketball_pebble_normal.png"
+    ],
+    "preview": "previews/hero.webp",
+    "additional_previews": [
+      "previews/front.png",
+      "previews/side.png",
+      "previews/3q.png"
+    ]
+  },
+  "display": {
+    "previewRotationY": 0,
+    "previewCameraDirection": [
+      1,
+      0.6,
+      1.6
+    ],
+    "studioEnvironment": true,
+    "environmentIntensity": 0.6,
+    "units": "metres",
+    "up_axis": "Blender +Z / glTF +Y",
+    "front_axis": "Blender -Y / glTF +Z",
+    "origin": "Floor contact point under the ball centre (seam crossing at the bottom pole)"
+  },
+  "measurements": {
+    "glb_bytes": 1694404,
+    "triangles": 30128,
+    "vertices": 27595,
+    "primitives": 2,
+    "materials": 2,
+    "textures": 1,
+    "animations": 0,
+    "dimensions_m": [
+      0.2384537234902382,
+      0.23839318752288818,
+      0.23845380544662476
+    ],
+    "bounds_m": {
+      "min": [
+        -0.11922682076692581,
+        0.00010340660810470581,
+        -0.11922693997621536
+      ],
+      "max": [
+        0.11922690272331238,
+        0.2384965941309929,
+        0.1192268654704094
+      ]
+    },
+    "diameter_m": 0.2386,
+    "circumference_m": 0.74958,
+    "channel_width_m": 0.006,
+    "channel_depth_m": 0.003,
+    "panels": 8,
+    "sha256": "9dc815f0850ca1cd2977d8e2b4d9544d971c89e1130c9cf2cc8e9c60e72cafd7"
+  },
+  "accuracy_notes": "Skin diameter 238.6 mm (circumference 749.6 mm, inside the FIBA/NBA size-7 range). Seam channels are 6 mm wide and 3 mm deep round grooves; measured extents read up to 0.3 mm under the skin diameter because the extreme axis points sit inside channels. C-seam shape is an elongated small circle (54 deg +/- 6 deg) approximating real ball layouts, not a manufacturer drawing. Pebble grain is a normal map only (silhouette is smooth). No inflation, bounce or physics.",
+  "attribution": [
+    {
+      "credit": "Original procedural geometry, materials and baked texture; no external models, fonts, images or logos."
+    }
+  ],
+  "rights": "Original asset; reuse in the owner's projects is authorized. Public redistribution terms have not been specified.",
+  "quality_gate": {
+    "overall": "NEEDS REVIEW",
+    "local": "PASS",
+    "physical_android": "NOT TESTED",
+    "physical_ios": "NOT TESTED",
+    "webkit": "NOT TESTED",
+    "browser": "NOT TESTED",
+    "budget": {
+      "triangles": 40000,
+      "bytes": 2097152,
+      "mesh_primitives": 2,
+      "materials": 2,
+      "textures": 1
+    },
+    "evidence": "../reports/assets.json",
+    "checks_evidence": "../reports/sources.json"
+  }
+}

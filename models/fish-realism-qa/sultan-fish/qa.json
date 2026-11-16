@@ -1,0 +1,41 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "silver flank was too green and scale rims were too dark"
+      ],
+      "changes": [
+        "neutralize side pigment, soften dark scale rims and restrain gold iris saturation"
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "pass",
+      "changes": [
+        "re-viewed current actual full-body and head renders; source/GLB and desktop/mobile checks pass"
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "006e8972ed62d1d29a1d6665e0733f7fc6fe13b864ddb48c3a5b0cfdf5b0e3ad",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: elongate silver body with large dark-edged scales and olive-grey back",
+    "surface": "pass: uneven scale color and original microstructure without photograph textures",
+    "head": "pass: small terminal mouth and gold iris; no invented mouth barbels",
+    "fins": "pass: short soft dorsal, posterior anal and forked reddish-brown caudal",
+    "surface_contact": "pass: five source and imported-GLB poses with unchanged thresholds",
+    "motion": "pass: real exported cyclic body, caudal and fin deformation",
+    "browser": "pass: exact draft GLB swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed artwork, not a scanned or calibrated specimen.",
+    "The supplied Sultan fish / Ikan jelawat is interpreted as Leptobarbus cf. hoevenii. The inspected 2009 aquarium photograph uses the older broad name; L. rubripinna is now separately valid in the CAS catalog. The artwork is not a certified identification of that photograph or an exact stock."
+  ]
+}

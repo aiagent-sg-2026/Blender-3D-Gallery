@@ -1,0 +1,14 @@
+FAIL desktop-controls-lods-resources page.waitForSelector: Timeout 20000ms exceeded.
+Call log:
+[2m  - waiting for locator('.si-stage[data-state=ready][data-lod="0"]') to be visible[22m
+
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+response.body: Target page, context or browser has been closed
+    at _Page.<anonymous> (/private/tmp/blender-mall-degenerate-44yfvxbl/worktree/scripts/test-shelf-inspector-browser.mjs:32:129) {
+  log: []
+}
+
+Node.js v23.10.0

@@ -1,0 +1,33 @@
+{
+  "job_id": "44cf4791-3cb2-4c32-bf40-6ad4c0293d5b",
+  "state": "SUCCEEDED",
+  "preparation_job_id": "5e19eb75-4c77-4c0a-9b82-aa65ce6c1125",
+  "workspace": "/srv/agent-workstation/workspaces/blender-qa-m0009-2b8d7e10-0617",
+  "source_snapshot": {
+    "head": "2b8d7e10a2bfd83fd665c08ef3568e020f300e1e",
+    "dirty": false
+  },
+  "started_at": "2026-11-15T07:17:47.241Z",
+  "terminal_at": "2026-11-15T07:18:15.785Z",
+  "required_actions_guard": {
+    "run_id": 43683566612,
+    "head": "2b8d7e10a2bfd83fd665c08ef3568e020f300e1e",
+    "build": "success",
+    "deploy": "success",
+    "checked_before_acceptance": true
+  },
+  "commands": [
+    "remote-live-prepare.sh",
+    "remote-live-acceptance.sh"
+  ],
+  "evidence_tar": {
+    "bytes": 599586,
+    "sha256": "fddf795c65061b9931266bcf0dbbf039394d53c00f8f627fb89e89db053ecbba",
+    "all_18_artifact_hashes_verified": true
+  },
+  "script_digests_verified_against_git": true,
+  "browser_profiles_passed": 4,
+  "downloaded_geometry_tests_passed": 5,
+  "physical_mobile": "Excluded by owner; no hardware FPS claim",
+  "visual_review": "Primary inspected four actual production loaded views and two full page screenshots; no new defect."
+}

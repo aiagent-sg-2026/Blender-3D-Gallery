@@ -1,0 +1,140 @@
+{
+  "release_head": "69c5a1a8a14d887d9d105b466bb8521cc4a6a0eb",
+  "observed_at": "2026-11-15T12:20:43.141582+00:00",
+  "current_catalog_entries": 567,
+  "new_file_details": [
+    {
+      "path": "models/fish-realism-qa/giant-snakehead/giant-snakehead.blend",
+      "bytes": 10287467,
+      "sha256": "036076201de03c84d1e0e9c021ce1481443a580e44d217e9ab43741325095215"
+    },
+    {
+      "path": "models/fish-realism-qa/giant-snakehead/model.glb",
+      "bytes": 11518104,
+      "sha256": "89b8177f1a9d9f1416cac57a586bcd4abfac12bc4e51bf60f8478d1bb8251dce"
+    },
+    {
+      "path": "models/fish-realism-qa/marble-goby/marble-goby.blend",
+      "bytes": 10529442,
+      "sha256": "771303d7467f82b4ff5ab451503e52af113e72c7f0bce348719ec430437ebc51"
+    },
+    {
+      "path": "models/fish-realism-qa/marble-goby/model.glb",
+      "bytes": 11889132,
+      "sha256": "15cae0839e7b08289db2b5b6e5471962ef4d928025c96c74c1e3eb20745a09c6"
+    },
+    {
+      "path": "models/fish-realism-qa/snakehead/model.glb",
+      "bytes": 11574152,
+      "sha256": "b815ae16dac77e632670f93da00759ed978001b88a9044f95a06bb7d611f20e8"
+    },
+    {
+      "path": "models/fish-realism-qa/snakehead/snakehead.blend",
+      "bytes": 10311589,
+      "sha256": "0d3caa5836ee2b0beeba274edace3c143a5cf1ade5420f1ca462ceddc6309b57"
+    },
+    {
+      "path": "models/fish-realism-release/giant-snakehead/model.glb",
+      "bytes": 4011628,
+      "sha256": "16931b9e761891259ca0887b2575d5b8f8ad24f95a27ef54fa23e65d08ee1802"
+    },
+    {
+      "path": "models/fish-realism-release/marble-goby/model.glb",
+      "bytes": 4235964,
+      "sha256": "e360e9a1989dfbb5e8eb449a528f81b1e0bd260059e08380fb471a7b70475cc7"
+    },
+    {
+      "path": "models/fish-realism-release/snakehead/model.glb",
+      "bytes": 4042684,
+      "sha256": "83952b9dc84a34b81e83ef225cd21b949bbc2ab3356ba30dac18aa306296b6c2"
+    }
+  ],
+  "added_qa_ids": [
+    "MODEL-1954",
+    "MODEL-1955",
+    "MODEL-1956",
+    "MODEL-1957",
+    "MODEL-1958",
+    "MODEL-1959"
+  ],
+  "catalog_reroutes": [
+    {
+      "qa_id": "MODEL-0517",
+      "model_id": "fish-marble-goby",
+      "head": "69c5a1a8a14d887d9d105b466bb8521cc4a6a0eb",
+      "previous_export_paths": [
+        "models/singapore-fish/marble-goby/exports/model.glb"
+      ],
+      "previous_source_candidates": [
+        "models/singapore-fish/marble-goby/sources/marble-goby.blend"
+      ],
+      "current_export": {
+        "path": "models/fish-realism-release/marble-goby/model.glb",
+        "bytes": 4235964,
+        "sha256": "e360e9a1989dfbb5e8eb449a528f81b1e0bd260059e08380fb471a7b70475cc7"
+      },
+      "current_source": {
+        "path": "models/fish-realism-qa/marble-goby/marble-goby.blend",
+        "bytes": 10529442,
+        "sha256": "771303d7467f82b4ff5ab451503e52af113e72c7f0bce348719ec430437ebc51"
+      },
+      "historical_qa_id": "MODEL-1954",
+      "status": "PENDING",
+      "evidence": "discovery-reconciliation-69c5a1a8.json"
+    },
+    {
+      "qa_id": "MODEL-0518",
+      "model_id": "fish-snakehead",
+      "head": "69c5a1a8a14d887d9d105b466bb8521cc4a6a0eb",
+      "previous_export_paths": [
+        "models/singapore-fish/snakehead/exports/model.glb"
+      ],
+      "previous_source_candidates": [
+        "models/singapore-fish/snakehead/sources/snakehead.blend"
+      ],
+      "current_export": {
+        "path": "models/fish-realism-release/snakehead/model.glb",
+        "bytes": 4042684,
+        "sha256": "83952b9dc84a34b81e83ef225cd21b949bbc2ab3356ba30dac18aa306296b6c2"
+      },
+      "current_source": {
+        "path": "models/fish-realism-qa/snakehead/snakehead.blend",
+        "bytes": 10311589,
+        "sha256": "0d3caa5836ee2b0beeba274edace3c143a5cf1ade5420f1ca462ceddc6309b57"
+      },
+      "historical_qa_id": "MODEL-1955",
+      "status": "PENDING",
+      "evidence": "discovery-reconciliation-69c5a1a8.json"
+    },
+    {
+      "qa_id": "MODEL-0519",
+      "model_id": "fish-giant-snakehead",
+      "head": "69c5a1a8a14d887d9d105b466bb8521cc4a6a0eb",
+      "previous_export_paths": [
+        "models/singapore-fish/giant-snakehead/exports/model.glb"
+      ],
+      "previous_source_candidates": [
+        "models/singapore-fish/giant-snakehead/sources/giant-snakehead.blend"
+      ],
+      "current_export": {
+        "path": "models/fish-realism-release/giant-snakehead/model.glb",
+        "bytes": 4011628,
+        "sha256": "16931b9e761891259ca0887b2575d5b8f8ad24f95a27ef54fa23e65d08ee1802"
+      },
+      "current_source": {
+        "path": "models/fish-realism-qa/giant-snakehead/giant-snakehead.blend",
+        "bytes": 10287467,
+        "sha256": "036076201de03c84d1e0e9c021ce1481443a580e44d217e9ab43741325095215"
+      },
+      "historical_qa_id": "MODEL-1956",
+      "status": "PENDING",
+      "evidence": "discovery-reconciliation-69c5a1a8.json"
+    }
+  ],
+  "historical_exports_preserved_as_pending_records": true,
+  "modified_file_details": [],
+  "modified_existing_qa_ids": [],
+  "application_change": "Marble-goby/snakehead/giant-snakehead catalogue entries rerouted with historical original exports preserved. Nine new fish source/export artifacts are recorded. Offline fish generators add body-following fin/barbel support. Application/viewer code, validation tools, tests and accepted billiards inputs are unchanged. Changed-input build and runtime regression are required for active MODEL-0012 integration; these future models remain PENDING for individual deep campaign QA.",
+  "all_additions_pending": true,
+  "all_existing_ids_and_statuses_preserved": true
+}

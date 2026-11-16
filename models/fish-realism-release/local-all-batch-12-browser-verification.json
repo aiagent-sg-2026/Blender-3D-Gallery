@@ -1,0 +1,517 @@
+{
+  "completed": true,
+  "harness_sha256": "6bc3a233c1a9be89f63ab878c80cbb293caaeae72e67cf275c4cc652a2b1ee5f",
+  "deployment_commit": null,
+  "mode": "actual_catalog_no_substitution",
+  "chromium_runtime": {
+    "executable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "backend": "metal"
+  },
+  "mobile": "emulated viewport, not physical hardware",
+  "results": [
+    {
+      "slug": "hampala-barb",
+      "engine": "chromium",
+      "width": 1440,
+      "height": 900,
+      "loaded_release_sha256": "bbc0dfbf0c4b043177881900775546f5d3f5a78739eebd9ea4089561768061f4",
+      "known_csp_console_messages": 0,
+      "native_select_csp_events": 0,
+      "screenshot_csp_events": 0,
+      "csp_events": [],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/chromium/hampala-barb/desktop.png"
+    },
+    {
+      "slug": "hampala-barb",
+      "engine": "chromium",
+      "width": 390,
+      "height": 900,
+      "loaded_release_sha256": "bbc0dfbf0c4b043177881900775546f5d3f5a78739eebd9ea4089561768061f4",
+      "known_csp_console_messages": 0,
+      "native_select_csp_events": 0,
+      "screenshot_csp_events": 0,
+      "csp_events": [],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/chromium/hampala-barb/mobile.png"
+    },
+    {
+      "slug": "lampam",
+      "engine": "chromium",
+      "width": 1440,
+      "height": 900,
+      "loaded_release_sha256": "093cdcba933be5f9f557a53ec70ae042933fafa002b6077f952f1ace4a608608",
+      "known_csp_console_messages": 0,
+      "native_select_csp_events": 0,
+      "screenshot_csp_events": 0,
+      "csp_events": [],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/chromium/lampam/desktop.png"
+    },
+    {
+      "slug": "lampam",
+      "engine": "chromium",
+      "width": 390,
+      "height": 900,
+      "loaded_release_sha256": "093cdcba933be5f9f557a53ec70ae042933fafa002b6077f952f1ace4a608608",
+      "known_csp_console_messages": 0,
+      "native_select_csp_events": 0,
+      "screenshot_csp_events": 0,
+      "csp_events": [],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/chromium/lampam/mobile.png"
+    },
+    {
+      "slug": "river-catfish",
+      "engine": "chromium",
+      "width": 1440,
+      "height": 900,
+      "loaded_release_sha256": "17106e22d1725e7b736a1a14c7637fd0ee3b0bd950fca72fe96b48003a6d79f2",
+      "known_csp_console_messages": 0,
+      "native_select_csp_events": 0,
+      "screenshot_csp_events": 0,
+      "csp_events": [],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/chromium/river-catfish/desktop.png"
+    },
+    {
+      "slug": "river-catfish",
+      "engine": "chromium",
+      "width": 390,
+      "height": 900,
+      "loaded_release_sha256": "17106e22d1725e7b736a1a14c7637fd0ee3b0bd950fca72fe96b48003a6d79f2",
+      "known_csp_console_messages": 0,
+      "native_select_csp_events": 0,
+      "screenshot_csp_events": 0,
+      "csp_events": [],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/chromium/river-catfish/mobile.png"
+    },
+    {
+      "slug": "hampala-barb",
+      "engine": "webkit",
+      "width": 1440,
+      "height": 900,
+      "loaded_release_sha256": "bbc0dfbf0c4b043177881900775546f5d3f5a78739eebd9ea4089561768061f4",
+      "known_csp_console_messages": 10,
+      "native_select_csp_events": 5,
+      "screenshot_csp_events": 5,
+      "csp_events": [
+        {
+          "directive": "style-src-attr",
+          "target": "model-theme",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-collection",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-feature",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "demo-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        }
+      ],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/webkit/hampala-barb/desktop.png"
+    },
+    {
+      "slug": "hampala-barb",
+      "engine": "webkit",
+      "width": 390,
+      "height": 900,
+      "loaded_release_sha256": "bbc0dfbf0c4b043177881900775546f5d3f5a78739eebd9ea4089561768061f4",
+      "known_csp_console_messages": 10,
+      "native_select_csp_events": 5,
+      "screenshot_csp_events": 5,
+      "csp_events": [
+        {
+          "directive": "style-src-attr",
+          "target": "model-theme",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-collection",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-feature",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "demo-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        }
+      ],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/webkit/hampala-barb/mobile.png"
+    },
+    {
+      "slug": "lampam",
+      "engine": "webkit",
+      "width": 1440,
+      "height": 900,
+      "loaded_release_sha256": "093cdcba933be5f9f557a53ec70ae042933fafa002b6077f952f1ace4a608608",
+      "known_csp_console_messages": 10,
+      "native_select_csp_events": 5,
+      "screenshot_csp_events": 5,
+      "csp_events": [
+        {
+          "directive": "style-src-attr",
+          "target": "model-theme",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-collection",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-feature",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "demo-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        }
+      ],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/webkit/lampam/desktop.png"
+    },
+    {
+      "slug": "lampam",
+      "engine": "webkit",
+      "width": 390,
+      "height": 900,
+      "loaded_release_sha256": "093cdcba933be5f9f557a53ec70ae042933fafa002b6077f952f1ace4a608608",
+      "known_csp_console_messages": 10,
+      "native_select_csp_events": 5,
+      "screenshot_csp_events": 5,
+      "csp_events": [
+        {
+          "directive": "style-src-attr",
+          "target": "model-theme",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-collection",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-feature",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "demo-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        }
+      ],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/webkit/lampam/mobile.png"
+    },
+    {
+      "slug": "river-catfish",
+      "engine": "webkit",
+      "width": 1440,
+      "height": 900,
+      "loaded_release_sha256": "17106e22d1725e7b736a1a14c7637fd0ee3b0bd950fca72fe96b48003a6d79f2",
+      "known_csp_console_messages": 10,
+      "native_select_csp_events": 5,
+      "screenshot_csp_events": 5,
+      "csp_events": [
+        {
+          "directive": "style-src-attr",
+          "target": "model-theme",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-collection",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-feature",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "demo-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        }
+      ],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/webkit/river-catfish/desktop.png"
+    },
+    {
+      "slug": "river-catfish",
+      "engine": "webkit",
+      "width": 390,
+      "height": 900,
+      "loaded_release_sha256": "17106e22d1725e7b736a1a14c7637fd0ee3b0bd950fca72fe96b48003a6d79f2",
+      "known_csp_console_messages": 10,
+      "native_select_csp_events": 5,
+      "screenshot_csp_events": 5,
+      "csp_events": [
+        {
+          "directive": "style-src-attr",
+          "target": "model-theme",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-collection",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-feature",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "demo-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        }
+      ],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/webkit/river-catfish/mobile.png"
+    }
+  ]
+}

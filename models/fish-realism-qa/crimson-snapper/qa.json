@@ -1,0 +1,60 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "scale outlines too bright and regular",
+        "flank too matte and uniformly red compared with reference",
+        "pectoral membrane too broad"
+      ],
+      "changes": [
+        "use finer lower-contrast skin relief",
+        "lighten silver-pink flanks and reduce roughness",
+        "narrow the pectoral membrane and soften snout"
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "pass",
+      "changes": [
+        "finer lower-contrast skin texture",
+        "lighter pink-silver flank response",
+        "narrower pectoral fin"
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "0bcad96bd785f31047700196eea5bce99be20515d0c1c26bce894d004f5ccb06",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png",
+    "pelvic-detail.png"
+  ],
+  "visual_checks": {
+    "anatomy": "pass: deep body, high forehead, smaller mouth and relatively large eye with a shallow-notched caudal outline",
+    "surface": "pass: finer subdued scale relief and lighter pink-silver flank replace bright regular scale outlines",
+    "head": "pass: closed mouth and gill recesses remain integrated and do not intersect the textured eye cap",
+    "fins": "pass: narrow pectoral membrane, rounded posterior dorsal/anal lobes and a darker caudal margin",
+    "motion": "pass: actual tail and fin deformation and cyclic endpoints survive real GLB import",
+    "browser": "pass: real draft GLB visibly swims and pauses at desktop/mobile sizes",
+    "surface_contact": "pass: actual evaluated source and imported GLB roots contact the posed skin at five phases; paired pelvic roots embedded where present"
+  },
+  "limitations": [
+    "Photo-informed original artwork, not scanned anatomy.",
+    "Supplied Jenahak alias retained; the chosen visual species follows the English Crimson snapper brief.",
+    "Draft browser fixture retains baseline captions."
+  ],
+  "attachment_revisions": [
+    {
+      "prior_source_sha256": "7353fdf144a8f7d35270201c0c9889dafd789e51abd8a57deeef9ace9224f82a",
+      "finding": "Fixed paired pelvic-base coordinate lay outside the curved skin despite correct dynamic weights",
+      "repair": "Only pelvic mesh bases reprojected onto an embedded ventrolateral root curve; body, materials and actions retained",
+      "repaired_meshes": [
+        "Pelvic_-1",
+        "Pelvic_1"
+      ],
+      "result": "pass: ventral detail inspected, five-phase source/GLB contact and desktop/mobile playback checked; other mesh-motion measurements retained within 0.00001"
+    }
+  ]
+}

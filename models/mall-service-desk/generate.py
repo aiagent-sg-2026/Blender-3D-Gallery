@@ -5,11 +5,23 @@ Only this collection's source, exports and previews are written.
 """
 from pathlib import Path
 import math
+import sys
 
 import bpy
 from mathutils import Vector
 
 HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE.parents[1] / 'scripts'))
+from blender_degenerate_cleanup import add_cleanup
+
+CLEANUP_PARTS = {'mall-service-desk': ('Front information plaque', 'High counter brass edge',
+    'High walnut guest counter', 'Low counter brass edge', 'Lower walnut guest counter', 'Sign jade front')}
+
+
+def prepare_asset_geometry(slug, objects):
+    for obj in objects:
+        if obj.type == 'FONT' or obj.name in CLEANUP_PARTS.get(slug, ()):
+            add_cleanup(obj)
 
 
 def material(name, color, roughness=.6, metallic=0):
@@ -128,20 +140,8 @@ def point_at(obj, xyz):
     obj.rotation_euler = (Vector(xyz) - obj.location).to_track_quat('-Z', 'Y').to_euler()
 
 
-def build(slug, root_name, factory, camera, target, ortho):
-    bpy.ops.wm.read_factory_settings(use_empty=True)
+def export_asset(slug, root, objects, destination=None):
     scene = bpy.context.scene
-    scene.unit_settings.system = 'METRIC'
-    scene.unit_settings.scale_length = 1
-    factory()
-    objects = list(scene.objects)
-    root = bpy.data.objects.new(root_name, None)
-    scene.collection.objects.link(root)
-    for obj in objects:
-        obj.parent = root
-    root['units'] = 'metres'
-    root['origin'] = 'floor centre'
-    root['source'] = 'Blender-3D-Gallery / original mall service desk'
     # Export a merged evaluated copy: editable authored objects remain in the blend.
     bpy.ops.object.select_all(action='DESELECT')
     copies = []
@@ -159,11 +159,29 @@ def build(slug, root_name, factory, camera, target, ortho):
     scene.cursor.location = (0, 0, 0)
     bpy.ops.object.origin_set(type='ORIGIN_CURSOR')
     root.select_set(True)
-    bpy.ops.export_scene.gltf(filepath=str(HERE / 'exports' / f'{slug}.glb'),
-        export_format='GLB', use_selection=True, export_apply=True,
+    bpy.ops.export_scene.gltf(filepath=str(destination or HERE / 'exports' / f'{slug}.glb'),
+        export_format='GLB', use_selection=True, use_active_scene=True, export_apply=True,
         export_yup=True, export_animations=False, export_texcoords=False,
         export_extras=True, export_cameras=False, export_lights=False)
     bpy.data.objects.remove(merged, do_unlink=True)
+
+
+def build(slug, root_name, factory, camera, target, ortho, render=True):
+    bpy.ops.wm.read_factory_settings(use_empty=True)
+    scene = bpy.context.scene
+    scene.unit_settings.system = 'METRIC'
+    scene.unit_settings.scale_length = 1
+    factory()
+    objects = list(scene.objects)
+    root = bpy.data.objects.new(root_name, None)
+    scene.collection.objects.link(root)
+    for obj in objects:
+        obj.parent = root
+    root['units'] = 'metres'
+    root['origin'] = 'floor centre'
+    root['source'] = 'Blender-3D-Gallery / original mall service desk'
+    prepare_asset_geometry(slug, objects)
+    export_asset(slug, root, objects)
     bpy.ops.object.select_all(action='DESELECT')
     for obj in objects:
         obj.select_set(True)
@@ -199,7 +217,8 @@ def build(slug, root_name, factory, camera, target, ortho):
     scene.render.filepath = str(HERE / 'previews' / f'{slug}.png')
     scene.view_settings.view_transform = 'AgX'
     bpy.ops.wm.save_as_mainfile(filepath=str(HERE / 'sources' / f'{slug}.blend'), compress=True)
-    bpy.ops.render.render(write_still=True)
+    if render:
+        bpy.ops.render.render(write_still=True)
 
 
 

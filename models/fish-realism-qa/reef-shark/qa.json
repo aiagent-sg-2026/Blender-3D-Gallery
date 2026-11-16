@@ -1,0 +1,45 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "Pectoral fins were almost edge-on, pelvic fans collapsed into needle-like silhouettes and the mouth/eyes needed restraint."
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "revise",
+      "changes": [
+        "Reduce eyes and ventral mouth extent and lower the swept pectoral tips; fix the folded pelvic edge parameterization."
+      ]
+    },
+    {
+      "iteration": 3,
+      "result": "pass",
+      "changes": [
+        "Inspect the final full-body/head renders with distinct triangular pelvic contours; current source, imported GLB and desktop/mobile gates pass."
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "6624204817d3370c47173471b8b043f7dc06d5bbfb97b00991af79ded908a0d5",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: slender taupe body, small eyes and five separate gill-slit relief marks per flank without an operculum",
+    "surface": "pass: original fine scaleless skin pigment, pale belly and dark lower-flank stripe",
+    "head": "pass: restrained closed ventral mouth and small underside nostrils",
+    "fins": "pass: closed opaque swept cartilage fins, distinct paired pelvics, two dorsals, white-edged black caps and unequal caudal lobes",
+    "surface_contact": "pass: projected roots retain five-phase contact in source and actual imported GLB",
+    "motion": "pass: tail-driven cycle and restrained fin strokes survive real GLB import with matching endpoints",
+    "browser": "pass: exact draft GLB swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed Carcharhinus melanopterus artwork, not a scanned specimen.",
+    "Gill slits and closed mouth use shallow original relief rather than open cavities; fine denticles and teeth are simplified. Movement is artist-tuned."
+  ]
+}

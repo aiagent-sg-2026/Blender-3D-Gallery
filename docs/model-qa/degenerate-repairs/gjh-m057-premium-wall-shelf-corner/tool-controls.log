@@ -1,0 +1,13 @@
+✔ GLB cleanup retains real tiny geometry and normals while removing reviewed collapse (14068.182916ms)
+✔ shared index accessors are repaired once when every instance has the same cleanup mask (5799.966333ms)
+✔ shared indices with different per-mesh cleanup masks are rejected without writing output (2719.585166ms)
+✔ reviewed radial-line calibration preserves defaults and rejects a real one-nanometre face (6600.629459ms)
+✔ equivalent texture aliases compare semantically while pixel and material changes are rejected (3896.137292ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 33445.264792

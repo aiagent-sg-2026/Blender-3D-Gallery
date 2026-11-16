@@ -1,0 +1,43 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "large scales have overly bright edges compared with the live broodstock photograph"
+      ],
+      "changes": [
+        "reduce rim and per-scale pigment contrast while retaining the irregular scale geometry"
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "pass",
+      "changes": [
+        "lowered scale edge and pigment contrast",
+        "checked actual EEVEE detail, source/GLB contact and desktop/mobile playback"
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "5ead021f476e30ca5f7852eda0234a5e18594336c3f18fbcbb6cf244d7cad7d1",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: deep grey-green body, compact head and rounded caudal follow Nile tilapia broodstock",
+    "surface": "pass: subdued irregular scales, muted vertical bars and faint lateral pigment after the second iteration",
+    "head": "pass: small embedded pale-gold iris and rounded closed snout",
+    "fins": "pass: long continuous spiny-soft dorsal, rounded barred caudal and tapered pectorals",
+    "surface_contact": "pass: actual source and GLB fin roots contact posed skin at five phases",
+    "motion": "pass: source and actual imported GLB retain moving tail/fins and cyclic endpoints",
+    "browser": "pass: exact draft GLB visibly swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed Oreochromis niloticus artwork, not a scan or calibrated specimen.",
+    "Broad supplied Tilapia label retained; no breeding strain is asserted.",
+    "Draft captions remain baseline."
+  ]
+}

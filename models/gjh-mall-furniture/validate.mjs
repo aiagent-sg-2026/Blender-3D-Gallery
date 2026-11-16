@@ -18,16 +18,23 @@ for (const id of ['gjh-lounge-bench', 'gjh-areca-planter']) {
   const gltf = await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength), '');
   gltf.scene.updateMatrixWorld(true);
   const bounds = new Box3().setFromObject(gltf.scene);
-  let triangles = 0, vertices = 0, primitives = 0;
+  let triangles = 0, vertices = 0, primitives = 0, zeroAreaTriangles = 0;
   gltf.scene.traverse(object => {
     if (!object.isMesh) return;
     primitives++;
     const geometry = object.geometry;
     vertices += geometry.attributes.position.count;
     triangles += (geometry.index?.count ?? geometry.attributes.position.count) / 3;
+    const { index, attributes: { position } } = geometry;
+    for (let i = 0; i < (index?.count ?? position.count); i += 3) {
+      const points = [0, 1, 2].map(offset => new Vector3().fromBufferAttribute(position,
+        index ? index.getX(i + offset) : i + offset).applyMatrix4(object.matrixWorld));
+      if (points[1].clone().sub(points[0]).cross(points[2].clone().sub(points[0])).lengthSq() === 0) zeroAreaTriangles++;
+    }
   });
+  if (id === 'gjh-areca-planter' && zeroAreaTriangles) throw Error(id + ': degenerate geometry regressed');
   if (Math.abs(bounds.min.y) > .001 || triangles > 20000 || bytes.length > 700000 || primitives > 8) throw Error('Furniture budget/origin violation');
-  reports.push({ id, glb_bytes: bytes.length, triangles, vertices, primitives,
+  reports.push({ zero_area_triangles: zeroAreaTriangles, id, glb_bytes: bytes.length, triangles, vertices, primitives,
     materials: json.materials.length, animations: (json.animations ?? []).length,
     dimensions: bounds.getSize(new Vector3()).toArray(), bounds: { min: bounds.min.toArray(), max: bounds.max.toArray() },
     sha256: createHash('sha256').update(bytes).digest('hex'),

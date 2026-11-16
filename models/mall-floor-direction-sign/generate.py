@@ -10,10 +10,21 @@ import bpy
 from mathutils import Vector
 
 HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE.parents[1] / 'scripts'))
+from blender_degenerate_cleanup import add_cleanup
 ID = 'mall-floor-direction-sign'
 ROOT = 'ASSET_MallFloorDirectionSign'
 GROUPS = ('SignStructure', 'FloorIdentity', 'DirectionDining', 'DirectionShops',
           'DirectionCinema', 'DirectionFacilities')
+CLEANUP_PARTS = {ID: ('Recessed base fixing', 'Recessed base fixing.001',
+                     'Recessed base fixing.002', 'Recessed base fixing.003', 'Floor number orange badge')}
+
+
+def prepare_asset_geometry(slug=ID, objects=None):
+    for obj in objects if objects is not None else bpy.data.collections[ROOT].all_objects:
+        if obj.type == 'FONT' or obj.name in CLEANUP_PARTS.get(slug, ()):
+            add_cleanup(obj, ngon_method='Clip' if obj.name.startswith('Recessed base fixing') else 'Beauty')
+
 # Labels are editable source text, not an in-browser editing feature.
 LABELS = [('DirectionDining', 'Dining', 'FOOD HALL / 201-218', 'left'),
           ('DirectionShops', 'Shops', 'NORTH WALK / 220-248', 'up'),
@@ -112,7 +123,8 @@ def point_at(obj, target):
     obj.rotation_euler = (Vector(target)-obj.location).to_track_quat('-Z', 'Y').to_euler()
 
 
-def export_asset():
+def export_asset(destination=None):
+    prepare_asset_geometry()
     scene = bpy.context.scene
     root = bpy.data.objects.new(ROOT, None)
     scene.collection.objects.link(root)
@@ -145,15 +157,15 @@ def export_asset():
     for obj in parts:
         obj.select_set(True)
     bpy.context.view_layer.objects.active = root
-    bpy.ops.export_scene.gltf(filepath=str(HERE/'exports'/f'{ID}.glb'),
-        export_format='GLB', use_selection=True, export_apply=True, export_yup=True,
+    bpy.ops.export_scene.gltf(filepath=str(destination or HERE/'exports'/f'{ID}.glb'),
+        export_format='GLB', use_selection=True, use_active_scene=True, export_apply=True, export_yup=True,
         export_animations=False, export_texcoords=False, export_extras=True,
         export_cameras=False, export_lights=False)
     for obj in reversed(parts):
         bpy.data.objects.remove(obj, do_unlink=True)
 
 
-def build():
+def build(render=True):
     bpy.ops.wm.read_factory_settings(use_empty=True)
     bpy.context.preferences.filepaths.save_version = 0
     scene = bpy.context.scene
@@ -232,22 +244,25 @@ def build():
     world.node_tree.nodes['Background'].inputs['Strength'].default_value = .45
     scene.world = world
     scene.render.engine = 'BLENDER_EEVEE'
-    scene.eevee.use_gtao = True
-    scene.eevee.gtao_distance = 3
+    if hasattr(scene, 'eevee') and hasattr(scene.eevee, 'use_gtao'):
+        scene.eevee.use_gtao = True
+        scene.eevee.gtao_distance = 3
     scene.render.resolution_x = scene.render.resolution_y = 768
     scene.render.resolution_percentage = 100
     scene.render.image_settings.file_format = 'PNG'
     scene.render.filepath = str(HERE/'previews'/f'{ID}.png')
     scene.view_settings.look = 'AgX - Medium High Contrast'
     bpy.ops.wm.save_as_mainfile(filepath=str(HERE/'sources'/f'{ID}.blend'), compress=True)
-    bpy.ops.render.render(write_still=True)
+    if render:
+        bpy.ops.render.render(write_still=True)
 
 
 if __name__ == '__main__':
     if '--export-source' in sys.argv:
-        bpy.ops.wm.open_mainfile(filepath=str(HERE/'sources'/f'{ID}.blend'))
+        bpy.ops.wm.open_mainfile(filepath=str(HERE/'sources'/f'{ID}.blend'), load_ui=False, use_scripts=False)
         export_asset()
         bpy.context.scene.render.filepath = str(HERE/'previews'/f'{ID}.png')
-        bpy.ops.render.render(write_still=True)
+        if '--no-render' not in sys.argv:
+            bpy.ops.render.render(write_still=True)
     else:
         build()

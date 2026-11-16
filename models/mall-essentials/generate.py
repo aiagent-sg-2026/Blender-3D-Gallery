@@ -15,6 +15,8 @@ sys.path.insert(0, str(HERE.parents[1] / "scripts"))
 from blender_degenerate_cleanup import add_cleanup
 
 CLEANUP_PARTS = {
+    "mall-display-shelf": ("Jade header inset", "Label - COLLECTION", "Slim brass front nosing",
+                           "Slim brass front nosing.001", "Slim brass front nosing.002", "Slim brass front nosing.003"),
     "mall-advertising-lightbox": ("Abstract jade landscape", "Abstract sage column",
         "Campaign gold underline", "Fine brass front surround", "Illuminated poster face",
         "Label - SOMETHING NEW", "Label - THE MALL", "Rear removable service panel"),
@@ -266,7 +268,7 @@ def export_asset(slug, root, objects, destination=None):
     bpy.data.objects.remove(merged, do_unlink=True)
 
 
-def build(slug, root_name, factory, camera, target, ortho):
+def build(slug, root_name, factory, camera, target, ortho, render=True):
     bpy.ops.wm.read_factory_settings(use_empty=True)
     scene = bpy.context.scene
     scene.unit_settings.system = 'METRIC'
@@ -317,7 +319,8 @@ def build(slug, root_name, factory, camera, target, ortho):
     scene.render.filepath = str(HERE / 'previews' / f'{slug}.png')
     scene.view_settings.view_transform = 'AgX'
     bpy.ops.wm.save_as_mainfile(filepath=str(HERE / 'sources' / f'{slug}.blend'), compress=True)
-    bpy.ops.render.render(write_still=True)
+    if render:
+        bpy.ops.render.render(write_still=True)
 
 
 

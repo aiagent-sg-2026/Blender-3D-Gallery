@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "zeroRemoved": 2,
+  "residueRemoved": 2,
+  "splitIndexAccessors": [],
+  "originalSha256": "dd0db4a794d01dfb25b6cc6f494e7285e9fe42de7a70673a596e848563dc0c14",
+  "sha256": "5fbb557340c0bf13598274a57807efb92269b286b092f5cabdace38ec3dd6e40",
+  "preservation": "Only triangle index streams, index accessor counts/min/max and explicitly split primitive index bindings changed; new index views are appended when needed. All original non-index binary payload bytes retained.",
+  "validation": {
+    "numErrors": 0,
+    "numWarnings": 0,
+    "numInfos": 2,
+    "numHints": 0,
+    "messages": [
+      {
+        "code": "NODE_EMPTY",
+        "message": "Empty node encountered.",
+        "severity": 2,
+        "pointer": "/nodes/0"
+      },
+      {
+        "code": "NODE_EMPTY",
+        "message": "Empty node encountered.",
+        "severity": 2,
+        "pointer": "/nodes/1"
+      }
+    ],
+    "truncated": false
+  }
+}

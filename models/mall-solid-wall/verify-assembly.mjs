@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import { Box3, Vector3 } from 'three';
+import { readGlb } from '../mall-floor-tile/glb.mjs';
+const project = new URL('../../', import.meta.url);
+const floorPath = new URL('models/mall-floor-tile/exports/mall-floor-tile-module.glb',project);
+const wallPath = new URL('models/mall-solid-wall/exports/mall-solid-wall.glb',project);
+const floor = await readGlb(floorPath.pathname);
+const wall = await readGlb(wallPath.pathname);
+const near=(a,b)=>assert.ok(Math.abs(a-b)<1e-6,`${a} differs from ${b}`);
+// Two straight runs form an L; the existing plain floor tile is instanced unchanged.
+const placements=[[0,0],[1.2,0],[2.4,0],[2.4,1.2],[2.4,2.4]];
+const tiles=placements.map(([x,z])=>{const object=floor.scene.clone(true);object.position.set(x,-.03,z);object.updateMatrixWorld(true);return new Box3().setFromObject(object)});
+for (const [a,b,axis] of [[0,1,'x'],[1,2,'x'],[2,3,'z'],[3,4,'z']]) near(tiles[a].max[axis],tiles[b].min[axis]);
+for (const box of tiles) near(box.max.y,0);
+const wallObject=wall.scene.clone(true);wallObject.position.set(0,0,-.54);wallObject.updateMatrixWorld(true);
+const wallBox=new Box3().setFromObject(wallObject);
+near(wallBox.min.y,tiles[0].max.y);near(wallBox.min.x,tiles[0].min.x);near(wallBox.max.x,tiles[0].max.x);near(wallBox.min.z,tiles[0].min.z);
+const report={result:'PASS',floorGlbSha256:crypto.createHash('sha256').update(floor.bytes).digest('hex'),wallGlbSha256:crypto.createHash('sha256').update(wall.bytes).digest('hex'),units:'metres',floorPlacementsXZ:placements,floorCount:tiles.length,checkedFloorEdges:4,wallPosition:[0,0,-.54],wallFloorTop:tiles[0].max.y,wallBottom:wallBox.min.y,checks:'Five floor module bounding boxes form an L at 1.2 m pitch; wall bounding box sits at finished-floor level and aligns to one floor edge.',limits:'Bounding-box checks only; no corner edge finishing, full mesh overlap, navigation, lighting, real-device or physical installation validation.'};
+fs.writeFileSync(new URL('./reports/floor-wall-assembly.json',import.meta.url),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));

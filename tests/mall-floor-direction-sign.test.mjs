@@ -85,3 +85,20 @@ test('reopened source retains editable text and original destination labels, wit
   assert.ok(Object.values(sources.groups.FloorIdentity.editable_text).includes('02'));
   assert.match(metadata.replacement.note, /No live label editing/);
 });
+
+test('saved-source label edit is isolated against an unchanged control from the same toolchain', () => {
+  const report = JSON.parse(fs.readFileSync(`${folder}/reports/source-edit.json`));
+  assert.equal(report.status, 'PASS');
+  assert.equal(report.comparisonBasis, 'same-toolchain source control');
+  assert.equal(report.originalAssetUnchanged, true);
+  assert.equal(report.originalSourceSha256, metadata.source_sha256);
+  assert.equal(report.baselineSourceSha256, metadata.source_sha256);
+  assert.equal(report.results[0].sha256, metadata.metrics.sha256);
+  assert.equal(report.results.length, 3);
+  assert.deepEqual(report.results.map(row => row.zeroAreaTriangles), [0, 0, 0]);
+  assert.deepEqual(report.changedGroups, ['DirectionDining']);
+  assert.equal(report.unchangedGroups.length, 5);
+  for (const group of report.unchangedGroups)
+    assert.equal(report.results[1].groupHashes[group], report.results[2].groupHashes[group]);
+  assert.notEqual(report.results[1].groupHashes.DirectionDining, report.results[2].groupHashes.DirectionDining);
+});

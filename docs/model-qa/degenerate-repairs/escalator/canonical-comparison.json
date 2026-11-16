@@ -1,0 +1,593 @@
+{
+  "status": "PASS",
+  "before": {
+    "file": "/tmp/blender-mall-degenerate-44yfvxbl/escalator-original.glb",
+    "bytes": 4672692,
+    "sha256": "f8f8bda8b28a4faaf1fb2b03ee2a832fe23b90621eee9ab0a24a26c1b2b89ada",
+    "triangles": 65408,
+    "zero": 11,
+    "invalidNormals": 0,
+    "bounds": {
+      "min": [
+        -0.7774999737739563,
+        -2.3399999141693115,
+        -5.461055774241686
+      ],
+      "max": [
+        0.796000000089407,
+        3.940000057220459,
+        5.461055774241686
+      ]
+    },
+    "roots": {
+      "ASSET_EscalatorV1_ID004": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "materialDefinitions": [
+      {
+        "doubleSided": true,
+        "name": "Safety yellow",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.9774019122123718,
+            0.47699978947639465,
+            0.021980946883559227,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "alphaMode": "BLEND",
+        "doubleSided": true,
+        "name": "Clear glass alpha",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2632734179496765,
+            0.5382355451583862,
+            0.6382831931114197,
+            0.18000000715255737
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.20000000298023224
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Rubber",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.007194409146904945,
+            0.010022825561463833,
+            0.0134117491543293,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Steel",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2632734179496765,
+            0.33034372329711914,
+            0.36724647879600525,
+            1
+          ],
+          "metallicFactor": 0.6499999761581421,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Ivory",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7484140992164612,
+            0.7874122858047485,
+            0.7677687406539917,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Steel",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2632734179496765,
+            0.33034372329711914,
+            0.36724647879600525,
+            1
+          ],
+          "metallicFactor": 0.6499999761581421,
+          "roughnessFactor": 0.44999998807907104
+        }
+      }
+    ],
+    "resolvedMaterialDefinitions": [
+      {
+        "alphaMode": "BLEND",
+        "doubleSided": true,
+        "name": "Clear glass alpha",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2632734179496765,
+            0.5382355451583862,
+            0.6382831931114197,
+            0.18000000715255737
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.20000000298023224
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Ivory",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7484140992164612,
+            0.7874122858047485,
+            0.7677687406539917,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Rubber",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.007194409146904945,
+            0.010022825561463833,
+            0.0134117491543293,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Safety yellow",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.9774019122123718,
+            0.47699978947639465,
+            0.021980946883559227,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Steel",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2632734179496765,
+            0.33034372329711914,
+            0.36724647879600525,
+            1
+          ],
+          "metallicFactor": 0.6499999761581421,
+          "roughnessFactor": 0.44999998807907104
+        }
+      }
+    ],
+    "animationPayload": {
+      "clips": 60,
+      "accessors": 122,
+      "sha256": "4d586748764b011b4996483828ada6237ce03774dc6178072912aa3b1a58efe3"
+    },
+    "issues": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 0,
+      "numHints": 0,
+      "messages": [],
+      "truncated": false
+    },
+    "linePrecisionResidues": [
+      {
+        "key": "Steel:-777500,-1022953,748793|-777500,-558953,-54878|-777500,-906953,547875",
+        "node": "TRUSS_L",
+        "area": 6.205169711392955e-11,
+        "altitude": 1.3373219785178599e-10,
+        "quantizedCollinear": false,
+        "points": [
+          [
+            -0.7774999737739563,
+            -1.022952675819397,
+            0.7487930059432983
+          ],
+          [
+            -0.7774999737739563,
+            -0.5589529871940613,
+            -0.05487801134586334
+          ],
+          [
+            -0.7774999737739563,
+            -0.9069527387619019,
+            0.5478752255439758
+          ]
+        ]
+      },
+      {
+        "key": "Steel:-742500,-152953,-758090|-742500,195046,-1360843|-742500,-500953,-155337",
+        "node": "TRUSS_L",
+        "area": 6.947384889599562e-10,
+        "altitude": 9.981881822556256e-10,
+        "quantizedCollinear": false,
+        "points": [
+          [
+            -0.7425000071525574,
+            -0.15295328199863434,
+            -0.7580901384353638
+          ],
+          [
+            -0.7425000071525574,
+            0.19504646956920624,
+            -1.3608434200286865
+          ],
+          [
+            -0.7425000071525574,
+            -0.5009530186653137,
+            -0.1553368866443634
+          ]
+        ]
+      },
+      {
+        "key": "Steel:777500,-152953,-758090|777500,195046,-1360843|777500,-500953,-155337",
+        "node": "TRUSS_R",
+        "area": 6.947384889599562e-10,
+        "altitude": 9.981881822556256e-10,
+        "quantizedCollinear": false,
+        "points": [
+          [
+            0.7774999737739563,
+            -0.15295328199863434,
+            -0.7580901384353638
+          ],
+          [
+            0.7774999737739563,
+            0.19504646956920624,
+            -1.3608434200286865
+          ],
+          [
+            0.7774999737739563,
+            -0.5009530186653137,
+            -0.1553368866443634
+          ]
+        ]
+      }
+    ]
+  },
+  "after": {
+    "file": "/tmp/blender-mall-degenerate-44yfvxbl/escalator-delivery.glb",
+    "bytes": 4672668,
+    "sha256": "b14375e54f366d3238fb32141bb9d25ca87add72664770e9a8541db9266bd501",
+    "triangles": 65394,
+    "zero": 0,
+    "invalidNormals": 0,
+    "bounds": {
+      "min": [
+        -0.7774999737739563,
+        -2.3399999141693115,
+        -5.461055774241686
+      ],
+      "max": [
+        0.796000000089407,
+        3.940000057220459,
+        5.461055774241686
+      ]
+    },
+    "roots": {
+      "ASSET_EscalatorV1_ID004": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "materialDefinitions": [
+      {
+        "doubleSided": true,
+        "name": "Safety yellow",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.9774019122123718,
+            0.47699978947639465,
+            0.021980946883559227,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "alphaMode": "BLEND",
+        "doubleSided": true,
+        "name": "Clear glass alpha",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2632734179496765,
+            0.5382355451583862,
+            0.6382831931114197,
+            0.18000000715255737
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.20000000298023224
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Rubber",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.007194409146904945,
+            0.010022825561463833,
+            0.0134117491543293,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Steel",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2632734179496765,
+            0.33034372329711914,
+            0.36724647879600525,
+            1
+          ],
+          "metallicFactor": 0.6499999761581421,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Ivory",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7484140992164612,
+            0.7874122858047485,
+            0.7677687406539917,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Steel",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2632734179496765,
+            0.33034372329711914,
+            0.36724647879600525,
+            1
+          ],
+          "metallicFactor": 0.6499999761581421,
+          "roughnessFactor": 0.44999998807907104
+        }
+      }
+    ],
+    "resolvedMaterialDefinitions": [
+      {
+        "alphaMode": "BLEND",
+        "doubleSided": true,
+        "name": "Clear glass alpha",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2632734179496765,
+            0.5382355451583862,
+            0.6382831931114197,
+            0.18000000715255737
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.20000000298023224
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Ivory",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7484140992164612,
+            0.7874122858047485,
+            0.7677687406539917,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Rubber",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.007194409146904945,
+            0.010022825561463833,
+            0.0134117491543293,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Safety yellow",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.9774019122123718,
+            0.47699978947639465,
+            0.021980946883559227,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Steel",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2632734179496765,
+            0.33034372329711914,
+            0.36724647879600525,
+            1
+          ],
+          "metallicFactor": 0.6499999761581421,
+          "roughnessFactor": 0.44999998807907104
+        }
+      }
+    ],
+    "animationPayload": {
+      "clips": 60,
+      "accessors": 122,
+      "sha256": "4d586748764b011b4996483828ada6237ce03774dc6178072912aa3b1a58efe3"
+    },
+    "issues": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 0,
+      "numHints": 0,
+      "messages": [],
+      "truncated": false
+    },
+    "linePrecisionResidues": []
+  },
+  "positionToleranceM": 0.000001,
+  "maxPositionDeltaM": 0,
+  "numericalResidueAltitudeLimitM": 1e-7,
+  "removedPositiveAreaResidues": [],
+  "addedSurfaceKeys": [],
+  "addedSurfaceDetails": [],
+  "changedNormalTriangles": 0,
+  "maxNormalDelta": 0,
+  "precisionLineToleranceM": 1.1e-9,
+  "precisionLineNodes": [
+    "TRUSS_L",
+    "TRUSS_R"
+  ],
+  "linePrecisionResidues": [
+    {
+      "key": "Steel:-777500,-1022953,748793|-777500,-558953,-54878|-777500,-906953,547875",
+      "node": "TRUSS_L",
+      "area": 6.205169711392955e-11,
+      "altitude": 1.3373219785178599e-10,
+      "quantizedCollinear": false,
+      "points": [
+        [
+          -0.7774999737739563,
+          -1.022952675819397,
+          0.7487930059432983
+        ],
+        [
+          -0.7774999737739563,
+          -0.5589529871940613,
+          -0.05487801134586334
+        ],
+        [
+          -0.7774999737739563,
+          -0.9069527387619019,
+          0.5478752255439758
+        ]
+      ]
+    },
+    {
+      "key": "Steel:-742500,-152953,-758090|-742500,195046,-1360843|-742500,-500953,-155337",
+      "node": "TRUSS_L",
+      "area": 6.947384889599562e-10,
+      "altitude": 9.981881822556256e-10,
+      "quantizedCollinear": false,
+      "points": [
+        [
+          -0.7425000071525574,
+          -0.15295328199863434,
+          -0.7580901384353638
+        ],
+        [
+          -0.7425000071525574,
+          0.19504646956920624,
+          -1.3608434200286865
+        ],
+        [
+          -0.7425000071525574,
+          -0.5009530186653137,
+          -0.1553368866443634
+        ]
+      ]
+    },
+    {
+      "key": "Steel:777500,-152953,-758090|777500,195046,-1360843|777500,-500953,-155337",
+      "node": "TRUSS_R",
+      "area": 6.947384889599562e-10,
+      "altitude": 9.981881822556256e-10,
+      "quantizedCollinear": false,
+      "points": [
+        [
+          0.7774999737739563,
+          -0.15295328199863434,
+          -0.7580901384353638
+        ],
+        [
+          0.7774999737739563,
+          0.19504646956920624,
+          -1.3608434200286865
+        ],
+        [
+          0.7774999737739563,
+          -0.5009530186653137,
+          -0.1553368866443634
+        ]
+      ]
+    }
+  ],
+  "afterLinePrecisionResidues": [],
+  "rigidContainerStaticOnly": true
+}

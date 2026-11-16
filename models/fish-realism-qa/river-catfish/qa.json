@@ -1,0 +1,51 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "long maxillary barbels began above the mouth corner; the front dorsal outline was too round"
+      ],
+      "changes": [
+        "move long barbels to the mouth corner and taper the front dorsal"
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "revise",
+      "findings": [
+        "leading dorsal spine and soft-fin heights did not join naturally"
+      ],
+      "changes": [
+        "connect leading and soft dorsal heights before retesting the actual source and GLB"
+      ]
+    },
+    {
+      "iteration": 3,
+      "result": "pass",
+      "changes": [
+        "re-viewed current actual full-body/head renders; source, GLB and desktop/mobile QA pass"
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "3bf899a91942bdb898e0b422b59a79b88d5ae3c6098da203cb999ed31ef1b6dc",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: elongate scaleless grey-olive body, pale belly and broad flattened head",
+    "surface": "pass: original photo-informed pigment and surface microstructure",
+    "head": "pass: small high-set eyes and four pairs of tapered sensory barbels",
+    "fins": "pass: short front dorsal, separate long rounded fleshy adipose and low rear anal",
+    "surface_contact": "pass: five source and GLB phases with unchanged tolerances",
+    "motion": "pass: actual exported cyclic body/tail/fin deformation; separate fleshy adipose survives export",
+    "browser": "pass: exact draft GLB swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed artwork, not a scanned or calibrated specimen.",
+    "The supplied River catfish / Ikan baung follows Hemibagrus cf. nemurus in the inspected Wibowo Djatmiko specimen photograph and MyBIS common-name mapping; no exact regional stock identification is claimed."
+  ]
+}

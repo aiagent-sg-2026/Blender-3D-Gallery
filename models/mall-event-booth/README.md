@@ -24,3 +24,13 @@ From `repo/`:
     node models/mall-event-booth/validate.mjs
 
 The focused contract is `tests/mall-event-booth.test.mjs`. It checks the measured SHA, mesh-bearing independent groups, and isolation of replacement/hide operations.
+
+## Topology repair and saved-source export (2026-11-15)
+
+The Blender 5.1.2 source retains 28 authored parts and all three collection modules. Four reviewed meshes and all three labels use non-destructive cleanup. Disposable export copies retain the existing joined-module bevel evaluation; cleanup runs after baking their translations to catch Float32 world-collapse residues. DisplayContent uses Clip triangulation to retain the sample cylinder cap diagonals. The canonical GLB retains its original transforms, attributes and shading, removing only 118 exact-zero triangles and eight reviewed precision residues. It now has 4,506 triangles and remains 215,640 bytes. Existing previews remain applicable.
+
+Export real saved-source edits without rebuilding the asset:
+
+    blender --background --python-exit-code 1 --python models/mall-event-booth/generate.py -- --export-source --no-render
+
+Omit `--no-render` to also render the current source. A normal build recreates the procedural source; use the saved-source mode to preserve manual edits. Run `test_degenerate_cleanup.py` for the complete fresh source/export/re-import regression. Run `test_source_edit.py -- <new-output-directory>`, then `node models/mall-event-booth/verify_source_edit.mjs <same-directory>` for the real YOUR STORY → NEW STORY edit control. Source staging uses the shared `scripts/repair-static-blender-source.py` with this generator and the original source hash. See [repair evidence](../../docs/model-qa/degenerate-repairs/mall-event-booth/README.md).

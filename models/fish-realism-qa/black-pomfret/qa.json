@@ -1,0 +1,22 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": 1,
+  "reviewed_source_sha256": "f02f7fde4e573512c469e815efefa718eb0e542c7723c9b845d2a883fbd88e8a",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "visual_checks": {
+    "anatomy": "pass: deep compressed dark flank with low narrow caudal peduncle and deeply forked tail",
+    "surface": "pass: grey-black back and muted silver flanks with subtle irregular microrelief; no repeated raised scale tiles",
+    "head": "pass: small closed mouth, integrated gill crease, conforming iris and restrained eye size",
+    "fins": "pass: swept dorsal and anal margins with dark translucent membranes and stable roots",
+    "motion": "pass: tail propulsion and restrained fin stabilization; exact cyclic endpoints survive GLB roundtrip",
+    "browser": "pass: real draft GLB shows swimming and stable pause at desktop/mobile sizes",
+    "surface_contact": "pass: actual evaluated source and imported GLB roots contact the posed skin at five phases; paired pelvic roots embedded where present"
+  },
+  "limitations": [
+    "Original photo-informed artwork, not a scan or measured specimen.",
+    "Draft browser fixture retains baseline catalog captions; live promotion is separate."
+  ]
+}

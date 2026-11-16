@@ -22,3 +22,7 @@ The website consumes only the two registered GLBs and their WebP posters; editab
 Owner-project reuse is authorized. Public redistribution terms remain unspecified. Hiding a download button is a presentation choice, not access control: the viewer necessarily serves the GLB publicly.
 
 Physical-phone GPU performance, touch hardware, Safari, screen-reader sessions and real-device installation were not tested for this addition. Existing game physics, solar demos and PWA behavior are unchanged; their full specialist suites were not rerun for these asset-only additions. The repository's existing deployment workflow triggers on `main` or manual dispatch, not PRs, so local evidence must not be represented as a successful PR Actions run. Merge and subsequent Pages deployment are outside this PR's completed state.
+
+## 2026-11-15 Areca topology follow-up
+
+Earlier counts/hashes are historical. [Current repair evidence](../../docs/model-qa/degenerate-repairs/gjh-areca-planter/README.md) records 4,935 triangles, zero degenerates in consumer/native scopes, 213 retained parts, protected source version and bounded radial-line calibration. No physical-device, FPS or deployment claim is inferred.

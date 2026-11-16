@@ -1,0 +1,26 @@
+{
+  "verified_at": "2026-11-15T12:37:58.303912+00:00",
+  "qa_commit": "2f0867ec85c43ddfa04a71a308b31926acdce217",
+  "prepare_job": "ce8dff66-f99e-486b-8c90-560f079924b6",
+  "prepare_job_state": "SUCCEEDED",
+  "workspace": "/srv/agent-workstation/workspaces/blender-qa-m0012-2f0867ec-live",
+  "remote_head_exact_match": true,
+  "remote_tracked_inputs_clean": true,
+  "remote_script_hashes_equal_local_published_inputs": {
+    "scripts/test-model-qa-browser.mjs": "fcf6c5e60899d310d078ade42038ca16b913613bb60c8e4c181241304ce15ae3",
+    "scripts/browser-test-utils.mjs": "2b2f69f9ff7bf633f703e995d7b0a0c5ad51fcfb24f31bcd947f7dfc66c999af",
+    "tests/ball-06.test.mjs": "75493b64236bf787babf5e176e9b2b722f71005572effd8483d9869476f94e25",
+    "tests/helpers/ball-geometry-checks.mjs": "ff7e52215768833d236a30a3280ccd457ed2b6fc69d2956679389d28575e5bc2"
+  },
+  "remote_output_directory_absent": true,
+  "production_tests_started": false,
+  "required_actions_run": 43714225525,
+  "required_actions_latest_state": "pending",
+  "queue_predecessor": {
+    "run_id": 43710823823,
+    "head_sha": "486fb02b027c2a178e9e718421060a0f64d2550d",
+    "job_id": 132803251185,
+    "observed_active_step": "Unit and browser release gates"
+  },
+  "acceptance_rule": "Do not run production acceptance until required full hosted Actions and deployment succeed; do not advance to MODEL-0013."
+}

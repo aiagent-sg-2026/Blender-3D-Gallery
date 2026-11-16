@@ -1,0 +1,58 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "artificial transverse shading seam at the jaw/body join",
+        "overly uniform grey-blue skin",
+        "dorsal membrane too low at the front",
+        "iris appears too broad and flat"
+      ],
+      "changes": [
+        "remove internal join caps and weld the body boundary",
+        "lighten and vary steely silver pigment/roughness",
+        "increase anterior dorsal height and taper it near the tail",
+        "reduce and lighten the iris and give the lower jaw a slight projection"
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "revise",
+      "changes": [
+        "welded jaw/body boundary",
+        "lighter varied silver response and taller anterior dorsal fin"
+      ],
+      "remaining": "lower-jaw tip still too blocky"
+    },
+    {
+      "iteration": 3,
+      "result": "pass",
+      "changes": [
+        "tapered lower-jaw projection and smaller anterior iris",
+        "confirmed independent dorsal wave and posed surface contact"
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "b93da71125a75861d9e37a103b5872ac70f6219133ba61dd58eca46d4af99841",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png",
+    "dorsal-detail.png"
+  ],
+  "visual_checks": {
+    "anatomy": "pass: strongly compressed scaleless ribbon body, slight lower-jaw projection, exposed fangs and tapered tail with no invented caudal/pelvic fins",
+    "surface": "pass: variable steely silver response and welded jaw/body boundary remove the artificial transverse seam",
+    "head": "pass: smaller anterior iris sits above the open mouth and tooth geometry remains visible in closeup",
+    "dorsal_wave": "pass: three actual reimported dorsal probes show distinct moving phases with nonzero lateral range; tapering body tail also moves",
+    "surface_contact": "pass: actual posed fin/body surface contact passes at five phases in source and reimported GLB",
+    "browser": "pass: actual draft GLB visibly swims and pauses in desktop/mobile gallery"
+  },
+  "limitations": [
+    "Photo-informed artistic reconstruction, not a scanned specimen or certified species identification.",
+    "Trichiurus lepturus is treated as a visual complex; supplied local aliases retained without certification.",
+    "Anal spinules are minute and embedded; no broad anal membrane is invented.",
+    "Draft browser captions remain baseline."
+  ]
+}

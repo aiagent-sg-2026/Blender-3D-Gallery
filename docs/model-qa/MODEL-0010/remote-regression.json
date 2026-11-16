@@ -1,0 +1,126 @@
+{
+  "status": "PASS pinned full regression with latest upstream delta integration accepted",
+  "source_sha": "1e94207991e702451ce931d3f76d30925a903453",
+  "workspace": "/srv/agent-workstation/workspaces/blender-qa-m0010-reg-1e942079-7fc1",
+  "initial_setup_job": {
+    "id": "fd795512-da6b-4915-b9f4-b5eeb6b77619",
+    "status": "FAILED",
+    "tests": "NOT_RUN",
+    "reason": "Nested npx EUSAGE before browser installation; preserved in recovery workspace."
+  },
+  "active_job_id": null,
+  "changes_to_assertions_or_timeouts": false,
+  "local_first_failure": "game-first-attempt.json",
+  "recovery_output_policy": "Unique TEST_ARTIFACT_DIR for each suite; verify fresh result files and source hashes before accepting.",
+  "remaining": "Focused commit/publication, required final-commit Actions and actual production acceptance.",
+  "setup_attempt2": {
+    "job_id": "99c7dc81-fc66-4607-a8c0-7c427c73045b",
+    "status": "FAILED",
+    "tests": "NOT_RUN",
+    "reason": "Recovery checkout omitted direct non-catalog application model dependencies; complete models directory added."
+  },
+  "source_manifest_policy": "Verify all checked-out source hashes and complete567-asset inputs before accepting recovery.",
+  "successful_job_id": "75cbc478-3475-4da0-99e0-9148823f479d",
+  "successful_job_terminal_at": "2026-11-15T07:58:05.666Z",
+  "game_passed": 46,
+  "experience_passed": 31,
+  "unfiltered": true,
+  "catalog_entries": 567,
+  "source_files_verified": 20021,
+  "artifact_files_verified": 13,
+  "evidence_tar": {
+    "bytes": 918871,
+    "sha256": "f84d92ca47504af5ed426ebd6a11d4f5900b4a6186ea278182b13d3f3407d859"
+  },
+  "verification": "remote-regression-verification.json",
+  "artifact_relocations": [
+    {
+      "original": "output/game/results.json",
+      "stored": "game-results.json",
+      "encoding": "identity"
+    },
+    {
+      "original": "output/experience/results.json",
+      "stored": "experience-results.json",
+      "encoding": "identity"
+    },
+    {
+      "original": "output/acceptance.json",
+      "stored": "remote-acceptance.json",
+      "encoding": "identity"
+    },
+    {
+      "original": "output/evidence-manifest.json",
+      "stored": "remote-evidence-manifest.json",
+      "encoding": "identity"
+    },
+    {
+      "original": "output/setup-failure.json",
+      "stored": "remote-setup-failure1.json",
+      "encoding": "identity"
+    },
+    {
+      "original": "output/setup-failure2.json",
+      "stored": "remote-setup-failure2.json",
+      "encoding": "identity"
+    },
+    {
+      "original": "output/install.log",
+      "stored": "remote-install.log.gz",
+      "encoding": "gzip",
+      "decoded_sha256": "d8278ab3aceabe4471979c192f32e868850cdcd8138b9d49c50efa297e003b92"
+    },
+    {
+      "original": "output/browser-install.log",
+      "stored": "remote-browser-install.log.gz",
+      "encoding": "gzip",
+      "decoded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "output/build.log",
+      "stored": "remote-build.log.gz",
+      "encoding": "gzip",
+      "decoded_sha256": "a773ad62e45e1ee58a2e2ea9205917014f95af80721d395539125ca70952ffdb"
+    },
+    {
+      "original": "output/game.log",
+      "stored": "game.log.gz",
+      "encoding": "gzip",
+      "decoded_sha256": "992e168a28619ff70298082fb45e2d67936e6c7befcee6528dd1bdc2191837f4"
+    },
+    {
+      "original": "output/experience.log",
+      "stored": "experience.log.gz",
+      "encoding": "gzip",
+      "decoded_sha256": "46da8e5cb8389be8669df8a815e7ea4f180828df07fd2979942edf530eff7f5a"
+    },
+    {
+      "original": "output/browser-install-attempt1.log",
+      "stored": "remote-browser-install-attempt1.log.gz",
+      "encoding": "gzip",
+      "decoded_sha256": "9fc2cc285cca4804a3c4f80ee442686208ffb108f16451c21689eab5af7bb29c"
+    },
+    {
+      "original": "output/build-attempt2.log",
+      "stored": "remote-build-attempt2.log.gz",
+      "encoding": "gzip",
+      "decoded_sha256": "103c5799e4f8b1f8e46866b05af74bd419a687dc3e32384cad41c57854ece1b0"
+    },
+    {
+      "original": "output/source-manifest.json",
+      "stored": "remote-source-manifest.json.gz",
+      "encoding": "gzip",
+      "decoded_sha256": "ecffe91eaa136912c78d6f0dc28fd5465ab733fad68b1add90f285011581b84a"
+    }
+  ],
+  "latest_upstream_acceptance": "upstream-regression.json",
+  "latest_main_sync": {
+    "head": "fd087c2dfdeaa08c37b21ef11c52fbbc2eabf57b",
+    "fresh_units": 682,
+    "catalog_entries": 567,
+    "identical_build_files": 1197,
+    "new_uncatalogued_artifacts_pending": 11,
+    "queue_records": 1903,
+    "equivalence_evidence": "latest-main-equivalence.json.gz"
+  }
+}

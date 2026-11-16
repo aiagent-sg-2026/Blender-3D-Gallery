@@ -1,0 +1,38 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "The first white spots clustered and the lower-flank lines were too faint; refine spot separation, raise the lines and deepen the body slightly."
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "pass",
+      "changes": [
+        "Viewed final full-body/head renders after the specific corrections; current source, imported GLB and desktop/mobile checks pass."
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "6b71344384e907ebb89c5a567353f1fb0f4c3456738a290d0bddbda5895d2870",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: stout uninflated scaleless form with posterior soft fins and no broad pelvic fins",
+    "surface": "pass: irregular separated pale spots, lower-flank lines and a dark ringed pectoral-base patch",
+    "head": "pass: small closed mouth and high embedded subdued eyes",
+    "fins": "pass: small rounded rear fins and locally hinged repeated hovering strokes",
+    "surface_contact": "pass: source and actual imported GLB retain five-phase skin contact",
+    "motion": "pass: fin and tail motion survive actual GLB import with matching loop endpoints",
+    "browser": "pass: exact draft GLB swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed artwork, not a scanned or calibrated specimen.",
+    "No inflation animation or measured biomechanics; the individual colour pattern is an original approximation."
+  ]
+}

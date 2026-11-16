@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "id": "gjh-areca-planter",
+  "base_main_commit": "21a3fe495d9dcd8ad66cabea3537acc4f1a8eb7f",
+  "before_zero_area_triangles_float64_glb": 100,
+  "after_zero_area_triangles_float64_glb": 0,
+  "before_zero_area_triangles_native_float32": 172,
+  "after_zero_area_triangles_native_source_and_import": 0,
+  "reviewed_analytic_pole_residues_removed": 125,
+  "precision_line_tolerance_m": 2e-10,
+  "max_reviewed_pole_altitude_m": 1.426760963538946e-10,
+  "triangles": 4935,
+  "bytes": 119760,
+  "glb_sha256": "17023aadc4c378032dafe88d1626132dc2bb89e4207cd6772c19bfa2b0048e43",
+  "source_sha256": "1e515829c5d760cd0d1c8deebc1a52c37a683984533189d5a7599549e259a7f2",
+  "blender": "5.2.3 LTS",
+  "compatible_official_binary_checksum_and_signature": "PASS; installed Blender unchanged",
+  "older_version_negative_control": "PASS; 5.1.2 refused before source writes",
+  "editable_parts": 213,
+  "palm_leaflets": 198,
+  "original_vertex_polygon_curve_material_and_scene_data_preserved": true,
+  "additive_derived_face_attribute": {
+    "name": "cleanup_alternate_quad",
+    "ceramic_faces": 864,
+    "alternate_diagonals": 63
+  },
+  "canonical_vertex_normal_and_transform_delta": 0,
+  "all_125_residues_on_reviewed_ceramic_cap_planes_and_include_analytic_pole": true,
+  "negative_controls": "PASS; default unchanged, explicit opt-in required, genuine 1 nm and 10 um faces protected; shared-index and normal/displacement controls retained",
+  "full_tests_passed": 693,
+  "native_fresh_generator_export_import": "PASS; complete source/studio saved; fresh GLB compared to canonical meaningful surfaces, then re-imported; cleanup idempotent; preview rendering skipped",
+  "prior_native_generator_regressions": "All eight previous repaired assets PASS on Blender 5.1.2 after shared-helper changes",
+  "build": "PASS; existing chunk advisory",
+  "browser_cases_passed": 9,
+  "browser_scope": "Bench/planter at 1440/768/390; discovery and consumed SHA, orbit/zoom/reset/reload, close/reopen, focus and render-loop cleanup",
+  "visual_inspection": "Actual desktop Viewer image inspected; fluted ceramic body, brass rings, soil, stems and palm leaflets intact",
+  "limits": [
+    "Native Float32 and GLB Float64 counts are distinct scopes",
+    "0.2 nm analytic calibration is asset-specific, not a universal deletion budget",
+    "No physical-device/FPS or deployment claim",
+    "Six other affected assets remain pending"
+  ],
+  "upstream_integration": {
+    "tested_main_commit": "fcb763f63dd8b7a5f77946d810412c28ac59b8bf",
+    "full_tests_passed": 693,
+    "build": "PASS",
+    "upstream_scope": "Fish assets/catalog only; no target registration or Viewer/runtime change",
+    "target_registration_unchanged": true,
+    "asset_hashes_unchanged": true
+  }
+}

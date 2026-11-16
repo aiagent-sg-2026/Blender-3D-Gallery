@@ -1,0 +1,38 @@
+✔ mall-trash-bin: repaired delivered geometry contains no zero-area triangles (29.796209ms)
+✔ mall-directory-kiosk: repaired delivered geometry contains no zero-area triangles (9.419ms)
+✔ mall-advertising-lightbox: repaired delivered geometry contains no zero-area triangles (10.431541ms)
+✔ mall-waste-sorting-station: repaired delivered geometry contains no zero-area triangles (13.927167ms)
+✔ mall-service-desk: repaired delivered geometry contains no zero-area triangles (6.055875ms)
+✔ mall-display-shelf: repaired delivered geometry contains no zero-area triangles (6.900291ms)
+✔ mall-floor-direction-sign: repaired delivered geometry contains no zero-area triangles (11.548417ms)
+✔ mall-event-booth: repaired delivered geometry contains no zero-area triangles (8.979166ms)
+✔ gjh-areca-planter: repaired delivered geometry contains no zero-area triangles (5.96025ms)
+✔ gjh-m057-premium-wall-shelf-corner: repaired delivered geometry contains no zero-area triangles (62.073667ms)
+✔ escalator: repaired delivered geometry contains no zero-area triangles (71.439833ms)
+✖ atm-kiosk: repaired delivered geometry contains no zero-area triangles (6.750542ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 11
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1700.887
+
+✖ failing tests:
+
+test at tests/mall-degenerate-repairs.test.mjs:15:3
+✖ atm-kiosk: repaired delivered geometry contains no zero-area triangles (6.750542ms)
+  AssertionError [ERR_ASSERTION]: atm-kiosk: actual GLB must contain no zero-area triangles
+  
+  4 !== 0
+  
+      at TestContext.<anonymous> (file:///private/tmp/blender-mall-degenerate-44yfvxbl/worktree/tests/mall-degenerate-repairs.test.mjs:36:12)
+      at async Test.run (node:internal/test_runner/test:1054:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:744:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 4,
+    expected: 0,
+    operator: 'strictEqual'
+  }

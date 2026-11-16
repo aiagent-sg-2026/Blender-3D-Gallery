@@ -5,10 +5,25 @@ PosterPanel and DisplayContent stay as separate source collections and GLB nodes
 """
 from pathlib import Path
 import math
+import sys
 import bpy
 from mathutils import Vector
 
 HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE.parents[1] / 'scripts'))
+from blender_degenerate_cleanup import add_cleanup, MODIFIER_NAME
+ID = 'mall-event-booth'
+ROOT = 'ASSET_MallEventBooth'
+GROUPS = ('BoothStructure', 'PosterPanel', 'DisplayContent')
+CLEANUP_PARTS = {ID: ('PosterPanel ivory face', 'PosterPanel jade sun',
+                     'PosterPanel sage block', 'PosterPanel coral stripe')}
+
+
+def prepare_asset_geometry(slug=ID, objects=None):
+    for obj in objects if objects is not None else bpy.data.collections[ROOT].all_objects:
+        if obj.type == 'FONT' or obj.name in CLEANUP_PARTS.get(slug, ()):
+            add_cleanup(obj)
+
 
 def mat(name, rgb, rough=.55, metal=0):
     m = bpy.data.materials.new(name); m.use_nodes = True
@@ -59,7 +74,49 @@ def move(o, collection):
     for c in list(o.users_collection): c.objects.unlink(o)
     collection.objects.link(o); return o
 
-def build():
+def export_asset(destination=None):
+    prepare_asset_geometry()
+    scene = bpy.context.scene
+    groups = {name: bpy.data.collections[name] for name in GROUPS}
+    # Export one evaluated mesh per named collection, preserving named,
+    # independently replaceable nodes.  Do not join across semantic groups.
+    export_root = bpy.data.objects.new('ASSET_MallEventBooth', None); scene.collection.objects.link(export_root)
+    export_parts = [export_root]
+    for group_name in ('BoothStructure', 'PosterPanel', 'DisplayContent'):
+        originals = [o for o in groups[group_name].objects]
+        copies = []
+        for original in originals:
+            c = original.copy(); c.data = original.data.copy(); scene.collection.objects.link(c); c.select_set(True); copies.append(c)
+        # Keep the established joined-module bevel evaluation. Source cleanup
+        # is per part; delivery cleanup runs after the legacy merge stack.
+        for c in copies:
+            cleanup = c.modifiers.get(MODIFIER_NAME)
+            if cleanup:
+                c.modifiers.remove(cleanup)
+        for c in copies:
+            bpy.context.view_layer.objects.active = c; c.select_set(True)
+            if c.type == 'FONT': bpy.ops.object.convert(target='MESH')
+        bpy.ops.object.select_all(action='DESELECT')
+        for c in copies: c.select_set(True)
+        bpy.context.view_layer.objects.active = copies[0]; bpy.ops.object.join(); merged = bpy.context.object; merged.name = f'{group_name} Geometry'
+        # Bake only the disposable copy's translation before cleanup. Tiny font
+        # strips can collapse after a Float32 world translation despite having
+        # positive local area; authored transforms and source pivots stay intact.
+        bpy.ops.object.transform_apply(location=True, rotation=False, scale=False)
+        add_cleanup(merged, ngon_method='Clip' if group_name == 'DisplayContent' else 'Beauty')
+        group_node = bpy.data.objects.new(group_name, None); scene.collection.objects.link(group_node); group_node.parent = export_root
+        merged.parent = group_node; group_node['source_collection'] = group_name; export_parts.extend([group_node, merged])
+    bpy.ops.object.select_all(action='DESELECT'); export_root.select_set(True)
+    for part in export_parts: part.select_set(True)
+    bpy.context.view_layer.objects.active = export_root
+    (HERE / 'exports').mkdir(exist_ok=True)
+    bpy.ops.export_scene.gltf(filepath=str(destination or HERE / 'exports/mall-event-booth.glb'), export_format='GLB', use_selection=True, use_active_scene=True, export_apply=True, export_yup=True, export_animations=False, export_texcoords=False, export_extras=True, export_cameras=False, export_lights=False)
+    for part in reversed(export_parts):
+        if part != export_root: bpy.data.objects.remove(part, do_unlink=True)
+    bpy.data.objects.remove(export_root, do_unlink=True)
+
+
+def build(render=True):
     bpy.ops.wm.read_factory_settings(use_empty=True); scene = bpy.context.scene
     scene.unit_settings.system = 'METRIC'; scene.unit_settings.scale_length = 1
     root, groups = make_collections(); p = palette()
@@ -94,31 +151,8 @@ def build():
     # Root metadata, intentionally explicit for source inspection.
     root['units'] = 'metres'; root['origin'] = 'floor centre'; root['poster_replacement'] = 'Replace PosterPanel face geometry and editable headline/subhead text'; root['display_replacement'] = 'Replace DisplayContent collection objects'; root['source'] = 'Original Blender-3D-Gallery event booth'
     for child in root.children: child['editable_content'] = child.name in ('PosterPanel', 'DisplayContent')
-    # Export one evaluated mesh per named collection, preserving named,
-    # independently replaceable nodes.  Do not join across semantic groups.
-    export_root = bpy.data.objects.new('ASSET_MallEventBooth', None); scene.collection.objects.link(export_root)
-    export_parts = [export_root]
-    for group_name in ('BoothStructure', 'PosterPanel', 'DisplayContent'):
-        originals = [o for o in groups[group_name].objects]
-        copies = []
-        for original in originals:
-            c = original.copy(); c.data = original.data.copy(); scene.collection.objects.link(c); c.select_set(True); copies.append(c)
-        for c in copies:
-            bpy.context.view_layer.objects.active = c; c.select_set(True)
-            if c.type == 'FONT': bpy.ops.object.convert(target='MESH')
-        bpy.ops.object.select_all(action='DESELECT')
-        for c in copies: c.select_set(True)
-        bpy.context.view_layer.objects.active = copies[0]; bpy.ops.object.join(); merged = bpy.context.object; merged.name = f'{group_name} Geometry'
-        group_node = bpy.data.objects.new(group_name, None); scene.collection.objects.link(group_node); group_node.parent = export_root
-        merged.parent = group_node; group_node['source_collection'] = group_name; export_parts.extend([group_node, merged])
-    bpy.ops.object.select_all(action='DESELECT'); export_root.select_set(True)
-    for part in export_parts: part.select_set(True)
-    bpy.context.view_layer.objects.active = export_root
-    (HERE / 'exports').mkdir(exist_ok=True)
-    bpy.ops.export_scene.gltf(filepath=str(HERE / 'exports/mall-event-booth.glb'), export_format='GLB', use_selection=True, export_apply=True, export_yup=True, export_animations=False, export_texcoords=False, export_extras=True, export_cameras=False, export_lights=False)
-    for part in reversed(export_parts):
-        if part != export_root: bpy.data.objects.remove(part, do_unlink=True)
-    bpy.data.objects.remove(export_root, do_unlink=True)
+    prepare_asset_geometry()
+    export_asset()
     # Studio lighting and camera stay source-only.
     ground = mat('Studio backdrop', (205, 214, 204), .95); box('Studio floor (not exported)', (0, 0, -.07), (200, 200, .1), ground, 0)
     for name, pos, energy, size in [('Key', (3.5, 4, 5), 850, 4), ('Fill', (-4, 1, 3), 500, 4), ('Rim', (1, -4, 4), 700, 3)]:
@@ -126,6 +160,16 @@ def build():
     bpy.ops.object.camera_add(location=(3.9, 5.8, 3.35)); scene.camera = bpy.context.object; scene.camera.data.type = 'ORTHO'; scene.camera.data.ortho_scale = 3.65; point_at(scene.camera, (0, 0, 1.25))
     world = bpy.data.worlds.new('Studio environment'); world.use_nodes = True; world.node_tree.nodes['Background'].inputs['Color'].default_value = (.25, .31, .28, 1); world.node_tree.nodes['Background'].inputs['Strength'].default_value = .5; scene.world = world
     scene.render.engine = 'BLENDER_EEVEE'; scene.render.resolution_x = scene.render.resolution_y = 768; scene.render.resolution_percentage = 100; scene.render.image_settings.file_format = 'PNG'; scene.render.filepath = str(HERE / 'previews/mall-event-booth.png'); scene.view_settings.look = 'AgX - Medium High Contrast'
-    (HERE / 'sources').mkdir(exist_ok=True); (HERE / 'previews').mkdir(exist_ok=True); bpy.ops.wm.save_as_mainfile(filepath=str(HERE / 'sources/mall-event-booth.blend'), compress=True); bpy.ops.render.render(write_still=True)
+    (HERE / 'sources').mkdir(exist_ok=True); (HERE / 'previews').mkdir(exist_ok=True); bpy.ops.wm.save_as_mainfile(filepath=str(HERE / 'sources/mall-event-booth.blend'), compress=True)
+    if render:
+        bpy.ops.render.render(write_still=True)
 
-if __name__ == '__main__': build()
+if __name__ == '__main__':
+    if '--export-source' in sys.argv:
+        bpy.ops.wm.open_mainfile(filepath=str(HERE / 'sources/mall-event-booth.blend'), load_ui=False, use_scripts=False)
+        export_asset()
+        if '--no-render' not in sys.argv:
+            bpy.context.scene.render.filepath = str(HERE / 'previews/mall-event-booth.png')
+            bpy.ops.render.render(write_still=True)
+    else:
+        build(render='--no-render' not in sys.argv)

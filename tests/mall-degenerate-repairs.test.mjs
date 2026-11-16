@@ -1,3 +1,4 @@
+import '../scripts/node-glb-structure.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -7,7 +8,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { loadCatalog } from '../scripts/catalog.mjs';
 
 // Add each asset only with its verified source/export repair.
-const repairedIds = ['mall-trash-bin', 'mall-directory-kiosk', 'mall-advertising-lightbox'];
+const repairedIds = ['mall-trash-bin', 'mall-directory-kiosk', 'mall-advertising-lightbox', 'mall-waste-sorting-station', 'mall-service-desk', 'mall-display-shelf', 'mall-floor-direction-sign', 'mall-event-booth', 'gjh-areca-planter', 'gjh-m057-premium-wall-shelf-corner', 'escalator', 'atm-kiosk', 'passenger-lift', 'mall-food-court-tray-station', 'mall-wayfinding-ceiling-sign'];
 const catalog = loadCatalog();
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 for (const id of repairedIds) {
@@ -36,7 +37,8 @@ for (const id of repairedIds) {
     const metadata = JSON.parse(fs.readFileSync(asset.metadata));
     const folder = asset.metadata.slice(0, asset.metadata.lastIndexOf('/metadata/'));
     assert.equal(metadata.metrics.sha256, hash(bytes));
-    assert.equal(metadata.source_sha256, hash(fs.readFileSync(folder + '/' + metadata.paths.source)));
+    const source=metadata.paths?.source?folder+'/'+metadata.paths.source:metadata.source;
+    assert.equal(metadata.source_sha256, hash(fs.readFileSync(source)));
     assert.equal(metadata.metrics.zero_area_triangles, 0);
   });
 }

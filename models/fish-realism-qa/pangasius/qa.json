@@ -1,0 +1,48 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "solid adipose-fin material renders much paler than the adjacent textured back"
+      ],
+      "changes": [
+        "convert the profile sRGB pigment to linear values for the solid adipose material",
+        "retain body geometry, barbels and packed texture inputs"
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "pass",
+      "changes": [
+        "matched the solid adipose pigment to the textured back color space",
+        "verified four barbels and one moving adipose fin in source and actual GLB",
+        "checked native desktop/mobile playback"
+      ]
+    }
+  ],
+  "integration_adjustments": [
+    "Use the existing FISH-027 gallery slug pangasius; retain reviewed geometry, materials and action."
+  ],
+  "reviewed_source_sha256": "9aea8e5ed2eb2436f38aaa80fe28c802f7c25a40f4d906fe04552adbffcb410b",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: deep silver-grey scaleless body, darker back, broad rounded head and low-set eyes",
+    "surface": "pass: subtle skin microstructure and a correctly darkened fleshy adipose material",
+    "head": "pass: two short barbel pairs survive source and actual GLB reimport; closed jaw remains below the eye",
+    "fins": "pass: tall front dorsal, separate moving adipose fin, long rear anal and deep forked caudal",
+    "surface_contact": "pass: source and imported GLB fin/barbel roots contact the actual posed body at five phases",
+    "motion": "pass: actual source/GLB retain tail propulsion, stabilizing fins and cyclic endpoints",
+    "browser": "pass: exact draft GLB visibly swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed Pangasianodon hypophthalmus artwork, not a scanned or calibrated specimen.",
+    "Pangasius / Patin is a broad supplied name; explicit visual species retained.",
+    "Draft captions remain baseline."
+  ]
+}

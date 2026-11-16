@@ -1,0 +1,134 @@
+{
+  "release_head": "deafc76cd3d9146c6aee4e6246ac683f24c7a74a",
+  "observed_at": "2026-11-15T11:47:17.978207+00:00",
+  "current_catalog_entries": 567,
+  "new_file_details": [
+    {
+      "path": "models/fish-realism-qa/anchovy/anchovy.blend",
+      "bytes": 8260663,
+      "sha256": "f7df6d75ad1ef10a903da1e5a9096b88621f5210c4a5652b14a7dae846c6d2b9"
+    },
+    {
+      "path": "models/fish-realism-qa/anchovy/model.glb",
+      "bytes": 9662100,
+      "sha256": "847353a1790711b2f52d1ae1e5e6236b6433d96a36d907993d6e15fd0637ebee"
+    },
+    {
+      "path": "models/fish-realism-release/anchovy/model.glb",
+      "bytes": 3662084,
+      "sha256": "fa9c35b4a0cb65ac96650109a54818806527c9e4aa3fb1747b6d38b7be57251b"
+    }
+  ],
+  "added_qa_ids": [
+    "MODEL-1937",
+    "MODEL-1938"
+  ],
+  "catalog_reroutes": [
+    {
+      "qa_id": "MODEL-0510",
+      "model_id": "fish-anchovy",
+      "head": "deafc76cd3d9146c6aee4e6246ac683f24c7a74a",
+      "previous_export_paths": [
+        "models/singapore-fish/anchovy/exports/model.glb"
+      ],
+      "previous_source_candidates": [
+        "models/singapore-fish/anchovy/sources/anchovy.blend"
+      ],
+      "current_export": {
+        "path": "models/fish-realism-release/anchovy/model.glb",
+        "bytes": 3662084,
+        "sha256": "fa9c35b4a0cb65ac96650109a54818806527c9e4aa3fb1747b6d38b7be57251b"
+      },
+      "current_source": {
+        "path": "models/fish-realism-qa/anchovy/anchovy.blend",
+        "bytes": 8260663,
+        "sha256": "f7df6d75ad1ef10a903da1e5a9096b88621f5210c4a5652b14a7dae846c6d2b9"
+      },
+      "historical_qa_id": "MODEL-1937",
+      "status": "PENDING",
+      "evidence": "discovery-reconciliation-deafc76c.json"
+    }
+  ],
+  "historical_exports_preserved_as_pending_records": true,
+  "modified_file_details": [
+    {
+      "path": "models/fish-realism-qa/crimson-snapper/crimson-snapper.blend",
+      "bytes": 10511315,
+      "sha256": "0bcad96bd785f31047700196eea5bce99be20515d0c1c26bce894d004f5ccb06"
+    },
+    {
+      "path": "models/fish-realism-qa/crimson-snapper/model.glb",
+      "bytes": 11885596,
+      "sha256": "7d996fb84a18e49c2963da5bcb69f92a1b38cc17f4a9a29c8ca11514e9d03882"
+    },
+    {
+      "path": "models/fish-realism-qa/fourfinger-threadfin/fourfinger-threadfin.blend",
+      "bytes": 8478852,
+      "sha256": "dd7961d0190d2fba8365bf05bca2239bfbdee687eeccf5d6117756e179aa9074"
+    },
+    {
+      "path": "models/fish-realism-qa/fourfinger-threadfin/model.glb",
+      "bytes": 10203992,
+      "sha256": "cd683689db47104cb891bcb4ac3ae3b9a0f9ab90c8daecbdc198347df511c367"
+    },
+    {
+      "path": "models/fish-realism-qa/scad/model.glb",
+      "bytes": 9965260,
+      "sha256": "de415c28b55dfff9375e57496837c83517390d864111e0869fdf5a1abfdb03c7"
+    },
+    {
+      "path": "models/fish-realism-qa/scad/scad.blend",
+      "bytes": 8435390,
+      "sha256": "5a0324e8e2fb96c7142d65b9eed006618a29d97b7181a550d4138eaa7cb6715a"
+    },
+    {
+      "path": "models/fish-realism-qa/threadfin/model.glb",
+      "bytes": 10232516,
+      "sha256": "f65c0d51098d075f3d89c442bb69f675a7633cde31389673f08a9f559d974433"
+    },
+    {
+      "path": "models/fish-realism-qa/threadfin/threadfin.blend",
+      "bytes": 8517146,
+      "sha256": "8b49b40a203cd33366ba63746f1b3fdf1a5cf9618fa4fee138128c457fd54c79"
+    },
+    {
+      "path": "models/fish-realism-release/crimson-snapper/model.glb",
+      "bytes": 4274552,
+      "sha256": "86fde26ded791e264f7db7f6045032ba9fea0d98916d69b4fcff288b1617bdca"
+    },
+    {
+      "path": "models/fish-realism-release/fourfinger-threadfin/model.glb",
+      "bytes": 4157640,
+      "sha256": "6e19e9dff47a0103823b1e6f1b68cba44ee654890f0726671fb7d8b0bc35518a"
+    },
+    {
+      "path": "models/fish-realism-release/scad/model.glb",
+      "bytes": 3914596,
+      "sha256": "184383467f3363fe7442b73820e00e997ce45e2e5b5f811a26a797cbf9114a93"
+    },
+    {
+      "path": "models/fish-realism-release/silver-pomfret/model.glb",
+      "bytes": 3685720,
+      "sha256": "68e3acfc7fee0605cb37e4880de3eefa9fbfea69927d898e5ab1b7ca68836655"
+    },
+    {
+      "path": "models/fish-realism-release/threadfin/model.glb",
+      "bytes": 4155888,
+      "sha256": "2fad01565832ac891d9f2de02bfc0cc2dbb3b2cb51aef734e5a5b2b3b8b1623f"
+    }
+  ],
+  "modified_existing_qa_ids": [
+    "MODEL-0499",
+    "MODEL-0504",
+    "MODEL-0505",
+    "MODEL-0506",
+    "MODEL-0507",
+    "MODEL-1923",
+    "MODEL-1930",
+    "MODEL-1931",
+    "MODEL-1932"
+  ],
+  "application_change": "Anchovy catalogue entry rerouted; four fish QA source/export pairs and five release GLBs revised. Browser helpers add optional explicit Chrome/backend configuration while default launch options and animation assertions remain. Application code and accepted billiards inputs remain unchanged. Changed-input static and original motion regression is required for active MODEL-0012. All affected models remain PENDING for campaign deep QA.",
+  "all_additions_pending": true,
+  "all_existing_ids_and_statuses_preserved": true
+}

@@ -1,0 +1,24 @@
+{
+  "verified_at": "2026-11-15T13:39:15.299843+00:00",
+  "job_id": "e821e06a-9b85-4710-816d-bb2f84809c27",
+  "job_state": "SUCCEEDED",
+  "prepare_job": "ce8dff66-f99e-486b-8c90-560f079924b6",
+  "qa_commit": "2f0867ec85c43ddfa04a71a308b31926acdce217",
+  "source_snapshot_head": "2f0867ec85c43ddfa04a71a308b31926acdce217",
+  "source_snapshot_dirty": false,
+  "environment": {
+    "platform": "linux",
+    "arch": "arm64",
+    "node": "v24.21.0"
+  },
+  "archive_bytes": 598003,
+  "archive_sha256": "3226d149d0e94695880a49e85f75fd8e17e0ca7b0a4dbeece1ce80e29d8454ef",
+  "artifact_hashes_verified": 18,
+  "published_script_hashes_verified": 4,
+  "production_profiles_passed": 4,
+  "actual_downloaded_geometry_tests_passed": 5,
+  "both_actual_payloads_match_originals": true,
+  "visual_primary_review": "Primary inspected four actual production loaded PNGs and both candidate full-page PNGs. Clear green Ball06/numeral6, complete assembly and readable desktop/tablet controls;no evident display regression.",
+  "local_raw_evidence": "output/model-qa/MODEL-0012/remote-live-evidence",
+  "physical_mobile": "Excluded by owner;no physical-device FPS claim."
+}

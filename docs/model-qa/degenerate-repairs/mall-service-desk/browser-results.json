@@ -1,0 +1,144 @@
+{
+  "passed": true,
+  "browserVersion": "156.0.8078.4",
+  "environment": "Built deployment subpath, Chromium/SwiftShader, localhost, reduced motion, service workers blocked",
+  "results": [
+    {
+      "test": "discovery",
+      "width": 1440,
+      "passed": true,
+      "decodedThumbnails": 1,
+      "eagerGlbRequests": 0
+    },
+    {
+      "test": "viewer",
+      "id": "mall-service-desk",
+      "width": 1440,
+      "passed": true,
+      "glbSha256": "3a737922fda795a2995fd3fb47122140b06c8f22f9185bac6e2c465ca23a5a2a",
+      "glbBytes": 245748,
+      "canvasBounds": {
+        "x": 191,
+        "y": 102,
+        "width": 1058,
+        "height": 495
+      },
+      "images": {
+        "initial": "92370b33fd8e3a9518f333b584c22366efdf5e287a1cab09e761a64950f68c41",
+        "rotated": "6f7abe2453c1e3cd4815c0ae7d7c903655a50ea826dfbbb1e024cc1f943a89a6",
+        "zoomed": "03edcf9ff712ecf011014d0c75a08e575473d932f1a93621ea45a3577594e978",
+        "reset": "e9721a9a72e895e60ffda7dcd54c742fae2a9932b737c67869b32379195be608"
+      },
+      "glbResponses": 3,
+      "consumedGlbs": [
+        {
+          "sha256": "3a737922fda795a2995fd3fb47122140b06c8f22f9185bac6e2c465ca23a5a2a",
+          "bytes": 245748,
+          "version": 2,
+          "declaredBytes": 245748
+        },
+        {
+          "sha256": "3a737922fda795a2995fd3fb47122140b06c8f22f9185bac6e2c465ca23a5a2a",
+          "bytes": 245748,
+          "version": 2,
+          "declaredBytes": 245748
+        }
+      ],
+      "errors": [],
+      "interactionChecksPassed": true
+    },
+    {
+      "test": "discovery",
+      "width": 768,
+      "passed": true,
+      "decodedThumbnails": 1,
+      "eagerGlbRequests": 0
+    },
+    {
+      "test": "viewer",
+      "id": "mall-service-desk",
+      "width": 768,
+      "passed": true,
+      "glbSha256": "3a737922fda795a2995fd3fb47122140b06c8f22f9185bac6e2c465ca23a5a2a",
+      "glbBytes": 245748,
+      "canvasBounds": {
+        "x": 20,
+        "y": 102,
+        "width": 728,
+        "height": 563.1875
+      },
+      "images": {
+        "initial": "961c98b8f613e95f691a44a3bada865f587853b7b8f0fbb04039fbc2e18081e6",
+        "rotated": "8ce4a6c4419f940040e39ae1a14ca6e6d3c362afb250b6b9a5f760f5e1e7114e",
+        "zoomed": "54e307922dd8a8e30da85ee0fa02d6eecce775ce9109226c199f4686a9baca78",
+        "reset": "884d30842b117c2fdd1e17ec290e4320df12268e192f9dc7dec52c86b0954f13"
+      },
+      "glbResponses": 3,
+      "consumedGlbs": [
+        {
+          "sha256": "3a737922fda795a2995fd3fb47122140b06c8f22f9185bac6e2c465ca23a5a2a",
+          "bytes": 245748,
+          "version": 2,
+          "declaredBytes": 245748
+        },
+        {
+          "sha256": "3a737922fda795a2995fd3fb47122140b06c8f22f9185bac6e2c465ca23a5a2a",
+          "bytes": 245748,
+          "version": 2,
+          "declaredBytes": 245748
+        }
+      ],
+      "errors": [],
+      "interactionChecksPassed": true
+    },
+    {
+      "test": "discovery",
+      "width": 390,
+      "passed": true,
+      "decodedThumbnails": 1,
+      "eagerGlbRequests": 0
+    },
+    {
+      "test": "viewer",
+      "id": "mall-service-desk",
+      "width": 390,
+      "passed": true,
+      "glbSha256": "3a737922fda795a2995fd3fb47122140b06c8f22f9185bac6e2c465ca23a5a2a",
+      "glbBytes": 245748,
+      "canvasBounds": {
+        "x": 20,
+        "y": 94,
+        "width": 350,
+        "height": 371.359375
+      },
+      "images": {
+        "initial": "e12a8bc4d3043296bd23eee20b4d61587dc69dcedbc3f479285cc4e353f67611",
+        "rotated": "feb809b4c04fa8db0cb7f5aae366c29429428baf25545605c89e4936d8ae233d",
+        "zoomed": "a366db46aca9d38fecdace1cd2b3e10f796257dcb972ae229fa553b822285b0d",
+        "reset": "0e0cc9686cfc9be05f02ad34c68ed2f4bb1e60d3a602cf1dc5f565bdac311c84"
+      },
+      "glbResponses": 3,
+      "consumedGlbs": [
+        {
+          "sha256": "3a737922fda795a2995fd3fb47122140b06c8f22f9185bac6e2c465ca23a5a2a",
+          "bytes": 245748,
+          "version": 2,
+          "declaredBytes": 245748
+        },
+        {
+          "sha256": "3a737922fda795a2995fd3fb47122140b06c8f22f9185bac6e2c465ca23a5a2a",
+          "bytes": 245748,
+          "version": 2,
+          "declaredBytes": 245748
+        }
+      ],
+      "errors": [],
+      "interactionChecksPassed": true
+    }
+  ],
+  "limitations": [
+    "Canvas bounds are measured; final artistic framing and clipping require review of the saved model screenshots.",
+    "Keyboard orbit/zoom are exercised; physical touch gestures and mobile GPU performance are not measured.",
+    "Hidden download controls do not prevent retrieval of a publicly rendered GLB or grant redistribution rights."
+  ]
+}

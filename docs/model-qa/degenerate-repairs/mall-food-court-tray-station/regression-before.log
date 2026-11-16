@@ -1,0 +1,40 @@
+✔ mall-trash-bin: repaired delivered geometry contains no zero-area triangles (14.931125ms)
+✔ mall-directory-kiosk: repaired delivered geometry contains no zero-area triangles (5.71ms)
+✔ mall-advertising-lightbox: repaired delivered geometry contains no zero-area triangles (5.855459ms)
+✔ mall-waste-sorting-station: repaired delivered geometry contains no zero-area triangles (7.143042ms)
+✔ mall-service-desk: repaired delivered geometry contains no zero-area triangles (4.31375ms)
+✔ mall-display-shelf: repaired delivered geometry contains no zero-area triangles (2.511583ms)
+✔ mall-floor-direction-sign: repaired delivered geometry contains no zero-area triangles (7.864834ms)
+✔ mall-event-booth: repaired delivered geometry contains no zero-area triangles (3.448625ms)
+✔ gjh-areca-planter: repaired delivered geometry contains no zero-area triangles (3.650208ms)
+✔ gjh-m057-premium-wall-shelf-corner: repaired delivered geometry contains no zero-area triangles (39.7645ms)
+✔ escalator: repaired delivered geometry contains no zero-area triangles (44.941166ms)
+✔ atm-kiosk: repaired delivered geometry contains no zero-area triangles (3.881917ms)
+✔ passenger-lift: repaired delivered geometry contains no zero-area triangles (7.946208ms)
+✖ mall-food-court-tray-station: repaired delivered geometry contains no zero-area triangles (6.124583ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 13
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 946.890333
+
+✖ failing tests:
+
+test at tests/mall-degenerate-repairs.test.mjs:15:3
+✖ mall-food-court-tray-station: repaired delivered geometry contains no zero-area triangles (6.124583ms)
+  AssertionError [ERR_ASSERTION]: mall-food-court-tray-station: actual GLB must contain no zero-area triangles
+  
+  2 !== 0
+  
+      at TestContext.<anonymous> (file:///private/tmp/blender-mall-degenerate-44yfvxbl/worktree/tests/mall-degenerate-repairs.test.mjs:36:12)
+      at async Test.run (node:internal/test_runner/test:1054:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:744:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 0,
+    operator: 'strictEqual'
+  }

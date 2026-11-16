@@ -1,0 +1,140 @@
+{
+  "release_head": "a9887b392f6941063611d70d21c87a4f486728ec",
+  "observed_at": "2026-11-15T12:14:35.353420+00:00",
+  "current_catalog_entries": 567,
+  "new_file_details": [
+    {
+      "path": "models/fish-realism-qa/red-tilapia/model.glb",
+      "bytes": 12410512,
+      "sha256": "1879f3a88692bc135f1b1895b7e5178eee0fcea5ff980c53d2309bffa07d5435"
+    },
+    {
+      "path": "models/fish-realism-qa/red-tilapia/red-tilapia.blend",
+      "bytes": 11009337,
+      "sha256": "472dd2bc8398f98a7b07203f9bb499d13a38a7d2aae7c8e480c0053bb8a8d8d7"
+    },
+    {
+      "path": "models/fish-realism-qa/tilapia/model.glb",
+      "bytes": 12669136,
+      "sha256": "e58bc475a2fd35eaffd8d233a37fa629d5544deb4008b1cfb470991e3c7bf826"
+    },
+    {
+      "path": "models/fish-realism-qa/tilapia/tilapia.blend",
+      "bytes": 11311011,
+      "sha256": "5ead021f476e30ca5f7852eda0234a5e18594336c3f18fbcbb6cf244d7cad7d1"
+    },
+    {
+      "path": "models/fish-realism-qa/trevally/model.glb",
+      "bytes": 11905948,
+      "sha256": "6fb84a163f977f49d490dd199997448baf78703ca4480ba6cf2ab6348549dc44"
+    },
+    {
+      "path": "models/fish-realism-qa/trevally/trevally.blend",
+      "bytes": 10552764,
+      "sha256": "066d5e35d9586e1deebca6015630d6318497f687b58895ae4605913aa6fe4f67"
+    },
+    {
+      "path": "models/fish-realism-release/red-tilapia/model.glb",
+      "bytes": 4568692,
+      "sha256": "894d92c39f0a88ebe86f96c12bb5555a7d6f182dcb5f9b07a82669d44ba4832a"
+    },
+    {
+      "path": "models/fish-realism-release/tilapia/model.glb",
+      "bytes": 4569980,
+      "sha256": "01d865c17205d7a403989ed637f1ff0ec5513412f5800687c522782964191681"
+    },
+    {
+      "path": "models/fish-realism-release/trevally/model.glb",
+      "bytes": 4264844,
+      "sha256": "3fe643aa5a7a2b4cb7fb939efef1baace17101d567f3ba651eeafdd5268ff45a"
+    }
+  ],
+  "added_qa_ids": [
+    "MODEL-1948",
+    "MODEL-1949",
+    "MODEL-1950",
+    "MODEL-1951",
+    "MODEL-1952",
+    "MODEL-1953"
+  ],
+  "catalog_reroutes": [
+    {
+      "qa_id": "MODEL-0514",
+      "model_id": "fish-trevally",
+      "head": "a9887b392f6941063611d70d21c87a4f486728ec",
+      "previous_export_paths": [
+        "models/singapore-fish/trevally/exports/model.glb"
+      ],
+      "previous_source_candidates": [
+        "models/singapore-fish/trevally/sources/trevally.blend"
+      ],
+      "current_export": {
+        "path": "models/fish-realism-release/trevally/model.glb",
+        "bytes": 4264844,
+        "sha256": "3fe643aa5a7a2b4cb7fb939efef1baace17101d567f3ba651eeafdd5268ff45a"
+      },
+      "current_source": {
+        "path": "models/fish-realism-qa/trevally/trevally.blend",
+        "bytes": 10552764,
+        "sha256": "066d5e35d9586e1deebca6015630d6318497f687b58895ae4605913aa6fe4f67"
+      },
+      "historical_qa_id": "MODEL-1948",
+      "status": "PENDING",
+      "evidence": "discovery-reconciliation-a9887b39.json"
+    },
+    {
+      "qa_id": "MODEL-0515",
+      "model_id": "fish-red-tilapia",
+      "head": "a9887b392f6941063611d70d21c87a4f486728ec",
+      "previous_export_paths": [
+        "models/singapore-fish/red-tilapia/exports/model.glb"
+      ],
+      "previous_source_candidates": [
+        "models/singapore-fish/red-tilapia/sources/red-tilapia.blend"
+      ],
+      "current_export": {
+        "path": "models/fish-realism-release/red-tilapia/model.glb",
+        "bytes": 4568692,
+        "sha256": "894d92c39f0a88ebe86f96c12bb5555a7d6f182dcb5f9b07a82669d44ba4832a"
+      },
+      "current_source": {
+        "path": "models/fish-realism-qa/red-tilapia/red-tilapia.blend",
+        "bytes": 11009337,
+        "sha256": "472dd2bc8398f98a7b07203f9bb499d13a38a7d2aae7c8e480c0053bb8a8d8d7"
+      },
+      "historical_qa_id": "MODEL-1949",
+      "status": "PENDING",
+      "evidence": "discovery-reconciliation-a9887b39.json"
+    },
+    {
+      "qa_id": "MODEL-0516",
+      "model_id": "fish-tilapia",
+      "head": "a9887b392f6941063611d70d21c87a4f486728ec",
+      "previous_export_paths": [
+        "models/singapore-fish/tilapia/exports/model.glb"
+      ],
+      "previous_source_candidates": [
+        "models/singapore-fish/tilapia/sources/tilapia.blend"
+      ],
+      "current_export": {
+        "path": "models/fish-realism-release/tilapia/model.glb",
+        "bytes": 4569980,
+        "sha256": "01d865c17205d7a403989ed637f1ff0ec5513412f5800687c522782964191681"
+      },
+      "current_source": {
+        "path": "models/fish-realism-qa/tilapia/tilapia.blend",
+        "bytes": 11311011,
+        "sha256": "5ead021f476e30ca5f7852eda0234a5e18594336c3f18fbcbb6cf244d7cad7d1"
+      },
+      "historical_qa_id": "MODEL-1950",
+      "status": "PENDING",
+      "evidence": "discovery-reconciliation-a9887b39.json"
+    }
+  ],
+  "historical_exports_preserved_as_pending_records": true,
+  "modified_file_details": [],
+  "modified_existing_qa_ids": [],
+  "application_change": "Trevally/tilapia/red-tilapia catalogue entries rerouted with historical original exports preserved. Nine new fish source/export artifacts are recorded. Application/viewer code, validation tools, tests and accepted billiards inputs are unchanged. Changed-input build and runtime regression are required for active MODEL-0012 integration; these future models remain PENDING for individual deep campaign QA.",
+  "all_additions_pending": true,
+  "all_existing_ids_and_statuses_preserved": true
+}

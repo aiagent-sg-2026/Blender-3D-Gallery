@@ -1,0 +1,61 @@
+{
+  "id": "mall-solid-wall",
+  "name": "Mall Solid Wall",
+  "summary": "A 1.2 m modular solid wall with limestone-coloured panels and dark skirting.",
+  "description": "A 3 m high original architectural wall module aligned to the existing mall floor and ceiling grid.",
+  "category": "Shopping Mall",
+  "tags": [
+    "mall",
+    "wall",
+    "architecture",
+    "modular",
+    "original",
+    "metres"
+  ],
+  "status": "draft",
+  "created": "2026-11-15",
+  "author": "Yap Wei Jun project / agent-assisted procedural modeling",
+  "blender_version": "5.1.2",
+  "creation_method": "Original deterministic Blender geometry and Principled materials; no external models or textures.",
+  "generator": "generate.py",
+  "paths": {
+    "source": "sources/mall-solid-wall.blend",
+    "glb": "exports/mall-solid-wall.glb",
+    "preview": "previews/mall-solid-wall.jpg",
+    "render": "previews/mall-solid-wall.png"
+  },
+  "display": {
+    "previewRotationY": 0,
+    "previewCameraDirection": [
+      0.8,
+      0.35,
+      1
+    ]
+  },
+  "assembly": {
+    "gltf_dimensions_m": [
+      1.2,
+      3,
+      0.12
+    ],
+    "pitch_m": 1.2,
+    "origin": "bottom centre; Blender +Z / glTF +Y up, front glTF +Z",
+    "connectors": "x = -0.6 and +0.6 m; place successive roots 1.2 m apart"
+  },
+  "rights": "Original geometry and materials created for the owner project. Public redistribution terms not specified.",
+  "accuracy_notes": "Visual modular wall only. No structural, fire, acoustic, accessibility or construction certification.",
+  "attribution": [
+    {
+      "credit": "Original geometry and materials created for Blender-3D-Gallery."
+    }
+  ],
+  "quality_gate": {
+    "overall": "NEEDS REVIEW",
+    "scope": "Static exported geometry and local preview only; no physical device, full assembly collision or construction assessment."
+  },
+  "sha256": {
+    "source": "4ceaeb7de35f414811eabd84e7478c986b0b1cd13b3dbd5dcfa63c767fc8f46c",
+    "glb": "4e42b9f7c84e5f769a5940485ef2af81ee667fc03579d56f4065788c4d840708",
+    "preview": "cca5b2c3c9bd061b0c8ba55f66ac7464844a8fde2c8251b74bf58bdcaf8d7146"
+  }
+}

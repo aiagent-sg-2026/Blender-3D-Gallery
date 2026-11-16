@@ -1,0 +1,52 @@
+{
+  "source_sha": "ea9ed61873cd88c02436bf590c06c3e55df9d78a",
+  "base_full_regression_sha": "1e94207991e702451ce931d3f76d30925a903453",
+  "application_catalog_billiards_and_original_browser_scripts_unchanged": true,
+  "latest_units_passed": 682,
+  "latest_build_catalog_entries": 567,
+  "additional_browser_profiles_passed": 6,
+  "actual_download_hashes_verified": 3,
+  "source_files_verified": 20026,
+  "artifact_files_verified": 31,
+  "job_id": "50810849-b777-478f-a971-a8ae67340955",
+  "job_status": "SUCCEEDED",
+  "evidence_tar": {
+    "bytes": 2256312,
+    "sha256": "89b29900f2ec4a59910c16e90c1cd86055f148b65a7cdcdaee96a597af0454cc"
+  },
+  "artifact_relocations": [
+    {
+      "original": "source-manifest.json",
+      "stored": "upstream-source-manifest.json.gz",
+      "encoding": "gzip",
+      "decoded_sha256": "d3600bcf16f47a5804538332d021d8b90a51c9afcb3768eaf8422e3404b41069"
+    },
+    {
+      "original": "runtime.log",
+      "stored": "upstream-runtime.log.gz",
+      "encoding": "gzip",
+      "decoded_sha256": "777e762aff3547f72c1847b770322e3716bb08a2895af745f0c44e0946549025"
+    },
+    {
+      "original": "build.log",
+      "stored": "upstream-remote-build.log.gz",
+      "encoding": "gzip",
+      "decoded_sha256": "529dced9c02756fbeaef32240f470678deb862098248b7cceba1d1803730bb40"
+    }
+  ],
+  "affected_models_remain_pending": [
+    "MODEL-0068",
+    "MODEL-0069",
+    "MODEL-0070"
+  ],
+  "full_latest_commit_suite": "Required post-publication Actions will run the complete unfiltered release suite; no claim of a second full Game/experience run at ea9ed618.",
+  "latest_main_sync": {
+    "head": "fd087c2dfdeaa08c37b21ef11c52fbbc2eabf57b",
+    "fresh_units": 682,
+    "catalog_entries": 567,
+    "identical_build_files": 1197,
+    "new_uncatalogued_artifacts_pending": 11,
+    "queue_records": 1903,
+    "equivalence_evidence": "latest-main-equivalence.json.gz"
+  }
+}

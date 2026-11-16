@@ -1,0 +1,38 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "The spiny/soft dorsal junction had a height step and the scale rims were too pale."
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "pass",
+      "changes": [
+        "Match both dorsal sections at the junction and strengthen varied turquoise rims; inspect the final full-body/head renders and actual source/GLB/browser gates."
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "3a8111957ac3171a7e326c5e30ad61b38d7b927a41bc48d62fa9f0df29826480",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: initial-phase olive-yellow body, subdued flank bars, continuous low dorsal and forked caudal",
+    "surface": "pass: varied scales with turquoise edges, original blue facial and fin-margin pigment",
+    "head": "pass: thick lips with two small original fused dental plates projected onto the real snout",
+    "fins": "pass: dorsal junction corrected and paired membranes retain surface roots",
+    "surface_contact": "pass: current source and imported GLB retain five-phase contact",
+    "motion": "pass: local-hinge pectoral fanning and body/tail cycle survive real GLB import with matching endpoints",
+    "browser": "pass: exact draft GLB swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed initial-phase Scarus ghobban artwork, not a scan or measured specimen.",
+    "Colour phases vary; fine dentition and fin rays are simplified. Movement is artist-tuned."
+  ]
+}

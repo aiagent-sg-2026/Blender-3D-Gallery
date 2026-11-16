@@ -1,0 +1,3120 @@
+{
+  "storedHairVertices": 2122,
+  "weldedHairVertices": 1433,
+  "hairTriangles": 2802,
+  "weldEpsilonM": 1e-07,
+  "shellConnectivity": "Triangle edge-connected after positional welding; point contacts alone do not merge shells. Intersections without coincident vertices do not merge shells.",
+  "shellCount": 16,
+  "closedShellCount": 16,
+  "shells": [
+    {
+      "id": "hair-shell-000",
+      "sourceFaceRange": [
+        0,
+        1389
+      ],
+      "sourceFacesContiguous": true,
+      "sourceNodes": [
+        "Swept_hair"
+      ],
+      "vertices": 697,
+      "triangles": 1390,
+      "closedManifold": true,
+      "boundaryEdges": 0,
+      "nonmanifoldEdges": 0,
+      "inconsistentOrientedEdges": 0,
+      "badVertexLinks": 0,
+      "collapsedAfterWeld": 0,
+      "zeroAreaTriangles": 0,
+      "duplicateFaces": 0,
+      "eulerCharacteristic": 2,
+      "signedVolumeM3": 0.0432463531516832,
+      "surfaceAreaM2": 1.0757223118729224,
+      "boundsGlTF": [
+        [
+          -0.26141124963760376,
+          0.8057967364318684,
+          -0.28975605683128186
+        ],
+        [
+          0.27121517062187195,
+          1.30000004516883,
+          0.25883065030266267
+        ]
+      ],
+      "graphDiameterApproxM": 0.8837348954933323,
+      "geodesicEndProfiles": [
+        {
+          "end": "A",
+          "weldedVertex": 485,
+          "worldGlTFXYZ": [
+            0.10386829823255539,
+            0.9606901469518894,
+            -0.23726323986158496
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.025,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.059732292446701675,
+              "centroid": [
+                0.11094287003809256,
+                0.9601545020942128,
+                -0.2347609710519283
+              ],
+              "points": 7
+            },
+            {
+              "fraction": 0.05,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.11183077196830654,
+              "centroid": [
+                0.11801652609533643,
+                0.9628939480338405,
+                -0.2320948284411982
+              ],
+              "points": 18
+            },
+            {
+              "fraction": 0.1,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.20324708066725472,
+              "centroid": [
+                0.1146385588782,
+                0.9737345618510509,
+                -0.21984664684289815
+              ],
+              "points": 32
+            },
+            {
+              "fraction": 0.2,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.34694533729982935,
+              "centroid": [
+                0.08000378191028237,
+                0.9809272292164748,
+                -0.1864698195674216
+              ],
+              "points": 54
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        },
+        {
+          "end": "B",
+          "weldedVertex": 171,
+          "worldGlTFXYZ": [
+            -0.137872576713562,
+            1.1592132670810378,
+            0.2395865884779031
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.975,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.05414072206545905,
+              "centroid": [
+                -0.13734505018026782,
+                1.158577586740798,
+                0.22622781828521613
+              ],
+              "points": 10
+            },
+            {
+              "fraction": 0.95,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.10743301256583633,
+              "centroid": [
+                -0.13020772085462265,
+                1.149894381161008,
+                0.22016294171837114
+              ],
+              "points": 17
+            },
+            {
+              "fraction": 0.9,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.20101669390365637,
+              "centroid": [
+                -0.1108772896229364,
+                1.1382705225843646,
+                0.20703167034286865
+              ],
+              "points": 30
+            },
+            {
+              "fraction": 0.8,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.3501200178386757,
+              "centroid": [
+                -0.09073169010755,
+                1.1310698450075802,
+                0.161968265173857
+              ],
+              "points": 57
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        }
+      ],
+      "poleCandidates": [],
+      "poleCandidateCount": 0,
+      "tipAcceptance": "NOT_CERTIFIED_BY_TOPOLOGY: requires named loft correspondence and fixed-view geometric/visual endpoint proof.",
+      "lockIdentifier": "Recessed foundation",
+      "identifierMapping": "node lockNames order + disjoint contiguous source triangle ranges; verify against native Sculpt piece"
+    },
+    {
+      "id": "hair-shell-001",
+      "sourceFaceRange": [
+        1390,
+        1439
+      ],
+      "sourceFacesContiguous": true,
+      "sourceNodes": [
+        "Swept_hair"
+      ],
+      "vertices": 27,
+      "triangles": 50,
+      "closedManifold": true,
+      "boundaryEdges": 0,
+      "nonmanifoldEdges": 0,
+      "inconsistentOrientedEdges": 0,
+      "badVertexLinks": 0,
+      "collapsedAfterWeld": 0,
+      "zeroAreaTriangles": 0,
+      "duplicateFaces": 0,
+      "eulerCharacteristic": 2,
+      "signedVolumeM3": 0.00012011763282965461,
+      "surfaceAreaM2": 0.01891131484137004,
+      "boundsGlTF": [
+        [
+          -0.05501855909824371,
+          1.020399164169973,
+          -0.29787513421681716
+        ],
+        [
+          0.03891352564096451,
+          1.1671386587116002,
+          -0.23164620473856895
+        ]
+      ],
+      "graphDiameterApproxM": 0.18090563500393522,
+      "geodesicEndProfiles": [
+        {
+          "end": "A",
+          "weldedVertex": 698,
+          "worldGlTFXYZ": [
+            -0.033360108733177185,
+            1.160575948382248,
+            -0.23397445180125068
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.025,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.011605644048030902,
+              "centroid": [
+                -0.030506258674041553,
+                1.1594785529068603,
+                -0.23541219973502686
+              ],
+              "points": 5
+            },
+            {
+              "fraction": 0.05,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.023211288096061683,
+              "centroid": [
+                -0.026007683949203317,
+                1.157819356175528,
+                -0.23490416244493836
+              ],
+              "points": 8
+            },
+            {
+              "fraction": 0.1,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.039467780305158275,
+              "centroid": [
+                -0.022443159764617256,
+                1.154664206620827,
+                -0.24054161827803347
+              ],
+              "points": 10
+            },
+            {
+              "fraction": 0.2,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.06272076416242381,
+              "centroid": [
+                -0.02088630712654029,
+                1.139121921723874,
+                -0.24780720593974365
+              ],
+              "points": 10
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        },
+        {
+          "end": "B",
+          "weldedVertex": 723,
+          "worldGlTFXYZ": [
+            0.03891352564096451,
+            1.020399164169973,
+            -0.2971508482265677
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.975,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.004714446284838727,
+              "centroid": [
+                0.035744422379084116,
+                1.0240297744923168,
+                -0.29626235699538045
+              ],
+              "points": 5
+            },
+            {
+              "fraction": 0.95,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.009376554183260331,
+              "centroid": [
+                0.03230894996974557,
+                1.0276668688438055,
+                -0.2948330222509152
+              ],
+              "points": 10
+            },
+            {
+              "fraction": 0.9,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.016370139794131027,
+              "centroid": [
+                0.027633478231302595,
+                1.0345754552747812,
+                -0.29305603519242557
+              ],
+              "points": 10
+            },
+            {
+              "fraction": 0.8,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.03064102930456957,
+              "centroid": [
+                0.017486203304910387,
+                1.048257284540352,
+                -0.2882110599523836
+              ],
+              "points": 10
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        }
+      ],
+      "poleCandidates": [
+        {
+          "weldedVertex": 723,
+          "worldGlTFXYZ": [
+            0.03891352564096451,
+            1.020399164169973,
+            -0.2971508482265677
+          ],
+          "worldBlenderXYZ": [
+            0.03891352564096451,
+            0.2971508482265677,
+            1.020399164169973
+          ],
+          "valence": 5,
+          "oneRingPlaneResidualM": 1.437021373849057e-08,
+          "oneRingAxialDepthM": 0.010173756708891165,
+          "oneRingRadiusM": 0.004012829067419048,
+          "depthRadiusRatio": 2.5353077686497807,
+          "fanHalfAngleDeg": 21.525735427407888,
+          "angleDefectRadians": 4.178747635967438
+        }
+      ],
+      "poleCandidateCount": 1,
+      "tipAcceptance": "NOT_CERTIFIED_BY_TOPOLOGY: requires named loft correspondence and fixed-view geometric/visual endpoint proof.",
+      "lockIdentifier": "Occipital sweep",
+      "identifierMapping": "node lockNames order + disjoint contiguous source triangle ranges; verify against native Sculpt piece"
+    },
+    {
+      "id": "hair-shell-002",
+      "sourceFaceRange": [
+        1440,
+        1489
+      ],
+      "sourceFacesContiguous": true,
+      "sourceNodes": [
+        "Swept_hair"
+      ],
+      "vertices": 27,
+      "triangles": 50,
+      "closedManifold": true,
+      "boundaryEdges": 0,
+      "nonmanifoldEdges": 0,
+      "inconsistentOrientedEdges": 0,
+      "badVertexLinks": 0,
+      "collapsedAfterWeld": 0,
+      "zeroAreaTriangles": 0,
+      "duplicateFaces": 0,
+      "eulerCharacteristic": 2,
+      "signedVolumeM3": 0.00014219683432485224,
+      "surfaceAreaM2": 0.020881412671509083,
+      "boundsGlTF": [
+        [
+          -0.10581254959106445,
+          1.0578714152231647,
+          -0.2861295318471311
+        ],
+        [
+          -0.03603104129433632,
+          1.222518649878327,
+          -0.18969068661774016
+        ]
+      ],
+      "graphDiameterApproxM": 0.20406065838545542,
+      "geodesicEndProfiles": [
+        {
+          "end": "A",
+          "weldedVertex": 725,
+          "worldGlTFXYZ": [
+            -0.07616284489631653,
+            1.2181539206097505,
+            -0.18969068661774016
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.025,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.011426716738236462,
+              "centroid": [
+                -0.07459549729842793,
+                1.21657470881884,
+                -0.19198980269562596
+              ],
+              "points": 5
+            },
+            {
+              "fraction": 0.05,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.022853433476473062,
+              "centroid": [
+                -0.07302814970053932,
+                1.214995497027929,
+                -0.19428891877351176
+              ],
+              "points": 5
+            },
+            {
+              "fraction": 0.1,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.03781211648395677,
+              "centroid": [
+                -0.06968983556977104,
+                1.2104662168914966,
+                -0.1998207268605911
+              ],
+              "points": 10
+            },
+            {
+              "fraction": 0.2,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.05799970607662697,
+              "centroid": [
+                -0.07818794846409043,
+                1.191705921307016,
+                -0.2098075319357555
+              ],
+              "points": 12
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        },
+        {
+          "end": "B",
+          "weldedVertex": 750,
+          "worldGlTFXYZ": [
+            -0.03603104129433632,
+            1.0578714152231647,
+            -0.2861295318471311
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.975,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.00457529134475661,
+              "centroid": [
+                -0.03929425086693813,
+                1.0617489253063852,
+                -0.28382153123239623
+              ],
+              "points": 5
+            },
+            {
+              "fraction": 0.95,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.0091505826895131,
+              "centroid": [
+                -0.04331357611543486,
+                1.0656563561804588,
+                -0.2818054822660008
+              ],
+              "points": 8
+            },
+            {
+              "fraction": 0.9,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.015894143211980925,
+              "centroid": [
+                -0.047263364635912526,
+                1.0729565523360627,
+                -0.2765529167939346
+              ],
+              "points": 10
+            },
+            {
+              "fraction": 0.8,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.02934049033146942,
+              "centroid": [
+                -0.056566706814844284,
+                1.0877443963870854,
+                -0.26674146265871446
+              ],
+              "points": 10
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        }
+      ],
+      "poleCandidates": [
+        {
+          "weldedVertex": 750,
+          "worldGlTFXYZ": [
+            -0.03603104129433632,
+            1.0578714152231647,
+            -0.2861295318471311
+          ],
+          "worldBlenderXYZ": [
+            -0.03603104129433632,
+            0.2861295318471311,
+            1.0578714152231647
+          ],
+          "valence": 5,
+          "oneRingPlaneResidualM": 1.4385921957919649e-08,
+          "oneRingAxialDepthM": 0.0117751657235594,
+          "oneRingRadiusM": 0.004096283363341486,
+          "depthRadiusRatio": 2.874597453129798,
+          "fanHalfAngleDeg": 19.18149756298722,
+          "angleDefectRadians": 4.392858986628528
+        }
+      ],
+      "poleCandidateCount": 1,
+      "tipAcceptance": "NOT_CERTIFIED_BY_TOPOLOGY: requires named loft correspondence and fixed-view geometric/visual endpoint proof.",
+      "lockIdentifier": "Upper back right",
+      "identifierMapping": "node lockNames order + disjoint contiguous source triangle ranges; verify against native Sculpt piece"
+    },
+    {
+      "id": "hair-shell-003",
+      "sourceFaceRange": [
+        1490,
+        1601
+      ],
+      "sourceFacesContiguous": true,
+      "sourceNodes": [
+        "Swept_hair"
+      ],
+      "vertices": 58,
+      "triangles": 112,
+      "closedManifold": true,
+      "boundaryEdges": 0,
+      "nonmanifoldEdges": 0,
+      "inconsistentOrientedEdges": 0,
+      "badVertexLinks": 0,
+      "collapsedAfterWeld": 0,
+      "zeroAreaTriangles": 0,
+      "duplicateFaces": 0,
+      "eulerCharacteristic": 2,
+      "signedVolumeM3": 0.00029645021478789257,
+      "surfaceAreaM2": 0.032294076831618154,
+      "boundsGlTF": [
+        [
+          0.05024018511176109,
+          1.0578714152223032,
+          -0.28967544278875224
+        ],
+        [
+          0.1337774693965912,
+          1.2345281523047806,
+          -0.1569082935511276
+        ]
+      ],
+      "graphDiameterApproxM": 0.23287705924226673,
+      "geodesicEndProfiles": [
+        {
+          "end": "A",
+          "weldedVertex": 804,
+          "worldGlTFXYZ": [
+            0.09094211459159851,
+            1.0642493511394397,
+            -0.2836843406025412
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.025,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.020072427797213157,
+              "centroid": [
+                0.08881634554524,
+                1.0662420240986126,
+                -0.284232934817611
+              ],
+              "points": 11
+            },
+            {
+              "fraction": 0.05,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.028200950336544742,
+              "centroid": [
+                0.08915092982718267,
+                1.071181787729973,
+                -0.28309558184495687
+              ],
+              "points": 13
+            },
+            {
+              "fraction": 0.1,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.036466681889696775,
+              "centroid": [
+                0.09640311963677171,
+                1.08445158330214,
+                -0.2810915394483883
+              ],
+              "points": 16
+            },
+            {
+              "fraction": 0.2,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.04698438006190252,
+              "centroid": [
+                0.10011715244908212,
+                1.10578072804468,
+                -0.2736140183468162
+              ],
+              "points": 14
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        },
+        {
+          "end": "B",
+          "weldedVertex": 755,
+          "worldGlTFXYZ": [
+            0.06813685595989227,
+            1.2345281523047806,
+            -0.16099072035088327
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.975,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.015590656796840938,
+              "centroid": [
+                0.06820212900968865,
+                1.2324059538176544,
+                -0.16268916766740132
+              ],
+              "points": 5
+            },
+            {
+              "fraction": 0.95,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.029992543819295135,
+              "centroid": [
+                0.06528236789380072,
+                1.2305122936047714,
+                -0.16523906365077218
+              ],
+              "points": 12
+            },
+            {
+              "fraction": 0.9,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.04499346594577212,
+              "centroid": [
+                0.07389020807323235,
+                1.2234646617033276,
+                -0.172146937964863
+              ],
+              "points": 16
+            },
+            {
+              "fraction": 0.8,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.06136525321310706,
+              "centroid": [
+                0.07857228491580892,
+                1.2080758306608035,
+                -0.1881528461573532
+              ],
+              "points": 16
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        }
+      ],
+      "poleCandidates": [
+        {
+          "weldedVertex": 808,
+          "worldGlTFXYZ": [
+            0.07638581097126007,
+            1.0578714152223032,
+            -0.28821420445863416
+          ],
+          "worldBlenderXYZ": [
+            0.07638581097126007,
+            0.28821420445863416,
+            1.0578714152223032
+          ],
+          "valence": 7,
+          "oneRingPlaneResidualM": 3.227640597465993e-08,
+          "oneRingAxialDepthM": 0.014386613479763064,
+          "oneRingRadiusM": 0.006361136395815271,
+          "depthRadiusRatio": 2.26164203761256,
+          "fanHalfAngleDeg": 23.852935309509704,
+          "angleDefectRadians": 3.8606646701660146
+        }
+      ],
+      "poleCandidateCount": 1,
+      "tipAcceptance": "NOT_CERTIFIED_BY_TOPOLOGY: requires named loft correspondence and fixed-view geometric/visual endpoint proof.",
+      "lockIdentifier": "Back crown",
+      "identifierMapping": "node lockNames order + disjoint contiguous source triangle ranges; verify against native Sculpt piece"
+    },
+    {
+      "id": "hair-shell-004",
+      "sourceFaceRange": [
+        1602,
+        1727
+      ],
+      "sourceFacesContiguous": true,
+      "sourceNodes": [
+        "Swept_hair"
+      ],
+      "vertices": 65,
+      "triangles": 126,
+      "closedManifold": true,
+      "boundaryEdges": 0,
+      "nonmanifoldEdges": 0,
+      "inconsistentOrientedEdges": 0,
+      "badVertexLinks": 0,
+      "collapsedAfterWeld": 0,
+      "zeroAreaTriangles": 0,
+      "duplicateFaces": 0,
+      "eulerCharacteristic": 2,
+      "signedVolumeM3": 0.0005150914257853212,
+      "surfaceAreaM2": 0.04543007580241631,
+      "boundsGlTF": [
+        [
+          0.1958332061767578,
+          0.9833769879401366,
+          -0.12250555982427284
+        ],
+        [
+          0.2988044023513794,
+          1.1646118985348552,
+          0.08807987779909485
+        ]
+      ],
+      "graphDiameterApproxM": 0.2809145676008489,
+      "geodesicEndProfiles": [
+        {
+          "end": "A",
+          "weldedVertex": 873,
+          "worldGlTFXYZ": [
+            0.246590256690979,
+            1.0146342025423531,
+            -0.12250555982427284
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.025,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.009496124290424669,
+              "centroid": [
+                0.24816577119461877,
+                1.0120105023765782,
+                -0.1143599850243423
+              ],
+              "points": 7
+            },
+            {
+              "fraction": 0.05,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.017838620132220914,
+              "centroid": [
+                0.24930127319473924,
+                1.0078894663152036,
+                -0.1054807252371272
+              ],
+              "points": 11
+            },
+            {
+              "fraction": 0.1,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.0335946765593304,
+              "centroid": [
+                0.25215114744379924,
+                1.0079340287870626,
+                -0.0899302988901247
+              ],
+              "points": 14
+            },
+            {
+              "fraction": 0.2,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.055735597046158124,
+              "centroid": [
+                0.25543789230885583,
+                1.0107074761416848,
+                -0.05901470056696793
+              ],
+              "points": 14
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        },
+        {
+          "end": "B",
+          "weldedVertex": 813,
+          "worldGlTFXYZ": [
+            0.21101664006710052,
+            1.157191119674725,
+            0.07667192731229999
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.975,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.02274528377456814,
+              "centroid": [
+                0.2100729496802884,
+                1.1541019656028328,
+                0.07532537048183748
+              ],
+              "points": 5
+            },
+            {
+              "fraction": 0.95,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.03683806201877031,
+              "centroid": [
+                0.2090066740627908,
+                1.1521818040550653,
+                0.07156857408256584
+              ],
+              "points": 12
+            },
+            {
+              "fraction": 0.9,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.05022434045713227,
+              "centroid": [
+                0.21894895874035325,
+                1.1404258520346064,
+                0.06658768278291419
+              ],
+              "points": 14
+            },
+            {
+              "fraction": 0.8,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.06826707489266724,
+              "centroid": [
+                0.23892840739304178,
+                1.1188051027918173,
+                0.05654255187797195
+              ],
+              "points": 16
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        }
+      ],
+      "poleCandidates": [
+        {
+          "weldedVertex": 873,
+          "worldGlTFXYZ": [
+            0.246590256690979,
+            1.0146342025423531,
+            -0.12250555982427284
+          ],
+          "worldBlenderXYZ": [
+            0.246590256690979,
+            0.12250555982427284,
+            1.0146342025423531
+          ],
+          "valence": 7,
+          "oneRingPlaneResidualM": 6.826700795091813e-09,
+          "oneRingAxialDepthM": 0.018330671420133688,
+          "oneRingRadiusM": 0.006617736990742796,
+          "depthRadiusRatio": 2.769930483150887,
+          "fanHalfAngleDeg": 19.850590610638672,
+          "angleDefectRadians": 4.286059347837234
+        }
+      ],
+      "poleCandidateCount": 1,
+      "tipAcceptance": "NOT_CERTIFIED_BY_TOPOLOGY: requires named loft correspondence and fixed-view geometric/visual endpoint proof.",
+      "lockIdentifier": "Left Lower cascade",
+      "identifierMapping": "node lockNames order + disjoint contiguous source triangle ranges; verify against native Sculpt piece"
+    },
+    {
+      "id": "hair-shell-005",
+      "sourceFaceRange": [
+        1728,
+        1867
+      ],
+      "sourceFacesContiguous": true,
+      "sourceNodes": [
+        "Swept_hair"
+      ],
+      "vertices": 72,
+      "triangles": 140,
+      "closedManifold": true,
+      "boundaryEdges": 0,
+      "nonmanifoldEdges": 0,
+      "inconsistentOrientedEdges": 0,
+      "badVertexLinks": 0,
+      "collapsedAfterWeld": 0,
+      "zeroAreaTriangles": 0,
+      "duplicateFaces": 0,
+      "eulerCharacteristic": 2,
+      "signedVolumeM3": 0.00039881839653385653,
+      "surfaceAreaM2": 0.03604726262711766,
+      "boundsGlTF": [
+        [
+          0.19796226918697357,
+          0.9655087061490953,
+          0.012971171484803316
+        ],
+        [
+          0.2877165675163269,
+          1.142747363400775,
+          0.1614931292753277
+        ]
+      ],
+      "graphDiameterApproxM": 0.23387632649804593,
+      "geodesicEndProfiles": [
+        {
+          "end": "A",
+          "weldedVertex": 945,
+          "worldGlTFXYZ": [
+            0.2505054473876953,
+            0.9886918749492808,
+            0.012971171484803316
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.025,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.009198057903264065,
+              "centroid": [
+                0.24909132046181187,
+                0.9847934129004011,
+                0.019456459594608806
+              ],
+              "points": 7
+            },
+            {
+              "fraction": 0.05,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.01651210384821139,
+              "centroid": [
+                0.2477110576472046,
+                0.9795441430063666,
+                0.026436435882684264
+              ],
+              "points": 11
+            },
+            {
+              "fraction": 0.1,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.02982891441145965,
+              "centroid": [
+                0.2458183451307579,
+                0.981876258698848,
+                0.04022305716597134
+              ],
+              "points": 14
+            },
+            {
+              "fraction": 0.2,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.0516208658806152,
+              "centroid": [
+                0.24376778571777294,
+                0.9935963467693049,
+                0.06164518772585194
+              ],
+              "points": 14
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        },
+        {
+          "end": "B",
+          "weldedVertex": 878,
+          "worldGlTFXYZ": [
+            0.209283709526062,
+            1.1402254906848095,
+            0.1386430007009214
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.975,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.016836043373470957,
+              "centroid": [
+                0.20885076067686836,
+                1.1370661741702843,
+                0.13768801308586448
+              ],
+              "points": 5
+            },
+            {
+              "fraction": 0.95,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.03136682044140125,
+              "centroid": [
+                0.2075352636318192,
+                1.135070298441972,
+                0.1344454721286238
+              ],
+              "points": 12
+            },
+            {
+              "fraction": 0.9,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.042052065726935255,
+              "centroid": [
+                0.21563830088744312,
+                1.124993548311964,
+                0.13285872989001454
+              ],
+              "points": 15
+            },
+            {
+              "fraction": 0.8,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.06020760239847869,
+              "centroid": [
+                0.23295902635069293,
+                1.1051876875138806,
+                0.13023183057746074
+              ],
+              "points": 16
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        }
+      ],
+      "poleCandidates": [
+        {
+          "weldedVertex": 945,
+          "worldGlTFXYZ": [
+            0.2505054473876953,
+            0.9886918749492808,
+            0.012971171484803316
+          ],
+          "worldBlenderXYZ": [
+            0.2505054473876953,
+            -0.012971171484803316,
+            0.9886918749492808
+          ],
+          "valence": 7,
+          "oneRingPlaneResidualM": 5.506084354643104e-09,
+          "oneRingAxialDepthM": 0.016157587764633892,
+          "oneRingRadiusM": 0.006679419834917441,
+          "depthRadiusRatio": 2.4190106572083145,
+          "fanHalfAngleDeg": 22.459816826323753,
+          "angleDefectRadians": 4.088356912731597
+        }
+      ],
+      "poleCandidateCount": 1,
+      "tipAcceptance": "NOT_CERTIFIED_BY_TOPOLOGY: requires named loft correspondence and fixed-view geometric/visual endpoint proof.",
+      "lockIdentifier": "Left Ear sweep",
+      "identifierMapping": "node lockNames order + disjoint contiguous source triangle ranges; verify against native Sculpt piece"
+    },
+    {
+      "id": "hair-shell-006",
+      "sourceFaceRange": [
+        1868,
+        1979
+      ],
+      "sourceFacesContiguous": true,
+      "sourceNodes": [
+        "Swept_hair"
+      ],
+      "vertices": 58,
+      "triangles": 112,
+      "closedManifold": true,
+      "boundaryEdges": 0,
+      "nonmanifoldEdges": 0,
+      "inconsistentOrientedEdges": 0,
+      "badVertexLinks": 0,
+      "collapsedAfterWeld": 0,
+      "zeroAreaTriangles": 0,
+      "duplicateFaces": 0,
+      "eulerCharacteristic": 2,
+      "signedVolumeM3": 0.0006673854075740551,
+      "surfaceAreaM2": 0.05246116615457323,
+      "boundsGlTF": [
+        [
+          0.07403212785720825,
+          1.0949698259774139,
+          -0.13980046108611544
+        ],
+        [
+          0.2672824263572693,
+          1.2605606022407,
+          0.017666690973482408
+        ]
+      ],
+      "graphDiameterApproxM": 0.2816741275849359,
+      "geodesicEndProfiles": [
+        {
+          "end": "A",
+          "weldedVertex": 999,
+          "worldGlTFXYZ": [
+            0.2384091466665268,
+            1.0955140164270836,
+            -0.12398160303397761
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.025,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.023220084685984455,
+              "centroid": [
+                0.23630270369388964,
+                1.0983411893446864,
+                -0.12193933089479736
+              ],
+              "points": 8
+            },
+            {
+              "fraction": 0.05,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.04167540749893845,
+              "centroid": [
+                0.2369046646688278,
+                1.104572565961279,
+                -0.11937266294089495
+              ],
+              "points": 13
+            },
+            {
+              "fraction": 0.1,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.050277417762489146,
+              "centroid": [
+                0.24036488503833156,
+                1.1127005856175385,
+                -0.10039688250768426
+              ],
+              "points": 16
+            },
+            {
+              "fraction": 0.2,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.0749615838250796,
+              "centroid": [
+                0.2407472145523454,
+                1.1371649180814414,
+                -0.0799202870358128
+              ],
+              "points": 16
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        },
+        {
+          "end": "B",
+          "weldedVertex": 946,
+          "worldGlTFXYZ": [
+            0.07403212785720825,
+            1.2510453160039487,
+            -8.272981930398333e-05
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.975,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.011872308063385382,
+              "centroid": [
+                0.08229616501088748,
+                1.2490809387615445,
+                -0.0025577564758004173
+              ],
+              "points": 7
+            },
+            {
+              "fraction": 0.95,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.02374461612677063,
+              "centroid": [
+                0.09110263084458266,
+                1.2482133307477252,
+                -0.0054073285107904745
+              ],
+              "points": 10
+            },
+            {
+              "fraction": 0.9,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.0407765956917689,
+              "centroid": [
+                0.10638983948363846,
+                1.2451090753338396,
+                -0.008039499515582915
+              ],
+              "points": 14
+            },
+            {
+              "fraction": 0.8,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.06992824618473978,
+              "centroid": [
+                0.13591450216074588,
+                1.2388354144990124,
+                -0.012321765632439833
+              ],
+              "points": 16
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        }
+      ],
+      "poleCandidates": [
+        {
+          "weldedVertex": 1003,
+          "worldGlTFXYZ": [
+            0.2317725569009781,
+            1.1083149493660984,
+            -0.13980046108611544
+          ],
+          "worldBlenderXYZ": [
+            0.2317725569009781,
+            0.13980046108611544,
+            1.1083149493660984
+          ],
+          "valence": 7,
+          "oneRingPlaneResidualM": 4.724913289856014e-09,
+          "oneRingAxialDepthM": 0.01860497795694113,
+          "oneRingRadiusM": 0.009018902672583571,
+          "depthRadiusRatio": 2.0628870975066764,
+          "fanHalfAngleDeg": 25.86213599485311,
+          "angleDefectRadians": 3.6454432634704084
+        }
+      ],
+      "poleCandidateCount": 1,
+      "tipAcceptance": "NOT_CERTIFIED_BY_TOPOLOGY: requires named loft correspondence and fixed-view geometric/visual endpoint proof.",
+      "lockIdentifier": "Left Upper cascade",
+      "identifierMapping": "node lockNames order + disjoint contiguous source triangle ranges; verify against native Sculpt piece"
+    },
+    {
+      "id": "hair-shell-007",
+      "sourceFaceRange": [
+        1980,
+        2029
+      ],
+      "sourceFacesContiguous": true,
+      "sourceNodes": [
+        "Swept_hair"
+      ],
+      "vertices": 27,
+      "triangles": 50,
+      "closedManifold": true,
+      "boundaryEdges": 0,
+      "nonmanifoldEdges": 0,
+      "inconsistentOrientedEdges": 0,
+      "badVertexLinks": 0,
+      "collapsedAfterWeld": 0,
+      "zeroAreaTriangles": 0,
+      "duplicateFaces": 0,
+      "eulerCharacteristic": 2,
+      "signedVolumeM3": 0.00011886722793943457,
+      "surfaceAreaM2": 0.017621594596749033,
+      "boundsGlTF": [
+        [
+          0.18960469961166382,
+          1.0749482666425687,
+          -0.030266082571960184
+        ],
+        [
+          0.2666378617286682,
+          1.1708025566438856,
+          0.09418124048323201
+        ]
+      ],
+      "graphDiameterApproxM": 0.1703262530485966,
+      "geodesicEndProfiles": [
+        {
+          "end": "A",
+          "weldedVertex": 1007,
+          "worldGlTFXYZ": [
+            0.19879472255706787,
+            1.1677087177113956,
+            0.08689449706117892
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.025,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.009876519334217883,
+              "centroid": [
+                0.19853225321099893,
+                1.1656673818140115,
+                0.08520881385726571
+              ],
+              "points": 5
+            },
+            {
+              "fraction": 0.05,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.019753038668435717,
+              "centroid": [
+                0.19826978386493002,
+                1.1636260459166274,
+                0.08352313065335251
+              ],
+              "points": 5
+            },
+            {
+              "fraction": 0.1,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.03429253174083305,
+              "centroid": [
+                0.19859815125249186,
+                1.160624203009045,
+                0.07831211595753611
+              ],
+              "points": 10
+            },
+            {
+              "fraction": 0.2,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.05524953444809802,
+              "centroid": [
+                0.2102099377104708,
+                1.142860905668609,
+                0.07656824600952268
+              ],
+              "points": 12
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        },
+        {
+          "end": "B",
+          "weldedVertex": 1030,
+          "worldGlTFXYZ": [
+            0.26048654317855835,
+            1.0866963430371486,
+            -0.030266082571960184
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.975,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.005606863908354046,
+              "centroid": [
+                0.26090597553417283,
+                1.0856371210013778,
+                -0.02547760249595804
+              ],
+              "points": 5
+            },
+            {
+              "fraction": 0.95,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.009143184659695299,
+              "centroid": [
+                0.2612579405917,
+                1.084201374753368,
+                -0.020565564593968102
+              ],
+              "points": 9
+            },
+            {
+              "fraction": 0.9,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.015457186255222468,
+              "centroid": [
+                0.25964902858474026,
+                1.0865226263106704,
+                -0.01223603895278662
+              ],
+              "points": 10
+            },
+            {
+              "fraction": 0.8,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.030200908047410487,
+              "centroid": [
+                0.25607958255919344,
+                1.0893601853600063,
+                0.004883944843410459
+              ],
+              "points": 10
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        }
+      ],
+      "poleCandidates": [
+        {
+          "weldedVertex": 1030,
+          "worldGlTFXYZ": [
+            0.26048654317855835,
+            1.0866963430371486,
+            -0.030266082571960184
+          ],
+          "worldBlenderXYZ": [
+            0.26048654317855835,
+            0.030266082571960184,
+            1.0866963430371486
+          ],
+          "valence": 5,
+          "oneRingPlaneResidualM": 5.225868063889377e-09,
+          "oneRingAxialDepthM": 0.009731693230369648,
+          "oneRingRadiusM": 0.004070346861097108,
+          "depthRadiusRatio": 2.390875658136564,
+          "fanHalfAngleDeg": 22.69745148393563,
+          "angleDefectRadians": 4.041829012585822
+        }
+      ],
+      "poleCandidateCount": 1,
+      "tipAcceptance": "NOT_CERTIFIED_BY_TOPOLOGY: requires named loft correspondence and fixed-view geometric/visual endpoint proof.",
+      "lockIdentifier": "Left Middle cascade",
+      "identifierMapping": "node lockNames order + disjoint contiguous source triangle ranges; verify against native Sculpt piece"
+    },
+    {
+      "id": "hair-shell-008",
+      "sourceFaceRange": [
+        2030,
+        2155
+      ],
+      "sourceFacesContiguous": true,
+      "sourceNodes": [
+        "Swept_hair"
+      ],
+      "vertices": 65,
+      "triangles": 126,
+      "closedManifold": true,
+      "boundaryEdges": 0,
+      "nonmanifoldEdges": 0,
+      "inconsistentOrientedEdges": 0,
+      "badVertexLinks": 0,
+      "collapsedAfterWeld": 0,
+      "zeroAreaTriangles": 0,
+      "duplicateFaces": 0,
+      "eulerCharacteristic": 2,
+      "signedVolumeM3": 0.00047524973683946565,
+      "surfaceAreaM2": 0.04339372887137249,
+      "boundsGlTF": [
+        [
+          -0.2926161289215088,
+          0.9838353476951983,
+          -0.1225048147661558
+        ],
+        [
+          -0.19815368950366974,
+          1.164679132579494,
+          0.08805370390177497
+        ]
+      ],
+      "graphDiameterApproxM": 0.268849761424713,
+      "geodesicEndProfiles": [
+        {
+          "end": "A",
+          "weldedVertex": 1095,
+          "worldGlTFXYZ": [
+            -0.24521255493164062,
+            1.0146342025423534,
+            -0.1225048147661558
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.025,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.00924334159280308,
+              "centroid": [
+                -0.2456088820745891,
+                1.0121192073103014,
+                -0.11453241165399149
+              ],
+              "points": 7
+            },
+            {
+              "fraction": 0.05,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.017429309389567445,
+              "centroid": [
+                -0.2454787889696812,
+                1.0079381826670974,
+                -0.1058154876982524
+              ],
+              "points": 11
+            },
+            {
+              "fraction": 0.1,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.03216261107798246,
+              "centroid": [
+                -0.24780245943605456,
+                1.0082300648639184,
+                -0.09088904700775449
+              ],
+              "points": 14
+            },
+            {
+              "fraction": 0.2,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.05563328010842703,
+              "centroid": [
+                -0.251654064154874,
+                1.010460191038856,
+                -0.0599888177487763
+              ],
+              "points": 14
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        },
+        {
+          "end": "B",
+          "weldedVertex": 1031,
+          "worldGlTFXYZ": [
+            -0.19815368950366974,
+            1.164679132579494,
+            0.06986642480612222
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.975,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.012727478000867527,
+              "centroid": [
+                -0.2013221411175364,
+                1.1579417912003558,
+                0.06866326927330976
+              ],
+              "points": 7
+            },
+            {
+              "fraction": 0.95,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.023811663172888978,
+              "centroid": [
+                -0.20512883225735026,
+                1.1507069223218749,
+                0.06847490637903293
+              ],
+              "points": 12
+            },
+            {
+              "fraction": 0.9,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.040725253687057504,
+              "centroid": [
+                -0.21572259409670244,
+                1.140951221622556,
+                0.06444744922118
+              ],
+              "points": 14
+            },
+            {
+              "fraction": 0.8,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.06508751491692194,
+              "centroid": [
+                -0.23646729863605975,
+                1.1201650828338452,
+                0.05620366364827363
+              ],
+              "points": 16
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        }
+      ],
+      "poleCandidates": [
+        {
+          "weldedVertex": 1095,
+          "worldGlTFXYZ": [
+            -0.24521255493164062,
+            1.0146342025423534,
+            -0.1225048147661558
+          ],
+          "worldBlenderXYZ": [
+            -0.24521255493164062,
+            0.1225048147661558,
+            1.0146342025423534
+          ],
+          "valence": 7,
+          "oneRingPlaneResidualM": 6.384402251978571e-08,
+          "oneRingAxialDepthM": 0.01841826467649122,
+          "oneRingRadiusM": 0.006617673742205931,
+          "depthRadiusRatio": 2.783193217735102,
+          "fanHalfAngleDeg": 19.763338783242435,
+          "angleDefectRadians": 4.2597235110611855
+        }
+      ],
+      "poleCandidateCount": 1,
+      "tipAcceptance": "NOT_CERTIFIED_BY_TOPOLOGY: requires named loft correspondence and fixed-view geometric/visual endpoint proof.",
+      "lockIdentifier": "Right Lower cascade",
+      "identifierMapping": "node lockNames order + disjoint contiguous source triangle ranges; verify against native Sculpt piece"
+    },
+    {
+      "id": "hair-shell-009",
+      "sourceFaceRange": [
+        2156,
+        2295
+      ],
+      "sourceFacesContiguous": true,
+      "sourceNodes": [
+        "Swept_hair"
+      ],
+      "vertices": 72,
+      "triangles": 140,
+      "closedManifold": true,
+      "boundaryEdges": 0,
+      "nonmanifoldEdges": 0,
+      "inconsistentOrientedEdges": 0,
+      "badVertexLinks": 0,
+      "collapsedAfterWeld": 0,
+      "zeroAreaTriangles": 0,
+      "duplicateFaces": 0,
+      "eulerCharacteristic": 2,
+      "signedVolumeM3": 0.0003813122688257396,
+      "surfaceAreaM2": 0.034778564184295604,
+      "boundsGlTF": [
+        [
+          -0.28108564019203186,
+          0.9662740894535355,
+          0.012971187317288304
+        ],
+        [
+          -0.1866932213306427,
+          1.139432868051421,
+          0.16074090373280464
+        ]
+      ],
+      "graphDiameterApproxM": 0.22351287591478494,
+      "geodesicEndProfiles": [
+        {
+          "end": "A",
+          "weldedVertex": 1167,
+          "worldGlTFXYZ": [
+            -0.2606026232242584,
+            0.9886918749492809,
+            0.012971187317288304
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.025,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.009069019222311415,
+              "centroid": [
+                -0.26004632303715347,
+                0.9847002240551267,
+                0.019282106090458766
+              ],
+              "points": 7
+            },
+            {
+              "fraction": 0.05,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.01654941588878522,
+              "centroid": [
+                -0.2591767243748669,
+                0.9791094943085185,
+                0.026113032857183877
+              ],
+              "points": 10
+            },
+            {
+              "fraction": 0.1,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.029427260051270374,
+              "centroid": [
+                -0.25952014206971613,
+                0.9816584526570793,
+                0.04053836466328079
+              ],
+              "points": 14
+            },
+            {
+              "fraction": 0.2,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.05187896225304257,
+              "centroid": [
+                -0.2590473560840004,
+                0.9936936221039124,
+                0.06231656187511817
+              ],
+              "points": 14
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        },
+        {
+          "end": "B",
+          "weldedVertex": 1100,
+          "worldGlTFXYZ": [
+            -0.19268906116485596,
+            1.1328579983773466,
+            0.13580225811573543
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.975,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.019377468971628634,
+              "centroid": [
+                -0.19133586127524663,
+                1.131016758515615,
+                0.13557653079160392
+              ],
+              "points": 8
+            },
+            {
+              "fraction": 0.95,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.026440610219023705,
+              "centroid": [
+                -0.1950335625638752,
+                1.1277702228553632,
+                0.1331355390093255
+              ],
+              "points": 12
+            },
+            {
+              "fraction": 0.9,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.04164929189041183,
+              "centroid": [
+                -0.20504104243460852,
+                1.1176695876415454,
+                0.13457418174754665
+              ],
+              "points": 16
+            },
+            {
+              "fraction": 0.8,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.06246237103443378,
+              "centroid": [
+                -0.22073155220400398,
+                1.101095897727386,
+                0.1288967610237504
+              ],
+              "points": 16
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        }
+      ],
+      "poleCandidates": [
+        {
+          "weldedVertex": 1167,
+          "worldGlTFXYZ": [
+            -0.2606026232242584,
+            0.9886918749492809,
+            0.012971187317288304
+          ],
+          "worldBlenderXYZ": [
+            -0.2606026232242584,
+            -0.012971187317288304,
+            0.9886918749492809
+          ],
+          "valence": 7,
+          "oneRingPlaneResidualM": 4.890902750177964e-09,
+          "oneRingAxialDepthM": 0.016347477855741786,
+          "oneRingRadiusM": 0.006700822342536297,
+          "depthRadiusRatio": 2.439622634369706,
+          "fanHalfAngleDeg": 22.2886974491434,
+          "angleDefectRadians": 4.105802793548895
+        }
+      ],
+      "poleCandidateCount": 1,
+      "tipAcceptance": "NOT_CERTIFIED_BY_TOPOLOGY: requires named loft correspondence and fixed-view geometric/visual endpoint proof.",
+      "lockIdentifier": "Right Ear sweep",
+      "identifierMapping": "node lockNames order + disjoint contiguous source triangle ranges; verify against native Sculpt piece"
+    },
+    {
+      "id": "hair-shell-010",
+      "sourceFaceRange": [
+        2296,
+        2407
+      ],
+      "sourceFacesContiguous": true,
+      "sourceNodes": [
+        "Swept_hair"
+      ],
+      "vertices": 58,
+      "triangles": 112,
+      "closedManifold": true,
+      "boundaryEdges": 0,
+      "nonmanifoldEdges": 0,
+      "inconsistentOrientedEdges": 0,
+      "badVertexLinks": 0,
+      "collapsedAfterWeld": 0,
+      "zeroAreaTriangles": 0,
+      "duplicateFaces": 0,
+      "eulerCharacteristic": 2,
+      "signedVolumeM3": 0.0005230543124774664,
+      "surfaceAreaM2": 0.04590308833164652,
+      "boundsGlTF": [
+        [
+          -0.26122230291366577,
+          1.0961191228317482,
+          -0.13410996050785506
+        ],
+        [
+          -0.1011977270245552,
+          1.256974428897421,
+          0.012095681323479815
+        ]
+      ],
+      "graphDiameterApproxM": 0.2603640228622337,
+      "geodesicEndProfiles": [
+        {
+          "end": "A",
+          "weldedVertex": 1221,
+          "worldGlTFXYZ": [
+            -0.2239520102739334,
+            1.0967471174182553,
+            -0.11845578266845662
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.025,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.0226986972134603,
+              "centroid": [
+                -0.22278220412703387,
+                1.0988887533437919,
+                -0.11652508706629434
+              ],
+              "points": 8
+            },
+            {
+              "fraction": 0.05,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.03959264179478986,
+              "centroid": [
+                -0.22509727287641554,
+                1.1042219537935951,
+                -0.11450854953409936
+              ],
+              "points": 13
+            },
+            {
+              "fraction": 0.1,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.04866526490950297,
+              "centroid": [
+                -0.23157547860824662,
+                1.1102191930852645,
+                -0.0972400052427389
+              ],
+              "points": 16
+            },
+            {
+              "fraction": 0.2,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.07117639697834473,
+              "centroid": [
+                -0.23251744544297853,
+                1.1298534383662138,
+                -0.07908728715399405
+              ],
+              "points": 14
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        },
+        {
+          "end": "B",
+          "weldedVertex": 1168,
+          "worldGlTFXYZ": [
+            -0.1011977270245552,
+            1.2514064009723125,
+            0.003990668029458045
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.975,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.011959101210715807,
+              "centroid": [
+                -0.108032506310901,
+                1.2492569065322738,
+                0.0007715790739703168
+              ],
+              "points": 7
+            },
+            {
+              "fraction": 0.95,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.023217814730858828,
+              "centroid": [
+                -0.11597058497920947,
+                1.2475057512216008,
+                -0.0022263806270067456
+              ],
+              "points": 11
+            },
+            {
+              "fraction": 0.9,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.04127975032740195,
+              "centroid": [
+                -0.12785755301204163,
+                1.2433699297133252,
+                -0.006633687367932197
+              ],
+              "points": 14
+            },
+            {
+              "fraction": 0.8,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.070593098087735,
+              "centroid": [
+                -0.15169474135152866,
+                1.2341824137911699,
+                -0.014466955028171259
+              ],
+              "points": 16
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        }
+      ],
+      "poleCandidates": [],
+      "poleCandidateCount": 0,
+      "tipAcceptance": "NOT_CERTIFIED_BY_TOPOLOGY: requires named loft correspondence and fixed-view geometric/visual endpoint proof.",
+      "lockIdentifier": "Right Upper cascade",
+      "identifierMapping": "node lockNames order + disjoint contiguous source triangle ranges; verify against native Sculpt piece"
+    },
+    {
+      "id": "hair-shell-011",
+      "sourceFaceRange": [
+        2408,
+        2457
+      ],
+      "sourceFacesContiguous": true,
+      "sourceNodes": [
+        "Swept_hair"
+      ],
+      "vertices": 27,
+      "triangles": 50,
+      "closedManifold": true,
+      "boundaryEdges": 0,
+      "nonmanifoldEdges": 0,
+      "inconsistentOrientedEdges": 0,
+      "badVertexLinks": 0,
+      "collapsedAfterWeld": 0,
+      "zeroAreaTriangles": 0,
+      "duplicateFaces": 0,
+      "eulerCharacteristic": 2,
+      "signedVolumeM3": 8.974801664423168e-05,
+      "surfaceAreaM2": 0.015609746786295713,
+      "boundsGlTF": [
+        [
+          -0.2646339237689972,
+          1.0754092490025433,
+          -0.023790100748510342
+        ],
+        [
+          -0.1935831755399704,
+          1.1667354929894433,
+          0.09097500217193741
+        ]
+      ],
+      "graphDiameterApproxM": 0.1523593992359808,
+      "geodesicEndProfiles": [
+        {
+          "end": "A",
+          "weldedVertex": 1252,
+          "worldGlTFXYZ": [
+            -0.25456663966178894,
+            1.0866963430398247,
+            -0.023790100748510342
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.025,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.006270859157585537,
+              "centroid": [
+                -0.2560742912298716,
+                1.085549390171332,
+                -0.01951608906336803
+              ],
+              "points": 5
+            },
+            {
+              "fraction": 0.05,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.010151230818658862,
+              "centroid": [
+                -0.2575900971485095,
+                1.0841566935582085,
+                -0.01495217602107428
+              ],
+              "points": 9
+            },
+            {
+              "fraction": 0.1,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.016828956777213307,
+              "centroid": [
+                -0.2570487514866765,
+                1.0863679110091256,
+                -0.00649036509642559
+              ],
+              "points": 10
+            },
+            {
+              "fraction": 0.2,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.034001594183120286,
+              "centroid": [
+                -0.2563907243885954,
+                1.0892658730144844,
+                0.010871218754875055
+              ],
+              "points": 10
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        },
+        {
+          "end": "B",
+          "weldedVertex": 1229,
+          "worldGlTFXYZ": [
+            -0.19781985878944397,
+            1.1591112238566479,
+            0.08364053781078139
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.975,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.010912969849193573,
+              "centroid": [
+                -0.19788820333685114,
+                1.1578490379501072,
+                0.08164431690554888
+              ],
+              "points": 5
+            },
+            {
+              "fraction": 0.95,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.02171495413940688,
+              "centroid": [
+                -0.19657675874522038,
+                1.1584271234383279,
+                0.07867779402837982
+              ],
+              "points": 9
+            },
+            {
+              "fraction": 0.9,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.032843803818507517,
+              "centroid": [
+                -0.2007169037532337,
+                1.1530373396849531,
+                0.07413916632729092
+              ],
+              "points": 10
+            },
+            {
+              "fraction": 0.8,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.053964095637002295,
+              "centroid": [
+                -0.21066133906716913,
+                1.1399051796998787,
+                0.06996935718730923
+              ],
+              "points": 10
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        }
+      ],
+      "poleCandidates": [],
+      "poleCandidateCount": 0,
+      "tipAcceptance": "NOT_CERTIFIED_BY_TOPOLOGY: requires named loft correspondence and fixed-view geometric/visual endpoint proof.",
+      "lockIdentifier": "Right Middle cascade",
+      "identifierMapping": "node lockNames order + disjoint contiguous source triangle ranges; verify against native Sculpt piece"
+    },
+    {
+      "id": "hair-shell-012",
+      "sourceFaceRange": [
+        2458,
+        2517
+      ],
+      "sourceFacesContiguous": true,
+      "sourceNodes": [
+        "Swept_hair"
+      ],
+      "vertices": 32,
+      "triangles": 60,
+      "closedManifold": true,
+      "boundaryEdges": 0,
+      "nonmanifoldEdges": 0,
+      "inconsistentOrientedEdges": 0,
+      "badVertexLinks": 0,
+      "collapsedAfterWeld": 0,
+      "zeroAreaTriangles": 0,
+      "duplicateFaces": 0,
+      "eulerCharacteristic": 2,
+      "signedVolumeM3": 0.00017120641302434053,
+      "surfaceAreaM2": 0.024044522808316218,
+      "boundsGlTF": [
+        [
+          -0.14556540548801422,
+          0.9944568367347155,
+          0.19898071419101518
+        ],
+        [
+          -0.041368115693330765,
+          1.160810790891899,
+          0.24777293030232847
+        ]
+      ],
+      "graphDiameterApproxM": 0.20517186520509262,
+      "geodesicEndProfiles": [
+        {
+          "end": "A",
+          "weldedVertex": 1284,
+          "worldGlTFXYZ": [
+            -0.14556540548801422,
+            0.9944568367347155,
+            0.22022174054269777
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.025,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.00702874724916573,
+              "centroid": [
+                -0.14195204029766814,
+                0.9979418930778227,
+                0.22128007794609142
+              ],
+              "points": 5
+            },
+            {
+              "fraction": 0.05,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.014023555635503499,
+              "centroid": [
+                -0.13874448811564624,
+                1.0018027635814595,
+                0.2227574836221548
+              ],
+              "points": 9
+            },
+            {
+              "fraction": 0.1,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.022922169739921408,
+              "centroid": [
+                -0.13365095161983714,
+                1.0094009947574656,
+                0.22003805192544162
+              ],
+              "points": 10
+            },
+            {
+              "fraction": 0.2,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.040628043122695925,
+              "centroid": [
+                -0.12481927406796886,
+                1.0256984345861555,
+                0.2156085848101049
+              ],
+              "points": 10
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        },
+        {
+          "end": "B",
+          "weldedVertex": 1256,
+          "worldGlTFXYZ": [
+            -0.05713322386145592,
+            1.160810790891899,
+            0.22729497726853515
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.975,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.014050900551223244,
+              "centroid": [
+                -0.05619927104133075,
+                1.1587086205416879,
+                0.22654060089222652
+              ],
+              "points": 5
+            },
+            {
+              "fraction": 0.95,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.025649643492969543,
+              "centroid": [
+                -0.05302358884185414,
+                1.1561501978030109,
+                0.22583629660272736
+              ],
+              "points": 9
+            },
+            {
+              "fraction": 0.9,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.037700743667575316,
+              "centroid": [
+                -0.05695538860669752,
+                1.1471192174601046,
+                0.22668246808739814
+              ],
+              "points": 10
+            },
+            {
+              "fraction": 0.8,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.05958985494647204,
+              "centroid": [
+                -0.07384835681061368,
+                1.1339788401975068,
+                0.22205385110895745
+              ],
+              "points": 12
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        }
+      ],
+      "poleCandidates": [
+        {
+          "weldedVertex": 1284,
+          "worldGlTFXYZ": [
+            -0.14556540548801422,
+            0.9944568367347155,
+            0.22022174054269777
+          ],
+          "worldBlenderXYZ": [
+            -0.14556540548801422,
+            -0.22022174054269777,
+            0.9944568367347155
+          ],
+          "valence": 5,
+          "oneRingPlaneResidualM": 1.6450442933977617e-08,
+          "oneRingAxialDepthM": 0.010010778846997722,
+          "oneRingRadiusM": 0.006230217344338851,
+          "depthRadiusRatio": 1.6068105322351418,
+          "fanHalfAngleDeg": 31.89610694041423,
+          "angleDefectRadians": 3.294930444668903
+        }
+      ],
+      "poleCandidateCount": 1,
+      "tipAcceptance": "NOT_CERTIFIED_BY_TOPOLOGY: requires named loft correspondence and fixed-view geometric/visual endpoint proof.",
+      "lockIdentifier": "Forehead sweep",
+      "identifierMapping": "node lockNames order + disjoint contiguous source triangle ranges; verify against native Sculpt piece"
+    },
+    {
+      "id": "hair-shell-013",
+      "sourceFaceRange": [
+        2518,
+        2657
+      ],
+      "sourceFacesContiguous": true,
+      "sourceNodes": [
+        "Swept_hair"
+      ],
+      "vertices": 72,
+      "triangles": 140,
+      "closedManifold": true,
+      "boundaryEdges": 0,
+      "nonmanifoldEdges": 0,
+      "inconsistentOrientedEdges": 0,
+      "badVertexLinks": 0,
+      "collapsedAfterWeld": 0,
+      "zeroAreaTriangles": 0,
+      "duplicateFaces": 0,
+      "eulerCharacteristic": 2,
+      "signedVolumeM3": 0.000858737873207957,
+      "surfaceAreaM2": 0.07327499286276787,
+      "boundsGlTF": [
+        [
+          -0.276373028755188,
+          1.0915375518819213,
+          -0.09834002588225689
+        ],
+        [
+          0.019143961369991302,
+          1.2665470548792215,
+          0.16479909893151784
+        ]
+      ],
+      "graphDiameterApproxM": 0.44338643634148384,
+      "geodesicEndProfiles": [
+        {
+          "end": "A",
+          "weldedVertex": 1356,
+          "worldGlTFXYZ": [
+            -0.27090850472450256,
+            1.1155211515079695,
+            -0.09834002588225689
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.025,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.01230328159484412,
+              "centroid": [
+                -0.268721739075911,
+                1.1116335510164534,
+                -0.08634336354689591
+              ],
+              "points": 7
+            },
+            {
+              "fraction": 0.05,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.020741878574763013,
+              "centroid": [
+                -0.26636832268037264,
+                1.1083069306649844,
+                -0.07448031511609138
+              ],
+              "points": 13
+            },
+            {
+              "fraction": 0.1,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.038474233100260866,
+              "centroid": [
+                -0.2633014155008006,
+                1.113414701657514,
+                -0.048618825433506964
+              ],
+              "points": 16
+            },
+            {
+              "fraction": 0.2,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.05556840009469275,
+              "centroid": [
+                -0.25341510358310765,
+                1.1235437762201133,
+                -0.004894308662280427
+              ],
+              "points": 16
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        },
+        {
+          "end": "B",
+          "weldedVertex": 1285,
+          "worldGlTFXYZ": [
+            0.019143961369991302,
+            1.2497467691618558,
+            0.12562570138646384
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.975,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.010635820200471529,
+              "centroid": [
+                0.006710543907040502,
+                1.2499688449175326,
+                0.12766088368902453
+              ],
+              "points": 7
+            },
+            {
+              "fraction": 0.95,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.021271640400943318,
+              "centroid": [
+                -0.005722873555910299,
+                1.2501909206732091,
+                0.12969606599158517
+              ],
+              "points": 7
+            },
+            {
+              "fraction": 0.9,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.0374963061933805,
+              "centroid": [
+                -0.028545489297403605,
+                1.2489535466436195,
+                0.13274273824989852
+              ],
+              "points": 14
+            },
+            {
+              "fraction": 0.8,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.0681918618732612,
+              "centroid": [
+                -0.07080045962297954,
+                1.2403914450622602,
+                0.13287697533553258
+              ],
+              "points": 14
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        }
+      ],
+      "poleCandidates": [],
+      "poleCandidateCount": 0,
+      "tipAcceptance": "NOT_CERTIFIED_BY_TOPOLOGY: requires named loft correspondence and fixed-view geometric/visual endpoint proof.",
+      "lockIdentifier": "Long outer sweep",
+      "identifierMapping": "node lockNames order + disjoint contiguous source triangle ranges; verify against native Sculpt piece"
+    },
+    {
+      "id": "hair-shell-014",
+      "sourceFaceRange": [
+        2658,
+        2741
+      ],
+      "sourceFacesContiguous": true,
+      "sourceNodes": [
+        "Swept_hair"
+      ],
+      "vertices": 44,
+      "triangles": 84,
+      "closedManifold": true,
+      "boundaryEdges": 0,
+      "nonmanifoldEdges": 0,
+      "inconsistentOrientedEdges": 0,
+      "badVertexLinks": 0,
+      "collapsedAfterWeld": 0,
+      "zeroAreaTriangles": 0,
+      "duplicateFaces": 0,
+      "eulerCharacteristic": 2,
+      "signedVolumeM3": 0.0003863127120443011,
+      "surfaceAreaM2": 0.0389465303407687,
+      "boundsGlTF": [
+        [
+          -0.08811093121767044,
+          1.0203991643873456,
+          0.1714113708897896
+        ],
+        [
+          0.029116135090589523,
+          1.2395363735138316,
+          0.26818089162635456
+        ]
+      ],
+      "graphDiameterApproxM": 0.25204913588735467,
+      "geodesicEndProfiles": [
+        {
+          "end": "A",
+          "weldedVertex": 1400,
+          "worldGlTFXYZ": [
+            -0.01873614266514778,
+            1.0203991643873456,
+            0.228869197613233
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.025,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.013099434602335426,
+              "centroid": [
+                -0.025396060945153367,
+                1.0251677264711672,
+                0.2314250355047973
+              ],
+              "points": 6
+            },
+            {
+              "fraction": 0.05,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.020112389126016362,
+              "centroid": [
+                -0.031870394537416205,
+                1.0304557363686913,
+                0.23354717504975167
+              ],
+              "points": 11
+            },
+            {
+              "fraction": 0.1,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.032920337140975114,
+              "centroid": [
+                -0.03774855682259455,
+                1.0437539561155822,
+                0.23444168811965116
+              ],
+              "points": 12
+            },
+            {
+              "fraction": 0.2,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.049735055034054385,
+              "centroid": [
+                -0.04771086088588972,
+                1.0696785516560996,
+                0.23657891188557967
+              ],
+              "points": 14
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        },
+        {
+          "end": "B",
+          "weldedVertex": 1360,
+          "worldGlTFXYZ": [
+            0.017939096316695213,
+            1.2367599889449372,
+            0.1880087322538969
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.975,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.019010884046361056,
+              "centroid": [
+                0.014798152621193082,
+                1.2358596365249594,
+                0.18651375868600292
+              ],
+              "points": 5
+            },
+            {
+              "fraction": 0.95,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.03800802199786307,
+              "centroid": [
+                0.016427382848928564,
+                1.2329977470105795,
+                0.18112221574830975
+              ],
+              "points": 10
+            },
+            {
+              "fraction": 0.9,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.05197775490858234,
+              "centroid": [
+                0.0007666944178943146,
+                1.229076566382865,
+                0.18702723179129402
+              ],
+              "points": 12
+            },
+            {
+              "fraction": 0.8,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.069815466630898,
+              "centroid": [
+                -0.0210934910597386,
+                1.213305865799797,
+                0.19647295981218887
+              ],
+              "points": 14
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        }
+      ],
+      "poleCandidates": [
+        {
+          "weldedVertex": 1400,
+          "worldGlTFXYZ": [
+            -0.01873614266514778,
+            1.0203991643873456,
+            0.228869197613233
+          ],
+          "worldBlenderXYZ": [
+            -0.01873614266514778,
+            -0.228869197613233,
+            1.0203991643873456
+          ],
+          "valence": 6,
+          "oneRingPlaneResidualM": 2.4590136767946508e-08,
+          "oneRingAxialDepthM": 0.01539328758137917,
+          "oneRingRadiusM": 0.0077029799112319835,
+          "depthRadiusRatio": 1.9983548910641298,
+          "fanHalfAngleDeg": 26.583915149485588,
+          "angleDefectRadians": 3.6356202411191854
+        }
+      ],
+      "poleCandidateCount": 1,
+      "tipAcceptance": "NOT_CERTIFIED_BY_TOPOLOGY: requires named loft correspondence and fixed-view geometric/visual endpoint proof.",
+      "lockIdentifier": "Falling fringe",
+      "identifierMapping": "node lockNames order + disjoint contiguous source triangle ranges; verify against native Sculpt piece"
+    },
+    {
+      "id": "hair-shell-015",
+      "sourceFaceRange": [
+        2742,
+        2801
+      ],
+      "sourceFacesContiguous": true,
+      "sourceNodes": [
+        "Swept_hair"
+      ],
+      "vertices": 32,
+      "triangles": 60,
+      "closedManifold": true,
+      "boundaryEdges": 0,
+      "nonmanifoldEdges": 0,
+      "inconsistentOrientedEdges": 0,
+      "badVertexLinks": 0,
+      "collapsedAfterWeld": 0,
+      "zeroAreaTriangles": 0,
+      "duplicateFaces": 0,
+      "eulerCharacteristic": 2,
+      "signedVolumeM3": 0.00010032414095281708,
+      "surfaceAreaM2": 0.01829415994047269,
+      "boundsGlTF": [
+        [
+          -0.026331767439842224,
+          1.0348115686380124,
+          0.19099593892721067
+        ],
+        [
+          0.035203784704208374,
+          1.2142738965066906,
+          0.2742605061608771
+        ]
+      ],
+      "graphDiameterApproxM": 0.21154757464831586,
+      "geodesicEndProfiles": [
+        {
+          "end": "A",
+          "weldedVertex": 1432,
+          "worldGlTFXYZ": [
+            0.012971174903213978,
+            1.0348115686380124,
+            0.23175167825628076
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.025,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.004618648885526793,
+              "centroid": [
+                0.010720008448308926,
+                1.038654668703092,
+                0.2355357058864977
+              ],
+              "points": 5
+            },
+            {
+              "fraction": 0.05,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.009059798691584391,
+              "centroid": [
+                0.007595448912164688,
+                1.0424839897732197,
+                0.2393402771928813
+              ],
+              "points": 9
+            },
+            {
+              "fraction": 0.1,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.016404629802031834,
+              "centroid": [
+                0.004040099042132421,
+                1.0528812759767132,
+                0.24122059783136965
+              ],
+              "points": 10
+            },
+            {
+              "fraction": 0.2,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.029068789944238352,
+              "centroid": [
+                -0.005084854042929886,
+                1.0735940808849866,
+                0.24490000834686965
+              ],
+              "points": 12
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        },
+        {
+          "end": "B",
+          "weldedVertex": 1404,
+          "worldGlTFXYZ": [
+            0.028811311349272728,
+            1.2142738965066906,
+            0.19965549595310564
+          ],
+          "sectionsTowardBody": [
+            {
+              "fraction": 0.975,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.011000522492101723,
+              "centroid": [
+                0.027153009067805555,
+                1.2107296683116515,
+                0.19969921896303794
+              ],
+              "points": 5
+            },
+            {
+              "fraction": 0.95,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.022001044984203466,
+              "centroid": [
+                0.02549470678633838,
+                1.207185440116612,
+                0.1997429419729703
+              ],
+              "points": 5
+            },
+            {
+              "fraction": 0.9,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.027311952711637333,
+              "centroid": [
+                0.021133553931541052,
+                1.1995184691689063,
+                0.20418898238026814
+              ],
+              "points": 10
+            },
+            {
+              "fraction": 0.8,
+              "closedLoopCount": 1,
+              "connectedContourCount": 1,
+              "coplanarTriangles": 0,
+              "diameterM": 0.044874611622262396,
+              "centroid": [
+                0.006767153263177673,
+                1.187672441281332,
+                0.2214114582564928
+              ],
+              "points": 12
+            }
+          ],
+          "diametersIncreaseTowardBody": true,
+          "allFourSectionsOneClosedContour": true,
+          "note": "Narrowing of a surface end is not by itself a sharp free lock tip; rounded caps can also narrow. Read pole fan angle and physical profile."
+        }
+      ],
+      "poleCandidates": [
+        {
+          "weldedVertex": 1432,
+          "worldGlTFXYZ": [
+            0.012971174903213978,
+            1.0348115686380124,
+            0.23175167825628076
+          ],
+          "worldBlenderXYZ": [
+            0.012971174903213978,
+            -0.23175167825628076,
+            1.0348115686380124
+          ],
+          "valence": 5,
+          "oneRingPlaneResidualM": 1.5515234999884104e-08,
+          "oneRingAxialDepthM": 0.01191341559752139,
+          "oneRingRadiusM": 0.004072263009818293,
+          "depthRadiusRatio": 2.9255024954915605,
+          "fanHalfAngleDeg": 18.871537245356187,
+          "angleDefectRadians": 4.411986743183881
+        }
+      ],
+      "poleCandidateCount": 1,
+      "tipAcceptance": "NOT_CERTIFIED_BY_TOPOLOGY: requires named loft correspondence and fixed-view geometric/visual endpoint proof.",
+      "lockIdentifier": "Central curl",
+      "identifierMapping": "node lockNames order + disjoint contiguous source triangle ranges; verify against native Sculpt piece"
+    }
+  ],
+  "limits": [
+    "Shell count is not reference-fidelity acceptance; shared roots are permitted.",
+    "A pole/fan or global narrowing does not prove a visible hooked strand end. Rounded caps and fused head extrema can narrow.",
+    "lockNames order is used only when component count and contiguous triangle ranges agree; final native face labels are a separate cross-check.",
+    "Self intersections and inter-shell volume intersections are not tested by this closure diagnostic."
+  ],
+  "input": "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47/input/visitor.glb",
+  "artifactSha256": "60650f47aac716cb5a11fa69bee58c06546aa2199a25c2bde6dcc37ce566ab6f",
+  "diagnosticSha256": "8dde306ab88161d86b43bae10697ab22a6cf10f47349284fa016bd875ae95951",
+  "hairNodes": [
+    {
+      "nodeIndex": 38,
+      "nodeName": "Swept_hair",
+      "extras": {
+        "partSlot": "Hair",
+        "sculptSource": "Hair high resolution source",
+        "lockNames": [
+          "Recessed foundation",
+          "Occipital sweep",
+          "Upper back right",
+          "Back crown",
+          "Left Lower cascade",
+          "Left Ear sweep",
+          "Left Upper cascade",
+          "Left Middle cascade",
+          "Right Lower cascade",
+          "Right Ear sweep",
+          "Right Upper cascade",
+          "Right Middle cascade",
+          "Forehead sweep",
+          "Long outer sweep",
+          "Falling fringe",
+          "Central curl"
+        ]
+      },
+      "meshName": "Hair runtime surface",
+      "meshExtras": {}
+    }
+  ],
+  "coordinates": "glTF world rest skin/morph coordinates; Blender conversion=(x,-z,y)",
+  "referenceAcceptance": "NOT_REVIEWED"
+}

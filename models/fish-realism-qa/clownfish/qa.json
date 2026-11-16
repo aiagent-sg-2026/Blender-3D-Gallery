@@ -1,0 +1,56 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "white bands were too flat, the snout too pointed and soft-fin edges too serrated"
+      ],
+      "changes": [
+        "round the head, add subtle white pigment variation and reduce soft-fin edge noise"
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "revise",
+      "changes": [
+        "replace visibly periodic band-edge ripples with smaller coherent random irregularity"
+      ]
+    },
+    {
+      "iteration": 3,
+      "result": "revise",
+      "changes": [
+        "re-viewed the current actual full-body/head renders; source/GLB and desktop/mobile checks pass",
+        "Retarget pectoral fanning onto local surface-root hinges before final review."
+      ]
+    },
+    {
+      "iteration": 4,
+      "result": "pass",
+      "changes": [
+        "Re-viewed the final actual full-body/head renders after local-hinge retargeting; current source, imported GLB and desktop/mobile checks pass."
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "4f28e011e19b2ca486277e64c6775f03214ff56b3c821ed88ee65498d5a272fd",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: compact orange body with three curved off-white bands edged in black",
+    "surface": "pass: irregular fine scales, restrained white pigment variation and curved outlined bands shared with the dorsal texture",
+    "head": "pass: closed photo-informed mouth and embedded subdued iris",
+    "fins": "pass: continuous spiny-soft dorsal, rounded caudal and dark fin margins",
+    "surface_contact": "pass: source and actual imported GLB pass five-phase root contact with unchanged thresholds",
+    "motion": "pass: three restrained pectoral cycles on local surface-root hinges and cyclic body/tail movement survive actual GLB import",
+    "browser": "pass: exact draft GLB swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed artwork, not a scanned or calibrated specimen.",
+    "Clownfish follows Amphiprion ocellaris in the inspected Mark Rosenstein photograph; original photo-informed artwork with artistic cyclic motion, not a specimen scan or measured behavior."
+  ]
+}

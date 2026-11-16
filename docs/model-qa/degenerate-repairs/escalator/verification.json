@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "basis": "486fb02b plus this focused escalator repair",
+  "javascript_tests": {
+    "passed": 706,
+    "failed": 0,
+    "log": "tests.log.gz"
+  },
+  "build": {
+    "passed": true,
+    "log": "build.log.gz",
+    "advisories": "Existing Vite chunk-size and callback-timing advisories"
+  },
+  "native": {
+    "version": "4.0.2",
+    "fresh_generation": true,
+    "source_reopen": true,
+    "canonical_import_zero_area_triangles": 0,
+    "actions": 60,
+    "curves": 420,
+    "keyframes": 466354,
+    "keyframe_negative_control": true
+  },
+  "shared_native_compatibility": {
+    "5.1.2": "M057 complete fresh four-LOD generation and canonical imports PASS",
+    "5.2.3": "Areca complete fresh generation/export/import PASS"
+  },
+  "runtime": {
+    "clips": 60,
+    "tracks": 120,
+    "samples": 300,
+    "movement_detected": true,
+    "all_repaired_nodes_static": true
+  },
+  "source_edit": {
+    "geometry_changed": 1,
+    "unchanged_siblings": 137,
+    "all_60_clip_payloads_unchanged": true,
+    "canonical_files_unchanged": true
+  },
+  "browser": {
+    "cases": 3,
+    "widths": [
+      1440,
+      768,
+      390
+    ],
+    "backend": "Local Google Chrome / ANGLE Metal",
+    "actual_consumed_sha_verified": true
+  },
+  "visual_review": "Actual Gallery 1440 and 390 images inspected; retained steps, rails, guards, truss covers and flush landing surfaces",
+  "whitespace_exception": "Unmodified raw failure logs retain original whitespace-only lines",
+  "limits": [
+    "No phone/FPS verification",
+    "No new Gallery playback UI",
+    "No deployment claim",
+    "Existing mechanical NEEDS REVIEW status preserved",
+    "Existing native weighted-normal Auto Smooth warnings are outside topology repair scope"
+  ],
+  "final_guard_checks": {
+    "targeted_tests": 21,
+    "failed": 0,
+    "snapshot": "final-action-snapshot.json",
+    "guards": "Duplicate native clip/track names and unsupported sampled F-curves fail closed; current source snapshot still equals the preserved baseline"
+  },
+  "integration": {
+    "upstream_main": "2f0867ec85c43ddfa04a71a308b31926acdce217",
+    "targeted_tests": 26,
+    "failed": 0,
+    "build": "PASS",
+    "scope": "Upstream fish/billiards artifacts and Ball 06 test; exact escalator catalog entry and runtime modules unchanged. Full original 706 tests and three target browser cases remain applicable to unchanged inputs."
+  },
+  "latest_integration": {
+    "upstream_main": "432bec9c47e00ce61d877e99bd095d5891f72a2b",
+    "changes": "Fish/catalog data only; runtime, repair scripts and escalator registration unchanged",
+    "tests": 14,
+    "failed": 0,
+    "build": "PASS"
+  }
+}

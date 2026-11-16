@@ -1,0 +1,517 @@
+{
+  "completed": true,
+  "harness_sha256": "6bc3a233c1a9be89f63ab878c80cbb293caaeae72e67cf275c4cc652a2b1ee5f",
+  "deployment_commit": null,
+  "mode": "actual_catalog_no_substitution",
+  "chromium_runtime": {
+    "executable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "backend": "metal"
+  },
+  "mobile": "emulated viewport, not physical hardware",
+  "results": [
+    {
+      "slug": "giant-gourami",
+      "engine": "chromium",
+      "width": 1440,
+      "height": 900,
+      "loaded_release_sha256": "80f1f321d5afd635c68b4536dfce489343099785a2b399dfbc2b07162aacc7ed",
+      "known_csp_console_messages": 0,
+      "native_select_csp_events": 0,
+      "screenshot_csp_events": 0,
+      "csp_events": [],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/chromium/giant-gourami/desktop.png"
+    },
+    {
+      "slug": "giant-gourami",
+      "engine": "chromium",
+      "width": 390,
+      "height": 900,
+      "loaded_release_sha256": "80f1f321d5afd635c68b4536dfce489343099785a2b399dfbc2b07162aacc7ed",
+      "known_csp_console_messages": 0,
+      "native_select_csp_events": 0,
+      "screenshot_csp_events": 0,
+      "csp_events": [],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/chromium/giant-gourami/mobile.png"
+    },
+    {
+      "slug": "three-spot-gourami",
+      "engine": "chromium",
+      "width": 1440,
+      "height": 900,
+      "loaded_release_sha256": "340f7b2745a4ac895d181a25e4ae58f5f2693b76fc185778b30fe6e5288f43e3",
+      "known_csp_console_messages": 0,
+      "native_select_csp_events": 0,
+      "screenshot_csp_events": 0,
+      "csp_events": [],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/chromium/three-spot-gourami/desktop.png"
+    },
+    {
+      "slug": "three-spot-gourami",
+      "engine": "chromium",
+      "width": 390,
+      "height": 900,
+      "loaded_release_sha256": "340f7b2745a4ac895d181a25e4ae58f5f2693b76fc185778b30fe6e5288f43e3",
+      "known_csp_console_messages": 0,
+      "native_select_csp_events": 0,
+      "screenshot_csp_events": 0,
+      "csp_events": [],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/chromium/three-spot-gourami/mobile.png"
+    },
+    {
+      "slug": "grass-carp",
+      "engine": "chromium",
+      "width": 1440,
+      "height": 900,
+      "loaded_release_sha256": "05877377ca8a8970012baf16bdd675f3990eec19f7c052470f857635fa643018",
+      "known_csp_console_messages": 0,
+      "native_select_csp_events": 0,
+      "screenshot_csp_events": 0,
+      "csp_events": [],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/chromium/grass-carp/desktop.png"
+    },
+    {
+      "slug": "grass-carp",
+      "engine": "chromium",
+      "width": 390,
+      "height": 900,
+      "loaded_release_sha256": "05877377ca8a8970012baf16bdd675f3990eec19f7c052470f857635fa643018",
+      "known_csp_console_messages": 0,
+      "native_select_csp_events": 0,
+      "screenshot_csp_events": 0,
+      "csp_events": [],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/chromium/grass-carp/mobile.png"
+    },
+    {
+      "slug": "giant-gourami",
+      "engine": "webkit",
+      "width": 1440,
+      "height": 900,
+      "loaded_release_sha256": "80f1f321d5afd635c68b4536dfce489343099785a2b399dfbc2b07162aacc7ed",
+      "known_csp_console_messages": 10,
+      "native_select_csp_events": 5,
+      "screenshot_csp_events": 5,
+      "csp_events": [
+        {
+          "directive": "style-src-attr",
+          "target": "model-theme",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-collection",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-feature",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "demo-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        }
+      ],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/webkit/giant-gourami/desktop.png"
+    },
+    {
+      "slug": "giant-gourami",
+      "engine": "webkit",
+      "width": 390,
+      "height": 900,
+      "loaded_release_sha256": "80f1f321d5afd635c68b4536dfce489343099785a2b399dfbc2b07162aacc7ed",
+      "known_csp_console_messages": 10,
+      "native_select_csp_events": 5,
+      "screenshot_csp_events": 5,
+      "csp_events": [
+        {
+          "directive": "style-src-attr",
+          "target": "model-theme",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-collection",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-feature",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "demo-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        }
+      ],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/webkit/giant-gourami/mobile.png"
+    },
+    {
+      "slug": "three-spot-gourami",
+      "engine": "webkit",
+      "width": 1440,
+      "height": 900,
+      "loaded_release_sha256": "340f7b2745a4ac895d181a25e4ae58f5f2693b76fc185778b30fe6e5288f43e3",
+      "known_csp_console_messages": 10,
+      "native_select_csp_events": 5,
+      "screenshot_csp_events": 5,
+      "csp_events": [
+        {
+          "directive": "style-src-attr",
+          "target": "model-theme",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-collection",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-feature",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "demo-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        }
+      ],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/webkit/three-spot-gourami/desktop.png"
+    },
+    {
+      "slug": "three-spot-gourami",
+      "engine": "webkit",
+      "width": 390,
+      "height": 900,
+      "loaded_release_sha256": "340f7b2745a4ac895d181a25e4ae58f5f2693b76fc185778b30fe6e5288f43e3",
+      "known_csp_console_messages": 10,
+      "native_select_csp_events": 5,
+      "screenshot_csp_events": 5,
+      "csp_events": [
+        {
+          "directive": "style-src-attr",
+          "target": "model-theme",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-collection",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-feature",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "demo-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        }
+      ],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/webkit/three-spot-gourami/mobile.png"
+    },
+    {
+      "slug": "grass-carp",
+      "engine": "webkit",
+      "width": 1440,
+      "height": 900,
+      "loaded_release_sha256": "05877377ca8a8970012baf16bdd675f3990eec19f7c052470f857635fa643018",
+      "known_csp_console_messages": 10,
+      "native_select_csp_events": 5,
+      "screenshot_csp_events": 5,
+      "csp_events": [
+        {
+          "directive": "style-src-attr",
+          "target": "model-theme",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-collection",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-feature",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "demo-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        }
+      ],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/webkit/grass-carp/desktop.png"
+    },
+    {
+      "slug": "grass-carp",
+      "engine": "webkit",
+      "width": 390,
+      "height": 900,
+      "loaded_release_sha256": "05877377ca8a8970012baf16bdd675f3990eec19f7c052470f857635fa643018",
+      "known_csp_console_messages": 10,
+      "native_select_csp_events": 5,
+      "screenshot_csp_events": 5,
+      "csp_events": [
+        {
+          "directive": "style-src-attr",
+          "target": "model-theme",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-collection",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-feature",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "demo-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        }
+      ],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/webkit/grass-carp/mobile.png"
+    }
+  ]
+}

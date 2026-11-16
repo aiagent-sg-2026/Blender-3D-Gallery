@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "id": "mall-event-booth",
+  "base_main_commit": "a1a676c3f70bc114e13fe3362cc95f356eabc398",
+  "before_zero_area_triangles": 118,
+  "after_zero_area_triangles": 0,
+  "source_precision_residues_removed": 8,
+  "triangles": 4506,
+  "bytes": 215640,
+  "glb_sha256": "b3e347cf544702ad81b2145d2e7e7ef6e4f1049f1ea6e1c62ead7c14f590b623",
+  "source_sha256": "3adf944bad2c2c49d496c858d3727df6a3cc9aa9f5c285ea90eda0e5f2cb9a57",
+  "editable_parts": 28,
+  "module_collections": 3,
+  "source_authored_data_preserved_and_reopened": true,
+  "native_and_delivered_reimport_zero_triangles": 0,
+  "vertex_and_normal_delta": 0,
+  "full_tests_passed": 691,
+  "fresh_native_generator_and_actual_glb": "PASS; complete source/export, real fresh GLB re-import and idempotent cleanup; preview rendering skipped",
+  "source_edit": "PASS; YOUR STORY -> NEW STORY using real saved-source CLI; only PosterPanel changes against same-toolchain control; BoothStructure and DisplayContent hashes unchanged; repository source/GLB protected; all three GLBs clean",
+  "native_precision_fix": "Two ~7nm strips survived Float64 GLB comparison but collapsed under native Float32 world translation. Disposable export-copy translations are baked before cleanup; strict original-surface guard passes and actual fresh/canonical imports are clean. Authored and canonical pivots unchanged.",
+  "triangulation": "Scoped Clip for DisplayContent retains original cylinder cap diagonals; first Beauty export with 18 unmatched triangles rejected",
+  "build": "PASS; existing chunk advisory",
+  "browser_cases_passed": 3,
+  "browser_scope": "1440/768/390; consumed SHA, render, orbit/zoom/reset, no overflow or network/page/console errors",
+  "visual_inspection": "Actual desktop Viewer image inspected; readable poster art/headline, jade wings, walnut booth and display content intact",
+  "limits": [
+    "No physical-device/FPS or deployment claim",
+    "Seven other affected assets remain pending"
+  ],
+  "upstream_integration": {
+    "tested_main_commit": "2b8097334caf15fb18543c8982481c2d9f196b6d",
+    "full_tests_passed": 691,
+    "build": "PASS",
+    "upstream_scope": "Fish assets/catalog only; target registration and Viewer/runtime unchanged",
+    "target_registration_unchanged": true,
+    "asset_hashes_unchanged": true
+  }
+}

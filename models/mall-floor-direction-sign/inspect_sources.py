@@ -1,9 +1,13 @@
 """Reopen the actual editable source and inspect real semantic collections."""
 import bpy
 import json
+import sys
 from pathlib import Path
 from mathutils import Vector
 here = Path(__file__).resolve().parent
+sys.dont_write_bytecode = True
+sys.path.insert(0, str(here.parents[1] / 'scripts'))
+from blender_degenerate_cleanup import geometry_counts
 bpy.ops.wm.open_mainfile(filepath=str(here/'sources/mall-floor-direction-sign.blend'))
 root = bpy.data.collections.get('ASSET_MallFloorDirectionSign')
 groups = ['SignStructure', 'FloorIdentity', 'DirectionDining', 'DirectionShops',
@@ -24,7 +28,9 @@ assert '02' in details['FloorIdentity']['editable_text'].values()
 points = [o.matrix_world @ Vector(corner) for c in root.children for o in c.objects for corner in o.bound_box]
 assert abs(min(p.z for p in points)) < .001
 assert bpy.context.scene.unit_settings.system == 'METRIC'
-report = {'id': 'mall-floor-direction-sign', 'source_reopened': 'PASS',
+zero = sum(item['zero_area_triangles'] for item in geometry_counts(list(root.all_objects)))
+assert zero == 0
+report = {'zero_area_triangles': zero, 'editable_parts': len(root.all_objects), 'id': 'mall-floor-direction-sign', 'source_reopened': 'PASS',
           'blender_version': bpy.app.version_string, 'origin': root['origin'],
           'front_axis': root['front_axis'], 'groups': details,
           'source_bounds': {'min': [min(p[i] for p in points) for i in range(3)],

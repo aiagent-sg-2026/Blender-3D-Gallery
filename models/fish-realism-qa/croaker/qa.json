@@ -1,0 +1,45 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "scale tiles too broad and high-contrast",
+        "spinous dorsal looks too level and uniformly pale"
+      ],
+      "changes": [
+        "use smaller lower-contrast scale rims",
+        "taper dorsal spine heights and darken the upper spinous membrane"
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "pass",
+      "changes": [
+        "smaller subdued scale rims",
+        "height-tapered spine section with a darker upper membrane",
+        "checked source/head renders, GLB contact and actual browser playback"
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "ec4247193ffde65493f750c45961ff142c9012787238119c08ce6af29290aa24",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "visual_checks": {
+    "anatomy": "pass: moderately deep grey-silver body, pale abdomen, truncate caudal and no chin barbels",
+    "surface": "pass: smaller low-contrast irregular scale relief after the second iteration; diffuse opercular pigment patch",
+    "head": "pass: large dark pupil, pale iris and maxillary crease ending below the rear eye margin",
+    "fins": "pass: tapered darker spinous dorsal, long low soft dorsal, short rear anal and small tapered pectorals",
+    "surface_contact": "pass: evaluated source and imported GLB roots contact actual posed body at five phases",
+    "motion": "pass: real source and GLB have finite moving tail/fins and cyclic endpoints",
+    "browser": "pass: exact draft GLB visibly swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed Pennahia anea artwork, not a scanned specimen.",
+    "Supplied Croaker label is broad; explicit visual species retained in metadata.",
+    "Draft captions remain baseline."
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "Median-fin junction heights did not meet and the pelvic membranes were too pale."
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "pass",
+      "changes": [
+        "Match spiny/soft root heights, lengthen anterior dorsal spines and make pelvic membranes yellow. Review the final body/head renders and current source/GLB/browser checks."
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "fcf877fb5417f8706b13f7f289c033022e38d456c4faa931f5b9d2b556ec092d",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: deep compressed disc, small pointed snout and rounded caudal",
+    "surface": "pass: eight curved dark bars and caudal-base spot with fine original pale-yellow skin pigment",
+    "head": "pass: embedded subdued eye within a dark bar and small closed mouth",
+    "fins": "pass: shared body/median-fin bands, elongated dorsal fringe, yellow pelvic and soft-fin margins",
+    "surface_contact": "pass: current source and actual imported GLB retain five-phase skin contact",
+    "motion": "pass: cyclic body/tail and local-hinge pectoral strokes survive real GLB import with matching loop endpoints",
+    "browser": "pass: exact draft GLB swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed Chaetodon octofasciatus artwork, not a scan or measured specimen.",
+    "Fine dentition and individual soft-fin rays are simplified. The swimming loop is artist-tuned, not measured from the still photo."
+  ]
+}

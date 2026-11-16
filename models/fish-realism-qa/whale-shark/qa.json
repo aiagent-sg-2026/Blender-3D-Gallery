@@ -1,0 +1,39 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "Front-cap UVs stretched white pigment into radial wedges, fin UVs elongated the spots, the grid was too regular and pelvic outlines folded."
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "pass",
+      "changes": [
+        "Project the closed snout UVs, bake fin pigment from physical coordinates, vary original spot placement/size and correct pelvic outlines; view actual whole-body, side-head and frontal renders and pass current source/import/browser gates."
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "f2db7a62244603b6834c19b3c8b6a12d72a88749ff2f92375a562f91d0838916",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png",
+    "frontal-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: broad flattened snout, tiny lateral eyes, five gill-slit relief marks per flank and subtle longitudinal ridges",
+    "surface": "pass: varied original pale spots and thin body grid; projected snout and physical-coordinate fin pigment avoid the former radial/stretched pattern",
+    "head": "pass: distinct closed anterior lip on the real broad snout, reviewed from the front",
+    "fins": "pass: closed opaque swept cartilage fins, distinct paired pelvics, two dorsals and unequal caudal lobes",
+    "surface_contact": "pass: source and actual imported GLB retain five-phase root contact",
+    "motion": "pass: restrained body/tail and fin cycle survive actual GLB import with matching endpoints",
+    "browser": "pass: exact draft GLB swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed Rhincodon typus artwork, not a scanned or calibrated specimen.",
+    "The mouth is closed; filter feeding, fine denticles and teeth are simplified. Gill slits use shallow relief and motion is artist-tuned."
+  ]
+}

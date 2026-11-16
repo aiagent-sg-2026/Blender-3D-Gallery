@@ -1,0 +1,517 @@
+{
+  "completed": true,
+  "harness_sha256": "6bc3a233c1a9be89f63ab878c80cbb293caaeae72e67cf275c4cc652a2b1ee5f",
+  "deployment_commit": null,
+  "mode": "actual_catalog_no_substitution",
+  "chromium_runtime": {
+    "executable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "backend": "metal"
+  },
+  "mobile": "emulated viewport, not physical hardware",
+  "results": [
+    {
+      "slug": "common-carp",
+      "engine": "chromium",
+      "width": 1440,
+      "height": 900,
+      "loaded_release_sha256": "5458e69d40c8341293ce8d465b43dd0dac2b058dacb527f673eb774814263747",
+      "known_csp_console_messages": 0,
+      "native_select_csp_events": 0,
+      "screenshot_csp_events": 0,
+      "csp_events": [],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/chromium/common-carp/desktop.png"
+    },
+    {
+      "slug": "common-carp",
+      "engine": "chromium",
+      "width": 390,
+      "height": 900,
+      "loaded_release_sha256": "5458e69d40c8341293ce8d465b43dd0dac2b058dacb527f673eb774814263747",
+      "known_csp_console_messages": 0,
+      "native_select_csp_events": 0,
+      "screenshot_csp_events": 0,
+      "csp_events": [],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/chromium/common-carp/mobile.png"
+    },
+    {
+      "slug": "jade-perch",
+      "engine": "chromium",
+      "width": 1440,
+      "height": 900,
+      "loaded_release_sha256": "3f11a79a935bf6d621c707ba200edd352c4cc0d84d9da5e451c0b29fc0f091d5",
+      "known_csp_console_messages": 0,
+      "native_select_csp_events": 0,
+      "screenshot_csp_events": 0,
+      "csp_events": [],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/chromium/jade-perch/desktop.png"
+    },
+    {
+      "slug": "jade-perch",
+      "engine": "chromium",
+      "width": 390,
+      "height": 900,
+      "loaded_release_sha256": "3f11a79a935bf6d621c707ba200edd352c4cc0d84d9da5e451c0b29fc0f091d5",
+      "known_csp_console_messages": 0,
+      "native_select_csp_events": 0,
+      "screenshot_csp_events": 0,
+      "csp_events": [],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/chromium/jade-perch/mobile.png"
+    },
+    {
+      "slug": "grey-mullet",
+      "engine": "chromium",
+      "width": 1440,
+      "height": 900,
+      "loaded_release_sha256": "68fe0762dc7b96ec40f020d1008bc1131de73ba00bd64183b32aff583125bc3f",
+      "known_csp_console_messages": 0,
+      "native_select_csp_events": 0,
+      "screenshot_csp_events": 0,
+      "csp_events": [],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/chromium/grey-mullet/desktop.png"
+    },
+    {
+      "slug": "grey-mullet",
+      "engine": "chromium",
+      "width": 390,
+      "height": 900,
+      "loaded_release_sha256": "68fe0762dc7b96ec40f020d1008bc1131de73ba00bd64183b32aff583125bc3f",
+      "known_csp_console_messages": 0,
+      "native_select_csp_events": 0,
+      "screenshot_csp_events": 0,
+      "csp_events": [],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/chromium/grey-mullet/mobile.png"
+    },
+    {
+      "slug": "common-carp",
+      "engine": "webkit",
+      "width": 1440,
+      "height": 900,
+      "loaded_release_sha256": "5458e69d40c8341293ce8d465b43dd0dac2b058dacb527f673eb774814263747",
+      "known_csp_console_messages": 10,
+      "native_select_csp_events": 5,
+      "screenshot_csp_events": 5,
+      "csp_events": [
+        {
+          "directive": "style-src-attr",
+          "target": "model-theme",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-collection",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-feature",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "demo-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        }
+      ],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/webkit/common-carp/desktop.png"
+    },
+    {
+      "slug": "common-carp",
+      "engine": "webkit",
+      "width": 390,
+      "height": 900,
+      "loaded_release_sha256": "5458e69d40c8341293ce8d465b43dd0dac2b058dacb527f673eb774814263747",
+      "known_csp_console_messages": 10,
+      "native_select_csp_events": 5,
+      "screenshot_csp_events": 5,
+      "csp_events": [
+        {
+          "directive": "style-src-attr",
+          "target": "model-theme",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-collection",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-feature",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "demo-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        }
+      ],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/webkit/common-carp/mobile.png"
+    },
+    {
+      "slug": "jade-perch",
+      "engine": "webkit",
+      "width": 1440,
+      "height": 900,
+      "loaded_release_sha256": "3f11a79a935bf6d621c707ba200edd352c4cc0d84d9da5e451c0b29fc0f091d5",
+      "known_csp_console_messages": 10,
+      "native_select_csp_events": 5,
+      "screenshot_csp_events": 5,
+      "csp_events": [
+        {
+          "directive": "style-src-attr",
+          "target": "model-theme",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-collection",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-feature",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "demo-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        }
+      ],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/webkit/jade-perch/desktop.png"
+    },
+    {
+      "slug": "jade-perch",
+      "engine": "webkit",
+      "width": 390,
+      "height": 900,
+      "loaded_release_sha256": "3f11a79a935bf6d621c707ba200edd352c4cc0d84d9da5e451c0b29fc0f091d5",
+      "known_csp_console_messages": 10,
+      "native_select_csp_events": 5,
+      "screenshot_csp_events": 5,
+      "csp_events": [
+        {
+          "directive": "style-src-attr",
+          "target": "model-theme",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-collection",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-feature",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "demo-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        }
+      ],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/webkit/jade-perch/mobile.png"
+    },
+    {
+      "slug": "grey-mullet",
+      "engine": "webkit",
+      "width": 1440,
+      "height": 900,
+      "loaded_release_sha256": "68fe0762dc7b96ec40f020d1008bc1131de73ba00bd64183b32aff583125bc3f",
+      "known_csp_console_messages": 10,
+      "native_select_csp_events": 5,
+      "screenshot_csp_events": 5,
+      "csp_events": [
+        {
+          "directive": "style-src-attr",
+          "target": "model-theme",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-collection",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-feature",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "demo-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        }
+      ],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/webkit/grey-mullet/desktop.png"
+    },
+    {
+      "slug": "grey-mullet",
+      "engine": "webkit",
+      "width": 390,
+      "height": 900,
+      "loaded_release_sha256": "68fe0762dc7b96ec40f020d1008bc1131de73ba00bd64183b32aff583125bc3f",
+      "known_csp_console_messages": 10,
+      "native_select_csp_events": 5,
+      "screenshot_csp_events": 5,
+      "csp_events": [
+        {
+          "directive": "style-src-attr",
+          "target": "model-theme",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-collection",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "model-feature",
+          "capture": false
+        },
+        {
+          "directive": "style-src-attr",
+          "target": "demo-category",
+          "capture": false
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        },
+        {
+          "directive": "style-src-elem",
+          "capture": true
+        }
+      ],
+      "media_preference_updates_playback": true,
+      "paused_stable": true,
+      "visible_swim_change": true,
+      "resumed_then_paused": true,
+      "no_horizontal_overflow": true,
+      "no_page_errors": true,
+      "viewer_disposed": true,
+      "screenshot": "output/playwright/fish-realism-release/local/webkit/grey-mullet/mobile.png"
+    }
+  ]
+}

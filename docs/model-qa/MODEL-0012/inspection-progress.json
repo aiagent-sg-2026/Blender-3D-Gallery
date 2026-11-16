@@ -1,0 +1,28 @@
+{
+  "observed_at": "2026-11-15T11:41:48.679559+00:00",
+  "baseline_head": "c9968137e1c7ff670c2fc0261510d9ab391ebbe8",
+  "original_files_verified": 26,
+  "geometry_source": "source/inspection.json",
+  "source_geometry_status": "PASS",
+  "dedicated_tests": {
+    "command": "node --test tests/ball-06.test.mjs",
+    "tests": 5,
+    "passed": 5,
+    "log": "/tmp/model-0012-targeted.log"
+  },
+  "native_render_status": "All20 native views complete and independently inspected;8PNG+4contact sheets public;20hash-verified originals archived",
+  "remote_full_regression_job": "5c4b78e5-3146-41dc-9061-74547b656d0c",
+  "remote_full_regression_status": "PASS;77unfiltered checks+4runtime profiles;22artifact+20468runtime input hashes verified",
+  "release_status": "PUSHED;all precommit,complete hosted Actions/deployment and actual production gates PASS",
+  "next_model_started": false,
+  "latest_source_sha": "69c5a1a8a14d887d9d105b466bb8521cc4a6a0eb",
+  "latest_unit_tests_passed": 705,
+  "latest_build": "PASS;567 catalogue entries",
+  "latest_delta_job": "1fe72825-f267-4320-94bc-9ba21c814b5f",
+  "latest_delta_status": "All4pinned batches SUCCEEDED, transferred, hash-verified and visually reviewed",
+  "last_updated_at": "2026-11-15T13:44:58.786281+00:00",
+  "upstream_deaf_status": "PASS;14camera+28motion profiles;54artifact+110runtime input hashes verified",
+  "host_contact_replay_status": "TERMINAL0;contact gap5.960464477539063e-08m;fullJSON/nonindex/oriented6144triangles unchanged;third validator0errors0warnings",
+  "independent_visual": "Final ACCEPT89/100;no confirmed P0/P1/P2 or required P3",
+  "pending_release_steps": []
+}

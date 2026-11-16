@@ -58,4 +58,8 @@ test('source reopening and real source-edit export preserve editable labels and 
   assert.equal(edit.status,'PASS');assert.equal(edit.originalAssetUnchanged,true);assert.deepEqual(edit.changedGroups,['RecycleLid']);
   assert.deepEqual(edit.unchangedGroups,groups.filter(n=>n!=='RecycleLid'));
   assert.equal(edit.results[0].sha256,metadata.metrics.sha256);assert.match(metadata.replacement.note,/No live sorting/);
+  assert.equal(edit.comparisonBasis,'same-toolchain source control');
+  assert.equal(edit.originalSourceSha256,metadata.source_sha256);assert.equal(edit.baselineSourceSha256,metadata.source_sha256);
+  assert.ok(edit.results.every(result=>result.zeroAreaTriangles===0));
+  for(const group of groups)if(group==='RecycleLid')assert.notEqual(edit.results[1].groupHashes[group],edit.results[2].groupHashes[group]);else assert.equal(edit.results[1].groupHashes[group],edit.results[2].groupHashes[group]);
 });

@@ -5,7 +5,7 @@ Two original Blender-authored furniture assets for the owner's Webpage-Design-Ga
 | Asset | Dimensions (glTF X/Y/Z, metres) | Triangles | GLB bytes | Materials |
 | --- | --- | ---: | ---: | ---: |
 | Lounge bench | 2.580 / 1.3175 / 0.922 | 5,640 | 234,288 | 5 |
-| Areca-inspired planter | 1.2301 / 2.3476 / 1.1916 | 5,160 | 119,760 | 6 |
+| Areca-inspired planter | 1.2301 / 2.3476 / 1.1916 | 4,935 | 119,760 | 6 |
 
 `reports/assets.json` records measurements from the actual exported GLBs, including SHA-256, world-space bounds and Khronos validator results. Both exports are self-contained, texture-free glTF 2.0 with opaque/double-sided PBR materials and no animation, compression decoder, cameras or lights. Each uses one named root and one merged mesh with separate material primitives. Editable parts and the preview studio remain in the source `.blend`.
 
@@ -40,3 +40,11 @@ Use the exact files under `exports/`. A consumer should pin the upstream commit,
 See [verification.md](verification.md) for executed checks, screenshots and limits. A PR is a proposed library addition; it does not itself prove a GitHub Pages deployment.
 
 The material/export pipeline follows the [Blender glTF documentation](https://docs.blender.org/manual/en/5.0/addons/import_export/scene_gltf2.html): mesh geometry and Principled metallic/roughness material values are exported directly.
+
+## Areca topology repair (2026-11-15)
+
+Use Blender 5.2+ for these saved sources; the generator refuses older Blender before writing. The repair was executed with signed, checksum-verified Blender 5.2.3 LTS, independently of the installed Blender 5.1.2. Source coordinates, polygon topology, curve data, materials, 213 parts and 198 leaflets remain editable. One additive derived FACE/BOOLEAN attribute (`cleanup_alternate_quad`) records 63 alternate diagonals among 864 ceramic faces; it preserves native loop triangulation without changing authored vertex/face arrays. The ceramic cleanup avoids welding coincident poles, which can shift their Float32 heights. Soil uses the existing reviewed cleanup.
+
+The exported ceramic radial poles use a separately reviewed 0.2 nm perpendicular-line error bound. The generator invokes repository Node QA/index-filter tools and rejects calibrated residues outside the ceramic material. All 125 reviewed positive-area residues lie on the two ceramic cap planes and include an analytic zero-radius pole; this is a project-specific numerical calibration. The default QA criteria remain unchanged, and fixtures refuse deletion of a real 1 nm face or the genuine 10 um face. Exporting this asset requires Node and the repository dependencies in addition to Blender.
+
+The canonical GLB removes 100 exact-zero triangles and 125 calibrated pole residues, retaining original positions, normals, materials and pivots. It has 4,935 triangles and remains 119,760 bytes; unused attribute capacity is retained. Existing previews remain applicable. The complete fresh source/export/import regression is `blender --background --python-exit-code 1 --python models/gjh-mall-furniture/test_degenerate_cleanup.py`. See [repair evidence](../../docs/model-qa/degenerate-repairs/gjh-areca-planter/README.md).

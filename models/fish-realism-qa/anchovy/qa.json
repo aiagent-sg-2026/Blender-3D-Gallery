@@ -1,0 +1,38 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "finding": "Eye diameter is too large relative to the head in the specimen photograph",
+      "change": "Reduce eye radius while retaining a large pupil and pale iris margin"
+    },
+    {
+      "iteration": 2,
+      "result": "pass",
+      "changes": [
+        "Reduced eye diameter to fit specimen head",
+        "Checked source renders, GLB motion/contact and desktop/mobile playback"
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "f7df6d75ad1ef10a903da1e5a9096b88621f5210c4a5652b14a7dae846c6d2b9",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "visual_checks": {
+    "anatomy": "pass: slender body, broad silver flank stripe, single dorsal and compact fork tail follow Stolephorus indicus specimen",
+    "head": "pass: reduced eye radius and pale iris; long maxillary crease extends under and behind eye",
+    "surface": "pass: flesh-grey back, subdued silver stripe and fine skin relief avoid decorative regular scale tiles",
+    "fins": "pass: small tapered pectorals, pelvic fins ahead of dorsal and modest anal membrane",
+    "surface_contact": "pass: evaluated source and actual GLB fin/body contact pass five phases",
+    "motion": "pass: faster tail-driven loop and stabilizing fins retain finite moving geometry through export",
+    "browser": "pass: exact draft GLB plays, pauses and disposes at desktop and mobile widths"
+  },
+  "limitations": [
+    "Photo-informed original artwork, not a scanned specimen.",
+    "One live fish; schooling and dried-goods variants are not claimed.",
+    "Draft captions remain baseline."
+  ]
+}

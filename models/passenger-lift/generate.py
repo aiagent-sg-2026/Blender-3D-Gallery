@@ -7,6 +7,22 @@ import bpy, math, sys, json, struct
 from mathutils import Vector
 HERE=Path(__file__).resolve().parent
 SLUG='passenger-lift';ROOT='ASSET_PassengerLift'
+if bpy.app.version!=(4,0,2):
+ raise RuntimeError('Use matching Blender 4.0.2 for the repaired passenger lift')
+sys.path.insert(0,str(HERE.parents[1]/'scripts'))
+from blender_degenerate_cleanup import add_cleanup
+CLEANUP_PARTS={SLUG:('Shaft_Label',)}
+def prepare_asset_geometry(slug,objects):
+ for obj in objects:
+  if obj.name in CLEANUP_PARTS.get(slug,()):
+   ancestor=obj
+   while ancestor:
+    assert not ancestor.animation_data,'Cleanup targets and ancestors must be static'
+    ancestor=ancestor.parent
+   add_cleanup(obj)
+def export_asset(slug,root,objects,destination):
+ export(root,destination)
+
 def material(name,rgb,metal=0,rough=.45,alpha=1):
  m=bpy.data.materials.new(name);m.use_nodes=True
  c=tuple((v/255)/12.92 if v/255<=.04045 else ((v/255+.055)/1.055)**2.4 for v in rgb)+(alpha,)
@@ -90,8 +106,9 @@ def build():
 
 def export(root,destination):
  bpy.ops.object.select_all(action='DESELECT');root.select_set(True)
+ prepare_asset_geometry(SLUG,list(root.children_recursive))
  for o in root.children_recursive:o.select_set(True)
- bpy.ops.export_scene.gltf(filepath=str(destination),export_format='GLB',use_selection=True,export_apply=True,export_yup=True,export_animations=True,export_extras=True,export_texcoords=False,export_cameras=False,export_lights=False)
+ bpy.ops.export_scene.gltf(filepath=str(destination),export_format='GLB',use_selection=True,use_active_scene=True,export_apply=True,export_yup=True,export_animations=True,export_extras=True,export_texcoords=False,export_cameras=False,export_lights=False)
  data=destination.read_bytes();n=struct.unpack_from('<I',data,12)[0];j=json.loads(data[20:20+n]);unique=[];mapping={}
  for i,m in enumerate(j.get('materials',[])):
   key=json.dumps({k:v for k,v in m.items() if k!='name'},sort_keys=True)
@@ -115,8 +132,8 @@ def studio():
 
 def main():
  for d in ['sources','exports','previews','reports']:(HERE/d).mkdir(exist_ok=True)
- if '--export-source' in sys.argv:bpy.ops.wm.open_mainfile(filepath=str(HERE/'sources'/(SLUG+'.blend')));root=bpy.data.objects[ROOT]
+ if '--export-source' in sys.argv:bpy.ops.wm.open_mainfile(filepath=str(HERE/'sources'/(SLUG+'.blend')),use_scripts=False,load_ui=False);root=bpy.data.objects[ROOT]
  else:
-  bpy.ops.wm.read_factory_settings(use_empty=True);bpy.context.preferences.filepaths.save_version=0;s=bpy.context.scene;s.unit_settings.system='METRIC';s.unit_settings.scale_length=1;s.render.fps=24;s.frame_start=1;s.frame_end=49;root=build();studio();bpy.ops.wm.save_as_mainfile(filepath=str(HERE/'sources'/(SLUG+'.blend')),compress=True)
+  bpy.ops.wm.read_factory_settings(use_empty=True);bpy.context.preferences.filepaths.save_version=0;s=bpy.context.scene;s.unit_settings.system='METRIC';s.unit_settings.scale_length=1;s.render.fps=24;s.frame_start=1;s.frame_end=49;root=build();prepare_asset_geometry(SLUG,list(root.children_recursive));studio();bpy.ops.wm.save_as_mainfile(filepath=str(HERE/'sources'/(SLUG+'.blend')),compress=True)
  bpy.context.scene.frame_set(1);export(root,HERE/'exports'/(SLUG+'.glb'))
 if __name__=='__main__':main()

@@ -1,0 +1,29 @@
+{
+  "observed_at": "2026-11-15T11:53:29.231242+00:00",
+  "job_id": "5c4b78e5-3146-41dc-9061-74547b656d0c",
+  "job_state": "SUCCEEDED",
+  "executed_source_sha": "c9968137e1c7ff670c2fc0261510d9ab391ebbe8",
+  "historical_snapshot_head": "f58402b3e6a2b418cd6d17780ff1f6988cdc8175",
+  "historical_snapshot_dirty": true,
+  "required_runtime_inputs_verified_against_pinned_git": 20468,
+  "manifest_rows": 20494,
+  "source_scope": "Every tracked src/scripts/models/public/data file plus package.json/package-lock.json/index.html/vite.config.js. Unit files execute separately on host. Extra root/output manifest rows are not browser runtime source.",
+  "artifact_hashes_verified": 22,
+  "full_unfiltered_game": 46,
+  "full_unfiltered_experience": 31,
+  "runtime_profiles": 4,
+  "archive_bytes": 1528885,
+  "archive_sha256": "54b7f8f2dbcfab3b9ebdc50eac7a88ba7ae5edb061d70ac1fb66b21a8390b82e",
+  "verification_failures_preserved": [
+    {
+      "path": "output/playwright/fish-realism-release/live/chromium/black-pomfret/desktop.png",
+      "reason": "Overbroad source comparison included historical capture outputs. Remote readback confirms24 modified output PNGs. No foreign output deleted or restored; complete runtime scope verified separately."
+    },
+    {
+      "path": "models/demo-beverage-can/reports/structure-motion.json",
+      "reason": "Current host unit execution changed validatedAt. Remote manifest matches pinned Git exactly; host report restored only after recursive equality excluding validatedAt. Verification now accounts for uncommitted differences."
+    }
+  ],
+  "visual_runtime_inspection": "Primary inspected four loaded PNGs and both candidate page PNGs. Ball06 numeral/green body and complete assembly visible; desktop/tablet controls readable without evident overlap. Page snapshots follow camera gestures and are not fixed-pose baselines.",
+  "latest_head_delta_validation": "RUNNING at deafc76c; pinned baseline evidence retained."
+}

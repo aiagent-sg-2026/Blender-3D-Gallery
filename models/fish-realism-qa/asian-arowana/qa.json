@@ -1,0 +1,38 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "The first head pigment formed filled geometric patches and the large scale edges were too faint."
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "pass",
+      "changes": [
+        "Replace filled head patches with restrained original reticulation and strengthen varied gold scale edges; view the current body/head renders and pass source/import/browser gates."
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "ad3c900524015ad28eb3e78cf6a52ead9fdda8170ac4aa5d2be0548fabca329a",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: elongated bronze-grey body with large varied scales, upturned mouth and two forward jaw barbels",
+    "surface": "pass: original gold-edged scales, restrained head reticulation and fine skin microstructure",
+    "head": "pass: closed upturned thick mouth, subdued silver iris and skin-intersecting barbel roots",
+    "fins": "pass: long pale pectorals, posterior dorsal/anal and rounded brown caudal",
+    "surface_contact": "pass: source and actual imported GLB retain five-phase fin/barbel-root contact",
+    "motion": "pass: restrained body/tail cycle and local-hinge pectoral movement survive actual GLB import with matching endpoints",
+    "browser": "pass: exact draft GLB swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed bronze/gold Scleropages formosus artwork, not a scanned specimen.",
+    "Ornamental colour varieties differ; teeth and fine head plates are simplified. Movement is artist-tuned."
+  ]
+}

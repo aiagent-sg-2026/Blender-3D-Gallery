@@ -1,6 +1,6 @@
 {
   "objective": "Repair the remaining mall degenerate geometry one asset at a time and push each verified repair to main.",
-  "status": "active",
+  "status": "complete",
   "baseline_assets_with_zero_area_triangles": 15,
   "assets": [
     {
@@ -24,67 +24,108 @@
       "before_zero_area_triangles": 200,
       "state": "repaired",
       "after_zero_area_triangles": 0,
-      "evidence": "mall-advertising-lightbox/README.md"
+      "evidence": "mall-advertising-lightbox/README.md",
+      "published_commit": "ea9ed61873cd88c02436bf590c06c3e55df9d78a"
     },
     {
       "id": "mall-waste-sorting-station",
       "before_zero_area_triangles": 199,
-      "state": "pending"
+      "state": "repaired",
+      "after_zero_area_triangles": 0,
+      "evidence": "mall-waste-sorting-station/README.md",
+      "published_commit": "d210eadecbc622dc9161a107468df55402e873e1"
     },
     {
       "id": "mall-service-desk",
       "before_zero_area_triangles": 172,
-      "state": "pending"
+      "state": "repaired",
+      "after_zero_area_triangles": 0,
+      "evidence": "mall-service-desk/README.md",
+      "published_commit": "3fe1cbb1126b47bf8c458de6735ddf7a2209a48b"
     },
     {
       "id": "mall-display-shelf",
       "before_zero_area_triangles": 164,
-      "state": "pending"
+      "state": "repaired",
+      "after_zero_area_triangles": 0,
+      "evidence": "mall-display-shelf/README.md",
+      "published_commit": "4f8eb6a5192a34122717c343a06aa0b29afeded8"
     },
     {
       "id": "mall-floor-direction-sign",
       "before_zero_area_triangles": 139,
-      "state": "pending"
+      "state": "repaired",
+      "after_zero_area_triangles": 0,
+      "evidence": "mall-floor-direction-sign/README.md",
+      "published_commit": "a1a676c3f70bc114e13fe3362cc95f356eabc398"
     },
     {
       "id": "mall-event-booth",
       "before_zero_area_triangles": 118,
-      "state": "pending"
+      "state": "repaired",
+      "after_zero_area_triangles": 0,
+      "evidence": "mall-event-booth/README.md",
+      "published_commit": "21a3fe495d9dcd8ad66cabea3537acc4f1a8eb7f"
     },
     {
       "id": "gjh-areca-planter",
       "before_zero_area_triangles": 100,
-      "state": "pending"
+      "state": "repaired",
+      "after_zero_area_triangles": 0,
+      "evidence": "gjh-areca-planter/README.md",
+      "published_commit": "f58402b3e6a2b418cd6d17780ff1f6988cdc8175"
     },
     {
       "id": "gjh-m057-premium-wall-shelf-corner",
       "before_zero_area_triangles": 60,
-      "state": "pending"
+      "state": "repaired",
+      "after_zero_area_triangles": 0,
+      "evidence": "gjh-m057-premium-wall-shelf-corner/README.md",
+      "published_commit": "486fb02b027c2a178e9e718421060a0f64d2550d"
     },
     {
       "id": "escalator",
       "before_zero_area_triangles": 11,
-      "state": "pending"
+      "state": "repaired",
+      "after_zero_area_triangles": 0,
+      "evidence": "escalator/README.md",
+      "published_commit": "4e38f215eeaf4fca1bfd12b639fff1dd15b8a90e"
     },
     {
       "id": "atm-kiosk",
       "before_zero_area_triangles": 4,
-      "state": "pending"
+      "state": "repaired",
+      "after_zero_area_triangles": 0,
+      "evidence": "atm-kiosk/README.md",
+      "published_commit": "4f03501a06a1be5af58748395c39fdd99d09c8e3"
     },
     {
       "id": "passenger-lift",
       "before_zero_area_triangles": 4,
-      "state": "pending"
+      "state": "repaired",
+      "after_zero_area_triangles": 0,
+      "evidence": "passenger-lift/README.md",
+      "published_commit": "e1f7c7e8052b7b8eb452f15b1261373a79e169a1"
     },
     {
       "id": "mall-food-court-tray-station",
       "before_zero_area_triangles": 2,
-      "state": "pending"
+      "state": "repaired",
+      "after_zero_area_triangles": 0,
+      "evidence": "mall-food-court-tray-station/README.md",
+      "published_commit": "f4df5da0184a9c5ed763b6a97c400b32a8656f71"
     },
     {
       "id": "mall-wayfinding-ceiling-sign",
       "before_zero_area_triangles": 2,
-      "state": "pending"
+      "state": "repaired",
+      "after_zero_area_triangles": 0,
+      "evidence": "mall-wayfinding-ceiling-sign/README.md",
+      "published_commit": "eefd6c615fe464bdbb49066578242ede78ee861f"
     }
-  ]
+  ],
+  "published_repair_count": 15,
+  "final_scan": "final-scan.json",
+  "knowledge_sync": "kb-sync.json",
+  "completion_evidence_commit": "eefd6c615fe464bdbb49066578242ede78ee861f"
 }

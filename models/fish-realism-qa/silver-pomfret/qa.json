@@ -1,0 +1,22 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": 1,
+  "reviewed_source_sha256": "0c8dff519fc462506268ab1284068a3b83f996279f68f9e0b940268c433902f4",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "visual_checks": {
+    "anatomy": "pass: strongly compressed deep silver body, small mouth, no pelvic fins and asymmetric forked caudal lobes",
+    "surface": "pass: subdued silver variation with fine integrated skin relief rather than individually raised regular tiles",
+    "head": "pass: integrated mouth and restricted gill opening, textured iris conforms to the head surface",
+    "fins": "pass: swept dorsal and anal margins, pale membranes and body-anchored roots",
+    "motion": "pass: cyclic tail and independently feathered distal fins survive GLB reimport",
+    "browser": "pass: real draft GLB loaded in desktop/mobile gallery with visible playback and stable pause",
+    "surface_contact": "pass: actual evaluated source and imported GLB roots contact the posed skin at five phases; paired pelvic roots embedded where present"
+  },
+  "limitations": [
+    "Photo-informed original artwork, not a scanned or measured specimen.",
+    "Browser fixture uses baseline catalog captions; production release is separate."
+  ]
+}

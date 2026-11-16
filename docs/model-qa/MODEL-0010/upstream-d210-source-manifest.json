@@ -1,0 +1,746 @@
+{
+  "source_sha": "d210eadecbc622dc9161a107468df55402e873e1",
+  "observed_at": "2026-11-15T08:36:27.489231+00:00",
+  "checked_out_files": [
+    {
+      "path": "models/chibi-mall-guide-v5/qa/morph-smoke/README.md",
+      "bytes": 1032,
+      "sha256": "f5f812697b05cc2699ce8aa3699a7da11118fd0459eed285a2778934e4c0d720"
+    },
+    {
+      "path": "models/chibi-mall-guide-v5/qa/morph-smoke/check.mjs",
+      "bytes": 2017,
+      "sha256": "d7a9dd00a1defbb4397ae2bd5a6837dda7e0bd71682d53ea384051a933a05aab"
+    },
+    {
+      "path": "models/chibi-mall-guide-v5/qa/morph-smoke/make.py",
+      "bytes": 1833,
+      "sha256": "92026d839bd907c11bd3634fe7742c748ca1048f9fa991d53068a155498aa23a"
+    },
+    {
+      "path": "models/chibi-mall-guide-v5/reference/PROVENANCE.md",
+      "bytes": 266,
+      "sha256": "342a1b0a856e3b722fc404a77cce35ec60231f792786bcbd15fdaee2e786cf19"
+    },
+    {
+      "path": "models/chibi-mall-guide-v5/reference/turnaround-b.png",
+      "bytes": 1681583,
+      "sha256": "3c66e097afdbb0cb68aefc72641bb979e67a55f19acff61c8ee3ef5ffce9d462"
+    },
+    {
+      "path": "models/chibi-visitor-v4/README.md",
+      "bytes": 7887,
+      "sha256": "0b33b7681d7155d9f2b649ea4f1fcfd62526ef1758ca6cc8186d148b119d71c6"
+    },
+    {
+      "path": "models/chibi-visitor-v4/archive/chibi-visitor-v4-primitive-v1.glb",
+      "bytes": 1233456,
+      "sha256": "615e6d433507cb4b8bd0a8b8dcac56d475dfc69e44ec37c8a4897249e87d7586"
+    },
+    {
+      "path": "models/chibi-visitor-v4/archive/generate-primitive-v1.py",
+      "bytes": 43113,
+      "sha256": "4d116b1da89b686f15e2e956c8c9c8a0f98aca22bee43a96f5bdcbdb84213113"
+    },
+    {
+      "path": "models/chibi-visitor-v4/exports/chibi-visitor-v4.glb",
+      "bytes": 2865168,
+      "sha256": "2a2c9791ef2c2102c484bead47d68ff6caf15392e41f4bd24cbe2b8a1d5c98b6"
+    },
+    {
+      "path": "models/chibi-visitor-v4/generate.py",
+      "bytes": 49153,
+      "sha256": "6576d934a38cd57ff383f52d1ad847677658520f66ac83469938738914443d56"
+    },
+    {
+      "path": "models/chibi-visitor-v4/metadata.json",
+      "bytes": 2655,
+      "sha256": "c3e0b863364489a768dbede2235cbc5535bad3450a487931a6d508c1a551ad4f"
+    },
+    {
+      "path": "models/chibi-visitor-v4/previews/back.png",
+      "bytes": 971722,
+      "sha256": "244531637c9b290ce861db528f35f06cde29e62c8610e1eb4047d1d097f55081"
+    },
+    {
+      "path": "models/chibi-visitor-v4/previews/front.png",
+      "bytes": 1015392,
+      "sha256": "1acb64470e4a0e70499b73f77c25cda31eb313a4dc646f3d2a62ae7ecd419a30"
+    },
+    {
+      "path": "models/chibi-visitor-v4/previews/head-study/back.png",
+      "bytes": 509261,
+      "sha256": "68c5c51b8d205fdb53ca7b690b82675dcaecc73bc167da195e64ab4de4b1459c"
+    },
+    {
+      "path": "models/chibi-visitor-v4/previews/head-study/front.png",
+      "bytes": 540332,
+      "sha256": "cf3bfa272e3349692cd6d60df7c37459e0605c1166d3139a84da24ac0bf2319d"
+    },
+    {
+      "path": "models/chibi-visitor-v4/previews/head-study/reference-vs-final-head.png",
+      "bytes": 883182,
+      "sha256": "dadd47c0398977fdf71bd5d6560b1087d7f3338a9d555540f072cbfb9264b133"
+    },
+    {
+      "path": "models/chibi-visitor-v4/previews/head-study/reference-vs-fused-head.png",
+      "bytes": 878907,
+      "sha256": "305bf8cd5ffdee339666bc7e90402d53f0074f106a15b9e7074ebe647584eeeb"
+    },
+    {
+      "path": "models/chibi-visitor-v4/previews/head-study/sculpt-pass1-front.png",
+      "bytes": 281297,
+      "sha256": "84c0b1c385f3ad44f2c88c0f4bd2296215e41d435d7abe56b9ad8fc89912d500"
+    },
+    {
+      "path": "models/chibi-visitor-v4/previews/head-study/sculpt-pass1-side.png",
+      "bytes": 278244,
+      "sha256": "8ca5eec28e0276880cf1426aa2284fe9e5c8bda9e0c20f2409840633ee687da6"
+    },
+    {
+      "path": "models/chibi-visitor-v4/previews/head-study/sculpt-pass1-three.png",
+      "bytes": 280742,
+      "sha256": "cfb85c3249ae0e6e8ce53420131b2dc334d7d41cddbcf46d45f80e668d7428d1"
+    },
+    {
+      "path": "models/chibi-visitor-v4/previews/head-study/sculpt-pass2-front.png",
+      "bytes": 307888,
+      "sha256": "19513cd713cf3441a8968de52f5b0d665b90645fb9e9f01f7163d63c22ea6d14"
+    },
+    {
+      "path": "models/chibi-visitor-v4/previews/head-study/sculpt-pass2-side.png",
+      "bytes": 305614,
+      "sha256": "76f9cff2d656cb58ca90ecc972139bf051f88794ee80e718f0ac4b5f3ef4f7ff"
+    },
+    {
+      "path": "models/chibi-visitor-v4/previews/head-study/sculpt-pass2-three.png",
+      "bytes": 307471,
+      "sha256": "5f69eff05e368482c9aaec1dd9da5e032b4f311f66fb39a9d970d3ed3fde7935"
+    },
+    {
+      "path": "models/chibi-visitor-v4/previews/head-study/three-quarter.png",
+      "bytes": 526920,
+      "sha256": "11645346eb9ddd00a8a4ac4a50c1a11ed5c4fe5901fff74d377471305d4c8006"
+    },
+    {
+      "path": "models/chibi-visitor-v4/previews/reference-comparison.png",
+      "bytes": 1751570,
+      "sha256": "864d1c2b0d68dd21552bfadfc76d52f8749b764d95027de39f38286091108621"
+    },
+    {
+      "path": "models/chibi-visitor-v4/previews/side.png",
+      "bytes": 920284,
+      "sha256": "ac0bbb326fcb2320015db12f2e50d3c485371443df9cf6e95a4852607f5a48d3"
+    },
+    {
+      "path": "models/chibi-visitor-v4/previews/three-quarter.png",
+      "bytes": 997163,
+      "sha256": "346b07db319b27e4eba13e6584289b6bef9a1fd0ef673c402b38dacd951ab9e1"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/check-glb.mjs",
+      "bytes": 4244,
+      "sha256": "a594e6ab6a7ebd5fd221721883747bea6da12bf053f596f47c3e4f8317edbd1b"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-001/browser-console.txt",
+      "bytes": 175,
+      "sha256": "e96f47424ac58f328e935dc9af707dc3b14d1a360eefd7dfb8c44a1f77c97a68"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-001/gltf-validator.json",
+      "bytes": 2166,
+      "sha256": "02cb06d0ee72f3389889285384f9bccb4c39e3dc48a366b0606facd520d934c0"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-001/hashes.json",
+      "bytes": 427,
+      "sha256": "df9f2fa641ae5d1d97e418d2a939956c7003aec11acddaf84f4fc19c27ab3a1a"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-001/issues.json",
+      "bytes": 4046,
+      "sha256": "1d1bb2c32de6e130196da89419fa782566446952fd16ebe9783c10ada400ce4c"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-001/manifest.json",
+      "bytes": 7051,
+      "sha256": "ead23d40db5da4d075e92e9eeb6608d1262d87aff67a187969e49900d2e1d0c6"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-001/performance.json",
+      "bytes": 328,
+      "sha256": "a9cb5723b7d4a6eb87c2039bd0e8b20aecebe356564249623abd6a6f248fe225"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-001/screenshots/back.png",
+      "bytes": 521067,
+      "sha256": "79c723eae45cc4f1ba36f4178414e203631f11408e3fb6f2679f37521cba23e4"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-001/screenshots/bottom.png",
+      "bytes": 474037,
+      "sha256": "814b4c478b1a1e39f56d10f99727128b8fe9fb4ac826b88a451d200e6097a819"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-001/screenshots/front.png",
+      "bytes": 537725,
+      "sha256": "c9af774734276b8d6698dff37c5c5a703e68409c591b1123cc05a6c7f4e592ce"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-001/screenshots/head-back.png",
+      "bytes": 521095,
+      "sha256": "b9e0aebfafb1fb45b7638d2f779805ce4a16211f2d747108ffa959fb1a3d3939"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-001/screenshots/head-front.png",
+      "bytes": 555923,
+      "sha256": "e3d03d273c5e7d5897a154bf02c21c3933f0aa8f1f215e33e20f78ddae983f72"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-001/screenshots/head-left.png",
+      "bytes": 512184,
+      "sha256": "24f702e719e836225a039816535d212b5595ea8f75db4dd1efe9739f5eaa04e3"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-001/screenshots/head-right.png",
+      "bytes": 514152,
+      "sha256": "b81ebf14b1efdf121ed0ff7cabb45473d4cbab0fcfef18009a31a47106837341"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-001/screenshots/head-three-quarter-back.png",
+      "bytes": 507335,
+      "sha256": "66818cc96210af785a5a15112ce4d4c944d89370924a22833f1eb6274fdb3c86"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-001/screenshots/head-three-quarter.png",
+      "bytes": 536671,
+      "sha256": "82b35f00288ddb681bca550806d0962738b11f64a8608988851ebc82cdd2204b"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-001/screenshots/left.png",
+      "bytes": 488387,
+      "sha256": "040f83d10ef91fb3ebffeca12cb0f6f111bf9dc832dda1ab406703a1176a2da3"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-001/screenshots/right.png",
+      "bytes": 492097,
+      "sha256": "8021f35bc04861bda0a25490e100e1ed87bed2744aeaafe8ed429e155da63c8d"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-001/screenshots/side-gate-crop-ref.png",
+      "bytes": 20724,
+      "sha256": "bf039077c234ebff3a65c10eabd651749a22b675fe272f5e44f6889e06d85d13"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-001/screenshots/three-js-back.jpg",
+      "bytes": 16359,
+      "sha256": "30808c9b586b4bf84a33eb4d6f37b33dcc7b4f104076a1ca30636a96714ac0b4"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-001/screenshots/three-js-front.jpg",
+      "bytes": 22361,
+      "sha256": "74877e66b87c8f077f808ae3d0a34de05708b43d778b37499736fc342dc4a54f"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-001/screenshots/three-js-three-quarter.jpg",
+      "bytes": 21213,
+      "sha256": "8c043c6f4fb1fc7f562e5ff42aacbf16e009b13abdece83f43c67c233a287f48"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-001/screenshots/three-quarter.png",
+      "bytes": 527715,
+      "sha256": "6f6a3029d85955b997102b575452ac4322d9e421c7aa52c8713276e911f9bdba"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-001/screenshots/top.png",
+      "bytes": 437888,
+      "sha256": "bbcdde78451320d49c41d89169c11271cbea6fdb714bc67d242b69a5ecaaef07"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-001/silhouette-rows.txt",
+      "bytes": 3847,
+      "sha256": "2bdd3a35867954c097fda3c53042c4de5af77527763bc6590f591007cbe167bd"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-002/gltf-validator.json",
+      "bytes": 2166,
+      "sha256": "291e15336a72ae5b2d521115b64b0c947fcee03bb3cf19311e7a70b40882dac9"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-002/hashes.json",
+      "bytes": 427,
+      "sha256": "9b767028d38b3f1dff79491668a4ec9590e67ec835605115aafee94838f2edd5"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-002/issues.json",
+      "bytes": 1779,
+      "sha256": "130c3d17e0ebb5a7f81cf590c4950427ea51f074678ad49ad8b15176d7a8d961"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-002/manifest.json",
+      "bytes": 3563,
+      "sha256": "ca15f7ec189698ad40f2e399b0924da1b6c9f25cfd33c5e25c812cf58bebe1fe"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-002/screenshots/back.png",
+      "bytes": 511273,
+      "sha256": "e02feac2a0e9e3131af9b87d8598758c82714dae47f6073b3e14314bc89af2c5"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-002/screenshots/bottom.png",
+      "bytes": 466665,
+      "sha256": "cb902c525262d4fea3102b2ca2bcd0fb099c3f57bbcf14a0094565ccb593f86c"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-002/screenshots/front.png",
+      "bytes": 539292,
+      "sha256": "edce8343a98dd381288a03252a817e751ac51ae8bada791b18a47433f01a42c4"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-002/screenshots/hand-front.png",
+      "bytes": 220292,
+      "sha256": "5ec39d9590540a578282f4b779452e947f7ccafc36f558e466df8c5be0227404"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-002/screenshots/hand-q.png",
+      "bytes": 225356,
+      "sha256": "59360cd97078ff9d3db4c61bb185873fa1be1a11833e876895ea28d8ae28e8ab"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-002/screenshots/hand-side.png",
+      "bytes": 245106,
+      "sha256": "36e3f17b751768b59c7a4a78fe39922f8603a3640bf245be70c9692cc44c7c90"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-002/screenshots/head-back.png",
+      "bytes": 504034,
+      "sha256": "98d2c343f59de1a4a034512476949a3fd133133bc950bae3ee46728b629412ca"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-002/screenshots/head-front.png",
+      "bytes": 556696,
+      "sha256": "beb6afab8a9683dd60ad42a85b5793f6f0bf808d9a11a7a8e5cbb3fec216b7fd"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-002/screenshots/head-left.png",
+      "bytes": 503336,
+      "sha256": "8bda079a191b8e82c7a849e57aa281bbae80c18b9fda0a9dd97f4129aead8165"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-002/screenshots/head-right.png",
+      "bytes": 505682,
+      "sha256": "52775ea4ec63fe462f7c8102d4ff1320349fe92001be841ca4a43f469c7cab0e"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-002/screenshots/head-three-quarter-back.png",
+      "bytes": 493483,
+      "sha256": "f1b61a62db59618f3f5472228f2ec6c2da1ddd62f5af1737fad11f2b1845c087"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-002/screenshots/head-three-quarter.png",
+      "bytes": 539293,
+      "sha256": "9c4657e14e830f9989767b5b13ab6eebaa0ea16cbff0a33be9f7d0a2b6747500"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-002/screenshots/left.png",
+      "bytes": 483085,
+      "sha256": "d20138628f7c4f4a0dd76f6d8fceba91cbeb391d2168525122605e95fa63f409"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-002/screenshots/right.png",
+      "bytes": 486939,
+      "sha256": "7f7c70c20f1819b651405c1db5527f228e12c151747e851473528320e9ae0897"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-002/screenshots/three-js-back.jpg",
+      "bytes": 16839,
+      "sha256": "e36457482971207a616128e764dcc3319ec0a41d45aa5e9b35cb855f1cf0060e"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-002/screenshots/three-js-front.jpg",
+      "bytes": 22731,
+      "sha256": "15ac5a873e43de0599eea48d554e1f0ffb6d620a32c8adfb94b66c8d83fd115f"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-002/screenshots/three-js-three-quarter.jpg",
+      "bytes": 21533,
+      "sha256": "afe4cbbd88572582f2b88ca9f23adc8d5f2efcb3eaf07957d3d0d6e0de25a057"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-002/screenshots/three-quarter.png",
+      "bytes": 529186,
+      "sha256": "7dd8927ccaa1292eebf4f2eec60f4cdaf2a8be4d637442474eab07c077606d2d"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-002/screenshots/top.png",
+      "bytes": 435240,
+      "sha256": "e51c7312ef0323c2805446698c06adbc4d0dbed54b25941cd223394d563e66ac"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-002/silhouette-gate.txt",
+      "bytes": 151,
+      "sha256": "9858d355a330b29c8b7fe40e2c5b29ca259b5eb72e79d00308d676121c38b41a"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-002/silhouette-rows-whole-body.txt",
+      "bytes": 5695,
+      "sha256": "d2272470c71c19b23735d25ef5878826c1a304b5eee7a4b6e9dfeadcd63357bf"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/run-002/silhouette-rows.txt",
+      "bytes": 3847,
+      "sha256": "5c27130b4404ea57312d831d5103b5fb1f229c25c41a7478cbbd278e25f40d30"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/silhouette-gate.py",
+      "bytes": 781,
+      "sha256": "e07d49faef47655b74da4f5d6a771294fb108d400a92a3cd31dabe2166bc5604"
+    },
+    {
+      "path": "models/chibi-visitor-v4/qa/silhouette-rows.py",
+      "bytes": 930,
+      "sha256": "b096e22111ba509105bfd164ac2553e8a38685280092ce31f9d124d011ac34a2"
+    },
+    {
+      "path": "models/chibi-visitor-v4/sculpt_head.py",
+      "bytes": 7370,
+      "sha256": "aa47489a549bb07e657b0220b758b542503001cfcfc83e8744b30863e1e60af4"
+    },
+    {
+      "path": "models/chibi-visitor-v4/sources/chibi-visitor-v4.blend",
+      "bytes": 3128616,
+      "sha256": "890d82a468560eb91fc578dadc0676b92372fdcec150d9ead6b3510cb1b7fcbd"
+    },
+    {
+      "path": "models/chibi-visitor-v4/sources/head-sculpt.json",
+      "bytes": 311508,
+      "sha256": "9d1350586fcdcaf8851502ead36fba81a22103a7cf59daf3956eb964edaf1718"
+    },
+    {
+      "path": "models/chibi-visitor-v4/verification/three-js-back.jpg",
+      "bytes": 16839,
+      "sha256": "e36457482971207a616128e764dcc3319ec0a41d45aa5e9b35cb855f1cf0060e"
+    },
+    {
+      "path": "models/chibi-visitor-v4/verification/three-js-front.jpg",
+      "bytes": 22731,
+      "sha256": "15ac5a873e43de0599eea48d554e1f0ffb6d620a32c8adfb94b66c8d83fd115f"
+    },
+    {
+      "path": "models/chibi-visitor-v4/verification/three-js-three-quarter.jpg",
+      "bytes": 21533,
+      "sha256": "afe4cbbd88572582f2b88ca9f23adc8d5f2efcb3eaf07957d3d0d6e0de25a057"
+    },
+    {
+      "path": "models/chibi-visitor-v4/verification/viewer-check.html",
+      "bytes": 4177,
+      "sha256": "1ac4fc3404121b67be83f4675319a208946d989d4ec8460c0014e80d52fd0b8c"
+    },
+    {
+      "path": "models/fish-realism-review/README.md",
+      "bytes": 2502,
+      "sha256": "683540fcaa0107f65c5adaabc4d4fbb4277b522579b557e44478686b1d349e8e"
+    },
+    {
+      "path": "models/fish-realism-review/acceptance.json",
+      "bytes": 6372,
+      "sha256": "72978f5635f2f8b8e8ef5f93d209635e9197b44853b7279bc5cfc4be7cacf66f"
+    },
+    {
+      "path": "models/fish-realism-review/create_review.py",
+      "bytes": 31175,
+      "sha256": "56c8d3457a70110dc5963d3c3b1ed8892fb301da8c494c2d88c36b324d848b8f"
+    },
+    {
+      "path": "models/fish-realism-review/external-candidates/barramundi/SOURCE.md",
+      "bytes": 959,
+      "sha256": "0a872d23709643379fe2a13261d535d110060d73154ad9b2141a90f3a49351c4"
+    },
+    {
+      "path": "models/fish-realism-review/external-candidates/barramundi/original.glb",
+      "bytes": 12488144,
+      "sha256": "ecc3bafb6b00f2c8b810863c388e3768a7b7ea0d0335e8cb8c574c266e571f4a"
+    },
+    {
+      "path": "models/fish-realism-review/external-candidates/betta/MIRROR-SOURCE.md",
+      "bytes": 9255,
+      "sha256": "3339fc3079e6ff8dbb30424f8f70597fbdaa5e649ee98f6c8e287864b869c32f"
+    },
+    {
+      "path": "models/fish-realism-review/external-candidates/betta/mirror-revision.json",
+      "bytes": 257,
+      "sha256": "9eff3c3bf0df6579d73de42a5b1e48229451701855ff664c9c48ff231c90bdb1"
+    },
+    {
+      "path": "models/fish-realism-review/external-candidates/betta/original.glb",
+      "bytes": 1265112,
+      "sha256": "2cec0e42bdcf47f3660ba420b3fcc86d4d846d4f3edf44deeb08541868eaf589"
+    },
+    {
+      "path": "models/fish-realism-review/external-candidates/import-inventory.json",
+      "bytes": 3112,
+      "sha256": "199b24978a1235349f3b0296d6aa7e8707c4f16ea7686d3770ae28f36d3e5ca7"
+    },
+    {
+      "path": "models/fish-realism-review/external-candidates/inspect_imports.py",
+      "bytes": 1128,
+      "sha256": "3201b0a4d9781307ca7ac12023818bfb1adfedefb052e3e540d92b0ef770fe78"
+    },
+    {
+      "path": "models/fish-realism-review/revision-02/create_review.py",
+      "bytes": 25442,
+      "sha256": "2bbec83b82af86f1345d50d4f7d7325ad97a96f5a0a443aca19899de0d367684"
+    },
+    {
+      "path": "models/fish-realism-review/revision-02/original-export-guard.json",
+      "bytes": 7495,
+      "sha256": "932e1b7e0d682bc46626eeb97d32a9189c45401993c21c88432ebb3f1a45a197"
+    },
+    {
+      "path": "models/fish-realism-review/revision-03/README.md",
+      "bytes": 1495,
+      "sha256": "4b1e253fa0258a26c0d23d1af0f1308b036a00130db35d96d90bfe15974773d4"
+    },
+    {
+      "path": "models/fish-realism-review/revision-03/barramundi/barramundi-review.blend",
+      "bytes": 12625080,
+      "sha256": "d81ac3f4b14687df7bc5d5cc9ffdfb51faff98d5ce6a090407ef28ccfccade1b"
+    },
+    {
+      "path": "models/fish-realism-review/revision-03/barramundi/barramundi-review.glb",
+      "bytes": 12519308,
+      "sha256": "d85b6207ab9a0532c1c0c81097f775cffb1d395ef391e9173b3add57701be045"
+    },
+    {
+      "path": "models/fish-realism-review/revision-03/barramundi/preview.png",
+      "bytes": 980567,
+      "sha256": "1127f7338403e3b8ae0f2690e79d222d1486eddf3b211fae08c9b8a3be79b988"
+    },
+    {
+      "path": "models/fish-realism-review/revision-03/barramundi/swim.gif",
+      "bytes": 1294039,
+      "sha256": "b00d78c0d8f8a4429ff45b53a9e3090f8cc8bbffb97fb0a1efeacc03ffdefbd9"
+    },
+    {
+      "path": "models/fish-realism-review/revision-03/barramundi/verification.json",
+      "bytes": 328,
+      "sha256": "940b92a2ec9b8abe3acf1a2689e74fc62f8efacdc339698c8a09bc16e1adf2f6"
+    },
+    {
+      "path": "models/fish-realism-review/revision-03/betta/betta-review.blend",
+      "bytes": 1421028,
+      "sha256": "7af70e0bb6be47c1f8d23e871dc1f9e550beafdae7012abad6bf5c198d199dad"
+    },
+    {
+      "path": "models/fish-realism-review/revision-03/betta/betta-review.glb",
+      "bytes": 1196884,
+      "sha256": "81324e66b2a4362c110fe4998fcd67cb6bc8b7a63303fc424b2280692120de74"
+    },
+    {
+      "path": "models/fish-realism-review/revision-03/betta/preview.png",
+      "bytes": 1296131,
+      "sha256": "154fc40b53ecec48dfbc42fddca6fd589af0c5227bf62089a85f3b8af5ee5b76"
+    },
+    {
+      "path": "models/fish-realism-review/revision-03/betta/swim.gif",
+      "bytes": 3246741,
+      "sha256": "36e6eb2f716bc8756188a2b14ee7aed5783927072e4e092ffbf01ed034bb4c55"
+    },
+    {
+      "path": "models/fish-realism-review/revision-03/betta/verification.json",
+      "bytes": 328,
+      "sha256": "8e27e43f9aa666cc7e4755b1da629cf9aab3faea582b7219948f169d3ab19678"
+    },
+    {
+      "path": "models/fish-realism-review/revision-03/create_review.py",
+      "bytes": 2991,
+      "sha256": "9139e6d2e747e892e6ef1e3718011f3511df982e4e1917eb39c3ced87ebab763"
+    },
+    {
+      "path": "models/fish-realism-review/revision-03/finalize.py",
+      "bytes": 4890,
+      "sha256": "28024c4a0ca5bf0e63335c8204165b5299325129a602c7e5753a8a8d2d455d7a"
+    },
+    {
+      "path": "models/fish-realism-review/revision-04/README.md",
+      "bytes": 5340,
+      "sha256": "460290388f417d0719d58d181216104f999d8389989100f557b4866e2e22afa0"
+    },
+    {
+      "path": "models/fish-realism-review/revision-04/artifacts.json",
+      "bytes": 1118,
+      "sha256": "f98991d693cee7f1233afb16c9bdd1e5ddfbe0f8a459f0a92323a43a08454224"
+    },
+    {
+      "path": "models/fish-realism-review/revision-04/create_stingray.py",
+      "bytes": 13601,
+      "sha256": "0762271ea2d94452d05a10a960db5869aae0d7e701b259fe58470807a99dbccd"
+    },
+    {
+      "path": "models/fish-realism-review/revision-04/finish_stingray.py",
+      "bytes": 1629,
+      "sha256": "d5de734e03c56c6a786b03a9c838d16b2b965d01905be2923c42d658e950fbf0"
+    },
+    {
+      "path": "models/fish-realism-review/revision-04/gltf-validation.json",
+      "bytes": 4507,
+      "sha256": "63e9bccb9fd6dfd16f0307bdeff3e7525d3581bc7921525941a49c29eac8c5e7"
+    },
+    {
+      "path": "models/fish-realism-review/revision-04/portable_morphs.py",
+      "bytes": 2077,
+      "sha256": "ecc79506a0426f43c46921203e838c069babca77b37f8e257e31d8e96b894e1d"
+    },
+    {
+      "path": "models/fish-realism-review/revision-04/preserved-assets.json",
+      "bytes": 8860,
+      "sha256": "155fd201a023a9c085611d2a42aa1862784ca758e3033d3c2e1ebf2010c77eea"
+    },
+    {
+      "path": "models/fish-realism-review/revision-04/render_detail.py",
+      "bytes": 536,
+      "sha256": "5f924963d797dd31ab03e7f00e45be83fac97046bb82cda3b44ab04b0d03ed7f"
+    },
+    {
+      "path": "models/fish-realism-review/revision-04/stingray/eye-skin-detail.png",
+      "bytes": 1664765,
+      "sha256": "64253fd5f4fc7fc9717f1328956328f417fc588669867b69fc331a9f15312bbc"
+    },
+    {
+      "path": "models/fish-realism-review/revision-04/stingray/preview.png",
+      "bytes": 1226568,
+      "sha256": "96e66095af9e216f78d2a7812a3cd280f92d98e0b00307331a8be473bcd82431"
+    },
+    {
+      "path": "models/fish-realism-review/revision-04/stingray/stingray-review.blend",
+      "bytes": 21305201,
+      "sha256": "7994f8e43c6b2c81a13b62563e223c62483d348ea57f0cb0ed8c566d8261375b"
+    },
+    {
+      "path": "models/fish-realism-review/revision-04/stingray/stingray-review.glb",
+      "bytes": 27171048,
+      "sha256": "41c923090336ebc049bce640cec4398472bbfbdb3fcb59cc7acd13a4b2a0c2f7"
+    },
+    {
+      "path": "models/fish-realism-review/revision-04/stingray/swim.gif",
+      "bytes": 1148938,
+      "sha256": "7ac8236b3a5772e966530b93c31bcbcd3a4007795a562240bf0764ebe0f7f305"
+    },
+    {
+      "path": "models/fish-realism-review/revision-04/stingray/textures/Maskray_DermalNormal.png",
+      "bytes": 7857155,
+      "sha256": "5527a110ce426cfaae3a5c0641615308e0af5f5f30307e6b965f2f307683960a"
+    },
+    {
+      "path": "models/fish-realism-review/revision-04/stingray/textures/Maskray_IrisWithOperculum.png",
+      "bytes": 646029,
+      "sha256": "7c48be2613a57bbb05efe1cda0f99c58a6cc05eccf52c120714aab57724d448a"
+    },
+    {
+      "path": "models/fish-realism-review/revision-04/stingray/textures/Maskray_PigmentAndPores.png",
+      "bytes": 5231492,
+      "sha256": "4036c5b4d300c7fd619e67d0b98ac59737b4c53e933b56830c025c437f94f40b"
+    },
+    {
+      "path": "models/fish-realism-review/revision-04/stingray/textures/Maskray_RoughnessVariation.png",
+      "bytes": 3657087,
+      "sha256": "807f1bd851b99f081563659f46378a0a23388e89a903194035b8f491183d79c4"
+    },
+    {
+      "path": "models/fish-realism-review/revision-04/verification.json",
+      "bytes": 1829,
+      "sha256": "58846cd87bf336ee69848df6ada4c4948ca68df0d8c798a6199e7e5ba09d1caf"
+    },
+    {
+      "path": "models/fish-realism-review/revision-04/verify_stingray.py",
+      "bytes": 3743,
+      "sha256": "4e3d35ee953240dee88cf057a038c86fee1f5cb6d77ab84611679ab255ecf76c"
+    },
+    {
+      "path": "models/mall-waste-sorting-station/README.md",
+      "bytes": 5687,
+      "sha256": "05f6c76514a5c7f6f45f64f114c95d644d7fddfd5f6bfa5e2aa0bffa5e8c822e"
+    },
+    {
+      "path": "models/mall-waste-sorting-station/exports/mall-waste-sorting-station.glb",
+      "bytes": 479436,
+      "sha256": "6205b1aa13eb852db768fe19b9e28b6f8d6001ed73671a4afc63c77017d7ce6d"
+    },
+    {
+      "path": "models/mall-waste-sorting-station/generate.py",
+      "bytes": 13276,
+      "sha256": "c212a42bd15a85aa9e000355bd3ba653cfd663533e247a23771e49cd06f8b19f"
+    },
+    {
+      "path": "models/mall-waste-sorting-station/metadata/mall-waste-sorting-station.json",
+      "bytes": 4026,
+      "sha256": "eb237329e9305709b62be9f3b345a189bd5072807a11bdbd1dbf9d5de3261991"
+    },
+    {
+      "path": "models/mall-waste-sorting-station/repair_degenerates.py",
+      "bytes": 3034,
+      "sha256": "b709cfc00c01447b27ff7d91baf82a38bc6c46d72b23b6689dcdc70468d6cd3a"
+    },
+    {
+      "path": "models/mall-waste-sorting-station/reports/assets.json",
+      "bytes": 1552,
+      "sha256": "9a57a5ef7f0695691f4b9370e82d46fd3ddc127546ab552ff6d4f07f600d05e9"
+    },
+    {
+      "path": "models/mall-waste-sorting-station/reports/source-edit.json",
+      "bytes": 3444,
+      "sha256": "8bdee112aab580e9a191a425c9901558fe200cf35792324357d632833dcad433"
+    },
+    {
+      "path": "models/mall-waste-sorting-station/reports/sources.json",
+      "bytes": 1704,
+      "sha256": "215c7bb8955c5792c6a5a69807935d6423dfe4dcec4bb848f0fcd3cb40f41e00"
+    },
+    {
+      "path": "models/mall-waste-sorting-station/sources/mall-waste-sorting-station.blend",
+      "bytes": 122538,
+      "sha256": "8369f1794fb14f4804b9967a2a00c10ff3275f3c24d0ac4cb3713422f90d0c0b"
+    },
+    {
+      "path": "models/mall-waste-sorting-station/test_degenerate_cleanup.py",
+      "bytes": 1730,
+      "sha256": "81bacbe2dc2ca8fccfff30fac20984f750cb4260b6b67fd592ab2436d3e2eba4"
+    },
+    {
+      "path": "models/mall-waste-sorting-station/test_source_edit.py",
+      "bytes": 2007,
+      "sha256": "021afa80a4de653f10ab789624345ad50cca37f1ab18d0d68e62a7699c93d571"
+    },
+    {
+      "path": "models/mall-waste-sorting-station/validate.mjs",
+      "bytes": 3474,
+      "sha256": "0178746cab5a7c77e84ad8623f7b5ec6cc245260b7ce57a2c163b7cb376d855e"
+    },
+    {
+      "path": "models/mall-waste-sorting-station/verification.md",
+      "bytes": 5190,
+      "sha256": "bf70f67f396671a6055d72d55e7173ed8a21f23084771a63809b1e27ee599167"
+    },
+    {
+      "path": "models/mall-waste-sorting-station/verify_source_edit.mjs",
+      "bytes": 4469,
+      "sha256": "4bfc855e62aacb5dd1bca80b67623510ab7903e68c81faf21e1fd07329d7fe4a"
+    },
+    {
+      "path": "scripts/blender_degenerate_cleanup.py",
+      "bytes": 6959,
+      "sha256": "95280b08eeb67399f3d0951d81f4397e3729cea62f54c9357b4448fb0599568c"
+    },
+    {
+      "path": "scripts/model-qa-blender.py",
+      "bytes": 8589,
+      "sha256": "479f88af0b02d104a95dec98d2d4035421ab39b719fd528d6936a8507a7677b4"
+    },
+    {
+      "path": "scripts/repair-glb-degenerates.mjs",
+      "bytes": 5384,
+      "sha256": "de2ec9dcd59f374c8c3aceed8bec3064f940a0bc712eef3515c2038f324c38e4"
+    }
+  ]
+}

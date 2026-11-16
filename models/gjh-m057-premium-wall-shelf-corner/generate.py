@@ -1,9 +1,34 @@
-"""Original GJH-M057 reference-inspired wall shelf; no brand art. Blender4.0.2, metric, no third-party art."""
+"""Original GJH-M057 reference-inspired wall shelf; no brand art. Blender5.1+, metric, no third-party art."""
 from pathlib import Path
 import bpy,math,sys
 from mathutils import Vector
 LOD=0
 HERE=Path(__file__).resolve().parent; SLUG='gjh-m057-premium-wall-shelf-corner'; ROOT='ASSET_GJHM057'
+if bpy.app.version < (5, 1, 0):
+    raise RuntimeError('The repaired M057 source requires Blender 5.1+; do not downgrade it')
+sys.path.insert(0, str(HERE.parents[1] / 'scripts'))
+from blender_degenerate_cleanup import add_cleanup
+CLEANUP_PARTS = {SLUG: ('trim_crown_lip',)}
+
+def prepare_source_lod(root, level):
+    """Derive the documented quality levels from the saved editable LOD0."""
+    global LOD
+    assert level in (0, 1, 2), 'LOD3 is unchanged and generated without bevels'
+    LOD = level
+    root['lod'] = level
+    for obj in root.children_recursive:
+        for modifier in obj.modifiers:
+            if modifier.type == 'BEVEL':
+                modifier.segments = (4, 2, 1)[level]
+
+def prepare_asset_geometry(slug, objects):
+    for obj in objects:
+        if obj.name in CLEANUP_PARTS.get(slug, ()) and any(m.type == 'BEVEL' for m in obj.modifiers):
+            add_cleanup(obj, ngon_method='Clip')
+
+def export_asset(slug, root, objects, destination=None):
+    export(destination)
+
 def mat(name,rgb,metal=0,rough=.5):
     m=bpy.data.materials.new(name);m.use_nodes=True
     c=tuple(v/12.92 if v<=.04045 else ((v+.055)/1.055)**2.4 for v in rgb)+(1,)
@@ -99,8 +124,9 @@ def studio():
     bpy.ops.object.camera_add();s.camera=bpy.context.object;s.camera.name='STUDIO_Camera';s.camera.data.type='ORTHO'
 def export(path=None):
     bpy.ops.object.select_all(action='DESELECT');r=bpy.data.objects[ROOT];r.select_set(True)
+    prepare_asset_geometry(SLUG, list(r.children_recursive))
     for o in r.children_recursive:o.select_set(True)
-    bpy.ops.export_scene.gltf(filepath=str(path or HERE/'exports/optimized.glb'),export_format='GLB',use_selection=True,export_apply=True,export_yup=True,export_animations=True,export_texcoords=True,export_extras=True,export_cameras=False,export_lights=False)
+    bpy.ops.export_scene.gltf(filepath=str(path or HERE/'exports/optimized.glb'),export_format='GLB',use_selection=True,use_active_scene=True,export_apply=True,export_yup=True,export_animations=True,export_texcoords=True,export_extras=True,export_cameras=False,export_lights=False)
 def render_views():
     s=bpy.context.scene
     for name,delta,target,scale in [('hero',(3,-3,1.8),(0,0,1.2),3.1),('front',(1,-4,1.0),(0,0,1.2),2.9),('rear',(-3,3,1.8),(0,0,1.2),3.1),('side',(4,-1,1.0),(0,0,1.2),2.9),('detail',(2,-2,1.0),(-.05,.05,1.1),1.55)]:

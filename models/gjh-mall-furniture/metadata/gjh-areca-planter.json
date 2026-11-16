@@ -28,8 +28,9 @@
   ],
   "rights": "Original asset; reuse in the owner's projects is authorized. Public redistribution terms have not been specified.",
   "metrics": {
+    "zero_area_triangles": 0,
     "glb_bytes": 119760,
-    "triangles": 5160,
+    "triangles": 4935,
     "vertices": 3480,
     "primitives": 6,
     "materials": 6,
@@ -51,11 +52,25 @@
         0.6697390675544739
       ]
     },
-    "sha256": "0d1caad269b9838b695924b2b2242277597d304443959394cebeb84a9a675267"
+    "sha256": "17023aadc4c378032dafe88d1626132dc2bb89e4207cd6772c19bfa2b0048e43"
   },
   "validation": {
     "errors": 0,
     "warnings": 0,
     "validator": "2.0.0-dev.3.10"
+  },
+  "source_sha256": "1e515829c5d760cd0d1c8deebc1a52c37a683984533189d5a7599549e259a7f2",
+  "topology_repair": {
+    "date": "2026-11-15",
+    "reference_commit": "21a3fe495d9dcd8ad66cabea3537acc4f1a8eb7f",
+    "reference_glb_sha256": "0d1caad269b9838b695924b2b2242277597d304443959394cebeb84a9a675267",
+    "source_blender_version": "5.2.3 LTS",
+    "source_method": "Non-destructive native loop-diagonal selection from an additive derived face attribute; zero-face deletion without welding the fluted vessel to preserve pole positions. Original mesh/curve data, 213 parts and 198 leaflets retained.",
+    "delivery_method": "Original GLB indices reconstructed. Explicit analytic radial-line calibration bounds perpendicular error to 2e-10 m; all 125 positive-area precision residues are on fluted ceramic poles. Original positions/normals/materials/pivots retained.",
+    "zero_area_triangles_removed": 100,
+    "reviewed_source_precision_residues_removed": 125,
+    "precision_line_tolerance_m": 2e-10,
+    "negative_controls": "Real 1 nm and 10 um faces retained by gates; non-opt-in deletion refused.",
+    "evidence": "docs/model-qa/degenerate-repairs/gjh-areca-planter/README.md"
   }
 }

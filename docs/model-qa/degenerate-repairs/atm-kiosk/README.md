@@ -1,0 +1,21 @@
+# ATM kiosk topology repair
+
+PASS: four raw GLB exact-zero triangles and 48 bounded numerical remnants removed; 2,504 → 2,452 triangles. The native Float32 source counted 46 exact zeros before cleanup; arithmetic scopes differ and are not additive. Three source parts are cleaned non-destructively: EDITABLE_Screen, SCREEN_Bezel and SCREEN_Placeholder. All 16 child objects, 14 editable Mesh objects and the editable FONT remain. The one service-door clip is unchanged.
+
+The native Blender 4.0.2 export matches meaningful original material surfaces without additions. The 48 numerical remnants meet the existing 0.1 um altitude and 1 um grid-collinearity limits. No analytic-line exception is used. Canonical reconstruction retains original positions, normals, materials, node transforms and exact animation descriptor/accessor bytes. Source save/reopen fingerprints preserve authored meshes, text, bevel settings and all nine keys on three curves.
+
+The old exporter shared index accessor 2 between intact body/door meshes and the two screen meshes. Different shapes have different collapse masks. Default repair correctly refuses that ambiguity without emitting a file. Explicit --split-shared-indices groups masks before writing, retains the original accessor for unchanged primitives, and appends one independent 84-triangle index stream shared only by the two screens. Only their primitive index bindings change. Output grows by 652 bytes to 138,792 bytes, below the original 2 MB budget. Mesh-instance mask conflicts and overlapping distinct index accessor ranges require separate review. Writes overlapping non-index accessor views are refused. An actual source-hash-bound refusal and positive/negative fixtures verify the behavior, including preservation of a real face on a mesh sharing the original accessor.
+
+Fresh production generation with --skip-render, source reopening, idempotent cleanup, a real keyframe mutation/restoration and canonical GLB re-import pass. The production validator exercises the real service-door raw endpoints, opening/clearance and LoopOnce restoration. A real BODY_Front width/material edit is saved/reopened/exported against an unchanged same-toolchain control: only one geometry part changes, 14 other delivered meshes and the service-door animation payload match. Canonical source and delivery hashes remain unchanged by that probe. Old source-edit artifacts remain historical; source-edit-current contains the current edit.
+
+- [Source preservation](source-repair.json), [native geometry/clip comparison](source-comparison.json), [canonical comparison](canonical-comparison.json), [index split/repair](index-repair.json)
+- [Pre-fix regression](regression-before.log), [actual default refusal](default-sharing-refusal.log), [tool controls](tool-controls.log)
+- [Fresh native regression](native-regression.json), [fresh/canonical comparison](fresh-comparison.json)
+- [Production asset checks](../../../../models/atm-kiosk/reports/assets.json), [saved-source probe](../../../../models/atm-kiosk/reports/sources.json), [saved edit proof](../../../../models/atm-kiosk/reports/source-edit-export-proof.json)
+- [Verification ledger](verification.json), [browser cases](browser.json), [desktop](gallery-1440.png), [390px](gallery-390.png)
+
+714 tests and the build passed. All three Gallery viewport cases passed with exact consumed SHA, orbit/zoom/reset, close/reopen, focus and render-loop cleanup. Actual 1440/390 screenshots were inspected. The complete escalator native generation/animation/import regression also passes with the revised writer. Existing previews remain applicable because visible surfaces and canonical shading are unchanged.
+
+Reproduce with Blender 4.0.2: --background --threads 2 --python-exit-code 1 --python models/atm-kiosk/test_degenerate_cleanup.py -- /new/owned/output. Run node --test tests/atm-degenerate-repair.test.mjs tests/mall-degenerate-repairs.test.mjs tests/glb-degenerate-tools.test.mjs, plus the normal build. Browser reproduction uses test-workplace029-browser.mjs with MALL_QA_ASSETS=atm-kiosk and local Chrome/ANGLE Metal.
+
+No phone/FPS, deployment, Gallery playback UI or payment/safety certification is claimed. Existing overall NEEDS REVIEW status and native weighted-normal warnings remain outside the topology change. Raw failure evidence retains its original whitespace.

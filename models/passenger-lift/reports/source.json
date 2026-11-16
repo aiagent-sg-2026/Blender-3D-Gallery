@@ -1,8 +1,10 @@
 {
-  "source_sha256": "2d10ce9eacce5764cf5f2a1e146211557cde73438685928bd1228ca3ae2ad75a",
+  "source_sha256": "56f7b884245c98a6fa193e05872fa391db5962299e898927a92d4397a15d8912",
+  "source_reopened": "PASS",
   "units": "metres",
   "scale_length": 1,
   "meshes": 77,
+  "fonts": 3,
   "objects": [
     {
       "name": "CAB_Carriage",
@@ -455,10 +457,72 @@
       "parent": "FIXED_ShaftAndLandings"
     }
   ],
+  "blender_version": "4.0.2",
+  "original_assets_unchanged": {
+    "sources/passenger-lift.blend": "56f7b884245c98a6fa193e05872fa391db5962299e898927a92d4397a15d8912",
+    "exports/passenger-lift.glb": "9c115615f995d96816fed3936e31adee48671d7b37b93f930e3b08591ba95a28"
+  },
+  "animation_snapshot": {
+    "schema": "active-rigid-object-actions-v1",
+    "sha256": "8e2bab85eb4c791df92c26dd55236a40c91b96939f4ae9ce354e8d174b96af40",
+    "actions": 5,
+    "curves": 15,
+    "keyframes": 45,
+    "bindings": [
+      {
+        "object": "CAB_Carriage",
+        "action": "TRAVEL_Cab",
+        "slot": null,
+        "blend_type": "REPLACE",
+        "influence": 1.0,
+        "extrapolation": "HOLD",
+        "use_nla": true
+      },
+      {
+        "object": "DOOR_CabL",
+        "action": "DOOR_Cycle_CabL",
+        "slot": null,
+        "blend_type": "REPLACE",
+        "influence": 1.0,
+        "extrapolation": "HOLD",
+        "use_nla": true
+      },
+      {
+        "object": "DOOR_CabR",
+        "action": "DOOR_Cycle_CabR",
+        "slot": null,
+        "blend_type": "REPLACE",
+        "influence": 1.0,
+        "extrapolation": "HOLD",
+        "use_nla": true
+      },
+      {
+        "object": "DOOR_Landing0L",
+        "action": "DOOR_Cycle_Landing0L",
+        "slot": null,
+        "blend_type": "REPLACE",
+        "influence": 1.0,
+        "extrapolation": "HOLD",
+        "use_nla": true
+      },
+      {
+        "object": "DOOR_Landing0R",
+        "action": "DOOR_Cycle_Landing0R",
+        "slot": null,
+        "blend_type": "REPLACE",
+        "influence": 1.0,
+        "extrapolation": "HOLD",
+        "use_nla": true
+      }
+    ]
+  },
+  "comparison_basis": "same-toolchain unchanged saved-source control",
+  "control_glb": "reports/source-edit-current/control.glb",
+  "edited_glb": "reports/source-edit-current/edited.glb",
   "edit_proof": {
     "node": "Cab_BackWall",
     "before": [
-      0,
+      0.0,
       0.8399999737739563,
       1.4500000476837158
     ],
@@ -468,14 +532,14 @@
       1.4500000476837158
     ],
     "delta_x": 0.123,
-    "output": "reports/source-edit.glb",
-    "saved_copy": "reports/source-edit.blend",
     "material": "Brushed steel",
     "roughness_before": 0.36000001430511475,
     "roughness_after": 0.73,
-    "copy_sha256": "8e3f521e97e6e6d7dc98da67434a7afffd794f56e75616dbb38108498cd4807a",
-    "result": "PASS",
+    "output": "reports/source-edit-current/edited.glb",
+    "saved_copy": "reports/source-edit-current/edited.blend",
+    "copy_sha256": "9a8f084906494e8b683c2704295f03d64c8c814900ea69f174a7f13d03d8dc9e",
     "glb_node_delta_x": 0.12300000339746475,
-    "material_roughness_survived_save_reopen_export": true
+    "material_roughness_survived_save_reopen_export": true,
+    "result": "PASS"
   }
 }

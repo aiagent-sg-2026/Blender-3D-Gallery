@@ -1,0 +1,37 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": 1,
+  "reviewed_source_sha256": "dd7961d0190d2fba8365bf05bca2239bfbdee687eeccf5d6117756e179aa9074",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png",
+    "filament-detail.png",
+    "pelvic-detail.png"
+  ],
+  "visual_checks": {
+    "anatomy": "pass: slightly narrower silver-green variant of the documented fourfinger threadfin anatomy",
+    "surface": "pass: fine irregular skin relief and pale warm fins retain a subdued natural finish",
+    "filaments": "pass: four separate tapered sensory rays per flank are visible beneath the low pectoral membrane",
+    "head": "pass: low-set large eye, short snout and subterminal mouth are separated in closeup",
+    "motion": "pass: all eight sensory ray meshes and tail/fins deform in the actual exported GLB with stable loop endpoints",
+    "browser": "pass: actual draft GLB visibly swims and pauses at desktop/mobile sizes",
+    "surface_contact": "pass: ventral and sensory-ray detail inspected; five-phase source/imported GLB contact and desktop/mobile playback pass"
+  },
+  "limitations": [
+    "Original photo-informed art, not a scan.",
+    "Supplied Threadfin/Kurau and Fourfinger names overlap; this is a separate artistic variant of the same documented visual species.",
+    "Draft browser captions remain baseline."
+  ],
+  "attachment_revisions": [
+    {
+      "prior_source_sha256": "330d02abc4b142bf1dfda628826f1b888a724f121db139d0a318298902dcac3a",
+      "finding": "Fixed paired pelvic-base coordinate lay outside the curved skin despite correct dynamic weights",
+      "repair": "Only pelvic mesh bases reprojected onto an embedded ventrolateral root curve; body, materials and actions retained",
+      "repaired_meshes": [
+        "Pelvic_-1",
+        "Pelvic_1"
+      ],
+      "result": "pass: only pelvic bases altered, other mesh-motion measurements retained within 0.00001"
+    }
+  ]
+}

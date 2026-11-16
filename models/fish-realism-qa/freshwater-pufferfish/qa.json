@@ -1,0 +1,51 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "reticulation cells were too large and vivid; the snout was too pointed and small soft-fin edges too ragged"
+      ],
+      "changes": [
+        "use finer varied reticulation, broader rounded mouth profile and restrained fin-edge irregularity"
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "revise",
+      "findings": [
+        "fast strokes amplified displacement about the old global dorsal/anal control origins"
+      ],
+      "changes": [
+        "place fin controls at anatomical roots with longitudinal dorsal/anal hinges and vertical pectoral hinges"
+      ]
+    },
+    {
+      "iteration": 3,
+      "result": "pass",
+      "changes": [
+        "re-viewed current full-body/head renders, verified smaller rooted fin strokes and repeated source/GLB/browser checks"
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "20a04243af43b7e3d4b3a4850f55271765da553ec1025a810b7a28a573b2c0d4",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: stout uninflated humpback body with a small beak-like mouth and high eyes",
+    "surface": "pass: original fine reticulation and subtle dermal microstructure",
+    "head": "pass: closed photo-informed mouth and embedded subdued iris",
+    "fins": "pass: small posterior dorsal/anal, rounded caudal and no pelvic fins",
+    "surface_contact": "pass: source and actual imported GLB pass five-phase root contact with unchanged thresholds",
+    "motion": "pass: repeated fin strokes use local anatomical hinges; cyclic source and GLB deformation retain matching endpoints",
+    "browser": "pass: exact draft GLB swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed artwork, not a scanned or calibrated specimen.",
+    "The generic Freshwater pufferfish entry is interpreted as the Southeast Asian Pao palembangensis in the inspected JJPhoto aquarium image. The normal uninflated form is used; inflation, measured behavior and a Singapore wild-population claim are not delivered."
+  ]
+}

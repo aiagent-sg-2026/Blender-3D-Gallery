@@ -5,9 +5,11 @@ Original independent metric asset, original backlog ID 019. Local quality gate *
 - Source: `sources/atm-kiosk.blend`; generator `generate.py`; export `exports/optimized.glb`.
 - Four inspected studio views: `previews/hero.png`, `front.png`, `rear.png`, `side.png` (WebP counterparts for catalog).
 - Editable mesh components and materials; Blender +Z up/-Y front, glTF +Y up/+Z front; metres.
-- Actual triangles 2504; GLB bytes 138140; primitives 15. Fixed budgets recorded before generation in `backlog.json`.
+- Actual triangles 2452; GLB bytes 138792; primitives 15. Fixed budgets recorded before generation in `backlog.json`.
 - `reports/assets.json`: Khronos validation, metric bounds, named parts, raw animation and clearance checks where applicable.
 - `reports/sources.json`, `reports/source-edit/`: saved source reopened, mesh and material edited in a copy, saved/reopened, exported without regeneration; original hash unchanged.
 - `node models/atm-kiosk/validate.mjs`; Blender background `--threads 2 --python-exit-code 1 --python models/atm-kiosk/inspect_sources.py`; `node models/atm-kiosk/verify_source_edit.mjs`.
 - Browser evidence: `docs/verification/workplace029/browser/`, three viewport cases with exact GLB SHA, WebGL draws, orbit/zoom/reset/reopen and no page/request/console errors.
 - License/attribution: `LICENSE.md`, metadata. No external textures or models.
+
+Topology repair: four exact-zero triangles and 48 bounded numerical residues removed. The two screen meshes receive one independent index stream because the original index accessor was shared with intact body/door geometry. All original vertex/normal/material/animation data remain unchanged. Matching Blender 4.0.2 is required for source reproduction. Current saved-source edit evidence is in reports/source-edit-current and reports/source-edit-export-proof.json; old source-edit artifacts remain historical. [Repair evidence](../../docs/model-qa/degenerate-repairs/atm-kiosk/README.md).

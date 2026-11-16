@@ -1,0 +1,99 @@
+{
+  "result": "PASS",
+  "status": "draft / NEEDS REVIEW",
+  "id": "cordless-phone-display",
+  "category": "Equipment",
+  "store": "S17",
+  "priority": "P1",
+  "glb_sha256": "0cd8067b90198cade4116e945de98af1e5bcd4f1a7c149844dd40c4be31e2c9d",
+  "source_sha256": "5fe8761aac089e6b5e8deaec9dc747aab947c19fb70a913510253e28d2e98c6e",
+  "checks": [
+    {
+      "command": "Blender 5.2.3 --background --python generate.py",
+      "result": "PASS",
+      "exit_code": 0,
+      "views": [
+        "hero",
+        "front",
+        "side",
+        "3q"
+      ]
+    },
+    {
+      "command": "node models/cordless-phone-display/validate.mjs",
+      "result": "PASS",
+      "exit_code": 0,
+      "khronos_errors": 0,
+      "khronos_warnings": 0
+    },
+    {
+      "command": "Blender inspect_sources.py; node verify_source_edit.mjs",
+      "result": "PASS",
+      "exit_code": 0,
+      "editable_source_parts": 104,
+      "closed_manifold_source_meshes": 104
+    },
+    {
+      "command": "Independent generation with only generate.py; exact GLB byte comparison",
+      "result": "PASS",
+      "exit_code": 0,
+      "sha256": "0cd8067b90198cade4116e945de98af1e5bcd4f1a7c149844dd40c4be31e2c9d"
+    },
+    {
+      "command": "npm run validate:assets",
+      "result": "PASS",
+      "exit_code": 0
+    },
+    {
+      "command": "npm test",
+      "result": "PASS",
+      "exit_code": 0,
+      "tests": 728,
+      "passed": 728,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "command": "npm run build",
+      "result": "PASS",
+      "exit_code": 0,
+      "build_id": "9fb98fe47d2e53c7",
+      "warnings": "Existing application chunk-size and plugin-timing notices; build succeeded."
+    },
+    {
+      "command": "node models/cordless-phone-display/verify_page.mjs",
+      "result": "PASS",
+      "exit_code": 0,
+      "viewport": [
+        1440,
+        900
+      ],
+      "console_errors": 0,
+      "loaded_glb_sha256": "0cd8067b90198cade4116e945de98af1e5bcd4f1a7c149844dd40c4be31e2c9d"
+    }
+  ],
+  "visual_review": "PASS: final hero, front, side, 3q PNGs and actual Chromium model-page screenshot viewed. Phone silhouette, keypad, blank screen/card, charging-base contact and plinth composition reviewed.",
+  "browser_screenshot": "/Users/admin/Documents/MallQueue/reports/cordless-phone-display-page.png",
+  "log_directory": "/Users/admin/Documents/MallQueue/reports/cordless-phone-display-checks",
+  "initial_failures": [
+    {
+      "check": "Source handset/cradle seating",
+      "cause": "Initial heel-to-well gap; first adjustment retained a measured 0.000206 m gap. Final pose lowers the handset and raises the well, giving overlapping contact bounds; final saved-source gate passes."
+    }
+  ],
+  "not_found": [
+    "Existing close cordless phone, telephone, landline or handset model in the catalog and all metadata identity fields"
+  ],
+  "skipped_required_checks": [],
+  "generated_test_artifacts_restored": [
+    "models/demo-beverage-can/reports/structure-motion.json"
+  ],
+  "not_verified": [
+    "Physical Android/iOS",
+    "WebKit",
+    "Complete 17-shop 70 x 60 m mall assembly and its 200 draw-call scene budget",
+    "Telephone, wireless or charging operation",
+    "Manager art approval",
+    "Remote publication (no push requested)"
+  ]
+}

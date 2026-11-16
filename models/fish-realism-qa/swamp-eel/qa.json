@@ -1,0 +1,51 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "snout was pointed and the displayed axial wave was too weak"
+      ],
+      "changes": [
+        "build a rounded blunt cap, increase the travelling axial wave and use an oblique overview camera"
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "revise",
+      "findings": [
+        "eye reflection masked the tiny dark pupil"
+      ],
+      "changes": [
+        "reduce the corneal specular level and coating"
+      ]
+    },
+    {
+      "iteration": 3,
+      "result": "pass",
+      "changes": [
+        "re-viewed the rounded head and actual full-body wave; source/GLB and desktop/mobile checks pass"
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "a3053ee897d5cf2f3316217bf9d93542bfd5e9682b5d8fe6d7dfe0c22ceed91f",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: slender rounded scaleless brown body with a blunt snout and tiny lateral eyes",
+    "surface": "pass: original scaleless brown skin, pale flecks and subdued wet sheen",
+    "head": "pass: rounded blunt snout, small closed mouth, tiny dark eyes and a throat opening",
+    "fins": "pass: greatly reduced fins are represented by a tapered body without invented broad ordinary fins",
+    "surface_contact": "pass: five poses retain finite continuous body geometry; no separate fin bases are present",
+    "motion": "pass: travelling axial wave and tapered-tail motion survive actual GLB import with matching loop endpoints",
+    "browser": "pass: exact draft GLB swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed artwork, not a scanned or calibrated specimen.",
+    "The supplied Swamp eel / Ikan belut follows the inspected regional Monopterus javanensis reference; the older Monopterus albus name covers a species complex. Broad ordinary fish fins are omitted rather than invented; no certified stock identification or terrestrial movement is claimed."
+  ]
+}

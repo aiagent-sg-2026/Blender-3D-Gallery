@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "basis": "e1f7c7e8 plus focused tray repair",
+  "targeted_tests": {
+    "passed": 28,
+    "failed": 0
+  },
+  "build": "PASS",
+  "native": {
+    "blender": "4.0.2",
+    "source_parts": 23,
+    "editable_fonts": 2,
+    "source_reopen": true,
+    "fresh_generation": true,
+    "idempotence": true,
+    "canonical_import_zero_area_triangles": 0
+  },
+  "canonical": {
+    "before_triangles": 5412,
+    "after_triangles": 5410,
+    "exact_zero_removed": 2,
+    "positive_residues_removed": 0,
+    "bytes": 353656,
+    "original_attributes_normals_materials_preserved": true
+  },
+  "source_edit": {
+    "changed_modules": [
+      "Counter",
+      "SignText",
+      "Tray04"
+    ],
+    "unchanged_modules": 10,
+    "saved_reopened": true,
+    "shipped_hash_unchanged": true
+  },
+  "browser": {
+    "cases": 3,
+    "widths": [
+      1440,
+      768,
+      390
+    ],
+    "backend": "Local Chrome / ANGLE Metal",
+    "all_consumed_sha_match": true,
+    "errors": 0,
+    "exact_reset_reopen": true
+  },
+  "visual_review": "Actual current Gallery 1440 and 390 images inspected",
+  "rejected_attempts": [
+    "Cleanup before legacy font evaluation changed 676 oriented triangles; strict geometry comparison rejected it",
+    "Browser started during build rewrite: old SHA and transient 404. Full three-case rerun on completed fixed build passes; failure preserved"
+  ],
+  "limits": [
+    "Historical source studio previews reused",
+    "No phone hardware/FPS, operational hygiene/safety or deployment claim",
+    "Existing unrelated standalone demo reload limitation remains"
+  ],
+  "whitespace_exception": "Raw pre-fix regression log retained unchanged",
+  "integration": {
+    "upstream_main": "2e5f40e2f13ff7820de18d11f404b960dc6b01b7",
+    "targeted_tests": 21,
+    "failed": 0,
+    "build": "PASS",
+    "scope": "Upstream fish-only catalog/artifact changes; Mall source, Gallery modules and repaired asset paths unchanged. Existing Gallery proof reused."
+  }
+}

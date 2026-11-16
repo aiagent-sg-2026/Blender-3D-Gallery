@@ -1,0 +1,35 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": 1,
+  "reviewed_source_sha256": "035e2322173f6c623fd62ccc636bb8ce5550b90706ae6a8127d30318dbd203d9",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png",
+    "pelvic-detail.png"
+  ],
+  "visual_checks": {
+    "anatomy": "pass: fusiform small mackerel body, separated dorsal fins, five dorsal and five anal finlets and deep fork tail",
+    "surface": "pass: blue-green upper body, silvery belly, subtle upper spot rows and olive-gold longitudinal bands",
+    "head": "pass: dark pectoral-base patch, integrated closed mouth and gill, small conforming iris",
+    "fins": "pass: thin branching membranes, anchored roots and restrained distal movement",
+    "motion": "pass: two-second tail-driven cyclic motion and fin stabilization survive real GLB reimport",
+    "browser": "pass: actual draft GLB visibly swims and pauses in desktop/mobile gallery",
+    "surface_contact": "pass: embedded paired pelvic bases inspected from below; posed source and GLB skin contact verified at five phases including finlet roots"
+  },
+  "limitations": [
+    "Original photo-informed artwork, not a scan or measured specimen.",
+    "Draft browser captions are baseline; live promotion is verified separately."
+  ],
+  "attachment_revisions": [
+    {
+      "prior_source_sha256": "210d00ad2d62991702958d3c243273af4f57430b49c9e2737f4be5f1fec0431d",
+      "finding": "Fixed paired pelvic-base coordinate lay outside the curved skin despite correct dynamic weights",
+      "repair": "Only pelvic mesh bases reprojected onto an embedded ventrolateral root curve; body, materials and actions retained",
+      "repaired_meshes": [
+        "Pelvic_-1",
+        "Pelvic_1"
+      ],
+      "result": "pass"
+    }
+  ]
+}

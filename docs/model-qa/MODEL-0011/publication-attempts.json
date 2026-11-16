@@ -1,0 +1,17 @@
+{
+  "attempts": [
+    {
+      "local_only_commit": "0c1d0b58331273b2b2c08310e5f9b4f0af2d8489",
+      "base": "fcb763f63dd8b7a5f77946d810412c28ac59b8bf",
+      "push_result": "NON_FAST_FORWARD_REJECTED",
+      "published": false,
+      "remote_ci_started": false
+    }
+  ],
+  "sync": {
+    "upstream": "f58402b3e6a2b418cd6d17780ff1f6988cdc8175",
+    "method": "Rebase only the unpublished campaign commit; no conflicting paths; no force push.",
+    "revalidation": "698units/build plus2 current Areca profiles PASS",
+    "evidence": "rebase-verification.json"
+  }
+}

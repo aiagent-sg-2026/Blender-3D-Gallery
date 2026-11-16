@@ -1,0 +1,103 @@
+{
+  "result": "PASS",
+  "id": "arched-gateway-sign",
+  "glb_bytes": 280808,
+  "triangles": 5616,
+  "vertices": 10156,
+  "meshes": 3,
+  "primitives": 3,
+  "materials": 3,
+  "textures": 0,
+  "animations": 0,
+  "dimensions": [
+    12,
+    6,
+    1.2999999523162842
+  ],
+  "bounds": {
+    "min": [
+      -6,
+      0,
+      -0.6499999761581421
+    ],
+    "max": [
+      6,
+      6,
+      0.6499999761581421
+    ]
+  },
+  "sha256": "2557401ebce0b82242614e0512baaf91b1aee177a6d5e2cf10574cea219837e1",
+  "min_triangle_area_m2": 9.214216126850852e-7,
+  "aperture": {
+    "clear_width_metres": 10.639999389648438,
+    "clear_height_metres": 4.006,
+    "raw_minimum_overhead_metres": 4.006813797662201,
+    "centre_clear_height_metres": 4.101999893784523,
+    "through_depth_metres": 1.2999999523162842,
+    "triangle_intersections": 0,
+    "method": "Ground-level jamb extremities; overhead triangle clipping across full width; open rectangular volume clipped against every exported triangle, 10 micrometre boundary tolerance."
+  },
+  "sign_band": {
+    "node": "SIGN_Band",
+    "dimensions": [
+      10.899999618530273,
+      0.8500000238418579,
+      0.2800000011920929
+    ],
+    "text_anchor": [
+      0,
+      4.574999809265137,
+      0.640999972820282
+    ]
+  },
+  "validation": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "budget": {
+    "triangles": 15000,
+    "bytes": 1572864,
+    "mesh_primitives": 3
+  },
+  "parts": {
+    "FRAME_Structure": {
+      "min": [
+        -6,
+        0,
+        -0.6499999761581421
+      ],
+      "max": [
+        6,
+        6,
+        0.6499999761581421
+      ],
+      "triangles": 1076
+    },
+    "SIGN_Band": {
+      "min": [
+        -5.449999809265137,
+        4.149999797344208,
+        0.3500000089406967
+      ],
+      "max": [
+        5.449999809265137,
+        4.999999821186066,
+        0.6300000101327896
+      ],
+      "triangles": 108
+    },
+    "TRIM_Details": {
+      "min": [
+        -5.9549998342990875,
+        0.17999999597668648,
+        -0.38169676065444946
+      ],
+      "max": [
+        5.9549994468688965,
+        5.90999998152256,
+        0.6450000107288361
+      ],
+      "triangles": 4432
+    }
+  }
+}

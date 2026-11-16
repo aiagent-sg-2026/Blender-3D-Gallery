@@ -1,0 +1,33 @@
+{
+  "source_sha": "2f0867ec85c43ddfa04a71a308b31926acdce217",
+  "actions_run_id": 43714225525,
+  "build": "success",
+  "deploy": "success",
+  "unit_tests": 705,
+  "unit_failed": 0,
+  "unit_cancelled": 0,
+  "unit_skipped": 0,
+  "catalog_entries": 567,
+  "preview_download_iterations": 1134,
+  "interpretation": "Existing DOM iteration count is not a unique-model count.",
+  "complete_unfiltered_release_suite": "PASS",
+  "original_release_commands_verified": [
+    "npm test",
+    "npm run test:browser",
+    "npm run test:pwa",
+    "npm run test:solar",
+    "npm run test:library",
+    "npm run test:standard",
+    "npm run test:reviewed",
+    "npm run test:game-ux",
+    "npm run test:game-experience",
+    "npm run test:game-responsive",
+    "npm run test:cans",
+    "npm run test:cans:codex",
+    "node scripts/test-product-studio-browser.mjs",
+    "node scripts/test-game-touch-cancellation.mjs",
+    "node scripts/test-shelf-inspector-browser.mjs"
+  ],
+  "workflow_sha256": "28d524da0a3a3dec84a8355572b7f5330e2e310eac90414ec0c307af0ccea344",
+  "log": "actions.log.gz"
+}

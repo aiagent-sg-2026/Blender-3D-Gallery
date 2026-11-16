@@ -1,0 +1,30 @@
+{
+  "sha256": "9c115615f995d96816fed3936e31adee48671d7b37b93f930e3b08591ba95a28",
+  "browser": "157.0.8103.51",
+  "platform": "darwin",
+  "launch_options": {
+    "headless": true,
+    "args": [
+      "--use-angle=metal"
+    ],
+    "executablePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+  },
+  "scope": "Isolated Three.js motion renderer, not Gallery runtime controls; Desktop browser with recorded launch options; physical mobile and WebKit untested",
+  "results": [
+    {
+      "mode": "doors",
+      "result": "PASS",
+      "rendered_sweep_samples": 121,
+      "pixel_change": true,
+      "exact_pixel_reset": true
+    },
+    {
+      "mode": "travel",
+      "result": "PASS",
+      "rendered_sweep_samples": 121,
+      "pixel_change": true,
+      "exact_pixel_reset": true
+    }
+  ],
+  "errors": []
+}

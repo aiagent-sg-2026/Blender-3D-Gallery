@@ -1,0 +1,79 @@
+{
+  "artifactSha256": "60650f47aac716cb5a11fa69bee58c06546aa2199a25c2bde6dcc37ce566ab6f",
+  "masterSha256": "44d9f04a5c46918fcd81b845e432973bd559e0181756fb81d8a49dde94e4cbdd",
+  "previewSha256": "9190012cc9b84c0ad226af9a9f7b2c913d9b060a7402e7c92fa5b0c13ca86133",
+  "diagnosticSha256": "aca23c94a4d2d5b2303c3b2287732004316a8dc915ada237f7f35cb41995e322",
+  "checks": {
+    "twoDistinctEmbedded1024PngMaps": true,
+    "baseColorAndNormalUseDistinctImages": true,
+    "externalPngBytesMatchEmbedded": true,
+    "masterPackedPngBytesMatchEmbedded": true,
+    "previewEmbedsExactActualGlb": true
+  },
+  "pass": true,
+  "embedded": [
+    {
+      "name": "visitor-normal",
+      "sha256": "196b850678675c30ffe4d7ce1cc658308909cb75a44c727a4e0410d8c58ccd79",
+      "bytes": 477088,
+      "dimensions": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "visitor-atlas",
+      "sha256": "359cf9f27670bb9dc6fa6e7a72d370f0959df260f323f79b6dc94863058e4ad1",
+      "bytes": 678929,
+      "dimensions": [
+        1024,
+        1024
+      ]
+    }
+  ],
+  "packed": [
+    {
+      "name": "Visitor colour atlas",
+      "filepath": "//visitor-atlas.png",
+      "sha256": "359cf9f27670bb9dc6fa6e7a72d370f0959df260f323f79b6dc94863058e4ad1",
+      "bytes": 678929,
+      "dimensions": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "Visitor normal atlas",
+      "filepath": "//visitor-normal.png",
+      "sha256": "196b850678675c30ffe4d7ce1cc658308909cb75a44c727a4e0410d8c58ccd79",
+      "bytes": 477088,
+      "dimensions": [
+        1024,
+        1024
+      ]
+    }
+  ],
+  "external": [
+    {
+      "original": "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/r20/visitor-atlas.png",
+      "snapshot": "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47/external-png-input/visitor-atlas.png",
+      "sha256": "359cf9f27670bb9dc6fa6e7a72d370f0959df260f323f79b6dc94863058e4ad1",
+      "bytes": 678929,
+      "dimensions": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "original": "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/r20/visitor-normal.png",
+      "snapshot": "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47/external-png-input/visitor-normal.png",
+      "sha256": "196b850678675c30ffe4d7ce1cc658308909cb75a44c727a4e0410d8c58ccd79",
+      "bytes": 477088,
+      "dimensions": [
+        1024,
+        1024
+      ]
+    }
+  ],
+  "scope": "Read-only packed/native, external PNG, embedded GLB and original preview byte binding; no render or appearance acceptance."
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "label": "export-confirm",
+    "argv": [
+      "/Applications/Blender.app/Contents/MacOS/Blender",
+      "--background",
+      "--factory-startup",
+      "--disable-autoexec",
+      "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/r20-release-source-addendum/input/visitor.blend",
+      "--python-exit-code",
+      "1",
+      "--python",
+      "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/r20-release-source-addendum/source/scene.py",
+      "--",
+      "--export-only",
+      "--out",
+      "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/r20-release-source-addendum/export-confirm"
+    ],
+    "cwd": "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/r20-release-source-addendum",
+    "startedUtc": "2026-11-16T13:13:07.711691+00:00",
+    "log": "export-confirm.log",
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "returncode": 0,
+    "finishedUtc": "2026-11-16T13:13:14.496003+00:00",
+    "elapsedSeconds": 6.784
+  },
+  {
+    "label": "import-smoke",
+    "argv": [
+      "/Applications/Blender.app/Contents/MacOS/Blender",
+      "--background",
+      "--factory-startup",
+      "--disable-autoexec",
+      "--python-exit-code",
+      "1",
+      "--python",
+      "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/r20-release-source-addendum/import-smoke.py"
+    ],
+    "cwd": "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/r20-release-source-addendum",
+    "startedUtc": "2026-11-16T13:13:14.497183+00:00",
+    "log": "import-smoke.log",
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "returncode": 0,
+    "finishedUtc": "2026-11-16T13:13:15.761523+00:00",
+    "elapsedSeconds": 1.264
+  }
+]

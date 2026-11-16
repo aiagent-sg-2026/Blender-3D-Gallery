@@ -84,12 +84,34 @@
     "replacement_reason": "Original static ID004 lacked circulation; replace with reviewed illustrative circulation and flush deck/comb geometry while retaining static archive and all failed candidates."
   },
   "source": "models/escalator/sources/escalator.blend",
-  "source_sha256": "1c1f11e9cc120dc78295e32bc605914742009953e4e9d065cfcd95908bc548b8",
-  "glb_sha256": "f8f8bda8b28a4faaf1fb2b03ee2a832fe23b90621eee9ab0a24a26c1b2b89ada",
+  "source_sha256": "1deb40c80952c0021c24604d7653f1d86ad9f56aad2fdcb9d1f9b3ad52caec3b",
+  "glb_sha256": "b14375e54f366d3238fb32141bb9d25ca87add72664770e9a8541db9266bd501",
   "verification_report": "models/escalator/reports/circulation-final/README.md",
   "metrics": {
-    "triangles": 65408,
-    "glb_bytes": 4672692,
-    "primitives": 138
+    "triangles": 65394,
+    "glb_bytes": 4672668,
+    "primitives": 138,
+    "sha256": "b14375e54f366d3238fb32141bb9d25ca87add72664770e9a8541db9266bd501",
+    "zero_area_triangles": 0,
+    "animations": 60
+  },
+  "topology_repair": {
+    "date": "2026-11-15",
+    "original_source_sha256": "1c1f11e9cc120dc78295e32bc605914742009953e4e9d065cfcd95908bc548b8",
+    "original_glb_sha256": "f8f8bda8b28a4faaf1fb2b03ee2a832fe23b90621eee9ab0a24a26c1b2b89ada",
+    "static_only": true,
+    "zero_area_triangles_removed": 11,
+    "analytic_line_triangles_removed": 3,
+    "source_toolchain": "Matching Blender 4.0.2; original unchanged source reproduces the original GLB byte-for-byte",
+    "canonical_animation_payload": {
+      "clips": 60,
+      "accessors": 122,
+      "sha256": "4d586748764b011b4996483828ada6237ce03774dc6178072912aa3b1a58efe3"
+    },
+    "report": "models/escalator/reports/topology-repair.json"
+  },
+  "validation": {
+    "errors": 0,
+    "warnings": 0
   }
 }

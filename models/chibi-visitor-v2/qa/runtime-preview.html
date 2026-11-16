@@ -1,0 +1,18 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Chibi Visitor v2 WebGL QA</title>
+<style>body{margin:0;background:#edf0ee;font-family:system-ui,sans-serif;color:#163b34}header{position:absolute;top:14px;left:14px;z-index:4;background:#fffef5dd;padding:10px 14px;border-radius:12px;font-size:14px}canvas{display:block}#status{font-size:11px;color:#555}</style>
+<script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/"}}</script>
+</head><body><header>GJH CHIBI VISITOR v2 <div id="status">Loading GLB...</div></header><script type="module">
+import * as THREE from 'three';import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+const scene=new THREE.Scene();scene.background=new THREE.Color('#e9ecea');const camera=new THREE.PerspectiveCamera(34,innerWidth/innerHeight,.01,100);camera.position.set(2.55,1.62,3.9);camera.lookAt(0,.96,0);
+const renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance'});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(innerWidth,innerHeight);renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.5;document.body.appendChild(renderer.domElement);
+scene.add(new THREE.HemisphereLight('#ffffff','#647376',2.4));const key=new THREE.DirectionalLight('#ffffff',3.2);key.position.set(3,5,4);scene.add(key);const fill=new THREE.DirectionalLight('#dde8f0',1.2);fill.position.set(-4,2,-3);scene.add(fill);
+const floor=new THREE.Mesh(new THREE.PlaneGeometry(50,50),new THREE.MeshStandardMaterial({color:'#e7ece8',roughness:1}));floor.rotation.x=-Math.PI/2;floor.position.y=-.015;scene.add(floor);
+window.__chibiQA={loaded:false,error:null,meshCount:0,materials:0,triangles:0,canvasWidth:0};
+new GLTFLoader().load('/models/chibi-visitor-v2/exports/chibi-visitor-v2.glb',gltf=>{
+ const root=gltf.scene;scene.add(root);root.traverse(o=>{if(o.isMesh){window.__chibiQA.meshCount++;window.__chibiQA.triangles+=o.geometry.index?o.geometry.index.count/3:o.geometry.attributes.position.count/3;}});
+ window.__chibiQA.materials=[...new Set(root.children.flatMap(o=>[]))].length;
+ window.__chibiQA.loaded=true;document.querySelector('#status').textContent='WebGL model loaded · '+window.__chibiQA.meshCount+' meshes';
+},undefined,e=>{window.__chibiQA.error=String(e);document.querySelector('#status').textContent='ERROR: '+e;});
+addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)});
+function render(){renderer.render(scene,camera);window.__chibiQA.canvasWidth=renderer.domElement.width;requestAnimationFrame(render);}render();
+</script></body></html>

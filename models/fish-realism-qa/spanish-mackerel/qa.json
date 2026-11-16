@@ -1,0 +1,58 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "findings": [
+        "overly uniform dark bars extend too far onto head",
+        "pectoral membrane too broad for this narrow-bodied species",
+        "peduncle keel too raised and tube-like"
+      ],
+      "changes": [
+        "vary and soften bars behind operculum",
+        "narrow the pectoral membrane and pelvic fins",
+        "reduce keel relief to an integrated ridge"
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "pass",
+      "changes": [
+        "softened irregular bars behind gill",
+        "reduced pectoral breadth and keel relief"
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "2ca14601f97473f636addf5074c0c60723a624334c82149d80f5c3571606dec4",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png",
+    "pelvic-detail.png"
+  ],
+  "visual_checks": {
+    "anatomy": "pass: elongate compressed body, extended closed jaws and narrow peduncle",
+    "surface": "pass: subdued irregular wavy bars begin behind the operculum over a silver-blue flank",
+    "fins": "pass: narrowed pectoral membrane, two near-separated dorsal sections, nine small finlets per side of the tail and a forked caudal fin",
+    "head": "pass: integrated gill and mouth recesses, restrained eye size and natural slender head",
+    "motion": "pass: cyclic tail propulsion and anchored distal fin stabilization survive GLB reimport",
+    "browser": "pass: actual draft GLB visibly swims and pauses at desktop/mobile sizes",
+    "surface_contact": "pass: embedded paired pelvic bases inspected from below; posed source and GLB skin contact verified at five phases including finlet roots"
+  },
+  "limitations": [
+    "Original photo-informed artistic reconstruction, not scanned anatomy.",
+    "Closed mouth does not expose teeth.",
+    "Draft browser fixture uses baseline catalog captions."
+  ],
+  "attachment_revisions": [
+    {
+      "prior_source_sha256": "ae2c31671dd5dbf51df396eaccf78191b5ab734c662e25c801fd2fc58457e092",
+      "finding": "Fixed paired pelvic-base coordinate lay outside the curved skin despite correct dynamic weights",
+      "repair": "Only pelvic mesh bases reprojected onto an embedded ventrolateral root curve; body, materials and actions retained",
+      "repaired_meshes": [
+        "Pelvic_-1",
+        "Pelvic_1"
+      ],
+      "result": "pass"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "result": "PASS",
+  "id": "battery-display-rack",
+  "glb_bytes": 1000488,
+  "triangles": 20580,
+  "vertices": 24594,
+  "meshes": 3,
+  "primitives": 3,
+  "materials": 3,
+  "images": 0,
+  "animations": 0,
+  "dimensions": [
+    1,
+    2,
+    0.5
+  ],
+  "dimensions_order": "width,height,depth (glTF X,Y,Z)",
+  "bounds": {
+    "min": [
+      -0.5,
+      0,
+      -0.25
+    ],
+    "max": [
+      0.5,
+      2,
+      0.25
+    ]
+  },
+  "sha256": "fbdaf7bb26b1594074706f927f58881696cb0354970dbcb175ec3556e899e22f",
+  "validation": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "zero_area_triangles": 0,
+  "parts": {
+    "BATCH_Clearblister": {
+      "min": [
+        -0.38700002431869507,
+        0.731499969959259,
+        0.007000000216066837
+      ],
+      "max": [
+        0.37950000166893005,
+        1.6165000200271606,
+        0.029999999329447746
+      ],
+      "triangles": 560
+    },
+    "BATCH_Mattefinish": {
+      "min": [
+        -0.5,
+        0,
+        -0.25
+      ],
+      "max": [
+        0.5,
+        2,
+        0.25
+      ],
+      "triangles": 13252
+    },
+    "BATCH_Satinmetal": {
+      "min": [
+        -0.37700000405311584,
+        0.7427499890327454,
+        -0.11299999803304672
+      ],
+      "max": [
+        0.367499977350235,
+        1.690999984741211,
+        0.027700001373887062
+      ],
+      "triangles": 6768
+    }
+  }
+}

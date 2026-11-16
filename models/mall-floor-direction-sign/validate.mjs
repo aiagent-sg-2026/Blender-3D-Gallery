@@ -18,7 +18,7 @@ gltf.scene.updateMatrixWorld(true);
 const bounds = new Box3().setFromObject(gltf.scene);
 const assetRoot = gltf.scene.getObjectByName('ASSET_MallFloorDirectionSign');
 const groups = ['SignStructure', 'FloorIdentity', 'DirectionDining', 'DirectionShops', 'DirectionCinema', 'DirectionFacilities'];
-let triangles = 0, vertices = 0, primitives = 0;
+let triangles = 0, vertices = 0, primitives = 0, zeroAreaTriangles = 0;
 const nodes = [];
 gltf.scene.traverse(o => {
   if (o.name) nodes.push(o.name);
@@ -26,7 +26,14 @@ gltf.scene.traverse(o => {
   primitives++;
   vertices += o.geometry.attributes.position.count;
   triangles += (o.geometry.index?.count ?? o.geometry.attributes.position.count) / 3;
+  const { index, attributes: { position } } = o.geometry;
+  for (let i = 0; i < (index?.count ?? position.count); i += 3) {
+    const points = [0, 1, 2].map(offset => new Vector3().fromBufferAttribute(position,
+      index ? index.getX(i + offset) : i + offset).applyMatrix4(o.matrixWorld));
+    if (points[1].clone().sub(points[0]).cross(points[2].clone().sub(points[0])).lengthSq() === 0) zeroAreaTriangles++;
+  }
 });
+if (zeroAreaTriangles) throw Error(id + ': degenerate geometry regressed');
 for (const name of groups) {
   const group = gltf.scene.getObjectByName(name);
   let mesh = false;
@@ -36,7 +43,7 @@ for (const name of groups) {
 // Independent label cartridges deliberately retain their material slots.
 if (Math.abs(bounds.min.y) > .001 || triangles > 20000 || bytes.length > 700000 || primitives > 22)
   throw Error(`Budget/origin violation: ${bytes.length} bytes, ${triangles} triangles, ${primitives} primitives`);
-const report = { id, glb_bytes: bytes.length, triangles, vertices, primitives, materials: json.materials.length,
+const report = { zero_area_triangles: zeroAreaTriangles, id, glb_bytes: bytes.length, triangles, vertices, primitives, materials: json.materials.length,
   animations: (json.animations ?? []).length, dimensions: bounds.getSize(new Vector3()).toArray(),
   bounds: { min: bounds.min.toArray(), max: bounds.max.toArray() }, nodes,
   sha256: createHash('sha256').update(bytes).digest('hex'),

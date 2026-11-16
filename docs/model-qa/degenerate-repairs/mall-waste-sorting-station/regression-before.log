@@ -1,0 +1,30 @@
+✔ mall-trash-bin: repaired delivered geometry contains no zero-area triangles (38.0855ms)
+✔ mall-directory-kiosk: repaired delivered geometry contains no zero-area triangles (10.398208ms)
+✔ mall-advertising-lightbox: repaired delivered geometry contains no zero-area triangles (8.975583ms)
+✖ mall-waste-sorting-station: repaired delivered geometry contains no zero-area triangles (18.360833ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 3
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2799.543583
+
+✖ failing tests:
+
+test at tests/mall-degenerate-repairs.test.mjs:14:3
+✖ mall-waste-sorting-station: repaired delivered geometry contains no zero-area triangles (18.360833ms)
+  AssertionError [ERR_ASSERTION]: mall-waste-sorting-station: actual GLB must contain no zero-area triangles
+
+  199 !== 0
+
+      at TestContext.<anonymous> (file:///private/tmp/blender-mall-degenerate-44yfvxbl/worktree/tests/mall-degenerate-repairs.test.mjs:35:12)
+      at async Test.run (node:internal/test_runner/test:1054:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:744:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 199,
+    expected: 0,
+    operator: 'strictEqual'
+  }

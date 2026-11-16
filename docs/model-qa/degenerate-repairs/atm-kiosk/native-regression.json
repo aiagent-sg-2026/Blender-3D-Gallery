@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "blender_version": "4.0.2",
+  "editable_parts": 16,
+  "idempotent_cleanup": true,
+  "animation_snapshot": {
+    "schema": "active-rigid-object-actions-v1",
+    "sha256": "a50c413d8894b4db27a45c99b802c1c4df237d24605c8b8179eb0336d1770f62",
+    "actions": 1,
+    "curves": 3,
+    "keyframes": 9,
+    "bindings": [
+      {
+        "object": "MOVABLE_ServiceDoor",
+        "action": "MOVABLE_ServiceDoorAction",
+        "slot": null,
+        "blend_type": "REPLACE",
+        "influence": 1.0,
+        "extrapolation": "HOLD",
+        "use_nla": true
+      }
+    ]
+  },
+  "keyframe_negative_control": true,
+  "canonical_sha256": "ffa5ee98530439c60ea629852107e718cabbff48edf8fc9d7ae861ae8e12c044",
+  "canonical_import_zero_area_triangles": 0,
+  "canonical_import_actions": 1,
+  "canonical_import_triangles": 2452
+}

@@ -30,3 +30,7 @@ An intermediate asset passed the general library suite and booth 1440×900, 768�
 ## Default view correction
 
 Pixel inspection of the initial mobile capture found the gallery camera looking at the poster back despite successful interaction tests. The existing per-asset `display.previewRotationY` is set to π so the gallery default faces the art; no viewer/UI change or geometry change is required. The GLB/source/thumbnail hashes remain unchanged. Updated strict browser verification passed all three viewports; `parent-final-facing.log` and `parent-final-facing-qa/` retain the final evidence. The mobile initial screenshot was independently pixel-reviewed and shows the poster front. Full unit suite passed 105/105 and the production build passed after the orientation metadata change.
+
+## 2026-11-15 topology follow-up
+
+Earlier metrics and creation checks above are historical. [Current repair evidence](../../docs/model-qa/degenerate-repairs/mall-event-booth/README.md) records 4,506 triangles, zero exact-zero triangles, 28 retained editable parts, module/source-edit isolation and native Float32 re-import checks. No physical-device, FPS or deployment result is inferred.

@@ -1,0 +1,8 @@
+{
+  "job_id": "2b3859fa-c617-4674-b529-3b42836e97f2",
+  "status": "FAILED",
+  "profiles_passed": 0,
+  "observed_assertion": "Reset must restore the original static model view",
+  "setup_mismatch": "Generic exact screenshot comparisons were applied while the fish automatically swims under the default motion preference. src/fish-motion.js defaults playing to !prefers-reduced-motion; viewer reset changes the camera, not swim time.",
+  "correction": "Opt in to reduced motion for fixed-pose camera checks, retaining every original assertion. Separately execute original fish playback/pause/visible-motion tests on both engines."
+}

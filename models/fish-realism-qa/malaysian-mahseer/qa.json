@@ -1,0 +1,31 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "pass",
+      "changes": [
+        "inspected actual full-body and head images against the recorded reference anatomy; source/GLB and desktop/mobile checks pass"
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "eb27f9780e6ec506b7e228c05680d5e67759d61692eb567ff00d7a8944057bfd",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: strong bronze-silver body with large uneven scales",
+    "surface": "pass: uneven scale color and original microstructure without photograph textures",
+    "head": "pass: thick subterminal lip profile and two pairs of tapered barbels",
+    "fins": "pass: short dorsal with concave rear edge, pointed anal and equal forked tail lobes",
+    "surface_contact": "pass: five source and imported-GLB poses with unchanged thresholds",
+    "motion": "pass: real exported cyclic body, caudal and fin deformation",
+    "browser": "pass: exact draft GLB swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed artwork, not a scanned or calibrated specimen.",
+    "Photo-informed Malaysian mahseer interpreted as Tor cf. tambroides. Regional Tor taxonomy and common names overlap; no certified species or stock identification is claimed. The adult reference has dark fins, so the supplied red-fin description is restrained to dark russet."
+  ]
+}

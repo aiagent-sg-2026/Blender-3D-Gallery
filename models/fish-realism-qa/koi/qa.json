@@ -1,0 +1,45 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "The body was too deep, paired fins too narrow, soft edges too ragged and patch boundaries too blurred."
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "revise",
+      "changes": [
+        "Elongate the profile, round pectorals, restrain edge noise, sharpen original pigment boundaries and replace the overly toothed anal frontage with a continuous membrane."
+      ]
+    },
+    {
+      "iteration": 3,
+      "result": "pass",
+      "changes": [
+        "Inspect current actual body/head renders and pass current source/import/browser gates."
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "7e90c0c72431e0c9a5bd8ef7d89cd1aa57c8da3fc16bfab1bbc33b0e2d99db6f",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: elongate domestic carp form with two pairs of mouth barbels",
+    "surface": "pass: original irregular red and black islands over pearl-white varied scales",
+    "head": "pass: small closed carp-like lips, subdued iris and four skin-intersecting barbel roots",
+    "fins": "pass: rounded pale pectorals, clean-edged forked caudal and smooth continuous median membranes",
+    "surface_contact": "pass: source and actual imported GLB retain five-phase fin/root contact",
+    "motion": "pass: cyclic tail and fin movement survive actual GLB import with matching endpoints",
+    "browser": "pass: exact draft GLB swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed artwork, not a scanned or calibrated specimen.",
+    "Sanke-inspired original patch layout; pedigree, breed grade and precise Cyprinus ancestry are not certified. Fine fin detail and movement are artistic approximations."
+  ]
+}

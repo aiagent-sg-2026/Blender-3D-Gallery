@@ -1,0 +1,51 @@
+{
+  "id": "mall-floor-corner-tile",
+  "name": "Mall Corner Floor Tile",
+  "summary": "A 1.2 m terrazzo corner floor tile with two decorative outside-edge inlays.",
+  "description": "A 1.2 m terrazzo corner floor tile with two decorative outside-edge inlays.",
+  "category": "Shopping Mall",
+  "tags": [
+    "mall",
+    "floor",
+    "corner",
+    "modular",
+    "original",
+    "metres"
+  ],
+  "status": "draft",
+  "created": "2026-11-15",
+  "author": "Yap Wei Jun project / agent-assisted procedural modeling",
+  "blender_version": "5.1.2",
+  "creation_method": "Original Blender geometry; corner tile reuses the existing project terrazzo texture.",
+  "generator": "../mall-floor-corner-tile/generate.py",
+  "paths": {
+    "source": "sources/mall-floor-corner-tile.blend",
+    "glb": "exports/mall-floor-corner-tile.glb",
+    "preview": "previews/mall-floor-corner-tile.jpg",
+    "render": "previews/mall-floor-corner-tile.png"
+  },
+  "display": {
+    "previewRotationY": 0,
+    "previewCameraDirection": [
+      0.8,
+      0.6,
+      1
+    ]
+  },
+  "rights": "Original geometry and project-owned materials; public redistribution terms unspecified.",
+  "accuracy_notes": "A decorative 90-degree outside corner on the 1.2 m grid, not an installation or safety specification.",
+  "attribution": [
+    {
+      "credit": "Original geometry and materials created for Blender-3D-Gallery."
+    }
+  ],
+  "quality_gate": {
+    "overall": "NEEDS REVIEW",
+    "scope": "One local 90-degree sample; full assembly fit and physical devices remain unverified."
+  },
+  "sha256": {
+    "source": "f2e2ac84ec5c08536a162444385aaadae232665a6fe9dd5e0c832b9b1bf14b5e",
+    "glb": "8d370fea8c516d50ae13e9907fa6b8d06ec754f6477fbb1dad53177d7685ad36",
+    "preview": "d7a00ce2a0be26c77cc80940f68b659a1ca19feba2cb9a27403a42ab618f0d9a"
+  }
+}

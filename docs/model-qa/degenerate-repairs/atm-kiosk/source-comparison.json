@@ -1,0 +1,704 @@
+{
+  "status": "PASS",
+  "before": {
+    "file": "/tmp/blender-mall-degenerate-44yfvxbl/atm-original.glb",
+    "bytes": 138140,
+    "sha256": "0348db21bde7c430940e76e37817ef86c2466ea549238adcbbcbce4f9619498a",
+    "triangles": 2504,
+    "zero": 4,
+    "invalidNormals": 0,
+    "bounds": {
+      "min": [
+        -0.33000001311302185,
+        0,
+        -0.342499983496964
+      ],
+      "max": [
+        0.33000001311302185,
+        1.8800000231713057,
+        0.41999999433755875
+      ]
+    },
+    "roots": {
+      "ASSET_ATMKiosk": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "materialDefinitions": [
+      {
+        "doubleSided": true,
+        "name": "Transit blue",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.005981059744954109,
+            0.05497173219919205,
+            0.1399848908185959,
+            1
+          ],
+          "metallicFactor": 0.15000000596046448,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Steel",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2632734179496765,
+            0.33034372329711914,
+            0.36724647879600525,
+            1
+          ],
+          "metallicFactor": 0.6499999761581421,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Rubber",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.007194409146904945,
+            0.010022825561463833,
+            0.0134117491543293,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Ivory",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7484140992164612,
+            0.7874122858047485,
+            0.7677687406539917,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Glazing blue-grey",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.15487249195575714,
+            0.3931231200695038,
+            0.4919050335884094,
+            1
+          ],
+          "metallicFactor": 0.20000000298023224,
+          "roughnessFactor": 0.18000000715255737
+        }
+      }
+    ],
+    "resolvedMaterialDefinitions": [
+      {
+        "doubleSided": true,
+        "name": "Glazing blue-grey",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.15487249195575714,
+            0.3931231200695038,
+            0.4919050335884094,
+            1
+          ],
+          "metallicFactor": 0.20000000298023224,
+          "roughnessFactor": 0.18000000715255737
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Ivory",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7484140992164612,
+            0.7874122858047485,
+            0.7677687406539917,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Rubber",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.007194409146904945,
+            0.010022825561463833,
+            0.0134117491543293,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Steel",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2632734179496765,
+            0.33034372329711914,
+            0.36724647879600525,
+            1
+          ],
+          "metallicFactor": 0.6499999761581421,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Transit blue",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.005981059744954109,
+            0.05497173219919205,
+            0.1399848908185959,
+            1
+          ],
+          "metallicFactor": 0.15000000596046448,
+          "roughnessFactor": 0.44999998807907104
+        }
+      }
+    ],
+    "animationPayload": {
+      "clips": 1,
+      "accessors": 2,
+      "sha256": "6b50121b0169c1a1f0db33c04efb02676a563eb59c2e5320e1200e13702039b6"
+    },
+    "issues": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 0,
+      "numHints": 0,
+      "messages": [],
+      "truncated": false
+    },
+    "linePrecisionResidues": []
+  },
+  "after": {
+    "file": "/tmp/blender-mall-degenerate-44yfvxbl/atm-stage/atm-kiosk.glb",
+    "bytes": 139220,
+    "sha256": "da8ba27bb4a9d09eaec6ec43261c4ae642f5b6c961dc8fc1fcc8e1953d96c1c5",
+    "triangles": 2452,
+    "zero": 0,
+    "invalidNormals": 0,
+    "bounds": {
+      "min": [
+        -0.33000001311302185,
+        0,
+        -0.342499983496964
+      ],
+      "max": [
+        0.33000001311302185,
+        1.8800000231713057,
+        0.41999999433755875
+      ]
+    },
+    "roots": {
+      "ASSET_ATMKiosk": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "materialDefinitions": [
+      {
+        "doubleSided": true,
+        "name": "Transit blue",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.005981059744954109,
+            0.05497173219919205,
+            0.1399848908185959,
+            1
+          ],
+          "metallicFactor": 0.15000000596046448,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Steel",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2632734179496765,
+            0.33034372329711914,
+            0.36724647879600525,
+            1
+          ],
+          "metallicFactor": 0.6499999761581421,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Rubber",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.007194409146904945,
+            0.010022825561463833,
+            0.0134117491543293,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Ivory",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7484140992164612,
+            0.7874122858047485,
+            0.7677687406539917,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Glazing blue-grey",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.15487249195575714,
+            0.3931231200695038,
+            0.4919050335884094,
+            1
+          ],
+          "metallicFactor": 0.20000000298023224,
+          "roughnessFactor": 0.18000000715255737
+        }
+      }
+    ],
+    "resolvedMaterialDefinitions": [
+      {
+        "doubleSided": true,
+        "name": "Glazing blue-grey",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.15487249195575714,
+            0.3931231200695038,
+            0.4919050335884094,
+            1
+          ],
+          "metallicFactor": 0.20000000298023224,
+          "roughnessFactor": 0.18000000715255737
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Ivory",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7484140992164612,
+            0.7874122858047485,
+            0.7677687406539917,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Rubber",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.007194409146904945,
+            0.010022825561463833,
+            0.0134117491543293,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Steel",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2632734179496765,
+            0.33034372329711914,
+            0.36724647879600525,
+            1
+          ],
+          "metallicFactor": 0.6499999761581421,
+          "roughnessFactor": 0.44999998807907104
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Transit blue",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.005981059744954109,
+            0.05497173219919205,
+            0.1399848908185959,
+            1
+          ],
+          "metallicFactor": 0.15000000596046448,
+          "roughnessFactor": 0.44999998807907104
+        }
+      }
+    ],
+    "animationPayload": {
+      "clips": 1,
+      "accessors": 2,
+      "sha256": "444faeca916e32b41484d18049243d077cc5532db2d89767a64307e973bea16b"
+    },
+    "issues": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 0,
+      "numHints": 0,
+      "messages": [],
+      "truncated": false
+    },
+    "linePrecisionResidues": []
+  },
+  "positionToleranceM": 0.000001,
+  "maxPositionDeltaM": 1.5160833109263057e-8,
+  "numericalResidueAltitudeLimitM": 1e-7,
+  "removedPositiveAreaResidues": [
+    {
+      "key": "Rubber:240000,1225000,280000|240000,1535000,280000|240000,1535000,280000",
+      "area": 8.6613008432046e-10,
+      "altitude": 5.5879354476928694e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Rubber:240000,1225000,280000|240000,1225000,280000|240000,1535000,280000",
+      "area": 8.6613008432046e-10,
+      "altitude": 5.5879354476928694e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Rubber:-215000,1560000,280000|-215000,1560000,280000|215000,1560000,280000",
+      "area": 1.2014061412379817e-9,
+      "altitude": 5.58793544769287e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Rubber:-215000,1560000,280000|215000,1560000,280000|215000,1560000,280000",
+      "area": 1.2014061412379817e-9,
+      "altitude": 5.58793544769287e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Rubber:-240000,1225000,280000|-240000,1535000,280000|-240000,1535000,280000",
+      "area": 8.6613008432046e-10,
+      "altitude": 5.5879354476928694e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Rubber:-240000,1225000,280000|-240000,1225000,280000|-240000,1535000,280000",
+      "area": 8.6613008432046e-10,
+      "altitude": 5.5879354476928694e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Rubber:-215000,1200000,280000|-215000,1200000,280000|-232678,1207322,280000",
+      "area": 5.3460225215111455e-11,
+      "altitude": 5.587935447692547e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Rubber:-215000,1200000,280000|-232678,1207322,280000|-232678,1207322,280000",
+      "area": 1.2150384297596308e-10,
+      "altitude": 1.2700201476224507e-8,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Rubber:-232678,1207322,280000|-232678,1207322,280000|-240000,1225000,280000",
+      "area": 2.687880568013483e-10,
+      "altitude": 2.809505348984092e-8,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Rubber:-232678,1207322,280000|-240000,1225000,280000|-240000,1225000,280000",
+      "area": 5.346031147652948e-11,
+      "altitude": 5.587935447692547e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Rubber:-215000,1560000,280000|-215000,1560000,280000|-232678,1552678,280000",
+      "area": 5.3460225215111455e-11,
+      "altitude": 5.587935447692547e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Rubber:-215000,1560000,280000|-232678,1552678,280000|-232678,1552678,280000",
+      "area": 5.3460225215111455e-11,
+      "altitude": 5.587935447692547e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Rubber:-232678,1552678,280000|-232678,1552678,280000|-240000,1535000,280000",
+      "area": 5.346027961170836e-11,
+      "altitude": 5.587935447692548e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Rubber:-232678,1552678,280000|-240000,1535000,280000|-240000,1535000,280000",
+      "area": 5.346027961170836e-11,
+      "altitude": 5.587935447692548e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Rubber:215000,1200000,280000|215000,1200000,280000|232678,1207322,280000",
+      "area": 5.3460225215111455e-11,
+      "altitude": 5.587935447692547e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Rubber:215000,1200000,280000|232678,1207322,280000|232678,1207322,280000",
+      "area": 1.2150384297596308e-10,
+      "altitude": 1.2700201476224507e-8,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Rubber:232678,1207322,280000|232678,1207322,280000|240000,1225000,280000",
+      "area": 2.687880568013483e-10,
+      "altitude": 2.809505348984092e-8,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Rubber:232678,1207322,280000|240000,1225000,280000|240000,1225000,280000",
+      "area": 5.346031147652948e-11,
+      "altitude": 5.587935447692547e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Rubber:215000,1560000,280000|215000,1560000,280000|232678,1552678,280000",
+      "area": 5.3460225215111455e-11,
+      "altitude": 5.587935447692547e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Rubber:215000,1560000,280000|232678,1552678,280000|232678,1552678,280000",
+      "area": 1.2150384297596308e-10,
+      "altitude": 1.2700201476224507e-8,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Rubber:232678,1552678,280000|232678,1552678,280000|240000,1535000,280000",
+      "area": 2.687880568013483e-10,
+      "altitude": 2.809505348984092e-8,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Rubber:232678,1552678,280000|240000,1535000,280000|240000,1535000,280000",
+      "area": 5.346031147652948e-11,
+      "altitude": 5.587935447692547e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Rubber:-215000,1200000,280000|215000,1200000,280000|215000,1200000,280000",
+      "area": 1.2014061412379817e-9,
+      "altitude": 5.58793544769287e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Rubber:-215000,1200000,280000|-215000,1200000,280000|215000,1200000,280000",
+      "area": 1.2014061412379817e-9,
+      "altitude": 5.58793544769287e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Glazing blue-grey:200000,1246000,310000|200000,1514000,310000|200000,1514000,310000",
+      "area": 2.495944562141972e-10,
+      "altitude": 1.862645149230957e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Glazing blue-grey:200000,1246000,310000|200000,1246000,310000|200000,1514000,310000",
+      "area": 2.495944562141972e-10,
+      "altitude": 1.862645149230957e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Glazing blue-grey:-194000,1520000,310000|-194000,1520000,310000|194000,1520000,310000",
+      "area": 4.516914620111834e-10,
+      "altitude": 2.3283064365386963e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Glazing blue-grey:-194000,1520000,310000|194000,1520000,310000|194000,1520000,310000",
+      "area": 4.516914620111834e-10,
+      "altitude": 2.3283064365386963e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Glazing blue-grey:-200000,1246000,310000|-200000,1514000,310000|-200000,1514000,310000",
+      "area": 2.495944562141972e-10,
+      "altitude": 1.862645149230957e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Glazing blue-grey:-200000,1246000,310000|-200000,1246000,310000|-200000,1514000,310000",
+      "area": 2.495944562141972e-10,
+      "altitude": 1.862645149230957e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Glazing blue-grey:-194000,1240000,310000|-194000,1240000,310000|-198243,1241757,310000",
+      "area": 5.346026477926152e-12,
+      "altitude": 2.328306436538454e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Glazing blue-grey:-194000,1240000,310000|-198243,1241757,310000|-198243,1241757,310000",
+      "area": 4.811423830133537e-12,
+      "altitude": 2.0954757928846087e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Glazing blue-grey:-198243,1241757,310000|-198243,1241757,310000|-200000,1246000,310000",
+      "area": 4.811423830133537e-12,
+      "altitude": 2.095475792884654e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Glazing blue-grey:-198243,1241757,310000|-200000,1246000,310000|-200000,1246000,310000",
+      "area": 4.276821182340922e-12,
+      "altitude": 1.8626451492308036e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Glazing blue-grey:-194000,1520000,310000|-194000,1520000,310000|-198243,1518243,310000",
+      "area": 5.346026477926152e-12,
+      "altitude": 2.328306436538454e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Glazing blue-grey:-194000,1520000,310000|-198243,1518243,310000|-198243,1518243,310000",
+      "area": 4.811423830133537e-12,
+      "altitude": 2.0954757928846087e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Glazing blue-grey:-198243,1518243,310000|-198243,1518243,310000|-200000,1514000,310000",
+      "area": 4.811423830133537e-12,
+      "altitude": 2.095475792884654e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Glazing blue-grey:-198243,1518243,310000|-200000,1514000,310000|-200000,1514000,310000",
+      "area": 4.276821182340922e-12,
+      "altitude": 1.8626451492308036e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Glazing blue-grey:194000,1240000,310000|194000,1240000,310000|198243,1241757,310000",
+      "area": 5.346026477926152e-12,
+      "altitude": 2.328306436538454e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Glazing blue-grey:194000,1240000,310000|198243,1241757,310000|198243,1241757,310000",
+      "area": 4.811423830133537e-12,
+      "altitude": 2.0954757928846087e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Glazing blue-grey:198243,1241757,310000|198243,1241757,310000|200000,1246000,310000",
+      "area": 4.811423830133537e-12,
+      "altitude": 2.095475792884654e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Glazing blue-grey:198243,1241757,310000|200000,1246000,310000|200000,1246000,310000",
+      "area": 4.276821182340922e-12,
+      "altitude": 1.8626451492308036e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Glazing blue-grey:194000,1520000,310000|194000,1520000,310000|198243,1518243,310000",
+      "area": 5.346026477926152e-12,
+      "altitude": 2.328306436538454e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Glazing blue-grey:194000,1520000,310000|198243,1518243,310000|198243,1518243,310000",
+      "area": 4.811423830133537e-12,
+      "altitude": 2.0954757928846087e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Glazing blue-grey:198243,1518243,310000|198243,1518243,310000|200000,1514000,310000",
+      "area": 4.811423830133537e-12,
+      "altitude": 2.095475792884654e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Glazing blue-grey:198243,1518243,310000|200000,1514000,310000|200000,1514000,310000",
+      "area": 4.276821182340922e-12,
+      "altitude": 1.8626451492308036e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Glazing blue-grey:-194000,1240000,310000|194000,1240000,310000|194000,1240000,310000",
+      "area": 4.516914620111834e-10,
+      "altitude": 2.3283064365386963e-9,
+      "quantizedCollinear": true
+    },
+    {
+      "key": "Glazing blue-grey:-194000,1240000,310000|-194000,1240000,310000|194000,1240000,310000",
+      "area": 4.516914620111834e-10,
+      "altitude": 2.3283064365386963e-9,
+      "quantizedCollinear": true
+    }
+  ],
+  "addedSurfaceKeys": [],
+  "addedSurfaceDetails": [],
+  "changedNormalTriangles": 164,
+  "maxNormalDelta": 0.9753352999687195,
+  "rigidContainerStaticOnly": true,
+  "nativeClipComparison": {
+    "clips": 1,
+    "tracks": 1,
+    "maxTimeDelta": 0,
+    "maxValueDelta": 0,
+    "tolerance": 0.000001
+  }
+}

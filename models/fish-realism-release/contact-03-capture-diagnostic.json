@@ -1,0 +1,23 @@
+{
+  "failed_runtime": "Playwright bundled Chromium with SwiftShader",
+  "failure": "locator.screenshot timed out waiting for element stability in two initial release attempts; diagnostic page screenshot also timed out",
+  "diagnostic_canvas": {
+    "x": 20,
+    "y": 94,
+    "width": 350,
+    "height": 396,
+    "unchanged_samples": 6,
+    "request_animation_frame_counts": [
+      29,
+      66,
+      107,
+      209,
+      259,
+      298
+    ],
+    "status": "loaded and paused"
+  },
+  "successful_runtime": "Installed Google Chrome with ANGLE Metal",
+  "successful_unchanged_assertion_receipt": "local-chromium-contact-03-browser-verification.json",
+  "limits": "Supported diagnosis of host capture-runtime failure; not a physical-device performance measurement."
+}

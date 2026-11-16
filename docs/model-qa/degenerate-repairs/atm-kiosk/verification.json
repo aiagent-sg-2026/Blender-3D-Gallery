@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "basis": "4e38f215 plus this focused ATM repair",
+  "javascript_tests": {
+    "passed": 714,
+    "failed": 0,
+    "log": "tests.log.gz"
+  },
+  "build": {
+    "passed": true,
+    "log": "build.log.gz"
+  },
+  "source": "source-repair.json",
+  "native": {
+    "version": "4.0.2",
+    "fresh_generation": true,
+    "canonical_import_zero_area_triangles": 0,
+    "actions": 1,
+    "curves": 3,
+    "keyframes": 9,
+    "keyframe_negative_control": true
+  },
+  "shared_index_split": {
+    "explicit_opt_in": true,
+    "original_accessor": 2,
+    "new_accessor": 36,
+    "affected_primitives": [
+      "13:0",
+      "14:0"
+    ],
+    "one_appended_index_stream": true,
+    "default_different_mask_rejection_retained": true,
+    "overlapping_distinct_index_accessors": "Rejected; separate review required"
+  },
+  "source_edit": {
+    "geometry_changed": 1,
+    "unchanged_siblings": 14,
+    "service_door_animation_payload_unchanged": true,
+    "canonical_files_unchanged": true
+  },
+  "shared_native_compatibility": "Complete escalator fresh generation, animation and import PASS after writer refactor",
+  "browser": {
+    "cases": 3,
+    "widths": [
+      1440,
+      768,
+      390
+    ],
+    "backend": "Local Chrome / ANGLE Metal",
+    "consumed_sha_verified": true
+  },
+  "visual_review": "Actual 1440 and 390 Gallery views inspected; body, screen label, keys, card/receipt slots and base intact",
+  "whitespace_exception": "Unmodified raw regression-before.log retains whitespace-only lines",
+  "limits": [
+    "No phone/FPS verification",
+    "No new Gallery playback UI",
+    "No deployment or payment/engineering certification"
+  ],
+  "shared_5_2_native_compatibility": "Areca full fresh generation/export/import PASS with final shared-index writer",
+  "integration": {
+    "upstream_main": "38d0a002965c9ac5ed60902f7fc43cc8001cf3a3",
+    "targeted_tests": 24,
+    "failed": 0,
+    "build": "PASS",
+    "scope": "Only fish/catalog updates; exact ATM registration and runtime modules unchanged. Full 714 tests and three browser cases retained for unchanged relevant inputs."
+  }
+}

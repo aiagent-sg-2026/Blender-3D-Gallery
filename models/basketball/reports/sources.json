@@ -1,0 +1,54 @@
+{
+  "result": "PASS",
+  "blender_version": "5.3.0",
+  "source_reopened": true,
+  "source_sha256": "09eedee886e9ce67edb2d676489484a4a23556d537c080d5e0390653f69581fa",
+  "original_source_unchanged": true,
+  "source": {
+    "editable_meshes": [
+      "BALL_Shell",
+      "CUTTER_SeamChannels"
+    ],
+    "materials": [
+      "Black channel rubber",
+      "Pebbled orange rubber"
+    ],
+    "boolean_solver": "EXACT",
+    "normal_map": {
+      "name": "T_Basketball_Pebble_Normal",
+      "size": [
+        2048,
+        1024
+      ],
+      "filepath": "//textures/basketball_pebble_normal.png"
+    },
+    "root_properties": {
+      "units": "metres",
+      "front_axis": "Blender -Y / glTF +Z",
+      "up_axis": "Blender +Z / glTF +Y",
+      "size": "7"
+    }
+  },
+  "glb_reimported": true,
+  "glb_sha256": "9dc815f0850ca1cd2977d8e2b4d9544d971c89e1130c9cf2cc8e9c60e72cafd7",
+  "reimport": {
+    "objects": [
+      "ASSET_Basketball",
+      "MESH_Basketball"
+    ],
+    "mesh_objects": 1,
+    "triangles": 30128,
+    "materials": [
+      "Black channel rubber",
+      "Pebbled orange rubber"
+    ],
+    "images": [
+      "basketball_pebble_normal"
+    ],
+    "dimensions_m": [
+      0.23845,
+      0.23845,
+      0.23839
+    ]
+  }
+}

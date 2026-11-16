@@ -1,0 +1,188 @@
+{
+  "id": "gjh-chibi-visitor-blender",
+  "name": "GJH Chibi Visitor",
+  "summary": "Rigged R6 GJH Chibi Visitor with Wave, Idle, and Blink animation clips.",
+  "description": "A one-metre procedural robot character with a white hoodie, purple GJH lettering, violet happy eyes, and headphone rings. The default GLB is skinned with 14 joints and includes three animation clips.",
+  "category": "Characters",
+  "tags": [
+    "GJH",
+    "mascot",
+    "character",
+    "chibi",
+    "robot",
+    "Blender",
+    "procedural",
+    "rigged",
+    "animated"
+  ],
+  "status": "validated",
+  "created": "2026-11-16",
+  "author": "Original owner-project procedural model",
+  "blender_version": "5.2.3 LTS",
+  "creation_method": "Deterministic procedural geometry, materials, and rig generated headlessly with Blender from generate.py.",
+  "generator": "generate.py",
+  "paths": {
+    "glb": "exports/gjh-chibi-visitor-blender.glb",
+    "source": "gjh-chibi-visitor.blend",
+    "generator": "generate.py",
+    "kit_glb": "exports/gjh-chibi-visitor-blender-kit.glb",
+    "preview": "previews/front.webp",
+    "side_preview": "previews/side.webp",
+    "back_preview": "previews/back.webp",
+    "three_quarter_preview": "previews/3q.webp",
+    "stand_glb": "exports/gjh-chibi-visitor-blender-stand.glb"
+  },
+  "display": {
+    "previewRotationY": 0,
+    "previewCameraDirection": [
+      0,
+      0.1,
+      1
+    ],
+    "units": "metres",
+    "up_axis": "glTF +Y",
+    "origin": "feet at floor Y=0",
+    "front_axis": "+Z"
+  },
+  "accuracy_notes": "This is an original procedural interpretation, not an exact reconstruction or an independently approved match. The hood collar retains projecting tips, the ear fins remain thinner than the design sheet in side view, and the hand reaches the lower edge of the nearby ear cup at the Wave peak. Helmet and visor contours, headphone details, clothing folds, boots, shorts, and chest lettering remain simplified; PBR shading and uniform outlines differ from the illustrated linework. The first and loop-end Wave pose differs from the unanimated rest pose, so runtimes should blend into and out of Wave. The private design sheet is not redistributed.",
+  "attribution": [
+    {
+      "credit": "Original procedural character geometry and materials generated with Blender 5.2.3 LTS for the owner's project; no third-party model is included."
+    },
+    {
+      "credit": "Blender-bundled Bfont creates the GJH chest lettering as mesh geometry; no external font file is included."
+    }
+  ],
+  "rights": "Original asset; reuse in the owner's projects is authorized. Public redistribution terms have not been specified.",
+  "metrics": {
+    "glb_bytes": 1046056,
+    "triangles": 39052,
+    "vertices": 19960,
+    "animations": 3
+  },
+  "skeleton": {
+    "joint_count": 14
+  },
+  "animation_clips": [
+    {
+      "name": "Wave",
+      "duration_seconds": 1.5
+    },
+    {
+      "name": "Idle",
+      "duration_seconds": 2.5
+    },
+    {
+      "name": "Blink",
+      "duration_seconds": 3
+    }
+  ],
+  "geometry": {
+    "units": "metres",
+    "coordinate_order": "glTF X, Y, Z",
+    "bounds_glTF_m": {
+      "min": [
+        -0.3189530372619629,
+        1.862645149230957e-9,
+        -0.23066452145576477
+      ],
+      "max": [
+        0.5261052846908569,
+        0.9999999403953552,
+        0.23113690316677094
+      ],
+      "dimensions": [
+        0.8450583219528198,
+        0.9999999385327101,
+        0.4618014246225357
+      ]
+    },
+    "height_metres": 0.9999999385327101
+  },
+  "related_exports": {
+    "stand": {
+      "glb_bytes": 988716,
+      "triangles": 38084,
+      "vertices": 19442,
+      "animations": 3,
+      "joint_count": 14,
+      "animation_clips": [
+        {
+          "name": "Wave",
+          "duration_seconds": 1.5
+        },
+        {
+          "name": "Idle",
+          "duration_seconds": 2.5
+        },
+        {
+          "name": "Blink",
+          "duration_seconds": 3
+        }
+      ],
+      "bounds_glTF_m": {
+        "min": [
+          -0.3931635916233063,
+          0,
+          -0.23460909724235535
+        ],
+        "max": [
+          0.3931635916233063,
+          1,
+          0.23537766933441162
+        ],
+        "dimensions": [
+          0.7863271832466125,
+          1,
+          0.46998676657676697
+        ]
+      },
+      "height_metres": 1
+    },
+    "kit": {
+      "glb_bytes": 4334380,
+      "triangles": 167780,
+      "vertices": 103151,
+      "animations": 3,
+      "joint_count": 14,
+      "animation_clips": [
+        {
+          "name": "Wave",
+          "duration_seconds": 1.5
+        },
+        {
+          "name": "Idle",
+          "duration_seconds": 2.5
+        },
+        {
+          "name": "Blink",
+          "duration_seconds": 3
+        }
+      ],
+      "bounds_glTF_m": {
+        "min": [
+          -4.901769638061523,
+          0,
+          -2.3967695236206055
+        ],
+        "max": [
+          4.901769638061523,
+          1,
+          0.23537766933441162
+        ],
+        "dimensions": [
+          9.803539276123047,
+          1,
+          2.632147192955017
+        ]
+      },
+      "height_metres": 1
+    }
+  },
+  "revision": 6,
+  "validation": {
+    "errors": 0,
+    "warnings": 0,
+    "validator": "2.0.0-dev.3.10"
+  }
+}

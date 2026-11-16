@@ -1,0 +1,292 @@
+{
+  "checks": {
+    "rearHair": true,
+    "clips": true,
+    "faces": true,
+    "height": true,
+    "ground": true,
+    "landmarks": true,
+    "skin": true,
+    "sockets": true,
+    "expressions": true,
+    "eyelids": true,
+    "motion": true,
+    "loops": true,
+    "modular": true,
+    "contacts": true,
+    "pickup": true,
+    "chin": true,
+    "sit": true,
+    "combined": true,
+    "talk": true,
+    "point": true,
+    "continuousPlayback": true
+  },
+  "rearScalpHairHits": 25,
+  "heightM": 1.2999999907202027,
+  "soleM": 2.9314698045026906e-9,
+  "landmarkM": {
+    "eye": 0.9535000400178908,
+    "chin": 0.800000048223259,
+    "hem": 0.4586883216258956
+  },
+  "landmarkOffsetPx": {
+    "eye": 1.2088309264224222,
+    "chin": 0.5384792323828833,
+    "hem": 3.1295640060585583
+  },
+  "poses": {
+    "idle": {
+      "seconds": 3,
+      "tracks": 62,
+      "delta": 1
+    },
+    "walk": {
+      "seconds": 1.0666667222976685,
+      "tracks": 60,
+      "delta": 0.3134282144517989
+    },
+    "run": {
+      "seconds": 0.7333333492279053,
+      "tracks": 60,
+      "delta": 0.4079679216320583
+    },
+    "talk": {
+      "seconds": 2,
+      "tracks": 62,
+      "delta": 0.5151474627410599
+    },
+    "browse": {
+      "seconds": 3.200000047683716,
+      "tracks": 60,
+      "delta": 0.16941408809783193
+    },
+    "sit": {
+      "seconds": 1.399999976158142,
+      "tracks": 60,
+      "delta": 0.7810091636980884
+    },
+    "wave": {
+      "seconds": 2,
+      "tracks": 60,
+      "delta": 0.6843106224051252
+    },
+    "pick_up": {
+      "seconds": 2.133333444595337,
+      "tracks": 61,
+      "delta": 1
+    },
+    "inspect": {
+      "seconds": 2.200000047683716,
+      "tracks": 61,
+      "delta": 0.770373081366488
+    },
+    "point": {
+      "seconds": 1.5,
+      "tracks": 61,
+      "delta": 1
+    },
+    "nod": {
+      "seconds": 1.2000000476837158,
+      "tracks": 60,
+      "delta": 0.08264852331036815
+    },
+    "cheer": {
+      "seconds": 1.8666666746139526,
+      "tracks": 64,
+      "delta": 1
+    }
+  },
+  "seamDelta": {
+    "idle": 3.129848571855428e-18,
+    "walk": 8.545128106613723e-18,
+    "run": 8.530222311975518e-18,
+    "talk": 8.346263961188625e-18,
+    "browse": 4.299574974465291e-17
+  },
+  "eyeHeightsM": {
+    "default": [
+      0.09100002142003483,
+      0.09100002142003483
+    ],
+    "happy": [
+      0.024229967865313395,
+      0.024229967865313395
+    ],
+    "wink": [
+      0.023653967645974827,
+      0.09100002142071562
+    ],
+    "surprised": [
+      0.10675004229894769,
+      0.10675004229894769
+    ],
+    "thinking": [
+      0.09105209831721106,
+      0.09173262224970946
+    ],
+    "excited": [
+      0.024949968139486467,
+      0.024949968139486467
+    ]
+  },
+  "accessoryStates": {
+    "pack-true_watch-true": 12,
+    "pack-true_watch-false": 12,
+    "pack-false_watch-true": 12,
+    "pack-false_watch-false": 12
+  },
+  "gait": {
+    "walk": {
+      "maxPlantErrorM": 9.408105627142355e-7,
+      "maxSlideM": 2.5647325808952903e-7,
+      "lowestShoeM": -9.408105627142355e-7
+    },
+    "run": {
+      "maxPlantErrorM": 0.000001687121311610216,
+      "maxSlideM": 3.971515579320739e-7,
+      "lowestShoeM": -0.0000017164586569510822
+    }
+  },
+  "pickupErrorM": 1.2819611699193907e-7,
+  "pickupPalm": [
+    -0.14899994659634366,
+    0.40899990465112657,
+    0.21800006701407496
+  ],
+  "pickupPadGapM": {
+    "thumb": 0.00035001539041828317,
+    "index": 0.0003500494874754609,
+    "lowerFingers": 0.0006919736964031906
+  },
+  "deepestPickupVertexM": 0,
+  "penetratingPickupTriangles": 0,
+  "pickupSweep": {
+    "stepFrames": 0.5,
+    "samples": 129,
+    "intersectingSamples": 0,
+    "maxIntersectingFaces": 0
+  },
+  "chinErrorM": 0.003982093505072971,
+  "chinTip": [
+    -0.07131436276798386,
+    0.8472246744471923,
+    0.16730603592419682
+  ],
+  "seatedPelvisM": 0.23099998105317354,
+  "seatContactGapM": 0.0009655485701236255,
+  "talkMouth": 0.5913333314015291,
+  "pointKey": 1,
+  "drawCalls": 36,
+  "controls": {
+    "waveSelected": true,
+    "winkSelected": true,
+    "accessoriesHidden": true,
+    "reset": true,
+    "pause": true,
+    "resume": true,
+    "mobile": true
+  },
+  "continuousPlayback": [
+    {
+      "clip": "idle",
+      "duration": 3,
+      "observedLateFrame": 2.4499,
+      "wrappedFrame": 0.04990000000000139,
+      "pass": true
+    },
+    {
+      "clip": "walk",
+      "duration": 1.0666667222976685,
+      "observedLateFrame": 0.8916000000000002,
+      "wrappedFrame": 0.19993327770233157,
+      "pass": true
+    },
+    {
+      "clip": "run",
+      "duration": 0.7333333492279053,
+      "observedLateFrame": 0.6500999999999985,
+      "wrappedFrame": 0.008433301544187755,
+      "pass": true
+    },
+    {
+      "clip": "talk",
+      "duration": 2,
+      "observedLateFrame": 1.6333000000000024,
+      "wrappedFrame": 0.07490000000000085,
+      "pass": true
+    },
+    {
+      "clip": "browse",
+      "duration": 3.200000047683716,
+      "observedLateFrame": 2.625000000000001,
+      "wrappedFrame": 0.01659995231628475,
+      "pass": true
+    },
+    {
+      "clip": "sit",
+      "duration": 1.399999976158142,
+      "observedLateFrame": 1.1249999999999998,
+      "end": 1.399999976158142,
+      "heldEnd": 1.399999976158142,
+      "pass": true
+    },
+    {
+      "clip": "wave",
+      "duration": 2,
+      "observedLateFrame": 1.624900000000001,
+      "end": 1.9999000000000007,
+      "heldEnd": 2,
+      "pass": true
+    },
+    {
+      "clip": "pick_up",
+      "duration": 2.133333444595337,
+      "observedLateFrame": 1.7249999999999994,
+      "end": 2.133333444595337,
+      "heldEnd": 2.133333444595337,
+      "pass": true
+    },
+    {
+      "clip": "inspect",
+      "duration": 2.200000047683716,
+      "observedLateFrame": 1.7918000000000023,
+      "end": 2.200000047683716,
+      "heldEnd": 2.200000047683716,
+      "pass": true
+    },
+    {
+      "clip": "point",
+      "duration": 1.5,
+      "observedLateFrame": 1.2749999999999997,
+      "end": 1.5,
+      "heldEnd": 1.5,
+      "pass": true
+    },
+    {
+      "clip": "nod",
+      "duration": 1.2000000476837158,
+      "observedLateFrame": 0.9749999999999998,
+      "end": 1.2000000476837158,
+      "heldEnd": 1.2000000476837158,
+      "pass": true
+    },
+    {
+      "clip": "cheer",
+      "duration": 1.8666666746139526,
+      "observedLateFrame": 1.5668000000000024,
+      "end": 1.8666666746139526,
+      "heldEnd": 1.8666666746139526,
+      "pass": true
+    }
+  ],
+  "artifactSha256": "60650f47aac716cb5a11fa69bee58c06546aa2199a25c2bde6dcc37ce566ab6f",
+  "browser": "156.0.8078.4",
+  "consoleErrors": [],
+  "consoleWarnings": [
+    "[.WebGL-0x1240043a800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x1240043a800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+  ],
+  "failedRequests": [],
+  "pass": true
+}

@@ -1,7 +1,11 @@
 {
   "status": "PASS",
   "edit": "Dining -> Gourmet in an isolated copy of the saved Blender source",
-  "exportMode": "generate.py -- --export-source",
+  "exportMode": "generate.py -- --export-source --no-render",
+  "comparisonBasis": "same-toolchain source control",
+  "blender": "5.1.2",
+  "originalSourceSha256": "08e9ef4797897d4fae35ec19d34d1d6191ba2521caf3fe20cfe86d66aab57a71",
+  "baselineSourceSha256": "08e9ef4797897d4fae35ec19d34d1d6191ba2521caf3fe20cfe86d66aab57a71",
   "changedGroups": [
     "DirectionDining"
   ],
@@ -15,15 +19,16 @@
   "originalAssetUnchanged": true,
   "results": [
     {
-      "file": "repo/models/mall-floor-direction-sign/exports/mall-floor-direction-sign.glb",
-      "sha256": "4c1f7edd051597ed4aae918d891051ed4da1d7cc5a2e5d70da84f55c8732fea6",
+      "asset": "shipped asset",
+      "sha256": "e646e0c5ede03bb0e2e59d824d34df7d6571a09749f04e45a86611a7ed4626c7",
+      "zeroAreaTriangles": 0,
       "groupHashes": {
-        "SignStructure": "cdd87b40c07e2ac9bd1d9dea088081058112141e54a79397a5ff89d886d07620",
-        "FloorIdentity": "52f39afad7ee1b21cb3449859541b004f7b4f63ce2a6eba38d046f8441f489f0",
+        "SignStructure": "990428d1da3af5ef75317407da763e770f430081dfc6c5a245be789509203402",
+        "FloorIdentity": "6533d1f30d6717b068a61b9fe28b868bbd51a6cea03299f9795486a57a2e4837",
         "DirectionDining": "83bbf7876634b35e6af5fd61a135c863aafd24252b40e5a8a6cfe91f4897676d",
-        "DirectionShops": "5be646e89056a407e0e8277e2a42aee5ae651ff145f9942c365fbcb99b559e21",
+        "DirectionShops": "4ca22803216146e8fe18de0a47d8ad37f5746073b8583dbcfe8ad770fea0107e",
         "DirectionCinema": "45f348605f7883c806d75bfaf0eb7def5a0a47bc53f016957c9fd1f14b00995c",
-        "DirectionFacilities": "ca93cdfdfa136360d8f6f95d7006313175c8f89422efdbeffbef6464dbbfe28f"
+        "DirectionFacilities": "47ae88f1c2acc885216096e57e87b26241de48a28e4747da9cf8c8b7d2458b25"
       },
       "validation": {
         "errors": 0,
@@ -31,15 +36,33 @@
       }
     },
     {
-      "file": "source-edit-check/exports/mall-floor-direction-sign.glb",
-      "sha256": "c899cd51a016f8a8af471ba5f9ea9b2c6ea51d40e2122f85799d223d49ee7744",
+      "asset": "same-toolchain source control",
+      "sha256": "49e61339339a899f6232465ba47c48148c142bb70f31049f594351cee324835e",
+      "zeroAreaTriangles": 0,
       "groupHashes": {
-        "SignStructure": "cdd87b40c07e2ac9bd1d9dea088081058112141e54a79397a5ff89d886d07620",
-        "FloorIdentity": "52f39afad7ee1b21cb3449859541b004f7b4f63ce2a6eba38d046f8441f489f0",
-        "DirectionDining": "c26cce98734565d6ae3c7254f1b41934d448ab59ba078d08553f50d0ebbc27d4",
-        "DirectionShops": "5be646e89056a407e0e8277e2a42aee5ae651ff145f9942c365fbcb99b559e21",
-        "DirectionCinema": "45f348605f7883c806d75bfaf0eb7def5a0a47bc53f016957c9fd1f14b00995c",
-        "DirectionFacilities": "ca93cdfdfa136360d8f6f95d7006313175c8f89422efdbeffbef6464dbbfe28f"
+        "SignStructure": "3145ba378b9a9a4cee62923392f3b67258ac2270ecc146add228b736a07e3dd8",
+        "FloorIdentity": "d6636b7ec8734e2ef6c853da524b9c3699d863948facd4a5575c3cd7d4405c7f",
+        "DirectionDining": "d85d5548a5fd692afbf038652f3306430645a71e6c78e5897e2c18c86f5f1d50",
+        "DirectionShops": "bf512323a4a07c98efae49f258525b0c1e2dd199742465e2580f22eea7c35ecf",
+        "DirectionCinema": "84a4714ffab2e1823b5c7cdc911b479fdfa69a1927d0425742a144c3c89c8c0f",
+        "DirectionFacilities": "daf4de8d64a439c4c2137524913dc1f1d9472692f09c6e7a83320da7a27ee140"
+      },
+      "validation": {
+        "errors": 0,
+        "warnings": 0
+      }
+    },
+    {
+      "asset": "isolated edited source",
+      "sha256": "9a8da947871dbb2a6c416dcf9838afa448cb0c0042036b4a2fef66b4b3f317cd",
+      "zeroAreaTriangles": 0,
+      "groupHashes": {
+        "SignStructure": "3145ba378b9a9a4cee62923392f3b67258ac2270ecc146add228b736a07e3dd8",
+        "FloorIdentity": "d6636b7ec8734e2ef6c853da524b9c3699d863948facd4a5575c3cd7d4405c7f",
+        "DirectionDining": "6179c5aad7a7deaf1e4220284352e6707ebd02a6cbea40b549eafde5a5a4fef6",
+        "DirectionShops": "bf512323a4a07c98efae49f258525b0c1e2dd199742465e2580f22eea7c35ecf",
+        "DirectionCinema": "84a4714ffab2e1823b5c7cdc911b479fdfa69a1927d0425742a144c3c89c8c0f",
+        "DirectionFacilities": "daf4de8d64a439c4c2137524913dc1f1d9472692f09c6e7a83320da7a27ee140"
       },
       "validation": {
         "errors": 0,

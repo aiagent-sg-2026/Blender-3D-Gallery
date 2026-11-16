@@ -1,0 +1,64 @@
+{
+  "id": "chibi-visitor-v2",
+  "name": "GJH Chibi Visitor v2 \u2014 Casual",
+  "category": "Characters",
+  "status": "validated",
+  "created": "2026-11-16",
+  "author": "Blender-3D-Gallery original procedural modeling",
+  "blender_version": "5.2.3 LTS",
+  "unity_version": "6000.0.85f2",
+  "creation_method": "Modular original Blender procedural mesh with UnityGLTF import/export compatibility check",
+  "source": "chibi-visitor-v2.blend",
+  "generator": "generate.py",
+  "display": {
+    "previewRotationY": 0,
+    "previewCameraDirection": [
+      1,
+      -1.5,
+      1
+    ],
+    "studioEnvironment": true,
+    "previewLighting": {
+      "directionalPosition": [
+        4,
+        5,
+        4
+      ],
+      "hemisphereIntensity": 2,
+      "directionalIntensity": 2.5
+    }
+  },
+  "accuracy_notes": "Stylized 18-year-old male Chibi visitor visual concept. Static geometry only; no armature, deformation skin or animation clips in v2. Four render angles are generated from the source. Not an approved final character art reference.",
+  "attribution": [
+    {
+      "credit": "Original Blender-generated geometry, materials and studio render, 2026-11-16."
+    },
+    {
+      "credit": "Unity 6 / UnityGLTF used for tested import and round-trip export. No Unity proprietary asset files redistributed."
+    }
+  ],
+  "rights": "Original owner-project asset. Redistribution terms for public downloads not specified.",
+  "metrics": {
+    "glb_bytes": 921072,
+    "glb_sha256": "d15347af78f1264d86d1f8d2411f50f4bd6c2766252337fac7f646781602e08e",
+    "source_sha256": "8633fa3c07600b8ed228c06b58e7f0dbc40d93b531923042e472d45dec79acc1",
+    "triangles": 37008,
+    "vertices": 21581,
+    "meshes": 21,
+    "materials": 16,
+    "animations": 0,
+    "scene_roots": [
+      "GJH_Chibi_Visitor_V2"
+    ]
+  },
+  "modular_modules": [
+    "HEAD",
+    "HAIR",
+    "FACE",
+    "TOP",
+    "ARMS",
+    "JEANS",
+    "SHOES",
+    "ACCESSORY"
+  ]
+}

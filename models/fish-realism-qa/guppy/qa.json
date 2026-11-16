@@ -1,0 +1,46 @@
+{
+  "status": "agent_visual_review_pass",
+  "iterations": [
+    {
+      "iteration": 1,
+      "result": "revise",
+      "findings": [
+        "The first body/head was too needle-like, the fan outline too angular and paired pelvics too broad."
+      ]
+    },
+    {
+      "iteration": 2,
+      "result": "revise",
+      "changes": [
+        "Deepen the slender profile, enlarge the subdued iris, round the fan and reduce pelvic spread; replace the drooping modified-anal curve with a straight narrow flattened fin."
+      ]
+    },
+    {
+      "iteration": 3,
+      "result": "pass",
+      "changes": [
+        "View the corrected actual fin detail alongside the unchanged reviewed body/head anatomy and pass current source/import/browser gates with two tail cycles."
+      ]
+    }
+  ],
+  "reviewed_source_sha256": "2ca0bd6151ea70ac7b667e39bca19c910b4992d5aa3e9613078c269a5d93066f",
+  "reviewed_images": [
+    "preview.png",
+    "head-detail.png",
+    "fin-detail.png"
+  ],
+  "render_engine": "Actual Blender EEVEE scene",
+  "visual_checks": {
+    "anatomy": "pass: slender red fancy male form with small silver head/abdominal pigment and a large rounded red fan",
+    "surface": "pass: original fine varied scales, red fin pigment and restrained ray contrast",
+    "head": "pass: closed small mouth and subdued ivory/gold iris",
+    "fins": "pass: soft dorsal, small clear paired fins and one straight narrow modified male anal fin instead of a broad anal membrane",
+    "surface_contact": "pass: source and actual imported GLB retain five-phase fin-root contact",
+    "motion": "pass: two cyclic body/tail strokes and repeated pectoral movements survive actual GLB import with matching endpoints",
+    "browser": "pass: exact draft GLB swims, pauses and disposes at desktop/mobile widths"
+  },
+  "limitations": [
+    "Original photo-informed red fancy male Poecilia reticulata artwork, not a scanned specimen.",
+    "Ornamental strains vary; the modified anal fin and fine dentition are simplified. Movement is artist-tuned."
+  ]
+}

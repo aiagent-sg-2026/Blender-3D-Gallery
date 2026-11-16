@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "edit": "RECYCLE -> PLASTIC in an isolated copy of the saved Blender source",
+  "exportMode": "generate.py -- --export-source --no-render",
+  "comparisonBasis": "same-toolchain source control",
+  "blender": "5.1.2",
+  "originalSourceSha256": "8369f1794fb14f4804b9967a2a00c10ff3275f3c24d0ac4cb3713422f90d0c0b",
+  "baselineSourceSha256": "8369f1794fb14f4804b9967a2a00c10ff3275f3c24d0ac4cb3713422f90d0c0b",
+  "changedGroups": [
+    "RecycleLid"
+  ],
+  "unchangedGroups": [
+    "StationFrame",
+    "RecycleCompartment",
+    "FoodCompartment",
+    "GeneralCompartment",
+    "FoodLid",
+    "GeneralLid"
+  ],
+  "originalAssetUnchanged": true,
+  "results": [
+    {
+      "asset": "shipped asset",
+      "sha256": "6205b1aa13eb852db768fe19b9e28b6f8d6001ed73671a4afc63c77017d7ce6d",
+      "zeroAreaTriangles": 0,
+      "groupHashes": {
+        "StationFrame": "c8f6f00240f62ef38f678f59f640527256615570316ab3eca95d42d16aa3e89a",
+        "RecycleCompartment": "6f2e0ea1571f1c1cfb7581c431d2eb907b32c426822aeadc5ccfb14753ed87da",
+        "FoodCompartment": "5867140595399ee47d7913baeb86d34039fedca92f683bb0a308ff3546349b61",
+        "GeneralCompartment": "6718b29c98ea857e6416eaa196907e61e95b276b1747b4d5fd1c456c744775cc",
+        "RecycleLid": "1137f9c56b5c985aeaba17304015cbf967fcae7fc171a3662c9a97b77862ca9b",
+        "FoodLid": "40ee45c270870f8774b64067415023f5632ef54a42289d55f5a2c1210146a1af",
+        "GeneralLid": "2e850db84db895e33261e1c91a2fcd00dbd93c01db06827ea4b43d4a09082fd1"
+      },
+      "validation": {
+        "errors": 0,
+        "warnings": 0
+      }
+    },
+    {
+      "asset": "same-toolchain source control",
+      "sha256": "3ad84598233c653e5eb32f34b113344af191c1ce72f841436e2234859c03bd92",
+      "zeroAreaTriangles": 0,
+      "groupHashes": {
+        "StationFrame": "11688af5985f9693e1c6417c411e6f10c98425036f90f42ea4160ab271c5fcca",
+        "RecycleCompartment": "3b85d2c5158e0bc71d9aad2d4a83d4673e6d32fcaa20acda2de49a840bfb23c6",
+        "FoodCompartment": "e7ac1bec1f8ced281f5eacb4779ff535cfec751e4eaf9139aa5357609d1961ba",
+        "GeneralCompartment": "02899e894abd25f808383815fc6fc724dd47a170b893538bef2f7d035492f42b",
+        "RecycleLid": "a0a52f17b319896a31d5a4c08c4ec8492e49c360e936d9037ce6e9a7c87178bc",
+        "FoodLid": "afa8e35bddf0ebc9d761b540b7415cdaf06bc6278a343aa1ac16d988a9f157b4",
+        "GeneralLid": "949b8c09912ec612324ad424a5734f1540130458ac7e9bf1a5624deb56b8cd83"
+      },
+      "validation": {
+        "errors": 0,
+        "warnings": 0
+      }
+    },
+    {
+      "asset": "isolated edited source",
+      "sha256": "434e187feb2af74da168e905f08274179ed30ce9e4789dc4d9c05690a63f5488",
+      "zeroAreaTriangles": 0,
+      "groupHashes": {
+        "StationFrame": "11688af5985f9693e1c6417c411e6f10c98425036f90f42ea4160ab271c5fcca",
+        "RecycleCompartment": "3b85d2c5158e0bc71d9aad2d4a83d4673e6d32fcaa20acda2de49a840bfb23c6",
+        "FoodCompartment": "e7ac1bec1f8ced281f5eacb4779ff535cfec751e4eaf9139aa5357609d1961ba",
+        "GeneralCompartment": "02899e894abd25f808383815fc6fc724dd47a170b893538bef2f7d035492f42b",
+        "RecycleLid": "773d1543c2c21cfdc50d33576b76989da1ce59773058da6c64abb8f45d6fb6f8",
+        "FoodLid": "afa8e35bddf0ebc9d761b540b7415cdaf06bc6278a343aa1ac16d988a9f157b4",
+        "GeneralLid": "949b8c09912ec612324ad424a5734f1540130458ac7e9bf1a5624deb56b8cd83"
+      },
+      "validation": {
+        "errors": 0,
+        "warnings": 0
+      }
+    }
+  ]
+}

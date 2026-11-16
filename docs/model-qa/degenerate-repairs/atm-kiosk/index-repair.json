@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "zeroRemoved": 4,
+  "residueRemoved": 48,
+  "splitIndexAccessors": [
+    {
+      "originalAccessor": 2,
+      "newAccessor": 36,
+      "bufferView": 36,
+      "primitives": [
+        "13:0",
+        "14:0"
+      ],
+      "triangles": 84
+    }
+  ],
+  "rigidContainer": {
+    "changedStaticNodes": [
+      "EDITABLE_Screen",
+      "SCREEN_Bezel",
+      "SCREEN_Placeholder"
+    ],
+    "animation": {
+      "clips": 1,
+      "accessors": 2,
+      "sha256": "6b50121b0169c1a1f0db33c04efb02676a563eb59c2e5320e1200e13702039b6"
+    }
+  },
+  "originalSha256": "0348db21bde7c430940e76e37817ef86c2466ea549238adcbbcbce4f9619498a",
+  "sha256": "ffa5ee98530439c60ea629852107e718cabbff48edf8fc9d7ae861ae8e12c044",
+  "preservation": "Only triangle index streams, index accessor counts/min/max and explicitly split primitive index bindings changed; new index views are appended when needed. All original non-index binary payload bytes retained.",
+  "validation": {
+    "numErrors": 0,
+    "numWarnings": 0,
+    "numInfos": 0,
+    "numHints": 0,
+    "messages": [],
+    "truncated": false
+  }
+}

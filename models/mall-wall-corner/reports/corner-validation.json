@@ -1,0 +1,138 @@
+{
+  "result": "PASS",
+  "inputs": {
+    "floor": {
+      "path": "models/mall-floor-tile/exports/mall-floor-tile-module.glb",
+      "sha256": "328a091a1372b0246694484d0cea05319bad032cfa603ed030b69ef87153c305"
+    },
+    "edge": {
+      "path": "models/mall-floor-edge-trim/exports/mall-floor-edge-trim.glb",
+      "sha256": "f327fbd76b5d722dfc21c52563c28e2ec96b7ff08b48b425de422a492215b3db"
+    },
+    "cap": {
+      "path": "models/mall-floor-corner-trim/exports/mall-floor-corner-trim.glb",
+      "sha256": "913bb6aa74b5a13145af09767c26beb73b71b5d92eaff4a7e2f53f294af36582"
+    },
+    "wall": {
+      "path": "models/mall-solid-wall/exports/mall-solid-wall.glb",
+      "sha256": "4e42b9f7c84e5f769a5940485ef2af81ee667fc03579d56f4065788c4d840708"
+    },
+    "corner": {
+      "path": "models/mall-wall-corner/exports/mall-wall-corner.glb",
+      "sha256": "8ea702d2b4f6b42d26f5248fd4d639654207e7c87c6d3e4ff038bf21e6fbcfa1"
+    }
+  },
+  "models": {
+    "cap": {
+      "sha256": "913bb6aa74b5a13145af09767c26beb73b71b5d92eaff4a7e2f53f294af36582",
+      "bytes": 4344,
+      "triangles": 24,
+      "materials": 2,
+      "bounds": {
+        "min": [
+          -0.029999999329447746,
+          -0.030000001192092896,
+          -0.029999999329447746
+        ],
+        "max": [
+          0.029999999329447746,
+          0,
+          0.029999999329447746
+        ]
+      },
+      "dimensions": [
+        0.05999999865889549,
+        0.030000001192092896,
+        0.05999999865889549
+      ],
+      "validator": {
+        "errors": 0,
+        "warnings": 0,
+        "infos": 6
+      }
+    },
+    "corner": {
+      "sha256": "8ea702d2b4f6b42d26f5248fd4d639654207e7c87c6d3e4ff038bf21e6fbcfa1",
+      "bytes": 67864,
+      "triangles": 804,
+      "materials": 3,
+      "bounds": {
+        "min": [
+          -1.199999988079071,
+          0,
+          -0.05999999959021807
+        ],
+        "max": [
+          0.0600002094075226,
+          3,
+          1.1999999889959674
+        ]
+      },
+      "dimensions": [
+        1.2600001974865935,
+        3,
+        1.2599999885861854
+      ],
+      "validator": {
+        "errors": 0,
+        "warnings": 0,
+        "infos": 21
+      }
+    }
+  },
+  "floor": {
+    "tile": [
+      0,
+      -0.03,
+      0
+    ],
+    "stripX": [
+      0,
+      0,
+      0.63
+    ],
+    "stripZ": [
+      0.63,
+      0,
+      0
+    ],
+    "corner": [
+      0.63,
+      0,
+      0.63
+    ],
+    "topSurfaceRayHits": 5
+  },
+  "wall": {
+    "corner": [
+      0,
+      0,
+      0
+    ],
+    "straightX": [
+      -1.8,
+      0,
+      0
+    ],
+    "straightZ": [
+      0,
+      0,
+      1.8
+    ],
+    "straightZRotationRadians": 1.5707963267948966,
+    "connectors": [
+      [
+        -1.2000000476837158,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1.2000000476837158
+      ]
+    ],
+    "insideFinishedFaces": 2
+  },
+  "limits": "Specific 90-degree case, bounding boxes and sample rays only. Does not establish arbitrary layouts, triangle intersection, materials under all renderers, physical safety, or building certification."
+}

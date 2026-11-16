@@ -1,0 +1,253 @@
+{
+  "release_head": "4f8eb6a5192a34122717c343a06aa0b29afeded8",
+  "observed_at": "2026-11-15T09:30:21.638969+00:00",
+  "current_catalog_entries": 567,
+  "new_file_details": [
+    {
+      "path": "models/fish-realism-qa/golden-pomfret/golden-pomfret.blend",
+      "bytes": 8372820,
+      "sha256": "75d95ea63035ca7a8b97d5ceb4087567c9ba031468a0a858839afe339775d6d1"
+    },
+    {
+      "path": "models/fish-realism-qa/golden-pomfret/model.glb",
+      "bytes": 9884604,
+      "sha256": "41bcbdee362274a04783af37add2194ab2baa98cf4218ee3a92cda67bd2fe2c3"
+    },
+    {
+      "path": "models/fish-realism-release/barramundi/model.glb",
+      "bytes": 2122676,
+      "sha256": "d3636fe13d293c7bd2da55ba1898c5640f3d601473e798ae51d16d906f0cb69d"
+    },
+    {
+      "path": "models/fish-realism-release/betta/model.glb",
+      "bytes": 1290232,
+      "sha256": "0004b5df0b923336bde4a09c128537c7a7e30e4e4c7995fdcad8c2c07e330120"
+    },
+    {
+      "path": "models/fish-realism-release/golden-pomfret/model.glb",
+      "bytes": 3920520,
+      "sha256": "cd92b4c915fdd0545f393784588e1cf00d41b5e44e44eaa66e11c6566c46ecbb"
+    },
+    {
+      "path": "models/fish-realism-release/grouper/model.glb",
+      "bytes": 4133092,
+      "sha256": "f13b52c4a8c60869eacc58b0c3549d498cb1561865cef146f6b0ef8838fd007e"
+    },
+    {
+      "path": "models/fish-realism-release/red-snapper/model.glb",
+      "bytes": 4115076,
+      "sha256": "958641992673ffce62529ff1e1909890cd772272f5bdbe9d6e146f230aeb367c"
+    },
+    {
+      "path": "models/fish-realism-release/stingray/model.glb",
+      "bytes": 12974100,
+      "sha256": "f91c95ecc28cd2f1dfec97e47236c8b2715c8d64c356b68858b7617713b6ea14"
+    }
+  ],
+  "added_qa_ids": [
+    "MODEL-1908",
+    "MODEL-1909",
+    "MODEL-1910",
+    "MODEL-1911",
+    "MODEL-1912",
+    "MODEL-1913",
+    "MODEL-1914"
+  ],
+  "catalog_reroutes": [
+    {
+      "qa_id": "MODEL-0495",
+      "model_id": "fish-barramundi",
+      "head": "4f8eb6a5192a34122717c343a06aa0b29afeded8",
+      "previous_export_paths": [
+        "models/singapore-fish/barramundi/exports/model.glb"
+      ],
+      "previous_source_candidates": [
+        "models/singapore-fish/barramundi/sources/barramundi.blend"
+      ],
+      "current_export": {
+        "path": "models/fish-realism-release/barramundi/model.glb",
+        "bytes": 2122676,
+        "sha256": "d3636fe13d293c7bd2da55ba1898c5640f3d601473e798ae51d16d906f0cb69d"
+      },
+      "current_source": {
+        "path": "models/fish-realism-review/revision-03/barramundi/barramundi-review.blend",
+        "bytes": 12625080,
+        "sha256": "d81ac3f4b14687df7bc5d5cc9ffdfb51faff98d5ce6a090407ef28ccfccade1b"
+      },
+      "historical_qa_id": "MODEL-1908",
+      "status": "PENDING",
+      "evidence": "discovery-reconciliation-4f8eb6a5.json"
+    },
+    {
+      "qa_id": "MODEL-0496",
+      "model_id": "fish-red-snapper",
+      "head": "4f8eb6a5192a34122717c343a06aa0b29afeded8",
+      "previous_export_paths": [
+        "models/singapore-fish/red-snapper/exports/model.glb"
+      ],
+      "previous_source_candidates": [
+        "models/singapore-fish/red-snapper/sources/red-snapper.blend"
+      ],
+      "current_export": {
+        "path": "models/fish-realism-release/red-snapper/model.glb",
+        "bytes": 4115076,
+        "sha256": "958641992673ffce62529ff1e1909890cd772272f5bdbe9d6e146f230aeb367c"
+      },
+      "current_source": {
+        "path": "models/fish-realism-qa/red-snapper/red-snapper.blend",
+        "bytes": 8861497,
+        "sha256": "cc7a97a440ee188cbb8e5387c1baebc6e32325ff53d6c59f4fa4dcf23c529e5d"
+      },
+      "historical_qa_id": "MODEL-1909",
+      "status": "PENDING",
+      "evidence": "discovery-reconciliation-4f8eb6a5.json"
+    },
+    {
+      "qa_id": "MODEL-0497",
+      "model_id": "fish-grouper",
+      "head": "4f8eb6a5192a34122717c343a06aa0b29afeded8",
+      "previous_export_paths": [
+        "models/singapore-fish/grouper/exports/model.glb"
+      ],
+      "previous_source_candidates": [
+        "models/singapore-fish/grouper/sources/grouper.blend"
+      ],
+      "current_export": {
+        "path": "models/fish-realism-release/grouper/model.glb",
+        "bytes": 4133092,
+        "sha256": "f13b52c4a8c60869eacc58b0c3549d498cb1561865cef146f6b0ef8838fd007e"
+      },
+      "current_source": {
+        "path": "models/fish-realism-qa/grouper/grouper.blend",
+        "bytes": 9015303,
+        "sha256": "edb969505b4cd8be731d7528cdfff9cab854c530a4cdee657eeaa0c0d1429d73"
+      },
+      "historical_qa_id": "MODEL-1910",
+      "status": "PENDING",
+      "evidence": "discovery-reconciliation-4f8eb6a5.json"
+    },
+    {
+      "qa_id": "MODEL-0498",
+      "model_id": "fish-golden-pomfret",
+      "head": "4f8eb6a5192a34122717c343a06aa0b29afeded8",
+      "previous_export_paths": [
+        "models/singapore-fish/golden-pomfret/exports/model.glb"
+      ],
+      "previous_source_candidates": [
+        "models/singapore-fish/golden-pomfret/sources/golden-pomfret.blend"
+      ],
+      "current_export": {
+        "path": "models/fish-realism-release/golden-pomfret/model.glb",
+        "bytes": 3920520,
+        "sha256": "cd92b4c915fdd0545f393784588e1cf00d41b5e44e44eaa66e11c6566c46ecbb"
+      },
+      "current_source": {
+        "path": "models/fish-realism-qa/golden-pomfret/golden-pomfret.blend",
+        "bytes": 8372820,
+        "sha256": "75d95ea63035ca7a8b97d5ceb4087567c9ba031468a0a858839afe339775d6d1"
+      },
+      "historical_qa_id": "MODEL-1911",
+      "status": "PENDING",
+      "evidence": "discovery-reconciliation-4f8eb6a5.json"
+    },
+    {
+      "qa_id": "MODEL-0537",
+      "model_id": "fish-stingray",
+      "head": "4f8eb6a5192a34122717c343a06aa0b29afeded8",
+      "previous_export_paths": [
+        "models/singapore-fish/stingray/exports/model.glb"
+      ],
+      "previous_source_candidates": [
+        "models/singapore-fish/stingray/sources/stingray.blend"
+      ],
+      "current_export": {
+        "path": "models/fish-realism-release/stingray/model.glb",
+        "bytes": 12974100,
+        "sha256": "f91c95ecc28cd2f1dfec97e47236c8b2715c8d64c356b68858b7617713b6ea14"
+      },
+      "current_source": {
+        "path": "models/fish-realism-review/revision-04/stingray/stingray-review.blend",
+        "bytes": 21305201,
+        "sha256": "7994f8e43c6b2c81a13b62563e223c62483d348ea57f0cb0ed8c566d8261375b"
+      },
+      "historical_qa_id": "MODEL-1912",
+      "status": "PENDING",
+      "evidence": "discovery-reconciliation-4f8eb6a5.json"
+    },
+    {
+      "qa_id": "MODEL-0550",
+      "model_id": "fish-betta",
+      "head": "4f8eb6a5192a34122717c343a06aa0b29afeded8",
+      "previous_export_paths": [
+        "models/singapore-fish/betta/exports/model.glb"
+      ],
+      "previous_source_candidates": [
+        "models/singapore-fish/betta/sources/betta.blend"
+      ],
+      "current_export": {
+        "path": "models/fish-realism-release/betta/model.glb",
+        "bytes": 1290232,
+        "sha256": "0004b5df0b923336bde4a09c128537c7a7e30e4e4c7995fdcad8c2c07e330120"
+      },
+      "current_source": {
+        "path": "models/fish-realism-review/revision-03/betta/betta-review.blend",
+        "bytes": 1421028,
+        "sha256": "7af70e0bb6be47c1f8d23e871dc1f9e550beafdae7012abad6bf5c198d199dad"
+      },
+      "historical_qa_id": "MODEL-1913",
+      "status": "PENDING",
+      "evidence": "discovery-reconciliation-4f8eb6a5.json"
+    }
+  ],
+  "historical_exports_preserved_as_pending_records": true,
+  "existing_source_export_repair": {
+    "qa_id": "MODEL-0078",
+    "files": [
+      {
+        "path": "models/mall-service-desk/exports/mall-service-desk.glb",
+        "bytes": 245748,
+        "sha256": "3a737922fda795a2995fd3fb47122140b06c8f22f9185bac6e2c465ca23a5a2a"
+      },
+      {
+        "path": "models/mall-service-desk/sources/mall-service-desk.blend",
+        "bytes": 113989,
+        "sha256": "5b33a2a78eecb6960ce63edb7c683ec3e8b6fa04892e6f654d740f6364910d7d"
+      }
+    ],
+    "status": "PENDING"
+  },
+  "additional_source_export_repair": {
+    "qa_id": "MODEL-0071",
+    "files": [
+      {
+        "path": "models/mall-essentials/exports/mall-display-shelf.glb",
+        "bytes": 172420,
+        "sha256": "7a4013e800dd587b2b1ec1934973850da9addb981268399de8cc629e6357f907"
+      },
+      {
+        "path": "models/mall-essentials/sources/mall-advertising-lightbox.blend",
+        "bytes": 107914,
+        "sha256": "34b8e00a40902b33398e08edaf7daa06499f776c1311c5283d3ed993a3e8dff7"
+      },
+      {
+        "path": "models/mall-essentials/sources/mall-directory-kiosk.blend",
+        "bytes": 109633,
+        "sha256": "3d6069e1c5213b5cee1790b26147fdb90347d7346f4ab9018a1029162f6f7b52"
+      },
+      {
+        "path": "models/mall-essentials/sources/mall-display-shelf.blend",
+        "bytes": 108716,
+        "sha256": "f95e5c0ba9942850c24ebfd02ce635cce9f1a9224db30e7b8bc9c2ab04a744ee"
+      },
+      {
+        "path": "models/mall-essentials/sources/mall-trash-bin.blend",
+        "bytes": 127730,
+        "sha256": "c645517238821a01c5775e74947f39bb27e41cbe163a24241ce4c3b7eb4b48e9"
+      }
+    ],
+    "status": "PENDING"
+  },
+  "application_change": "Viewer description now adds HTTPS source/license attribution links. Fresh latest-input regression is required for MODEL-0011. MODEL-0010 acceptance remains pinned to successful unchanged-input descendant af8240b6.",
+  "all_additions_pending": true,
+  "all_existing_ids_and_statuses_preserved": true
+}
