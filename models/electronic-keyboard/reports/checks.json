@@ -1,0 +1,88 @@
+{
+  "result": "PASS",
+  "duplicate_search": {
+    "catalog_assets_before": 585,
+    "metadata_json_files_searched": 634,
+    "close_match": "NOT FOUND",
+    "lexical_only_match": "pos-terminal refers to a checkout keyboard; unrelated to a musical instrument"
+  },
+  "blender": {
+    "version": "5.2.3 LTS",
+    "headless_build": "PASS",
+    "independent_byte_identical_rebuild": "PASS",
+    "source_reopen_manifold_saved_edit_reexport": "PASS"
+  },
+  "asset_gate": {
+    "command": "node models/electronic-keyboard/validate.mjs",
+    "result": "PASS",
+    "nondegenerate_triangles": true,
+    "all_61_key_vertices_match_export": true
+  },
+  "repository_checks": {
+    "npm run validate:assets": {
+      "result": "PASS",
+      "log": "/tmp/electronic-keyboard-validate-assets.log"
+    },
+    "npm test": {
+      "result": "PASS",
+      "tests": 728,
+      "passed": 728,
+      "failed": 0,
+      "skipped": 0,
+      "log": "/tmp/electronic-keyboard-test-final.log"
+    },
+    "npm run build": {
+      "result": "PASS",
+      "log": "/tmp/electronic-keyboard-build-final.log",
+      "note": "Large-JavaScript-chunk advisory; build succeeds."
+    }
+  },
+  "khronos": {
+    "result": "PASS",
+    "errors": 0,
+    "warnings": 0,
+    "evidence": "khronos.json"
+  },
+  "browser": {
+    "result": "PASS",
+    "viewport": [
+      1440,
+      900
+    ],
+    "evidence": "browser.json"
+  },
+  "visual_review": {
+    "result": "PASS",
+    "views": [
+      "hero.png",
+      "front.png",
+      "side.png",
+      "3q.png",
+      "hero.webp"
+    ],
+    "notes": "Inspected key grouping, notched fronts, X-frame support, rubber feet, tilted music tray, abstract panel and neutral appearance; Chromium page screenshot also inspected."
+  },
+  "corrected_attempts": [
+    {
+      "check": "nondegenerate triangles",
+      "initial_result": "FAIL",
+      "finding": "48 collapsed bevel triangles on thin display layers",
+      "correction": "Bound bevel widths to 45% of part thickness; final independent geometry gate passes."
+    },
+    {
+      "check": "npm test",
+      "initial_result": "FAIL: 727/728",
+      "finding": "Existing Pomelo test requires its collection to remain last",
+      "correction": "Insert the new collection before Pomelo, preserving all existing entries; final 728/728 pass."
+    }
+  ],
+  "not_verified": [
+    "physical iOS/Android",
+    "WebKit",
+    "complete S15 mall assembly",
+    "target GPU performance",
+    "sound, playable keys or folding animation (not implemented)"
+  ],
+  "publication": "Local commit only; no push or deployment.",
+  "catalog_preservation": "PASS: removing only the added collection yields the exact original catalog data"
+}
