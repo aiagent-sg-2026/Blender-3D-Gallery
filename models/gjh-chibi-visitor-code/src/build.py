@@ -1,7 +1,7 @@
 """Entry point: builds the GJH Chibi Visitor from scratch and runs every gate.
 
   Blender --background --factory-startup --python-exit-code 1 \
-      --python models/gjh-chibi-visitor/src/build.py -- --out models/gjh-chibi-visitor [--keep-going] [--no-renders]
+      --python models/gjh-chibi-visitor-code/src/build.py -- --out models/gjh-chibi-visitor-code [--keep-going] [--no-renders]
 
 Writes exports/, sources/, previews/, textures/ and qa/run-001/report.json.
 Exits non-zero when any gate fails (with --keep-going all stages still run).

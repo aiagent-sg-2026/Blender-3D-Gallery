@@ -8,22 +8,22 @@ The model carries seven face expressions and twelve animation clips.
 - No generated or downloaded meshes (no TRELLIS, Hunyuan3D or RunPod) and no code from other
   models in this repository. Only the repository-wide checks (`npm run validate:assets`,
   `npm test`, catalog rules) are shared.
-- Plan: `docs/gjh-chibi-visitor-plan.md`. Gate results: `qa/run-001/report.json`.
+- Plan: `docs/gjh-chibi-visitor-code-plan.md`. Gate results: `qa/run-001/report.json`.
 
 ## Build
 
 ```bash
-/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python-exit-code 1 --python models/gjh-chibi-visitor/src/build.py -- --out models/gjh-chibi-visitor --keep-going
+/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python-exit-code 1 --python models/gjh-chibi-visitor-code/src/build.py -- --out models/gjh-chibi-visitor-code --keep-going
 ```
 
 Then run the browser check and the tests:
 
 ```bash
-node models/gjh-chibi-visitor/qa/check-glb.mjs
+node models/gjh-chibi-visitor-code/qa/check-glb.mjs
 ```
 
 ```bash
-node --test tests/gjh-chibi-visitor.test.mjs
+node --test tests/gjh-chibi-visitor-code.test.mjs
 ```
 
 The build takes about 30 seconds with renders (`--no-renders` skips them). Without

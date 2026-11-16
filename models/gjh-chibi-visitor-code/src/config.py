@@ -9,7 +9,7 @@ Landmarks were measured from the owner's character sheet v1.0 masks
 (front, side and back views, about 350 px per metre); see reference/.
 """
 
-ASSET_ID = "gjh-chibi-visitor"
+ASSET_ID = "gjh-chibi-visitor-code"
 
 # ---------------------------------------------------------------- reference
 REF_SHEET = "character-sheet-v1.webp"

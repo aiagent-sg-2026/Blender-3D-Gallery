@@ -1,9 +1,9 @@
 // Loads the exported GLB in a real browser with three.js, plays every clip and
 // checks skinned bounds, morph targets and sockets; saves screenshots.
 //
-//   node models/gjh-chibi-visitor/qa/check-glb.mjs
+//   node models/gjh-chibi-visitor-code/qa/check-glb.mjs
 //
-// Writes models/gjh-chibi-visitor/qa/run-001/browser.json and browser-*.png.
+// Writes models/gjh-chibi-visitor-code/qa/run-001/browser.json and browser-*.png.
 import { createHash } from "node:crypto";
 import fs from "node:fs";
 import http from "node:http";
@@ -11,7 +11,7 @@ import path from "node:path";
 import { chromium } from "playwright";
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "../../..");
-const out = path.join(root, "models/gjh-chibi-visitor/qa/run-001");
+const out = path.join(root, "models/gjh-chibi-visitor-code/qa/run-001");
 const types = { ".html": "text/html", ".js": "text/javascript", ".mjs": "text/javascript", ".glb": "model/gltf-binary" };
 
 const page = `<!doctype html><html><head><meta charset="utf-8">
@@ -32,7 +32,7 @@ const sun = new THREE.DirectionalLight(0xffffff, 2.0); sun.position.set(-1.5, 3,
 const camera = new THREE.PerspectiveCamera(30, 480 / 640, 0.05, 50);
 camera.position.set(1.1, 1.05, 3.2); camera.lookAt(0, 0.64, 0);
 window.check = async () => {
-  const gltf = await new GLTFLoader().loadAsync("/models/gjh-chibi-visitor/exports/gjh-chibi-visitor.glb");
+  const gltf = await new GLTFLoader().loadAsync("/models/gjh-chibi-visitor-code/exports/gjh-chibi-visitor-code.glb");
   const model = gltf.scene; scene.add(model);
   const skinned = []; model.traverse(o => { if (o.isSkinnedMesh) skinned.push(o); });
   const meshes = []; model.traverse(o => { if (o.isMesh) meshes.push(o); });
@@ -72,7 +72,7 @@ window.check = async () => {
   };
 };
 window.shot = async (clipName, fraction) => {
-  const gltf = await new GLTFLoader().loadAsync("/models/gjh-chibi-visitor/exports/gjh-chibi-visitor.glb");
+  const gltf = await new GLTFLoader().loadAsync("/models/gjh-chibi-visitor-code/exports/gjh-chibi-visitor-code.glb");
   scene.children.filter(c => c.isGroup).forEach(c => scene.remove(c));
   scene.add(gltf.scene);
   if (clipName) {
@@ -110,7 +110,7 @@ try {
   result.errors = errors;
   // Ties this evidence to the exact GLB it checked.
   result.glb_sha256 = createHash("sha256")
-    .update(fs.readFileSync(path.join(root, "models/gjh-chibi-visitor/exports/gjh-chibi-visitor.glb"))).digest("hex");
+    .update(fs.readFileSync(path.join(root, "models/gjh-chibi-visitor-code/exports/gjh-chibi-visitor-code.glb"))).digest("hex");
   for (const [clip, f] of [[null, 0], ["Wave", 0.35], ["Walk", 0.25], ["Cheer", 0.3], ["Sit", 0.97]]) {
     await tab.evaluate(([c, t]) => window.shot(c, t), [clip, f]);
     await tab.locator("canvas").screenshot({ path: path.join(out, `browser-${clip ?? "rest"}.png`) });

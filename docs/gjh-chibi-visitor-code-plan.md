@@ -58,7 +58,7 @@ Head width (hair) ≈ 0.56, face width ≈ 0.39. Hands reach ≈ 0.45.
 ## 3. File layout (all new)
 
 ```
-models/gjh-chibi-visitor/
+models/gjh-chibi-visitor-code/
   README.md
   metadata.json
   reference/character-sheet-v1.webp     # owner sheet (copied in)
@@ -82,17 +82,17 @@ models/gjh-chibi-visitor/
     overlap.py     # BVH overlap check between parts (allow list in config)
     deform.py      # pose stress test: stretch/collapse detection per bone
     check-glb.mjs  # three.js load, clips, morphs, skin, bounds
-  exports/gjh-chibi-visitor.glb
-  sources/gjh-chibi-visitor.blend
+  exports/gjh-chibi-visitor-code.glb
+  sources/gjh-chibi-visitor-code.blend
   previews/ (thumbnail.webp, turntable-000..315.png, expressions.png, clips/*.png)
   qa/run-001/ (report.json, renders, logs)
-tests/gjh-chibi-visitor.test.mjs
+tests/gjh-chibi-visitor-code.test.mjs
 ```
 
 Single build command:
 
 ```bash
-/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python-exit-code 1 --python models/gjh-chibi-visitor/src/build.py -- --out models/gjh-chibi-visitor
+/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python-exit-code 1 --python models/gjh-chibi-visitor-code/src/build.py -- --out models/gjh-chibi-visitor-code
 ```
 
 ## 4. Build stages (run in one shot by `build.py`, each stage gated)
@@ -165,13 +165,13 @@ Each stage writes a JSON report. `build.py` stops with a non-zero exit if a gate
 
 ### Stage 8 — Export and previews
 - Export GLB with skins, morph targets, NLA clips as named animations, embedded textures, +Y up glTF, Apply modifiers.
-- Save `sources/gjh-chibi-visitor.blend`.
+- Save `sources/gjh-chibi-visitor-code.blend`.
 - Renders (Eevee, fixed 3-point studio light, lavender background like the sheet): 8 turntable angles, expressions strip, one frame per clip, thumbnail.
 
 ### Stage 9 — QA and gallery integration
 - `npm run validate:assets`: glTF validator 0 errors, 0 warnings.
 - `qa/check-glb.mjs` in three.js: loads, 12 named clips, 7 morph targets, all meshes skinned, bounds height 1.30 ± 0.02 m, tris 3,000–8,000.
-- `tests/gjh-chibi-visitor.test.mjs` (new, written from scratch) runs those checks under `npm test`.
+- `tests/gjh-chibi-visitor-code.test.mjs` (new, written from scratch) runs those checks under `npm test`.
 - Add the catalog entry to `models/catalog.json` (category `Characters`, browse `People & Characters`, no `root` field because the mesh is skinned, embedded textures).
 - Run the gallery dev server and check that the model loads, plays clips and shows the fallback on error.
 - Independent review: a fresh reviewer compares the turntable and expression renders with the sheet and lists defects. P0/P1 defects are fixed before handing to the owner.
@@ -220,9 +220,9 @@ Each stage writes a JSON report. `build.py` stops with a non-zero exit if a gate
 
 ## 9. Results (2026-11-15 build)
 
-Built by `models/gjh-chibi-visitor/src/build.py` in about 30 seconds (Blender 5.1.2, headless).
-Gate report: `models/gjh-chibi-visitor/qa/run-001/report.json`. Browser check:
-`models/gjh-chibi-visitor/qa/run-001/browser.json`.
+Built by `models/gjh-chibi-visitor-code/src/build.py` in about 30 seconds (Blender 5.1.2, headless).
+Gate report: `models/gjh-chibi-visitor-code/qa/run-001/report.json`. Browser check:
+`models/gjh-chibi-visitor-code/qa/run-001/browser.json`.
 
 | Stage | Gate | Result |
 |---|---|---|
@@ -243,7 +243,7 @@ The GLB is 820,152 bytes.
 
 Outside Blender: glTF validator 0 errors and 0 warnings; the three.js browser check loads all
 8 skinned meshes, the 7 morph targets and the 3 sockets, and plays every clip with finite bounds
-above the floor; `tests/gjh-chibi-visitor.test.mjs` passes; the gallery dev server shows the
+above the floor; `tests/gjh-chibi-visitor-code.test.mjs` passes; the gallery dev server shows the
 model (rest pose) with no console errors.
 
 ### Open items

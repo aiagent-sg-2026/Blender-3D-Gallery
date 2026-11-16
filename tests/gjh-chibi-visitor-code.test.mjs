@@ -1,6 +1,6 @@
-// Contract tests for the GJH Chibi Visitor (models/gjh-chibi-visitor).
+// Contract tests for the GJH Chibi Visitor (models/gjh-chibi-visitor-code).
 // Rebuild with: Blender --background --factory-startup --python-exit-code 1 \
-//   --python models/gjh-chibi-visitor/src/build.py -- --out models/gjh-chibi-visitor --keep-going
+//   --python models/gjh-chibi-visitor-code/src/build.py -- --out models/gjh-chibi-visitor-code --keep-going
 import test from "node:test";
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
@@ -8,8 +8,8 @@ import fs from "node:fs";
 import validator from "gltf-validator";
 import { loadCatalog } from "../scripts/catalog.mjs";
 
-const dir = "models/gjh-chibi-visitor";
-const glbPath = `${dir}/exports/gjh-chibi-visitor.glb`;
+const dir = "models/gjh-chibi-visitor-code";
+const glbPath = `${dir}/exports/gjh-chibi-visitor-code.glb`;
 const bytes = fs.readFileSync(glbPath);
 const gltf = JSON.parse(bytes.subarray(20, 20 + bytes.readUInt32LE(12)).toString("utf8"));
 const report = JSON.parse(fs.readFileSync(`${dir}/qa/run-001/report.json`, "utf8"));
@@ -22,12 +22,12 @@ const DEFORM = ["root", "hips", "spine", "chest", "neck", "head",
     `thigh.${s}`, `shin.${s}`, `foot.${s}`])];
 
 test("chibi visitor is registered once and loads through the catalog rules", () => {
-  const assets = loadCatalog().collections.flatMap(c => c.assets).filter(a => a.id === "gjh-chibi-visitor");
+  const assets = loadCatalog().collections.flatMap(c => c.assets).filter(a => a.id === "gjh-chibi-visitor-code");
   assert.equal(assets.length, 1);
   const [asset] = assets;
   assert.equal(asset.file, glbPath);
   assert.equal(asset.root, undefined, "skinned meshes are scene roots, so no single root is declared");
-  assert.equal(asset.details.id, "gjh-chibi-visitor");
+  assert.equal(asset.details.id, "gjh-chibi-visitor-code");
   assert.ok(asset.triangles >= 3000 && asset.triangles <= 8000, `triangles ${asset.triangles}`);
   assert.equal(asset.animations, CLIPS.length);
   assert.ok(fs.statSync(asset.thumbnail).size > 10_000);
