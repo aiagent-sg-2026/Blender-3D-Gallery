@@ -1,0 +1,60 @@
+{
+  "result": "PASS",
+  "commands": [
+    {
+      "command": "/opt/homebrew/bin/blender --background --python generate.py",
+      "exit_code": 0,
+      "evidence": "generate.log"
+    },
+    {
+      "command": "/opt/homebrew/bin/blender --background --python inspect_sources.py",
+      "exit_code": 0,
+      "evidence": "source.log"
+    },
+    {
+      "command": "node models/round-event-platform/validate.mjs",
+      "exit_code": 0,
+      "evidence": "validation.log; khronos.json"
+    },
+    {
+      "command": "npm run validate:assets",
+      "exit_code": 0,
+      "evidence": "validate-assets.log.gz"
+    },
+    {
+      "command": "npm test",
+      "exit_code": 0,
+      "passed": 728,
+      "failed": 0,
+      "evidence": "npm-test.log.gz"
+    },
+    {
+      "command": "npm run build",
+      "exit_code": 0,
+      "evidence": "build.log.gz"
+    },
+    {
+      "command": "node models/round-event-platform/check-page.mjs",
+      "exit_code": 0,
+      "evidence": "browser.json; browser.log"
+    }
+  ],
+  "not_verified": [
+    "physical Android/iOS",
+    "WebKit",
+    "complete 17-shop mall integration",
+    "sustained performance",
+    "structural/accessibility certification",
+    "deployment"
+  ],
+  "visuals_inspected": [
+    "hero.png",
+    "front.png",
+    "side.png",
+    "3q.png",
+    "round-event-platform-page.png"
+  ],
+  "generated_test_artifact_restored": "git checkout -- models/demo-beverage-can/reports/structure-motion.json",
+  "kb_context": "NOT FOUND: no relevant memory returned",
+  "existing_models": "Unchanged; outdoor-stage was neither modified nor reused."
+}

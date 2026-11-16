@@ -1,0 +1,118 @@
+{
+ "parts": 17,
+ "triangles_total": 28144,
+ "triangles": {
+  "Cap": 2152,
+  "Vest": 7560,
+  "Shirt": 2624,
+  "Neckerchief": 1192,
+  "Shorts": 1480,
+  "Arm.L": 366,
+  "Arm.R": 366,
+  "Glove.L": 720,
+  "Glove.R": 720,
+  "Leg.L": 28,
+  "Leg.R": 28,
+  "Sock.L": 272,
+  "Sock.R": 272,
+  "Shoe.L": 2008,
+  "Shoe.R": 2008,
+  "Head": 5516,
+  "Eyes": 832
+ },
+ "primitives_named_parts": 26,
+ "materials_used": [
+  "blush",
+  "brass",
+  "brow",
+  "cap_jade",
+  "charcoal",
+  "eye_dark",
+  "ivory",
+  "jade",
+  "mouth_red",
+  "skin",
+  "sole",
+  "white"
+ ],
+ "materials": 12,
+ "primitives_if_merged_by_material": 12,
+ "overlaps": {
+  "Shorts x Leg.L": {
+   "n": 10,
+   "x": [
+    0.047,
+    0.073
+   ],
+   "y": [
+    -0.036,
+    0.054
+   ],
+   "z": [
+    0.203,
+    0.205
+   ]
+  },
+  "Shorts x Leg.R": {
+   "n": 9,
+   "x": [
+    -0.072,
+    -0.043
+   ],
+   "y": [
+    -0.031,
+    0.057
+   ],
+   "z": [
+    0.203,
+    0.205
+   ]
+  },
+  "Arm.L x Glove.L": {
+   "n": 20,
+   "x": [
+    0.124,
+    0.161
+   ],
+   "y": [
+    -0.003,
+    0.013
+   ],
+   "z": [
+    0.292,
+    0.318
+   ]
+  },
+  "Arm.R x Glove.R": {
+   "n": 20,
+   "x": [
+    -0.158,
+    -0.121
+   ],
+   "y": [
+    -0.003,
+    0.016
+   ],
+   "z": [
+    0.292,
+    0.317
+   ]
+  },
+  "Head x Neck_placeholder": {
+   "n": 135,
+   "x": [
+    -0.037,
+    0.033
+   ],
+   "y": [
+    -0.007,
+    0.052
+   ],
+   "z": [
+    0.52,
+    0.532
+   ]
+  }
+ },
+ "height_m_parts_only": 1.0
+}

@@ -1,0 +1,1837 @@
+{
+  "baselineSha256": "88ee2069c389ef8aa9d4308f11ecb0fad9805e9d6b5eba0cd913f045b83b5cbd",
+  "artifactSha256": "60650f47aac716cb5a11fa69bee58c06546aa2199a25c2bde6dcc37ce566ab6f",
+  "diagnosticSha256": "88e32e97f24ef7ecfca306900be8d6715fe2f0f7655b5b9ec34b7d687ff9d7e0",
+  "checks": {
+    "sixPresetNamesSame": true,
+    "exactPresetValuesAndAllActualMorphInfluencesSame": true,
+    "rigClipAndWatchNamesSame": true,
+    "sceneExpressionMotionContractsSame": true,
+    "actualWatchToggleIsolatedAndRestores": true,
+    "resetRestoresDefaultExpressionAndWatch": true,
+    "noConsoleOrRequestErrors": true
+  },
+  "pass": true,
+  "baseline": {
+    "artifactSha256": "88ee2069c389ef8aa9d4308f11ecb0fad9805e9d6b5eba0cd913f045b83b5cbd",
+    "previewSha256": "fb86fa3ad2697f800d1abc6e37bf3010074980138b340ef610bf718343500027",
+    "state": {
+      "presets": [
+        "default",
+        "happy",
+        "wink",
+        "surprised",
+        "thinking",
+        "excited"
+      ],
+      "presetValues": {
+        "default": {},
+        "happy": {
+          "blink_L": 1,
+          "blink_R": 1,
+          "smile": 0.7,
+          "open": 0.57,
+          "cheeks": 0.6
+        },
+        "wink": {
+          "blink_L": 1,
+          "smile": 0.36,
+          "cheeks": 0.28
+        },
+        "surprised": {
+          "browUp": 0.95,
+          "wide": 0.75,
+          "open": 0.9,
+          "round": 0.94
+        },
+        "thinking": {
+          "browTilt": 0.9,
+          "asym": 0.85
+        },
+        "excited": {
+          "blink_L": 1,
+          "blink_R": 1,
+          "smile": 1,
+          "open": 1,
+          "cheeks": 1,
+          "browUp": 0.31
+        }
+      },
+      "rigNames": [
+        "root",
+        "pelvis",
+        "spine",
+        "chest",
+        "neck",
+        "head",
+        "clavicleL",
+        "upperarmL",
+        "forearmL",
+        "handL",
+        "clavicleR",
+        "upperarmR",
+        "forearmR",
+        "handR",
+        "thighL",
+        "shinL",
+        "footL",
+        "thighR",
+        "shinR",
+        "footR"
+      ],
+      "clips": [
+        "idle",
+        "walk",
+        "run",
+        "talk",
+        "browse",
+        "sit",
+        "wave",
+        "pick_up",
+        "inspect",
+        "point",
+        "nod",
+        "cheer"
+      ],
+      "watchNames": [
+        "Wristwatch"
+      ]
+    },
+    "faces": {
+      "default": {
+        "Eyelids_and_brows": {
+          "dictionary": {
+            "blink_L": 0,
+            "wide": 1,
+            "cheeks": 2,
+            "browUp": 3,
+            "browTilt": 4,
+            "blink_R": 5
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Face": {
+          "dictionary": {
+            "open": 0,
+            "cheeks": 1,
+            "smile": 2,
+            "round": 3,
+            "asym": 4
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Hand_L": {
+          "dictionary": {
+            "grip_L": 0,
+            "point_L": 1
+          },
+          "influences": [
+            0,
+            0
+          ]
+        },
+        "Hand_R": {
+          "dictionary": {
+            "grip_R": 0,
+            "pickup_grasp_R": 1,
+            "point_R": 2,
+            "pickup_open_R": 3
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Iris_and_sclera": {
+          "dictionary": {
+            "blink_L": 0,
+            "cheeks": 1,
+            "wide": 2,
+            "blink_R": 3
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Teeth_and_tongue": {
+          "dictionary": {
+            "smile": 0,
+            "open": 1,
+            "round": 2,
+            "asym": 3
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "happy": {
+        "Eyelids_and_brows": {
+          "dictionary": {
+            "blink_L": 0,
+            "wide": 1,
+            "cheeks": 2,
+            "browUp": 3,
+            "browTilt": 4,
+            "blink_R": 5
+          },
+          "influences": [
+            1,
+            0,
+            0.6,
+            0,
+            0,
+            1
+          ]
+        },
+        "Face": {
+          "dictionary": {
+            "open": 0,
+            "cheeks": 1,
+            "smile": 2,
+            "round": 3,
+            "asym": 4
+          },
+          "influences": [
+            0.57,
+            0.6,
+            0.7,
+            0,
+            0
+          ]
+        },
+        "Hand_L": {
+          "dictionary": {
+            "grip_L": 0,
+            "point_L": 1
+          },
+          "influences": [
+            0,
+            0
+          ]
+        },
+        "Hand_R": {
+          "dictionary": {
+            "grip_R": 0,
+            "pickup_grasp_R": 1,
+            "point_R": 2,
+            "pickup_open_R": 3
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Iris_and_sclera": {
+          "dictionary": {
+            "blink_L": 0,
+            "cheeks": 1,
+            "wide": 2,
+            "blink_R": 3
+          },
+          "influences": [
+            1,
+            0.6,
+            0,
+            1
+          ]
+        },
+        "Teeth_and_tongue": {
+          "dictionary": {
+            "smile": 0,
+            "open": 1,
+            "round": 2,
+            "asym": 3
+          },
+          "influences": [
+            0.7,
+            0.57,
+            0,
+            0
+          ]
+        }
+      },
+      "wink": {
+        "Eyelids_and_brows": {
+          "dictionary": {
+            "blink_L": 0,
+            "wide": 1,
+            "cheeks": 2,
+            "browUp": 3,
+            "browTilt": 4,
+            "blink_R": 5
+          },
+          "influences": [
+            1,
+            0,
+            0.28,
+            0,
+            0,
+            0
+          ]
+        },
+        "Face": {
+          "dictionary": {
+            "open": 0,
+            "cheeks": 1,
+            "smile": 2,
+            "round": 3,
+            "asym": 4
+          },
+          "influences": [
+            0,
+            0.28,
+            0.36,
+            0,
+            0
+          ]
+        },
+        "Hand_L": {
+          "dictionary": {
+            "grip_L": 0,
+            "point_L": 1
+          },
+          "influences": [
+            0,
+            0
+          ]
+        },
+        "Hand_R": {
+          "dictionary": {
+            "grip_R": 0,
+            "pickup_grasp_R": 1,
+            "point_R": 2,
+            "pickup_open_R": 3
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Iris_and_sclera": {
+          "dictionary": {
+            "blink_L": 0,
+            "cheeks": 1,
+            "wide": 2,
+            "blink_R": 3
+          },
+          "influences": [
+            1,
+            0.28,
+            0,
+            0
+          ]
+        },
+        "Teeth_and_tongue": {
+          "dictionary": {
+            "smile": 0,
+            "open": 1,
+            "round": 2,
+            "asym": 3
+          },
+          "influences": [
+            0.36,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "surprised": {
+        "Eyelids_and_brows": {
+          "dictionary": {
+            "blink_L": 0,
+            "wide": 1,
+            "cheeks": 2,
+            "browUp": 3,
+            "browTilt": 4,
+            "blink_R": 5
+          },
+          "influences": [
+            0,
+            0.75,
+            0,
+            0.95,
+            0,
+            0
+          ]
+        },
+        "Face": {
+          "dictionary": {
+            "open": 0,
+            "cheeks": 1,
+            "smile": 2,
+            "round": 3,
+            "asym": 4
+          },
+          "influences": [
+            0.9,
+            0,
+            0,
+            0.94,
+            0
+          ]
+        },
+        "Hand_L": {
+          "dictionary": {
+            "grip_L": 0,
+            "point_L": 1
+          },
+          "influences": [
+            0,
+            0
+          ]
+        },
+        "Hand_R": {
+          "dictionary": {
+            "grip_R": 0,
+            "pickup_grasp_R": 1,
+            "point_R": 2,
+            "pickup_open_R": 3
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Iris_and_sclera": {
+          "dictionary": {
+            "blink_L": 0,
+            "cheeks": 1,
+            "wide": 2,
+            "blink_R": 3
+          },
+          "influences": [
+            0,
+            0,
+            0.75,
+            0
+          ]
+        },
+        "Teeth_and_tongue": {
+          "dictionary": {
+            "smile": 0,
+            "open": 1,
+            "round": 2,
+            "asym": 3
+          },
+          "influences": [
+            0,
+            0.9,
+            0.94,
+            0
+          ]
+        }
+      },
+      "thinking": {
+        "Eyelids_and_brows": {
+          "dictionary": {
+            "blink_L": 0,
+            "wide": 1,
+            "cheeks": 2,
+            "browUp": 3,
+            "browTilt": 4,
+            "blink_R": 5
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0,
+            0.9,
+            0
+          ]
+        },
+        "Face": {
+          "dictionary": {
+            "open": 0,
+            "cheeks": 1,
+            "smile": 2,
+            "round": 3,
+            "asym": 4
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0,
+            0.85
+          ]
+        },
+        "Hand_L": {
+          "dictionary": {
+            "grip_L": 0,
+            "point_L": 1
+          },
+          "influences": [
+            0,
+            0
+          ]
+        },
+        "Hand_R": {
+          "dictionary": {
+            "grip_R": 0,
+            "pickup_grasp_R": 1,
+            "point_R": 2,
+            "pickup_open_R": 3
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Iris_and_sclera": {
+          "dictionary": {
+            "blink_L": 0,
+            "cheeks": 1,
+            "wide": 2,
+            "blink_R": 3
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Teeth_and_tongue": {
+          "dictionary": {
+            "smile": 0,
+            "open": 1,
+            "round": 2,
+            "asym": 3
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0.85
+          ]
+        }
+      },
+      "excited": {
+        "Eyelids_and_brows": {
+          "dictionary": {
+            "blink_L": 0,
+            "wide": 1,
+            "cheeks": 2,
+            "browUp": 3,
+            "browTilt": 4,
+            "blink_R": 5
+          },
+          "influences": [
+            1,
+            0,
+            1,
+            0.31,
+            0,
+            1
+          ]
+        },
+        "Face": {
+          "dictionary": {
+            "open": 0,
+            "cheeks": 1,
+            "smile": 2,
+            "round": 3,
+            "asym": 4
+          },
+          "influences": [
+            1,
+            1,
+            1,
+            0,
+            0
+          ]
+        },
+        "Hand_L": {
+          "dictionary": {
+            "grip_L": 0,
+            "point_L": 1
+          },
+          "influences": [
+            0,
+            0
+          ]
+        },
+        "Hand_R": {
+          "dictionary": {
+            "grip_R": 0,
+            "pickup_grasp_R": 1,
+            "point_R": 2,
+            "pickup_open_R": 3
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Iris_and_sclera": {
+          "dictionary": {
+            "blink_L": 0,
+            "cheeks": 1,
+            "wide": 2,
+            "blink_R": 3
+          },
+          "influences": [
+            1,
+            1,
+            0,
+            1
+          ]
+        },
+        "Teeth_and_tongue": {
+          "dictionary": {
+            "smile": 0,
+            "open": 1,
+            "round": 2,
+            "asym": 3
+          },
+          "influences": [
+            1,
+            1,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "hidden": {
+      "watchAllHidden": true,
+      "otherVisibilityUnchanged": true
+    },
+    "shown": true,
+    "reset": {
+      "face": "default",
+      "watch": true,
+      "morphs": {
+        "Eyelids_and_brows": {
+          "dictionary": {
+            "blink_L": 0,
+            "wide": 1,
+            "cheeks": 2,
+            "browUp": 3,
+            "browTilt": 4,
+            "blink_R": 5
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Face": {
+          "dictionary": {
+            "open": 0,
+            "cheeks": 1,
+            "smile": 2,
+            "round": 3,
+            "asym": 4
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Hand_L": {
+          "dictionary": {
+            "grip_L": 0,
+            "point_L": 1
+          },
+          "influences": [
+            0,
+            0
+          ]
+        },
+        "Hand_R": {
+          "dictionary": {
+            "grip_R": 0,
+            "pickup_grasp_R": 1,
+            "point_R": 2,
+            "pickup_open_R": 3
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Iris_and_sclera": {
+          "dictionary": {
+            "blink_L": 0,
+            "cheeks": 1,
+            "wide": 2,
+            "blink_R": 3
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Teeth_and_tongue": {
+          "dictionary": {
+            "smile": 0,
+            "open": 1,
+            "round": 2,
+            "asym": 3
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "sceneContracts": {
+      "expressionPresets": {
+        "default": {},
+        "happy": {
+          "blink_L": 1,
+          "blink_R": 1,
+          "smile": 0.7,
+          "open": 0.57,
+          "cheeks": 0.6
+        },
+        "wink": {
+          "blink_L": 1,
+          "smile": 0.36,
+          "cheeks": 0.28
+        },
+        "surprised": {
+          "browUp": 0.95,
+          "wide": 0.75,
+          "open": 0.9,
+          "round": 0.94
+        },
+        "thinking": {
+          "browTilt": 0.9,
+          "asym": 0.85
+        },
+        "excited": {
+          "blink_L": 1,
+          "blink_R": 1,
+          "smile": 1,
+          "open": 1,
+          "cheeks": 1,
+          "browUp": 0.31
+        }
+      },
+      "clipInfo": {
+        "idle": {
+          "frames": 90,
+          "loop": true,
+          "reviewFrame": 28,
+          "fps": 30
+        },
+        "walk": {
+          "frames": 32,
+          "loop": true,
+          "reviewFrame": 8,
+          "fps": 30,
+          "speedMps": 0.24715909090909088,
+          "stanceFraction": 0.55
+        },
+        "run": {
+          "frames": 22,
+          "loop": true,
+          "reviewFrame": 6,
+          "fps": 30,
+          "speedMps": 0.6178107606679036,
+          "stanceFraction": 0.49
+        },
+        "talk": {
+          "frames": 60,
+          "loop": true,
+          "reviewFrame": 23,
+          "fps": 30
+        },
+        "browse": {
+          "frames": 96,
+          "loop": true,
+          "reviewFrame": 53,
+          "fps": 30
+        },
+        "sit": {
+          "frames": 42,
+          "loop": false,
+          "reviewFrame": 42,
+          "fps": 30,
+          "seatHeightM": 0.164,
+          "seatCenterZ": -0.127,
+          "seatDepthM": 0.2
+        },
+        "wave": {
+          "frames": 60,
+          "loop": false,
+          "reviewFrame": 36,
+          "fps": 30
+        },
+        "pick_up": {
+          "frames": 64,
+          "loop": false,
+          "reviewFrame": 36,
+          "fps": 30,
+          "contactFrame": 36,
+          "contactSocket": "Socket_Palm_R",
+          "testProductSizeM": [
+            0.043,
+            0.049,
+            0.043
+          ],
+          "target": [
+            -0.149,
+            0.409,
+            0.218
+          ]
+        },
+        "inspect": {
+          "frames": 66,
+          "loop": false,
+          "reviewFrame": 37,
+          "fps": 30
+        },
+        "point": {
+          "frames": 45,
+          "loop": false,
+          "reviewFrame": 25,
+          "fps": 30
+        },
+        "nod": {
+          "frames": 36,
+          "loop": false,
+          "reviewFrame": 14,
+          "fps": 30
+        },
+        "cheer": {
+          "frames": 56,
+          "loop": false,
+          "reviewFrame": 32,
+          "fps": 30
+        }
+      },
+      "fps": 30,
+      "thinkingPose": {
+        "chest": [
+          0.017452405765652657,
+          0,
+          0,
+          0.9998477101325989
+        ],
+        "neck": [
+          0.017452405765652657,
+          0,
+          0,
+          0.9998477101325989
+        ],
+        "head": [
+          0.045072171837091446,
+          -0.0438954159617424,
+          -0.034484539180994034,
+          0.997422993183136
+        ],
+        "clavicle.L": [
+          0.017452405765652657,
+          0,
+          0,
+          0.9998477101325989
+        ],
+        "upperarm.L": [
+          0.017452405765652657,
+          0,
+          0,
+          0.9998477101325989
+        ],
+        "forearm.L": [
+          0.017452405765652657,
+          0,
+          0,
+          0.9998477101325989
+        ],
+        "hand.L": [
+          0.017452405765652657,
+          0,
+          0,
+          0.9998477101325989
+        ],
+        "clavicle.R": [
+          0.017452405765652657,
+          0,
+          0,
+          0.9998477101325989
+        ],
+        "upperarm.R": [
+          -0.44957858324050903,
+          0.1871122419834137,
+          -0.20841218531131744,
+          0.8481936454772949
+        ],
+        "forearm.R": [
+          -0.7797567248344421,
+          0.5578374266624451,
+          0.03888249397277832,
+          0.2815760374069214
+        ],
+        "hand.R": [
+          -0.8230096697807312,
+          0.16222600638866425,
+          0.48556461930274963,
+          0.2460993081331253
+        ]
+      }
+    }
+  },
+  "candidate": {
+    "artifactSha256": "60650f47aac716cb5a11fa69bee58c06546aa2199a25c2bde6dcc37ce566ab6f",
+    "previewSha256": "9190012cc9b84c0ad226af9a9f7b2c913d9b060a7402e7c92fa5b0c13ca86133",
+    "state": {
+      "presets": [
+        "default",
+        "happy",
+        "wink",
+        "surprised",
+        "thinking",
+        "excited"
+      ],
+      "presetValues": {
+        "default": {},
+        "happy": {
+          "blink_L": 1,
+          "blink_R": 1,
+          "smile": 0.7,
+          "open": 0.57,
+          "cheeks": 0.6
+        },
+        "wink": {
+          "blink_L": 1,
+          "smile": 0.36,
+          "cheeks": 0.28
+        },
+        "surprised": {
+          "browUp": 0.95,
+          "wide": 0.75,
+          "open": 0.9,
+          "round": 0.94
+        },
+        "thinking": {
+          "browTilt": 0.9,
+          "asym": 0.85
+        },
+        "excited": {
+          "blink_L": 1,
+          "blink_R": 1,
+          "smile": 1,
+          "open": 1,
+          "cheeks": 1,
+          "browUp": 0.31
+        }
+      },
+      "rigNames": [
+        "root",
+        "pelvis",
+        "spine",
+        "chest",
+        "neck",
+        "head",
+        "clavicleL",
+        "upperarmL",
+        "forearmL",
+        "handL",
+        "clavicleR",
+        "upperarmR",
+        "forearmR",
+        "handR",
+        "thighL",
+        "shinL",
+        "footL",
+        "thighR",
+        "shinR",
+        "footR"
+      ],
+      "clips": [
+        "idle",
+        "walk",
+        "run",
+        "talk",
+        "browse",
+        "sit",
+        "wave",
+        "pick_up",
+        "inspect",
+        "point",
+        "nod",
+        "cheer"
+      ],
+      "watchNames": [
+        "Wristwatch"
+      ]
+    },
+    "faces": {
+      "default": {
+        "Eyelids_and_brows": {
+          "dictionary": {
+            "blink_L": 0,
+            "wide": 1,
+            "cheeks": 2,
+            "browUp": 3,
+            "browTilt": 4,
+            "blink_R": 5
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Face": {
+          "dictionary": {
+            "open": 0,
+            "cheeks": 1,
+            "smile": 2,
+            "round": 3,
+            "asym": 4
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Hand_L": {
+          "dictionary": {
+            "grip_L": 0,
+            "point_L": 1
+          },
+          "influences": [
+            0,
+            0
+          ]
+        },
+        "Hand_R": {
+          "dictionary": {
+            "grip_R": 0,
+            "pickup_grasp_R": 1,
+            "point_R": 2,
+            "pickup_open_R": 3
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Iris_and_sclera": {
+          "dictionary": {
+            "blink_L": 0,
+            "cheeks": 1,
+            "wide": 2,
+            "blink_R": 3
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Teeth_and_tongue": {
+          "dictionary": {
+            "smile": 0,
+            "open": 1,
+            "round": 2,
+            "asym": 3
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "happy": {
+        "Eyelids_and_brows": {
+          "dictionary": {
+            "blink_L": 0,
+            "wide": 1,
+            "cheeks": 2,
+            "browUp": 3,
+            "browTilt": 4,
+            "blink_R": 5
+          },
+          "influences": [
+            1,
+            0,
+            0.6,
+            0,
+            0,
+            1
+          ]
+        },
+        "Face": {
+          "dictionary": {
+            "open": 0,
+            "cheeks": 1,
+            "smile": 2,
+            "round": 3,
+            "asym": 4
+          },
+          "influences": [
+            0.57,
+            0.6,
+            0.7,
+            0,
+            0
+          ]
+        },
+        "Hand_L": {
+          "dictionary": {
+            "grip_L": 0,
+            "point_L": 1
+          },
+          "influences": [
+            0,
+            0
+          ]
+        },
+        "Hand_R": {
+          "dictionary": {
+            "grip_R": 0,
+            "pickup_grasp_R": 1,
+            "point_R": 2,
+            "pickup_open_R": 3
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Iris_and_sclera": {
+          "dictionary": {
+            "blink_L": 0,
+            "cheeks": 1,
+            "wide": 2,
+            "blink_R": 3
+          },
+          "influences": [
+            1,
+            0.6,
+            0,
+            1
+          ]
+        },
+        "Teeth_and_tongue": {
+          "dictionary": {
+            "smile": 0,
+            "open": 1,
+            "round": 2,
+            "asym": 3
+          },
+          "influences": [
+            0.7,
+            0.57,
+            0,
+            0
+          ]
+        }
+      },
+      "wink": {
+        "Eyelids_and_brows": {
+          "dictionary": {
+            "blink_L": 0,
+            "wide": 1,
+            "cheeks": 2,
+            "browUp": 3,
+            "browTilt": 4,
+            "blink_R": 5
+          },
+          "influences": [
+            1,
+            0,
+            0.28,
+            0,
+            0,
+            0
+          ]
+        },
+        "Face": {
+          "dictionary": {
+            "open": 0,
+            "cheeks": 1,
+            "smile": 2,
+            "round": 3,
+            "asym": 4
+          },
+          "influences": [
+            0,
+            0.28,
+            0.36,
+            0,
+            0
+          ]
+        },
+        "Hand_L": {
+          "dictionary": {
+            "grip_L": 0,
+            "point_L": 1
+          },
+          "influences": [
+            0,
+            0
+          ]
+        },
+        "Hand_R": {
+          "dictionary": {
+            "grip_R": 0,
+            "pickup_grasp_R": 1,
+            "point_R": 2,
+            "pickup_open_R": 3
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Iris_and_sclera": {
+          "dictionary": {
+            "blink_L": 0,
+            "cheeks": 1,
+            "wide": 2,
+            "blink_R": 3
+          },
+          "influences": [
+            1,
+            0.28,
+            0,
+            0
+          ]
+        },
+        "Teeth_and_tongue": {
+          "dictionary": {
+            "smile": 0,
+            "open": 1,
+            "round": 2,
+            "asym": 3
+          },
+          "influences": [
+            0.36,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "surprised": {
+        "Eyelids_and_brows": {
+          "dictionary": {
+            "blink_L": 0,
+            "wide": 1,
+            "cheeks": 2,
+            "browUp": 3,
+            "browTilt": 4,
+            "blink_R": 5
+          },
+          "influences": [
+            0,
+            0.75,
+            0,
+            0.95,
+            0,
+            0
+          ]
+        },
+        "Face": {
+          "dictionary": {
+            "open": 0,
+            "cheeks": 1,
+            "smile": 2,
+            "round": 3,
+            "asym": 4
+          },
+          "influences": [
+            0.9,
+            0,
+            0,
+            0.94,
+            0
+          ]
+        },
+        "Hand_L": {
+          "dictionary": {
+            "grip_L": 0,
+            "point_L": 1
+          },
+          "influences": [
+            0,
+            0
+          ]
+        },
+        "Hand_R": {
+          "dictionary": {
+            "grip_R": 0,
+            "pickup_grasp_R": 1,
+            "point_R": 2,
+            "pickup_open_R": 3
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Iris_and_sclera": {
+          "dictionary": {
+            "blink_L": 0,
+            "cheeks": 1,
+            "wide": 2,
+            "blink_R": 3
+          },
+          "influences": [
+            0,
+            0,
+            0.75,
+            0
+          ]
+        },
+        "Teeth_and_tongue": {
+          "dictionary": {
+            "smile": 0,
+            "open": 1,
+            "round": 2,
+            "asym": 3
+          },
+          "influences": [
+            0,
+            0.9,
+            0.94,
+            0
+          ]
+        }
+      },
+      "thinking": {
+        "Eyelids_and_brows": {
+          "dictionary": {
+            "blink_L": 0,
+            "wide": 1,
+            "cheeks": 2,
+            "browUp": 3,
+            "browTilt": 4,
+            "blink_R": 5
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0,
+            0.9,
+            0
+          ]
+        },
+        "Face": {
+          "dictionary": {
+            "open": 0,
+            "cheeks": 1,
+            "smile": 2,
+            "round": 3,
+            "asym": 4
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0,
+            0.85
+          ]
+        },
+        "Hand_L": {
+          "dictionary": {
+            "grip_L": 0,
+            "point_L": 1
+          },
+          "influences": [
+            0,
+            0
+          ]
+        },
+        "Hand_R": {
+          "dictionary": {
+            "grip_R": 0,
+            "pickup_grasp_R": 1,
+            "point_R": 2,
+            "pickup_open_R": 3
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Iris_and_sclera": {
+          "dictionary": {
+            "blink_L": 0,
+            "cheeks": 1,
+            "wide": 2,
+            "blink_R": 3
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Teeth_and_tongue": {
+          "dictionary": {
+            "smile": 0,
+            "open": 1,
+            "round": 2,
+            "asym": 3
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0.85
+          ]
+        }
+      },
+      "excited": {
+        "Eyelids_and_brows": {
+          "dictionary": {
+            "blink_L": 0,
+            "wide": 1,
+            "cheeks": 2,
+            "browUp": 3,
+            "browTilt": 4,
+            "blink_R": 5
+          },
+          "influences": [
+            1,
+            0,
+            1,
+            0.31,
+            0,
+            1
+          ]
+        },
+        "Face": {
+          "dictionary": {
+            "open": 0,
+            "cheeks": 1,
+            "smile": 2,
+            "round": 3,
+            "asym": 4
+          },
+          "influences": [
+            1,
+            1,
+            1,
+            0,
+            0
+          ]
+        },
+        "Hand_L": {
+          "dictionary": {
+            "grip_L": 0,
+            "point_L": 1
+          },
+          "influences": [
+            0,
+            0
+          ]
+        },
+        "Hand_R": {
+          "dictionary": {
+            "grip_R": 0,
+            "pickup_grasp_R": 1,
+            "point_R": 2,
+            "pickup_open_R": 3
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Iris_and_sclera": {
+          "dictionary": {
+            "blink_L": 0,
+            "cheeks": 1,
+            "wide": 2,
+            "blink_R": 3
+          },
+          "influences": [
+            1,
+            1,
+            0,
+            1
+          ]
+        },
+        "Teeth_and_tongue": {
+          "dictionary": {
+            "smile": 0,
+            "open": 1,
+            "round": 2,
+            "asym": 3
+          },
+          "influences": [
+            1,
+            1,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "hidden": {
+      "watchAllHidden": true,
+      "otherVisibilityUnchanged": true
+    },
+    "shown": true,
+    "reset": {
+      "face": "default",
+      "watch": true,
+      "morphs": {
+        "Eyelids_and_brows": {
+          "dictionary": {
+            "blink_L": 0,
+            "wide": 1,
+            "cheeks": 2,
+            "browUp": 3,
+            "browTilt": 4,
+            "blink_R": 5
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Face": {
+          "dictionary": {
+            "open": 0,
+            "cheeks": 1,
+            "smile": 2,
+            "round": 3,
+            "asym": 4
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Hand_L": {
+          "dictionary": {
+            "grip_L": 0,
+            "point_L": 1
+          },
+          "influences": [
+            0,
+            0
+          ]
+        },
+        "Hand_R": {
+          "dictionary": {
+            "grip_R": 0,
+            "pickup_grasp_R": 1,
+            "point_R": 2,
+            "pickup_open_R": 3
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Iris_and_sclera": {
+          "dictionary": {
+            "blink_L": 0,
+            "cheeks": 1,
+            "wide": 2,
+            "blink_R": 3
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "Teeth_and_tongue": {
+          "dictionary": {
+            "smile": 0,
+            "open": 1,
+            "round": 2,
+            "asym": 3
+          },
+          "influences": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "sceneContracts": {
+      "expressionPresets": {
+        "default": {},
+        "happy": {
+          "blink_L": 1,
+          "blink_R": 1,
+          "smile": 0.7,
+          "open": 0.57,
+          "cheeks": 0.6
+        },
+        "wink": {
+          "blink_L": 1,
+          "smile": 0.36,
+          "cheeks": 0.28
+        },
+        "surprised": {
+          "browUp": 0.95,
+          "wide": 0.75,
+          "open": 0.9,
+          "round": 0.94
+        },
+        "thinking": {
+          "browTilt": 0.9,
+          "asym": 0.85
+        },
+        "excited": {
+          "blink_L": 1,
+          "blink_R": 1,
+          "smile": 1,
+          "open": 1,
+          "cheeks": 1,
+          "browUp": 0.31
+        }
+      },
+      "clipInfo": {
+        "idle": {
+          "frames": 90,
+          "loop": true,
+          "reviewFrame": 28,
+          "fps": 30
+        },
+        "walk": {
+          "frames": 32,
+          "loop": true,
+          "reviewFrame": 8,
+          "fps": 30,
+          "speedMps": 0.24715909090909088,
+          "stanceFraction": 0.55
+        },
+        "run": {
+          "frames": 22,
+          "loop": true,
+          "reviewFrame": 6,
+          "fps": 30,
+          "speedMps": 0.6178107606679036,
+          "stanceFraction": 0.49
+        },
+        "talk": {
+          "frames": 60,
+          "loop": true,
+          "reviewFrame": 23,
+          "fps": 30
+        },
+        "browse": {
+          "frames": 96,
+          "loop": true,
+          "reviewFrame": 53,
+          "fps": 30
+        },
+        "sit": {
+          "frames": 42,
+          "loop": false,
+          "reviewFrame": 42,
+          "fps": 30,
+          "seatHeightM": 0.164,
+          "seatCenterZ": -0.127,
+          "seatDepthM": 0.2
+        },
+        "wave": {
+          "frames": 60,
+          "loop": false,
+          "reviewFrame": 36,
+          "fps": 30
+        },
+        "pick_up": {
+          "frames": 64,
+          "loop": false,
+          "reviewFrame": 36,
+          "fps": 30,
+          "contactFrame": 36,
+          "contactSocket": "Socket_Palm_R",
+          "testProductSizeM": [
+            0.043,
+            0.049,
+            0.043
+          ],
+          "target": [
+            -0.149,
+            0.409,
+            0.218
+          ]
+        },
+        "inspect": {
+          "frames": 66,
+          "loop": false,
+          "reviewFrame": 37,
+          "fps": 30
+        },
+        "point": {
+          "frames": 45,
+          "loop": false,
+          "reviewFrame": 25,
+          "fps": 30
+        },
+        "nod": {
+          "frames": 36,
+          "loop": false,
+          "reviewFrame": 14,
+          "fps": 30
+        },
+        "cheer": {
+          "frames": 56,
+          "loop": false,
+          "reviewFrame": 32,
+          "fps": 30
+        }
+      },
+      "fps": 30,
+      "thinkingPose": {
+        "chest": [
+          0.017452405765652657,
+          0,
+          0,
+          0.9998477101325989
+        ],
+        "neck": [
+          0.017452405765652657,
+          0,
+          0,
+          0.9998477101325989
+        ],
+        "head": [
+          0.045072171837091446,
+          -0.0438954159617424,
+          -0.034484539180994034,
+          0.997422993183136
+        ],
+        "clavicle.L": [
+          0.017452405765652657,
+          0,
+          0,
+          0.9998477101325989
+        ],
+        "upperarm.L": [
+          0.017452405765652657,
+          0,
+          0,
+          0.9998477101325989
+        ],
+        "forearm.L": [
+          0.017452405765652657,
+          0,
+          0,
+          0.9998477101325989
+        ],
+        "hand.L": [
+          0.017452405765652657,
+          0,
+          0,
+          0.9998477101325989
+        ],
+        "clavicle.R": [
+          0.017452405765652657,
+          0,
+          0,
+          0.9998477101325989
+        ],
+        "upperarm.R": [
+          -0.44957858324050903,
+          0.1871122419834137,
+          -0.20841218531131744,
+          0.8481936454772949
+        ],
+        "forearm.R": [
+          -0.7797567248344421,
+          0.5578374266624451,
+          0.03888249397277832,
+          0.2815760374069214
+        ],
+        "hand.R": [
+          -0.8230096697807312,
+          0.16222600638866425,
+          0.48556461930274963,
+          0.2460993081331253
+        ]
+      }
+    }
+  },
+  "errors": [],
+  "scope": "Real original-client expression/watch controls and exact scene contract regression. No exhaustive animation playback/contact or reference-likeness claim."
+}

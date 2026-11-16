@@ -1,0 +1,80 @@
+{
+  "result": "PASS",
+  "id": "tv-wall-mounted",
+  "status": "draft; local gates passed, manager review pending",
+  "glb_sha256": "1124f947f7cfebd5546282cb27195100bbbde969fb7b3606cee33d2d1839755b",
+  "commands": [
+    {
+      "command": "/opt/homebrew/bin/blender --background --python-exit-code 1 --python generate.py",
+      "exit_code": 0
+    },
+    {
+      "command": "node models/tv-wall-mounted/validate.mjs",
+      "exit_code": 0
+    },
+    {
+      "command": "/opt/homebrew/bin/blender --background --python-exit-code 1 --python inspect_sources.py",
+      "exit_code": 0
+    },
+    {
+      "command": "node models/tv-wall-mounted/verify_source_edit.mjs",
+      "exit_code": 0
+    },
+    {
+      "command": "npm run validate:assets",
+      "exit_code": 0
+    },
+    {
+      "command": "npm test",
+      "exit_code": 0
+    },
+    {
+      "command": "npm run build",
+      "exit_code": 0
+    },
+    {
+      "command": "node models/tv-wall-mounted/verify_page.mjs",
+      "exit_code": 0
+    }
+  ],
+  "unit_tests": {
+    "pass": 728,
+    "fail": 0,
+    "skipped": 0
+  },
+  "khronos": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "reproducibility": "PASS: byte-identical independent fresh GLB rebuild",
+  "preview_views": [
+    "hero",
+    "front",
+    "side",
+    "3q",
+    "rear"
+  ],
+  "preview_render_scope": "Final saved source rendered through generate.py render_views; no studio nodes exported",
+  "browser": {
+    "result": "PASS",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "screenshot": "/Users/admin/Documents/MallQueue/reports/tv-wall-mounted-page.png",
+    "screenshot_sha256": "b3ee7d700326ac467a5f7eed534a12ea81ff16e2cd76ddce5272d6fafb865fcb",
+    "flow": "Open model URL, load actual GLB, orbit, reset, capture page",
+    "errors": []
+  },
+  "build_warning": "Vite reports existing application chunks larger than 500 kB; build exit 0",
+  "existing_models_modified": false,
+  "gallery_ui_changed": false,
+  "generated_test_artifacts": "Restored models/demo-beverage-can/reports/structure-motion.json using git checkout",
+  "not_verified": [
+    "Physical Android/iOS",
+    "WebKit",
+    "Full 17-shop mall draw calls, frame rate and assembly",
+    "Wall installation, VESA fit to real hardware, electrical and load certification"
+  ],
+  "publication": "Local commit only; no push or deployment"
+}

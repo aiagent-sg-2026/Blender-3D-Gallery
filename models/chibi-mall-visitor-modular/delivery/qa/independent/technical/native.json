@@ -1,0 +1,362 @@
+{
+  "masterOpened": "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47/input/visitor.blend",
+  "masterSha256": "44d9f04a5c46918fcd81b845e432973bd559e0181756fb81d8a49dde94e4cbdd",
+  "artifactSha256": "60650f47aac716cb5a11fa69bee58c06546aa2199a25c2bde6dcc37ce566ab6f",
+  "blender": "5.1.2",
+  "checks": {
+    "runtimeSelectionNamesMatchGlb": true,
+    "hairNativeGeometryValid": true,
+    "skinFiniteNormalizedMax4": true,
+    "sourceOnlyHiddenExcluded": true,
+    "namedPiecesAndVertexGroupsCorrespond": true
+  },
+  "pass": true,
+  "hair": {
+    "Swept_hair": {
+      "triangles": 2802,
+      "requiresRepair": false,
+      "zeroAreaTriangles": 0,
+      "finiteVertices": true,
+      "faceAttribute": "Sculpt piece",
+      "lockNames": [
+        "Recessed foundation",
+        "Occipital sweep",
+        "Upper back right",
+        "Back crown",
+        "Left Lower cascade",
+        "Left Ear sweep",
+        "Left Upper cascade",
+        "Left Middle cascade",
+        "Right Lower cascade",
+        "Right Ear sweep",
+        "Right Upper cascade",
+        "Right Middle cascade",
+        "Forehead sweep",
+        "Long outer sweep",
+        "Falling fringe",
+        "Central curl"
+      ],
+      "trianglesByPiece": {
+        "0": 1390,
+        "1": 50,
+        "2": 50,
+        "3": 112,
+        "4": 126,
+        "5": 140,
+        "6": 112,
+        "7": 50,
+        "8": 126,
+        "9": 140,
+        "10": 112,
+        "11": 50,
+        "12": 60,
+        "13": 140,
+        "14": 84,
+        "15": 60
+      },
+      "trianglesByName": {
+        "Recessed foundation": 1390,
+        "Occipital sweep": 50,
+        "Upper back right": 50,
+        "Back crown": 112,
+        "Left Lower cascade": 126,
+        "Left Ear sweep": 140,
+        "Left Upper cascade": 112,
+        "Left Middle cascade": 50,
+        "Right Lower cascade": 126,
+        "Right Ear sweep": 140,
+        "Right Upper cascade": 112,
+        "Right Middle cascade": 50,
+        "Forehead sweep": 60,
+        "Long outer sweep": 140,
+        "Falling fringe": 84,
+        "Central curl": 60
+      },
+      "nativeGroupNames": [
+        "Lock | Back crown",
+        "Lock | Central curl",
+        "Lock | Falling fringe",
+        "Lock | Forehead sweep",
+        "Lock | Left Ear sweep",
+        "Lock | Left Lower cascade",
+        "Lock | Left Middle cascade",
+        "Lock | Left Upper cascade",
+        "Lock | Long outer sweep",
+        "Lock | Occipital sweep",
+        "Lock | Recessed foundation",
+        "Lock | Right Ear sweep",
+        "Lock | Right Lower cascade",
+        "Lock | Right Middle cascade",
+        "Lock | Right Upper cascade",
+        "Lock | Upper back right",
+        "head"
+      ],
+      "namedVertexGroupMapping": {
+        "Recessed foundation": "Lock | Recessed foundation",
+        "Occipital sweep": "Lock | Occipital sweep",
+        "Upper back right": "Lock | Upper back right",
+        "Back crown": "Lock | Back crown",
+        "Left Lower cascade": "Lock | Left Lower cascade",
+        "Left Ear sweep": "Lock | Left Ear sweep",
+        "Left Upper cascade": "Lock | Left Upper cascade",
+        "Left Middle cascade": "Lock | Left Middle cascade",
+        "Right Lower cascade": "Lock | Right Lower cascade",
+        "Right Ear sweep": "Lock | Right Ear sweep",
+        "Right Upper cascade": "Lock | Right Upper cascade",
+        "Right Middle cascade": "Lock | Right Middle cascade",
+        "Forehead sweep": "Lock | Forehead sweep",
+        "Long outer sweep": "Lock | Long outer sweep",
+        "Falling fringe": "Lock | Falling fringe",
+        "Central curl": "Lock | Central curl"
+      },
+      "namedVertexGroupsPresent": {
+        "Recessed foundation": true,
+        "Occipital sweep": true,
+        "Upper back right": true,
+        "Back crown": true,
+        "Left Lower cascade": true,
+        "Left Ear sweep": true,
+        "Left Upper cascade": true,
+        "Left Middle cascade": true,
+        "Right Lower cascade": true,
+        "Right Ear sweep": true,
+        "Right Upper cascade": true,
+        "Right Middle cascade": true,
+        "Forehead sweep": true,
+        "Long outer sweep": true,
+        "Falling fringe": true,
+        "Central curl": true
+      },
+      "namedGroupMembershipMatchesPiece": {
+        "Recessed foundation": {
+          "group": "Lock | Recessed foundation",
+          "expectedPieceVertices": 697,
+          "groupVertices": 697,
+          "matches": true
+        },
+        "Occipital sweep": {
+          "group": "Lock | Occipital sweep",
+          "expectedPieceVertices": 27,
+          "groupVertices": 27,
+          "matches": true
+        },
+        "Upper back right": {
+          "group": "Lock | Upper back right",
+          "expectedPieceVertices": 27,
+          "groupVertices": 27,
+          "matches": true
+        },
+        "Back crown": {
+          "group": "Lock | Back crown",
+          "expectedPieceVertices": 58,
+          "groupVertices": 58,
+          "matches": true
+        },
+        "Left Lower cascade": {
+          "group": "Lock | Left Lower cascade",
+          "expectedPieceVertices": 65,
+          "groupVertices": 65,
+          "matches": true
+        },
+        "Left Ear sweep": {
+          "group": "Lock | Left Ear sweep",
+          "expectedPieceVertices": 72,
+          "groupVertices": 72,
+          "matches": true
+        },
+        "Left Upper cascade": {
+          "group": "Lock | Left Upper cascade",
+          "expectedPieceVertices": 58,
+          "groupVertices": 58,
+          "matches": true
+        },
+        "Left Middle cascade": {
+          "group": "Lock | Left Middle cascade",
+          "expectedPieceVertices": 27,
+          "groupVertices": 27,
+          "matches": true
+        },
+        "Right Lower cascade": {
+          "group": "Lock | Right Lower cascade",
+          "expectedPieceVertices": 65,
+          "groupVertices": 65,
+          "matches": true
+        },
+        "Right Ear sweep": {
+          "group": "Lock | Right Ear sweep",
+          "expectedPieceVertices": 72,
+          "groupVertices": 72,
+          "matches": true
+        },
+        "Right Upper cascade": {
+          "group": "Lock | Right Upper cascade",
+          "expectedPieceVertices": 58,
+          "groupVertices": 58,
+          "matches": true
+        },
+        "Right Middle cascade": {
+          "group": "Lock | Right Middle cascade",
+          "expectedPieceVertices": 27,
+          "groupVertices": 27,
+          "matches": true
+        },
+        "Forehead sweep": {
+          "group": "Lock | Forehead sweep",
+          "expectedPieceVertices": 32,
+          "groupVertices": 32,
+          "matches": true
+        },
+        "Long outer sweep": {
+          "group": "Lock | Long outer sweep",
+          "expectedPieceVertices": 72,
+          "groupVertices": 72,
+          "matches": true
+        },
+        "Falling fringe": {
+          "group": "Lock | Falling fringe",
+          "expectedPieceVertices": 44,
+          "groupVertices": 44,
+          "matches": true
+        },
+        "Central curl": {
+          "group": "Lock | Central curl",
+          "expectedPieceVertices": 32,
+          "groupVertices": 32,
+          "matches": true
+        }
+      },
+      "runtimeComponentTriangleCountsByNameMatch": {
+        "Recessed foundation": true,
+        "Occipital sweep": true,
+        "Upper back right": true,
+        "Back crown": true,
+        "Left Lower cascade": true,
+        "Left Ear sweep": true,
+        "Left Upper cascade": true,
+        "Left Middle cascade": true,
+        "Right Lower cascade": true,
+        "Right Ear sweep": true,
+        "Right Upper cascade": true,
+        "Right Middle cascade": true,
+        "Forehead sweep": true,
+        "Long outer sweep": true,
+        "Falling fringe": true,
+        "Central curl": true
+      }
+    }
+  },
+  "skin": {
+    "Face": {
+      "maxInfluences": 1,
+      "unweighted": 0,
+      "maxNormalizationError": 0.0,
+      "finiteNonnegative": true
+    },
+    "Iris_and_sclera": {
+      "maxInfluences": 1,
+      "unweighted": 0,
+      "maxNormalizationError": 0.0,
+      "finiteNonnegative": true
+    },
+    "Eyelids_and_brows": {
+      "maxInfluences": 1,
+      "unweighted": 0,
+      "maxNormalizationError": 0.0,
+      "finiteNonnegative": true
+    },
+    "Teeth_and_tongue": {
+      "maxInfluences": 1,
+      "unweighted": 0,
+      "maxNormalizationError": 0.0,
+      "finiteNonnegative": true
+    },
+    "Swept_hair": {
+      "maxInfluences": 1,
+      "unweighted": 0,
+      "maxNormalizationError": 0.0,
+      "finiteNonnegative": true
+    },
+    "Arms_neck": {
+      "maxInfluences": 2,
+      "unweighted": 0,
+      "maxNormalizationError": 1.4901161193847656e-08,
+      "finiteNonnegative": true
+    },
+    "Hand_L": {
+      "maxInfluences": 2,
+      "unweighted": 0,
+      "maxNormalizationError": 2.9802322387695312e-08,
+      "finiteNonnegative": true
+    },
+    "Hand_R": {
+      "maxInfluences": 2,
+      "unweighted": 0,
+      "maxNormalizationError": 2.9802322387695312e-08,
+      "finiteNonnegative": true
+    },
+    "Crewneck_shirt": {
+      "maxInfluences": 4,
+      "unweighted": 0,
+      "maxNormalizationError": 1.3131648302078247e-07,
+      "finiteNonnegative": true
+    },
+    "Straight_denim": {
+      "maxInfluences": 3,
+      "unweighted": 0,
+      "maxNormalizationError": 1.1920928955078125e-07,
+      "finiteNonnegative": true
+    },
+    "Sneaker_L": {
+      "maxInfluences": 1,
+      "unweighted": 0,
+      "maxNormalizationError": 0.0,
+      "finiteNonnegative": true
+    },
+    "Lacing_L": {
+      "maxInfluences": 1,
+      "unweighted": 0,
+      "maxNormalizationError": 0.0,
+      "finiteNonnegative": true
+    },
+    "Sneaker_R": {
+      "maxInfluences": 1,
+      "unweighted": 0,
+      "maxNormalizationError": 0.0,
+      "finiteNonnegative": true
+    },
+    "Lacing_R": {
+      "maxInfluences": 1,
+      "unweighted": 0,
+      "maxNormalizationError": 0.0,
+      "finiteNonnegative": true
+    },
+    "Daypack_shell": {
+      "maxInfluences": 1,
+      "unweighted": 0,
+      "maxNormalizationError": 0.0,
+      "finiteNonnegative": true
+    },
+    "Shoulder_straps": {
+      "maxInfluences": 2,
+      "unweighted": 0,
+      "maxNormalizationError": 1.4901161193847656e-07,
+      "finiteNonnegative": true
+    },
+    "Wristwatch": {
+      "maxInfluences": 1,
+      "unweighted": 0,
+      "maxNormalizationError": 0.0,
+      "finiteNonnegative": true
+    }
+  },
+  "sourceOnly": [
+    {
+      "name": "Hair high resolution source",
+      "hiddenViewport": true,
+      "hiddenRender": true,
+      "runtime": false,
+      "exported": false
+    }
+  ],
+  "scope": "Read-only native selection/labels/weights/integrity. Named piece count match complements, not replaces, optional actual source re-export byte comparison."
+}

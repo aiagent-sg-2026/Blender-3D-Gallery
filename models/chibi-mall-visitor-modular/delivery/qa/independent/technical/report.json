@@ -1,0 +1,334 @@
+{
+  "generatedUtc": "2026-11-16T12:58:38.767429+00:00",
+  "state": "REVIEW_PENDING",
+  "technicalState": "PASS_SCOPED_LIGHTWEIGHT_LOOP",
+  "visualState": "NOT_REVIEWED",
+  "formalBuildState": "NOT_RUN_IN_THIS_AUDIT",
+  "ownerState": "NOT_REQUESTED_HERE",
+  "reviewer": "/root/visual_skill_trial; independent non-author technical reviewer",
+  "scope": "Fresh exact r20 candidate lightweight technical loop, source/export/resource binding and neutral review sheets. Does not sign separate formal build or reference likeness.",
+  "artifactSha256": "60650f47aac716cb5a11fa69bee58c06546aa2199a25c2bde6dcc37ce566ab6f",
+  "inputs": {
+    "visitor.glb": {
+      "original": "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/r20/visitor.glb",
+      "sha256": "60650f47aac716cb5a11fa69bee58c06546aa2199a25c2bde6dcc37ce566ab6f",
+      "bytes": 1892868
+    },
+    "preview.html": {
+      "original": "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/r20/preview.html",
+      "sha256": "9190012cc9b84c0ad226af9a9f7b2c913d9b060a7402e7c92fa5b0c13ca86133",
+      "bytes": 3348921
+    },
+    "visitor.blend": {
+      "original": "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/r20/visitor.blend",
+      "sha256": "44d9f04a5c46918fcd81b845e432973bd559e0181756fb81d8a49dde94e4cbdd",
+      "bytes": 31058945
+    }
+  },
+  "sourceFiles": {
+    "accessories.py": "d43ca176ee785c2a9d5fece08d5c40eda2e8526ca748a9c1e0161eedd54fa842",
+    "atlas.py": "e33cdc24535d148ce910f9a8c84472c3cbb11fa0c789ae60bad194cdc7c59853",
+    "blockout.py": "3c0ec15439287e904a2c4c808f23e17bfa814527319c4d11cf0508c277be09e7",
+    "config.py": "08eef1ddf2d6f9b996d7db6c5936c10670c38445dced9b8f99a986d900f7369b",
+    "fringe.py": "6152e7150f3bf1bda4af932fa3da708ab3df81921b515de9de149aeda1fdc3bd",
+    "guides.py": "936c9f50ce4641cf2e2a0a6b469d858010a575160dddd9afbe7f97f75482f211",
+    "hair-sculpt.npz": "1e4b7f7a91b551226d5644e0872134c9e852832382e0b09b72e4282e8fe7fe00",
+    "hair.py": "c45d567c736596d03ca748a6cdc95b30eaba41d48ca44b485ba23cee2205954e",
+    "hair_bake.py": "449cf31a06e2837edb11217525ab225a8eabe63a9459dad5c7f4588e207cd05c",
+    "hair_contours.py": "123acc6b8df7c12c52e2b522b33814a870d67cc9ba2412aeedceacf3e17c386a",
+    "head.py": "198fbfe354936428896508bd16428d180fff5c2f0ab1a3970d49ad3dd3c5534d",
+    "meshkit.py": "202644f553d5ba5f7c03ad8d7eff049b206305bfc4210b14898f810d811a6974",
+    "motion.py": "98b9dbebcbf22d24ba41848e6ccb650d78483bf1424d27cc680692102dce15b1",
+    "scene.py": "01563d7049eb00c9cb78db3026506417d3f8a73221f8480672454273221d3222",
+    "skull_profile.py": "c1bf44cdc1f5a4dfb71e027d26e592cee9fb9e6b500529c0ca7cd80de2ea88a5",
+    "studio.py": "c15dd78856e427078e95056cdd498b85e0bcb5a3d221062db43d4d71e027f0c8",
+    "swept_locks.py": "0002988b3ff65898d9742f1e767606a28a7b49127bab5b56c52b940680874e2c",
+    "wardrobe.py": "a2bff5904289fe56ef698b2c81dfb9e31ad38f189075fb81da8e47ae88d3a3cf"
+  },
+  "frozenAuthoringFileCount": 18,
+  "originalAndFrozenInputsAndAuthoringUnchangedRechecked": true,
+  "mainChecks": {
+    "runtimeHairClosedManifold": true,
+    "captureViewer": true,
+    "actualViewerControls": true,
+    "native": true,
+    "exportContracts": true,
+    "unaffectedRegression": true,
+    "allExecutedToolProcessesSucceeded": true,
+    "savedMasterExportBytes": true
+  },
+  "allMainToolProcessesExitZero": true,
+  "savedMasterExport": {
+    "originalGlbSha256": "60650f47aac716cb5a11fa69bee58c06546aa2199a25c2bde6dcc37ce566ab6f",
+    "exportedSha256": "60650f47aac716cb5a11fa69bee58c06546aa2199a25c2bde6dcc37ce566ab6f",
+    "identicalBytes": true
+  },
+  "nativeChecks": {
+    "runtimeSelectionNamesMatchGlb": true,
+    "hairNativeGeometryValid": true,
+    "skinFiniteNormalizedMax4": true,
+    "sourceOnlyHiddenExcluded": true,
+    "namedPiecesAndVertexGroupsCorrespond": true
+  },
+  "runtimeExport": {
+    "triangles": 7994,
+    "primitives": 17,
+    "boundsYM": [
+      0,
+      1.2999999523162842
+    ],
+    "joints": [
+      "root",
+      "pelvis",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "clavicle.L",
+      "upperarm.L",
+      "forearm.L",
+      "hand.L",
+      "clavicle.R",
+      "upperarm.R",
+      "forearm.R",
+      "hand.R",
+      "thigh.L",
+      "shin.L",
+      "foot.L",
+      "thigh.R",
+      "shin.R",
+      "foot.R"
+    ],
+    "materials": [
+      "Cloth",
+      "Eyes",
+      "Hair",
+      "Hardware",
+      "Leather",
+      "Skin"
+    ],
+    "maxInfluences": 4,
+    "maxWeightError": 1.043081283569336e-07,
+    "hairAtlas": {
+      "triangles": 2802,
+      "inBounds": true,
+      "overlapPairs": 0,
+      "maxOverlapPx2": 0,
+      "coverageFraction": 0.46836523306986777,
+      "pass": true
+    },
+    "checks": {
+      "validator": true,
+      "triangles": true,
+      "dimensions": true,
+      "resources": true,
+      "hairUv": true,
+      "characterNodes": true,
+      "skeleton": true,
+      "weights": true,
+      "slots": true,
+      "faces": true,
+      "clips": true
+    },
+    "validator": {
+      "version": "2.0.0-dev.3.10",
+      "errors": 0,
+      "warnings": 0,
+      "infos": 0,
+      "messages": []
+    }
+  },
+  "hairGeometry": {
+    "storedHairVertices": 2122,
+    "weldedHairVertices": 1433,
+    "hairTriangles": 2802,
+    "shellCount": 16,
+    "closedShellCount": 16
+  },
+  "geometricTipEvidence": {
+    "sampleCount": 12,
+    "containmentCounts": {
+      "INSIDE_ANOTHER_HAIR_SOLID": 0,
+      "BOUNDARY_AMBIGUOUS": 0,
+      "UNKNOWN_NONCLOSED_SUPPORT": 0,
+      "OUTSIDE_OTHER_HAIR_SOLIDS": 12
+    },
+    "interpretation": "Mathematical apex evidence is not visible-terminal acceptance. Shared/buried roots are permitted; outside status does not prove endpoint identity, silhouette, curvature or exposure."
+  },
+  "previousR19TriangleCountsOnly": {
+    "artifactSha256": "094c136c4ef612b43bccf5b381b49926111ae413241907f5e3cb65557bbc1a7a",
+    "evidencePath": "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r19-094c136c/geometry/topology.json",
+    "evidenceSha256": "6def3fb61eed46fe3919aab11e2db5c5f084567db715d64a12c29f62cc2c6060",
+    "hairTriangles": 2802,
+    "shells": 16,
+    "namedTriangleCountDeltas": {},
+    "signatureTransferred": false
+  },
+  "browChecks": {
+    "browUvAndIndicesSame": true,
+    "runtimeBrowMaterialPropertiesSame": true,
+    "mapSamplingAndCoveredTexelsSame": true,
+    "normalMapSamplingAndCoveredTexelsSame": true
+  },
+  "actualControlsChecks": {
+    "sixPresetNamesSame": true,
+    "exactPresetValuesAndAllActualMorphInfluencesSame": true,
+    "rigClipAndWatchNamesSame": true,
+    "sceneExpressionMotionContractsSame": true,
+    "actualWatchToggleIsolatedAndRestores": true,
+    "resetRestoresDefaultExpressionAndWatch": true,
+    "noConsoleOrRequestErrors": true
+  },
+  "resourceBindingChecks": {
+    "twoDistinctEmbedded1024PngMaps": true,
+    "baseColorAndNormalUseDistinctImages": true,
+    "externalPngBytesMatchEmbedded": true,
+    "masterPackedPngBytesMatchEmbedded": true,
+    "previewEmbedsExactActualGlb": true
+  },
+  "strictUnaffectedRegressionChecks": {
+    "unaffectedGeometryAttributeBuffersSame": true,
+    "unaffectedNodeSetSame": true,
+    "unaffectedNodeTransformsAndDefaultMorphsSame": true,
+    "rigJointRestAndInverseBindsSame": true,
+    "unaffectedActualAnimationSamplesSame": true,
+    "materialPropertiesSameApartFromAtlasPixelContents": true
+  },
+  "actualViewerMotion": {
+    "frame": 0.3501000000000022,
+    "maxWorldDeltaM": 0.07466790653849355,
+    "maxHeadLocalDeltaM": 5.721958498152797e-16
+  },
+  "actualViewerReset": {
+    "defaultFace": true,
+    "accessories": true,
+    "maxRestDeltaM": 0
+  },
+  "neutralReceipt": "neutral-receipt.json",
+  "supplementalInvocations": [
+    {
+      "argv": [
+        "node",
+        "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/tools/check-brow-material.mjs",
+        "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/negative-119/ready-proof/input",
+        "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47/input",
+        "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47/brow-material.json"
+      ],
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "node",
+        "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/tools/check-controls.mjs",
+        "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/negative-119/ready-proof/input",
+        "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47/input",
+        "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47/controls-regression.json"
+      ],
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "node",
+        "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/tools/make-review-sheets.mjs",
+        "--candidate",
+        "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/r20",
+        "--proof",
+        "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47",
+        "--out",
+        "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47/review-sheets"
+      ],
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "--background",
+        "--factory-startup",
+        "--disable-autoexec",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/tools/pole-containment.py",
+        "--",
+        "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47"
+      ],
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "--background",
+        "--factory-startup",
+        "--disable-autoexec",
+        "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47/input/visitor.blend",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/tools/check-resource-binding.py",
+        "--",
+        "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47",
+        "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/r20"
+      ],
+      "returncode": 0
+    }
+  ],
+  "toolHashes": {
+    "run-diagnostic.py": "ad72a9e15b2fb602996ae5091a6447f9e6794713f9d53ccb1a447b13c7fa57e2",
+    "camera-contract.json": "f74da957a86897e9a7f5369b3e6bdfd8fa638a3cc25c63b672cb825e6e38c458",
+    "tools/check-resource-binding.py": "aca23c94a4d2d5b2303c3b2287732004316a8dc915ada237f7f35cb41995e322",
+    "tools/compare-unaffected.py": "ba3fd08b8650f3c622febb4022fd0495fcee0b15b5884e273a0ad323d1390d33",
+    "tools/hair-shells.py": "8dde306ab88161d86b43bae10697ab22a6cf10f47349284fa016bd875ae95951",
+    "tools/native-read.py": "9831788416104dcac3e41b460399bb1e6ffdaca308b7eddf2e4038d4a438a999",
+    "tools/pole-containment.py": "7d038773640c502674b1b059ffece064bc4eef6d0c549e6f33df52834545701d",
+    "tools/self-test.py": "3d76b646a7374228b163904f8e0eb68282fd05c0fb524326700674cbabf54e20",
+    "tools/test-pole-containment.py": "d72c5f99d72324d88adcf7e06166c30ff3147ce7d538904a3548cc6e761a0d09",
+    "tools/capture-neutral.mjs": "08aae3948c5595b3a705afc10cf675539bad91a33011b94e7d074018752ec1da",
+    "tools/check-brow-material.mjs": "a03a03bede8e3347117e1d4bcfa96fd1e1dddb81efcb101d106179f846aa8214",
+    "tools/check-controls.mjs": "88e32e97f24ef7ecfca306900be8d6715fe2f0f7655b5b9ec34b7d687ff9d7e0",
+    "tools/make-review-sheets.mjs": "a3449a7ff11233607927b8a3de22d3ab8bb901a617dbae5d3d3d1d191aae2543",
+    "tools/viewer-smoke.mjs": "8b686887463da8c88638aa0e4f753b3b82cd9f78bc2a12158b317ac6f9bdc35f"
+  },
+  "qaSourceHashes": {
+    "compare-hair.mjs": "655e48e9da38d04343f10b87f71271b13efa345582ba3431a2647597ecfa21dc",
+    "compare.mjs": "81f3d1721a2d828d4a45f89f2d81af9d01508c36fdcf0ed61c87c734630947dc",
+    "edit-guide.py": "a8cf471e2b84a0ca98b27e2563aefa7d348b01afc68efa19fdd13224a1b073e0",
+    "face-closure.mjs": "2af495c95dbe58cf71a8d2766f6bcfdd08ae05cda846a8beb5d74c1fc4bc70de",
+    "hair-atlas.mjs": "dd9d577d478cb1d006597e07d701d03c32215a7d6944b4abffcc55f95903477e",
+    "hair-register.mjs": "89e5f3fc6c54e2c001fc0ce6e6b5849a42949b2261fa90128635d8a1b4b7c44b",
+    "hair-study.mjs": "f255597c616a2f1f4699502709471117200200f1ed40697aa1c9c07d5a8a82ae",
+    "native.py": "5a9b8019522bfbf237f74084f66b020814b4b39c15dd6465ae3701b7986662fe",
+    "portrait.py": "074dec9497254506430faab0284afc76a094d1e733d27bd7f582c69072da2ada",
+    "render.mjs": "4fd915e362cfc941731f200ab632c35b8a274367a229f4de4e02e52c9a581ba4",
+    "runtime-check.mjs": "195dd9522ef12078d3da56023fbde4bb8d56ed6cb8c1cb61c3fa192eb8a8c9ed",
+    "verify.mjs": "9c1b65b004f8087d8974f409d3362503d900bf51295eb2ecdaa4bfcbc1e67a7e"
+  },
+  "evidenceHashes": {
+    "input-manifest.json": "125b31aa42580ea7a8b99aaf72c85404438ce42e520c312548770b9100648932",
+    "commands.json": "902fa9876a08ec7bdd7a6075651a30254097f6475f1ef844f3e0ad5526fa4818",
+    "result.json": "bd5624dd9f2d6d24f4de8e306f6bd5e40e29f4324f767d7ef0c8a9a96829a1f6",
+    "geometry/topology.json": "9360ed7285f81555cd111a76dbea93264bd812c4a7638316ae704e583837de0a",
+    "geometry/geometry.json": "68546c75043a491d7c10d809eced225d74acab47246d6334c4aef2da7db18621",
+    "native.json": "6aefc088512db8e34510006f1ecacc9db7672f953201d5a35176dc7eb6a7c63f",
+    "source-export.json": "7f86c01ec7ab79a9f421f6adb8933f0c701deb765673ccb25c4f0dc536cd5483",
+    "viewer-smoke.json": "785d05c6afde91799e417cdcb468aaea4913b86e1d25fcdcd23eebb2963fa026",
+    "actual-default.png": "8fdb01611d200169e0dce330ae3e130c9b2af2baa04a5fd7d26871a84ed8572a",
+    "unaffected-regression.json": "9212c1e372d89678f8b4ef877b996907506d726e3e088cc171952020894c83d9",
+    "runtime-check/qa/geometry.json": "eecd730cd09cc5b6be55a15e5b9c93b797ad644190c1c7c172612654cf849d0b",
+    "brow-material.json": "0a86629eafb0636cd9b7578907be80455006dd9c07254ede332bef33997995ea",
+    "controls-regression.json": "dedb7efa326c0063b07d2b81dcc82e7230c97b343449aff7f76fe8d2d727503c",
+    "resource-binding.json": "8b7c9dc0df8136af2b8e07b3358a390d01e34e558b704cbee4e6c1b9d0638823",
+    "pole-containment.json": "57c3b43459c66a4ce6b24029d88cdc838faa6fb2f06a162a2f43bfc70648a9f3",
+    "neutral-receipt.json": "fe635e9605b330bf73023337761575439751da680435f89930ee52f26eef672b",
+    "captures/manifest.json": "d923314988f1dd3332dd67568093c24f32f3bc766270a0a0e0be413154d0a0c6",
+    "review-sheets/manifest.json": "8cdc2fa5dec19ea0801b838e129d1d3af428f0e707fe6b26d2c48edace078324",
+    "tip-summary.csv": "c04e330f529657bf38452001ee502e35a04d87af0ac8542057b31436dbf43419"
+  },
+  "limitations": [
+    "No reference likeness, V02-V05 or owner acceptance; visual review is separate",
+    "No formal --all, procedural/collection rebuild, ZIP or200-guide export run repeated",
+    "Actual client exercises nod/walk and all six expression/watch controls; no exhaustive12-clip continuous playback/contact sweep",
+    "No full self/inter-shell intersection proof; pole containment samples endpoints only",
+    "Brow coverage compares full-resolution texels plus2px margin; no all-mipmap-footprint certification",
+    "No r19 visual/formal/technical signature transferred; all listed r20 checks were executed fresh"
+  ]
+}

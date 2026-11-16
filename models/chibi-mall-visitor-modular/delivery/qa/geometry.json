@@ -1,0 +1,307 @@
+{
+  "sha256": "60650f47aac716cb5a11fa69bee58c06546aa2199a25c2bde6dcc37ce566ab6f",
+  "geometrySha256": "99e52d8060687eda9094bdfe334ecdd51850bd08b7a94ade6f7744d058dd4863",
+  "bytes": 1892868,
+  "triangles": 7994,
+  "primitives": 17,
+  "storedVertices": 6261,
+  "boundsYM": [
+    0,
+    1.2999999523162842
+  ],
+  "parts": {
+    "Arms_neck": {
+      "slot": "Body",
+      "triangles": 116
+    },
+    "Crewneck_shirt": {
+      "slot": "Shirt",
+      "triangles": 575
+    },
+    "Daypack_shell": {
+      "slot": "Backpack",
+      "triangles": 330
+    },
+    "Eyelids_and_brows": {
+      "slot": "Eyes",
+      "triangles": 136
+    },
+    "Face": {
+      "slot": "Head",
+      "triangles": 1418
+    },
+    "Hand_L": {
+      "slot": "Hands",
+      "triangles": 296
+    },
+    "Hand_R": {
+      "slot": "Hands",
+      "triangles": 296
+    },
+    "Iris_and_sclera": {
+      "slot": "Eyes",
+      "triangles": 144
+    },
+    "Lacing_L": {
+      "slot": "Shoes",
+      "triangles": 92
+    },
+    "Lacing_R": {
+      "slot": "Shoes",
+      "triangles": 92
+    },
+    "Shoulder_straps": {
+      "slot": "Backpack",
+      "triangles": 220
+    },
+    "Sneaker_L": {
+      "slot": "Shoes",
+      "triangles": 260
+    },
+    "Sneaker_R": {
+      "slot": "Shoes",
+      "triangles": 260
+    },
+    "Straight_denim": {
+      "slot": "Jeans",
+      "triangles": 775
+    },
+    "Swept_hair": {
+      "slot": "Hair",
+      "triangles": 2802
+    },
+    "Teeth_and_tongue": {
+      "slot": "Mouth",
+      "triangles": 56
+    },
+    "Wristwatch": {
+      "slot": "Watch",
+      "triangles": 126
+    }
+  },
+  "meshHashes": {
+    "Arms_neck": "9a883f66d6d29a941b2a349403f8edfa292ea303f6a4fe38121491f130bafd7d",
+    "Crewneck_shirt": "21a771ab3805c1ab1b9bec3911c367d07e1dd472a937fe6afe9fe24b8dbeaaf0",
+    "Daypack_shell": "ae9f9d4c1945123f878ac34ae1af60024c0ae14daeb49a5d376cdf18e8dd28f7",
+    "Eyelids_and_brows": "9938b2ea3949b06e961e43f8e3e6209ac258d6f00b25e5db561b2834a19f6182",
+    "Face": "45394bcc144a0314f95073bfb40eeaa8bd753086115f8dd4e9be59001216b095",
+    "Hand_L": "b605925d57be7ed7af73fa00276a606a8283cabe2bfd7464384eae57b777ab5e",
+    "Hand_R": "3a6549c38a43a3f842e157e37a80dd9c9bedc2540e45a676c9cdba22a70b307c",
+    "Iris_and_sclera": "e37dd8b610d84343badc8e3524977eb6fa6752f6425b510cddc2acfa18fedf34",
+    "Lacing_L": "c6af8ea2671e09d1bdc89f6269f32f1e01079356326727719ddcb75924d85040",
+    "Lacing_R": "b4f75fb3636012d2315c2cb7c8dff4fb656a0a4cb5c27d6caa756a42971e40a8",
+    "Shoulder_straps": "8254756ccdd2b7e1e24b5d120bc8b849293b16fefd81c0d0624a0dfb727fa476",
+    "Sneaker_L": "2be5ceadefb86721ef066b71cb6b93d2cbde9c450a5cc385020d8175337acf07",
+    "Sneaker_R": "a7ec67e9b3645dd8e7f00f55e80b7b5170c632940b2a9f612b482a569eec0ead",
+    "Straight_denim": "07954b61269cc6f3250095a65331c7ecba43b729b837d8af6dad45dce77cf6f7",
+    "Swept_hair": "946b639970ac7a35e0ae85d45420547401602b749289fae80333284943bc6277",
+    "Teeth_and_tongue": "26a89fd3ff328bdd4586ba4e0676e61ee3b886ba222978ba42ea7bf65ca7e011",
+    "Wristwatch": "a8eede97cd4b4a6b88cdc171c9a6fdf402132766251e5c847ce0e1436afa7c5c"
+  },
+  "morphs": {
+    "Eyelids_and_brows": [
+      "blink_L",
+      "wide",
+      "cheeks",
+      "browUp",
+      "browTilt",
+      "blink_R"
+    ],
+    "Face": [
+      "open",
+      "cheeks",
+      "smile",
+      "round",
+      "asym"
+    ],
+    "Hand_L": [
+      "grip_L",
+      "point_L"
+    ],
+    "Hand_R": [
+      "grip_R",
+      "pickup_grasp_R",
+      "point_R",
+      "pickup_open_R"
+    ],
+    "Iris_and_sclera": [
+      "blink_L",
+      "cheeks",
+      "wide",
+      "blink_R"
+    ],
+    "Teeth_and_tongue": [
+      "smile",
+      "open",
+      "round",
+      "asym"
+    ]
+  },
+  "joints": [
+    "root",
+    "pelvis",
+    "spine",
+    "chest",
+    "neck",
+    "head",
+    "clavicle.L",
+    "upperarm.L",
+    "forearm.L",
+    "hand.L",
+    "clavicle.R",
+    "upperarm.R",
+    "forearm.R",
+    "hand.R",
+    "thigh.L",
+    "shin.L",
+    "foot.L",
+    "thigh.R",
+    "shin.R",
+    "foot.R"
+  ],
+  "materials": [
+    "Cloth",
+    "Eyes",
+    "Hair",
+    "Hardware",
+    "Leather",
+    "Skin"
+  ],
+  "clips": [
+    "browse",
+    "cheer",
+    "idle",
+    "inspect",
+    "nod",
+    "pick_up",
+    "point",
+    "run",
+    "sit",
+    "talk",
+    "walk",
+    "wave"
+  ],
+  "channels": {
+    "idle": 62,
+    "walk": 60,
+    "run": 60,
+    "talk": 62,
+    "browse": 60,
+    "sit": 60,
+    "wave": 60,
+    "pick_up": 61,
+    "inspect": 61,
+    "point": 61,
+    "nod": 60,
+    "cheer": 64
+  },
+  "maxInfluences": 4,
+  "maxWeightError": 1.043081283569336e-7,
+  "texture": [
+    1024,
+    1024
+  ],
+  "textures": [
+    {
+      "name": "visitor-normal",
+      "embedded": true,
+      "mimeType": "image/png",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "name": "visitor-atlas",
+      "embedded": true,
+      "mimeType": "image/png",
+      "width": 1024,
+      "height": 1024
+    }
+  ],
+  "hairAtlas": {
+    "triangles": 2802,
+    "inBounds": true,
+    "overlapPairs": 0,
+    "maxOverlapPx2": 0,
+    "coverageFraction": 0.46836523306986777,
+    "pass": true
+  },
+  "checks": {
+    "validator": true,
+    "triangles": true,
+    "dimensions": true,
+    "resources": true,
+    "hairUv": true,
+    "characterNodes": true,
+    "skeleton": true,
+    "weights": true,
+    "slots": true,
+    "faces": true,
+    "clips": true
+  },
+  "validator": {
+    "version": "2.0.0-dev.3.10",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "messages": []
+  },
+  "replays": {
+    "procedural-rebuild": {
+      "sha256": "60650f47aac716cb5a11fa69bee58c06546aa2199a25c2bde6dcc37ce566ab6f",
+      "identicalBytes": true,
+      "identicalGeometry": true,
+      "interfaceMatches": true,
+      "validator": {
+        "version": "2.0.0-dev.3.10",
+        "errors": 0,
+        "warnings": 0,
+        "infos": 0,
+        "messages": []
+      },
+      "pass": true
+    },
+    "collection-reassembly": {
+      "sha256": "60650f47aac716cb5a11fa69bee58c06546aa2199a25c2bde6dcc37ce566ab6f",
+      "identicalBytes": true,
+      "identicalGeometry": true,
+      "interfaceMatches": true,
+      "validator": {
+        "version": "2.0.0-dev.3.10",
+        "errors": 0,
+        "warnings": 0,
+        "infos": 0,
+        "messages": []
+      },
+      "pass": true
+    },
+    "master-export": {
+      "sha256": "60650f47aac716cb5a11fa69bee58c06546aa2199a25c2bde6dcc37ce566ab6f",
+      "identicalBytes": true,
+      "identicalGeometry": true,
+      "interfaceMatches": true,
+      "validator": {
+        "version": "2.0.0-dev.3.10",
+        "errors": 0,
+        "warnings": 0,
+        "infos": 0,
+        "messages": []
+      },
+      "pass": true
+    },
+    "edited-guide": {
+      "changed": [
+        "Swept_hair"
+      ],
+      "interfaceMatches": true,
+      "validator": {
+        "version": "2.0.0-dev.3.10",
+        "errors": 0,
+        "warnings": 0,
+        "infos": 0,
+        "messages": []
+      },
+      "pass": true
+    }
+  },
+  "pass": true
+}

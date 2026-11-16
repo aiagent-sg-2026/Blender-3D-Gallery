@@ -1,0 +1,136 @@
+[
+  {
+    "label": "geometry",
+    "argv": [
+      "/Applications/Blender.app/Contents/MacOS/Blender",
+      "--background",
+      "--factory-startup",
+      "--disable-autoexec",
+      "--python-exit-code",
+      "1",
+      "--python",
+      "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/tools/hair-shells.py",
+      "--",
+      "--glb",
+      "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47/input/visitor.glb",
+      "--out",
+      "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47/geometry"
+    ],
+    "cwd": "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery",
+    "startedUtc": "2026-11-16T12:54:51.992521+00:00",
+    "log": "geometry.log",
+    "returncode": 0,
+    "elapsedSeconds": 2.366,
+    "finishedUtc": "2026-11-16T12:54:54.358745+00:00"
+  },
+  {
+    "label": "neutral-captures",
+    "argv": [
+      "node",
+      "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/tools/capture-neutral.mjs",
+      "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47/input",
+      "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47/geometry/geometry.json",
+      "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47/geometry/topology.json",
+      "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47/captures"
+    ],
+    "cwd": "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery",
+    "startedUtc": "2026-11-16T12:54:54.360409+00:00",
+    "log": "neutral-captures.log",
+    "returncode": 0,
+    "elapsedSeconds": 33.436,
+    "finishedUtc": "2026-11-16T12:55:27.796781+00:00"
+  },
+  {
+    "label": "viewer-smoke",
+    "argv": [
+      "node",
+      "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/tools/viewer-smoke.mjs",
+      "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47/input",
+      "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47"
+    ],
+    "cwd": "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery",
+    "startedUtc": "2026-11-16T12:55:27.797859+00:00",
+    "log": "viewer-smoke.log",
+    "returncode": 0,
+    "elapsedSeconds": 23.714,
+    "finishedUtc": "2026-11-16T12:55:51.511852+00:00"
+  },
+  {
+    "label": "native",
+    "argv": [
+      "/Applications/Blender.app/Contents/MacOS/Blender",
+      "--background",
+      "--factory-startup",
+      "--disable-autoexec",
+      "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47/input/visitor.blend",
+      "--python-exit-code",
+      "1",
+      "--python",
+      "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/tools/native-read.py",
+      "--",
+      "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47"
+    ],
+    "cwd": "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery",
+    "startedUtc": "2026-11-16T12:55:51.512841+00:00",
+    "log": "native.log",
+    "returncode": 0,
+    "elapsedSeconds": 3.086,
+    "finishedUtc": "2026-11-16T12:55:54.598750+00:00"
+  },
+  {
+    "label": "source-export",
+    "argv": [
+      "/Applications/Blender.app/Contents/MacOS/Blender",
+      "--background",
+      "--factory-startup",
+      "--disable-autoexec",
+      "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47/input/visitor.blend",
+      "--python-exit-code",
+      "1",
+      "--python",
+      "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47/source/scene.py",
+      "--",
+      "--export-only",
+      "--out",
+      "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47/source-export"
+    ],
+    "cwd": "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery",
+    "startedUtc": "2026-11-16T12:55:54.599506+00:00",
+    "log": "source-export.log",
+    "returncode": 0,
+    "elapsedSeconds": 10.105,
+    "finishedUtc": "2026-11-16T12:56:04.704395+00:00"
+  },
+  {
+    "label": "export-contracts",
+    "argv": [
+      "node",
+      "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47/qa-source/verify.mjs",
+      "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47/runtime-check"
+    ],
+    "cwd": "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery",
+    "startedUtc": "2026-11-16T12:56:04.729830+00:00",
+    "log": "export-contracts.log",
+    "returncode": 0,
+    "elapsedSeconds": 0.363,
+    "finishedUtc": "2026-11-16T12:56:05.093484+00:00"
+  },
+  {
+    "label": "unaffected-regression",
+    "argv": [
+      "python3",
+      "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/tools/compare-unaffected.py",
+      "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/negative-119/ready-proof/input/visitor.glb",
+      "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47/input/visitor.glb",
+      "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/negative-119/ready-proof/runtime-check/qa/geometry.json",
+      "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47/runtime-check/qa/geometry.json",
+      "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery/models/chibi-mall-visitor-modular/review/fringe-locks/technical/candidate-r20-60650f47/unaffected-regression.json"
+    ],
+    "cwd": "/Users/yapweijun/Documents/GitHub/Blender-3D-Gallery",
+    "startedUtc": "2026-11-16T12:56:05.094455+00:00",
+    "log": "unaffected-regression.log",
+    "returncode": 0,
+    "elapsedSeconds": 0.166,
+    "finishedUtc": "2026-11-16T12:56:05.260732+00:00"
+  }
+]

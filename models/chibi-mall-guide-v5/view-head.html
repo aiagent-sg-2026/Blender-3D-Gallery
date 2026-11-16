@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Head check</title>
+<style>html,body{margin:0;background:#ebeaf7}canvas{display:block}</style>
+<script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/"}}</script>
+</head><body>
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+// Renders four states (neutral, smile, surprised, blink) side by side in one canvas from one azimuth.
+const q = new URLSearchParams(location.search); const S = 560;
+const r = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+r.setSize(S * 4, S); document.body.appendChild(r.domElement); r.setScissorTest(true);
+const scene = new THREE.Scene(); scene.background = new THREE.Color(0xebeaf7);
+scene.add(new THREE.HemisphereLight(0xffffff, 0xd9d8ea, 2.0));
+const key = new THREE.DirectionalLight(0xfff6ee, 1.8); key.position.set(-1, 1.6, 2.4); scene.add(key);
+const cam = new THREE.PerspectiveCamera(22, 1, 0.05, 20);
+const az = THREE.MathUtils.degToRad(Number(q.get('az') ?? 0)); const ty = Number(q.get('ty') ?? 0.66), dist = Number(q.get('d') ?? 1.2);
+cam.position.set(Math.sin(az) * dist, ty + 0.03, Math.cos(az) * dist); cam.lookAt(0, ty, 0.06);
+const gltf = await new GLTFLoader().loadAsync(q.get('glb'));
+scene.add(gltf.scene);
+const meshes = []; gltf.scene.traverse((o) => { if (o.morphTargetInfluences?.length) meshes.push(o); });
+window.__info = Object.fromEntries(meshes.map((m) => [m.name, Object.keys(m.morphTargetDictionary)]));
+const states = [{}, { smile: 1 }, { surprised: 1 }, { blink: 1 }];
+states.forEach((st, i) => {
+  for (const m of meshes) { m.morphTargetInfluences.fill(0); for (const [k, x] of Object.entries(st)) if (k in m.morphTargetDictionary) m.morphTargetInfluences[m.morphTargetDictionary[k]] = x; }
+  r.setViewport(i * S, 0, S, S); r.setScissor(i * S, 0, S, S); r.render(scene, cam);
+});
+window.__ready = true;
+</script></body></html>

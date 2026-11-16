@@ -1,0 +1,323 @@
+{
+  "artifactSha256": "60650f47aac716cb5a11fa69bee58c06546aa2199a25c2bde6dcc37ce566ab6f",
+  "geometrySha256": "68546c75043a491d7c10d809eced225d74acab47246d6334c4aef2da7db18621",
+  "topologySha256": "9360ed7285f81555cd111a76dbea93264bd812c4a7638316ae704e583837de0a",
+  "diagnosticSha256": "7d038773640c502674b1b059ffece064bc4eef6d0c549e6f33df52834545701d",
+  "boundaryEpsilonM": 1e-07,
+  "method": "Nearest triangle distance plus absolute signed-solid-angle winding against every other closed hair shell. Each sample is a measured nonplanar apex candidate, not a pre-labelled free tip.",
+  "counts": {
+    "INSIDE_ANOTHER_HAIR_SOLID": 0,
+    "BOUNDARY_AMBIGUOUS": 0,
+    "UNKNOWN_NONCLOSED_SUPPORT": 0,
+    "OUTSIDE_OTHER_HAIR_SOLIDS": 12
+  },
+  "records": [
+    {
+      "shell": "hair-shell-001",
+      "lockName": "Occipital sweep",
+      "poleVertex": 723,
+      "worldGlTFXYZ": [
+        0.03891352564096451,
+        1.020399164169973,
+        -0.2971508482265677
+      ],
+      "worldBlenderXYZ": [
+        0.03891352564096451,
+        0.2971508482265677,
+        1.020399164169973
+      ],
+      "fanHalfAngleDeg": 21.525735427407888,
+      "classification": "OUTSIDE_OTHER_HAIR_SOLIDS",
+      "inside": [],
+      "boundary": [],
+      "unknown": [],
+      "nearestOtherSurface": {
+        "shell": "hair-shell-000",
+        "lockName": "Recessed foundation",
+        "surfaceDistanceM": 0.015218601562082767
+      }
+    },
+    {
+      "shell": "hair-shell-002",
+      "lockName": "Upper back right",
+      "poleVertex": 750,
+      "worldGlTFXYZ": [
+        -0.03603104129433632,
+        1.0578714152231647,
+        -0.2861295318471311
+      ],
+      "worldBlenderXYZ": [
+        -0.03603104129433632,
+        0.2861295318471311,
+        1.0578714152231647
+      ],
+      "fanHalfAngleDeg": 19.18149756298722,
+      "classification": "OUTSIDE_OTHER_HAIR_SOLIDS",
+      "inside": [],
+      "boundary": [],
+      "unknown": [],
+      "nearestOtherSurface": {
+        "shell": "hair-shell-001",
+        "lockName": "Occipital sweep",
+        "surfaceDistanceM": 0.01653088629245758
+      }
+    },
+    {
+      "shell": "hair-shell-003",
+      "lockName": "Back crown",
+      "poleVertex": 808,
+      "worldGlTFXYZ": [
+        0.07638581097126007,
+        1.0578714152223032,
+        -0.28821420445863416
+      ],
+      "worldBlenderXYZ": [
+        0.07638581097126007,
+        0.28821420445863416,
+        1.0578714152223032
+      ],
+      "fanHalfAngleDeg": 23.852935309509704,
+      "classification": "OUTSIDE_OTHER_HAIR_SOLIDS",
+      "inside": [],
+      "boundary": [],
+      "unknown": [],
+      "nearestOtherSurface": {
+        "shell": "hair-shell-000",
+        "lockName": "Recessed foundation",
+        "surfaceDistanceM": 0.02503214217722416
+      }
+    },
+    {
+      "shell": "hair-shell-004",
+      "lockName": "Left Lower cascade",
+      "poleVertex": 873,
+      "worldGlTFXYZ": [
+        0.246590256690979,
+        1.0146342025423531,
+        -0.12250555982427284
+      ],
+      "worldBlenderXYZ": [
+        0.246590256690979,
+        0.12250555982427284,
+        1.0146342025423531
+      ],
+      "fanHalfAngleDeg": 19.850590610638672,
+      "classification": "OUTSIDE_OTHER_HAIR_SOLIDS",
+      "inside": [],
+      "boundary": [],
+      "unknown": [],
+      "nearestOtherSurface": {
+        "shell": "hair-shell-000",
+        "lockName": "Recessed foundation",
+        "surfaceDistanceM": 0.027935368940234184
+      }
+    },
+    {
+      "shell": "hair-shell-005",
+      "lockName": "Left Ear sweep",
+      "poleVertex": 945,
+      "worldGlTFXYZ": [
+        0.2505054473876953,
+        0.9886918749492808,
+        0.012971171484803316
+      ],
+      "worldBlenderXYZ": [
+        0.2505054473876953,
+        -0.012971171484803316,
+        0.9886918749492808
+      ],
+      "fanHalfAngleDeg": 22.459816826323753,
+      "classification": "OUTSIDE_OTHER_HAIR_SOLIDS",
+      "inside": [],
+      "boundary": [],
+      "unknown": [],
+      "nearestOtherSurface": {
+        "shell": "hair-shell-004",
+        "lockName": "Left Lower cascade",
+        "surfaceDistanceM": 0.006790335290133953
+      }
+    },
+    {
+      "shell": "hair-shell-006",
+      "lockName": "Left Upper cascade",
+      "poleVertex": 1003,
+      "worldGlTFXYZ": [
+        0.2317725569009781,
+        1.1083149493660984,
+        -0.13980046108611544
+      ],
+      "worldBlenderXYZ": [
+        0.2317725569009781,
+        0.13980046108611544,
+        1.1083149493660984
+      ],
+      "fanHalfAngleDeg": 25.86213599485311,
+      "classification": "OUTSIDE_OTHER_HAIR_SOLIDS",
+      "inside": [],
+      "boundary": [],
+      "unknown": [],
+      "nearestOtherSurface": {
+        "shell": "hair-shell-000",
+        "lockName": "Recessed foundation",
+        "surfaceDistanceM": 0.025019118562340736
+      }
+    },
+    {
+      "shell": "hair-shell-007",
+      "lockName": "Left Middle cascade",
+      "poleVertex": 1030,
+      "worldGlTFXYZ": [
+        0.26048654317855835,
+        1.0866963430371486,
+        -0.030266082571960184
+      ],
+      "worldBlenderXYZ": [
+        0.26048654317855835,
+        0.030266082571960184,
+        1.0866963430371486
+      ],
+      "fanHalfAngleDeg": 22.69745148393563,
+      "classification": "OUTSIDE_OTHER_HAIR_SOLIDS",
+      "inside": [],
+      "boundary": [],
+      "unknown": [],
+      "nearestOtherSurface": {
+        "shell": "hair-shell-004",
+        "lockName": "Left Lower cascade",
+        "surfaceDistanceM": 0.017058121040463448
+      }
+    },
+    {
+      "shell": "hair-shell-008",
+      "lockName": "Right Lower cascade",
+      "poleVertex": 1095,
+      "worldGlTFXYZ": [
+        -0.24521255493164062,
+        1.0146342025423534,
+        -0.1225048147661558
+      ],
+      "worldBlenderXYZ": [
+        -0.24521255493164062,
+        0.1225048147661558,
+        1.0146342025423534
+      ],
+      "fanHalfAngleDeg": 19.763338783242435,
+      "classification": "OUTSIDE_OTHER_HAIR_SOLIDS",
+      "inside": [],
+      "boundary": [],
+      "unknown": [],
+      "nearestOtherSurface": {
+        "shell": "hair-shell-000",
+        "lockName": "Recessed foundation",
+        "surfaceDistanceM": 0.019833965227007866
+      }
+    },
+    {
+      "shell": "hair-shell-009",
+      "lockName": "Right Ear sweep",
+      "poleVertex": 1167,
+      "worldGlTFXYZ": [
+        -0.2606026232242584,
+        0.9886918749492809,
+        0.012971187317288304
+      ],
+      "worldBlenderXYZ": [
+        -0.2606026232242584,
+        -0.012971187317288304,
+        0.9886918749492809
+      ],
+      "fanHalfAngleDeg": 22.2886974491434,
+      "classification": "OUTSIDE_OTHER_HAIR_SOLIDS",
+      "inside": [],
+      "boundary": [],
+      "unknown": [],
+      "nearestOtherSurface": {
+        "shell": "hair-shell-008",
+        "lockName": "Right Lower cascade",
+        "surfaceDistanceM": 0.011223196983337402
+      }
+    },
+    {
+      "shell": "hair-shell-012",
+      "lockName": "Forehead sweep",
+      "poleVertex": 1284,
+      "worldGlTFXYZ": [
+        -0.14556540548801422,
+        0.9944568367347155,
+        0.22022174054269777
+      ],
+      "worldBlenderXYZ": [
+        -0.14556540548801422,
+        -0.22022174054269777,
+        0.9944568367347155
+      ],
+      "fanHalfAngleDeg": 31.89610694041423,
+      "classification": "OUTSIDE_OTHER_HAIR_SOLIDS",
+      "inside": [],
+      "boundary": [],
+      "unknown": [],
+      "nearestOtherSurface": {
+        "shell": "hair-shell-000",
+        "lockName": "Recessed foundation",
+        "surfaceDistanceM": 0.03385141119360924
+      }
+    },
+    {
+      "shell": "hair-shell-014",
+      "lockName": "Falling fringe",
+      "poleVertex": 1400,
+      "worldGlTFXYZ": [
+        -0.01873614266514778,
+        1.0203991643873456,
+        0.228869197613233
+      ],
+      "worldBlenderXYZ": [
+        -0.01873614266514778,
+        -0.228869197613233,
+        1.0203991643873456
+      ],
+      "fanHalfAngleDeg": 26.583915149485588,
+      "classification": "OUTSIDE_OTHER_HAIR_SOLIDS",
+      "inside": [],
+      "boundary": [],
+      "unknown": [],
+      "nearestOtherSurface": {
+        "shell": "hair-shell-015",
+        "lockName": "Central curl",
+        "surfaceDistanceM": 0.033276382833719254
+      }
+    },
+    {
+      "shell": "hair-shell-015",
+      "lockName": "Central curl",
+      "poleVertex": 1432,
+      "worldGlTFXYZ": [
+        0.012971174903213978,
+        1.0348115686380124,
+        0.23175167825628076
+      ],
+      "worldBlenderXYZ": [
+        0.012971174903213978,
+        -0.23175167825628076,
+        1.0348115686380124
+      ],
+      "fanHalfAngleDeg": 18.871537245356187,
+      "classification": "OUTSIDE_OTHER_HAIR_SOLIDS",
+      "inside": [],
+      "boundary": [],
+      "unknown": [],
+      "nearestOtherSurface": {
+        "shell": "hair-shell-014",
+        "lockName": "Falling fringe",
+        "surfaceDistanceM": 0.03443163260817528
+      }
+    }
+  ],
+  "limits": [
+    "An outside apex can remain occluded from a view, be on the wrong end, or fail reference shape. Outside status is not visual or free-terminal acceptance.",
+    "An inside apex may be a valid buried root. It is not automatically a defective free tip. Endpoint identity and visible curvature must be reviewed separately.",
+    "This samples reported apex points; it does not test all self-intersections, inter-shell intersections or cross-section exposure.",
+    "A fused exterior with no identified apex candidates yields no samples, not a passing terminal test."
+  ],
+  "referenceAcceptance": "NOT_REVIEWED"
+}

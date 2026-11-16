@@ -1,0 +1,61 @@
+{
+  "result": "PASS",
+  "id": "round-event-platform",
+  "triangles": 2304,
+  "vertices": 1938,
+  "stored_meshes": 1,
+  "runtime_meshes": 3,
+  "mesh_primitives": 3,
+  "opaque_draw_calls_per_pass": 3,
+  "materials": 3,
+  "glb_bytes": 79116,
+  "dimensions": [
+    8,
+    0.30000001192092896,
+    8
+  ],
+  "bounds": {
+    "min": [
+      -4,
+      0,
+      -4
+    ],
+    "max": [
+      4,
+      0.30000001192092896,
+      4
+    ]
+  },
+  "minimum_triangle_area_m2": 0.0006010691556671126,
+  "minimum_uv_triangle_area": 0.0000019950399341439606,
+  "animations": 0,
+  "sha256": "3576a8fe97009cb32abfc97a5c8538cf9d7964c1840ac4bdd670763cddd858e7",
+  "validation": {
+    "errors": 0,
+    "warnings": 0,
+    "version": "2.0.0-dev.3.10"
+  },
+  "budget": {
+    "triangles_exclusive": 8000,
+    "bytes_exclusive": 1572864,
+    "materials": 3,
+    "mesh_primitives": 3
+  },
+  "parts": [
+    {
+      "name": "Platform_ClosedRadialSurface",
+      "material": "Platform_Top",
+      "triangles": 576
+    },
+    {
+      "name": "Platform_ClosedRadialSurface_1",
+      "material": "Platform_Edge",
+      "triangles": 768
+    },
+    {
+      "name": "Platform_ClosedRadialSurface_2",
+      "material": "Platform_BaseTrim",
+      "triangles": 960
+    }
+  ]
+}
