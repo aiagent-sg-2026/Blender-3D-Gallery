@@ -1,0 +1,81 @@
+{
+  "result": "PASS",
+  "status": "draft / NEEDS REVIEW",
+  "id": "tv-floor-stand",
+  "glb_sha256": "4f4c47a60eefc49cb0a9725a1a8572408560febc298ebe35d0274d3c4b0670e0",
+  "source_sha256": "893dd947595487ab20d1f362609869d29f37827480303faae10e7d3d9508d419",
+  "checks": [
+    {
+      "command": "Blender 5.2.3 headless generate.py, then front/side studio correction",
+      "result": "PASS",
+      "exit_code": 0
+    },
+    {
+      "command": "node models/tv-floor-stand/validate.mjs (Khronos + geometry)",
+      "result": "PASS",
+      "exit_code": 0,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "command": "Blender inspect_sources.py; node verify_source_edit.mjs",
+      "result": "PASS",
+      "exit_code": 0
+    },
+    {
+      "command": "Independent fresh generation and SHA-256 comparison",
+      "result": "PASS",
+      "exit_code": 0
+    },
+    {
+      "command": "npm run validate:assets",
+      "result": "PASS",
+      "exit_code": 0
+    },
+    {
+      "command": "npm test",
+      "result": "PASS",
+      "exit_code": 0,
+      "tests": 728,
+      "pass": 728,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "command": "npm run build",
+      "result": "PASS",
+      "exit_code": 0,
+      "build_id": "0d83807b56820202",
+      "warnings": "Existing application bundle size and plugin timing warnings; build exits successfully."
+    },
+    {
+      "command": "node models/tv-floor-stand/verify_page.mjs",
+      "result": "PASS",
+      "exit_code": 0,
+      "viewport": [
+        1440,
+        900
+      ],
+      "console_errors": 0
+    }
+  ],
+  "visual_review": "PASS: hero/front/side/3q/rear PNGs and actual model page viewed",
+  "browser_screenshot": "/Users/admin/Documents/MallQueue/reports/tv-floor-stand-page.png",
+  "log_directory": "/Users/admin/Documents/MallQueue/reports/tv-floor-stand-checks",
+  "test_artifacts_restored": [
+    "models/demo-beverage-can/reports/structure-motion.json"
+  ],
+  "not_found": [
+    "Close existing floor-stand TV",
+    "tv-wall-mounted panel source"
+  ],
+  "not_verified": [
+    "Panel-source reuse/visual matching to absent tv-wall-mounted",
+    "Physical Android/iOS",
+    "WebKit",
+    "Complete mall assembly and 200 draw-call scene performance",
+    "Physical mass, stability, electrical operation",
+    "Manager art approval",
+    "Remote deployment (not requested; no push)"
+  ]
+}
