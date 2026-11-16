@@ -1,0 +1,127 @@
+{
+  "id": "arched-gateway-sign",
+  "name": "Arched Gateway Sign",
+  "summary": "Neutral curved entrance portal with a separately editable blank sign band and an unobstructed walking opening.",
+  "description": "Original structural half-ellipse on two pillars with shallow anchored feet, graphite reveals and a blank rectangular sign band. Add scene-owned text to the separate SIGN_Band node or SIGN_TextAnchor; no lettering, logos or downloaded assets.",
+  "category": "Mall Fixtures",
+  "tags": [
+    "mall",
+    "entrance",
+    "portal",
+    "arched",
+    "gateway",
+    "blank-sign",
+    "original",
+    "procedural",
+    "metres"
+  ],
+  "status": "draft",
+  "created": "2026-11-16",
+  "author": "Yap Wei Jun project / agent-assisted procedural modeling",
+  "blender_version": "5.2.3 LTS",
+  "creation_method": "Original deterministic Blender Python geometry and shared PBR materials; no external assets, images, textures, fonts or brands.",
+  "generator": "generate.py",
+  "paths": {
+    "glb": "exports/optimized.glb",
+    "source": "sources/arched-gateway-sign.blend",
+    "preview": "previews/hero.webp",
+    "additional_previews": [
+      "previews/front.webp",
+      "previews/side.webp",
+      "previews/3q.webp"
+    ]
+  },
+  "display": {
+    "previewRotationY": 0,
+    "units": "metres",
+    "up_axis": "Blender +Z / glTF +Y",
+    "front_axis": "Blender -Y / glTF +Z",
+    "previewCameraDirection": [
+      0.45,
+      0.28,
+      1
+    ],
+    "studioEnvironment": true,
+    "environmentIntensity": 0.65
+  },
+  "dimensions_metres": {
+    "width": 12,
+    "height": 6,
+    "depth": 1.2999999523162842
+  },
+  "origin": "Floor centre of the symmetric outer footprint; root at [0,0,0].",
+  "opening": {
+    "clear_width_metres": 10.639999389648438,
+    "clear_height_metres": 4.006,
+    "raw_minimum_overhead_metres": 4.006813797662201,
+    "centre_clear_height_metres": 4.101999893784523,
+    "through_depth_metres": 1.2999999523162842,
+    "triangle_intersections": 0,
+    "method": "Ground-level jamb extremities; overhead triangle clipping across full width; open rectangular volume clipped against every exported triangle, 10 micrometre boundary tolerance."
+  },
+  "sign_band": {
+    "node": "SIGN_Band",
+    "dimensions": [
+      10.899999618530273,
+      0.8500000238418579,
+      0.2800000011920929
+    ],
+    "text_anchor": [
+      0,
+      4.574999809265137,
+      0.640999972820282
+    ]
+  },
+  "measured": {
+    "glb_bytes": 280808,
+    "triangles": 5616,
+    "vertices": 10156,
+    "meshes": 3,
+    "primitives": 3,
+    "materials": 3,
+    "textures": 0,
+    "animations": 0,
+    "bounds": {
+      "min": [
+        -6,
+        0,
+        -0.6499999761581421
+      ],
+      "max": [
+        6,
+        6,
+        0.6499999761581421
+      ]
+    },
+    "sha256": "2557401ebce0b82242614e0512baaf91b1aee177a6d5e2cf10574cea219837e1"
+  },
+  "material_notes": "Three shared opaque materials: Frame neutral mineral, Sign band warm white, Trim graphite. Source components stay editable; export groups them into three meshes. Studio floor, lights and camera excluded.",
+  "accuracy_notes": "Original visual portal; not a load-bearing, code-compliant or accessibility-certified design. Aperture measured from delivered triangles, with no colliders or walking controller. Full 17-shop mall assembly, physical devices and sustained performance not verified.",
+  "attribution": [
+    {
+      "credit": "Original procedural geometry and materials. No external assets."
+    }
+  ],
+  "rights": "Original asset; reuse in the owner's projects is authorized. Public redistribution terms have not been specified.",
+  "quality_gate": {
+    "overall": "NEEDS REVIEW",
+    "asset": "PASS",
+    "source": "PASS",
+    "physical_android": "NOT TESTED",
+    "physical_ios": "NOT TESTED",
+    "webkit": "NOT TESTED",
+    "budget": {
+      "triangles": 15000,
+      "bytes": 1572864,
+      "mesh_primitives": 3,
+      "materials": 3
+    },
+    "evidence": [
+      "reports/assets.json",
+      "reports/khronos.json",
+      "reports/sources.json",
+      "reports/checks.json",
+      "reports/browser.json"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "gjh-chibi-visitor-code",
+  "name": "GJH Chibi Visitor (Code Build)",
+  "category": "Characters",
+  "status": "development-preview",
+  "author": "Yap Wei Jun project / agent-assisted procedural modelling",
+  "created": "2026-11-15",
+  "creation_method": "Blender 5.1.2 headless build from new Python code (models/gjh-chibi-visitor-code/src/build.py): lofted and swept procedural meshes, a projected decal face with seven expression shape keys, a hair cap with layered feather locks, a 20-bone humanoid rig with code-computed skin weights, three socket bones and twelve keyed clips (two-bone leg IK in code). No generated or downloaded meshes, no other project scripts.",
+  "generator": "src/build.py",
+  "reference": "reference/character-sheet-v1.webp (owner character sheet v1.0)",
+  "paths": {
+    "glb": "exports/gjh-chibi-visitor-code.glb",
+    "source": "sources/gjh-chibi-visitor-code.blend",
+    "preview": "previews/thumbnail.png",
+    "qa_report": "qa/run-001/report.json"
+  },
+  "dimensions_m": { "height": 1.29, "width": 0.52, "depth": 0.53 },
+  "rig": {
+    "deform_bones": 20,
+    "sockets": ["SOCKET_Back", "SOCKET_Wrist_L", "SOCKET_Hand_R"],
+    "clips": ["Idle", "Walk", "Run", "Sit", "Wave", "Talk", "ShopBrowse", "PickUp", "Inspect", "Point", "Nod", "Cheer"],
+    "morph_targets": ["blink", "happy", "wink_L", "surprised", "thinking", "excited", "talk"]
+  },
+  "display": {
+    "previewRotationY": 0,
+    "previewCameraDirection": [0.35, 0.15, 1]
+  },
+  "accuracy_notes": "Stylised low-poly interpretation of the owner's sheet (7,964 triangles against the 3,000-8,000 target). Body, face and outfit silhouettes match the sheet closely (mean outline error 4-7 px at 350 px/m), but the hair is simpler and the worst rows of the hair outline still miss by about 22 px. The face uses decal pieces rather than sculpted features. Inner knee and elbow triangles compress in deep bends (Sit, Pick Up, Inspect). The gallery viewer shows the rest pose; the clips and expressions are in the GLB for runtime use.",
+  "rights": "Original asset; owner-project reuse is authorized. Public redistribution terms have not been specified.",
+  "attribution": [
+    {
+      "credit": "Original procedural modelling, rigging and animation for the owner's GJH Virtual Mall project, built to the owner's character sheet v1.0."
+    }
+  ]
+}

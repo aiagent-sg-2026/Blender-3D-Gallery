@@ -1,0 +1,24 @@
+{
+  "result": "NEW VARIANT",
+  "catalog_assets_searched": 594,
+  "metadata_files_searched": 637,
+  "searched_fields": [
+    "id",
+    "name",
+    "tags"
+  ],
+  "target_before_build": "NOT FOUND",
+  "existing_category": "Equipment",
+  "candidates": {
+    "mall-digital-advertising-screen": "Explicit manager exception: advertising asset is not a pure TV; no reuse.",
+    "tv-floor-stand": "Distinct floor stand; adapt original panel construction as explicitly requested.",
+    "tv-demo-table": "Retail demo furniture, not a wall TV.",
+    "desktop-monitor": "Desktop monitor, not 55-inch-class wall TV.",
+    "smartboard": "Education display, different role and construction."
+  },
+  "reused_source": "models/tv-floor-stand/generate.py",
+  "reused_source_sha256": "4b6e73ad7888b23398e36ed85cab3449b33ab05951a5c0e13e0ae9c393a97945",
+  "external_assets": "NONE",
+  "existing_models_modified": false,
+  "metadata_search_scope": "Recursive metadata folders and metadata.json, including nested assets"
+}

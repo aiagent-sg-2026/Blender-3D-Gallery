@@ -1,0 +1,2095 @@
+{
+  "blender_version": "5.1.2",
+  "source": "",
+  "imported_glb": "models/eight-ball-billiards/exports/table.glb",
+  "root": "ASSET_Table",
+  "root_location": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "unit_system": "METRIC",
+  "bounds_min": [
+    -1.2699999809265137,
+    -0.699999988079071,
+    0.0
+  ],
+  "bounds_max": [
+    1.2699999809265137,
+    0.699999988079071,
+    0.8535999655723572
+  ],
+  "dimensions": [
+    2.5399999618530273,
+    1.399999976158142,
+    0.8535999655723572
+  ],
+  "mesh_count": 52,
+  "triangles": 6360,
+  "armatures": [],
+  "animation_data": [],
+  "materials": [
+    {
+      "name": "Cushion rubber | green",
+      "use_nodes": true,
+      "base_color": [
+        0.017999999225139618,
+        0.11999999731779099,
+        0.06499999761581421,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.7599999904632568,
+      "alpha": 1.0,
+      "image_nodes": []
+    },
+    {
+      "name": "Ivory resin",
+      "use_nodes": true,
+      "base_color": [
+        0.9200000166893005,
+        0.8999999761581421,
+        0.8199999928474426,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.23999999463558197,
+      "alpha": 1.0,
+      "image_nodes": []
+    },
+    {
+      "name": "Pocket leather | charcoal",
+      "use_nodes": true,
+      "base_color": [
+        0.014000000432133675,
+        0.012000000104308128,
+        0.012000000104308128,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5299999713897705,
+      "alpha": 1.0,
+      "image_nodes": []
+    },
+    {
+      "name": "Rail wood | warm walnut",
+      "use_nodes": true,
+      "base_color": [
+        0.20999999344348907,
+        0.07500000298023224,
+        0.02500000037252903,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.2800000011920929,
+      "alpha": 1.0,
+      "image_nodes": []
+    },
+    {
+      "name": "Walnut | satin",
+      "use_nodes": true,
+      "base_color": [
+        0.12999999523162842,
+        0.04500000178813934,
+        0.017999999225139618,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.30000001192092896,
+      "alpha": 1.0,
+      "image_nodes": []
+    },
+    {
+      "name": "Wool cloth | tournament green",
+      "use_nodes": true,
+      "base_color": [
+        0.02500000037252903,
+        0.1899999976158142,
+        0.10499999672174454,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.8799999952316284,
+      "alpha": 1.0,
+      "image_nodes": []
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Cushion",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.0024982234726409727,
+      "connected_components": 54,
+      "bounds_min": [
+        -1.024999976158142,
+        -0.5729600191116333,
+        0.7699999809265137
+      ],
+      "bounds_max": [
+        -0.08500000834465027,
+        -0.5209599733352661,
+        0.8220000267028809
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Cushion rubber | green"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Cushion.001",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.0024982234726409727,
+      "connected_components": 54,
+      "bounds_min": [
+        0.08500000834465027,
+        -0.5729600191116333,
+        0.7699999809265137
+      ],
+      "bounds_max": [
+        1.024999976158142,
+        -0.5209599733352661,
+        0.8220000267028809
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Cushion rubber | green"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Cushion.002",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.0024982234726409727,
+      "connected_components": 54,
+      "bounds_min": [
+        -1.024999976158142,
+        0.5209599733352661,
+        0.7699999809265137
+      ],
+      "bounds_max": [
+        -0.08500000834465027,
+        0.5729600191116333,
+        0.8220000267028809
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Cushion rubber | green"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Cushion.003",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.0024982234726409727,
+      "connected_components": 54,
+      "bounds_min": [
+        0.08500000834465027,
+        0.5209599733352661,
+        0.7699999809265137
+      ],
+      "bounds_max": [
+        1.024999976158142,
+        0.5729600191116333,
+        0.8220000267028809
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Cushion rubber | green"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Cushion.004",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.0023493914348126075,
+      "connected_components": 54,
+      "bounds_min": [
+        -1.1549500226974487,
+        -0.46000000834465027,
+        0.7699999809265137
+      ],
+      "bounds_max": [
+        -1.1049500703811646,
+        0.46000000834465027,
+        0.8220000267028809
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Cushion rubber | green"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Cushion.005",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.0023493914348126075,
+      "connected_components": 54,
+      "bounds_min": [
+        1.1049500703811646,
+        -0.46000000834465027,
+        0.7699999809265137
+      ],
+      "bounds_max": [
+        1.1549500226974487,
+        0.46000000834465027,
+        0.8220000267028809
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Cushion rubber | green"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "End rail",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.009423372891194931,
+      "connected_components": 54,
+      "bounds_min": [
+        -1.2699999809265137,
+        -0.5099999904632568,
+        0.7684999704360962
+      ],
+      "bounds_max": [
+        -1.1600000858306885,
+        0.5099999904632568,
+        0.8535000085830688
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Rail wood | warm walnut"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "End rail.001",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.009423372891194931,
+      "connected_components": 54,
+      "bounds_min": [
+        1.1600000858306885,
+        -0.5099999904632568,
+        0.7684999704360962
+      ],
+      "bounds_max": [
+        1.2699999809265137,
+        0.5099999904632568,
+        0.8535000085830688
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Rail wood | warm walnut"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Leg foot",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.001797086468204855,
+      "connected_components": 54,
+      "bounds_min": [
+        -1.065000057220459,
+        -0.574999988079071,
+        0.0
+      ],
+      "bounds_max": [
+        -0.875,
+        -0.38499999046325684,
+        0.05000000074505806
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Pocket leather | charcoal"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Leg foot.001",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.001797086468204855,
+      "connected_components": 54,
+      "bounds_min": [
+        -1.065000057220459,
+        0.38499999046325684,
+        0.0
+      ],
+      "bounds_max": [
+        -0.875,
+        0.574999988079071,
+        0.05000000074505806
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Pocket leather | charcoal"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Leg foot.002",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.001797086468204855,
+      "connected_components": 54,
+      "bounds_min": [
+        0.875,
+        -0.574999988079071,
+        0.0
+      ],
+      "bounds_max": [
+        1.065000057220459,
+        -0.38499999046325684,
+        0.05000000074505806
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Pocket leather | charcoal"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Leg foot.003",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.001797086468204855,
+      "connected_components": 54,
+      "bounds_min": [
+        0.875,
+        0.38499999046325684,
+        0.0
+      ],
+      "bounds_max": [
+        1.065000057220459,
+        0.574999988079071,
+        0.05000000074505806
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Pocket leather | charcoal"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Long rail",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.0110383523035566,
+      "connected_components": 54,
+      "bounds_min": [
+        -1.125,
+        -0.6984999775886536,
+        0.7684999704360962
+      ],
+      "bounds_max": [
+        -0.07500004768371582,
+        -0.5734999775886536,
+        0.8535000085830688
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Rail wood | warm walnut"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Long rail.001",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.0110383523035566,
+      "connected_components": 54,
+      "bounds_min": [
+        0.07500004768371582,
+        -0.6984999775886536,
+        0.7684999704360962
+      ],
+      "bounds_max": [
+        1.125,
+        -0.5734999775886536,
+        0.8535000085830688
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Rail wood | warm walnut"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Long rail.002",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.0110383523035566,
+      "connected_components": 54,
+      "bounds_min": [
+        -1.125,
+        0.5734999775886536,
+        0.7684999704360962
+      ],
+      "bounds_max": [
+        -0.07500004768371582,
+        0.6984999775886536,
+        0.8535000085830688
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Rail wood | warm walnut"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Long rail.003",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.0110383523035566,
+      "connected_components": 54,
+      "bounds_min": [
+        0.07500004768371582,
+        0.5734999775886536,
+        0.7684999704360962
+      ],
+      "bounds_max": [
+        1.125,
+        0.6984999775886536,
+        0.8535000085830688
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Rail wood | warm walnut"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Pocket 1 | recessed liner",
+      "vertices": 192,
+      "triangles": 124,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 192,
+      "boundary_edges": 192,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.0008618777719990673,
+      "connected_components": 34,
+      "bounds_min": [
+        -1.1690000295639038,
+        -0.609000027179718,
+        0.6315000057220459
+      ],
+      "bounds_max": [
+        -1.0709999799728394,
+        -0.5109999775886536,
+        0.7465000152587891
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Pocket leather | charcoal"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Pocket 2 | recessed liner",
+      "vertices": 192,
+      "triangles": 124,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 192,
+      "boundary_edges": 192,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.0008618777719990673,
+      "connected_components": 34,
+      "bounds_min": [
+        -1.1690000295639038,
+        0.5109999775886536,
+        0.6315000057220459
+      ],
+      "bounds_max": [
+        -1.0709999799728394,
+        0.609000027179718,
+        0.7465000152587891
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Pocket leather | charcoal"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Pocket 3 | recessed liner",
+      "vertices": 192,
+      "triangles": 124,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 192,
+      "boundary_edges": 192,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.0008618777719990673,
+      "connected_components": 34,
+      "bounds_min": [
+        -0.04899999871850014,
+        -0.609000027179718,
+        0.6315000057220459
+      ],
+      "bounds_max": [
+        0.04899999871850014,
+        -0.5109999775886536,
+        0.7465000152587891
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Pocket leather | charcoal"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Pocket 4 | recessed liner",
+      "vertices": 192,
+      "triangles": 124,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 192,
+      "boundary_edges": 192,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.0008618777719990673,
+      "connected_components": 34,
+      "bounds_min": [
+        -0.04899999871850014,
+        0.5109999775886536,
+        0.6315000057220459
+      ],
+      "bounds_max": [
+        0.04899999871850014,
+        0.609000027179718,
+        0.7465000152587891
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Pocket leather | charcoal"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Pocket 5 | recessed liner",
+      "vertices": 192,
+      "triangles": 124,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 192,
+      "boundary_edges": 192,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.0008618777719990673,
+      "connected_components": 34,
+      "bounds_min": [
+        1.0709999799728394,
+        -0.609000027179718,
+        0.6315000057220459
+      ],
+      "bounds_max": [
+        1.1690000295639038,
+        -0.5109999775886536,
+        0.7465000152587891
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Pocket leather | charcoal"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Pocket 6 | recessed liner",
+      "vertices": 192,
+      "triangles": 124,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 192,
+      "boundary_edges": 192,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.0008618777719990673,
+      "connected_components": 34,
+      "bounds_min": [
+        1.0709999799728394,
+        0.5109999775886536,
+        0.6315000057220459
+      ],
+      "bounds_max": [
+        1.1690000295639038,
+        0.609000027179718,
+        0.7465000152587891
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Pocket leather | charcoal"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Pocket jaw",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.00011064249509427787,
+      "connected_components": 54,
+      "bounds_min": [
+        -1.114072561264038,
+        0.5097366571426392,
+        0.7699999809265137
+      ],
+      "bounds_max": [
+        -1.0250000953674316,
+        0.6150000095367432,
+        0.8220000267028809
+      ],
+      "world_scale": [
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Cushion rubber | green"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Pocket jaw.001",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.00010738250826320151,
+      "connected_components": 54,
+      "bounds_min": [
+        -1.2023327350616455,
+        0.4468887746334076,
+        0.7699999809265137
+      ],
+      "bounds_max": [
+        -1.104949951171875,
+        0.5399999618530273,
+        0.8220000267028809
+      ],
+      "world_scale": [
+        0.9999998807907104,
+        0.9999998807907104,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Cushion rubber | green"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Pocket jaw.002",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 8.190608923647117e-05,
+      "connected_components": 54,
+      "bounds_min": [
+        -0.10195226967334747,
+        0.5209600329399109,
+        0.7699999809265137
+      ],
+      "bounds_max": [
+        -0.05499999225139618,
+        0.6110514998435974,
+        0.8220000267028809
+      ],
+      "world_scale": [
+        0.9999999403953552,
+        0.9999999403953552,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Cushion rubber | green"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Pocket jaw.003",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.00011064249509427787,
+      "connected_components": 54,
+      "bounds_min": [
+        -1.114072561264038,
+        -0.6150000095367432,
+        0.7699999809265137
+      ],
+      "bounds_max": [
+        -1.0250000953674316,
+        -0.5097366571426392,
+        0.8220000267028809
+      ],
+      "world_scale": [
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Cushion rubber | green"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Pocket jaw.004",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.00010738250826320151,
+      "connected_components": 54,
+      "bounds_min": [
+        -1.2023327350616455,
+        -0.5399999618530273,
+        0.7699999809265137
+      ],
+      "bounds_max": [
+        -1.104949951171875,
+        -0.4468887746334076,
+        0.8220000267028809
+      ],
+      "world_scale": [
+        0.9999998807907104,
+        0.9999998807907104,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Cushion rubber | green"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Pocket jaw.005",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 8.190608923647117e-05,
+      "connected_components": 54,
+      "bounds_min": [
+        -0.10195226967334747,
+        -0.6110514998435974,
+        0.7699999809265137
+      ],
+      "bounds_max": [
+        -0.05499999225139618,
+        -0.5209600329399109,
+        0.8220000267028809
+      ],
+      "world_scale": [
+        0.9999999403953552,
+        0.9999999403953552,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Cushion rubber | green"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Pocket jaw.006",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.00011064249509427787,
+      "connected_components": 54,
+      "bounds_min": [
+        1.0250000953674316,
+        0.5097366571426392,
+        0.7699999809265137
+      ],
+      "bounds_max": [
+        1.114072561264038,
+        0.6150000095367432,
+        0.8220000267028809
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Cushion rubber | green"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Pocket jaw.007",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.00010738250826320151,
+      "connected_components": 54,
+      "bounds_min": [
+        1.104949951171875,
+        0.4468887746334076,
+        0.7699999809265137
+      ],
+      "bounds_max": [
+        1.2023327350616455,
+        0.5400000214576721,
+        0.8220000267028809
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Cushion rubber | green"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Pocket jaw.008",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 8.190608923647117e-05,
+      "connected_components": 54,
+      "bounds_min": [
+        0.05499999597668648,
+        0.5209600329399109,
+        0.7699999809265137
+      ],
+      "bounds_max": [
+        0.10195226967334747,
+        0.6110514998435974,
+        0.8220000267028809
+      ],
+      "world_scale": [
+        0.9999999403953552,
+        0.9999999403953552,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Cushion rubber | green"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Pocket jaw.009",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.00011064249509427787,
+      "connected_components": 54,
+      "bounds_min": [
+        1.0250000953674316,
+        -0.6150000095367432,
+        0.7699999809265137
+      ],
+      "bounds_max": [
+        1.114072561264038,
+        -0.5097366571426392,
+        0.8220000267028809
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Cushion rubber | green"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Pocket jaw.010",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.00010738250826320151,
+      "connected_components": 54,
+      "bounds_min": [
+        1.104949951171875,
+        -0.5400000214576721,
+        0.7699999809265137
+      ],
+      "bounds_max": [
+        1.2023327350616455,
+        -0.4468887746334076,
+        0.8220000267028809
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Cushion rubber | green"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Pocket jaw.011",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 8.190608923647117e-05,
+      "connected_components": 54,
+      "bounds_min": [
+        0.05499999597668648,
+        -0.6110514998435974,
+        0.7699999809265137
+      ],
+      "bounds_max": [
+        0.10195226967334747,
+        -0.5209600329399109,
+        0.8220000267028809
+      ],
+      "world_scale": [
+        0.9999999403953552,
+        0.9999999403953552,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Cushion rubber | green"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Rail sight",
+      "vertices": 96,
+      "triangles": 60,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 96,
+      "boundary_edges": 96,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 3.918678790315967e-07,
+      "connected_components": 18,
+      "bounds_min": [
+        -0.9380000233650208,
+        -0.6439999938011169,
+        0.8515999913215637
+      ],
+      "bounds_max": [
+        -0.921999990940094,
+        -0.6279999613761902,
+        0.8535999655723572
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Ivory resin"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Rail sight.001",
+      "vertices": 96,
+      "triangles": 60,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 96,
+      "boundary_edges": 96,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 3.918678790315967e-07,
+      "connected_components": 18,
+      "bounds_min": [
+        -0.628000020980835,
+        -0.6439999938011169,
+        0.8515999913215637
+      ],
+      "bounds_max": [
+        -0.6119999885559082,
+        -0.6279999613761902,
+        0.8535999655723572
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Ivory resin"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Rail sight.002",
+      "vertices": 96,
+      "triangles": 60,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 96,
+      "boundary_edges": 96,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 3.918678790315967e-07,
+      "connected_components": 18,
+      "bounds_min": [
+        -0.3179999887943268,
+        -0.6439999938011169,
+        0.8515999913215637
+      ],
+      "bounds_max": [
+        -0.3020000159740448,
+        -0.6279999613761902,
+        0.8535999655723572
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Ivory resin"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Rail sight.003",
+      "vertices": 96,
+      "triangles": 60,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 96,
+      "boundary_edges": 96,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 3.918678790315967e-07,
+      "connected_components": 18,
+      "bounds_min": [
+        0.3020000159740448,
+        -0.6439999938011169,
+        0.8515999913215637
+      ],
+      "bounds_max": [
+        0.3179999887943268,
+        -0.6279999613761902,
+        0.8535999655723572
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Ivory resin"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Rail sight.004",
+      "vertices": 96,
+      "triangles": 60,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 96,
+      "boundary_edges": 96,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 3.918678790315967e-07,
+      "connected_components": 18,
+      "bounds_min": [
+        0.6119999885559082,
+        -0.6439999938011169,
+        0.8515999913215637
+      ],
+      "bounds_max": [
+        0.628000020980835,
+        -0.6279999613761902,
+        0.8535999655723572
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Ivory resin"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Rail sight.005",
+      "vertices": 96,
+      "triangles": 60,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 96,
+      "boundary_edges": 96,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 3.918678790315967e-07,
+      "connected_components": 18,
+      "bounds_min": [
+        0.921999990940094,
+        -0.6439999938011169,
+        0.8515999913215637
+      ],
+      "bounds_max": [
+        0.9380000233650208,
+        -0.6279999613761902,
+        0.8535999655723572
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Ivory resin"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Rail sight.006",
+      "vertices": 96,
+      "triangles": 60,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 96,
+      "boundary_edges": 96,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 3.918678790315967e-07,
+      "connected_components": 18,
+      "bounds_min": [
+        -0.9380000233650208,
+        0.6279999613761902,
+        0.8515999913215637
+      ],
+      "bounds_max": [
+        -0.921999990940094,
+        0.6439999938011169,
+        0.8535999655723572
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Ivory resin"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Rail sight.007",
+      "vertices": 96,
+      "triangles": 60,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 96,
+      "boundary_edges": 96,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 3.918678790315967e-07,
+      "connected_components": 18,
+      "bounds_min": [
+        -0.628000020980835,
+        0.6279999613761902,
+        0.8515999913215637
+      ],
+      "bounds_max": [
+        -0.6119999885559082,
+        0.6439999938011169,
+        0.8535999655723572
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Ivory resin"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Rail sight.008",
+      "vertices": 96,
+      "triangles": 60,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 96,
+      "boundary_edges": 96,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 3.918678790315967e-07,
+      "connected_components": 18,
+      "bounds_min": [
+        -0.3179999887943268,
+        0.6279999613761902,
+        0.8515999913215637
+      ],
+      "bounds_max": [
+        -0.3020000159740448,
+        0.6439999938011169,
+        0.8535999655723572
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Ivory resin"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Rail sight.009",
+      "vertices": 96,
+      "triangles": 60,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 96,
+      "boundary_edges": 96,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 3.918678790315967e-07,
+      "connected_components": 18,
+      "bounds_min": [
+        0.3020000159740448,
+        0.6279999613761902,
+        0.8515999913215637
+      ],
+      "bounds_max": [
+        0.3179999887943268,
+        0.6439999938011169,
+        0.8535999655723572
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Ivory resin"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Rail sight.010",
+      "vertices": 96,
+      "triangles": 60,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 96,
+      "boundary_edges": 96,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 3.918678790315967e-07,
+      "connected_components": 18,
+      "bounds_min": [
+        0.6119999885559082,
+        0.6279999613761902,
+        0.8515999913215637
+      ],
+      "bounds_max": [
+        0.628000020980835,
+        0.6439999938011169,
+        0.8535999655723572
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Ivory resin"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Rail sight.011",
+      "vertices": 96,
+      "triangles": 60,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 96,
+      "boundary_edges": 96,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 3.918678790315967e-07,
+      "connected_components": 18,
+      "bounds_min": [
+        0.921999990940094,
+        0.6279999613761902,
+        0.8515999913215637
+      ],
+      "bounds_max": [
+        0.9380000233650208,
+        0.6439999938011169,
+        0.8535999655723572
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Ivory resin"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Table leg",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.01747269632620869,
+      "connected_components": 54,
+      "bounds_min": [
+        -1.0550000667572021,
+        -0.5649999976158142,
+        0.0
+      ],
+      "bounds_max": [
+        -0.8850000500679016,
+        -0.39499998092651367,
+        0.6100000143051147
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Walnut | satin"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Table leg.001",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.01747269632620869,
+      "connected_components": 54,
+      "bounds_min": [
+        -1.0550000667572021,
+        0.39499998092651367,
+        0.0
+      ],
+      "bounds_max": [
+        -0.8850000500679016,
+        0.5649999976158142,
+        0.6100000143051147
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Walnut | satin"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Table leg.002",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.01747269632620869,
+      "connected_components": 54,
+      "bounds_min": [
+        0.8850000500679016,
+        -0.5649999976158142,
+        0.0
+      ],
+      "bounds_max": [
+        1.0550000667572021,
+        -0.39499998092651367,
+        0.6100000143051147
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Walnut | satin"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Table leg.003",
+      "vertices": 216,
+      "triangles": 108,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 216,
+      "boundary_edges": 216,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.01747269632620869,
+      "connected_components": 54,
+      "bounds_min": [
+        0.8850000500679016,
+        0.39499998092651367,
+        0.0
+      ],
+      "bounds_max": [
+        1.0550000667572021,
+        0.5649999976158142,
+        0.6100000143051147
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Walnut | satin"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Table | slate and green cloth",
+      "vertices": 804,
+      "triangles": 532,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 804,
+      "boundary_edges": 804,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.06684044246944415,
+      "connected_components": 136,
+      "bounds_min": [
+        -1.149999976158142,
+        -0.5899999737739563,
+        0.7534999847412109
+      ],
+      "bounds_max": [
+        1.149999976158142,
+        0.5899999737739563,
+        0.778499960899353
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Wool cloth | tournament green"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    },
+    {
+      "name": "Table | solid walnut cabinet",
+      "vertices": 1376,
+      "triangles": 908,
+      "zero_area_triangles": 0,
+      "non_manifold_edges": 1376,
+      "boundary_edges": 1376,
+      "loose_vertices": 0,
+      "inconsistent_winding_edges": 0,
+      "signed_volume": 0.5591429013693057,
+      "connected_components": 246,
+      "bounds_min": [
+        -1.2699999809265137,
+        -0.699999988079071,
+        0.5900000333786011
+      ],
+      "bounds_max": [
+        1.2699999809265137,
+        0.699999988079071,
+        0.75
+      ],
+      "world_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "uv_nonfinite": 0,
+      "materials": [
+        "Walnut | satin"
+      ],
+      "modifiers": [],
+      "position_weld_tolerance_m": 1e-07,
+      "welded_non_manifold_edges": 0,
+      "welded_inconsistent_winding_edges": 0
+    }
+  ]
+}

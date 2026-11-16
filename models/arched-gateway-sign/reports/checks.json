@@ -1,0 +1,48 @@
+{
+  "glb_sha256": "2557401ebce0b82242614e0512baaf91b1aee177a6d5e2cf10574cea219837e1",
+  "generator_sha256": "874177b18919dab9773813bfbfd4e075b0005e0b970be24fcabafc4f309e7936",
+  "tool_versions": {
+    "blender": "5.2.3 LTS / e13b728c6880",
+    "node": "24.22.2",
+    "three": "0.187.0",
+    "gltf_validator": "2.0.0-dev.3.10",
+    "playwright": "1.64.1",
+    "pillow": "13.0.0"
+  },
+  "checks": {
+    "headless_generation": "PASS",
+    "repeat_generation_glb_hash": "PASS; same 2557401e SHA-256 on repeated rebuilds and saved-source export",
+    "source_reopen_edit_reimport": "PASS; reports/sources.json",
+    "khronos": "PASS; zero errors, zero warnings; reports/khronos.json",
+    "aperture_triangle_clipping": "PASS; reports/assets.json",
+    "npm_run_validate_assets": "PASS; /tmp/arched-gateway-validate-final.log",
+    "npm_test": "PASS; 728/728; /tmp/arched-gateway-test-recheck.log",
+    "npm_run_build": "PASS; /tmp/arched-gateway-build-delivery.log",
+    "chromium": "PASS; reports/browser.json and /tmp/arched-gateway-page-delivery.log",
+    "existing_catalog_preserved": "PASS; removing the single new collection reproduces HEAD catalog exactly",
+    "generated_test_artifacts": "Restored models/demo-beverage-can/reports/structure-motion.json with git checkout",
+    "visual_review": "PASS; hero/front/side/3q PNGs and final page screenshot opened and inspected; reports/visual-review.json"
+  },
+  "corrected_attempts": [
+    {
+      "check": "npm test",
+      "observed": "727/728: existing Pomelo test requires its collection last",
+      "fix": "Insert the new collection before Pomelo; existing collections and tests unchanged.",
+      "log": "/tmp/arched-gateway-test-final.log"
+    },
+    {
+      "check": "page response hash harness",
+      "observed": "Initial matcher expected source path but Vite fingerprints production GLB URLs.",
+      "fix": "Hash actual .glb response body and require exactly one matching delivery SHA.",
+      "log": "/tmp/arched-gateway-browser.log"
+    }
+  ],
+  "not_verified": [
+    "Physical Android/iOS",
+    "WebKit",
+    "Complete 17-shop mall integration and 200-call scene budget",
+    "Sustained performance, CPU/GPU memory and frame timing",
+    "Building/structural/accessibility certification",
+    "Public release; local commit only, no push"
+  ]
+}

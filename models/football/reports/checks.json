@@ -1,0 +1,87 @@
+{
+  "result": "PARTIAL: asset checks pass; browser blocked; broader tests fail",
+  "generator": {
+    "commands": [
+      "blender --background --python-exit-code 1 --python models/football/generate.py",
+      "blender --background --python-exit-code 1 --python models/football/generate.py -- --skip-render"
+    ],
+    "artifact_generation": "PASS",
+    "byte_identical_glb": "PASS",
+    "process_exit": "NOT CLEAN: PulseAudio shutdown hangs after script completion",
+    "blender_version": "5.3.0"
+  },
+  "checks": {
+    "npm ci --ignore-scripts": {
+      "result": "PASS"
+    },
+    "node models/football/validate.mjs": {
+      "result": "PASS",
+      "errors": 0,
+      "warnings": 0,
+      "all_panel_vertices_match_glb": true
+    },
+    "blender --background --python-exit-code 1 --python models/football/inspect_sources.py": {
+      "result": "PASS script assertions; shutdown hangs",
+      "manifold_panel_meshes": 32,
+      "source_unchanged": true
+    },
+    "node models/football/verify_source_edit.mjs": {
+      "result": "PASS"
+    },
+    "npm run validate:assets": {
+      "result": "PASS",
+      "log": "repository-validation.log"
+    },
+    "npm run build": {
+      "result": "PASS",
+      "note": "Existing large-JavaScript-chunk advisory."
+    },
+    "npm test": {
+      "result": "FAIL",
+      "passed_files": 89,
+      "failed_files": 21,
+      "log": "tests.log",
+      "note": "No detailed child-test errors in runner output. An existing model report rewritten by a test was restored byte-for-byte."
+    },
+    "node models/football/check_browser.mjs": {
+      "result": "BLOCKED",
+      "reason": "listen EPERM on 127.0.0.1",
+      "evidence": "browser.json"
+    },
+    "git diff --check": {
+      "result": "PASS"
+    }
+  },
+  "visual_review": {
+    "views": [
+      "hero.png",
+      "hero.webp",
+      "front.png",
+      "side.png",
+      "3q.png"
+    ],
+    "result": "Soccer-ball layout visible; shallow white-to-white seams subtle, slight silhouette undulations at close range."
+  },
+  "catalog_preservation": "PASS: removing only the football collection yields original catalog data",
+  "not_verified": [
+    "Gallery WebGL rendering, orbit/zoom and reset",
+    "physical mobile devices",
+    "WebKit",
+    "target GPU performance"
+  ],
+  "publication": "None; no commits, pushes or remote operations",
+  "environment_attempts": [
+    {
+      "command": "blender -noaudio --background --python-exit-code 1 --python models/football/inspect_sources.py",
+      "result": "Script completed; audio shutdown still hung"
+    },
+    {
+      "command": "env PULSE_SERVER=127.0.0.1 blender --background --python-exit-code 1 --python models/football/inspect_sources.py",
+      "result": "FAIL: PulseAudio asyncns assertion, exit 134"
+    },
+    {
+      "command": "env PULSE_SERVER=unix:/tmp/football-no-pulse blender --background --python-exit-code 1 --python models/football/inspect_sources.py",
+      "result": "See source evidence; shutdown not confirmed"
+    }
+  ]
+}

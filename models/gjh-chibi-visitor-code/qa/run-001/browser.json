@@ -1,0 +1,136 @@
+{
+  "meshes": 10,
+  "skinned": 10,
+  "allSkinned": true,
+  "morphs": [
+    "blink",
+    "happy",
+    "wink_L",
+    "surprised",
+    "thinking",
+    "excited",
+    "talk"
+  ],
+  "rest": {
+    "min": [
+      -0.258,
+      0.0005,
+      -0.2968
+    ],
+    "max": [
+      0.258,
+      1.2912,
+      0.2313
+    ]
+  },
+  "clips": {
+    "Idle": {
+      "duration": 3,
+      "tracks": 70,
+      "minY": 0.0005,
+      "maxY": 1.2912,
+      "finite": true,
+      "faceMax": 0.87
+    },
+    "Walk": {
+      "duration": 1.067,
+      "tracks": 70,
+      "minY": 0.0004,
+      "maxY": 1.2678,
+      "finite": true,
+      "faceMax": 0
+    },
+    "Run": {
+      "duration": 0.667,
+      "tracks": 70,
+      "minY": 0.0004,
+      "maxY": 1.2344,
+      "finite": true,
+      "faceMax": 0
+    },
+    "Sit": {
+      "duration": 1.333,
+      "tracks": 70,
+      "minY": 0.0006,
+      "maxY": 1.2912,
+      "finite": true,
+      "faceMax": 0
+    },
+    "Wave": {
+      "duration": 1.6,
+      "tracks": 70,
+      "minY": 0.0006,
+      "maxY": 1.2912,
+      "finite": true,
+      "faceMax": 1
+    },
+    "Talk": {
+      "duration": 2,
+      "tracks": 70,
+      "minY": 0.0006,
+      "maxY": 1.2921,
+      "finite": true,
+      "faceMax": 0.9
+    },
+    "ShopBrowse": {
+      "duration": 3,
+      "tracks": 70,
+      "minY": 0.0006,
+      "maxY": 1.2912,
+      "finite": true,
+      "faceMax": 0.259
+    },
+    "PickUp": {
+      "duration": 1.667,
+      "tracks": 70,
+      "minY": 0.0002,
+      "maxY": 1.2912,
+      "finite": true,
+      "faceMax": 1
+    },
+    "Inspect": {
+      "duration": 2.333,
+      "tracks": 70,
+      "minY": 0.0006,
+      "maxY": 1.2922,
+      "finite": true,
+      "faceMax": 1
+    },
+    "Point": {
+      "duration": 1.333,
+      "tracks": 70,
+      "minY": 0.0006,
+      "maxY": 1.2923,
+      "finite": true,
+      "faceMax": 1
+    },
+    "Nod": {
+      "duration": 1,
+      "tracks": 70,
+      "minY": 0.0006,
+      "maxY": 1.2915,
+      "finite": true,
+      "faceMax": 1
+    },
+    "Cheer": {
+      "duration": 1.333,
+      "tracks": 70,
+      "minY": 0.0006,
+      "maxY": 1.2913,
+      "finite": true,
+      "faceMax": 1
+    }
+  },
+  "sockets": [
+    "SOCKET_Back",
+    "SOCKET_Wrist_L",
+    "SOCKET_Hand_R"
+  ],
+  "textures": [
+    "Hair",
+    "Jeans",
+    "Face"
+  ],
+  "errors": [],
+  "glb_sha256": "391723126fd3307d2bcb4d84596d9a35fe8b6e6f0b7742b4b0f7d748432f34fa"
+}

@@ -1,0 +1,9 @@
+// Usage (repo root): node models/chibi-mall-guide-v5/trellis-trial/shoot-grid.mjs OUT_PNG DIR_WITH_GLBS name1.glb name2.glb ...
+import http from 'node:http'; import fs from 'node:fs'; import path from 'node:path'; import { chromium } from 'playwright';
+const [outPng, dir, ...files] = process.argv.slice(2); const root = process.cwd(); const types = { '.js': 'text/javascript', '.html': 'text/html', '.glb': 'model/gltf-binary' };
+const server = http.createServer((req, res) => { const u = decodeURIComponent(req.url.split('?')[0]); const f = u.startsWith('/cand/') ? path.join(dir, u.slice(6)) : path.join(root, u);
+  if (!fs.existsSync(f) || fs.statSync(f).isDirectory()) { res.writeHead(404); return res.end(); } res.writeHead(200, { 'content-type': types[path.extname(f)] ?? 'application/octet-stream' }); fs.createReadStream(f).pipe(res); }).listen(0);
+const azs = process.env.AZS ?? '0,90,180,270', S = Number(process.env.CELL ?? 220), WRAP = Number(process.env.WRAP ?? 0), cols = WRAP || azs.split(',').length, rows = WRAP ? Math.ceil(files.length / WRAP) : files.length; const browser = await chromium.launch({ args: ['--use-gl=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
+const page = await browser.newPage({ viewport: { width: S * cols, height: S * rows } }); const logs = []; page.on('pageerror', (e) => { logs.push(e.message); console.error('pageerror', e.message); }); page.on('console', (m) => { if (m.type() === 'error') console.error('console', m.text()); });
+await page.goto(`http://localhost:${server.address().port}/models/chibi-mall-guide-v5/trellis-trial/view-grid.html?glbs=${files.join(',')}&azs=${azs}&s=${S}&wrap=${WRAP}&focus=${process.env.FOCUS ?? ''}`);
+await page.waitForFunction('window.__ready === true', null, { timeout: 120000 }); await page.screenshot({ path: outPng }); await browser.close(); server.close(); console.log(JSON.stringify({ errors: logs }));

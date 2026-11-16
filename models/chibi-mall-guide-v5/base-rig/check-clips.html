@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Clip check</title>
+<style>html,body{margin:0;background:#ebeaf7}canvas{display:block}</style>
+<script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/"}}</script>
+</head><body>
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+// Plays every clip of a GLB with AnimationMixer, measures the skinned bounding box over time and draws one frame per clip.
+const q = new URLSearchParams(location.search); const S = 320;
+const gltf = await new GLTFLoader().loadAsync(q.get('glb'));
+const r = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true }); r.outputColorSpace = THREE.SRGBColorSpace;
+const clips = gltf.animations; r.setSize(S * Math.max(clips.length, 1), S); document.body.appendChild(r.domElement); r.setScissorTest(true);
+const scene = new THREE.Scene(); scene.background = new THREE.Color(0xebeaf7); scene.add(new THREE.HemisphereLight(0xffffff, 0xd9d8ea, 2.4));
+const key = new THREE.DirectionalLight(0xfff6ee, 1.4); key.position.set(-1, 2, 2.5); scene.add(key); scene.add(gltf.scene);
+const mixer = new THREE.AnimationMixer(gltf.scene); const cam = new THREE.PerspectiveCamera(24, 1, 0.05, 20); cam.position.set(1.4, 0.7, 2.6); cam.lookAt(0, 0.5, 0);
+const report = [];
+clips.forEach((clip, i) => {
+  mixer.stopAllAction(); const act = mixer.clipAction(clip); act.play(); let minY = 1e9, maxY = -1e9, minX = 1e9, maxX = -1e9; const n = 24; let drawT = clip.duration * 0.3;
+  for (let k = 0; k <= n; k++) { mixer.setTime(clip.duration * k / n); gltf.scene.updateMatrixWorld(true); const b = new THREE.Box3().setFromObject(gltf.scene, true); minY = Math.min(minY, b.min.y); maxY = Math.max(maxY, b.max.y); minX = Math.min(minX, b.min.x); maxX = Math.max(maxX, b.max.x); }
+  mixer.setTime(drawT); gltf.scene.updateMatrixWorld(true);
+  r.setViewport(i * S, 0, S, S); r.setScissor(i * S, 0, S, S); r.render(scene, cam);
+  report.push({ name: clip.name, seconds: +clip.duration.toFixed(2), min_y_mm: +(minY * 1000).toFixed(1), max_y_m: +maxY.toFixed(3), x_range_m: [+minX.toFixed(3), +maxX.toFixed(3)] });
+});
+window.__report = report; window.__ready = true;
+</script></body></html>
