@@ -1,0 +1,99 @@
+{
+  "id": "football",
+  "name": "Football",
+  "summary": "Original classic 32-panel soccer ball.",
+  "description": "Procedural truncated icosahedron with 12 black pentagons and 20 white hexagons, spherical panel faces and recessed seams.",
+  "category": "Balls",
+  "tags": [
+    "football",
+    "soccer",
+    "size 5",
+    "editable",
+    "metres"
+  ],
+  "status": "draft",
+  "created": "2026-11-16",
+  "author": "Yap Wei Jun project / agent-assisted procedural modeling",
+  "blender_version": "5.3.0",
+  "creation_method": "Original deterministic Blender Python geometry and plain PBR materials; no external assets.",
+  "generator": "generate.py",
+  "paths": {
+    "glb": "exports/optimized.glb",
+    "source": "sources/football.blend",
+    "preview": "previews/hero.webp",
+    "additional_previews": [
+      "previews/front.png",
+      "previews/side.png",
+      "previews/3q.png"
+    ]
+  },
+  "display": {
+    "previewRotationY": 0,
+    "previewCameraDirection": [
+      1,
+      0.85,
+      1.6
+    ],
+    "studioEnvironment": true,
+    "environmentIntensity": 0.6,
+    "units": "metres",
+    "up_axis": "Blender +Z / glTF +Y",
+    "front_axis": "Blender -Y / glTF +Z",
+    "origin": "Ball centre, matching individual billiards ball exports"
+  },
+  "measurements": {
+    "glb_bytes": 625848,
+    "triangles": 34560,
+    "vertices": 17344,
+    "meshes": 2,
+    "primitives": 2,
+    "materials": 2,
+    "textures": 0,
+    "animations": 0,
+    "dimensions_m": [
+      0.2196020931005478,
+      0.2196020931005478,
+      0.2196020931005478
+    ],
+    "bounds_m": {
+      "min": [
+        -0.1098010465502739,
+        -0.1098010465502739,
+        -0.1098010465502739
+      ],
+      "max": [
+        0.1098010465502739,
+        0.1098010465502739,
+        0.1098010465502739
+      ]
+    },
+    "nodes": 3,
+    "topology_vertices": 60,
+    "pentagons": 12,
+    "hexagons": 20,
+    "sha256": "e7cdc6d004cff5bb85a79b82f839e2cec1f3031670a4ecbdc0a7bd5cc7957373"
+  },
+  "accuracy_notes": "Nominal size 5 diameter 0.22 m; static visual geometry, no certification or physics simulation. Centre origin follows billiards individual exports. Recessed edges are 0.8 mm below nominal panel radius; subtle silhouette undulations remain. Browser verification blocked by sandbox listen EPERM; physical mobile and target GPU untested.",
+  "attribution": [
+    {
+      "credit": "Original procedural geometry and materials; no external models, fonts, textures or logos."
+    }
+  ],
+  "rights": "Original asset; reuse in the owner's projects is authorized. Public redistribution terms have not been specified.",
+  "quality_gate": {
+    "overall": "NEEDS REVIEW",
+    "local": "PASS",
+    "physical_android": "NOT TESTED",
+    "physical_ios": "NOT TESTED",
+    "webkit": "NOT TESTED",
+    "budget": {
+      "triangles": 99999,
+      "bytes": 5242880,
+      "mesh_primitives": 2,
+      "materials": 2
+    },
+    "evidence": "../reports/assets.json",
+    "checks_evidence": "../reports/checks.json",
+    "browser": "BLOCKED"
+  }
+}
