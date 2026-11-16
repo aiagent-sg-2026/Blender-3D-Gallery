@@ -1,6 +1,6 @@
 # GJH Chibi Visitor: design reference
 
-Status: design reference for a new original character. Not a published model. The real GLB must be validated and inspected before it enters `models/catalog.json` (see `docs/assets.md`).
+Status: three Unity-built variants now exist as a comparison set in `models/gjh-chibi-visitor/`; exact fidelity to the owner's private character sheet remains unverified.
 
 Source: the owner's "GJH Chibi Visitor, New Design, Modular" character sheet. The sheet image is a private reference and is not embedded here; add it as `docs/assets/gjh-chibi-visitor-sheet.png` only if the owner approves redistribution.
 
