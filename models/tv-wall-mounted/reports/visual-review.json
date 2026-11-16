@@ -1,0 +1,35 @@
+{
+  "result": "PASS",
+  "method": "Agent visually inspected actual rendered PNG pixels and the production page screenshot",
+  "views": {
+    "hero": {
+      "png_sha256": "502bab1b3619c35124abd25fff77970f2a0d94494e63e089a7d57e8b2d156c28",
+      "webp_sha256": "bd2d4c625000b763664e3e546563b76ff16d5a9152b508984547241a9ddb48cf"
+    },
+    "front": {
+      "png_sha256": "67bcc52195dd683d148becce1f564fa9b41fee5f59db44e210256d0e095b0af2",
+      "webp_sha256": "a4d3bd6971a9e385c9a3d69cad2a704fa57bb0cab46f954ae58d2e1ed91e1235"
+    },
+    "side": {
+      "png_sha256": "dc7780f6702124744e7a40ce9ade54e4504724ea5325e54c13cb8cb0a1896de7",
+      "webp_sha256": "1846ae47621f8a7301dee68aadda72f470fb1adb93fb55a07bfec3c73288860f"
+    },
+    "3q": {
+      "png_sha256": "b151510fdf85ff02431ce5084519341dddc2976df327db3d30bb63329806f835",
+      "webp_sha256": "dd5b5fb495f77c0a2a11e70cb0531d9ade2956afec16d8829f25a80dcb54272a"
+    },
+    "rear": {
+      "png_sha256": "6492347536573b6459eb83888339d680914be6d9b4a5cc6db4150087677335cd",
+      "webp_sha256": "3bcd9423cb25de7cea766d7066c6ee207d43b46a1eb905a1784f9fd8ddc3bcc7"
+    }
+  },
+  "findings": [
+    "Clean landscape proportions, slim bezel, opaque neutral dark standby screen; no text, logos or external images.",
+    "Side view shows slim front body, rear electronics and bracket spacing.",
+    "Rear bracket remains separately editable and visibly connects to the body.",
+    "Initial rear render exposed coplanar standoff and wall-frame faces; shortened spacers and end links remove the black patches. Initial failure image retained as reports/rear-initial.png.",
+    "Final Chromium screenshot shows a fully framed loaded TV; orbit and reset complete without recorded errors."
+  ],
+  "glb_sha256": "1124f947f7cfebd5546282cb27195100bbbde969fb7b3606cee33d2d1839755b",
+  "scope": "Local visual review only; no full mall or physical device approval"
+}
